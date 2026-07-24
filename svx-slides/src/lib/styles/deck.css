@@ -39,6 +39,12 @@
     overflow: hidden;
 }
 
+/* Sans layout explicite, le contenu forme un bloc centré verticalement. */
+.slide-surface:not([data-layout]) {
+    display: grid;
+    align-content: center;
+}
+
 /* Neutralise la marge haute des éléments Markdown les plus fréquents. */
 .slide-surface h1,
 .slide-surface h2,

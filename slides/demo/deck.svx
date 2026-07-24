@@ -119,7 +119,7 @@ Point important : cacher les notes en CSS ne suffit pas.
 
 Dans ce prototype, les notes vivent dans des fichiers séparés. En build public, elles ne sont pas importées par le registre des decks.
 ---
-<!-- slide: id="005-neurone-biologique" title="Neurone biologique" steps=5 -->
+<!-- slide: id="005-neurone-biologique" title="Neurone biologique" steps=6 -->
 
 <script>
   import BiologicalNeuron from '$components/BiologicalNeuron.svelte'
@@ -135,67 +135,130 @@ Dans ce prototype, les notes vivent dans des fichiers séparés. En build public
 
 --- notes
 
-Avant de présenter le neurone artificiel, il faut voir ce que ce modèle simplifie dans le neurone biologique.
+Avant de passer au neurone artificiel, commençons par lire le dessin. Un **neurone est une cellule vivante**, spécialisée dans la réception et la transmission de signaux. Le schéma l’isole pour rendre le trajet lisible ; dans un cerveau, chaque neurone appartient à un réseau et peut être en relation avec un très grand nombre d’autres cellules.
 
-### Étape 1 — Recevoir
+### Les parties du neurone représentées ici
 
-Les dendrites, à gauche du schéma, peuvent être comparées à des antennes. Elles reçoivent les messages transmis par d’autres neurones au niveau des **synapses**.
 
-À la plupart des synapses, la transmission est chimique : le neurone précédent libère des **neurotransmetteurs**. Ceux-ci se fixent sur la membrane du neurone récepteur et modifient le passage des ions.
+Un neurone est une cellule biologique unique, souvent très allongée et ramifiée, et composée de plusieurs parties spécialisées.
 
-### Étape 2 — Exciter ou inhiber
+- Les **dendrites** reçoivent une grande partie des signaux provenant d’autres neurones.
+- Le **corps cellulaire**, ou soma, contient le noyau et contribue à combiner les effets des signaux reçus.
+- Si cette combinaison provoque le déclenchement d’une impulsion, l’**axone** la conduit jusqu’aux terminaisons du neurone.
+- Les **synapses** sont les zones de communication entre ce neurone et d’autres cellules. Elles mettent en relation la terminaison d’un neurone avec la membrane d’une autre cellule
 
-Chaque entrée produit une petite variation locale du **potentiel de membrane** :
 
-- une entrée excitatrice rapproche le neurone du déclenchement ;
-- une entrée inhibitrice l’en éloigne.
+- Au centre, le **corps cellulaire**, ou **soma**, est la partie principale de la cellule. Il contient notamment le noyau et assure l’entretien courant du neurone.
+- Le **noyau**, représenté par le petit ovale central, contient l’essentiel de l’information génétique de la cellule. Il participe à son fonctionnement et à son maintien, mais il ne « réfléchit » pas et ne décide pas du déclenchement d’un signal.
+- La **membrane** est la très fine enveloppe qui sépare l’intérieur de la cellule de son environnement. Elle entoure tout le neurone : le soma, les dendrites et l’axone. Elle contrôle notamment le passage d’ions, c’est-à-dire d’atomes ou de molécules portant une charge électrique.
+- Les **dendrites** sont les prolongements ramifiés visibles à gauche. Elles offrent au neurone une grande surface de réception : c’est sur elles qu’arrive une grande partie des signaux émis par d’autres neurones.
+- L’**axone** est le prolongement plus long qui part du soma vers la droite. Lorsqu’une impulsion est déclenchée, il la conduit vers les extrémités du neurone.
+- Les **terminaisons de l’axone** sont ses dernières ramifications. Elles permettent au neurone d’envoyer un signal à d’autres cellules.
 
-Il ne s’agit donc pas encore de « 0 » et de « 1 », mais de variations électrochimiques dont l’intensité et la durée diffèrent.
+Le fil directeur de l’animation est donc le suivant : dans le cas représenté, le signal passe d’un neurone à l’autre sous une forme **chimique** ; il produit ensuite des effets **électriques** dans le neurone ; puis il redevient **chimique** à sa sortie.
 
-On peut employer l’image de petits « oui » et de petits « non », à condition de préciser qu’ils n’ont pas tous la même force et qu’ils n’arrivent pas tous au même moment.
+### Étape 1 — La synapse : faire passer un signal entre deux cellules
 
-### Étape 3 — Intégrer et franchir un seuil
+Une **synapse** n’est pas seulement le petit cercle dessiné à l’extrémité d’une branche. C’est toute la zone de communication entre :
 
-Le corps cellulaire, ou **soma**, reçoit l’ensemble de ces variations. Le noyau visible au centre n’est pas la « zone de décision » : l’intégration décisive s’effectue surtout au début de l’axone, dans le **segment initial**.
+1. la terminaison du neurone qui envoie le signal, appelée **bouton synaptique** ;
+2. le minuscule espace entre les deux cellules, appelé **fente synaptique** ;
+3. la membrane du neurone qui reçoit le signal.
 
-Le neurone combine les excitations et les inhibitions :
+À gauche du schéma, les petits cercles représentent donc les boutons synaptiques de neurones précédents. Les petits points placés juste après représentent des **neurotransmetteurs** : des molécules libérées dans la fente synaptique. Les branches qui reprennent après cette fente appartiennent aux dendrites du neurone que nous observons.
 
-- dans l’espace, parce qu’elles viennent de synapses différentes ;
-- dans le temps, parce qu’elles peuvent arriver presque simultanément ou de manière espacée.
+Les neurotransmetteurs se fixent sur des **récepteurs**, c’est-à-dire des protéines situées dans la membrane du neurone receveur. Cette fixation modifie le passage des ions à travers la membrane. Il ne faut donc pas imaginer, ici, un courant électrique qui saute directement d’un neurone à l’autre comme entre deux fils : la transmission entre les cellules est d’abord chimique.
 
-Si le potentiel atteint un seuil — environ `−55 mV` dans ce schéma simplifié — un potentiel d’action est déclenché.
+### Étape 2 — Les dendrites conduisent des effets électriques locaux
 
-### Étape 4 — Propager
+Parce que les charges électriques ne sont pas réparties de la même manière à l’intérieur et à l’extérieur de la cellule, la membrane possède une différence de tension : le **potentiel de membrane**.
 
-Le **potentiel d’action** est une impulsion électrique qui se propage le long de l’axone.
+Chaque signal reçu modifie localement et brièvement ce potentiel :
 
-Il obéit approximativement à une logique de « tout ou rien » : une fois le seuil franchi, l’impulsion est produite. Le neurone ne transmet donc pas simplement la somme obtenue sous la forme d’une valeur continue.
+- une entrée **excitatrice** rend le déclenchement d’une impulsion plus probable ;
+- une entrée **inhibitrice** le rend moins probable.
 
-L’intensité d’un stimulus peut toutefois être codée autrement, notamment par la fréquence des potentiels d’action.
+Les points rose pâle qui se déplacent le long des dendrites servent à rendre cette propagation visible. Ils ne représentent pas de petites billes qui circuleraient réellement dans la dendrite : ils figurent les modifications électriques qui se diffusent le long de sa membrane jusqu’au soma.
 
-### Étape 5 — Transmettre au neurone suivant
+On peut comparer les entrées excitatrices à de petits « oui » et les entrées inhibitrices à de petits « non », mais cette image a ses limites. Ces effets n’ont pas tous la même intensité, ne durent pas aussi longtemps et n’arrivent pas au même moment. Le neurone biologique ne manipule donc pas simplement une suite de `0` et de `1`.
 
-Quand l’impulsion atteint les terminaisons de l’axone, elle provoque la libération de neurotransmetteurs. Le signal passe ainsi :
+### Étape 3 — Combiner les signaux reçus
 
-1. d’une transmission chimique à l’entrée ;
-2. à une propagation électrique dans le neurone ;
-3. puis de nouveau à une transmission chimique vers les neurones suivants.
+Le neurone reçoit de nombreux signaux en même temps. Leurs effets se rencontrent sur les dendrites et le soma : certains s’ajoutent, certains se compensent, d’autres arrivent trop tard pour encore agir ensemble. C’est ce que signifie ici **intégrer les entrées**.
 
-### Une première idée de l’apprentissage
+Le soma participe à cette intégration, mais il ne faut pas imaginer le noyau comme un processeur central. La zone décisive pour le déclenchement se situe au début de l’axone, tout près du soma.
 
-Les connexions synaptiques ne sont pas fixes. Leur efficacité peut se renforcer ou s’affaiblir selon l’activité passée du réseau : c’est la **plasticité synaptique**.
+Si la modification électrique totale y atteint un certain **seuil**, le neurone produit une impulsion appelée **potentiel d’action**. Ce seuil n’est ni une décision consciente, ni une valeur absolument identique pour tous les neurones : il dépend du type de cellule et de son état.
 
-La règle de Hebb en donne une formulation célèbre et simplifiée : des neurones souvent actifs ensemble tendent à renforcer leur connexion. Il ne faut pas confondre cette modification durable de la synapse avec l’intensité momentanée d’un signal.
+### Étape 4 — L’axone propage l’impulsion
+
+Le potentiel d’action est une brève variation électrique de la membrane. Une fois déclenché, il se régénère de proche en proche et parcourt l’axone jusqu’à ses terminaisons.
+
+Les points animés le long de l’axone sont, là encore, une convention graphique destinée à montrer le sens de propagation. Ils ne représentent pas des neurotransmetteurs circulant à l’intérieur de l’axone.
+
+À un endroit donné de l’axone, le potentiel d’action obéit à une logique de **tout ou rien** : soit il est déclenché, soit il ne l’est pas. Une stimulation plus forte ne produit donc pas simplement une impulsion plus grosse ; elle peut notamment modifier le nombre, la fréquence ou le rythme des impulsions.
+
+Cette impulsion n’est pas, à elle seule, une pensée ou une information complète. C’est un événement élémentaire dont l’effet dépend des cellules qu’il atteint et du réseau dans lequel il circule.
+
+### Étape 5 — Les terminaisons transmettent le signal
+
+Lorsque le potentiel d’action atteint les terminaisons de l’axone, il provoque la libération de neurotransmetteurs. À droite, les petits cercles représentent les boutons synaptiques de notre neurone ; les petits points figurent les neurotransmetteurs libérés ; les traits situés après la fente appartiennent aux cellules suivantes.
+
+Ces neurotransmetteurs pourront à leur tour produire un effet excitateur ou inhibiteur sur les neurones qui les reçoivent. Le trajet représenté peut donc se résumer ainsi :
+
+1. transmission **chimique** entre deux neurones au niveau d’une synapse ;
+2. modifications **électriques locales** le long des dendrites et du soma ;
+3. si le seuil est atteint, propagation d’une impulsion **électrique** le long de l’axone ;
+4. nouvelle transmission **chimique** vers les cellules suivantes.
+
+### Étape 6 — Changer d’échelle : du neurone au réseau
+
+Le recul final rappelle qu’un neurone ne fonctionne jamais seul. Chacune de ses dendrites peut recevoir des signaux provenant de nombreux neurones, tandis que les ramifications de son axone peuvent agir sur plusieurs cellules. Le dessin ne montre qu’une petite partie de ces connexions.
+
+Un signal n’a donc pas un sens fixe qui serait contenu dans un neurone isolé. Son effet dépend de la place de ce neurone dans le réseau, des cellules qu’il influence, des signaux reçus au même moment et de l’histoire de leurs connexions.
+
+Le neurone que nous venons de suivre reste coloré pour servir de point de repère. Les autres apparaissent en gris : ils ne sont pas un simple décor, mais les conditions mêmes de son activité. Recevoir, combiner et transmettre sont toujours des opérations distribuées dans un réseau.
+
+### Comment des éléments simples produisent-ils une activité complexe ?
+
+Un neurone isolé accomplit une opération relativement élémentaire. Cela ne signifie pas que le système composé de très nombreux neurones soit lui-même simple. La complexité vient moins de chaque élément pris séparément que de leur **organisation** et de leur **dynamique collective** :
+
+- un neurone reçoit simultanément des signaux provenant de nombreuses sources ;
+- les connexions forment des boucles : l’activité peut revenir, se maintenir, se corriger ou s’amplifier ;
+- différents groupes de neurones peuvent se spécialiser tout en coordonnant leur activité ;
+- l’état du réseau évolue continuellement selon les signaux présents et ceux qui l’ont précédé.
+
+La pensée complexe ne se trouve donc pas cachée dans un neurone particulier. Elle repose sur des **configurations d’activité distribuées** : des ensembles de neurones qui s’activent selon certaines relations et certaines temporalités. On peut faire une analogie avec le langage : aucun son ni aucun mot ne contient à lui seul un discours ; c’est leur organisation, réglée et toujours située, qui permet de produire du sens.
+
+On appelle souvent **émergence** le fait qu’un ensemble possède des capacités que ses éléments isolés ne possèdent pas. Ce mot nomme toutefois le problème plus qu’il ne le résout : les neurosciences cherchent encore à comprendre précisément comment l’activité collective du cerveau rend possibles la perception unifiée, le raisonnement ou la conscience.
+
+### Comment le réseau apprend-il ? Le rôle de la plasticité
+
+Un réseau apprend lorsqu’une expérience modifie durablement la manière dont son activité future va se dérouler. Cela devient possible parce que les synapses ne transmettent pas toujours les signaux avec la même efficacité : elles sont **plastiques**.
+
+La règle associée à **Donald Hebb** donne une intuition centrale : lorsque l’activité d’un neurone contribue régulièrement à l’activation d’un autre, leur connexion peut se renforcer. Le réseau devient alors plus susceptible de reproduire ou de reconnaître une configuration déjà rencontrée. C’est bien l’un des principes importants de l’apprentissage biologique.
+
+Mais l’apprentissage n’est pas réductible à « Hebb et rien d’autre ». Certaines connexions se renforcent, d’autres s’affaiblissent ; le moment précis où les neurones s’activent compte ; des substances modulatrices peuvent signaler la nouveauté, l’attention ou la récompense ; de nouvelles connexions peuvent apparaître et d’autres disparaître. Le cerveau doit aussi empêcher son activité de s’emballer et consolider certaines transformations dans la durée.
+
+Pour les étudiants, la formule la plus utile est donc : **l’expérience modifie les connexions ; les connexions modifiées changent la réponse future du réseau**. Hebb fournit une partie essentielle de cette explication, mais pas une théorie complète de l’apprentissage, de la mémoire ou de la conscience.
+
+### Et le symbolique ou la conscience ?
+
+Le même changement d’échelle est nécessaire. Un concept, un souvenir ou une règle symbolique ne correspond pas simplement à un neurone qui en serait le contenant. Ces activités mobilisent des réseaux distribués, les relations entre perception, mémoire, langage et action, ainsi que les interactions du cerveau avec un corps et un environnement.
+
+Le fonctionnement neuronal constitue donc une **condition biologique** de la pensée et de la conscience ; il ne suffit pas, à lui seul, à en épuiser l’explication. Le symbolique dépend aussi de langues, de pratiques et de relations sociales. Il faut tenir ensemble ces niveaux sans les confondre : comprendre la brique biologique éclaire ce qui rend la pensée possible, mais ne réduit pas la pensée à cette seule brique.
 
 ### Ce qu’il faut retenir
 
-1. Le neurone reçoit de nombreuses entrées excitatrices ou inhibitrices.
-2. Il les intègre dans l’espace et dans le temps.
-3. Si un seuil est franchi, il produit une impulsion le long de son axone.
-4. Il transmet ensuite un signal à d’autres cellules.
-5. L’efficacité de ses connexions peut évoluer avec l’activité du réseau.
+1. Les dendrites reçoivent de nombreux signaux au niveau des synapses.
+2. Ces signaux modifient l’état électrique de la membrane et rendent une impulsion plus ou moins probable.
+3. Leurs effets se combinent ; s’ils atteignent un seuil près du début de l’axone, un potentiel d’action est déclenché.
+4. L’axone conduit cette impulsion jusqu’à ses terminaisons.
+5. Les terminaisons libèrent des neurotransmetteurs vers d’autres cellules.
+6. Le réseau peut apprendre parce que l’expérience transforme durablement ses connexions.
+7. Les activités complexes émergent de l’organisation collective du réseau, sans être contenues dans un neurone isolé.
 
-McCulloch et Pitts vont extraire de ce fonctionnement une abstraction très forte : des entrées, une intégration et un seuil logique. Mais le neurone biologique reste beaucoup plus complexe : il est temporel, électrochimique, plastique et pris dans un réseau vivant.
+McCulloch et Pitts vont conserver trois éléments de ce fonctionnement — des entrées, leur combinaison et un seuil — pour en faire un modèle mathématique. Il ne s’agit pas d’une copie du neurone biologique : la chimie, le temps, les formes de plasticité et une grande partie de la complexité du vivant disparaissent dans l’abstraction.
 ---
 <!-- slide: id="006-neurone-mcculloch-pitts" title="McCulloch & Pitts" steps=5 -->
 

@@ -2,70 +2,173 @@
   import { getStepContext } from '@svx-slides/core/deck/stepContext'
 
   const step = getStepContext()
-
-  const synapses = [
-    { label: 'glutamate', kind: 'exc', x: 8, y: 18 },
-    { label: 'GABA', kind: 'inh', x: 12, y: 58 },
-    { label: 'entrée', kind: 'exc', x: 20, y: 38 }
-  ]
 </script>
 
 <div class="bio-neuron" aria-label="Fonctionnement schématique d’un neurone biologique">
   <div class="diagram">
-    {#each synapses as synapse, index}
-      <div
-        class="synapse {synapse.kind}"
-        data-active={$step >= 1}
-        style={`left: ${synapse.x}%; top: ${synapse.y}%; --delay: ${index * 90}ms`}
-      >
-        <span>{synapse.label}</span>
-      </div>
-    {/each}
+    <svg
+      viewBox="0 0 720 360"
+      role="img"
+      aria-label="Fonctionnement d’un neurone, puis recul révélant le réseau neuronal qui l’entoure"
+    >
+      <defs>
+        <g id="context-neuron">
+          <path
+            class="context-dendrites"
+            d="M-27 0 C-43 -8 -57 -20 -75 -29 M-51 -14 C-61 -4 -69 7 -73 20 M-49 -12 C-61 -29 -70 -43 -75 -57 M-28 2 C-45 10 -58 20 -72 35 M-51 16 C-61 31 -65 44 -65 58"
+          />
+          <path
+            class="context-soma"
+            d="M-28 0 C-28 -17 -17 -28 0 -29 C17 -30 29 -17 29 0 C29 18 17 29 0 29 C-17 29 -28 17 -28 0 Z"
+          />
+          <ellipse class="context-nucleus" cx="0" cy="0" rx="8" ry="9" />
+          <path
+            class="context-axon"
+            d="M29 0 C55 -3 82 4 109 0 C124 -2 136 -8 148 -16 M148 -16 C165 -26 181 -39 197 -51 M148 -16 C166 -8 181 3 197 17"
+          />
+        </g>
+      </defs>
 
-    <svg viewBox="0 0 720 360" role="img" aria-label="Dendrites, soma, axone et terminaisons synaptiques">
-      <g class="dendrites" data-active={$step >= 1}>
-        <path d="M250 180 C190 126 134 80 72 48" />
-        <path d="M245 170 C182 166 124 166 64 146" />
-        <path d="M246 192 C178 226 116 268 58 312" />
-        <path d="M206 138 C172 110 152 86 142 54" />
-        <path d="M200 214 C162 230 134 252 112 286" />
+      <g class="neural-scene" data-overview={$step >= 6}>
+        <g class="network-context" data-visible={$step >= 6} aria-hidden="true">
+          <path class="context-link" d="M-15 35 C-6 35 1 35 8 35" />
+          <path class="context-link" d="M-20 130 C-8 130 0 130 8 130" />
+          <path class="context-link" d="M-16 316 C-5 320 4 329 10 334" />
+          <path class="context-link" d="M718 64 C733 68 748 76 764 83" />
+          <path class="context-link" d="M718 168 C738 173 757 179 777 181" />
+          <path class="context-link" d="M718 297 C738 309 757 330 775 351" />
+          <path class="context-link faint" d="M165 -43 C197 6 216 55 242 110" />
+          <path class="context-link faint" d="M687 -35 C650 8 621 48 594 91" />
+          <path class="context-link faint" d="M433 411 C400 357 370 300 337 241" />
+
+          <use href="#context-neuron" transform="translate(-112 35) scale(0.66)" />
+          <use href="#context-neuron" transform="translate(-109 130) scale(0.61)" />
+          <use href="#context-neuron" transform="translate(-111 315) rotate(7) scale(0.65)" />
+          <use href="#context-neuron" transform="translate(130 -91) rotate(30) scale(0.72)" />
+          <use href="#context-neuron" transform="translate(373 -93) rotate(88) scale(0.68)" />
+          <use href="#context-neuron" transform="translate(833 -47) rotate(166) scale(0.7)" />
+          <use href="#context-neuron" transform="translate(822 84) scale(0.72)" />
+          <use href="#context-neuron" transform="translate(840 181) scale(0.72)" />
+          <use href="#context-neuron" transform="translate(824 356) rotate(-8) scale(0.72)" />
+          <use href="#context-neuron" transform="translate(586 449) rotate(-72) scale(0.68)" />
+          <use href="#context-neuron" transform="translate(300 451) rotate(-103) scale(0.68)" />
+          <use href="#context-neuron" transform="translate(38 432) rotate(-28) scale(0.7)" />
+        </g>
+
+        <g class="focal-neuron">
+      <g class="synaptic-inputs" data-active={$step >= 1}>
+        <path class="input-fibre" d="M8 35 C25 34 39 47 49 47" />
+        <path class="input-fibre" d="M8 130 C24 130 36 130 46 130" />
+        <path class="input-fibre" d="M10 334 C26 330 38 313 48 313" />
+
+        <circle class="bouton" cx="54" cy="47" r="5" />
+        <circle class="bouton" cx="51" cy="130" r="5" />
+        <circle class="bouton" cx="53" cy="313" r="5" />
+
+        <circle class="transmitter" cx="61" cy="48" r="1.8" />
+        <circle class="transmitter" cx="64" cy="49" r="1.4" />
+        <circle class="transmitter" cx="58" cy="130" r="1.8" />
+        <circle class="transmitter" cx="61" cy="130" r="1.4" />
+        <circle class="transmitter" cx="60" cy="311" r="1.8" />
+        <circle class="transmitter" cx="63" cy="309" r="1.4" />
       </g>
 
-      <g class="cell-body" data-threshold={$step >= 3}>
-        <circle cx="292" cy="180" r="58" />
-        <circle class="nucleus" cx="292" cy="180" r="18" />
+      <g class="synapse-callout" data-visible={$step >= 1}>
+        <path d="M55 55 C51 63 45 69 37 74" />
+        <text x="12" y="84">synapse</text>
+      </g>
+
+      <g class="dendrites" data-active={$step >= 1}>
+        <path class="primary" d="M253 146 C227 130 200 111 170 94" />
+        <path class="secondary" d="M170 94 C151 82 134 72 118 65" />
+        <path class="secondary" d="M118 65 C99 57 83 52 69 50" />
+        <path class="secondary" d="M170 94 C149 72 143 49 145 24" />
+        <path class="secondary" d="M170 94 C148 97 129 102 111 110" />
+        <path class="secondary" d="M111 110 C92 108 76 110 62 116" />
+        <path class="tertiary" d="M118 65 C99 47 82 34 60 25" />
+        <path class="tertiary" d="M118 65 C102 71 90 80 80 94" />
+
+        <path class="primary" d="M241 176 C213 171 185 159 154 146" />
+        <path class="secondary" d="M154 146 C136 140 119 134 103 132" />
+        <path class="secondary" d="M103 132 C87 130 75 130 65 130" />
+        <path class="secondary" d="M154 146 C137 153 123 160 112 166" />
+        <path class="secondary" d="M112 166 C99 172 89 179 82 186" />
+        <path class="secondary" d="M154 146 C139 126 128 109 124 91" />
+        <path class="tertiary" d="M103 132 C87 143 72 154 57 164" />
+        <path class="tertiary" d="M112 166 C92 168 74 170 57 178" />
+        <path class="tertiary" d="M112 166 C92 177 76 190 62 204" />
+
+        <path class="primary" d="M248 209 C220 220 192 233 157 247" />
+        <path class="secondary" d="M157 247 C140 254 125 261 112 267" />
+        <path class="secondary" d="M112 267 C94 277 82 287 74 298" />
+        <path class="secondary" d="M74 298 C70 302 67 305 66 308" />
+        <path class="secondary" d="M157 247 C141 244 126 242 113 240" />
+        <path class="secondary" d="M113 240 C97 238 85 238 76 238" />
+        <path class="secondary" d="M157 247 C149 260 143 271 137 279" />
+        <path class="secondary" d="M137 279 C131 291 128 302 127 312" />
+        <path class="tertiary" d="M112 267 C92 266 75 271 59 281" />
+        <path class="tertiary" d="M74 298 C84 307 90 318 92 331" />
+        <path class="tertiary" d="M113 240 C104 226 94 217 82 211" />
+        <path class="tertiary" d="M137 279 C153 291 163 305 168 323" />
+      </g>
+
+      <g class="dendritic-signals" data-visible={$step >= 2}>
+        <path d="M69 50 C83 52 99 57 118 65 C134 72 151 82 170 94 C200 111 227 130 253 146" />
+        <path d="M65 130 C75 130 87 130 103 132 C119 134 136 140 154 146 C185 159 213 171 241 176" />
+        <path d="M66 308 C67 305 70 302 74 298 C82 287 94 277 112 267 C125 261 140 254 157 247 C192 233 220 220 248 209" />
       </g>
 
       <g class="axon" data-active={$step >= 4}>
-        <path d="M348 180 C414 178 450 180 504 180 C560 180 604 158 662 118" />
-        <path d="M504 180 C560 180 604 204 662 248" />
+        <path class="primary" d="M346 179 C389 177 434 184 480 180 C504 178 522 173 538 164" />
+        <path class="secondary" d="M538 164 C576 143 608 120 648 108" />
+        <path class="secondary" d="M538 164 C576 179 610 211 648 247" />
       </g>
 
-      <g class="spikes" data-visible={$step >= 4}>
-        <circle cx="392" cy="179" r="5" />
-        <circle cx="462" cy="180" r="5" />
-        <circle cx="536" cy="177" r="5" />
-        <circle cx="610" cy="150" r="5" />
+      <g class="axonal-signals" data-visible={$step >= 4}>
+        <path d="M346 179 C389 177 434 184 480 180 C504 178 522 173 538 164" />
+        <path d="M538 164 C576 143 608 120 648 108 C663 99 672 84 679 74" />
+        <path d="M648 108 C665 121 676 139 681 155" />
+        <path d="M538 164 C576 179 610 211 648 247 C662 258 674 273 681 286" />
+      </g>
+
+      <g class="cell-body" data-threshold={$step >= 3}>
+        <path
+          class="soma"
+          d="M241 177 C240 150 253 128 276 118 C300 108 327 116 342 137 C357 158 356 185 345 207 C333 231 307 244 281 239 C258 235 242 211 241 177 Z"
+        />
+        <ellipse class="nucleus" cx="293" cy="178" rx="17" ry="19" />
       </g>
 
       <g class="terminals" data-visible={$step >= 5}>
-        <circle cx="668" cy="114" r="9" />
-        <circle cx="668" cy="252" r="9" />
-        <path d="M681 112 C704 106 710 96 718 82" />
-        <path d="M681 254 C704 262 710 272 718 286" />
+        <path class="terminal-fibre" d="M648 108 C663 99 672 84 679 74" />
+        <path class="terminal-fibre" d="M648 108 C665 121 676 139 681 155" />
+        <path class="terminal-fibre" d="M648 247 C662 258 674 273 681 286" />
+
+        <path class="receiving-fibre" d="M701 74 C708 72 713 68 718 64" />
+        <path class="receiving-fibre" d="M703 155 C709 157 714 162 718 168" />
+        <path class="receiving-fibre" d="M703 286 C709 288 714 292 718 297" />
+
+        <circle class="bouton" cx="684" cy="74" r="5" />
+        <circle class="bouton" cx="686" cy="155" r="5" />
+        <circle class="bouton" cx="686" cy="286" r="5" />
+
+        <circle class="transmitter" cx="692" cy="74" r="1.8" />
+        <circle class="transmitter" cx="696" cy="74" r="1.4" />
+        <circle class="transmitter" cx="694" cy="155" r="1.8" />
+        <circle class="transmitter" cx="698" cy="155" r="1.4" />
+        <circle class="transmitter" cx="694" cy="286" r="1.8" />
+        <circle class="transmitter" cx="698" cy="286" r="1.4" />
+      </g>
+        </g>
       </g>
     </svg>
 
-    <div class="threshold" data-visible={$step >= 3}>
-      <span>seuil</span>
-      <strong>≈ −55 mV</strong>
-    </div>
   </div>
 
   <ol class="steps">
     <li data-active={$step >= 1}>
       <span>01</span>
-      <p>Des synapses libèrent des neurotransmetteurs sur les dendrites.</p>
+      <p>Les boutons synaptiques libèrent des neurotransmetteurs dans une fine fente.</p>
     </li>
     <li data-active={$step >= 2}>
       <span>02</span>
@@ -83,24 +186,27 @@
       <span>05</span>
       <p>Aux terminaisons, le signal redevient chimique et affecte d’autres neurones.</p>
     </li>
+    <li data-active={$step >= 6}>
+      <span>06</span>
+      <p>Un réseau plastique peut apprendre et produire des activités complexes.</p>
+    </li>
   </ol>
 </div>
 
 <style>
   .bio-neuron {
+    --neuron-bleed: clamp(1rem, 3.5vw, 4rem);
+
     display: grid;
-    gap: clamp(1rem, 1.8vw, 1.8rem);
-    width: 100%;
+    gap: clamp(0.7rem, 1.2vw, 1.2rem);
+    width: calc(100% + var(--neuron-bleed) + var(--neuron-bleed));
+    margin-inline: calc(0px - var(--neuron-bleed));
   }
 
   .diagram {
     position: relative;
-    min-height: min(43vh, 26rem);
-    border: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
-    background:
-      radial-gradient(circle at 36% 48%, var(--slide-accent-soft), transparent 18rem),
-      color-mix(in srgb, var(--slide-bg), var(--slide-fg) 2%);
-    overflow: hidden;
+    min-height: min(50vh, 31rem);
+    overflow: visible;
   }
 
   svg {
@@ -110,13 +216,65 @@
     height: 100%;
   }
 
+  .neural-scene {
+    transform-box: view-box;
+    transform-origin: center;
+    transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .neural-scene[data-overview='true'] {
+    transform: scale(0.56);
+  }
+
+  .network-context {
+    opacity: 0;
+    transition: opacity 520ms ease 180ms;
+  }
+
+  .network-context[data-visible='true'] {
+    opacity: 0.58;
+  }
+
+  .network-context .context-link,
+  :global(.context-dendrites),
+  :global(.context-axon),
+  :global(.context-soma),
+  :global(.context-nucleus) {
+    stroke: color-mix(in srgb, var(--slide-muted), transparent 24%);
+  }
+
+  .network-context .context-link {
+    stroke-width: 1.35;
+  }
+
+  .network-context .context-link.faint {
+    opacity: 0.5;
+  }
+
+  :global(.context-dendrites),
+  :global(.context-axon) {
+    stroke-width: 1.55;
+  }
+
+  :global(.context-soma) {
+    fill: var(--slide-bg);
+    stroke-width: 1.8;
+  }
+
+  :global(.context-nucleus) {
+    fill: color-mix(in srgb, var(--slide-bg), var(--slide-fg) 7%);
+    stroke-width: 1.2;
+  }
+
   path,
-  circle {
+  circle,
+  ellipse {
     fill: none;
     stroke: var(--slide-muted);
-    stroke-width: 5;
+    stroke-width: 2.2;
     stroke-linecap: round;
     stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
     transition:
       stroke 240ms ease,
       opacity 240ms ease,
@@ -125,101 +283,159 @@
 
   .dendrites,
   .axon,
-  .spikes,
+  .synaptic-inputs,
+  .synapse-callout,
   .terminals {
-    opacity: 0.28;
+    opacity: 0.32;
     transition: opacity 240ms ease;
   }
 
   .dendrites[data-active='true'],
   .axon[data-active='true'],
-  .spikes[data-visible='true'],
+  .synaptic-inputs[data-active='true'],
+  .synapse-callout[data-visible='true'],
   .terminals[data-visible='true'] {
     opacity: 1;
   }
 
-  .dendrites[data-active='true'] path {
+  .dendrites .primary,
+  .axon .primary {
+    stroke-width: 2.8;
+  }
+
+  .dendrites .secondary,
+  .axon .secondary {
+    stroke-width: 2.1;
+  }
+
+  .dendrites .tertiary {
+    stroke-width: 1.45;
+  }
+
+  .dendrites[data-active='true'] path,
+  .synaptic-inputs[data-active='true'] .input-fibre,
+  .synaptic-inputs[data-active='true'] .bouton {
     stroke: var(--slide-accent);
   }
 
-  .cell-body circle:first-child {
+  .synaptic-inputs .input-fibre {
+    stroke-width: 1.6;
+  }
+
+  .synaptic-inputs .bouton {
+    fill: var(--slide-accent-soft);
+    stroke-width: 1.6;
+  }
+
+  .synaptic-inputs .transmitter {
+    fill: var(--slide-accent);
+    stroke: none;
+  }
+
+  .synapse-callout path {
+    stroke: var(--slide-muted);
+    stroke-width: 1;
+  }
+
+  .synapse-callout text {
+    fill: var(--slide-muted);
+    stroke: none;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-style: normal;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .dendritic-signals,
+  .axonal-signals {
+    opacity: 0;
+    transition: opacity 240ms ease;
+  }
+
+  .dendritic-signals[data-visible='true'],
+  .axonal-signals[data-visible='true'] {
+    opacity: 1;
+  }
+
+  .dendritic-signals path,
+  .axonal-signals path {
+    stroke: color-mix(in srgb, var(--slide-accent), transparent 55%);
+    stroke-width: 4.2;
+    stroke-dasharray: 0.4 17.6;
+    animation: signal-flow 1.45s linear infinite;
+  }
+
+  .dendritic-signals path:nth-child(2),
+  .axonal-signals path:nth-child(2) {
+    animation-delay: -0.48s;
+  }
+
+  .dendritic-signals path:nth-child(3),
+  .axonal-signals path:nth-child(3) {
+    animation-delay: -0.96s;
+  }
+
+  .axonal-signals path:nth-child(4) {
+    animation-delay: -0.72s;
+  }
+
+  .cell-body .soma {
     fill: var(--slide-bg);
-    stroke: var(--slide-fg);
+    stroke: color-mix(in srgb, var(--slide-muted), transparent 62%);
+    stroke-width: 2.7;
   }
 
   .cell-body .nucleus {
-    fill: var(--slide-accent-soft);
-    stroke: var(--slide-accent);
-    stroke-width: 3;
+    fill: color-mix(in srgb, var(--slide-bg), var(--slide-fg) 9%);
+    stroke: color-mix(in srgb, var(--slide-muted), transparent 28%);
+    stroke-width: 1.8;
+    transition:
+      fill 240ms ease,
+      stroke 240ms ease;
   }
 
-  .cell-body[data-threshold='true'] circle:first-child {
+  .cell-body[data-threshold='true'] .soma {
+    stroke: var(--slide-accent);
+  }
+
+  .cell-body[data-threshold='true'] .nucleus {
+    fill: var(--slide-accent-soft);
     stroke: var(--slide-accent);
   }
 
   .axon[data-active='true'] path,
-  .spikes circle,
-  .terminals circle,
-  .terminals path {
+  .terminals[data-visible='true'] .terminal-fibre,
+  .terminals[data-visible='true'] .receiving-fibre,
+  .terminals[data-visible='true'] .bouton {
     stroke: var(--slide-accent);
   }
 
-  .spikes circle,
-  .terminals circle {
+  .terminals .terminal-fibre,
+  .terminals .receiving-fibre {
+    stroke-width: 1.5;
+  }
+
+  .terminals .bouton {
+    fill: var(--slide-accent-soft);
+    stroke-width: 1.6;
+  }
+
+  .terminals .transmitter {
     fill: var(--slide-accent);
+    stroke: none;
   }
 
-  .synapse {
-    position: absolute;
-    z-index: 2;
-    padding: 0.38rem 0.52rem;
-    border: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
-    background: var(--slide-bg);
-    color: var(--slide-muted);
-    font-family: var(--font-mono);
-    font-size: clamp(0.46rem, 0.62vw, 0.7rem);
-    font-style: normal;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(0.35rem);
-    transition:
-      opacity 240ms ease var(--delay, 0ms),
-      transform 240ms ease var(--delay, 0ms),
-      color 240ms ease;
+  @keyframes signal-flow {
+    from {
+      stroke-dashoffset: 0;
+    }
+
+    to {
+      stroke-dashoffset: -18;
+    }
   }
 
-  .synapse[data-active='true'] {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .synapse.exc[data-active='true'] {
-    color: var(--slide-accent);
-  }
-
-  .synapse.inh[data-active='true'] {
-    color: var(--slide-fg);
-  }
-
-  .threshold {
-    position: absolute;
-    z-index: 2;
-    right: 5%;
-    top: 14%;
-    display: grid;
-    gap: 0.2rem;
-    opacity: 0;
-    transform: translateY(0.4rem);
-    transition: 240ms ease;
-  }
-
-  .threshold[data-visible='true'] {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .threshold span,
   .steps span {
     color: var(--slide-accent);
     font-family: var(--font-mono);
@@ -229,19 +445,9 @@
     text-transform: uppercase;
   }
 
-  .threshold strong {
-    color: var(--slide-fg);
-    font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2.5vw, 2.8rem);
-    font-style: italic;
-    font-weight: 300;
-    letter-spacing: -0.06em;
-    line-height: 0.95;
-  }
-
   .steps {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 0.55rem;
     margin: 0;
     padding: 0;
@@ -275,6 +481,18 @@
   @media (max-width: 980px) {
     .steps {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .neural-scene,
+    .network-context {
+      transition: none;
+    }
+
+    .dendritic-signals path,
+    .axonal-signals path {
+      animation: none;
     }
   }
 </style>
