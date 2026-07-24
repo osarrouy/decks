@@ -1,0 +1,15 @@
+{
+  "name": "svx-slides-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.14.4",
+  "scripts": {
+    "dev:demo": "node svx-slides/src/cli/index.mjs dev slides/demo",
+    "build:demo": "node svx-slides/src/cli/index.mjs build slides/demo --public",
+    "build:demo:public": "node svx-slides/src/cli/index.mjs build slides/demo --public",
+    "build:demo:presenter": "node svx-slides/src/cli/index.mjs build slides/demo --presenter",
+    "preview:demo": "node svx-slides/src/cli/index.mjs preview slides/demo",
+    "check": "pnpm build:demo:public && pnpm build:demo:presenter"
+  }
+}

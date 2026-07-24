@@ -1,0 +1,11 @@
+node_modules
+.svelte-kit
+.svx-slides
+build
+slides/*/.svx-slides
+slides/*/build
+slides/*/src/generated/deck
+.DS_Store
+.env
+.env.*
+!.env.example

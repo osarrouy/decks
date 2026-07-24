@@ -1,0 +1,41 @@
+/*
+  Reset volontairement léger.
+  Il neutralise seulement les comportements navigateur qui gênent un runtime
+  de slides plein écran, sans imposer de système typographique complet.
+*/
+
+/* Inclut bordures et padding dans les dimensions déclarées. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Supprime la marge navigateur par défaut et garantit une hauteur minimale. */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+/* Empêche le scroll de page dans la vue projection ; les slides gèrent leur overflow. */
+body {
+  overflow: hidden;
+}
+
+/* Les contrôles de formulaire héritent de la police du contexte. */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Les médias sont des blocs et ne débordent pas de leur conteneur. */
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@svx-slides/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "svx-slides": "./src/cli/index.mjs"
+  },
+  "svelte": "./src/index.ts",
+  "exports": {
+    ".": {
+      "svelte": "./src/index.ts",
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./styles.css": "./src/lib/styles/index.css",
+    "./components/DeckView.svelte": "./src/lib/components/DeckView.svelte",
+    "./components/Fragment.svelte": "./src/lib/components/Fragment.svelte",
+    "./components/PresenterView.svelte": "./src/lib/components/PresenterView.svelte",
+    "./components/SlideSurface.svelte": "./src/lib/components/SlideSurface.svelte",
+    "./components/TwoColumns.svelte": "./src/lib/components/TwoColumns.svelte",
+    "./deck/controller": "./src/lib/deck/controller.ts",
+    "./deck/imageGlow": "./src/lib/deck/imageGlow.ts",
+    "./deck/markdown": "./src/lib/deck/markdown.ts",
+    "./deck/singleFile": "./src/lib/deck/singleFile.ts",
+    "./deck/stepContext": "./src/lib/deck/stepContext.ts",
+    "./deck/types": "./src/lib/deck/types.ts",
+    "./mdsvex": {
+      "types": "./src/lib/mdsvex/index.d.ts",
+      "default": "./src/lib/mdsvex/index.mjs"
+    },
+    "./vite": {
+      "types": "./src/lib/vite/index.d.ts",
+      "default": "./src/lib/vite/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^5.19.0"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "mdsvex": "^0.12.6",
+    "remark-directive": "^4.0.0",
+    "svelte": "^5.19.0",
+    "vite": "^6.1.0"
+  }
+}

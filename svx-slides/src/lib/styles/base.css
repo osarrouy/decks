@@ -1,0 +1,78 @@
+/*
+  Styles globaux hors runtime de projection.
+  Ils concernent surtout le document HTML et la page d’accueil qui liste les decks.
+*/
+
+/* Applique les couleurs et la police par défaut au document entier. */
+html {
+  background: var(--deck-bg);
+  color: var(--slide-fg);
+  font-family: var(--font-body);
+}
+
+/* Les liens héritent de leur contexte au lieu d’imposer le bleu navigateur. */
+a {
+  color: inherit;
+}
+
+/* Couleur de sélection alignée avec l’accent du thème actif. */
+::selection {
+  background: var(--slide-accent-soft);
+}
+
+/* Page d’accueil : conteneur plein écran avec fond sombre et halo discret. */
+.home {
+  min-height: 100vh;
+  overflow: auto;
+  padding: clamp(2rem, 7vw, 7rem);
+  background:
+    radial-gradient(circle at top left, rgb(255 255 255 / 0.10), transparent 28rem),
+    var(--deck-bg);
+  color: white;
+}
+
+/* Grand titre de la page d’accueil. */
+.home h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+/* Texte d’introduction de la page d’accueil. */
+.home p {
+  max-width: 56rem;
+  color: rgb(255 255 255 / 0.72);
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+}
+
+/* Grille responsive des liens vers les decks et vues présentateur. */
+.deck-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  max-width: 78rem;
+}
+
+/* Carte cliquable de deck sur la page d’accueil. */
+.deck-card {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.35rem;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.07);
+  color: white;
+  text-decoration: none;
+}
+
+/* Titre interne d’une carte de deck. */
+.deck-card strong {
+  font-size: 1.3rem;
+}
+
+/* Méta-informations d’une carte de deck. */
+.deck-card span {
+  color: rgb(255 255 255 / 0.62);
+}

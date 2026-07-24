@@ -1,0 +1,372 @@
+---
+title: Introduction aux Cultures Numériques
+theme: gallery
+---
+<!-- slide: id="001-ouverture" title="Ouverture" steps=0 -->
+
+
+<p class="kicker">Protocol · contemporary art · since 2026</p>
+
+# Introduction aux Cultures Numériques
+
+
+Olivier Sarrouy {.lead}
+
+
+
+--- notes
+
+- Ouvrir la projection avec le bouton depuis la vue présentateur.
+- Déplacer la fenêtre projetée sur le second écran.
+- Les flèches droite/gauche contrôlent les slides et les étapes.
+---
+
+<!-- slide: id="002" title="Fragments" steps=0 -->
+
+
+# olivier.sarrouy@univ-rennes2.fr
+
+---
+<!-- slide: id="002-fragments" title="Fragments" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+# Fragments sans verbosités
+
+<Fragment at={1}>
+
+- Le texte reste presque entièrement du Markdown.!!
+
+</Fragment>
+
+<Fragment at={2}>
+
+- Les apparitions sont pilotées par un simple `step` global.
+
+</Fragment>
+
+<Fragment at={3}>
+
+- Les composants Svelte peuvent réagir au même état.
+
+</Fragment>
+
+--- notes
+
+Faire apparaître les trois points un par un !
+
+# TTTTT
+
+- Insister sur le fait que le fragment n’est pas lié à Reveal.
+- Le composant lit simplement l’étape courante depuis le contexte Svelte.
+---
+<!-- slide: id="003-composant" title="Composant anim\u00e9" steps=4 -->
+
+<script>
+  import ProcessDiagram from '$components/ProcessDiagram.svelte'
+</script>
+
+# Une chaîne de rendu
+
+<ProcessDiagram />
+
+--- notes
+
+Cette slide montre l’intérêt du runtime Svelte natif.
+
+À chaque étape, le composant reçoit implicitement le même `step` que les fragments textuels. On n’a donc pas besoin de traduire des événements DOM en état applicatif.
+---
+<!-- slide: id="004-publication" title="Publication" steps=2 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+  import StateCard from '$components/StateCard.svelte'
+</script>
+
+<div class="layout two-columns">
+
+<div>
+
+# Publier avec ou sans notes
+
+<Fragment at={1}>
+
+La version publique peut être construite sans charger les fichiers `.notes.md`.
+
+</Fragment>
+
+<Fragment at={2}>
+
+La reprise d’état passe par le hash : `#4.2`.
+
+</Fragment>
+
+</div>
+
+<div>
+
+<StateCard />
+
+</div>
+
+</div>
+
+--- notes
+
+Point important : cacher les notes en CSS ne suffit pas.
+
+Dans ce prototype, les notes vivent dans des fichiers séparés. En build public, elles ne sont pas importées par le registre des decks.
+---
+<!-- slide: id="005-neurone-biologique" title="Neurone biologique" steps=5 -->
+
+<script>
+  import BiologicalNeuron from '$components/BiologicalNeuron.svelte'
+</script>
+
+
+
+<BiologicalNeuron />
+
+
+
+
+
+--- notes
+
+Avant de présenter le neurone artificiel, il faut voir ce que ce modèle simplifie dans le neurone biologique.
+
+### Étape 1 — Recevoir
+
+Les dendrites, à gauche du schéma, peuvent être comparées à des antennes. Elles reçoivent les messages transmis par d’autres neurones au niveau des **synapses**.
+
+À la plupart des synapses, la transmission est chimique : le neurone précédent libère des **neurotransmetteurs**. Ceux-ci se fixent sur la membrane du neurone récepteur et modifient le passage des ions.
+
+### Étape 2 — Exciter ou inhiber
+
+Chaque entrée produit une petite variation locale du **potentiel de membrane** :
+
+- une entrée excitatrice rapproche le neurone du déclenchement ;
+- une entrée inhibitrice l’en éloigne.
+
+Il ne s’agit donc pas encore de « 0 » et de « 1 », mais de variations électrochimiques dont l’intensité et la durée diffèrent.
+
+On peut employer l’image de petits « oui » et de petits « non », à condition de préciser qu’ils n’ont pas tous la même force et qu’ils n’arrivent pas tous au même moment.
+
+### Étape 3 — Intégrer et franchir un seuil
+
+Le corps cellulaire, ou **soma**, reçoit l’ensemble de ces variations. Le noyau visible au centre n’est pas la « zone de décision » : l’intégration décisive s’effectue surtout au début de l’axone, dans le **segment initial**.
+
+Le neurone combine les excitations et les inhibitions :
+
+- dans l’espace, parce qu’elles viennent de synapses différentes ;
+- dans le temps, parce qu’elles peuvent arriver presque simultanément ou de manière espacée.
+
+Si le potentiel atteint un seuil — environ `−55 mV` dans ce schéma simplifié — un potentiel d’action est déclenché.
+
+### Étape 4 — Propager
+
+Le **potentiel d’action** est une impulsion électrique qui se propage le long de l’axone.
+
+Il obéit approximativement à une logique de « tout ou rien » : une fois le seuil franchi, l’impulsion est produite. Le neurone ne transmet donc pas simplement la somme obtenue sous la forme d’une valeur continue.
+
+L’intensité d’un stimulus peut toutefois être codée autrement, notamment par la fréquence des potentiels d’action.
+
+### Étape 5 — Transmettre au neurone suivant
+
+Quand l’impulsion atteint les terminaisons de l’axone, elle provoque la libération de neurotransmetteurs. Le signal passe ainsi :
+
+1. d’une transmission chimique à l’entrée ;
+2. à une propagation électrique dans le neurone ;
+3. puis de nouveau à une transmission chimique vers les neurones suivants.
+
+### Une première idée de l’apprentissage
+
+Les connexions synaptiques ne sont pas fixes. Leur efficacité peut se renforcer ou s’affaiblir selon l’activité passée du réseau : c’est la **plasticité synaptique**.
+
+La règle de Hebb en donne une formulation célèbre et simplifiée : des neurones souvent actifs ensemble tendent à renforcer leur connexion. Il ne faut pas confondre cette modification durable de la synapse avec l’intensité momentanée d’un signal.
+
+### Ce qu’il faut retenir
+
+1. Le neurone reçoit de nombreuses entrées excitatrices ou inhibitrices.
+2. Il les intègre dans l’espace et dans le temps.
+3. Si un seuil est franchi, il produit une impulsion le long de son axone.
+4. Il transmet ensuite un signal à d’autres cellules.
+5. L’efficacité de ses connexions peut évoluer avec l’activité du réseau.
+
+McCulloch et Pitts vont extraire de ce fonctionnement une abstraction très forte : des entrées, une intégration et un seuil logique. Mais le neurone biologique reste beaucoup plus complexe : il est temporel, électrochimique, plastique et pris dans un réseau vivant.
+---
+<!-- slide: id="006-neurone-mcculloch-pitts" title="McCulloch & Pitts" steps=5 -->
+
+<script>
+  import McCullochPittsNeuron from '$components/McCullochPittsNeuron.svelte'
+</script>
+
+<div class="layout two-columns">
+
+<div>
+
+<p class="kicker">1943 · threshold logic</p>
+
+# Un neurone logique
+
+<p class="lead">McCulloch & Pitts</p>
+
+</div>
+
+<div>
+
+<McCullochPittsNeuron />
+
+</div>
+
+</div>
+
+--- notes
+
+McCulloch et Pitts publient en 1943 « A Logical Calculus of the Ideas Immanent in Nervous Activity ».
+
+- Étape 1 : les entrées sont binaires, elles valent 0 ou 1.
+- Étape 2 : les entrées excitatrices actives sont additionnées.
+- Étape 3 : la somme est comparée à un seuil θ.
+- Étape 4 : si la somme atteint le seuil, le neurone « tire » : sortie 1.
+- Étape 5 : une entrée inhibitrice active fonctionne comme un veto : même si le seuil est atteint, la sortie retombe à 0.
+
+Le point important n’est pas encore l’apprentissage : les poids et le seuil sont fixés. Le neurone de McCulloch-Pitts est un opérateur logique, une petite machine à transformer des propositions binaires en une autre proposition binaire.
+---
+<!-- slide: id="007-perceptron-rosenblatt" title="Perceptron" steps=5 -->
+
+<script>
+  import RosenblattPerceptron from '$components/RosenblattPerceptron.svelte'
+</script>
+
+<div class="layout two-columns">
+
+<div>
+
+<p class="kicker">1958 · learning rule</p>
+
+# Le perceptron apprend
+
+<p class="lead">Rosenblatt après McCulloch & Pitts</p>
+
+</div>
+
+<div>
+
+<RosenblattPerceptron />
+
+</div>
+
+</div>
+
+--- notes
+
+Rosenblatt présente le perceptron à la fin des années 1950, avec un article important en 1958.
+
+- Étape 1 : la structure reste proche du neurone à seuil : des entrées, des poids, une somme, une décision binaire.
+- Étape 2 : la sortie est produite par une frontière de décision : d’un côté 0, de l’autre 1.
+- Étape 3 : différence décisive : un exemple supervisé apporte une cible `t`. Le système peut donc se tromper.
+- Étape 4 : l’erreur devient opératoire. La règle du perceptron ajuste les poids : `Δw = η(t − y)x`.
+- Étape 5 : ce qui change est donc le statut du poids : il n’est plus seulement fixé par le concepteur, il est modifié par l’expérience.
+
+Le perceptron n’est pas encore un réseau profond. Il reste limité aux séparations linéaires. Mais il introduit quelque chose que le neurone de McCulloch-Pitts n’avait pas : une procédure d’apprentissage.
+---
+<!-- slide: id="008-image-glow" title="Image glowy" steps=0 layout="two-columns" -->
+
+<div>
+
+<p class="kicker">élément de style</p>
+
+# Images avec halo {.wide-heading}
+
+<p class="lead">Un simple attribut sur l’image.</p>
+
+<p class="usage"><code>![cover](/image.jpg)&lbrace;data-glow=&quot;strong&quot;&rbrace;</code></p>
+
+</div>
+
+::: cover-demo
+
+![Pochette abstraite de démonstration](/album-glow.svg){data-glow="strong"}
+
+<p class="caption">data-glow="strong" · Apple Music-ish</p>
+
+:::
+
+<style>
+  .wide-heading {
+    max-width: 14ch;
+  }
+
+  .usage {
+    margin-top: 2rem;
+    font-style: normal !important;
+  }
+
+  .cover-demo {
+    display: grid;
+    justify-items: center;
+    gap: 1.2rem;
+  }
+
+  .cover-demo img {
+    width: min(56vh, 32rem);
+  }
+
+  .cover-demo .caption {
+    max-width: none;
+    color: var(--slide-muted);
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    font-style: normal;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style>
+
+--- notes
+
+Cette slide sert à tester l’attribut `data-glow` sur une image.
+
+Usage minimal dans une slide `.svx` :
+
+`<img src="/mon-image.jpg" alt="Description" data-glow />`
+
+Variantes disponibles :
+
+- `data-glow="soft"` pour un halo discret ;
+- `data-glow="strong"` pour un effet plus proche des pochettes Apple Music.
+
+Le runtime analyse l’image côté navigateur avec un canvas réduit, échantillonne ses couleurs en grille, puis construit un halo symétrique autour de l’image avec des gradients radiaux : les couleurs du haut, du bas et des côtés restent donc alignées sur celles de l’image.
+
+Si le navigateur interdit la lecture des pixels — par exemple avec une image distante sans CORS — le moteur retombe sur un flou symétrique de l’image elle-même.
+---
+<!-- slide: id="009-fin" title="Fin" steps=0 -->
+
+<div class="layout center">
+
+<div>
+
+<p class="kicker">À tester</p>
+
+# Un premier noyau utilisable
+
+<p class="lead muted">
+Reste à durcir : export PDF, thèmes multiples, overview, raccourcis, et composants de mise en page.
+</p>
+
+</div>
+
+</div>
+
+--- notes
+
+Prochaines étapes possibles :
+
+- rendre le système de thèmes sélectionnable par deck ;
+- ajouter une vue overview ;
+- améliorer l’export PDF ;
+- ajouter des composants typographiques et des layouts réutilisables.

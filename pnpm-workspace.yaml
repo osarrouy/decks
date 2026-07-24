@@ -1,0 +1,4 @@
+packages:
+  - svx-slides
+  - themes/*
+  - slides/*

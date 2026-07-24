@@ -1,0 +1,28 @@
+/*
+  Point d’entrée CSS du moteur.
+  Ce fichier ne contient aucun thème : il déclare l’ordre de cascade,
+  puis importe les feuilles structurelles du runtime.
+*/
+
+/*
+  Ordre explicite des cascade layers.
+  Les règles plus à droite gagnent sur les règles plus à gauche quand la
+  spécificité est comparable : les thèmes peuvent donc surcharger les tokens
+  et le layout sans multiplier les sélecteurs.
+*/
+@layer reset, tokens, base, deck, components, theme;
+
+/* Reset minimal commun à toute l’application. */
+@import './reset.css' layer(reset);
+
+/* Variables par défaut : couleurs, polices, tailles, espacements. */
+@import './tokens.css' layer(tokens);
+
+/* Styles globaux hors deck : page d’accueil, liens, sélection. */
+@import './base.css' layer(base);
+
+/* Runtime visuel des slides : scène, surface, typographie, fragments. */
+@import './deck.css' layer(deck);
+
+/* Vue présentateur : panneaux, notes, contrôles, prévisualisations. */
+@import './presenter.css' layer(components);

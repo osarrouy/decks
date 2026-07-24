@@ -1,0 +1,24 @@
+/*
+  Thème par défaut.
+  Il pose une base serif claire, sobre, sans dépendre du thème expérimental gallery.
+*/
+
+[data-theme='default'] {
+  /* Fond de slide légèrement chaud. */
+  --slide-bg: #fbfaf7;
+
+  /* Texte principal presque noir. */
+  --slide-fg: #171717;
+
+  /* Texte secondaire brun-gris. */
+  --slide-muted: #6b6760;
+
+  /* Accent bordeaux discret. */
+  --slide-accent: #8b1e3f;
+
+  /* Police de texte courant du thème par défaut. */
+  --font-body: ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+
+  /* Police des titres du thème par défaut. */
+  --font-heading: ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+}

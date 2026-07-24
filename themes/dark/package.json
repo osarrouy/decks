@@ -1,0 +1,9 @@
+{
+  "name": "@svx-slides/theme-dark",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./style.css": "./src/style.css"
+  }
+}

@@ -1,0 +1,77 @@
+/*
+  Tokens par défaut du framework.
+  Ces variables définissent le vocabulaire visuel commun. Les thèmes les
+  surchargent via [data-theme='...'] sans modifier les composants.
+*/
+
+:root {
+    /* Indique au navigateur que le thème par défaut est clair. */
+    color-scheme: light;
+
+    /* Couleur de fond extérieure à la slide. */
+    --deck-bg: #111114;
+
+    /* Couleur de fond de la surface de slide. */
+    --slide-bg: #fbfaf7;
+
+    /* Couleur principale du texte. */
+    --slide-fg: #171717;
+
+    /* Couleur secondaire : légendes, méta-informations, texte atténué. */
+    --slide-muted: #6b6760;
+
+    /* Couleur d’accent : progression, emphases, labels. */
+    --slide-accent: #8b1e3f;
+
+    /* Version douce de l’accent, utile pour sélections et fonds légers. */
+    --slide-accent-soft: color-mix(in srgb, var(--slide-accent), transparent 84%);
+
+    /* Police de texte courant dans les slides. */
+    --font-body: 'Newsreader', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+
+    /* Police des titres ; séparée du body pour permettre des thèmes contrastés. */
+    --font-heading: 'Newsreader', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+
+    /* Police mono utilisée pour les labels, compteurs, code et éléments d’interface. */
+    --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+    /* Ratio logique des slides quand un thème conserve un cadre 16:9. */
+    --slide-width: 16;
+    --slide-height: 9;
+
+    /* Padding interne général de la surface de slide. */
+    --slide-padding: clamp(2.75rem, 5vw, 5.5rem);
+
+    /* Espacement standard entre colonnes ou blocs de layout. */
+    --slide-gap: clamp(1.5rem, 3vw, 4rem);
+
+    /* Taille du texte courant. */
+    --text-size: clamp(1.35rem, 2vw, 2.45rem);
+
+    /* Taille des labels et informations secondaires. */
+    --small-size: clamp(1rem, 1.2vw, 1.35rem);
+
+    /* Taille des titres de premier niveau. */
+    --heading-size: clamp(3.1rem, 6.5vw, 7.6rem);
+
+    /* Taille des titres de second niveau. */
+    --heading-2-size: clamp(2rem, 3.8vw, 4.3rem);
+
+    /* Interlignage du texte courant. */
+    --line-body: 1.28;
+
+    /* Interlignage serré des grands titres. */
+    --line-heading: 0.95;
+
+    /* Rayon générique pour les panneaux ou cartes. */
+    --radius: 1.25rem;
+
+    /* Rayon par défaut des images stylisées. */
+    --image-radius: 1.15rem;
+
+    /* Couleur par défaut du halo des images glowy. */
+    --image-glow-color: var(--slide-accent);
+
+    /* Ombre du cadre de slide quand le thème ne prend pas tout l’écran. */
+    --shadow: 0 2rem 6rem rgb(0 0 0 / 0.28);
+}

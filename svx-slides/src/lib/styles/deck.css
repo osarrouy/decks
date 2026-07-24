@@ -1,0 +1,326 @@
+/*
+  Runtime visuel des slides.
+  Ce fichier définit le cadre de projection, la surface typographique commune,
+  les layouts simples utilisables depuis mdsvex, les fragments, puis les
+  ajustements structurels propres au thème gallery.
+*/
+
+/* Conteneur extérieur du deck : centre un cadre de slide dans la fenêtre. */
+.deck-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 12% 5%, rgb(255 255 255 / 0.10), transparent 24rem),
+        var(--deck-bg);
+}
+
+/* Cadre de projection : par défaut, un rectangle au ratio défini par les tokens. */
+.deck-stage {
+    position: relative;
+    width: min(100vw, calc(100vh * var(--slide-width) / var(--slide-height)));
+    aspect-ratio: var(--slide-width) / var(--slide-height);
+    background: var(--slide-bg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Surface interne qui reçoit le contenu mdsvex de la slide courante. */
+.slide-surface {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: var(--slide-padding-top, var(--slide-padding)) var(--slide-padding) var(--slide-padding-bottom, var(--slide-padding));
+    background:
+        linear-gradient(135deg, rgb(255 255 255 / 0.14), transparent 42%),
+        var(--slide-bg);
+    color: var(--slide-fg);
+    font-family: var(--font-body);
+    overflow: hidden;
+}
+
+/* Neutralise la marge haute des éléments Markdown les plus fréquents. */
+.slide-surface h1,
+.slide-surface h2,
+.slide-surface h3,
+.slide-surface p,
+.slide-surface ul,
+.slide-surface ol,
+.slide-surface blockquote {
+    margin-top: 0;
+}
+
+/* Titre principal d’une slide. */
+.slide-surface h1 {
+    max-width: 20ch;
+    margin-bottom: 0.55em;
+    font-family: var(--font-heading);
+    font-size: var(--heading-size);
+    font-weight: 680;
+    letter-spacing: -0.055em;
+    line-height: var(--line-heading);
+}
+
+/* Titre secondaire d’une slide. */
+.slide-surface h2 {
+    max-width: 18ch;
+    margin-bottom: 0.7em;
+    font-family: var(--font-heading);
+    font-size: var(--heading-2-size);
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+/* Texte courant et items de liste produits par Markdown/mdsvex. */
+.slide-surface p,
+.slide-surface li {
+    max-width: 38ch;
+    font-size: var(--text-size);
+    line-height: var(--line-body);
+}
+
+/* Espacement vertical entre deux paragraphes consécutifs. */
+.slide-surface p+p {
+    margin-top: 0.8em;
+}
+
+/* Listes Markdown : grille verticale pour contrôler l’écart entre items. */
+.slide-surface ul,
+.slide-surface ol {
+    display: grid;
+    gap: 0.55em;
+    padding-left: 1.15em;
+}
+
+/* Emphase forte : utilise la couleur d’accent du thème. */
+.slide-surface strong {
+    color: var(--slide-accent);
+    font-weight: 700;
+}
+
+/* Code inline dans les slides. */
+.slide-surface code {
+    padding: 0.12em 0.28em;
+    border-radius: 0.3em;
+    background: color-mix(in srgb, var(--slide-fg), transparent 91%);
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+}
+
+/* Images insérées directement depuis Markdown ou HTML dans les slides. */
+.slide-surface img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+  Image avec halo type pochette Apple Music.
+  Usage : <img src="..." alt="..." data-glow> ou data-glow="soft|strong".
+  Le runtime analyse l’image en canvas et injecte une carte de couleurs autour
+  de l’image ; sans JS, on garde un halo symétrique de couleur de thème.
+*/
+.slide-surface :where(img[data-glow], img[glow], img.glow, img.glowy) {
+    --image-glow-blur: 3.4rem;
+
+    border-radius: var(--image-radius);
+    box-shadow: 0 0 var(--image-glow-blur) -0.85rem color-mix(in srgb, var(--image-glow-color), transparent 56%);
+    transform: translateZ(0);
+}
+
+.slide-surface :where(img[data-glow='soft'], img[glow='soft']) {
+    --image-glow-blur: 2.4rem;
+}
+
+.slide-surface :where(img[data-glow='strong'], img[glow='strong']) {
+    --image-glow-blur: 4.4rem;
+}
+
+.slide-surface .image-glow-frame {
+    --image-glow-map: radial-gradient(circle,
+            color-mix(in srgb, var(--image-glow-color), transparent 32%),
+            transparent 68%);
+    --image-glow-opacity: 0.66;
+    --image-glow-scale: 1.16;
+    --image-glow-blur: 3.4rem;
+
+    position: relative;
+    display: inline-grid;
+    width: fit-content;
+    max-width: 100%;
+    isolation: isolate;
+    border-radius: var(--image-radius);
+}
+
+.slide-surface .image-glow-frame>img {
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 1;
+    box-shadow: none;
+}
+
+.slide-surface .image-glow-aura {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    grid-area: 1 / 1;
+    border-radius: inherit;
+    background: var(--image-glow-map);
+    filter: blur(var(--image-glow-blur)) saturate(1.18);
+    opacity: var(--image-glow-opacity);
+    transform: scale(var(--image-glow-scale));
+    transform-origin: center;
+    pointer-events: none;
+}
+
+/* Label court en mono, généralement placé avant un titre. */
+.slide-surface .kicker {
+    margin-bottom: 1.2rem;
+    color: var(--slide-accent);
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Paragraphe d’accroche plus grand que le corps. */
+.slide-surface .lead {
+    max-width: 29ch;
+    font-size: clamp(2rem, 3.4vw, 4.2rem);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+/* Texte atténué selon la couleur secondaire du thème. */
+.slide-surface .muted {
+    color: var(--slide-muted);
+}
+
+/* Layouts appliqués à la slide entière via <!-- slide: layout="..." -->. */
+.slide-surface[data-layout='two-columns'],
+.slide-surface[data-layout='columns'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--slide-gap);
+    align-items: center;
+}
+
+.slide-surface[data-layout='center'],
+.slide-surface[data-layout='cover'] {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.slide-surface[data-layout='cover'] h1 {
+    max-width: 11ch;
+    margin-inline: auto;
+}
+
+.slide-surface[data-layout='stack'] {
+    display: grid;
+    align-content: center;
+    gap: var(--slide-gap);
+}
+
+.slide-surface[data-align='start'] {
+    align-items: start;
+    text-align: start;
+}
+
+.slide-surface[data-align='center'] {
+    align-items: center;
+    text-align: center;
+}
+
+.slide-surface[data-align='end'] {
+    align-items: end;
+    text-align: end;
+}
+
+/* Layouts internes produits par les directives Markdown ::: columns / ::: center. */
+.slide-surface .layout.two-columns,
+.slide-surface .layout.columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--slide-gap);
+    align-items: center;
+    height: 100%;
+}
+
+/* Layout utilitaire centré verticalement et horizontalement. */
+.slide-surface .layout.center,
+.slide-surface .layout.cover {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.slide-surface .layout.stack {
+    display: grid;
+    align-content: center;
+    gap: var(--slide-gap);
+    height: 100%;
+}
+
+/* Les enfants directs des layouts centrés restent centrés même avec max-width. */
+.slide-surface :where(.layout.center, .layout.cover)>* {
+    margin-inline: auto;
+}
+
+.slide-surface .column {
+    min-width: 0;
+}
+
+/* Éléments de chrome optionnels : cachés par défaut, activés par certains thèmes. */
+.deck-chrome,
+.deck-ticker {
+    display: none;
+}
+
+/* Ancien HUD bas de page, conservé comme classe disponible mais non rendu actuellement. */
+.deck-hud {
+    position: fixed;
+    inset-inline: 1rem;
+    bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: rgb(255 255 255 / 0.58);
+    font: 500 0.78rem/1 var(--font-mono);
+    pointer-events: none;
+}
+
+/* Barre de progression globale du deck, fixée en bas de la fenêtre. */
+.deck-progress {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background: var(--slide-accent);
+    transition: width 180ms ease;
+}
+
+/* Conteneur des fragments progressifs. */
+.fragment {
+    transition:
+        opacity 260ms ease,
+        transform 260ms ease,
+        filter 260ms ease;
+}
+
+/* Fragment non encore visible à l’étape courante. */
+.fragment[data-visible='false'] {
+    opacity: 0;
+    transform: translateY(0.4em);
+    filter: blur(2px);
+}
+
+/* Fragment visible à l’étape courante. */
+.fragment[data-visible='true'] {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}

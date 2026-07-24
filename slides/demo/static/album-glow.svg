@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="g1" cx="35%" cy="28%" r="70%">
+      <stop offset="0" stop-color="#ff149d"/>
+      <stop offset="0.36" stop-color="#ff7ac8"/>
+      <stop offset="0.62" stop-color="#ffb703"/>
+      <stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="0.44" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0.58"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.18"/>
+      </feComponentTransfer>
+      <feBlend mode="overlay" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#g1)"/>
+  <rect width="1200" height="1200" fill="url(#g2)"/>
+  <g filter="url(#grain)">
+    <circle cx="340" cy="320" r="260" fill="#ffffff" opacity="0.12"/>
+    <circle cx="800" cy="780" r="420" fill="#ff149d" opacity="0.2"/>
+    <path d="M120 880 C340 680 490 710 650 520 C790 354 940 278 1080 300 L1080 1080 L120 1080 Z" fill="#050505" opacity="0.42"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity="0.42" stroke-width="3">
+    <circle cx="600" cy="600" r="220"/>
+    <circle cx="600" cy="600" r="72"/>
+  </g>
+  <text x="82" y="102" fill="#fff" font-family="monospace" font-size="34" letter-spacing="9">DATA-GLOW</text>
+  <text x="82" y="1130" fill="#fff" opacity="0.72" font-family="monospace" font-size="26" letter-spacing="7">SVX SLIDES / STYLE ELEMENT</text>
+</svg>
