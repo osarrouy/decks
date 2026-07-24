@@ -18,9 +18,26 @@ body {
   min-height: 100%;
 }
 
+/* Base du document, partagée par la projection et la vue présentateur. */
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+
 /* Empêche le scroll de page dans la vue projection ; les slides gèrent leur overflow. */
 body {
   overflow: hidden;
+}
+
+/* Les liens héritent de la couleur de leur contexte. */
+a {
+  color: inherit;
+}
+
+/* Sélection alignée avec l’accent du thème actif. */
+::selection {
+  background: var(--accent-soft);
 }
 
 /* Les contrôles de formulaire héritent de la police du contexte. */

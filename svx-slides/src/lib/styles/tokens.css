@@ -8,23 +8,20 @@
     /* Indique au navigateur que le thème par défaut est clair. */
     color-scheme: light;
 
-    /* Couleur de fond extérieure à la slide. */
-    --deck-bg: #111114;
-
-    /* Couleur de fond de la surface de slide. */
-    --slide-bg: #fbfaf7;
+    /* Couleur de fond commune au viewport et à la surface. */
+    --bg: #fbfaf7;
 
     /* Couleur principale du texte. */
-    --slide-fg: #171717;
+    --fg: #171717;
 
     /* Couleur secondaire : légendes, méta-informations, texte atténué. */
-    --slide-muted: #6b6760;
+    --muted: #6b6760;
 
     /* Couleur d’accent : progression, emphases, labels. */
-    --slide-accent: #8b1e3f;
+    --accent: #8b1e3f;
 
     /* Version douce de l’accent, utile pour sélections et fonds légers. */
-    --slide-accent-soft: color-mix(in srgb, var(--slide-accent), transparent 84%);
+    --accent-soft: color-mix(in srgb, var(--accent), transparent 84%);
 
     /* Police de texte courant dans les slides. */
     --font-body: 'Newsreader', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
@@ -36,14 +33,11 @@
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 
     /* Ratio logique des slides quand un thème conserve un cadre 16:9. */
-    --slide-width: 16;
-    --slide-height: 9;
+    --aspect-width: 16;
+    --aspect-height: 9;
 
-    /* Padding interne général de la surface de slide. */
-    --slide-padding: clamp(2.75rem, 5vw, 5.5rem);
-
-    /* Espacement standard entre colonnes ou blocs de layout. */
-    --slide-gap: clamp(1.5rem, 3vw, 4rem);
+    /* Unité rythmique : les thèmes peuvent modifier toute la grille avec ce seul token. */
+    --grid-unit: clamp(0.4rem, 0.65vw, 0.7rem);
 
     /* Taille du texte courant. */
     --text-size: clamp(1.35rem, 2vw, 2.45rem);
@@ -63,15 +57,29 @@
     /* Interlignage serré des grands titres. */
     --line-heading: 0.95;
 
-    /* Rayon générique pour les panneaux ou cartes. */
-    --radius: 1.25rem;
-
     /* Rayon par défaut des images stylisées. */
     --image-radius: 1.15rem;
 
     /* Couleur par défaut du halo des images glowy. */
-    --image-glow-color: var(--slide-accent);
+    --image-glow-color: var(--accent);
 
-    /* Ombre du cadre de slide quand le thème ne prend pas tout l’écran. */
-    --shadow: 0 2rem 6rem rgb(0 0 0 / 0.28);
+}
+
+/*
+  L’échelle est recalculée sur chaque racine thémée. Une redéfinition locale
+  de --grid-unit suffit donc à modifier tout le rythme du deck.
+*/
+:root,
+[data-theme] {
+    --space-1: var(--grid-unit);
+    --space-2: calc(var(--grid-unit) * 2);
+    --space-3: calc(var(--grid-unit) * 3);
+    --space-4: calc(var(--grid-unit) * 4);
+    --space-6: calc(var(--grid-unit) * 6);
+    --space-8: calc(var(--grid-unit) * 8);
+    --space-12: calc(var(--grid-unit) * 12);
+
+    --padding-horizontal: var(--space-8);
+    --padding-vertical: var(--space-8);
+    --gap: var(--space-4);
 }

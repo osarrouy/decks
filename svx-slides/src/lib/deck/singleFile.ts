@@ -145,7 +145,8 @@ function buildSlide(contentLines: string[], notesLines: string[], index: number)
   const order = index + 1
   const fallbackTitle = `Slide ${order}`
   const title = String(metadata.title ?? inferTitle(content, fallbackTitle))
-  const id = String(metadata.id ?? `${String(order).padStart(3, '0')}-${slugify(title) || `slide-${order}`}`)
+  const id = String(metadata.id ?? (slugify(title) || `slide-${order}`))
+  const steps = typeof metadata.steps === 'number' ? metadata.steps : 0
 
   return {
     id,
@@ -153,7 +154,9 @@ function buildSlide(contentLines: string[], notesLines: string[], index: number)
     title,
     metadata: {
       ...metadata,
-      title
+      title,
+      steps,
+      order
     },
     content: content.trim(),
     notes: rawNotes || undefined

@@ -20,7 +20,7 @@
   $: align = token(slide.metadata.align)
   $: tone = token(slide.metadata.tone)
   $: surfaceClass = [
-    'slide-surface',
+    'slide',
     layout && `slide-layout-${layout}`,
     align && `slide-align-${align}`,
     tone && `slide-tone-${tone}`

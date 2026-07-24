@@ -121,15 +121,13 @@ Dans ce prototype, les notes vivent dans des fichiers séparés. En build public
 ---
 <!-- slide: id="004a-cybernetique" title="La cybernétique" steps=0 -->
 
-<div class="layout center">
 
-<div>
 
-<p class="kicker">1943–1953 · science transdisciplinaire</p>
+<p class="kicker">1943–1953 · une science transdisciplinaire</p>
 
 # La cybernétique
 
-<p class="lead">Comment piloter un monde incertain ?</p>
+Comment piloter un monde incertain ? {.lead}
 
 <div class="cyber-timeline" aria-label="Repères chronologiques">
   <span>1943</span>
@@ -137,17 +135,21 @@ Dans ce prototype, les notes vivent dans des fichiers séparés. En build public
   <span>1953</span>
 </div>
 
-</div>
 
-</div>
 
 --- notes
 
 Temps indicatif : **2 à 3 minutes**.
 
-Cette partie doit nous permettre de comprendre le cadre intellectuel dans lequel apparaîtront les premiers neurones artificiels. La cybernétique n’est ni un ancêtre unique de l’informatique, ni une théorie qui aurait disparu. C’est un moment où des chercheurs provenant de disciplines différentes essaient de décrire avec un même vocabulaire des phénomènes de **communication**, de **régulation** et de **comportement orienté vers un but**.
+Cette séquence doit nous permettre de comprendre le cadre intellectuel qui structure, après guerre, le travail de nombreux pionners de l'informatique.
 
-Le terme vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer continuellement la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
+Nous y verrons ainsi comment se diffuse des manières nouvelles de penser d'où naitront, entre autre, les premières expérimentations autour de ce qui deviendra bientôt Internet, tout comme les premiers réseaux de neurones artificiels, mais aussi une certain rationalité politique et économie - le néo-libéralisme.
+
+Cette manière de pensée, nous la qualifierons de cybernétique, un mot proposé par Norber Wiener, sur l'origine duquel nous aurons l'occasion de revenir.
+
+La cybernétique n’est ni un ancêtre unique de l’informatique, ni une théorie qui aurait disparu. Elle ne désigne meme pas une science etablie et clairement délimité, mais plumtôt un moment où des chercheurs provenant de disciplines différentes essaient de décrire avec un même vocabulaire des phénomènes de **communication**, de **régulation** et de **comportement orienté vers un but**.
+
+Le terme cybernétique vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer continuellement la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
 
 Nous allons avancer autour d’une question simple : **comment agir de manière réglée dans un monde que l’on ne peut ni connaître complètement, ni prévoir parfaitement ?**
 
@@ -158,39 +160,43 @@ Le fil historique sera volontairement resserré :
 - de **1946 à 1953**, les conférences Macy font circuler ces concepts entre ingénieurs, biologistes, mathématiciens, anthropologues et psychologues.
 
 Ces dates ne marquent pas la naissance absolue de chacune de ces idées. Les régulateurs mécaniques, les statistiques, la théorie des systèmes ou la physiologie de l’homéostasie ont une histoire antérieure. Ce qui se forme dans l’après-guerre, c’est surtout une **configuration intellectuelle commune**.
+
 ---
-<!-- slide: id="004b-guerre-et-pilotage" title="Guerre et pilotage" steps=3 -->
+<!-- slide: id="004aa-wiener" title="Norbert Wiener" steps=0 layout="two-columns" -->
+
+<div>
+
+<p class="kicker">1894–1964 · mathématiques · cybernétique</p>
+
+# Norbert Wiener
+
+</div>
+
+<figure class="wiener-portrait">
+
+![Norbert Wiener devant un tableau couvert d’équations](/wiener.jpg){data-glow="strong"}
+
+</figure>
+
+--- notes
+
+Norbert Wiener est un mathématicien, physicien et philosophe américain.
+
+Il a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation.
+
+Il a notamment travaillé, pendant la guerre, sur des systèmes de défense anti-aériens capables de suivre automatiquement les avions ennemis et de prédire leurs trajectoires - pour optimiser la réponse des canons antiaériens.
+
+---
 
 <script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+  import AntiAircraftCybernetics from '$components/AntiAircraftCybernetics.svelte'
 </script>
 
 <p class="kicker">Seconde Guerre mondiale · prédiction</p>
 
 # Une science née de la guerre
 
-<Fragment at={1}>
-
-<p class="lead">L’avion ne sera plus là où l’on vise.</p>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<div class="cyber-sequence">
-  <span>observer</span><span class="arrow">→</span>
-  <span>anticiper</span><span class="arrow">→</span>
-  <span>agir</span><span class="arrow">→</span>
-  <span>corriger</span>
-</div>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="cyber-question">Agir sans tout connaître : le problème pratique devient un problème d’information.</p>
-
-</Fragment>
+<AntiAircraftCybernetics />
 
 --- notes
 
@@ -207,7 +213,9 @@ Il faut donc :
 3. anticiper une position future ;
 4. corriger continuellement la prédiction à partir de nouvelles observations.
 
-Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d’organismes et de machines qui réagissent.
+Laisser l’animation accomplir un cycle complet : les quatre verbes au bas de l’image permettent de nommer successivement ces opérations. Insister sur le dernier mouvement, qui ramène l’écart observé vers le dispositif de mesure : c’est lui qui transforme une suite d’actions en **boucle de rétroaction**.
+
+Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d'incertitudes, d’organismes et de machines qui réagissent.
 
 ### Pourquoi cette origine compte-t-elle ?
 
@@ -224,7 +232,7 @@ Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il 
 La réponse attendue est non. Il lui suffit de détecter un écart, de recalculer et de proposer une nouvelle action. C’est cette capacité de correction qui permet de **piloter sans tout prévoir**.
 
 [Sources]
-- Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail d’abord diffusé comme mémorandum classifié en 1942, MIT Press, https://mitpress.mit.edu/9780262730051/extrapolation-interpolation-and-smoothing-of-stationary-time-series/.
+- Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 [/Sources]
 ---
@@ -266,9 +274,11 @@ La réponse attendue est non. Il lui suffit de détecter un écart, de recalcule
 
 Temps indicatif : **5 minutes**.
 
-Les dix conférences généralement appelées « conférences Macy » se tiennent entre 1946 et 1953. Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal Systems in Biological and Social Systems*. Le mot « cybernétique » ne s’impose dans leur intitulé qu’après la publication du livre de Wiener.
+Les dix conférences généralement appelées « conférences Macy » se tiennent entre 1946 et 1953. Warren McCulloch — que nous retrouverons bientôt à propos du neurone logique — préside la série. Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal Systems in Biological and Social Systems*.
 
-On y rencontre notamment Warren McCulloch, Walter Pitts, Norbert Wiener, John von Neumann, Margaret Mead, Gregory Bateson, Arturo Rosenblueth et Heinz von Foerster, avec des présences variables selon les réunions.
+Le mot « cybernétique » ne s’impose pas immédiatement. En 1949, lors de la sixième conférence, Heinz von Foerster est chargé d’éditer les actes, avec Margaret Mead et Hans-Lukas Teuber comme éditeurs adjoints. Il propose d’adopter le terme rendu public l’année précédente par Wiener. La proposition est acceptée ; à partir de la conférence suivante, en 1950, le titre devient *Cybernetics: Circular Causal and Feedback Mechanisms in Biological and Social Systems*. Le nom ne précède donc pas le collectif : il vient stabiliser après coup un champ de discussions déjà engagé.
+
+On y rencontre notamment Walter Pitts, Norbert Wiener, John von Neumann, Margaret Mead, Gregory Bateson, Arturo Rosenblueth et Heinz von Foerster, avec des présences variables selon les réunions.
 
 ### Ce qui se joue
 
@@ -509,6 +519,8 @@ La distinction est décisive pour des étudiants en information-communication :
 
 Le risque apparaît lorsque l’on transforme une abstraction très puissante en ontologie générale : parce que tout peut être codé comme information, on conclurait que tout **n’est que** de l’information.
 
+Shannon mettra lui-même en garde contre ce glissement dans « The Bandwagon » en 1956. Il ne rejette pas les usages de la théorie de l’information en biologie, en psychologie ou dans les sciences sociales. Il rappelle en revanche qu’on ne peut pas y transposer quelques mots — « information », « entropie », « redondance » — comme s’ils constituaient déjà une explication. Ces extensions exigent de nouvelles hypothèses et des vérifications empiriques.
+
 ### Le lien avec la cybernétique
 
 Une boucle de rétroaction a besoin qu’un état du monde soit sélectionné, mesuré, codé et réintroduit dans le système. La théorie de l’information offre donc un langage mathématique qui voyage facilement entre machines et organismes.
@@ -523,6 +535,7 @@ Elle possède une trace très utile pour certains calculs ; elle ne possède pas
 
 [Sources]
 - Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
+- Claude E. Shannon, « The Bandwagon », *IRE Transactions on Information Theory*, 2(1), 1956, p. 3, https://doi.org/10.1109/TIT.1956.1056774.
 [/Sources]
 ---
 <!-- slide: id="004g-systeme-et-finalite" title="Système et finalité" steps=3 -->
@@ -563,9 +576,9 @@ Temps indicatif : **5 minutes**.
 
 ### Du mécanisme au comportement
 
-Dans leur article de 1943, Rosenblueth, Wiener et Bigelow proposent d’étudier un objet à partir de ses entrées, de ses sorties et de la relation entre elles. Cette approche « comportementale » permet de comparer des dispositifs dont la composition interne est différente.
+Dans leur article de 1943, Rosenblueth, Wiener et Bigelow proposent d’étudier un objet à partir de son comportement observable plutôt que de commencer par sa matière ou sa structure interne. Cette approche permet de comparer des dispositifs différents en décrivant leurs entrées, leurs sorties et la relation entre elles.
 
-On peut parfois traiter le système comme une **boîte noire** : sans connaître chaque détail intérieur, on observe comment il réagit à certaines entrées. Cette stratégie est utile lorsque l’objet est trop complexe, mal connu ou inaccessible.
+Cette méthode prépare ce que W. Ross Ashby systématisera en 1956 sous le nom de théorie de la **boîte noire**. Le terme et le problème viennent de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend explicitement cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
 Mais une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée.
 
@@ -593,6 +606,7 @@ La cybernétique apporte donc une méthode puissante, mais elle oblige à demand
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
+- W. Ross Ashby, *An Introduction to Cybernetics*, chap. 6, « The Black Box », Chapman & Hall / John Wiley, 1956, https://doi.org/10.5962/bhl.title.5851.
 [/Sources]
 ---
 <!-- slide: id="004h-auto-organisation" title="Auto-organisation" steps=3 -->
@@ -730,7 +744,9 @@ Cette seconde forme peut accroître l’autonomie réelle. Elle peut également 
 
 ### Un cas fécond : Cybersyn
 
-Le projet Cybersyn, développé au Chili sous le gouvernement de Salvador Allende, permet de rendre cette ambivalence concrète. Il utilisait un réseau de télex et des outils cybernétiques pour faire remonter rapidement des informations depuis les entreprises nationalisées.
+Le projet Cybersyn, développé au Chili sous le gouvernement de Salvador Allende, permet de rendre cette ambivalence concrète. En 1971, l’ingénieur chilien Fernando Flores invite le cybernéticien britannique Stafford Beer à transposer à l’échelle de l’économie nationalisée ses recherches sur la régulation des organisations, notamment son *Viable System Model*. Le projet est ensuite conçu par une équipe internationale et multidisciplinaire : mieux vaut donc dire qu’il est développé **avec** Beer plutôt que lui en attribuer seul la conception.
+
+Cybersyn utilisait un réseau de télex et des outils statistiques pour faire remonter rapidement des informations depuis les entreprises nationalisées. Le modèle de Beer cherchait à articuler plusieurs niveaux de régulation : chaque unité devait conserver une certaine autonomie, tandis que les niveaux supérieurs traitaient les problèmes qu’elle ne pouvait pas résoudre seule.
 
 On pourrait le raconter comme un rêve de pilotage central de l’économie. Ce serait incomplet : le projet cherchait aussi à coordonner l’ensemble sans supprimer l’autonomie des unités locales. Son intérêt historique tient précisément à cette tension entre information centralisée, décision distribuée et participation des travailleurs.
 
@@ -753,7 +769,9 @@ On peut présenter ici la formule suivante : **l’auto-organisation n’est pas
 [Sources]
 - Norbert Wiener, *The Human Use of Human Beings: Cybernetics and Society*, Houghton Mifflin, 1950.
 - W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall, 1956.
-- Eden Medina, *Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile*, MIT Press, 2011.
+- Stafford Beer, « The Viable System Model: Its Provenance, Development, Methodology and Pathology », *Journal of the Operational Research Society*, 35(1), 1984, p. 7–25, https://doi.org/10.1057/jors.1984.2.
+- Eden Medina, *Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile*, MIT Press, 2011, https://mitpress.mit.edu/9780262525961/cybernetic-revolutionaries/.
+- Eden Medina, « Project Cybersyn: Chile’s Radical Experiment in Cybernetic Socialism », *MIT Press Reader*, https://thereader.mitpress.mit.edu/project-cybersyn-chiles-radical-experiment-in-cybernetic-socialism/.
 [/Sources]
 ---
 <!-- slide: id="004j-tiqqun" title="La critique de Tiqqun" steps=3 -->
@@ -1258,7 +1276,7 @@ Le perceptron n’est pas encore un réseau profond. Il reste limité aux sépar
 
   .cover-demo .caption {
     max-width: none;
-    color: var(--slide-muted);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: var(--small-size);
     font-style: normal;

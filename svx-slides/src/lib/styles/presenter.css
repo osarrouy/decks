@@ -70,26 +70,34 @@
   padding: 0.75rem;
 }
 
-/* Cadre 16:9 d’une prévisualisation. */
-.presenter-preview-frame {
-  aspect-ratio: 16 / 9;
+/*
+  Fenêtre disponible pour l’aperçu. La slide est rendue à sa taille logique
+  dans un canvas enfant, puis ce canvas est réduit uniformément pour tenir
+  entièrement ici.
+*/
+.presenter-preview-viewport {
+  position: relative;
   width: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
   overflow: hidden;
   border-radius: 0.7rem;
-  background: var(--slide-bg);
+  background: var(--bg);
 }
 
-/* L’aperçu de la slide suivante reste volontairement compact. */
-.presenter-next .presenter-preview-frame {
-  width: auto;
+/* Canvas plein écran centré, réduit par SlidePreview avec un transform uniforme. */
+.presenter-preview-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.presenter-preview-canvas .slide {
+  width: 100%;
   height: 100%;
-}
-
-/* Origine de transformation pour d’éventuelles miniatures scalées. */
-.presenter-preview-frame .slide-surface {
-  transform-origin: top left;
 }
 
 /* Colonne latérale : notes dominantes et contrôles. */
@@ -115,6 +123,47 @@
   padding: 1.15rem 1.25rem;
 }
 
+/* Surface Markdown des notes : rythme de lecture continu et largeur confortable. */
+.presenter-notes-content {
+  overflow-wrap: anywhere;
+}
+
+.presenter-notes-content > :first-child {
+  margin-top: 0;
+}
+
+.presenter-notes-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Titres Markdown des notes. */
+.presenter-notes :where(h1, h2, h3, h4, h5, h6) {
+  margin: 1.45em 0 0.55em;
+  color: #fff;
+  font-weight: 680;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.presenter-notes h1 {
+  font-size: 1.65rem;
+}
+
+.presenter-notes h2 {
+  padding-bottom: 0.32em;
+  border-bottom: 1px solid rgb(255 255 255 / 0.12);
+  font-size: 1.4rem;
+}
+
+.presenter-notes h3 {
+  color: color-mix(in srgb, var(--accent), white 18%);
+  font-size: 1.18rem;
+}
+
+.presenter-notes :where(h4, h5, h6) {
+  font-size: 1.05rem;
+}
+
 /* Paragraphes et listes dans les notes converties depuis Markdown. */
 .presenter-notes :where(p, li) {
   color: rgb(255 255 255 / 0.83);
@@ -122,16 +171,78 @@
   line-height: 1.45;
 }
 
-/* Indentation des listes dans les notes. */
+.presenter-notes p {
+  margin: 0.7em 0;
+}
+
+/* Indentation et rythme des listes dans les notes. */
 .presenter-notes :where(ul, ol) {
-  padding-left: 1.2rem;
+  margin: 0.7em 0;
+  padding-left: 1.45rem;
+}
+
+.presenter-notes li + li {
+  margin-top: 0.32em;
+}
+
+.presenter-notes li > :where(ul, ol) {
+  margin-block: 0.32em;
+}
+
+/* Emphase, liens et citations Markdown. */
+.presenter-notes strong {
+  color: #fff;
+  font-weight: 720;
+}
+
+.presenter-notes a {
+  color: color-mix(in srgb, var(--accent), white 22%);
+  text-decoration-color: color-mix(in srgb, var(--accent), transparent 42%);
+  text-underline-offset: 0.18em;
+}
+
+.presenter-notes a:hover {
+  text-decoration-color: currentColor;
+}
+
+.presenter-notes blockquote {
+  margin: 1rem 0;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 3px solid color-mix(in srgb, var(--accent), transparent 18%);
+  color: rgb(255 255 255 / 0.68);
+}
+
+.presenter-notes blockquote p {
+  color: inherit;
+}
+
+.presenter-notes hr {
+  margin: 1.4rem 0;
+  border: 0;
+  border-top: 1px solid rgb(255 255 255 / 0.14);
 }
 
 /* Code inline dans les notes. */
-.presenter-notes :where(code) {
+.presenter-notes code {
   padding: 0.1rem 0.25rem;
   border-radius: 0.25rem;
   background: rgb(255 255 255 / 0.10);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.presenter-notes pre {
+  overflow: auto;
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 0.65rem;
+  background: rgb(0 0 0 / 0.28);
+}
+
+.presenter-notes pre code {
+  padding: 0;
+  background: none;
 }
 
 /* Barre de contrôles : navigation, ouverture projection, timer. */

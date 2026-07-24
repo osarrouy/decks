@@ -1,6 +1,8 @@
 export type SlideMetadata = {
   title?: string
   steps?: number
+  /** Position in the source deck. Generated automatically. */
+  order?: number
   layout?: string
   align?: string
   tone?: string

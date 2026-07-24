@@ -240,7 +240,7 @@
   :global(.context-axon),
   :global(.context-soma),
   :global(.context-nucleus) {
-    stroke: color-mix(in srgb, var(--slide-muted), transparent 24%);
+    stroke: color-mix(in srgb, var(--muted), transparent 24%);
   }
 
   .network-context .context-link {
@@ -257,12 +257,12 @@
   }
 
   :global(.context-soma) {
-    fill: var(--slide-bg);
+    fill: var(--bg);
     stroke-width: 1.8;
   }
 
   :global(.context-nucleus) {
-    fill: color-mix(in srgb, var(--slide-bg), var(--slide-fg) 7%);
+    fill: color-mix(in srgb, var(--bg), var(--fg) 7%);
     stroke-width: 1.2;
   }
 
@@ -270,7 +270,7 @@
   circle,
   ellipse {
     fill: none;
-    stroke: var(--slide-muted);
+    stroke: var(--muted);
     stroke-width: 2.2;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -315,7 +315,7 @@
   .dendrites[data-active='true'] path,
   .synaptic-inputs[data-active='true'] .input-fibre,
   .synaptic-inputs[data-active='true'] .bouton {
-    stroke: var(--slide-accent);
+    stroke: var(--accent);
   }
 
   .synaptic-inputs .input-fibre {
@@ -323,22 +323,22 @@
   }
 
   .synaptic-inputs .bouton {
-    fill: var(--slide-accent-soft);
+    fill: var(--accent-soft);
     stroke-width: 1.6;
   }
 
   .synaptic-inputs .transmitter {
-    fill: var(--slide-accent);
+    fill: var(--accent);
     stroke: none;
   }
 
   .synapse-callout path {
-    stroke: var(--slide-muted);
+    stroke: var(--muted);
     stroke-width: 1;
   }
 
   .synapse-callout text {
-    fill: var(--slide-muted);
+    fill: var(--muted);
     stroke: none;
     font-family: var(--font-mono);
     font-size: 8px;
@@ -360,7 +360,7 @@
 
   .dendritic-signals path,
   .axonal-signals path {
-    stroke: color-mix(in srgb, var(--slide-accent), transparent 55%);
+    stroke: color-mix(in srgb, var(--accent), transparent 55%);
     stroke-width: 4.2;
     stroke-dasharray: 0.4 17.6;
     animation: signal-flow 1.45s linear infinite;
@@ -381,14 +381,14 @@
   }
 
   .cell-body .soma {
-    fill: var(--slide-bg);
-    stroke: color-mix(in srgb, var(--slide-muted), transparent 62%);
+    fill: var(--bg);
+    stroke: color-mix(in srgb, var(--muted), transparent 62%);
     stroke-width: 2.7;
   }
 
   .cell-body .nucleus {
-    fill: color-mix(in srgb, var(--slide-bg), var(--slide-fg) 9%);
-    stroke: color-mix(in srgb, var(--slide-muted), transparent 28%);
+    fill: color-mix(in srgb, var(--bg), var(--fg) 9%);
+    stroke: color-mix(in srgb, var(--muted), transparent 28%);
     stroke-width: 1.8;
     transition:
       fill 240ms ease,
@@ -396,19 +396,19 @@
   }
 
   .cell-body[data-threshold='true'] .soma {
-    stroke: var(--slide-accent);
+    stroke: var(--accent);
   }
 
   .cell-body[data-threshold='true'] .nucleus {
-    fill: var(--slide-accent-soft);
-    stroke: var(--slide-accent);
+    fill: var(--accent-soft);
+    stroke: var(--accent);
   }
 
   .axon[data-active='true'] path,
   .terminals[data-visible='true'] .terminal-fibre,
   .terminals[data-visible='true'] .receiving-fibre,
   .terminals[data-visible='true'] .bouton {
-    stroke: var(--slide-accent);
+    stroke: var(--accent);
   }
 
   .terminals .terminal-fibre,
@@ -417,12 +417,12 @@
   }
 
   .terminals .bouton {
-    fill: var(--slide-accent-soft);
+    fill: var(--accent-soft);
     stroke-width: 1.6;
   }
 
   .terminals .transmitter {
-    fill: var(--slide-accent);
+    fill: var(--accent);
     stroke: none;
   }
 
@@ -437,7 +437,7 @@
   }
 
   .steps span {
-    color: var(--slide-accent);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: clamp(0.48rem, 0.64vw, 0.72rem);
     font-style: normal;
@@ -460,7 +460,7 @@
     gap: 0.45rem;
     min-height: 7rem;
     padding: 0.8rem;
-    border-top: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
+    border-top: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
     opacity: 0.28;
     transform: translateY(0.35rem);
     transition: 240ms ease;
@@ -473,7 +473,7 @@
 
   .steps p {
     margin: 0;
-    color: var(--slide-muted);
+    color: var(--muted);
     font-size: clamp(0.75rem, 0.95vw, 1rem) !important;
     line-height: 1.35 !important;
   }

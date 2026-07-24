@@ -4,17 +4,20 @@
 */
 
 [data-theme='default'] {
+  /* Module de la grille d’espacement. */
+  --grid-unit: clamp(0.4rem, 0.65vw, 0.7rem);
+
   /* Fond de slide légèrement chaud. */
-  --slide-bg: #fbfaf7;
+  --bg: #fbfaf7;
 
   /* Texte principal presque noir. */
-  --slide-fg: #171717;
+  --fg: #171717;
 
   /* Texte secondaire brun-gris. */
-  --slide-muted: #6b6760;
+  --muted: #6b6760;
 
   /* Accent bordeaux discret. */
-  --slide-accent: #8b1e3f;
+  --accent: #8b1e3f;
 
   /* Police de texte courant du thème par défaut. */
   --font-body: ui-serif, Georgia, Cambria, 'Times New Roman', serif;

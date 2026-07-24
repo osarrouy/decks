@@ -11,7 +11,7 @@
   .two-columns-component {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--slide-gap);
+    gap: var(--gap);
     align-items: center;
     height: 100%;
   }

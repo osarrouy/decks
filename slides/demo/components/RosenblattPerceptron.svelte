@@ -102,8 +102,8 @@
   .learning,
   .plane,
   .model {
-    border: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
-    background: color-mix(in srgb, var(--slide-bg), var(--slide-fg) 3%);
+    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
+    background: color-mix(in srgb, var(--bg), var(--fg) 3%);
   }
 
   .perceptron-card {
@@ -123,7 +123,7 @@
 
   .perceptron-card strong,
   .example strong {
-    color: var(--slide-fg);
+    color: var(--fg);
     font-family: var(--font-heading);
     font-size: clamp(1.7rem, 2.8vw, 3.2rem);
     font-style: italic;
@@ -136,7 +136,7 @@
   .example p,
   .update p {
     margin: 0;
-    color: var(--slide-muted);
+    color: var(--muted);
     font-size: clamp(0.78rem, 1.05vw, 1.04rem) !important;
     line-height: 1.45 !important;
   }
@@ -158,7 +158,7 @@
   }
 
   .card-label {
-    color: var(--slide-accent);
+    color: var(--accent);
     font-size: clamp(0.5rem, 0.66vw, 0.74rem);
   }
 
@@ -183,7 +183,7 @@
     gap: 0.2rem 0.65rem;
     align-items: baseline;
     padding: 0.72rem 0.8rem;
-    border-top: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
+    border-top: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
     opacity: 0;
     transform: translateX(-0.4rem);
     transition:
@@ -198,14 +198,14 @@
 
   .weighted-input span,
   .weighted-input em {
-    color: var(--slide-muted);
+    color: var(--muted);
     font-size: clamp(0.5rem, 0.64vw, 0.72rem);
   }
 
   .weighted-input strong,
   .unit strong,
   .prediction strong {
-    color: var(--slide-accent);
+    color: var(--accent);
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 3vw, 3.3rem);
     font-style: normal;
@@ -224,22 +224,22 @@
     place-items: center;
     gap: 0.4rem;
     aspect-ratio: 1;
-    border: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 82%));
+    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 82%));
     border-radius: 999px;
     opacity: 0.32;
     transition: 240ms ease;
   }
 
   .unit[data-active='true'] {
-    border-color: var(--slide-accent);
-    background: var(--slide-accent-soft);
+    border-color: var(--accent);
+    background: var(--accent-soft);
     opacity: 1;
   }
 
   .sum,
   .cut,
   .prediction em {
-    color: var(--slide-muted);
+    color: var(--muted);
     font-size: clamp(0.48rem, 0.62vw, 0.7rem);
   }
 
@@ -248,7 +248,7 @@
     place-items: center;
     gap: 0.35rem;
     min-height: 8rem;
-    border-left: 1px solid var(--slide-rule, color-mix(in srgb, var(--slide-fg), transparent 84%));
+    border-left: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
     opacity: 0;
     transform: translateX(0.4rem);
     transition: 240ms ease;
@@ -260,7 +260,7 @@
   }
 
   .prediction[data-correct='true'] {
-    background: color-mix(in srgb, var(--slide-accent), transparent 90%);
+    background: color-mix(in srgb, var(--accent), transparent 90%);
   }
 
   .learning {
@@ -297,7 +297,7 @@
   }
 
   .mono {
-    color: var(--slide-fg);
+    color: var(--fg);
     font-size: clamp(0.7rem, 0.95vw, 1.05rem);
   }
 
@@ -322,8 +322,8 @@
     position: absolute;
     inset: 1rem;
     background:
-      linear-gradient(var(--slide-rule, #e8e8e6) 1px, transparent 1px),
-      linear-gradient(90deg, var(--slide-rule, #e8e8e6) 1px, transparent 1px);
+      linear-gradient(var(--rule, #e8e8e6) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule, #e8e8e6) 1px, transparent 1px);
     background-size: 25% 25%;
     opacity: 0.55;
   }
@@ -332,7 +332,7 @@
   .caption {
     position: absolute;
     z-index: 2;
-    color: var(--slide-muted);
+    color: var(--muted);
     font-size: clamp(0.48rem, 0.62vw, 0.7rem);
   }
 
@@ -353,7 +353,7 @@
     top: 50%;
     width: 92%;
     height: 2px;
-    background: var(--slide-muted);
+    background: var(--muted);
     transform-origin: left center;
     transition:
       opacity 240ms ease,
@@ -365,7 +365,7 @@
   }
 
   .boundary.after {
-    background: var(--slide-accent);
+    background: var(--accent);
     opacity: 0;
     transform: rotate(-42deg) translateY(-0.6rem);
   }
@@ -386,8 +386,8 @@
     width: 2rem;
     aspect-ratio: 1;
     border-radius: 999px;
-    background: var(--slide-bg);
-    color: var(--slide-accent);
+    background: var(--bg);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: 0.85rem;
     font-style: normal;
@@ -406,25 +406,25 @@
   .point.negative {
     left: 26%;
     top: 63%;
-    color: var(--slide-muted);
+    color: var(--muted);
   }
 
   .point.training {
     left: 58%;
     top: 58%;
-    border: 1px solid var(--slide-accent);
+    border: 1px solid var(--accent);
   }
 
   .point.training[data-error='true'] {
     transform: scale(1.18);
-    background: var(--slide-accent);
+    background: var(--accent);
     color: white;
   }
 
   .point.training[data-corrected='true'] {
     transform: scale(1);
-    background: var(--slide-bg);
-    color: var(--slide-accent);
+    background: var(--bg);
+    color: var(--accent);
   }
 
   .caption {

@@ -25,19 +25,13 @@
     <title>{deck.title}</title>
 </svelte:head>
 
-<div class="deck-shell" data-theme={deck.theme ?? "default"}>
-    <main class="deck-stage">
-        <header class="deck-chrome" aria-hidden="true">
-            <div class="deck-title">{deck.title}</div>
-            <div class="deck-counter">
-                {$state.slide + 1} / {deck.slides.length}
-            </div>
-        </header>
+<main class="deck" data-theme={deck.theme ?? "default"} style={`--progress: ${progress}%`}>
+    <header class="deck-header" aria-hidden="true">
+        <span>{deck.title}</span>
+        <span>{$state.slide + 1} / {deck.slides.length}</span>
+    </header>
 
-        {#if current}
-            <SlideSurface slide={current} step={$state.step} />
-        {/if}
-    </main>
-
-    <div class="deck-progress" style={`width: ${progress}%`}></div>
-</div>
+    {#if current}
+        <SlideSurface slide={current} step={$state.step} />
+    {/if}
+</main>

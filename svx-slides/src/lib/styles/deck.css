@@ -1,65 +1,56 @@
 /*
   Runtime visuel des slides.
-  Ce fichier définit le cadre de projection, la surface typographique commune,
-  les layouts simples utilisables depuis mdsvex, les fragments, puis les
-  ajustements structurels propres au thème gallery.
+  Ce fichier définit le viewport, la surface typographique commune,
+  les layouts mdsvex et les fragments.
 */
 
-/* Conteneur extérieur du deck : centre un cadre de slide dans la fenêtre. */
-.deck-shell {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background:
-        radial-gradient(circle at 12% 5%, rgb(255 255 255 / 0.10), transparent 24rem),
-        var(--deck-bg);
-}
-
-/* Cadre de projection : par défaut, un rectangle au ratio défini par les tokens. */
-.deck-stage {
+/* Racine plein écran de la projection. */
+.deck {
     position: relative;
-    width: min(100vw, calc(100vh * var(--slide-width) / var(--slide-height)));
-    aspect-ratio: var(--slide-width) / var(--slide-height);
-    background: var(--slide-bg);
-    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
     overflow: hidden;
 }
 
 /* Surface interne qui reçoit le contenu mdsvex de la slide courante. */
-.slide-surface {
+.slide {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: var(--slide-padding-top, var(--slide-padding)) var(--slide-padding) var(--slide-padding-bottom, var(--slide-padding));
+    min-height: 0;
+    padding: var(--padding-vertical) var(--padding-horizontal);
     background:
         linear-gradient(135deg, rgb(255 255 255 / 0.14), transparent 42%),
-        var(--slide-bg);
-    color: var(--slide-fg);
+        var(--bg);
+    color: var(--fg);
     font-family: var(--font-body);
     overflow: hidden;
 }
 
 /* Sans layout explicite, le contenu forme un bloc centré verticalement. */
-.slide-surface:not([data-layout]) {
+.slide:not([data-layout]) {
     display: grid;
     align-content: center;
 }
 
 /* Neutralise la marge haute des éléments Markdown les plus fréquents. */
-.slide-surface h1,
-.slide-surface h2,
-.slide-surface h3,
-.slide-surface p,
-.slide-surface ul,
-.slide-surface ol,
-.slide-surface blockquote {
+.slide h1,
+.slide h2,
+.slide h3,
+.slide p,
+.slide ul,
+.slide ol,
+.slide blockquote {
     margin-top: 0;
 }
 
 /* Titre principal d’une slide. */
-.slide-surface h1 {
+.slide h1 {
     max-width: 20ch;
-    margin-bottom: 0.55em;
+    margin-bottom: var(--space-2);
     font-family: var(--font-heading);
     font-size: var(--heading-size);
     font-weight: 680;
@@ -68,9 +59,9 @@
 }
 
 /* Titre secondaire d’une slide. */
-.slide-surface h2 {
+.slide h2 {
     max-width: 18ch;
-    margin-bottom: 0.7em;
+    margin-bottom: var(--space-2);
     font-family: var(--font-heading);
     font-size: var(--heading-2-size);
     font-weight: 650;
@@ -79,43 +70,42 @@
 }
 
 /* Texte courant et items de liste produits par Markdown/mdsvex. */
-.slide-surface p,
-.slide-surface li {
-    max-width: 38ch;
+.slide p,
+.slide li {
     font-size: var(--text-size);
     line-height: var(--line-body);
 }
 
 /* Espacement vertical entre deux paragraphes consécutifs. */
-.slide-surface p+p {
-    margin-top: 0.8em;
+.slide p+p {
+    margin-top: var(--space-1);
 }
 
 /* Listes Markdown : grille verticale pour contrôler l’écart entre items. */
-.slide-surface ul,
-.slide-surface ol {
+.slide ul,
+.slide ol {
     display: grid;
-    gap: 0.55em;
-    padding-left: 1.15em;
+    gap: var(--space-1);
+    padding-left: var(--space-3);
 }
 
 /* Emphase forte : utilise la couleur d’accent du thème. */
-.slide-surface strong {
-    color: var(--slide-accent);
+.slide strong {
+    color: var(--accent);
     font-weight: 700;
 }
 
 /* Code inline dans les slides. */
-.slide-surface code {
+.slide code {
     padding: 0.12em 0.28em;
     border-radius: 0.3em;
-    background: color-mix(in srgb, var(--slide-fg), transparent 91%);
+    background: color-mix(in srgb, var(--fg), transparent 91%);
     font-family: var(--font-mono);
     font-size: 0.8em;
 }
 
 /* Images insérées directement depuis Markdown ou HTML dans les slides. */
-.slide-surface img {
+.slide img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -127,7 +117,7 @@
   Le runtime analyse l’image en canvas et injecte une carte de couleurs autour
   de l’image ; sans JS, on garde un halo symétrique de couleur de thème.
 */
-.slide-surface :where(img[data-glow], img[glow], img.glow, img.glowy) {
+.slide :where(img[data-glow], img[glow], img.glow, img.glowy) {
     --image-glow-blur: 3.4rem;
 
     border-radius: var(--image-radius);
@@ -135,15 +125,15 @@
     transform: translateZ(0);
 }
 
-.slide-surface :where(img[data-glow='soft'], img[glow='soft']) {
+.slide :where(img[data-glow='soft'], img[glow='soft']) {
     --image-glow-blur: 2.4rem;
 }
 
-.slide-surface :where(img[data-glow='strong'], img[glow='strong']) {
+.slide :where(img[data-glow='strong'], img[glow='strong']) {
     --image-glow-blur: 4.4rem;
 }
 
-.slide-surface .image-glow-frame {
+.slide .image-glow-frame {
     --image-glow-map: radial-gradient(circle,
             color-mix(in srgb, var(--image-glow-color), transparent 32%),
             transparent 68%);
@@ -159,14 +149,14 @@
     border-radius: var(--image-radius);
 }
 
-.slide-surface .image-glow-frame>img {
+.slide .image-glow-frame>img {
     position: relative;
     z-index: 1;
     grid-area: 1 / 1;
     box-shadow: none;
 }
 
-.slide-surface .image-glow-aura {
+.slide .image-glow-aura {
     position: absolute;
     z-index: -1;
     inset: 0;
@@ -180,10 +170,35 @@
     pointer-events: none;
 }
 
+/*
+  Portrait vertical occupant une colonne complète.
+  Le cadre et l’image restent bornés par la hauteur utile de la slide,
+  y compris après l’ajout dynamique du halo.
+*/
+.slide .wiener-portrait {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+}
+
+.slide .wiener-portrait>img,
+.slide .wiener-portrait>.image-glow-frame,
+.slide .wiener-portrait>.image-glow-frame>img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 /* Label court en mono, généralement placé avant un titre. */
-.slide-surface .kicker {
-    margin-bottom: 1.2rem;
-    color: var(--slide-accent);
+.slide .kicker {
+    margin-bottom: var(--space-2);
+    color: var(--accent);
+    width: 100%;
     font-family: var(--font-mono);
     font-size: var(--small-size);
     letter-spacing: 0.08em;
@@ -191,7 +206,7 @@
 }
 
 /* Paragraphe d’accroche plus grand que le corps. */
-.slide-surface .lead {
+.slide .lead {
     max-width: 29ch;
     font-size: clamp(2rem, 3.4vw, 4.2rem);
     line-height: 1.04;
@@ -199,145 +214,145 @@
 }
 
 /* Texte atténué selon la couleur secondaire du thème. */
-.slide-surface .muted {
-    color: var(--slide-muted);
+.slide .muted {
+    color: var(--muted);
 }
 
 /* Layouts appliqués à la slide entière via <!-- slide: layout="..." -->. */
-.slide-surface[data-layout='two-columns'],
-.slide-surface[data-layout='columns'] {
+.slide[data-layout='two-columns'],
+.slide[data-layout='columns'] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--slide-gap);
+    gap: var(--gap);
     align-items: center;
 }
 
-.slide-surface[data-layout='center'],
-.slide-surface[data-layout='cover'] {
+.slide[data-layout='center'],
+.slide[data-layout='cover'] {
     display: grid;
     place-items: center;
     text-align: center;
 }
 
-.slide-surface[data-layout='cover'] h1 {
+.slide[data-layout='cover'] h1 {
     max-width: 11ch;
     margin-inline: auto;
 }
 
-.slide-surface[data-layout='stack'] {
+.slide[data-layout='stack'] {
     display: grid;
     align-content: center;
-    gap: var(--slide-gap);
+    gap: var(--gap);
 }
 
-.slide-surface[data-align='start'] {
+.slide[data-align='start'] {
     align-items: start;
     text-align: start;
 }
 
-.slide-surface[data-align='center'] {
+.slide[data-align='center'] {
     align-items: center;
     text-align: center;
 }
 
-.slide-surface[data-align='end'] {
+.slide[data-align='end'] {
     align-items: end;
     text-align: end;
 }
 
 /* Layouts internes produits par les directives Markdown ::: columns / ::: center. */
-.slide-surface .layout.two-columns,
-.slide-surface .layout.columns {
+.slide .layout.two-columns,
+.slide .layout.columns {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--slide-gap);
+    gap: var(--gap);
     align-items: center;
     height: 100%;
 }
 
 /* Layout utilitaire centré verticalement et horizontalement. */
-.slide-surface .layout.center,
-.slide-surface .layout.cover {
+.slide .layout.center,
+.slide .layout.cover {
     display: grid;
     place-items: center;
     height: 100%;
     text-align: center;
 }
 
-.slide-surface .layout.stack {
+.slide .layout.stack {
     display: grid;
     align-content: center;
-    gap: var(--slide-gap);
+    gap: var(--gap);
     height: 100%;
 }
 
 /* Les enfants directs des layouts centrés restent centrés même avec max-width. */
-.slide-surface :where(.layout.center, .layout.cover)>* {
+.slide :where(.layout.center, .layout.cover)>* {
     margin-inline: auto;
 }
 
-.slide-surface .column {
+.slide .column {
     min-width: 0;
 }
 
 /* Vocabulaire visuel commun aux slides de cours consacrées à la cybernétique. */
-.slide-surface .cyber-timeline {
+.slide .cyber-timeline {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-top: 2.4rem;
-    color: var(--slide-muted);
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: var(--small-size);
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-.slide-surface .cyber-timeline span {
+.slide .cyber-timeline span {
     display: inline-flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-2);
 }
 
-.slide-surface .cyber-timeline span:not(:last-child)::after {
+.slide .cyber-timeline span:not(:last-child)::after {
     width: clamp(2rem, 6vw, 6rem);
     height: 1px;
-    background: color-mix(in srgb, var(--slide-fg), transparent 76%);
+    background: color-mix(in srgb, var(--fg), transparent 76%);
     content: '';
 }
 
-.slide-surface .cyber-sequence {
+.slide .cyber-sequence {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.55em;
+    gap: var(--space-1);
     max-width: 54rem;
-    margin: 1.8rem 0 0;
+    margin: var(--space-3) 0 0;
     font-family: var(--font-mono);
     font-size: clamp(1.25rem, 2.1vw, 2.25rem);
     line-height: 1.25;
 }
 
-.slide-surface .cyber-sequence .arrow {
-    color: var(--slide-accent);
+.slide .cyber-sequence .arrow {
+    color: var(--accent);
 }
 
-.slide-surface .cyber-cards {
+.slide .cyber-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.8rem;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
 }
 
-.slide-surface .cyber-card {
+.slide .cyber-card {
     min-height: 9rem;
-    padding: 1.2rem;
-    border-top: 1px solid color-mix(in srgb, var(--slide-fg), transparent 70%);
+    padding: var(--space-2);
+    border-top: 1px solid color-mix(in srgb, var(--fg), transparent 70%);
 }
 
-.slide-surface .cyber-card h3 {
-    margin-bottom: 0.65rem;
-    color: var(--slide-accent);
+.slide .cyber-card h3 {
+    margin-bottom: var(--space-1);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--small-size);
     font-weight: 650;
@@ -345,104 +360,92 @@
     text-transform: uppercase;
 }
 
-.slide-surface .cyber-card p {
+.slide .cyber-card p {
     font-size: clamp(1.25rem, 1.8vw, 2rem);
     line-height: 1.2;
 }
 
-.slide-surface .cyber-equation {
+.slide .cyber-equation {
     max-width: 34ch;
-    margin-top: 1.6rem;
-    color: var(--slide-muted);
+    margin-top: var(--space-3);
+    color: var(--muted);
     font-size: clamp(1.45rem, 2.3vw, 2.65rem);
     line-height: 1.15;
     letter-spacing: -0.03em;
 }
 
-.slide-surface .cyber-equation strong {
-    color: var(--slide-fg);
+.slide .cyber-equation strong {
+    color: var(--fg);
 }
 
-.slide-surface .cyber-contrast {
+.slide .cyber-contrast {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(2rem, 5vw, 5rem);
-    margin-top: 1.4rem;
+    gap: var(--space-8);
+    margin-top: var(--space-3);
 }
 
-.slide-surface .cyber-contrast > div {
-    padding-top: 1rem;
-    border-top: 1px solid color-mix(in srgb, var(--slide-fg), transparent 70%);
+.slide .cyber-contrast>div {
+    padding-top: var(--space-2);
+    border-top: 1px solid color-mix(in srgb, var(--fg), transparent 70%);
 }
 
-.slide-surface .cyber-contrast h2 {
-    color: var(--slide-accent);
+.slide .cyber-contrast h2 {
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--small-size);
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-.slide-surface .cyber-contrast p,
-.slide-surface .cyber-contrast li {
+.slide .cyber-contrast p,
+.slide .cyber-contrast li {
     font-size: clamp(1.15rem, 1.65vw, 1.75rem);
 }
 
-.slide-surface .cyber-question {
+.slide .cyber-question {
     max-width: 42ch;
-    margin-top: 2rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--slide-accent);
-    color: var(--slide-muted);
+    margin-top: var(--space-4);
+    padding-left: var(--space-2);
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
     font-size: clamp(1.35rem, 2vw, 2.2rem);
     font-style: italic;
     line-height: 1.25;
 }
 
-.slide-surface .cyber-terms {
+.slide .cyber-terms {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.7rem;
+    gap: var(--space-1);
     max-width: 54rem;
-    margin-top: 1.8rem;
+    margin-top: var(--space-3);
 }
 
-.slide-surface .cyber-terms span {
+.slide .cyber-terms span {
     padding: 0.42em 0.7em;
-    border: 1px solid color-mix(in srgb, var(--slide-accent), transparent 55%);
+    border: 1px solid color-mix(in srgb, var(--accent), transparent 55%);
     border-radius: 999px;
-    color: var(--slide-fg);
+    color: var(--fg);
     font-family: var(--font-mono);
     font-size: clamp(1rem, 1.4vw, 1.45rem);
 }
 
-/* Éléments de chrome optionnels : cachés par défaut, activés par certains thèmes. */
-.deck-chrome,
-.deck-ticker {
+/* Header optionnel : caché par défaut, activé par certains thèmes. */
+.deck-header {
     display: none;
 }
 
-/* Ancien HUD bas de page, conservé comme classe disponible mais non rendu actuellement. */
-.deck-hud {
-    position: fixed;
-    inset-inline: 1rem;
-    bottom: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    color: rgb(255 255 255 / 0.58);
-    font: 500 0.78rem/1 var(--font-mono);
-    pointer-events: none;
-}
-
-/* Barre de progression globale du deck, fixée en bas de la fenêtre. */
-.deck-progress {
-    position: fixed;
+/* Barre de progression sans élément DOM supplémentaire. */
+.deck::after {
+    position: absolute;
     left: 0;
     bottom: 0;
+    width: var(--progress, 0%);
     height: 3px;
-    background: var(--slide-accent);
+    background: var(--accent);
     transition: width 180ms ease;
+    content: '';
 }
 
 /* Conteneur des fragments progressifs. */

@@ -5,23 +5,20 @@
 */
 
 [data-theme='academic'] {
-  /* Fond extérieur sombre et chaud autour du cadre 16:9. */
-  --deck-bg: #201d1b;
+  /* Grille légèrement plus ample pour le rythme livresque. */
+  --grid-unit: clamp(0.45rem, 0.72vw, 0.78rem);
 
-  /* Papier crème de la slide. */
-  --slide-bg: #f5efe4;
+  /* Papier crème commun au viewport et à la surface. */
+  --bg: #f5efe4;
 
   /* Noir brun pour le texte principal. */
-  --slide-fg: #1b1713;
+  --fg: #1b1713;
 
   /* Couleur secondaire pour notes visuelles et légendes. */
-  --slide-muted: #71685c;
+  --muted: #71685c;
 
   /* Accent prune. */
-  --slide-accent: #6f1d3a;
-
-  /* Padding légèrement plus ample que le défaut. */
-  --slide-padding: clamp(3rem, 5.6vw, 6rem);
+  --accent: #6f1d3a;
 
   /* Serif système à tonalité éditoriale pour le texte courant. */
   --font-body: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;

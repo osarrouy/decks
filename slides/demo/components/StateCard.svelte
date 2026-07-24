@@ -15,11 +15,11 @@
     gap: 1rem;
     padding: 1.25rem;
     border-radius: 1rem;
-    background: color-mix(in srgb, var(--slide-fg), transparent 92%);
+    background: color-mix(in srgb, var(--fg), transparent 92%);
   }
 
   .label {
-    color: var(--slide-muted);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: var(--small-size);
     letter-spacing: 0.04em;

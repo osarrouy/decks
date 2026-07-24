@@ -140,8 +140,6 @@ title: Mon deck
 theme: gallery
 ---
 
-<!-- slide: id="001-ouverture" title="Ouverture" steps=0 -->
-
 # Première slide
 
 Contenu visible.
@@ -152,7 +150,7 @@ Notes speaker en markdown.
 
 ---
 
-<!-- slide: id="002-demo" title="Deuxième slide" steps=3 -->
+<!-- slide: steps=3 -->
 
 # Deuxième slide
 
@@ -168,8 +166,10 @@ Règles :
 - `---` démarre une nouvelle slide ;
 - `--- notes` bascule le reste du bloc courant en notes speaker jusqu’à la prochaine slide ;
 - les deux marqueurs sont configurables avec `slideSeparator` et `notesSeparator` ;
-- `<!-- slide: ... -->` permet de fixer les métadonnées de slide : `id`, `title`, `steps`, etc. ;
-- si aucun titre n’est donné, le moteur l’infère depuis le premier `#`.
+- `<!-- slide: ... -->` est facultatif et ne sert qu’à modifier les métadonnées nécessaires à cette slide : `steps`, `layout`, `align`, etc. ;
+- sans directive, le moteur infère le titre depuis le premier `#`, génère l’identifiant et utilise `steps: 0` ;
+- l’ordre des slides est toujours celui de `deck.svx` : les identifiants ne participent pas au tri ;
+- `id` et `title` peuvent toujours être fixés explicitement lorsqu’un identifiant permanent ou un titre différent du heading est nécessaire.
 
 ## Layouts et attributs Markdown
 
@@ -180,7 +180,7 @@ Le moteur ajoute trois raccourcis pour éviter d’écrire du HTML uniquement po
 Un layout peut être déclaré dans la directive de slide :
 
 ```md
-<!-- slide: title="Couverture" layout="cover" -->
+<!-- slide: layout="cover" -->
 
 # Grand titre
 ```
@@ -188,7 +188,7 @@ Un layout peut être déclaré dans la directive de slide :
 Le runtime applique alors des attributs et classes sur la surface de slide :
 
 ```html
-<section class="slide-surface slide-layout-cover" data-layout="cover">
+<section class="slide slide-layout-cover" data-layout="cover">
 ```
 
 Layouts fournis par défaut :
@@ -204,7 +204,7 @@ stack
 On peut aussi ajouter :
 
 ```md
-<!-- slide: title="Plan" layout="stack" align="center" tone="dark" -->
+<!-- slide: layout="stack" align="center" tone="dark" -->
 ```
 
 `align` et `tone` deviennent `data-align`, `data-tone` et des classes CSS correspondantes.
@@ -324,7 +324,7 @@ Le runtime gère :
 Exemple :
 
 ```md
-<!-- slide: title="Fragments" steps=3 -->
+<!-- slide: steps=3 -->
 
 <script>
   import Fragment from '@svx-slides/core/components/Fragment.svelte'
@@ -393,6 +393,22 @@ themes/gallery/src/style.css
 ```
 
 met à jour à chaud les decks qui utilisent ce thème en mode dev.
+
+### Grille d’espacement
+
+Chaque thème définit une unité rythmique unique :
+
+```css
+[data-theme='mon-theme'] {
+  --grid-unit: clamp(0.4rem, 0.65vw, 0.7rem);
+}
+```
+
+Le moteur en dérive `--space-1`, `--space-2`, `--space-3`, `--space-4`,
+`--space-6`, `--space-8` et `--space-12`. Le header et la slide partagent
+`--padding-horizontal` ; la slide utilise aussi `--padding-vertical`, et les
+layouts `--gap`. Modifier `--grid-unit` suffit donc à ajuster le rythme général
+d’un thème.
 
 ## Thème gallery
 

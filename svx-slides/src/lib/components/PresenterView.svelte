@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import SlideSurface from './SlideSurface.svelte'
+  import SlidePreview from './SlidePreview.svelte'
   import { createDeckController } from '../deck/controller'
   import { notesToHtml } from '../deck/markdown'
   import type { Deck } from '../deck/types'
@@ -53,11 +53,7 @@
           <span>{$state.slide + 1}/{deck.slides.length} · étape {$state.step}</span>
         </header>
         <div class="presenter-preview">
-          <div class="presenter-preview-frame">
-            {#if current}
-              <SlideSurface slide={current} step={$state.step} preview />
-            {/if}
-          </div>
+          <SlidePreview slide={current} step={$state.step} />
         </div>
       </section>
 
@@ -66,11 +62,7 @@
           <span>Slide suivante</span>
         </header>
         <div class="presenter-preview">
-          <div class="presenter-preview-frame">
-            {#if nextSlide}
-              <SlideSurface slide={nextSlide} step={0} preview />
-            {/if}
-          </div>
+          <SlidePreview slide={nextSlide} step={0} />
         </div>
       </section>
     </div>

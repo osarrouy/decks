@@ -98,11 +98,13 @@ function buildSlide(contentLines, notesLines, index) {
   const { metadata, content } = parseSlideDirective(rawContent)
   const order = index + 1
   const title = String(metadata.title ?? inferTitle(content, `Slide ${order}`))
-  const id = String(metadata.id ?? `${String(order).padStart(3, '0')}-${slugify(title) || `slide-${order}`}`)
+  const id = String(metadata.id ?? (slugify(title) || `slide-${order}`))
+  const steps = typeof metadata.steps === 'number' ? metadata.steps : 0
 
   return {
     id,
-    metadata: { ...metadata, title },
+    order,
+    metadata: { ...metadata, title, steps, order },
     content: content.trim(),
     notes: rawNotes || undefined
   }
@@ -197,8 +199,9 @@ async function generateSingleFileDeck(options) {
 
   await Promise.all(
     deck.slides.flatMap((slide) => {
-      const writes = [writeIfChanged(join(outDir, `${slide.id}.svx`), renderGeneratedSlide(slide))]
-      if (slide.notes) writes.push(writeIfChanged(join(outDir, `${slide.id}.notes.md`), `${slide.notes.trim()}\n`))
+      const fileStem = `${String(slide.order).padStart(3, '0')}-${slide.id}`
+      const writes = [writeIfChanged(join(outDir, `${fileStem}.svx`), renderGeneratedSlide(slide))]
+      if (slide.notes) writes.push(writeIfChanged(join(outDir, `${fileStem}.notes.md`), `${slide.notes.trim()}\n`))
       return writes
     })
   )

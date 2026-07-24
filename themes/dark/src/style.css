@@ -8,24 +8,22 @@
   /* Informe le navigateur que les contrôles natifs doivent suivre un thème sombre. */
   color-scheme: dark;
 
-  /* Fond extérieur presque noir. */
-  --deck-bg: #050507;
+  /* Module de la grille d’espacement. */
+  --grid-unit: clamp(0.4rem, 0.65vw, 0.7rem);
 
-  /* Fond de slide noir adouci. */
-  --slide-bg: #101014;
+  /* Fond noir adouci commun au viewport et à la surface. */
+  --bg: #101014;
 
   /* Texte principal ivoire. */
-  --slide-fg: #f4f1eb;
+  --fg: #f4f1eb;
 
   /* Texte secondaire désaturé. */
-  --slide-muted: #aaa39a;
+  --muted: #aaa39a;
 
   /* Accent doré. */
-  --slide-accent: #d7a356;
+  --accent: #d7a356;
 
   /* Fond d’accent adapté au thème sombre. */
-  --slide-accent-soft: color-mix(in srgb, var(--slide-accent), transparent 82%);
+  --accent-soft: color-mix(in srgb, var(--accent), transparent 82%);
 
-  /* Ombre renforcée autour du cadre de slide. */
-  --shadow: 0 2rem 7rem rgb(0 0 0 / 0.5);
 }
