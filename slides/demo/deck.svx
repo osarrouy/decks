@@ -119,6 +119,796 @@ Point important : cacher les notes en CSS ne suffit pas.
 
 Dans ce prototype, les notes vivent dans des fichiers séparés. En build public, elles ne sont pas importées par le registre des decks.
 ---
+<!-- slide: id="004a-cybernetique" title="La cybernétique" steps=0 -->
+
+<div class="layout center">
+
+<div>
+
+<p class="kicker">1943–1953 · science transdisciplinaire</p>
+
+# La cybernétique
+
+<p class="lead">Comment piloter un monde incertain ?</p>
+
+<div class="cyber-timeline" aria-label="Repères chronologiques">
+  <span>1943</span>
+  <span>1948</span>
+  <span>1953</span>
+</div>
+
+</div>
+
+</div>
+
+--- notes
+
+Temps indicatif : **2 à 3 minutes**.
+
+Cette partie doit nous permettre de comprendre le cadre intellectuel dans lequel apparaîtront les premiers neurones artificiels. La cybernétique n’est ni un ancêtre unique de l’informatique, ni une théorie qui aurait disparu. C’est un moment où des chercheurs provenant de disciplines différentes essaient de décrire avec un même vocabulaire des phénomènes de **communication**, de **régulation** et de **comportement orienté vers un but**.
+
+Le terme vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer continuellement la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
+
+Nous allons avancer autour d’une question simple : **comment agir de manière réglée dans un monde que l’on ne peut ni connaître complètement, ni prévoir parfaitement ?**
+
+Le fil historique sera volontairement resserré :
+
+- en **1943**, plusieurs articles donnent une forme nouvelle aux notions de comportement orienté, de rétroaction et de réseau neuronal logique ;
+- en **1948**, Norbert Wiener publie *Cybernetics* et Claude Shannon sa théorie mathématique de la communication ;
+- de **1946 à 1953**, les conférences Macy font circuler ces concepts entre ingénieurs, biologistes, mathématiciens, anthropologues et psychologues.
+
+Ces dates ne marquent pas la naissance absolue de chacune de ces idées. Les régulateurs mécaniques, les statistiques, la théorie des systèmes ou la physiologie de l’homéostasie ont une histoire antérieure. Ce qui se forme dans l’après-guerre, c’est surtout une **configuration intellectuelle commune**.
+---
+<!-- slide: id="004b-guerre-et-pilotage" title="Guerre et pilotage" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Seconde Guerre mondiale · prédiction</p>
+
+# Une science née de la guerre
+
+<Fragment at={1}>
+
+<p class="lead">L’avion ne sera plus là où l’on vise.</p>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<div class="cyber-sequence">
+  <span>observer</span><span class="arrow">→</span>
+  <span>anticiper</span><span class="arrow">→</span>
+  <span>agir</span><span class="arrow">→</span>
+  <span>corriger</span>
+</div>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Agir sans tout connaître : le problème pratique devient un problème d’information.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+### La scène de départ
+
+Pendant la Seconde Guerre mondiale, Norbert Wiener travaille avec l’ingénieur Julian Bigelow sur les problèmes de visée antiaérienne. Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la mesure, le calcul, le tir et l’arrivée du projectile, la cible s’est déplacée.
+
+Il faut donc :
+
+1. mesurer une trajectoire partielle ;
+2. distinguer le mouvement du bruit et des erreurs de mesure ;
+3. anticiper une position future ;
+4. corriger continuellement la prédiction à partir de nouvelles observations.
+
+Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d’organismes et de machines qui réagissent.
+
+### Pourquoi cette origine compte-t-elle ?
+
+Elle déplace la manière de penser le contrôle. Dans un modèle très simple de commandement, un centre connaît la situation, donne un ordre, puis l’ordre est exécuté. Dans une boucle cybernétique, l’action est toujours provisoire : elle produit un effet, cet effet est mesuré, puis l’action suivante est ajustée.
+
+Le contrôle devient donc moins la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger les écarts**.
+
+Il faut aussi conserver l’ambivalence historique de cette scène. Des concepts qui seront ensuite utilisés pour comprendre la coordination, la vie ou l’apprentissage se forment dans un programme militaire de prédiction et de tir. Cela ne suffit pas à réduire toute la cybernétique à une technologie militaire, mais cela aide à comprendre pourquoi les notions de cible, de comportement, de mesure et de correction y sont si centrales.
+
+### Question aux étudiants
+
+Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il besoin de prévoir exactement ce que vous alliez faire ? »
+
+La réponse attendue est non. Il lui suffit de détecter un écart, de recalculer et de proposer une nouvelle action. C’est cette capacité de correction qui permet de **piloter sans tout prévoir**.
+
+[Sources]
+- Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail d’abord diffusé comme mémorandum classifié en 1942, MIT Press, https://mitpress.mit.edu/9780262730051/extrapolation-interpolation-and-smoothing-of-stationary-time-series/.
+- Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
+[/Sources]
+---
+<!-- slide: id="004c-conferences-macy" title="Conférences Macy" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">New York · 1946–1953</p>
+
+# Les conférences Macy
+
+<Fragment at={1}>
+
+<div class="cyber-terms" aria-label="Disciplines présentes">
+  <span>neurophysiologie</span>
+  <span>mathématiques</span>
+  <span>ingénierie</span>
+  <span>anthropologie</span>
+  <span>psychologie</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation">Faire circuler un <strong>langage commun</strong> entre des objets hétérogènes.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Un même vocabulaire ne signifie pas que le cerveau, la machine et la société soient la même chose.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+Les dix conférences généralement appelées « conférences Macy » se tiennent entre 1946 et 1953. Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal Systems in Biological and Social Systems*. Le mot « cybernétique » ne s’impose dans leur intitulé qu’après la publication du livre de Wiener.
+
+On y rencontre notamment Warren McCulloch, Walter Pitts, Norbert Wiener, John von Neumann, Margaret Mead, Gregory Bateson, Arturo Rosenblueth et Heinz von Foerster, avec des présences variables selon les réunions.
+
+### Ce qui se joue
+
+Ces chercheurs n’étudient pas tous le même objet et ne partagent pas une doctrine parfaitement unifiée. Ils essaient de savoir si des notions comme **information**, **rétroaction**, **causalité circulaire**, **apprentissage** ou **système** peuvent permettre à leurs disciplines de se parler.
+
+Un ingénieur peut décrire un servomécanisme ; un physiologiste, la régulation d’un organisme ; un neurophysiologiste, l’activité du cerveau ; un anthropologue, des interactions sociales. Le pari est que certaines relations formelles se retrouvent dans ces situations très différentes.
+
+### Une correction historique importante
+
+Il serait séduisant de raconter que les participants ont « décidé » que le cerveau, la machine et la société étaient identiques. Ce serait faux et pédagogiquement trompeur. Les débats étaient vifs, les notions disputées et les usages très différents.
+
+La formulation la plus juste est : **les conférences Macy construisent un espace où un langage commun peut circuler entre des disciplines hétérogènes**.
+
+Cela produit une commensurabilité : on peut comparer certains comportements ou dessiner des schémas analogues. Mais cette comparaison formelle ne prouve pas une identité ontologique. Un thermostat, un cerveau et une institution peuvent tous comporter des boucles de rétroaction sans être pour autant trois exemplaires d’une même chose.
+
+### Question aux étudiants
+
+« Si je décris une entreprise et une fourmilière comme des réseaux, ai-je montré qu’elles fonctionnent de la même manière ? »
+
+La discussion doit faire apparaître l’écart entre la puissance d’un modèle — il rend certains rapports visibles — et son risque — il peut faire disparaître tout ce qu’il ne représente pas.
+
+[Sources]
+- Claus Pias (dir.), *Cybernetics: The Macy Conferences 1946–1953. The Complete Transactions*, Diaphanes / University of Chicago Press, https://press.uchicago.edu/ucp/books/book/distributed/C/bo269830784.html.
+- American Society for Cybernetics, « Summary: The Macy Conferences », https://www.asc-cybernetics.org/foundations/history/MacySummary.htm.
+[/Sources]
+---
+<!-- slide: id="004d-langage-commun" title="Une langue commune" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Animal · machine · société</p>
+
+# Une langue commune
+
+<div class="cyber-cards">
+
+<Fragment at={1}>
+<div class="cyber-card">
+  <h3>Organisme</h3>
+  <p>Se maintenir malgré les perturbations.</p>
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div class="cyber-card">
+  <h3>Machine</h3>
+  <p>Ajuster son action à un objectif.</p>
+</div>
+</Fragment>
+
+<Fragment at={3}>
+<div class="cyber-card">
+  <h3>Collectif</h3>
+  <p>Coordonner des actions distribuées.</p>
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
+
+--- notes
+
+Temps indicatif : **4 à 5 minutes**.
+
+Le titre complet du livre de Wiener publié en 1948 est *Cybernetics, or Control and Communication in the Animal and the Machine*. L’opération intellectuelle centrale apparaît déjà dans ce titre : rapprocher des êtres vivants et des dispositifs techniques à partir de leurs problèmes de communication et de régulation.
+
+### Que rend possible cette langue commune ?
+
+Elle permet de poser les mêmes questions dans plusieurs domaines :
+
+- quelles informations un système reçoit-il de son environnement ?
+- comment transforme-t-il ces entrées en actions ?
+- comment les effets de son action reviennent-ils modifier son comportement ?
+- comment conserve-t-il une certaine stabilité malgré des perturbations ?
+
+L’objet isolé compte moins que la structure de ses relations. Au lieu de demander uniquement « de quoi cette chose est-elle faite ? », on demande « que reçoit-elle, que produit-elle, et comment son comportement évolue-t-il ? »
+
+Cette méthode est extraordinairement productive. Elle rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Elle aide à déplacer des concepts et des instruments d’une discipline à l’autre.
+
+### Mais que perd-on ?
+
+La cybernétique tend à privilégier ce qui peut être décrit comme une relation entre états, signaux, objectifs et corrections. Or un organisme a une histoire évolutive et un métabolisme ; une machine a été construite ; une institution comporte des conflits, du droit et des rapports de pouvoir.
+
+Dire que ces objets peuvent être représentés avec une même grammaire ne signifie donc pas qu’ils possèdent la même nature. La formule à faire retenir est :
+
+**commensurabilité formelle n’est pas identité ontologique**.
+
+Nous retrouverons exactement ce problème avec le neurone artificiel. Un modèle peut être réellement inspiré d’un neurone et reproduire certaines de ses relations sans être une copie de la cellule biologique.
+
+[Sources]
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, Hermann & Cie / MIT Press, 1948.
+- Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
+[/Sources]
+---
+<!-- slide: id="004e-retroaction" title="La rétroaction" steps=4 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Feedback · causalité circulaire</p>
+
+# La sortie revient dans l’entrée
+
+<div class="cyber-sequence">
+  <span>objectif</span><span class="arrow">→</span>
+  <span>action</span><span class="arrow">→</span>
+  <span>effet</span><span class="arrow">→</span>
+  <span>écart mesuré</span><span class="arrow">↺</span>
+</div>
+
+<Fragment at={1}>
+
+<p class="cyber-equation">La cause produit un effet qui <strong>modifie la cause suivante</strong>.</p>
+
+</Fragment>
+
+<Fragment at={2}>
+
+- **Rétroaction négative** : réduire l’écart, stabiliser.
+
+</Fragment>
+
+<Fragment at={3}>
+
+- **Rétroaction positive** : amplifier une variation.
+
+</Fragment>
+
+<Fragment at={4}>
+
+<p class="cyber-question">La boucle ne supprime pas l’incertitude : elle permet de corriger en cours d’action.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **6 minutes**.
+
+### Exemple du thermostat
+
+On règle une température souhaitée. Un capteur mesure la température actuelle. Si elle est inférieure à la consigne, le chauffage s’active ; si elle la dépasse, il s’arrête. L’effet de l’action — la nouvelle température — revient donc dans le système sous forme d’information.
+
+Ce schéma rompt avec une représentation strictement linéaire de la causalité :
+
+`A cause B`, puis l’histoire s’arrête.
+
+Dans une boucle :
+
+`A modifie B`, puis l’état de `B` revient modifier le prochain état de `A`.
+
+On parle de **causalité circulaire**. Cela ne signifie pas une cause magique qui se produirait elle-même. Cela signifie que le comportement du système se déploie dans le temps et que ses effets deviennent de nouvelles conditions.
+
+### Deux types de rétroaction
+
+La **rétroaction négative** réduit un écart. Si une pièce devient trop froide, le chauffage compense. Le mot « négative » ne signifie pas mauvaise : il désigne le fait que la réponse s’oppose à la variation. Elle favorise la stabilité, l’équilibre ou l’homéostasie.
+
+La **rétroaction positive** amplifie au contraire une variation. Un micro trop proche d’un haut-parleur reprend le son amplifié, qui est de nouveau amplifié : le système s’emballe. Dans les phénomènes sociaux, une rumeur peut gagner en visibilité parce que sa visibilité attire de nouvelles reprises. « Positive » ne signifie donc pas bénéfique.
+
+### Ce que la boucle change politiquement
+
+Un dispositif de contrôle n’a plus besoin de prévoir une fois pour toutes le comportement futur. Il peut mesurer les écarts et intervenir continuellement. Ce point permettra plus tard de comprendre la critique de Tiqqun : un pouvoir peut fonctionner moins par ordre unique que par captation d’informations, comparaison à une norme et correction permanente.
+
+Mais la rétroaction n’est pas en elle-même autoritaire. Le même principe peut décrire la régulation d’un organisme, l’apprentissage par l’erreur ou l’autonomie d’une unité locale. La question politique porte sur **qui définit l’objectif, qui mesure l’écart et qui peut modifier la règle**.
+
+### Petite interaction
+
+Demander aux étudiants de classer trois exemples :
+
+- thermostat : plutôt rétroaction négative ;
+- effet Larsen : rétroaction positive ;
+- fil de recommandation : plusieurs boucles possibles, parfois stabilisatrices, souvent amplificatrices.
+
+[Sources]
+- Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
+[/Sources]
+---
+<!-- slide: id="004f-information" title="L'information" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Shannon · 1948</p>
+
+# L’information n’est pas le sens
+
+<Fragment at={1}>
+
+<div class="cyber-sequence">
+  <span>source</span><span class="arrow">→</span>
+  <span>signal</span><span class="arrow">→</span>
+  <span>canal + bruit</span><span class="arrow">→</span>
+  <span>récepteur</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation">Mesurer une <strong>incertitude</strong> et la réduction produite par un message.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Une théorie de la transmission peut ignorer ce que le message veut dire.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **6 minutes**.
+
+En 1948, Claude Shannon publie *A Mathematical Theory of Communication*. Son problème est celui des télécommunications : comment représenter des messages, évaluer la capacité d’un canal et transmettre malgré le bruit ?
+
+### Une définition volontairement abstraite
+
+Dans ce cadre, l’information ne désigne pas d’abord une connaissance pertinente ou une phrase vraie. Elle dépend d’un ensemble de messages possibles et de leur probabilité.
+
+Si je vous dis que demain le soleil se lèvera, le message a du sens mais apporte peu d’information au sens de Shannon : il était presque certain. Si je tire une carte parmi de nombreuses possibilités et vous annonce laquelle, le message réduit davantage l’incertitude.
+
+Cette abstraction permet de traiter de manière comparable du texte, du son ou une suite d’états électriques. Le contenu peut être codé en symboles, transmis et reconstruit sans que l’ingénieur ait besoin d’interpréter sa signification.
+
+### Ce que Shannon dit — et ne dit pas
+
+Shannon précise que les messages ont fréquemment une signification, mais que ces aspects sémantiques ne sont pas pertinents pour le problème d’ingénierie qu’il formalise. C’est une mise entre parenthèses méthodologique, pas une démonstration selon laquelle le sens n’existerait pas.
+
+La distinction est décisive pour des étudiants en information-communication :
+
+- l’information au sens de Shannon mesure des possibilités, des probabilités et des contraintes de transmission ;
+- la signification suppose des codes, des situations, des interprètes et des pratiques sociales ;
+- la valeur d’une information dépend aussi d’un contexte et d’un usage.
+
+Le risque apparaît lorsque l’on transforme une abstraction très puissante en ontologie générale : parce que tout peut être codé comme information, on conclurait que tout **n’est que** de l’information.
+
+### Le lien avec la cybernétique
+
+Une boucle de rétroaction a besoin qu’un état du monde soit sélectionné, mesuré, codé et réintroduit dans le système. La théorie de l’information offre donc un langage mathématique qui voyage facilement entre machines et organismes.
+
+Mais un système ne mesure jamais « tout ». Il sélectionne une variable : une température, une vitesse, un clic, un nombre d’erreurs. Cette sélection prépare déjà ce qui pourra être vu et corrigé.
+
+### Question aux étudiants
+
+« Une plateforme qui sait que vous avez regardé une vidéo pendant 18 secondes connaît-elle le sens que cette vidéo a eu pour vous ? »
+
+Elle possède une trace très utile pour certains calculs ; elle ne possède pas automatiquement votre interprétation.
+
+[Sources]
+- Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
+[/Sources]
+---
+<!-- slide: id="004g-systeme-et-finalite" title="Système et finalité" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Entrées · sorties · comportement</p>
+
+# Penser en systèmes
+
+<Fragment at={1}>
+
+<div class="cyber-sequence">
+  <span>environnement</span><span class="arrow">→</span>
+  <span>système</span><span class="arrow">→</span>
+  <span>comportement observable</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation">Décrire une <strong>finalité sans supposer une intention</strong>.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Où placer la frontière du système — et qui décide ce qui reste dehors ?</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+### Du mécanisme au comportement
+
+Dans leur article de 1943, Rosenblueth, Wiener et Bigelow proposent d’étudier un objet à partir de ses entrées, de ses sorties et de la relation entre elles. Cette approche « comportementale » permet de comparer des dispositifs dont la composition interne est différente.
+
+On peut parfois traiter le système comme une **boîte noire** : sans connaître chaque détail intérieur, on observe comment il réagit à certaines entrées. Cette stratégie est utile lorsque l’objet est trop complexe, mal connu ou inaccessible.
+
+Mais une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée.
+
+### Une finalité sans conscience
+
+Un thermostat maintient une température ; un missile poursuit une cible ; un organisme régule certaines constantes. Leur comportement peut être décrit comme orienté vers un état final sans leur attribuer une intention consciente.
+
+La cybernétique réintroduit ainsi la **finalité** dans la science sans revenir à l’idée qu’un but futur agirait magiquement sur le présent. Le but est matérialisé par une consigne, une structure ou une boucle. Ce sont les écarts présents qui produisent les corrections présentes.
+
+Cette distinction nous sera utile lorsque nous parlerons d’intelligence artificielle. Dire qu’un système optimise une fonction ne signifie pas qu’il comprend ou désire son objectif. L’orientation de son comportement peut provenir de son architecture et de ses règles.
+
+### Les frontières ne sont jamais innocentes
+
+Parler d’un système suppose de décider :
+
+- quels éléments lui appartiennent ;
+- quelles interactions sont traitées comme entrées ou sorties ;
+- quelles variables sont pertinentes ;
+- quelle durée doit être observée ;
+- quel état compte comme stabilité ou réussite.
+
+Ces choix peuvent être justifiés, mais ils ne sont pas donnés par la nature une fois pour toutes. Si l’on analyse une université comme un système d’optimisation du taux de réussite, on rend visibles certains écarts et l’on en rend d’autres secondaires : la qualité de l’expérience, les inégalités de conditions, la transformation intellectuelle.
+
+La cybernétique apporte donc une méthode puissante, mais elle oblige à demander : **qui définit le système, ses frontières et ses objectifs ?**
+
+[Sources]
+- Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
+[/Sources]
+---
+<!-- slide: id="004h-auto-organisation" title="Auto-organisation" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Ashby · von Foerster</p>
+
+# De l’ordre sans chef d’orchestre
+
+<Fragment at={1}>
+
+<p class="lead">Des interactions locales produisent une forme globale.</p>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<div class="cyber-terms" aria-label="Exemples d'auto-organisation">
+  <span>stabilisation</span>
+  <span>adaptation</span>
+  <span>apprentissage</span>
+  <span>ordre émergent</span>
+</div>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Sans centre ne veut pas dire sans règles, sans milieu, ni sans histoire.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **6 minutes**.
+
+### Qu’est-ce qui s’auto-organise ?
+
+On parle d’auto-organisation lorsqu’un ordre global apparaît ou se maintient à partir des interactions entre les éléments du système, sans qu’un centre décrive à chacun sa place finale.
+
+Dans un réseau, chaque élément peut ne disposer que d’une information locale. Pourtant, les ajustements répétés produisent une configuration collective : une stabilisation, une différenciation de fonctions, une mémoire ou une capacité d’adaptation.
+
+W. Ross Ashby utilise très tôt le terme pour étudier des systèmes dynamiques capables de converger vers des états stables. Heinz von Foerster compliquera ensuite l’idée d’un système qui s’organiserait absolument « tout seul » : un système ouvert dépend d’un environnement dont il reçoit de l’énergie, de la matière et des perturbations.
+
+### L’émergence
+
+Le mot **émergence** désigne le fait qu’une organisation collective possède des propriétés qui ne se trouvent pas telles quelles dans ses éléments isolés. Une cellule nerveuse ne pense pas ; un réseau de très nombreuses cellules peut participer à la perception, à la mémoire et au raisonnement.
+
+Le mot est utile à condition de ne pas en faire une explication magique. Dire qu’une propriété émerge ne dit pas encore par quels mécanismes précis elle apparaît. Il faut identifier les interactions locales, les boucles, les contraintes et les changements d’échelle.
+
+### La promesse politique
+
+L’auto-organisation semble s’opposer au commandement central : coordonner sans hiérarchie, laisser les unités locales s’adapter, faire confiance à l’intelligence distribuée.
+
+Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. Celui qui fixe ce cadre peut exercer un pouvoir considérable sans donner d’ordres détaillés.
+
+Il faut donc tenir ensemble deux possibilités :
+
+- l’auto-organisation peut **réellement distribuer l’initiative** et limiter le centre ;
+- elle peut aussi **déplacer le contrôle** vers les règles du jeu, les objectifs et les infrastructures.
+
+### Question aux étudiants
+
+Prendre l’exemple d’un travail de groupe sans chef désigné. Le groupe peut s’auto-organiser, mais dépend encore de la consigne, de l’échéance, de la plateforme utilisée, du mode d’évaluation et des inégalités de parole.
+
+L’absence de chef visible ne supprime pas les conditions qui orientent l’activité.
+
+[Sources]
+- W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
+- Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
+[/Sources]
+---
+<!-- slide: id="004i-ambivalence-politique" title="Ambivalence politique" steps=2 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Deux potentialités d’une même boucle</p>
+
+# L’ambivalence politique
+
+<div class="cyber-contrast">
+
+<Fragment at={1}>
+<div>
+
+## Promesse
+
+- coordonner sans centre omniscient ;
+- apprendre des erreurs ;
+- préserver une autonomie locale ;
+- s’adapter à l’imprévu.
+
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div>
+
+## Risque
+
+- fixer les objectifs ;
+- sélectionner les variables ;
+- mesurer les écarts ;
+- corriger les conduites.
+
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation">Le contrôle peut se déplacer du <strong>commandement</strong> vers le <strong>cadre</strong>.</p>
+
+--- notes
+
+Temps indicatif : **6 minutes**.
+
+À ce stade, il faut éviter deux récits trop simples.
+
+Le premier ferait de la cybernétique une idéologie intrinsèquement totalitaire : tout feedback serait surveillance, toute régulation serait normalisation. Cela efface les usages où la boucle permet précisément à des unités locales de décider, d’apprendre et de limiter la dépendance à un centre.
+
+Le second ferait de l’auto-organisation une libération automatique : dès qu’il n’y a plus de hiérarchie visible, il n’y aurait plus de pouvoir. Cela efface le rôle des protocoles, des indicateurs, des objectifs et des infrastructures.
+
+### Deux manières de rendre gouvernable
+
+Une organisation peut être rendue gouvernable par la standardisation explicite : règles détaillées, catégories, procédures, ordres.
+
+Elle peut aussi être gouvernée en fixant un objectif et en organisant une boucle de mesure et de correction. On laisse alors les acteurs choisir localement leurs moyens, tant que les résultats restent dans une zone acceptable.
+
+Cette seconde forme peut accroître l’autonomie réelle. Elle peut également produire une discipline très forte : l’acteur intériorise l’indicateur, surveille ses propres écarts et ajuste son comportement.
+
+### Un cas fécond : Cybersyn
+
+Le projet Cybersyn, développé au Chili sous le gouvernement de Salvador Allende, permet de rendre cette ambivalence concrète. Il utilisait un réseau de télex et des outils cybernétiques pour faire remonter rapidement des informations depuis les entreprises nationalisées.
+
+On pourrait le raconter comme un rêve de pilotage central de l’économie. Ce serait incomplet : le projet cherchait aussi à coordonner l’ensemble sans supprimer l’autonomie des unités locales. Son intérêt historique tient précisément à cette tension entre information centralisée, décision distribuée et participation des travailleurs.
+
+Cybersyn montre ainsi qu’une même infrastructure de feedback peut soutenir des projets politiques différents selon la distribution des données, la capacité de décision locale et les institutions qui permettent de contester les objectifs.
+
+### Le point décisif
+
+La question n’est donc pas seulement : « Y a-t-il un chef ? » Elle devient :
+
+- qui choisit les objectifs ?
+- qui définit ce qui peut être mesuré ?
+- qui possède les données de retour ?
+- qui peut contester la norme ?
+- que devient ce qui n’apparaît pas dans le modèle ?
+
+Un exemple contemporain peut être pris dans l’université : laisser une composante choisir librement ses moyens tout en l’évaluant sur quelques indicateurs peut sembler décentralisé. Mais le centre conserve un pouvoir en définissant ce qui compte comme performance.
+
+On peut présenter ici la formule suivante : **l’auto-organisation n’est pas l’opposé simple du contrôle ; elle peut être une autre distribution du contrôle**. Cette distribution peut être plus démocratique ou plus opaque selon la manière dont le cadre est institué et révisé.
+
+[Sources]
+- Norbert Wiener, *The Human Use of Human Beings: Cybernetics and Society*, Houghton Mifflin, 1950.
+- W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall, 1956.
+- Eden Medina, *Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile*, MIT Press, 2011.
+[/Sources]
+---
+<!-- slide: id="004j-tiqqun" title="La critique de Tiqqun" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Tiqqun · L’hypothèse cybernétique · 2001</p>
+
+# Contrôler en faisant circuler
+
+<Fragment at={1}>
+
+<div class="cyber-sequence">
+  <span>capter</span><span class="arrow">→</span>
+  <span>comparer</span><span class="arrow">→</span>
+  <span>corriger</span><span class="arrow">↺</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation">Le pouvoir ne commande pas seulement : il <strong>entretient des boucles</strong>.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Une critique polémique à discuter — pas une histoire neutre à réciter.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **6 à 7 minutes**.
+
+Tiqqun publie *L’Hypothèse cybernétique* en 2001. Le texte ne propose pas une histoire académique et équilibrée de la cybernétique. Il construit une hypothèse critique : la cybernétique serait devenue une forme générale de gouvernement des sociétés contemporaines.
+
+### Le cœur de la critique
+
+Dans le modèle classique de la souveraineté, le pouvoir est facilement imaginé comme un centre qui ordonne et interdit. Tiqqun attire l’attention sur une autre forme :
+
+1. des capteurs ou des dispositifs produisent continuellement des informations ;
+2. ces informations rendent les comportements comparables à une norme ou à un objectif ;
+3. les écarts déclenchent des ajustements ;
+4. les ajustements produisent de nouvelles conduites, elles-mêmes mesurées.
+
+Le contrôle passe alors par la circulation de l’information. Il ne cherche pas nécessairement à immobiliser chaque individu ; il cherche à rendre les flux observables, prévisibles et corrigibles.
+
+Cette lecture permet de regarder autrement des dispositifs familiers : tableaux de bord, évaluations continues, scores, recommandations, notifications, modulation des prix ou surveillance algorithmique. Ils ne disent pas toujours directement quoi faire. Ils construisent un environnement qui rend certains comportements plus probables et en enregistre les résultats.
+
+### Ce que Tiqqun force
+
+Le texte transforme souvent une famille de concepts et de techniques en une logique historique presque totale. Il tend à faire de toute communication une captation et de toute auto-organisation une ruse du contrôle. Cette généralisation est contestable.
+
+Historiquement, les cybernéticiens ne forment pas un bloc homogène. Wiener lui-même formule des critiques du pouvoir, de l’automatisation irresponsable et de la concentration des moyens de communication. Des projets cybernétiques ont cherché à distribuer l’information et l’initiative plutôt qu’à les centraliser.
+
+Il faut donc utiliser Tiqqun comme une **lentille** :
+
+- elle révèle que mesurer et faire circuler peuvent être des opérations politiques ;
+- elle oblige à chercher la norme cachée dans la boucle ;
+- elle ne suffit pas à démontrer que tout réseau ou toute régulation serait une domination.
+
+### Question aux étudiants
+
+« Quand une application vous recommande un contenu à partir de vos usages, vous donne-t-elle davantage d’autonomie, oriente-t-elle votre conduite, ou les deux à la fois ? »
+
+L’intérêt de la question est précisément qu’elle ne se résout pas par une opposition simple entre liberté et contrôle.
+
+[Sources]
+- Tiqqun, *L’Hypothèse cybernétique*, 2001, notamment p. 230–243 et 254–267 dans l’édition *Tout a failli, vive le communisme !* ; exemplaire local : `/Users/osarrouy/Documents/Papers/Tiqqun - 2001 - Lhypothese cybernetique/document.pdf`.
+[/Sources]
+---
+<!-- slide: id="004k-vers-le-neurone" title="Vers le neurone artificiel" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Du pilotage au calcul</p>
+
+# Et si le cerveau était aussi un système ?
+
+<Fragment at={1}>
+
+<div class="cyber-terms" aria-label="Notions transférées au cerveau">
+  <span>signal</span>
+  <span>réseau</span>
+  <span>seuil</span>
+  <span>mémoire</span>
+  <span>apprentissage</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation">Le vivant devient <strong>formalisable</strong> en sélectionnant quelques relations.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Que faut-il retirer du vivant pour le rendre calculable ?</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **4 à 5 minutes**.
+
+La cybernétique prépare le terrain des réseaux de neurones de deux manières.
+
+### Premièrement : elle rend le déplacement légitime
+
+Si des organismes et des machines peuvent être comparés par leurs relations d’entrée, de sortie, de communication et de régulation, alors le système nerveux peut devenir une source de modèles techniques.
+
+Cette comparaison ne part pas de rien. La neurophysiologie étudie déjà les impulsions, les connexions, l’excitation et l’inhibition. Mais la cybernétique place ces observations dans un programme formel : représenter l’activité d’un réseau comme une transformation réglée de signaux.
+
+### Deuxièmement : elle valorise la simplification opératoire
+
+Un modèle n’a pas besoin de reproduire chaque détail de la cellule pour être utile. Il peut sélectionner quelques propriétés :
+
+- des éléments reçoivent des signaux ;
+- plusieurs signaux se combinent ;
+- un seuil conditionne une sortie ;
+- les sorties deviennent les entrées d’autres éléments ;
+- la structure du réseau peut conserver ou transformer un comportement.
+
+McCulloch et Pitts feront exactement ce geste en 1943 : ils construisent un neurone idéal, binaire et à seuil, afin d’étudier les relations logiques qu’un réseau peut réaliser.
+
+### Le prix de l’abstraction
+
+Ce modèle laisse de côté la forme réelle de la cellule, la chimie des synapses, les variations continues, une grande partie de la temporalité et de la plasticité. Ce ne sont pas de petits oublis accidentels : c’est ce retrait qui rend le calcul possible.
+
+La bonne question n’est donc pas « le neurone artificiel est-il vrai ou faux ? ». Il faut demander :
+
+- quelles propriétés conserve-t-il ?
+- quelles propriétés élimine-t-il ?
+- pour quelle question cette simplification est-elle féconde ?
+- à quel moment transforme-t-on abusivement un modèle partiel en explication totale ?
+
+La slide suivante revient d’abord au neurone biologique. Nous pourrons ensuite mesurer précisément ce que McCulloch et Pitts en retiennent et ce qu’ils en retranchent.
+
+### Formule de transition
+
+« La cybernétique nous a appris à chercher des signaux, des boucles et des règles dans des systèmes très différents. Regardons maintenant la cellule qui va fournir l’une de ses abstractions les plus fécondes — et les plus simplificatrices. »
+
+[Sources]
+- Warren S. McCulloch et Walter Pitts, « A Logical Calculus of the Ideas Immanent in Nervous Activity », *Bulletin of Mathematical Biophysics*, 5, 1943, p. 115–133, https://doi.org/10.1007/BF02478259.
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
+[/Sources]
+---
 <!-- slide: id="005-neurone-biologique" title="Neurone biologique" steps=6 -->
 
 <script>
@@ -290,13 +1080,101 @@ McCulloch et Pitts vont conserver trois éléments de ce fonctionnement — des 
 
 McCulloch et Pitts publient en 1943 « A Logical Calculus of the Ideas Immanent in Nervous Activity ».
 
+### Une transition importante : de la cellule vivante à l’objet logique
+
+Sur la slide précédente, nous avons insisté sur la complexité biologique du neurone : sa membrane, sa chimie, la temporalité des signaux et la plasticité de ses connexions. McCulloch et Pitts effectuent maintenant le mouvement inverse. Ils demandent : **que faut-il conserver au minimum pour décrire mathématiquement l’activité d’un réseau de neurones ?**
+
+Leur modèle est donc **plus qu’une simple métaphore**, car ils prétendent établir une correspondance formelle entre certaines activités neuronales et des opérations logiques. Mais il est aussi **beaucoup moins qu’une reproduction fidèle** du neurone biologique. Il extrait quelques propriétés jugées suffisantes pour construire un calcul.
+
+### Ce qu’ils retiennent du neurone biologique
+
+Ils partent de plusieurs observations neurophysiologiques disponibles à leur époque :
+
+- le neurone produit une impulsion selon une logique approximative de **tout ou rien** ;
+- plusieurs entrées excitatrices peuvent se combiner pour atteindre un **seuil** ;
+- certaines entrées ont un effet **inhibiteur** ;
+- les neurones sont connectés en réseaux et l’activité se transmet avec un certain délai.
+
+Ces éléments deviennent les règles de leur neurone idéal :
+
+- à un instant donné, chaque entrée vaut `0` ou `1` : inactive ou active ;
+- le neurone additionne les entrées excitatrices ;
+- il produit `1` si un seuil fixé est atteint ;
+- une entrée inhibitrice active peut empêcher la sortie.
+
+Tout le reste est mis entre parenthèses : la forme réelle du neurone, la chimie des neurotransmetteurs, les variations continues du potentiel de membrane, la diversité des cellules, une grande partie de la temporalité et, dans le modèle de base, la transformation des connexions par l’apprentissage.
+
+### Pourquoi simplifier aussi fortement ?
+
+La simplification est ici une **stratégie de modélisation**. McCulloch et Pitts ne cherchent pas d’abord à simuler fidèlement un neurone particulier. Ils veulent isoler des propriétés qui restent calculables même lorsque plusieurs hypothèses physiologiques diffèrent.
+
+Ils écrivent d’ailleurs qu’ils peuvent choisir les hypothèses physiques les plus commodes pour leur calcul, à condition que des réseaux différents produisent le même comportement formel. Ils précisent également que cette équivalence formelle ne constitue pas une explication factuelle des mécanismes biologiques.
+
+Autrement dit, leur question n’est pas : « À quoi ressemble exactement un neurone ? » Elle est plutôt : **« Quelles opérations un réseau composé d’éléments de ce type peut-il réaliser ? »**
+
+Le gain est considérable : le comportement du réseau peut être démontré avec les outils des mathématiques. Mais ce gain a un prix : tout ce qui n’entre pas dans les variables choisies disparaît du modèle.
+
+### Pourquoi la logique propositionnelle ?
+
+La logique propositionnelle étudie des énoncés qui peuvent prendre deux valeurs — vrai ou faux — et les relations formelles que l’on peut construire entre eux : **ET**, **OU**, **NON**, implication, etc.
+
+McCulloch et Pitts proposent de représenter l’activité d’un neurone à un instant donné comme une proposition :
+
+- le neurone s’active : la proposition vaut **vrai**, ou `1` ;
+- le neurone ne s’active pas : elle vaut **faux**, ou `0`.
+
+La configuration des connexions et la valeur du seuil permettent alors de construire des relations logiques :
+
+- si deux entrées sont nécessaires pour atteindre le seuil, le neurone se comporte comme un **ET** ;
+- si l’une ou l’autre suffit, il se comporte comme un **OU** ;
+- une entrée inhibitrice peut jouer le rôle d’un **NON** ou d’un veto.
+
+Il faut être précis : cela ne signifie pas qu’un neurone biologique « pense une phrase » ou manipule consciemment une proposition. La proposition est d’abord la **traduction formelle d’un événement** : « ce neurone est actif à cet instant ». C’est l’organisation du réseau qui fait correspondre les relations entre ces événements à des relations logiques.
+
+### Pensent-ils réellement que le cerveau est une machine logique ?
+
+La réponse courte est **oui, dans un sens précis du mot « calculer »**. Si calculer signifie transformer des états selon des règles formelles, alors leur réseau est bien une machine de calcul : l’état présent des neurones et la structure de leurs connexions déterminent l’état suivant, et certaines organisations du réseau réalisent des opérations logiques.
+
+Leur ambition va donc plus loin qu’une simple inspiration technique. Ils soutiennent que les relations entre les activités neuronales peuvent être décrites par la logique des propositions et que les dimensions formelles de l’activité mentale peuvent être expliquées à partir de l’organisation matérielle du réseau nerveux. À la fin du texte, ils qualifient l’activité neuronale de propositionnelle et les événements psychiques d’intentionnels ou de sémiotiques.
+
+Il serait trop faible de dire : « Ils empruntent seulement une image au cerveau pour construire une machine. » Ils proposent bien une **théorie computationnelle du cerveau et de l’esprit** : les idées, les perceptions et les comportements seraient réalisés par des configurations d’activité dans un réseau matériel dont les relations peuvent être traitées logiquement. Leur objectif est notamment de faire disparaître l’idée d’un esprit séparé du cerveau, d’un « fantôme » inexplicable ajouté à la matière.
+
+Mais « le cerveau est une machine à calculer » ne signifie pas ici que le cerveau effectuerait seulement des opérations arithmétiques, ni qu’il manipulerait explicitement des phrases comme un logicien. Leur thèse porte d’abord sur la **forme des relations** entre les événements neuronaux : activation ou non-activation, combinaison, inhibition, succession dans le temps.
+
+Il faut alors distinguer ce qu’ils démontrent de ce qu’ils en concluent :
+
+- ils **démontrent**, dans le cadre de leurs hypothèses idéalisées, que des réseaux peuvent réaliser certaines expressions logiques ;
+- ils **défendent** l’idée plus générale que les dimensions formelles de la pensée sont réalisées par l’activité du réseau nerveux ;
+- ils ne démontrent pas que la signification d’une idée, l’expérience consciente ou toute la richesse biologique du cerveau sont intégralement contenues dans ce modèle.
+
+Il faut également éviter l’équation trop rapide avec la machine de Turing. McCulloch et Pitts montrent qu’un réseau équipé d’une mémoire analogue à un ruban, de dispositifs de lecture et de sorties motrices peut atteindre la même classe de calculabilité. Ils ne démontrent pas que n’importe quel réseau neuronal ordinaire est spontanément une machine de Turing universelle ; les réseaux récurrents considérés seuls n’accomplissent qu’une partie de ces calculs.
+
+La formulation la plus juste pour le cours est donc : **McCulloch et Pitts pensent réellement que les dimensions formelles de la pensée peuvent être réalisées par un réseau matériel fonctionnant comme un système logique. Mais leur modèle montre surtout comment des activités neuronales peuvent effectuer certains calculs ; il ne démontre pas que toute la vie mentale est intégralement réductible à ces calculs.**
+
+La tension centrale apparaît ici : passer de « certaines opérations cérébrales sont formalisables » à « tout ce qui compte dans la pensée est du calcul » constitue une extrapolation. Leur article ouvre la voie à cette extrapolation et formule lui-même une théorie très ambitieuse, mais sa démonstration formelle ne suffit pas à l’établir entièrement.
+
+### Et l’apprentissage ?
+
+McCulloch et Pitts savent que le véritable système nerveux se transforme. Ils évoquent l’apprentissage comme une modification durable du réseau, par exemple la formation de nouvelles synapses ou l’abaissement local d’un seuil.
+
+Cependant, le modèle présenté ici ne possède pas encore une règle pratique lui permettant d’ajuster progressivement ses connexions à partir d’exemples. Pour les besoins du calcul, ils montrent surtout que certains changements peuvent être remplacés par un réseau fixe plus complexe produisant le même comportement. Ils avertissent que cette équivalence formelle n’explique pas le mécanisme biologique réel.
+
+C’est précisément ce qui permettra de comprendre la rupture introduite ensuite par Rosenblatt : le perceptron conserve le neurone à seuil, mais il ajoute une procédure qui **modifie les poids en fonction des erreurs**.
+
+### Lecture de l’animation
+
 - Étape 1 : les entrées sont binaires, elles valent 0 ou 1.
 - Étape 2 : les entrées excitatrices actives sont additionnées.
 - Étape 3 : la somme est comparée à un seuil θ.
 - Étape 4 : si la somme atteint le seuil, le neurone « tire » : sortie 1.
 - Étape 5 : une entrée inhibitrice active fonctionne comme un veto : même si le seuil est atteint, la sortie retombe à 0.
 
-Le point important n’est pas encore l’apprentissage : les poids et le seuil sont fixés. Le neurone de McCulloch-Pitts est un opérateur logique, une petite machine à transformer des propositions binaires en une autre proposition binaire.
+Le neurone de McCulloch-Pitts peut donc être présenté comme un **opérateur logique inspiré de quelques propriétés du neurone biologique**. Ce n’est ni une cellule reproduite en miniature, ni une invention sans rapport avec la biologie. C’est une abstraction : elle rend certaines relations calculables en laissant de côté une grande partie du vivant.
+
+[Sources]
+- Warren S. McCulloch et Walter Pitts, « A Logical Calculus of the Ideas Immanent in Nervous Activity », *Bulletin of Mathematical Biophysics*, 5, 1943, p. 115–133, https://doi.org/10.1007/BF02478259.
+- Gualtiero Piccinini, « The First Computational Theory of Mind and Brain: A Close Look at McCulloch and Pitts’ “Logical Calculus of Ideas Immanent in Nervous Activity” », *Synthese*, 141, 2004, p. 175–215, https://doi.org/10.1023/B:SYNT.0000043018.52445.3E.
+[/Sources]
 ---
 <!-- slide: id="007-perceptron-rosenblatt" title="Perceptron" steps=5 -->
 
