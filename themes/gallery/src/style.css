@@ -51,6 +51,15 @@
     /* Serif des gros titres : Instrument Serif, plus contrasté et plus éditorial. */
     --font-heading: 'Instrument Serif', ui-serif, Georgia, serif;
 
+    /* Serif des notes dans la vue présentateur : Newsreader. */
+    --font-notes: 'Newsreader', ui-serif, Georgia, serif;
+
+    /* Taille du texte courant des notes dans la vue présentateur. */
+    --font-notes-size: 1.3rem;
+
+    /* Graisse du texte courant des notes dans la vue présentateur. */
+    --notes-weight: 200;
+
     /* Mono d’interface : JetBrains Mono. */
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
 

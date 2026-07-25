@@ -5,109 +5,42 @@ theme: gallery
 <!-- slide: id="001-ouverture" title="Ouverture" steps=0 -->
 
 
-<p class="kicker">Protocol · contemporary art · since 2026</p>
 
-# Introduction aux Cultures Numériques
-
-
-Olivier Sarrouy {.lead}
-
-
+# Cybernetics
+Comprendre et contrôler un monde incertain {.kicker}
 
 --- notes
 
-- Ouvrir la projection avec le bouton depuis la vue présentateur.
-- Déplacer la fenêtre projetée sur le second écran.
-- Les flèches droite/gauche contrôlent les slides et les étapes.
+Temps indicatif : **3 minutes**.
+
+Cette séquence doit nous permettre de comprendre un cadre intellectuel qui structure, après-guerre, le travail de nombreux pionniers de l’informatique, mais qui déborde largement l’histoire des machines.
+
+La cybernétique n’est ni l’ancêtre unique de l’informatique, ni une science parfaitement établie et délimitée. Elle désigne plutôt un moment où des chercheurs venus de disciplines différentes commencent à décrire avec un vocabulaire voisin des phénomènes de **communication**, de **régulation**, d’**organisation** et de **comportement orienté vers un but**.
+
+Le terme vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
+
+Nous avancerons autour d’une question simple : **comment agir de manière réglée dans un monde que l’on ne peut ni connaître complètement, ni prévoir parfaitement ?**
+
+Le chapitre suivra trois mouvements :
+
+1. des concepts se forment dans des domaines différents — rétroaction, information, système, émergence et auto-organisation ;
+2. les conférences Macy les mettent explicitement en relation et contribuent à stabiliser une langue commune ;
+3. cette grammaire devient aussi une manière de penser le gouvernement, dont nous examinerons les promesses et les dangers.
+
+Il ne s’agit donc pas d’une chronologie continue. Les dates se chevauchent, certains concepts précèdent Macy et d’autres continuent à être élaborés après les conférences. Nous suivrons une **progression conceptuelle**, en signalant localement les retours et les prolongements historiques.
+
 ---
+<!-- slide: id="004a1-constellation" title="Une constellation conceptuelle" steps=0 -->
 
-<!-- slide: id="002" title="Fragments" steps=0 -->
-
-
-# olivier.sarrouy@univ-rennes2.fr
-
----
-<!-- slide: id="002-fragments" title="Fragments" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-# Fragments sans verbosités
-
-<Fragment at={1}>
-
-- Le texte reste presque entièrement du Markdown.!!
-
-</Fragment>
-
-<Fragment at={2}>
-
-- Les apparitions sont pilotées par un simple `step` global.
-
-</Fragment>
-
-<Fragment at={3}>
-
-- Les composants Svelte peuvent réagir au même état.
-
-</Fragment>
-
---- notes
-
-Faire apparaître les trois points un par un !
-
-# TTTTT
-
-- Insister sur le fait que le fragment n’est pas lié à Reveal.
-- Le composant lit simplement l’étape courante depuis le contexte Svelte.
----
-<!-- slide: id="003-composant" title="Composant anim\u00e9" steps=4 -->
-
-<script>
-  import ProcessDiagram from '$components/ProcessDiagram.svelte'
-</script>
-
-# Une chaîne de rendu
-
-<ProcessDiagram />
-
---- notes
-
-Cette slide montre l’intérêt du runtime Svelte natif.
-
-À chaque étape, le composant reçoit implicitement le même `step` que les fragments textuels. On n’a donc pas besoin de traduire des événements DOM en état applicatif.
----
-<!-- slide: id="004-publication" title="Publication" steps=2 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-  import StateCard from '$components/StateCard.svelte'
-</script>
-
-<div class="layout two-columns">
+<div class="layout center">
 
 <div>
 
-# Publier avec ou sans notes
+<p class="kicker">Sous-chapitre I</p>
 
-<Fragment at={1}>
+# Une constellation conceptuelle
 
-La version publique peut être construite sans charger les fichiers `.notes.md`.
-
-</Fragment>
-
-<Fragment at={2}>
-
-La reprise d’état passe par le hash : `#4.2`.
-
-</Fragment>
-
-</div>
-
-<div>
-
-<StateCard />
+<p class="lead muted">Rétroaction · information · systèmes · émergence</p>
 
 </div>
 
@@ -115,60 +48,19 @@ La reprise d’état passe par le hash : `#4.2`.
 
 --- notes
 
-Point important : cacher les notes en CSS ne suffit pas.
+Temps indicatif : **1 minute**.
 
-Dans ce prototype, les notes vivent dans des fichiers séparés. En build public, elles ne sont pas importées par le registre des decks.
----
-<!-- slide: id="004a-cybernetique" title="La cybernétique" steps=0 -->
+Nous allons d’abord isoler plusieurs concepts qui ne naissent ni au même endroit ni pour résoudre le même problème. L’enjeu n’est pas encore de définir « la » cybernétique comme une doctrine, mais de comprendre pourquoi ces opérations vont progressivement devenir compatibles.
 
-
-
-<p class="kicker">1943–1953 · une science transdisciplinaire</p>
-
-# La cybernétique
-
-Comment piloter un monde incertain ? {.lead}
-
-<div class="cyber-timeline" aria-label="Repères chronologiques">
-  <span>1943</span>
-  <span>1948</span>
-  <span>1953</span>
-</div>
-
-
-
---- notes
-
-Temps indicatif : **2 à 3 minutes**.
-
-Cette séquence doit nous permettre de comprendre le cadre intellectuel qui structure, après guerre, le travail de nombreux pionners de l'informatique.
-
-Nous y verrons ainsi comment se diffuse des manières nouvelles de penser d'où naitront, entre autre, les premières expérimentations autour de ce qui deviendra bientôt Internet, tout comme les premiers réseaux de neurones artificiels, mais aussi une certain rationalité politique et économie - le néo-libéralisme.
-
-Cette manière de pensée, nous la qualifierons de cybernétique, un mot proposé par Norber Wiener, sur l'origine duquel nous aurons l'occasion de revenir.
-
-La cybernétique n’est ni un ancêtre unique de l’informatique, ni une théorie qui aurait disparu. Elle ne désigne meme pas une science etablie et clairement délimité, mais plumtôt un moment où des chercheurs provenant de disciplines différentes essaient de décrire avec un même vocabulaire des phénomènes de **communication**, de **régulation** et de **comportement orienté vers un but**.
-
-Le terme cybernétique vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer continuellement la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
-
-Nous allons avancer autour d’une question simple : **comment agir de manière réglée dans un monde que l’on ne peut ni connaître complètement, ni prévoir parfaitement ?**
-
-Le fil historique sera volontairement resserré :
-
-- en **1943**, plusieurs articles donnent une forme nouvelle aux notions de comportement orienté, de rétroaction et de réseau neuronal logique ;
-- en **1948**, Norbert Wiener publie *Cybernetics* et Claude Shannon sa théorie mathématique de la communication ;
-- de **1946 à 1953**, les conférences Macy font circuler ces concepts entre ingénieurs, biologistes, mathématiciens, anthropologues et psychologues.
-
-Ces dates ne marquent pas la naissance absolue de chacune de ces idées. Les régulateurs mécaniques, les statistiques, la théorie des systèmes ou la physiologie de l’homéostasie ont une histoire antérieure. Ce qui se forme dans l’après-guerre, c’est surtout une **configuration intellectuelle commune**.
-
+Quatre questions guideront le parcours : comment corriger une action à partir de ses effets ? Comment transmettre un signal malgré le bruit ? Comment décrire un ensemble de relations ? Comment un ordre collectif peut-il apparaître sans plan central détaillé ?
 ---
 <!-- slide: id="004aa-wiener" title="Norbert Wiener" steps=0 layout="two-columns" -->
 
 <div>
 
-<p class="kicker">1894–1964 · mathématiques · cybernétique</p>
-
 # Norbert Wiener
+
+1894–1964 {.kicker}
 
 </div>
 
@@ -184,7 +76,7 @@ Norbert Wiener est un mathématicien, physicien et philosophe américain.
 
 Il a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation.
 
-Il a notamment travaillé, pendant la guerre, sur des systèmes de défense anti-aériens capables de suivre automatiquement les avions ennemis et de prédire leurs trajectoires - pour optimiser la réponse des canons antiaériens.
+Il a notamment travaillé, pendant la seconde guerre mondiale, avec l’ingénieur Julian Bigelow, sur des problèmes de visée antiaérienne.
 
 ---
 
@@ -192,21 +84,12 @@ Il a notamment travaillé, pendant la guerre, sur des systèmes de défense anti
   import AntiAircraftCybernetics from '$components/AntiAircraftCybernetics.svelte'
 </script>
 
-<p class="kicker">Seconde Guerre mondiale · prédiction</p>
-
-# Une science née de la guerre
 
 <AntiAircraftCybernetics />
 
 --- notes
 
-Temps indicatif : **5 minutes**.
-
-### La scène de départ
-
-Pendant la Seconde Guerre mondiale, Norbert Wiener travaille avec l’ingénieur Julian Bigelow sur les problèmes de visée antiaérienne. Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la mesure, le calcul, le tir et l’arrivée du projectile, la cible s’est déplacée.
-
-Il faut donc :
+Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la mesure, le calcul, le tir et l’arrivée du projectile, la cible s’est déplacée. Il faut donc :
 
 1. mesurer une trajectoire partielle ;
 2. distinguer le mouvement du bruit et des erreurs de mesure ;
@@ -216,8 +99,6 @@ Il faut donc :
 Laisser l’animation accomplir un cycle complet : les quatre verbes au bas de l’image permettent de nommer successivement ces opérations. Insister sur le dernier mouvement, qui ramène l’écart observé vers le dispositif de mesure : c’est lui qui transforme une suite d’actions en **boucle de rétroaction**.
 
 Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d'incertitudes, d’organismes et de machines qui réagissent.
-
-### Pourquoi cette origine compte-t-elle ?
 
 Elle déplace la manière de penser le contrôle. Dans un modèle très simple de commandement, un centre connaît la situation, donne un ordre, puis l’ordre est exécuté. Dans une boucle cybernétique, l’action est toujours provisoire : elle produit un effet, cet effet est mesuré, puis l’action suivante est ajustée.
 
@@ -233,146 +114,6 @@ La réponse attendue est non. Il lui suffit de détecter un écart, de recalcule
 
 [Sources]
 - Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
-- Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
-[/Sources]
----
-<!-- slide: id="004c-conferences-macy" title="Conférences Macy" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">New York · 1946–1953</p>
-
-# Les conférences Macy
-
-<Fragment at={1}>
-
-<div class="cyber-terms" aria-label="Disciplines présentes">
-  <span>neurophysiologie</span>
-  <span>mathématiques</span>
-  <span>ingénierie</span>
-  <span>anthropologie</span>
-  <span>psychologie</span>
-</div>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<p class="cyber-equation">Faire circuler un <strong>langage commun</strong> entre des objets hétérogènes.</p>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="cyber-question">Un même vocabulaire ne signifie pas que le cerveau, la machine et la société soient la même chose.</p>
-
-</Fragment>
-
---- notes
-
-Temps indicatif : **5 minutes**.
-
-Les dix conférences généralement appelées « conférences Macy » se tiennent entre 1946 et 1953. Warren McCulloch — que nous retrouverons bientôt à propos du neurone logique — préside la série. Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal Systems in Biological and Social Systems*.
-
-Le mot « cybernétique » ne s’impose pas immédiatement. En 1949, lors de la sixième conférence, Heinz von Foerster est chargé d’éditer les actes, avec Margaret Mead et Hans-Lukas Teuber comme éditeurs adjoints. Il propose d’adopter le terme rendu public l’année précédente par Wiener. La proposition est acceptée ; à partir de la conférence suivante, en 1950, le titre devient *Cybernetics: Circular Causal and Feedback Mechanisms in Biological and Social Systems*. Le nom ne précède donc pas le collectif : il vient stabiliser après coup un champ de discussions déjà engagé.
-
-On y rencontre notamment Walter Pitts, Norbert Wiener, John von Neumann, Margaret Mead, Gregory Bateson, Arturo Rosenblueth et Heinz von Foerster, avec des présences variables selon les réunions.
-
-### Ce qui se joue
-
-Ces chercheurs n’étudient pas tous le même objet et ne partagent pas une doctrine parfaitement unifiée. Ils essaient de savoir si des notions comme **information**, **rétroaction**, **causalité circulaire**, **apprentissage** ou **système** peuvent permettre à leurs disciplines de se parler.
-
-Un ingénieur peut décrire un servomécanisme ; un physiologiste, la régulation d’un organisme ; un neurophysiologiste, l’activité du cerveau ; un anthropologue, des interactions sociales. Le pari est que certaines relations formelles se retrouvent dans ces situations très différentes.
-
-### Une correction historique importante
-
-Il serait séduisant de raconter que les participants ont « décidé » que le cerveau, la machine et la société étaient identiques. Ce serait faux et pédagogiquement trompeur. Les débats étaient vifs, les notions disputées et les usages très différents.
-
-La formulation la plus juste est : **les conférences Macy construisent un espace où un langage commun peut circuler entre des disciplines hétérogènes**.
-
-Cela produit une commensurabilité : on peut comparer certains comportements ou dessiner des schémas analogues. Mais cette comparaison formelle ne prouve pas une identité ontologique. Un thermostat, un cerveau et une institution peuvent tous comporter des boucles de rétroaction sans être pour autant trois exemplaires d’une même chose.
-
-### Question aux étudiants
-
-« Si je décris une entreprise et une fourmilière comme des réseaux, ai-je montré qu’elles fonctionnent de la même manière ? »
-
-La discussion doit faire apparaître l’écart entre la puissance d’un modèle — il rend certains rapports visibles — et son risque — il peut faire disparaître tout ce qu’il ne représente pas.
-
-[Sources]
-- Claus Pias (dir.), *Cybernetics: The Macy Conferences 1946–1953. The Complete Transactions*, Diaphanes / University of Chicago Press, https://press.uchicago.edu/ucp/books/book/distributed/C/bo269830784.html.
-- American Society for Cybernetics, « Summary: The Macy Conferences », https://www.asc-cybernetics.org/foundations/history/MacySummary.htm.
-[/Sources]
----
-<!-- slide: id="004d-langage-commun" title="Une langue commune" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Animal · machine · société</p>
-
-# Une langue commune
-
-<div class="cyber-cards">
-
-<Fragment at={1}>
-<div class="cyber-card">
-  <h3>Organisme</h3>
-  <p>Se maintenir malgré les perturbations.</p>
-</div>
-</Fragment>
-
-<Fragment at={2}>
-<div class="cyber-card">
-  <h3>Machine</h3>
-  <p>Ajuster son action à un objectif.</p>
-</div>
-</Fragment>
-
-<Fragment at={3}>
-<div class="cyber-card">
-  <h3>Collectif</h3>
-  <p>Coordonner des actions distribuées.</p>
-</div>
-</Fragment>
-
-</div>
-
-<p class="cyber-equation"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
-
---- notes
-
-Temps indicatif : **4 à 5 minutes**.
-
-Le titre complet du livre de Wiener publié en 1948 est *Cybernetics, or Control and Communication in the Animal and the Machine*. L’opération intellectuelle centrale apparaît déjà dans ce titre : rapprocher des êtres vivants et des dispositifs techniques à partir de leurs problèmes de communication et de régulation.
-
-### Que rend possible cette langue commune ?
-
-Elle permet de poser les mêmes questions dans plusieurs domaines :
-
-- quelles informations un système reçoit-il de son environnement ?
-- comment transforme-t-il ces entrées en actions ?
-- comment les effets de son action reviennent-ils modifier son comportement ?
-- comment conserve-t-il une certaine stabilité malgré des perturbations ?
-
-L’objet isolé compte moins que la structure de ses relations. Au lieu de demander uniquement « de quoi cette chose est-elle faite ? », on demande « que reçoit-elle, que produit-elle, et comment son comportement évolue-t-il ? »
-
-Cette méthode est extraordinairement productive. Elle rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Elle aide à déplacer des concepts et des instruments d’une discipline à l’autre.
-
-### Mais que perd-on ?
-
-La cybernétique tend à privilégier ce qui peut être décrit comme une relation entre états, signaux, objectifs et corrections. Or un organisme a une histoire évolutive et un métabolisme ; une machine a été construite ; une institution comporte des conflits, du droit et des rapports de pouvoir.
-
-Dire que ces objets peuvent être représentés avec une même grammaire ne signifie donc pas qu’ils possèdent la même nature. La formule à faire retenir est :
-
-**commensurabilité formelle n’est pas identité ontologique**.
-
-Nous retrouverons exactement ce problème avec le neurone artificiel. Un modèle peut être réellement inspiré d’un neurone et reproduire certaines de ses relations sans être une copie de la cellule biologique.
-
-[Sources]
-- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, Hermann & Cie / MIT Press, 1948.
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 [/Sources]
 ---
@@ -421,6 +162,8 @@ Nous retrouverons exactement ce problème avec le neurone artificiel. Un modèle
 
 Temps indicatif : **6 minutes**.
 
+Le dispositif antiaérien est complexe : il combine mesure, prédiction, délai, bruit et réaction d’un adversaire. Pour isoler la structure de régulation que nous venons d’y rencontrer, prenons maintenant un dispositif beaucoup plus simple et familier.
+
 ### Exemple du thermostat
 
 On règle une température souhaitée. Un capteur mesure la température actuelle. Si elle est inférieure à la consigne, le chauffage s’active ; si elle la dépasse, il s’arrête. L’effet de l’action — la nouvelle température — revient donc dans le système sous forme d’information.
@@ -454,6 +197,8 @@ Demander aux étudiants de classer trois exemples :
 - thermostat : plutôt rétroaction négative ;
 - effet Larsen : rétroaction positive ;
 - fil de recommandation : plusieurs boucles possibles, parfois stabilisatrices, souvent amplificatrices.
+
+Pour que l’effet d’une action puisse revenir modifier l’action suivante, il faut toutefois qu’une différence dans le monde devienne un signal mesurable et transmissible. Le mot « information » vient ici très vite — mais il ne désigne pas nécessairement une signification. C’est cette distinction que permet d’introduire Shannon.
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
@@ -495,9 +240,67 @@ Demander aux étudiants de classer trois exemples :
 
 --- notes
 
-Temps indicatif : **6 minutes**.
+La notion de rétroaction répondait à une première question : comment un système peut-il corriger son action à partir de ses effets ? Elle en soulève donc immédiatement une seconde : comment intégrer ces effets dans un système ? Comment les codifier, les mesurer, les transmettre ?
 
-En 1948, Claude Shannon publie *A Mathematical Theory of Communication*. Son problème est celui des télécommunications : comment représenter des messages, évaluer la capacité d’un canal et transmettre malgré le bruit ?
+Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc codifier ce réel pour l'analyser : la température mesurée par un capteur ou l'écho capté par un radar.
+
+Le problème est ces phénomènes n'ont, matériellement, rien de commun. Ce qu’ils partagent, c'est une fonction dans une boucle : *une différence produite à un endroit devient disponible pour modifier l’état suivant d'un système*.
+
+Comment, alors, se donner un cadre conceptuel commun pour décrire ce qui, de réalités aussi différentes, peut être identiquement codé, mesuré et transmis ?
+
+
+Pour qu’une même grammaire puisse décrire des boucles aussi différentes, le mot **information** doit donc pouvoir être défini indépendamment du support matériel qui le porte. Il peut s’agir :
+
+- d’une température convertie en signal électrique ;
+- d’un écho radar traduit en coordonnées ;
+- d’une variation de glycémie à laquelle répond une régulation hormonale ;
+- d’une impulsion transmise entre des neurones ;
+- du temps de visionnage qu’une plateforme transforme en indice comportemental.
+
+
+
+La notion d'information, formalisée par Claude Shannon, va apporter une réponse particulièrement opportune à cette question.
+
+---
+
+<div>
+<p class="cyber-equation formula" aria-label="H de X égale moins la somme des probabilités multipliées par leur logarithme en base deux">
+  <var>H</var>(<var>X</var>) = −∑<sub>i</sub> <var>p</var>(<var>x</var><sub>i</sub>) log<sub>2</sub> <var>p</var>(<var>x</var><sub>i</sub>)
+</p>
+
+Shannon, C. E. (1948a). A mathematical theory of communication. *Bell System Technical Journal, 27*(3/4), 379–423 / 623–656. {.citation}
+
+<ul>
+  <li><var>X</var> désigne une variable pouvant produire plusieurs résultats.</li>
+  <li><var>p</var>(<var>x</var><sub>i</sub>) est la probabilité du résultat <var>x</var><sub>i</sub>.</li>
+  <li><var>H</var>(<var>X</var>) mesure l’incertitude moyenne — donc la quantité moyenne d’information produite.</li>
+  <li>Avec un logarithme en base 2, elle s’exprime en <strong>bits</strong>.</li>
+</ul>
+</div>
+--- notes
+
+Shannon publie, en 1948, un article intitulé *A Mathematical Theory of Communication*.
+
+Son problème n'est pas directement, alors, celui de boucles de rétro-action, ou de la cybernétique, mais celui des télécommunications : comment représenter des messages, évaluer la capacité d’un canal et transmettre ces messages malgré l’incertitude et le bruit ?
+
+L’idée est très simple : **plus un événement est improbable, plus sa survenue nous apprend quelque chose**.
+
+Imagine une boîte qui répond « oui » ou « non ».
+
+- Si elle répond toujours « oui », sa réponse ne t’apprend rien : tu la connaissais déjà. L’information vaut **0 bit**.
+- Si elle répond « oui » ou « non » avec autant de chances, tu ne peux pas prévoir sa réponse. Lorsque tu la découvres, tu reçois **1 bit** d’information.
+
+Pour une pièce équilibrée :
+
+`H = −(½ log₂ ½ + ½ log₂ ½) = 1 bit`
+
+Shannon définit aussi l’information apportée par un événement particulier :
+
+`I(x) = −log₂ p(x)`
+
+L’idée est très simple : **plus un événement est improbable, plus sa survenue nous apprend quelque chose**. Apprendre que le soleil s’est levé ce matin apporte peu d’information ; apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
+
+Mais attention : Shannon mesure la **surprise statistique**, pas la signification. Un message peut être très imprévisible et donc contenir beaucoup d’information au sens mathématique, tout en ne voulant absolument rien dire.
 
 ### Une définition volontairement abstraite
 
@@ -523,9 +326,11 @@ Shannon mettra lui-même en garde contre ce glissement dans « The Bandwagon » 
 
 ### Le lien avec la cybernétique
 
-Une boucle de rétroaction a besoin qu’un état du monde soit sélectionné, mesuré, codé et réintroduit dans le système. La théorie de l’information offre donc un langage mathématique qui voyage facilement entre machines et organismes.
+La rencontre avec la cybernétique opère donc une extension. La théorie de Shannon offre un langage mathématique qui peut voyager entre des supports différents ; la cybernétique élargit le mot « information » à tout ce qui rend l’état ou les effets d’un système disponibles pour une régulation.
 
-Mais un système ne mesure jamais « tout ». Il sélectionne une variable : une température, une vitesse, un clic, un nombre d’erreurs. Cette sélection prépare déjà ce qui pourra être vu et corrigé.
+Il ne faut pourtant pas confondre sans précaution une mesure, un signal et l’information au sens strict de Shannon. Pour appliquer sa théorie, il faut encore définir un ensemble d’états possibles, leurs probabilités, un codage, un canal et du bruit. Une concentration hormonale ou un geste dans une interaction sociale ne deviennent pas automatiquement des « messages » shannoniens.
+
+Enfin, un système ne mesure jamais « tout ». Il sélectionne une variable : une température, une vitesse, un clic, un nombre d’erreurs. Cette sélection prépare déjà ce qui pourra être vu et corrigé.
 
 ### Question aux étudiants
 
@@ -533,9 +338,88 @@ Mais un système ne mesure jamais « tout ». Il sélectionne une variable : une
 
 Elle possède une trace très utile pour certains calculs ; elle ne possède pas automatiquement votre interprétation.
 
+Rétroaction et information ne constituent pas une doctrine unique. Elles répondent à des problèmes différents : l’une décrit le retour des effets dans l’action, l’autre les conditions de représentation et de transmission d’un signal.
+
+Pour comprendre comment elles pourront néanmoins être rapprochées, il nous manque encore une unité d’analyse : **qu’appelons-nous un système, et où en traçons-nous la frontière ?**
+
 [Sources]
 - Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
 - Claude E. Shannon, « The Bandwagon », *IRE Transactions on Information Theory*, 2(1), 1956, p. 3, https://doi.org/10.1109/TIT.1956.1056774.
+[/Sources]
+---
+<!-- slide: id="004fa-systeme" title="Qu’est-ce qu’un système ?" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Éléments · relations · frontière</p>
+
+# Qu’appelons-nous un système ?
+
+<div class="cyber-cards">
+
+<Fragment at={1}>
+<div class="cyber-card">
+  <h3>Éléments</h3>
+  <p>Des composantes repérées à une certaine échelle.</p>
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div class="cyber-card">
+  <h3>Relations</h3>
+  <p>Le changement de l’une affecte l’état des autres.</p>
+</div>
+</Fragment>
+
+<Fragment at={3}>
+<div class="cyber-card">
+  <h3>Frontière</h3>
+  <p>Un dedans distingué de son environnement.</p>
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation">La boucle décrit une <strong>relation dans le temps</strong> ; l’information, ce qui peut y circuler.</p>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+Avant d’entrer dans les conférences Macy, il nous manque le mot qui permet de réunir ce que nous venons de voir : le mot **système**.
+
+Le terme n’est ni inventé par Wiener ni réservé à la cybernétique. La théorie générale des systèmes de Ludwig von Bertalanffy se développe au même moment depuis la biologie. Pour ce cours, retenons une définition opératoire : **un système est un ensemble d’éléments dont les relations produisent une dynamique que les éléments isolés ne suffisent pas à expliquer**.
+
+Trois décisions sont donc nécessaires :
+
+- identifier des éléments à une certaine échelle ;
+- observer les relations par lesquelles leurs états s’affectent mutuellement ;
+- tracer une frontière entre le système et son environnement.
+
+### Reprendre le thermostat
+
+Le thermostat seul n’est pas toute la boucle. Selon la question posée, le système peut comprendre le capteur, le chauffage et la pièce ; la température extérieure devient alors une perturbation venue de l’environnement. Le capteur transforme une différence de température en signal. Ce signal modifie le chauffage ; le chauffage modifie la température ; la nouvelle température revient au capteur.
+
+Les trois notions s’articulent ainsi :
+
+- le **système** désigne l’ensemble relationnel que l’on choisit d’observer ;
+- l’**information** désigne les différences susceptibles d’être codées et transmises entre ses composantes ;
+- la **rétroaction** désigne le retour des effets d’une action sur les actions suivantes.
+
+Cette articulation rend possible un premier déplacement : une boucle analogue peut-elle être repérée dans un organisme, un cerveau, une famille ou une société ? Poser la question ne revient pas encore à affirmer que ces réalités sont identiques.
+
+Avant d’observer la circulation de ce vocabulaire entre les disciplines, il faut toutefois préciser la méthode : un système peut être étudié à partir de ses entrées, de ses sorties et de son comportement, sans que tous ses mécanismes internes soient déjà connus.
+
+### Une frontière construite
+
+La frontière d’un système n’est pas toujours donnée d’avance. Inclure ou exclure le milieu, l’observateur, une institution ou une histoire transforme l’explication. Nous reviendrons sur ce choix lorsque nous aborderons la boîte noire : penser en systèmes est puissant précisément parce que cela sélectionne certaines relations — et laisse nécessairement autre chose dehors.
+
+[Sources]
+- Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
+- W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall / John Wiley, 1956.
 [/Sources]
 ---
 <!-- slide: id="004g-systeme-et-finalite" title="Système et finalité" steps=3 -->
@@ -546,7 +430,7 @@ Elle possède une trace très utile pour certains calculs ; elle ne possède pas
 
 <p class="kicker">Entrées · sorties · comportement</p>
 
-# Penser en systèmes
+# Décrire un système de l’extérieur
 
 <Fragment at={1}>
 
@@ -573,6 +457,8 @@ Elle possède une trace très utile pour certains calculs ; elle ne possède pas
 --- notes
 
 Temps indicatif : **5 minutes**.
+
+Nous avons défini un système par ses éléments, leurs relations et la frontière qui les sépare d’un environnement. Reste une question de méthode : faut-il connaître tous ses mécanismes internes pour décrire son comportement ?
 
 ### Du mécanisme au comportement
 
@@ -604,9 +490,75 @@ Ces choix peuvent être justifiés, mais ils ne sont pas donnés par la nature u
 
 La cybernétique apporte donc une méthode puissante, mais elle oblige à demander : **qui définit le système, ses frontières et ses objectifs ?**
 
+Décrire des éléments et leurs relations ouvre alors une nouvelle question : comment des interactions locales peuvent-elles faire apparaître, à l’échelle de l’ensemble, des propriétés qu’aucun élément ne possède isolément ?
+
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 - W. Ross Ashby, *An Introduction to Cybernetics*, chap. 6, « The Black Box », Chapman & Hall / John Wiley, 1956, https://doi.org/10.5962/bhl.title.5851.
+[/Sources]
+---
+<!-- slide: id="004ga-emergence" title="Émergence" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Éléments · relations · changement d’échelle</p>
+
+# Quand le tout fait apparaître du nouveau
+
+<div class="cyber-cards">
+
+<Fragment at={1}>
+<div class="cyber-card">
+  <h3>Éléments</h3>
+  <p>Pris isolément, chacun accomplit relativement peu.</p>
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div class="cyber-card">
+  <h3>Interactions</h3>
+  <p>Leurs états s’affectent et composent une dynamique.</p>
+</div>
+</Fragment>
+
+<Fragment at={3}>
+<div class="cyber-card">
+  <h3>Ensemble</h3>
+  <p>Une propriété apparaît à l’échelle collective.</p>
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation">L’émergence nomme un <strong>changement d’échelle</strong> — pas encore son mécanisme.</p>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+Le concept d’**émergence** est plus ancien que la cybernétique, mais il trouve dans la pensée systémique un terrain privilégié. Il désigne le fait qu’un ensemble possède des propriétés que ses éléments, considérés isolément, ne possèdent pas.
+
+Une cellule nerveuse ne pense pas ; un réseau de très nombreuses cellules peut participer à la perception, à la mémoire ou au raisonnement. Un individu immobile ne constitue pas un embouteillage ; les ajustements de nombreux conducteurs peuvent produire un ralentissement collectif qu’aucun d’eux n’a décidé.
+
+Le déplacement important consiste à changer d’échelle. On ne cherche plus la propriété complexe dans un élément particulier : on étudie l’organisation des relations, leurs temporalités et leurs effets collectifs.
+
+### Une description, pas encore une explication
+
+Le mot reste dangereux s’il devient une réponse magique. Dire qu’une propriété « émerge » ne dit pas encore par quelles opérations elle apparaît. Il faut identifier :
+
+- les interactions entre les éléments ;
+- les boucles qui stabilisent ou amplifient certains états ;
+- les contraintes imposées par l’environnement ;
+- les seuils et les changements de temporalité ;
+- le niveau auquel la propriété devient observable.
+
+L’émergence désigne donc d’abord un **problème de composition et d’échelle**. L’auto-organisation pose une question plus dynamique : par quel processus un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ?
+
+[Sources]
+- Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
+- Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
 [/Sources]
 ---
 <!-- slide: id="004h-auto-organisation" title="Auto-organisation" steps=3 -->
@@ -621,7 +573,7 @@ La cybernétique apporte donc une méthode puissante, mais elle oblige à demand
 
 <Fragment at={1}>
 
-<p class="lead">Des interactions locales produisent une forme globale.</p>
+<p class="lead">Un ordre se forme ou se maintient sans plan central détaillé.</p>
 
 </Fragment>
 
@@ -631,7 +583,7 @@ La cybernétique apporte donc une méthode puissante, mais elle oblige à demand
   <span>stabilisation</span>
   <span>adaptation</span>
   <span>apprentissage</span>
-  <span>ordre émergent</span>
+  <span>réorganisation</span>
 </div>
 
 </Fragment>
@@ -646,6 +598,8 @@ La cybernétique apporte donc une méthode puissante, mais elle oblige à demand
 
 Temps indicatif : **6 minutes**.
 
+La slide précédente décrivait un changement d’échelle : des propriétés collectives apparaissent dans un ensemble organisé. L’auto-organisation déplace la question vers le **processus**.
+
 ### Qu’est-ce qui s’auto-organise ?
 
 On parle d’auto-organisation lorsqu’un ordre global apparaît ou se maintient à partir des interactions entre les éléments du système, sans qu’un centre décrive à chacun sa place finale.
@@ -653,12 +607,6 @@ On parle d’auto-organisation lorsqu’un ordre global apparaît ou se maintien
 Dans un réseau, chaque élément peut ne disposer que d’une information locale. Pourtant, les ajustements répétés produisent une configuration collective : une stabilisation, une différenciation de fonctions, une mémoire ou une capacité d’adaptation.
 
 W. Ross Ashby utilise très tôt le terme pour étudier des systèmes dynamiques capables de converger vers des états stables. Heinz von Foerster compliquera ensuite l’idée d’un système qui s’organiserait absolument « tout seul » : un système ouvert dépend d’un environnement dont il reçoit de l’énergie, de la matière et des perturbations.
-
-### L’émergence
-
-Le mot **émergence** désigne le fait qu’une organisation collective possède des propriétés qui ne se trouvent pas telles quelles dans ses éléments isolés. Une cellule nerveuse ne pense pas ; un réseau de très nombreuses cellules peut participer à la perception, à la mémoire et au raisonnement.
-
-Le mot est utile à condition de ne pas en faire une explication magique. Dire qu’une propriété émerge ne dit pas encore par quels mécanismes précis elle apparaît. Il faut identifier les interactions locales, les boucles, les contraintes et les changements d’échelle.
 
 ### La promesse politique
 
@@ -677,10 +625,263 @@ Prendre l’exemple d’un travail de groupe sans chef désigné. Le groupe peut
 
 L’absence de chef visible ne supprime pas les conditions qui orientent l’activité.
 
+Nous disposons maintenant des principales pièces de la grammaire : régulation, information, système, comportement, émergence et auto-organisation. Elles ne forment pourtant pas encore une doctrine unique. Il faut maintenant entrer dans le lieu où leur rapprochement devient un projet explicite.
+
 [Sources]
 - W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
 - Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
 [/Sources]
+---
+<!-- slide: id="004b2-langue-commune" title="Composer une langue commune" steps=0 -->
+
+<div class="layout center">
+
+<div>
+
+<p class="kicker">Sous-chapitre II</p>
+
+# Composer une langue commune
+
+<p class="lead muted">Les conférences Macy · 1946–1953</p>
+
+</div>
+
+</div>
+
+--- notes
+
+Temps indicatif : **1 minute**.
+
+Les concepts précédents ont été forgés pour résoudre des problèmes distincts. Que se passe-t-il lorsqu’on place dans une même conversation le servomécanisme, l’organisme vivant, le cerveau, l’apprentissage et les interactions sociales ?
+
+Les conférences Macy ne sont pas l’origine unique de la cybernétique. Elles en constituent une scène de composition : un lieu où des formalismes déjà en mouvement sont comparés, déplacés et progressivement reconnus comme les éléments d’un champ commun.
+---
+<!-- slide: id="004c-conferences-macy" title="Conférences Macy" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">New York · 1946–1953</p>
+
+# Les conférences Macy
+
+<Fragment at={1}>
+
+<div class="cyber-terms" aria-label="Disciplines présentes">
+  <span>neurophysiologie</span>
+  <span>mathématiques</span>
+  <span>ingénierie</span>
+  <span>anthropologie</span>
+  <span>psychologie</span>
+</div>
+
+</Fragment>
+
+<Fragment at={2}>
+
+<p class="cyber-equation"><strong>Information</strong> · système · rétroaction : un langage commun.</p>
+
+</Fragment>
+
+<Fragment at={3}>
+
+<p class="cyber-question">Un même vocabulaire ne signifie pas que le cerveau, la machine et la société soient la même chose.</p>
+
+</Fragment>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+Nous avons reconstruit plusieurs pièces d’une grammaire en formation : la **rétroaction** décrit le retour d’un effet sur l’action suivante ; l’**information** rend certaines différences mesurables et transmissibles ; le **système** délimite un ensemble de relations ; l’**émergence** et l’**auto-organisation** interrogent les propriétés collectives et leur formation. Toutes ne sont ni stabilisées ni également centrales dans les discussions, mais elles rendent possibles des comparaisons nouvelles.
+
+Attention toutefois à ne pas fabriquer une chronologie trop linéaire. Les conférences commencent en 1946, deux ans avant la publication de Shannon et du livre de Wiener. Elles ne constituent donc pas l’« application » d’une théorie déjà achevée : les concepts se forment, se rencontrent et se transforment en parallèle.
+
+Les dix conférences généralement appelées « conférences Macy » se tiennent entre 1946 et 1953. Warren McCulloch — que nous retrouverons bientôt à propos du neurone logique — préside la série. Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal Systems in Biological and Social Systems*.
+
+Le mot « cybernétique » ne s’impose pas immédiatement. En 1949, lors de la sixième conférence, Heinz von Foerster est chargé d’éditer les actes, avec Margaret Mead et Hans-Lukas Teuber comme éditeurs adjoints. Il propose d’adopter le terme rendu public l’année précédente par Wiener. La proposition est acceptée ; à partir de la conférence suivante, en 1950, le titre devient *Cybernetics: Circular Causal and Feedback Mechanisms in Biological and Social Systems*. Le nom ne précède donc pas le collectif : il vient stabiliser après coup un champ de discussions déjà engagé.
+
+On y rencontre notamment Walter Pitts, Norbert Wiener, John von Neumann, Margaret Mead, Gregory Bateson, Arturo Rosenblueth et Heinz von Foerster, avec des présences variables selon les réunions.
+
+### Ce qui se joue
+
+Ces chercheurs n’étudient pas tous le même objet et ne partagent pas une doctrine parfaitement unifiée. Ils essaient de savoir si des notions comme **information**, **rétroaction**, **causalité circulaire**, **apprentissage** ou **système** peuvent permettre à leurs disciplines de se parler.
+
+Un ingénieur peut décrire un servomécanisme ; un physiologiste, la régulation d’un organisme ; un neurophysiologiste, l’activité du cerveau ; un anthropologue, des interactions sociales. Le pari est que certaines relations formelles se retrouvent dans ces situations très différentes.
+
+### Une correction historique importante
+
+Il serait séduisant de raconter que les participants ont « décidé » que le cerveau, la machine et la société étaient identiques. Ce serait faux et pédagogiquement trompeur. Les débats étaient vifs, les notions disputées et les usages très différents.
+
+La formulation la plus juste est : **les conférences Macy construisent un espace où un langage commun peut circuler entre des disciplines hétérogènes**.
+
+Cela produit une commensurabilité : on peut comparer certains comportements ou dessiner des schémas analogues. Mais cette comparaison formelle ne prouve pas une identité ontologique. Un thermostat, un cerveau et une institution peuvent tous comporter des boucles de rétroaction sans être pour autant trois exemplaires d’une même chose.
+
+### Question aux étudiants
+
+« Si je décris une entreprise et une fourmilière comme des réseaux, ai-je montré qu’elles fonctionnent de la même manière ? »
+
+La discussion doit faire apparaître l’écart entre la puissance d’un modèle — il rend certains rapports visibles — et son risque — il peut faire disparaître tout ce qu’il ne représente pas.
+
+La slide suivante isole la grammaire qui voyage entre ces objets. Nous examinerons ensuite un prolongement particulier : ce que cette manière de penser transforme dans l’anthropologie et dans l’étude des relations sociales.
+
+[Sources]
+- Claus Pias (dir.), *Cybernetics: The Macy Conferences 1946–1953. The Complete Transactions*, Diaphanes / University of Chicago Press, https://press.uchicago.edu/ucp/books/book/distributed/C/bo269830784.html.
+- American Society for Cybernetics, « Summary: The Macy Conferences », https://www.asc-cybernetics.org/foundations/history/MacySummary.htm.
+[/Sources]
+---
+<!-- slide: id="004d-langage-commun" title="Une langue commune" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Animal · machine · société</p>
+
+# Une grammaire commune
+
+<div class="cyber-cards">
+
+<Fragment at={1}>
+<div class="cyber-card">
+  <h3>Réguler</h3>
+  <p>Se maintenir ou corriger une trajectoire malgré les perturbations.</p>
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div class="cyber-card">
+  <h3>Communiquer</h3>
+  <p>Sélectionner et transmettre des différences pertinentes.</p>
+</div>
+</Fragment>
+
+<Fragment at={3}>
+<div class="cyber-card">
+  <h3>Organiser</h3>
+  <p>Coordonner des relations sans décrire chaque action à l’avance.</p>
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
+
+--- notes
+
+Temps indicatif : **5 minutes**.
+
+Le titre complet du livre de Wiener publié en 1948 est *Cybernetics, or Control and Communication in the Animal and the Machine*. L’opération intellectuelle centrale apparaît déjà dans ce titre : rapprocher des êtres vivants et des dispositifs techniques à partir de problèmes de communication et de régulation.
+
+La langue commune permet de poser les mêmes questions dans plusieurs domaines :
+
+- quelles différences un système reçoit-il de son environnement ?
+- comment transforme-t-il ces entrées en actions ?
+- comment les effets de son action reviennent-ils modifier son comportement ?
+- comment conserve-t-il une certaine stabilité malgré les perturbations ?
+- comment une organisation collective se forme-t-elle à partir d’interactions locales ?
+
+L’objet isolé compte moins que la structure de ses relations. Au lieu de demander uniquement « de quoi cette chose est-elle faite ? », on demande : « que reçoit-elle, que produit-elle, et comment son comportement évolue-t-il ? »
+
+Cette méthode rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Mais elle privilégie ce qui peut être décrit comme relation entre états, signaux, objectifs et corrections. Or un organisme possède un métabolisme et une histoire évolutive ; une machine a été construite ; une institution comporte du droit, des conflits et des rapports de pouvoir.
+
+La formule à retenir est donc : **commensurabilité formelle n’est pas identité ontologique**. Une même grammaire peut représenter certains rapports sans démontrer que les réalités représentées ont la même nature.
+
+[Sources]
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, Hermann & Cie / MIT Press, 1948.
+- Claus Pias (dir.), *Cybernetics: The Macy Conferences 1946–1953. The Complete Transactions*, Diaphanes / University of Chicago Press.
+- Jean-Pierre Dupuy, *Aux origines des sciences cognitives*, La Découverte, 1994.
+[/Sources]
+---
+<!-- slide: id="004da-prolongements-sociaux" title="Prolongements sociaux" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Mead · Bateson · Palo Alto</p>
+
+# Quand les relations deviennent l’objet
+
+<div class="cyber-cards">
+
+<Fragment at={1}>
+<div class="cyber-card">
+  <h3>Culture</h3>
+  <p>Des conduites prises dans des patterns d’interaction et d’apprentissage.</p>
+</div>
+</Fragment>
+
+<Fragment at={2}>
+<div class="cyber-card">
+  <h3>Escalade</h3>
+  <p>Chaque réponse amplifie la conduite à laquelle elle répond.</p>
+</div>
+</Fragment>
+
+<Fragment at={3}>
+<div class="cyber-card">
+  <h3>Famille</h3>
+  <p>Chaque réponse devient le contexte de la réponse suivante.</p>
+</div>
+</Fragment>
+
+</div>
+
+<p class="cyber-equation">Ne plus isoler une cause : <strong>suivre une configuration de relations</strong>.</p>
+
+--- notes
+
+Temps indicatif : **6 minutes**.
+
+Cette slide ne décrit pas un résultat qui serait sorti achevé des conférences Macy. Elle suit un **prolongement** : la manière dont Margaret Mead, Gregory Bateson et, plus tard, le groupe de Palo Alto déplacent la grammaire cybernétique vers les relations sociales.
+
+### Mead et Bateson : la culture comme configuration relationnelle
+
+Mead et Bateson arrivent à Macy avec une anthropologie déjà attentive aux gestes répétés, aux formes d’apprentissage et aux contextes de communication. Le vocabulaire cybernétique leur permet de reformuler une intuition : une conduite ne s’explique pas toujours par les propriétés d’un individu isolé ; elle peut être la réponse à une autre conduite, qui se trouve à son tour transformée.
+
+Bateson relit par exemple la **schismogenèse** — le processus par lequel des groupes ou des individus accentuent mutuellement leurs différences — comme une dynamique de rétroaction. Une démonstration de puissance appelle une démonstration plus forte ; cette réponse confirme et amplifie la première. La boucle permet de penser une escalade sociale sans chercher une cause unique située dans l’un des participants.
+
+Mead ne fournit pas à Macy une théorie achevée de « la société comme système d’information ». Son rôle est plutôt de faire entrer les problèmes anthropologiques dans la conversation commune et, plus tard, d’insister sur un point que la première cybernétique laissait souvent au dehors : l’observatrice participe elle-même aux circuits de communication qu’elle décrit.
+
+### Palo Alto : la famille comme système de communication
+
+Dans les années 1950, Bateson et ses collaborateurs déplacent ce raisonnement vers la communication familiale. Prenons un exemple simple : plus une personne insiste, plus l’autre se retire ; plus elle se retire, plus la première insiste. Chercher laquelle « cause » à elle seule le conflit manque la structure temporelle. Chaque conduite est à la fois une réponse à ce qui précède et un signal qui prépare ce qui suit.
+
+Le symptôme peut alors être interrogé comme un élément d’un système de communication. Ce déplacement nourrira les thérapies systémiques : on ne regarde plus seulement ce qui se passe *dans* un individu, mais les boucles relationnelles auxquelles il participe.
+
+Il faut toutefois éviter de dissoudre les personnes dans le système. L’histoire, la violence, les asymétries et le pouvoir ne deviennent pas secondaires parce qu’un diagramme peut représenter les échanges. C’est précisément cette ambivalence — puissance descriptive de la boucle, risque d’effacement de ce qui échappe au modèle — qui ouvre le dernier sous-chapitre.
+
+[Sources]
+- Gregory Bateson, *Naven*, 2e éd. augmentée, Stanford University Press, 1958 [1936].
+- Gregory Bateson, Don D. Jackson, Jay Haley et John Weakland, « Toward a Theory of Schizophrenia », *Behavioral Science*, 1(4), 1956, p. 251–264, https://doi.org/10.1002/bs.3830010402.
+- Margaret Mead, « The Cybernetics of Cybernetics », dans Heinz von Foerster et al. (dir.), *Purposive Systems*, Spartan Books, 1968.
+[/Sources]
+---
+<!-- slide: id="004e3-politique" title="Du pilotage au gouvernement" steps=0 -->
+
+<div class="layout center">
+
+<div>
+
+<p class="kicker">Sous-chapitre III</p>
+
+# Du pilotage au gouvernement
+
+<p class="lead muted">Autonomie distribuée · mesure · contrôle</p>
+
+</div>
+
+</div>
+
+--- notes
+
+Temps indicatif : **1 minute**.
+
+La cybernétique ne fournit pas seulement des modèles pour décrire des machines ou des organismes. Dès que ses concepts sont appliqués aux organisations et aux sociétés, une question politique apparaît : qui définit l’objectif, sélectionne les informations pertinentes et décide de la correction ?
+
+La réponse n’est pas univoque. Les mêmes boucles peuvent soutenir une autonomie locale réelle ou déplacer le contrôle vers les indicateurs, les protocoles et les infrastructures. Ce dernier sous-chapitre conservera cette ambivalence avant d’examiner la critique plus radicale de Tiqqun.
 ---
 <!-- slide: id="004i-ambivalence-politique" title="Ambivalence politique" steps=2 -->
 
@@ -843,9 +1044,37 @@ Il faut donc utiliser Tiqqun comme une **lentille** :
 
 L’intérêt de la question est précisément qu’elle ne se résout pas par une opposition simple entre liberté et contrôle.
 
+Cette ambivalence clôt notre chapitre sur la cybernétique. Nous avons suivi la formation de ses concepts, leur composition en langue commune, puis leur extension politique. La séquence suivante change d’objet : elle revient sur une autre généalogie issue de la même effervescence, celle des premières machines qui prétendent formaliser certaines opérations du cerveau.
+
 [Sources]
 - Tiqqun, *L’Hypothèse cybernétique*, 2001, notamment p. 230–243 et 254–267 dans l’édition *Tout a failli, vive le communisme !* ; exemplaire local : `/Users/osarrouy/Documents/Papers/Tiqqun - 2001 - Lhypothese cybernetique/document.pdf`.
 [/Sources]
+---
+<!-- slide: id="004j1-ia-neuronale" title="Formaliser le cerveau" steps=0 -->
+
+<div class="layout center">
+
+<div>
+
+<p class="kicker">Nouvelle séquence · Intelligence artificielle</p>
+
+# Formaliser le cerveau
+
+<p class="lead muted">Du neurone biologique au perceptron</p>
+
+</div>
+
+</div>
+
+--- notes
+
+Temps indicatif : **1 minute**.
+
+Nous ouvrons ici une nouvelle séquence. La cybernétique n’en constitue ni l’unique origine ni une cause linéaire, mais elle a rendu légitime une opération décisive : comparer le vivant et la machine à partir de relations formalisables.
+
+Nous allons suivre une trajectoire particulière. Elle commence par le neurone biologique, revient ensuite en 1943 au modèle logique de McCulloch et Pitts, puis conduit au perceptron de Rosenblatt et à l’introduction d’une règle d’apprentissage.
+
+Le retour à 1943 doit être explicite : McCulloch et Pitts précèdent les conférences Macy. Leur travail est à la fois l’une des conditions de cette effervescence intellectuelle et l’un des objets où sa future grammaire apparaît déjà.
 ---
 <!-- slide: id="004k-vers-le-neurone" title="Vers le neurone artificiel" steps=3 -->
 
@@ -853,7 +1082,7 @@ L’intérêt de la question est précisément qu’elle ne se résout pas par u
   import Fragment from '@svx-slides/core/components/Fragment.svelte'
 </script>
 
-<p class="kicker">Du pilotage au calcul</p>
+<p class="kicker">Un objet-pont · retour en 1943</p>
 
 # Et si le cerveau était aussi un système ?
 
@@ -885,7 +1114,9 @@ L’intérêt de la question est précisément qu’elle ne se résout pas par u
 
 Temps indicatif : **4 à 5 minutes**.
 
-La cybernétique prépare le terrain des réseaux de neurones de deux manières.
+Cette nouvelle séquence commence par un retour chronologique. McCulloch et Pitts publient leur neurone logique en 1943, avant la première conférence Macy. Leur modèle ne résulte donc pas d’une cybernétique déjà constituée ; il contribue au contraire à rendre possible le rapprochement entre cerveau, logique et machine.
+
+Pédagogiquement, nous l’étudions maintenant parce qu’il permet d’observer concrètement ce que la grammaire précédente rend pensable. La cybernétique prépare le terrain des réseaux de neurones de deux manières.
 
 ### Premièrement : elle rend le déplacement légitime
 

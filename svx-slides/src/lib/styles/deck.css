@@ -15,6 +15,11 @@
     overflow: hidden;
 }
 
+/* La slide reste dans la ligne extensible, même lorsque le header est masqué. */
+.deck>.slide {
+    grid-row: 2;
+}
+
 /* Surface interne qui reçoit le contenu mdsvex de la slide courante. */
 .slide {
     position: relative;
@@ -216,6 +221,20 @@
 /* Texte atténué selon la couleur secondaire du thème. */
 .slide .muted {
     color: var(--muted);
+}
+
+/* Formules mathématiques composées avec la police monospace du thème. */
+.slide .formula {
+    font-family: var(--font-mono);
+    font-weight: 100;
+
+}
+
+/* Références bibliographiques d’articles mises en évidence. */
+.slide .citation {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
 }
 
 /* Layouts appliqués à la slide entière via <!-- slide: layout="..." -->. */
@@ -434,6 +453,7 @@
 /* Header optionnel : caché par défaut, activé par certains thèmes. */
 .deck-header {
     display: none;
+    grid-row: 1;
 }
 
 /* Barre de progression sans élément DOM supplémentaire. */

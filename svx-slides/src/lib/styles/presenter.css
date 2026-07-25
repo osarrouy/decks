@@ -113,6 +113,7 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+  font-family: var(--font-notes);
 }
 
 .presenter-notes-content,
@@ -121,6 +122,8 @@
   min-height: 0;
   overflow: auto;
   padding: 1.15rem 1.25rem;
+  font-size: var(--font-notes-size);
+  font-weight: var(--notes-weight);
 }
 
 /* Surface Markdown des notes : rythme de lecture continu et largeur confortable. */
@@ -167,7 +170,6 @@
 /* Paragraphes et listes dans les notes converties depuis Markdown. */
 .presenter-notes :where(p, li) {
   color: rgb(255 255 255 / 0.83);
-  font-size: 1.1rem;
   line-height: 1.45;
 }
 

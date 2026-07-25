@@ -1,15 +1,10 @@
 <div
   class="anti-aircraft"
   role="img"
-  aria-label="Un avion se déplace. Un système au sol observe sa position, anticipe sa trajectoire, oriente un canon vers une position future, puis utilise l’écart observé pour corriger la prédiction suivante."
+  aria-label="Une cible mobile suit une trajectoire. Un système mesure sa position, anticipe sa position future, émet une action, puis réintroduit l’écart observé pour corriger la prédiction suivante."
 >
   <svg viewBox="0 0 1000 470" aria-hidden="true">
     <defs>
-      <linearGradient id="radar-beam" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0" stop-color="var(--accent)" stop-opacity="0.03" />
-        <stop offset="1" stop-color="var(--accent)" stop-opacity="0.24" />
-      </linearGradient>
-
       <marker
         id="feedback-arrow"
         markerWidth="8"
@@ -27,16 +22,12 @@
       d="M72 159 C230 101 392 132 520 101 C650 70 796 74 934 117"
     />
 
-    <g class="aircraft">
-      <path
-        class="aircraft-body"
-        d="M-30 1 L-5 -4 L11 -20 L18 -19 L12 -3 L34 0 L39 5 L12 7 L18 22 L11 22 L-5 9 L-30 7 L-38 4 Z"
-      />
-      <path class="aircraft-detail" d="M-4 -3 L-3 9 M12 1 L28 4" />
+    <g class="moving-target">
+      <path class="target-cross" d="M-11 0 L11 0 M0 -11 L0 11" />
+      <circle class="target-center" cx="0" cy="0" r="2.5" />
       <animateMotion
         dur="9s"
         repeatCount="indefinite"
-        rotate="auto"
         path="M72 159 C230 101 392 132 520 101 C650 70 796 74 934 117"
       />
     </g>
@@ -67,10 +58,10 @@
 
     <path
       class="trajectory"
-      d="M233 351 C338 250 465 154 610 88"
+      d="M232 383 C338 250 465 154 610 88"
     />
 
-    <g class="projectile">
+    <g class="action-pulse">
       <circle cx="0" cy="0" r="5" />
       <path d="M-21 0 L-7 0" />
       <animateMotion
@@ -79,11 +70,11 @@
         calcMode="linear"
         keyPoints="0;0;0;1;1"
         keyTimes="0;0.42;0.46;0.65;1"
-        path="M233 351 C338 250 465 154 610 88"
+        path="M232 383 C338 250 465 154 610 88"
       />
     </g>
 
-    <g class="impact">
+    <g class="action-arrival">
       <circle cx="610" cy="88" r="8" />
       <circle cx="610" cy="88" r="20" />
     </g>
@@ -91,32 +82,16 @@
     <path
       class="feedback"
       marker-end="url(#feedback-arrow)"
-      d="M644 102 C720 180 698 300 588 346 C476 392 332 359 268 403"
+      d="M644 102 C720 180 698 300 588 346 C470 395 326 356 246 385"
     />
     <text class="scene-label feedback-label" x="547" y="365">ÉCART RÉINTRODUIT</text>
 
-    <g class="radar">
-      <path class="radar-base" d="M191 421 L273 421 L260 446 L204 446 Z" />
-      <path class="radar-mast" d="M232 421 L232 375" />
-      <path class="radar-dish" d="M196 372 Q232 402 269 371" />
-      <circle class="radar-pivot" cx="232" cy="383" r="6" />
-      <path class="radar-beam" d="M232 383 L338 120 L400 143 Z" />
-      <path class="radar-sweep" d="M232 383 L392 111" />
+    <g class="system-node" transform="translate(232 383)">
+      <circle r="23" />
+      <path d="M-13 0 L13 0 M0 -13 L0 13" />
+      <circle class="system-center" r="3" />
     </g>
-
-    <g class="gun">
-      <path class="gun-base" d="M119 446 L204 446 L190 421 L134 421 Z" />
-      <circle class="gun-pivot" cx="162" cy="411" r="18" />
-      <g class="gun-barrel">
-        <path d="M162 411 L226 345" />
-        <path d="M169 417 L233 351" />
-        <path d="M226 345 L237 350 L233 357" />
-      </g>
-    </g>
-
-    <path class="ground" d="M62 447 L938 447" />
-    <text class="system-label" x="104" y="465">CANON</text>
-    <text class="system-label" x="209" y="465">MESURE</text>
+    <text class="system-label" x="232" y="433" text-anchor="middle">SYSTÈME</text>
   </svg>
 
   <div class="cycle" aria-hidden="true">
@@ -163,23 +138,21 @@
     stroke-width: 1.3;
   }
 
-  .aircraft {
-    animation: aircraft-visibility var(--cycle) linear infinite;
+  .moving-target {
+    animation: target-visibility var(--cycle) linear infinite;
     color: var(--fg);
   }
 
-  .aircraft-body {
-    fill: var(--bg);
-    stroke: currentColor;
-    stroke-linejoin: round;
-    stroke-width: 2;
-  }
-
-  .aircraft-detail {
+  .target-cross {
     fill: none;
     stroke: currentColor;
     stroke-linecap: round;
-    stroke-width: 1.2;
+    stroke-width: 1.4;
+  }
+
+  .target-center {
+    fill: var(--accent);
+    stroke: none;
   }
 
   .measurement {
@@ -283,29 +256,29 @@
     animation: draw-trajectory var(--cycle) ease-in-out infinite;
   }
 
-  .projectile {
+  .action-pulse {
     animation: projectile-phase var(--cycle) linear infinite;
   }
 
-  .projectile circle {
+  .action-pulse circle {
     fill: var(--accent);
     stroke: none;
   }
 
-  .projectile path {
+  .action-pulse path {
     fill: none;
     stroke: color-mix(in srgb, var(--accent), white 54%);
     stroke-linecap: round;
     stroke-width: 3;
   }
 
-  .impact {
+  .action-arrival {
     animation: impact-phase var(--cycle) ease-out infinite;
     transform-box: fill-box;
     transform-origin: center;
   }
 
-  .impact circle {
+  .action-arrival circle {
     fill: none;
     stroke: var(--accent);
     stroke-width: 1.5;
@@ -345,74 +318,22 @@
     animation: feedback-label-phase var(--cycle) linear infinite;
   }
 
-  .radar-base,
-  .radar-mast,
-  .radar-dish,
-  .radar-sweep {
+  .system-node circle,
+  .system-node path {
     fill: none;
     stroke: var(--fg);
     stroke-linecap: round;
     stroke-linejoin: round;
+    stroke-width: 1.4;
   }
 
-  .radar-base {
+  .system-node>circle:first-child {
     fill: var(--bg);
-    stroke-width: 2;
   }
 
-  .radar-mast,
-  .radar-dish {
-    stroke-width: 2.2;
-  }
-
-  .radar-pivot,
-  .gun-pivot {
-    fill: var(--bg);
-    stroke: var(--fg);
-    stroke-width: 2;
-  }
-
-  .radar-beam {
-    fill: url('#radar-beam');
+  .system-node .system-center {
+    fill: var(--accent);
     stroke: none;
-    animation: radar-beam-phase var(--cycle) linear infinite;
-    transform-box: view-box;
-    transform-origin: 232px 383px;
-  }
-
-  .radar-sweep {
-    stroke: var(--accent);
-    stroke-width: 1.6;
-    animation: radar-sweep var(--cycle) ease-in-out infinite;
-    transform-box: view-box;
-    transform-origin: 232px 383px;
-  }
-
-  .gun-base {
-    fill: var(--bg);
-    stroke: var(--fg);
-    stroke-linejoin: round;
-    stroke-width: 2;
-  }
-
-  .gun-barrel {
-    animation: aim-gun var(--cycle) ease-in-out infinite;
-    transform-box: view-box;
-    transform-origin: 162px 411px;
-  }
-
-  .gun-barrel path {
-    fill: none;
-    stroke: var(--fg);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-  }
-
-  .ground {
-    fill: none;
-    stroke: var(--ink-soft);
-    stroke-width: 1.2;
   }
 
   .cycle {
@@ -459,7 +380,7 @@
     animation: loop-word var(--cycle) linear infinite;
   }
 
-  @keyframes aircraft-visibility {
+  @keyframes target-visibility {
     0%,
     4%,
     96%,
@@ -672,54 +593,6 @@
     }
   }
 
-  @keyframes radar-beam-phase {
-    0%,
-    5%,
-    36%,
-    100% {
-      opacity: 0;
-    }
-    10%,
-    31% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes radar-sweep {
-    0%,
-    7% {
-      opacity: 0;
-      transform: rotate(-10deg);
-    }
-    13% {
-      opacity: 1;
-    }
-    30% {
-      opacity: 1;
-      transform: rotate(10deg);
-    }
-    35%,
-    100% {
-      opacity: 0;
-      transform: rotate(10deg);
-    }
-  }
-
-  @keyframes aim-gun {
-    0%,
-    30% {
-      transform: rotate(18deg);
-    }
-    45%,
-    66% {
-      transform: rotate(4deg);
-    }
-    76%,
-    100% {
-      transform: rotate(18deg);
-    }
-  }
-
   @keyframes observe-word {
     0%,
     8%,
@@ -803,8 +676,8 @@
       opacity: 0.72;
     }
 
-    .projectile,
-    .impact {
+    .action-pulse,
+    .action-arrival {
       opacity: 0;
     }
 
