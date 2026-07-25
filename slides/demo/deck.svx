@@ -200,6 +200,8 @@ Demander aux étudiants de classer trois exemples :
 
 Pour que l’effet d’une action puisse revenir modifier l’action suivante, il faut toutefois qu’une différence dans le monde devienne un signal mesurable et transmissible. Le mot « information » vient ici très vite — mais il ne désigne pas nécessairement une signification. C’est cette distinction que permet d’introduire Shannon.
 
+Il faut insister ici sur le fait qu'on peut voir des boucles de rétrocaction partout : économie, sciences sociales, etc.
+
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 - Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
@@ -240,11 +242,11 @@ Pour que l’effet d’une action puisse revenir modifier l’action suivante, i
 
 --- notes
 
-La notion de rétroaction répondait à une première question : comment un système peut-il corriger son action à partir de ses effets ? Elle en soulève donc immédiatement une seconde : comment intégrer ces effets dans un système ? Comment les codifier, les mesurer, les transmettre ?
+La notion de rétroaction répond à la question : comment un système peut-il corriger son action à partir de ses effets ? Mais elle en soulève aussi une seconde : comment intégrer ces effets dans un système ? Comment les codifier, les mesurer, les transmettre ?
 
 Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc codifier ce réel pour l'analyser : la température mesurée par un capteur ou l'écho capté par un radar.
 
-Le problème est que ces phénomènes n’ont, matériellement, rien de commun. Pourtant, chacun relève bien d'une opération analogue : *une variation est détectée, codée puis transmise pour modifier ce qui se produit ensuite*.
+Le problème est que ces phénomènes n’ont, matériellement, rien de commun. Et pourtant, chacun relève bien d'une opération analogue : *une variation est détectée, codée puis transmise pour modifier ce qui se produit ensuite*.
 
 Cette variation peut être :
 
@@ -300,11 +302,11 @@ Pour une pièce équilibrée :
 
 Apprendre que le soleil s’est levé ce matin apporte peu d’information ; apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
 
-Mais attention : Shannon mesure la **surprise statistique**, pas la signification. Un message peut être très imprévisible et donc contenir beaucoup d’information au sens mathématique, tout en ne voulant absolument rien dire.
+La notion d'information formalisée par Shannon mesure donc la **surprise statistique**, pas la signification. Un message peut être très imprévisible et donc contenir beaucoup d’information au sens mathématique, tout en ne voulant absolument rien dire.
 
 ### Une définition volontairement abstraite
 
-Dans ce cadre, l’information ne désigne pas d’abord une connaissance pertinente ou une phrase vraie. Elle dépend d’un ensemble de messages possibles et de leur probabilité.
+L’information ne désigne donc pas une connaissance pertinente ni ne mesure la vérité d'un enoncé. Elle dépend d’un ensemble de messages possibles et de leur probabilité.
 
 Si je vous dis que demain le soleil se lèvera, le message a du sens mais apporte peu d’information au sens de Shannon : il était presque certain. Si je tire une carte parmi de nombreuses possibilités et vous annonce laquelle, le message réduit davantage l’incertitude.
 
@@ -324,11 +326,21 @@ Le risque apparaît lorsque l’on transforme une abstraction très puissante en
 
 Shannon mettra lui-même en garde contre ce glissement dans « The Bandwagon » en 1956. Il ne rejette pas les usages de la théorie de l’information en biologie, en psychologie ou dans les sciences sociales. Il rappelle en revanche qu’on ne peut pas y transposer quelques mots — « information », « entropie », « redondance » — comme s’ils constituaient déjà une explication. Ces extensions exigent de nouvelles hypothèses et des vérifications empiriques.
 
-### Le lien avec la cybernétique
+### Le destin de la notion
 
-La rencontre avec la cybernétique opère donc une extension. La théorie de Shannon offre un langage mathématique qui peut voyager entre des supports différents ; la cybernétique élargit le mot « information » à tout ce qui rend l’état ou les effets d’un système disponibles pour une régulation.
+Dans les décennies qui entourent et suivent Shannon, l’information devient un langage permettant de décrire non seulement des dispositifs techniques, mais aussi l’organisation du vivant et le fonctionnement du cerveau. Francis Crick décrit la synthèse des protéines à partir des transferts possibles ou impossibles d’« information séquentielle » entre acides nucléiques et protéines. Horace Barlow présente les voies sensorielles comme des dispositifs qui filtrent les régularités et réduisent la redondance des signaux reçus. Avec Gregory Bateson, le déplacement est plus radical encore : l’information n’est plus seulement ce qui réduit statistiquement une incertitude, mais une « différence qui produit une différence » pour un organisme ou un système capable d’y répondre.
 
-Il ne faut pourtant pas confondre sans précaution une mesure, un signal et l’information au sens strict de Shannon. Pour appliquer sa théorie, il faut encore définir un ensemble d’états possibles, leurs probabilités, un codage, un canal et du bruit. Une concentration hormonale ou un geste dans une interaction sociale ne deviennent pas automatiquement des « messages » shannoniens.
+Cette manière de penser gagne également les sciences sociales et l’économie. Margaret Mead contribue à faire de la cybernétique un langage transversal permettant d’interroger les communications, les organisations et leurs propres boucles de rétroaction. Dès 1945, Friedrich Hayek avait décrit le système des prix comme un mécanisme qui condense et fait circuler des connaissances dispersées ; George Stigler étudiera ensuite le coût de l’acquisition d’information, puis George Akerlof les effets des asymétries d’information sur les marchés.
+
+Mais le mot ne conserve pas partout le même sens : **grandeur statistique chez Shannon, différence efficace chez Bateson, connaissance distribuée chez Hayek, ressource inégalement détenue chez les économistes**. Son destin est moins celui d’une théorie appliquée uniformément que celui d’un langage commun, transformé à mesure qu’il circule.
+
+### De l’information au système
+
+Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire un effet. Une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations.
+
+Pour comprendre ce qu’une information peut modifier, il faut donc identifier les composantes entre lesquelles elle circule, les relations qui les unissent et la frontière qui distingue cet ensemble de son environnement. La question se déplace alors : de l’information elle-même vers l’ensemble organisé au sein duquel elle prend effet.
+
+Cette transition ne doit pas effacer les différences entre les domaines. Pour appliquer strictement la théorie de Shannon, il faut toujours définir des événements possibles, leurs probabilités, un codage, un canal et du bruit. Une concentration hormonale ou un geste dans une interaction sociale ne deviennent pas automatiquement des « messages » shannoniens.
 
 Enfin, un système ne mesure jamais « tout ». Il sélectionne une variable : une température, une vitesse, un clic, un nombre d’erreurs. Cette sélection prépare déjà ce qui pourra être vu et corrigé.
 
@@ -345,6 +357,13 @@ Pour comprendre comment elles pourront néanmoins être rapprochées, il nous ma
 [Sources]
 - Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
 - Claude E. Shannon, « The Bandwagon », *IRE Transactions on Information Theory*, 2(1), 1956, p. 3, https://doi.org/10.1109/TIT.1956.1056774.
+- Francis H. C. Crick, « On Protein Synthesis », *Symposia of the Society for Experimental Biology*, 12, 1958, p. 138–163, https://pubmed.ncbi.nlm.nih.gov/13580867/.
+- Horace B. Barlow, « Possible Principles Underlying the Transformations of Sensory Messages », dans Walter A. Rosenblith (dir.), *Sensory Communication*, MIT Press, 1961, p. 217–234, https://doi.org/10.7551/mitpress/9780262518420.003.0013.
+- Gregory Bateson, « Form, Substance and Difference », dans *Steps to an Ecology of Mind*, 1972, https://press.uchicago.edu/ucp/books/book/chicago/S/bo3620295.html.
+- Margaret Mead, « The Cybernetics of Cybernetics », dans Heinz von Foerster et al. (dir.), *Purposive Systems*, Spartan Books, 1968, p. 1–11, https://asc-cybernetics.org/CofC/wp-content/uploads/2010/08/mead.html.
+- Friedrich A. Hayek, « The Use of Knowledge in Society », *American Economic Review*, 35(4), 1945, p. 519–530, https://rosenfels.org/pll-v5/titles/92.html.
+- George J. Stigler, « The Economics of Information », *Journal of Political Economy*, 69(3), 1961, p. 213–225, https://doi.org/10.1086/258464.
+- George A. Akerlof, « The Market for “Lemons”: Quality Uncertainty and the Market Mechanism », *Quarterly Journal of Economics*, 84(3), 1970, p. 488–500, https://doi.org/10.2307/1879431.
 [/Sources]
 ---
 <!-- slide: id="004fa-systeme" title="Qu’est-ce qu’un système ?" steps=3 -->
