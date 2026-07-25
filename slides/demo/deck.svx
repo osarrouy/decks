@@ -127,7 +127,7 @@ La réponse attendue est non. Il lui suffit de détecter un écart, de recalcule
 
 # La sortie revient dans l’entrée
 
-<div class="cyber-sequence">
+<div class="sequence">
   <span>objectif</span><span class="arrow">→</span>
   <span>action</span><span class="arrow">→</span>
   <span>effet</span><span class="arrow">→</span>
@@ -136,7 +136,7 @@ La réponse attendue est non. Il lui suffit de détecter un écart, de recalcule
 
 <Fragment at={1}>
 
-<p class="cyber-equation">La cause produit un effet qui <strong>modifie la cause suivante</strong>.</p>
+<p class="statement">La cause produit un effet qui <strong>modifie la cause suivante</strong>.</p>
 
 </Fragment>
 
@@ -154,7 +154,7 @@ La réponse attendue est non. Il lui suffit de détecter un écart, de recalcule
 
 <Fragment at={4}>
 
-<p class="cyber-question">La boucle ne supprime pas l’incertitude : elle permet de corriger en cours d’action.</p>
+<p class="question">La boucle ne supprime pas l’incertitude : elle permet de corriger en cours d’action.</p>
 
 </Fragment>
 
@@ -217,7 +217,7 @@ Pour que l’effet d’une action puisse revenir modifier l’action suivante, i
 
 <Fragment at={1}>
 
-<div class="cyber-sequence">
+<div class="sequence">
   <span>source</span><span class="arrow">→</span>
   <span>signal</span><span class="arrow">→</span>
   <span>canal + bruit</span><span class="arrow">→</span>
@@ -228,13 +228,13 @@ Pour que l’effet d’une action puisse revenir modifier l’action suivante, i
 
 <Fragment at={2}>
 
-<p class="cyber-equation">Mesurer une <strong>incertitude</strong> et la réduction produite par un message.</p>
+<p class="statement">Mesurer une <strong>incertitude</strong> et la réduction produite par un message.</p>
 
 </Fragment>
 
 <Fragment at={3}>
 
-<p class="cyber-question">Une théorie de la transmission peut ignorer ce que le message veut dire.</p>
+<p class="question">Une théorie de la transmission peut ignorer ce que le message veut dire.</p>
 
 </Fragment>
 
@@ -244,46 +244,50 @@ La notion de rétroaction répondait à une première question : comment un syst
 
 Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc codifier ce réel pour l'analyser : la température mesurée par un capteur ou l'écho capté par un radar.
 
-Le problème est ces phénomènes n'ont, matériellement, rien de commun. Ce qu’ils partagent, c'est une fonction dans une boucle : *une différence produite à un endroit devient disponible pour modifier l’état suivant d'un système*.
+Le problème est que ces phénomènes n’ont, matériellement, rien de commun. Pourtant, chacun relève bien d'une opération analogue : *une variation est détectée, codée puis transmise pour modifier ce qui se produit ensuite*.
 
-Comment, alors, se donner un cadre conceptuel commun pour décrire ce qui, de réalités aussi différentes, peut être identiquement codé, mesuré et transmis ?
+Cette variation peut être :
 
+- une température convertie en signal électrique ;
+- un écho radar traduit en coordonnées ;
+- une variation de glycémie à laquelle répond une régulation hormonale ;
+- une impulsion transmise entre des neurones ;
+- un temps de visionnage transformé en indice comportemental.
 
-Pour qu’une même grammaire puisse décrire des boucles aussi différentes, le mot **information** doit donc pouvoir être défini indépendamment du support matériel qui le porte. Il peut s’agir :
+Pour décrire ces réalités dans une même grammaire, il faut faire abstraction de leur support matériel — et même, dans un premier temps, de leur signification. On peut alors considérer chaque observation relativement à l’ensemble des variations attendues : **était-elle prévisible, ou au contraire improbable ?**
 
-- d’une température convertie en signal électrique ;
-- d’un écho radar traduit en coordonnées ;
-- d’une variation de glycémie à laquelle répond une régulation hormonale ;
-- d’une impulsion transmise entre des neurones ;
-- du temps de visionnage qu’une plateforme transforme en indice comportemental.
+Une observation très attendue modifie peu notre incertitude. Une observation improbable la réduit davantage : sa survenue nous apprend davantage.
 
-
-
+C’est cette quantité, définie statistiquement et indépendamment du support matériel, que Claude Shannon appelle **information**.
 La notion d'information, formalisée par Claude Shannon, va apporter une réponse particulièrement opportune à cette question.
 
 ---
 
-<div>
-<p class="cyber-equation formula" aria-label="H de X égale moins la somme des probabilités multipliées par leur logarithme en base deux">
-  <var>H</var>(<var>X</var>) = −∑<sub>i</sub> <var>p</var>(<var>x</var><sub>i</sub>) log<sub>2</sub> <var>p</var>(<var>x</var><sub>i</sub>)
+<!-- slide: id="004f1-information-shannon" title="Mesurer l’information" steps=0 layout="center" -->
+
+<p class="statement formula" aria-label="I de x égale moins le logarithme en base deux de la probabilité de x" aria-describedby="shannon-formula-source">
+  <var>I</var>(<var>x</var>) = −log<sub>2</sub> <var>p</var>(<var>x</var>)<sup class="footnote-ref" aria-hidden="true">1</sup>
 </p>
 
-Shannon, C. E. (1948a). A mathematical theory of communication. *Bell System Technical Journal, 27*(3/4), 379–423 / 623–656. {.citation}
-
-<ul>
-  <li><var>X</var> désigne une variable pouvant produire plusieurs résultats.</li>
-  <li><var>p</var>(<var>x</var><sub>i</sub>) est la probabilité du résultat <var>x</var><sub>i</sub>.</li>
-  <li><var>H</var>(<var>X</var>) mesure l’incertitude moyenne — donc la quantité moyenne d’information produite.</li>
-  <li>Avec un logarithme en base 2, elle s’exprime en <strong>bits</strong>.</li>
-</ul>
-</div>
+<footer class="slide-footnotes" aria-label="Références">
+  <ol>
+    <li id="shannon-formula-source">Shannon, 1948a, pp. 379–380.</li>
+  </ol>
+</footer>
 --- notes
+
+### Lire la formule
+
+- `x` désigne l’événement observé.
+- `p(x)` est la probabilité de cet événement.
+- `I(x)` mesure l’information apportée par sa survenue.
+- Avec un logarithme en base 2, cette information s’exprime en **bits**.
 
 Shannon publie, en 1948, un article intitulé *A Mathematical Theory of Communication*.
 
 Son problème n'est pas directement, alors, celui de boucles de rétro-action, ou de la cybernétique, mais celui des télécommunications : comment représenter des messages, évaluer la capacité d’un canal et transmettre ces messages malgré l’incertitude et le bruit ?
 
-L’idée est très simple : **plus un événement est improbable, plus sa survenue nous apprend quelque chose**.
+L’idée est très simple : *plus un événement est improbable, plus sa survenue nous apprend quelque chose*.
 
 Imagine une boîte qui répond « oui » ou « non ».
 
@@ -292,13 +296,9 @@ Imagine une boîte qui répond « oui » ou « non ».
 
 Pour une pièce équilibrée :
 
-`H = −(½ log₂ ½ + ½ log₂ ½) = 1 bit`
+`I(x) = −log₂(½) = 1 bit`
 
-Shannon définit aussi l’information apportée par un événement particulier :
-
-`I(x) = −log₂ p(x)`
-
-L’idée est très simple : **plus un événement est improbable, plus sa survenue nous apprend quelque chose**. Apprendre que le soleil s’est levé ce matin apporte peu d’information ; apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
+Apprendre que le soleil s’est levé ce matin apporte peu d’information ; apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
 
 Mais attention : Shannon mesure la **surprise statistique**, pas la signification. Un message peut être très imprévisible et donc contenir beaucoup d’information au sens mathématique, tout en ne voulant absolument rien dire.
 
@@ -357,24 +357,24 @@ Pour comprendre comment elles pourront néanmoins être rapprochées, il nous ma
 
 # Qu’appelons-nous un système ?
 
-<div class="cyber-cards">
+<div class="card-grid">
 
 <Fragment at={1}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Éléments</h3>
   <p>Des composantes repérées à une certaine échelle.</p>
 </div>
 </Fragment>
 
 <Fragment at={2}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Relations</h3>
   <p>Le changement de l’une affecte l’état des autres.</p>
 </div>
 </Fragment>
 
 <Fragment at={3}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Frontière</h3>
   <p>Un dedans distingué de son environnement.</p>
 </div>
@@ -382,7 +382,7 @@ Pour comprendre comment elles pourront néanmoins être rapprochées, il nous ma
 
 </div>
 
-<p class="cyber-equation">La boucle décrit une <strong>relation dans le temps</strong> ; l’information, ce qui peut y circuler.</p>
+<p class="statement">La boucle décrit une <strong>relation dans le temps</strong> ; l’information, ce qui peut y circuler.</p>
 
 --- notes
 
@@ -434,7 +434,7 @@ La frontière d’un système n’est pas toujours donnée d’avance. Inclure o
 
 <Fragment at={1}>
 
-<div class="cyber-sequence">
+<div class="sequence">
   <span>environnement</span><span class="arrow">→</span>
   <span>système</span><span class="arrow">→</span>
   <span>comportement observable</span>
@@ -444,13 +444,13 @@ La frontière d’un système n’est pas toujours donnée d’avance. Inclure o
 
 <Fragment at={2}>
 
-<p class="cyber-equation">Décrire une <strong>finalité sans supposer une intention</strong>.</p>
+<p class="statement">Décrire une <strong>finalité sans supposer une intention</strong>.</p>
 
 </Fragment>
 
 <Fragment at={3}>
 
-<p class="cyber-question">Où placer la frontière du système — et qui décide ce qui reste dehors ?</p>
+<p class="question">Où placer la frontière du système — et qui décide ce qui reste dehors ?</p>
 
 </Fragment>
 
@@ -507,24 +507,24 @@ Décrire des éléments et leurs relations ouvre alors une nouvelle question : c
 
 # Quand le tout fait apparaître du nouveau
 
-<div class="cyber-cards">
+<div class="card-grid">
 
 <Fragment at={1}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Éléments</h3>
   <p>Pris isolément, chacun accomplit relativement peu.</p>
 </div>
 </Fragment>
 
 <Fragment at={2}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Interactions</h3>
   <p>Leurs états s’affectent et composent une dynamique.</p>
 </div>
 </Fragment>
 
 <Fragment at={3}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Ensemble</h3>
   <p>Une propriété apparaît à l’échelle collective.</p>
 </div>
@@ -532,7 +532,7 @@ Décrire des éléments et leurs relations ouvre alors une nouvelle question : c
 
 </div>
 
-<p class="cyber-equation">L’émergence nomme un <strong>changement d’échelle</strong> — pas encore son mécanisme.</p>
+<p class="statement">L’émergence nomme un <strong>changement d’échelle</strong> — pas encore son mécanisme.</p>
 
 --- notes
 
@@ -579,7 +579,7 @@ L’émergence désigne donc d’abord un **problème de composition et d’éch
 
 <Fragment at={2}>
 
-<div class="cyber-terms" aria-label="Exemples d'auto-organisation">
+<div class="term-list" aria-label="Exemples d'auto-organisation">
   <span>stabilisation</span>
   <span>adaptation</span>
   <span>apprentissage</span>
@@ -590,7 +590,7 @@ L’émergence désigne donc d’abord un **problème de composition et d’éch
 
 <Fragment at={3}>
 
-<p class="cyber-question">Sans centre ne veut pas dire sans règles, sans milieu, ni sans histoire.</p>
+<p class="question">Sans centre ne veut pas dire sans règles, sans milieu, ni sans histoire.</p>
 
 </Fragment>
 
@@ -668,7 +668,7 @@ Les conférences Macy ne sont pas l’origine unique de la cybernétique. Elles 
 
 <Fragment at={1}>
 
-<div class="cyber-terms" aria-label="Disciplines présentes">
+<div class="term-list" aria-label="Disciplines présentes">
   <span>neurophysiologie</span>
   <span>mathématiques</span>
   <span>ingénierie</span>
@@ -680,13 +680,13 @@ Les conférences Macy ne sont pas l’origine unique de la cybernétique. Elles 
 
 <Fragment at={2}>
 
-<p class="cyber-equation"><strong>Information</strong> · système · rétroaction : un langage commun.</p>
+<p class="statement"><strong>Information</strong> · système · rétroaction : un langage commun.</p>
 
 </Fragment>
 
 <Fragment at={3}>
 
-<p class="cyber-question">Un même vocabulaire ne signifie pas que le cerveau, la machine et la société soient la même chose.</p>
+<p class="question">Un même vocabulaire ne signifie pas que le cerveau, la machine et la société soient la même chose.</p>
 
 </Fragment>
 
@@ -741,24 +741,24 @@ La slide suivante isole la grammaire qui voyage entre ces objets. Nous examinero
 
 # Une grammaire commune
 
-<div class="cyber-cards">
+<div class="card-grid">
 
 <Fragment at={1}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Réguler</h3>
   <p>Se maintenir ou corriger une trajectoire malgré les perturbations.</p>
 </div>
 </Fragment>
 
 <Fragment at={2}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Communiquer</h3>
   <p>Sélectionner et transmettre des différences pertinentes.</p>
 </div>
 </Fragment>
 
 <Fragment at={3}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Organiser</h3>
   <p>Coordonner des relations sans décrire chaque action à l’avance.</p>
 </div>
@@ -766,7 +766,7 @@ La slide suivante isole la grammaire qui voyage entre ces objets. Nous examinero
 
 </div>
 
-<p class="cyber-equation"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
+<p class="statement"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
 
 --- notes
 
@@ -804,24 +804,24 @@ La formule à retenir est donc : **commensurabilité formelle n’est pas identi
 
 # Quand les relations deviennent l’objet
 
-<div class="cyber-cards">
+<div class="card-grid">
 
 <Fragment at={1}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Culture</h3>
   <p>Des conduites prises dans des patterns d’interaction et d’apprentissage.</p>
 </div>
 </Fragment>
 
 <Fragment at={2}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Escalade</h3>
   <p>Chaque réponse amplifie la conduite à laquelle elle répond.</p>
 </div>
 </Fragment>
 
 <Fragment at={3}>
-<div class="cyber-card">
+<div class="concept-card">
   <h3>Famille</h3>
   <p>Chaque réponse devient le contexte de la réponse suivante.</p>
 </div>
@@ -829,7 +829,7 @@ La formule à retenir est donc : **commensurabilité formelle n’est pas identi
 
 </div>
 
-<p class="cyber-equation">Ne plus isoler une cause : <strong>suivre une configuration de relations</strong>.</p>
+<p class="statement">Ne plus isoler une cause : <strong>suivre une configuration de relations</strong>.</p>
 
 --- notes
 
@@ -893,7 +893,7 @@ La réponse n’est pas univoque. Les mêmes boucles peuvent soutenir une autono
 
 # L’ambivalence politique
 
-<div class="cyber-contrast">
+<div class="comparison">
 
 <Fragment at={1}>
 <div>
@@ -923,7 +923,7 @@ La réponse n’est pas univoque. Les mêmes boucles peuvent soutenir une autono
 
 </div>
 
-<p class="cyber-equation">Le contrôle peut se déplacer du <strong>commandement</strong> vers le <strong>cadre</strong>.</p>
+<p class="statement">Le contrôle peut se déplacer du <strong>commandement</strong> vers le <strong>cadre</strong>.</p>
 
 --- notes
 
@@ -987,7 +987,7 @@ On peut présenter ici la formule suivante : **l’auto-organisation n’est pas
 
 <Fragment at={1}>
 
-<div class="cyber-sequence">
+<div class="sequence">
   <span>capter</span><span class="arrow">→</span>
   <span>comparer</span><span class="arrow">→</span>
   <span>corriger</span><span class="arrow">↺</span>
@@ -997,13 +997,13 @@ On peut présenter ici la formule suivante : **l’auto-organisation n’est pas
 
 <Fragment at={2}>
 
-<p class="cyber-equation">Le pouvoir ne commande pas seulement : il <strong>entretient des boucles</strong>.</p>
+<p class="statement">Le pouvoir ne commande pas seulement : il <strong>entretient des boucles</strong>.</p>
 
 </Fragment>
 
 <Fragment at={3}>
 
-<p class="cyber-question">Une critique polémique à discuter — pas une histoire neutre à réciter.</p>
+<p class="question">Une critique polémique à discuter — pas une histoire neutre à réciter.</p>
 
 </Fragment>
 
@@ -1088,7 +1088,7 @@ Le retour à 1943 doit être explicite : McCulloch et Pitts précèdent les conf
 
 <Fragment at={1}>
 
-<div class="cyber-terms" aria-label="Notions transférées au cerveau">
+<div class="term-list" aria-label="Notions transférées au cerveau">
   <span>signal</span>
   <span>réseau</span>
   <span>seuil</span>
@@ -1100,13 +1100,13 @@ Le retour à 1943 doit être explicite : McCulloch et Pitts précèdent les conf
 
 <Fragment at={2}>
 
-<p class="cyber-equation">Le vivant devient <strong>formalisable</strong> en sélectionnant quelques relations.</p>
+<p class="statement">Le vivant devient <strong>formalisable</strong> en sélectionnant quelques relations.</p>
 
 </Fragment>
 
 <Fragment at={3}>
 
-<p class="cyber-question">Que faut-il retirer du vivant pour le rendre calculable ?</p>
+<p class="question">Que faut-il retirer du vivant pour le rendre calculable ?</p>
 
 </Fragment>
 

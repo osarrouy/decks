@@ -225,9 +225,9 @@
 
 /* Formules mathématiques composées avec la police monospace du thème. */
 .slide .formula {
+    color: var(--fg);
     font-family: var(--font-mono);
     font-weight: 100;
-
 }
 
 /* Références bibliographiques d’articles mises en évidence. */
@@ -235,6 +235,68 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--small-size);
+    font-weight: 100;
+}
+
+/* Appel de note placé après une citation, une formule ou une donnée sourcée. */
+.slide .footnote-ref {
+    margin-left: 0.12em;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.52em;
+    font-weight: 100;
+    line-height: 0;
+    vertical-align: super;
+}
+
+/* Réserve la place du pied de page pour éviter qu’il recouvre le contenu. */
+.slide:has(.slide-footnotes) {
+    padding-bottom: calc(var(--padding-vertical) + var(--space-4));
+}
+
+/* Une formule isolée reste centrée sur toute la hauteur malgré le pied de page. */
+.slide[data-layout='center']:has(.slide-footnotes) {
+    padding-bottom: var(--padding-vertical);
+}
+
+.slide[data-layout='center'] .formula {
+    margin: 0;
+}
+
+/* Références courtes visibles en bas de la slide. */
+.slide .slide-footnotes {
+    position: absolute;
+    z-index: 2;
+    right: var(--padding-horizontal);
+    bottom: var(--space-2);
+    left: var(--padding-horizontal);
+    padding-top: var(--space-1);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    font-weight: 100;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.slide .slide-footnotes::before {
+    position: absolute;
+    right: 0;
+    bottom: var(--space-2);
+    left: 0;
+    height: 1px;
+    background: var(--corner-mark-color, color-mix(in srgb, var(--accent), transparent 72%));
+    content: '';
+}
+
+.slide .slide-footnotes ol {
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+.slide .slide-footnotes li {
+    font-size: inherit;
+    line-height: inherit;
 }
 
 /* Layouts appliqués à la slide entière via <!-- slide: layout="..." -->. */
@@ -314,8 +376,8 @@
     min-width: 0;
 }
 
-/* Vocabulaire visuel commun aux slides de cours consacrées à la cybernétique. */
-.slide .cyber-timeline {
+/* Motifs visuels sémantiques réutilisables dans les slides de cours. */
+.slide .timeline {
     display: flex;
     align-items: center;
     gap: var(--space-2);
@@ -327,20 +389,20 @@
     text-transform: uppercase;
 }
 
-.slide .cyber-timeline span {
+.slide .timeline span {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
 }
 
-.slide .cyber-timeline span:not(:last-child)::after {
+.slide .timeline span:not(:last-child)::after {
     width: clamp(2rem, 6vw, 6rem);
     height: 1px;
     background: color-mix(in srgb, var(--fg), transparent 76%);
     content: '';
 }
 
-.slide .cyber-sequence {
+.slide .sequence {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -352,24 +414,24 @@
     line-height: 1.25;
 }
 
-.slide .cyber-sequence .arrow {
+.slide .sequence .arrow {
     color: var(--accent);
 }
 
-.slide .cyber-cards {
+.slide .card-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-2);
     margin-top: var(--space-3);
 }
 
-.slide .cyber-card {
+.slide .concept-card {
     min-height: 9rem;
     padding: var(--space-2);
     border-top: 1px solid color-mix(in srgb, var(--fg), transparent 70%);
 }
 
-.slide .cyber-card h3 {
+.slide .concept-card h3 {
     margin-bottom: var(--space-1);
     color: var(--accent);
     font-family: var(--font-mono);
@@ -379,12 +441,12 @@
     text-transform: uppercase;
 }
 
-.slide .cyber-card p {
+.slide .concept-card p {
     font-size: clamp(1.25rem, 1.8vw, 2rem);
     line-height: 1.2;
 }
 
-.slide .cyber-equation {
+.slide .statement {
     max-width: 34ch;
     margin-top: var(--space-3);
     color: var(--muted);
@@ -393,23 +455,27 @@
     letter-spacing: -0.03em;
 }
 
-.slide .cyber-equation strong {
+.slide .statement strong {
     color: var(--fg);
 }
 
-.slide .cyber-contrast {
+.slide .statement.formula {
+    color: var(--fg);
+}
+
+.slide .comparison {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-8);
     margin-top: var(--space-3);
 }
 
-.slide .cyber-contrast>div {
+.slide .comparison>div {
     padding-top: var(--space-2);
     border-top: 1px solid color-mix(in srgb, var(--fg), transparent 70%);
 }
 
-.slide .cyber-contrast h2 {
+.slide .comparison h2 {
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--small-size);
@@ -417,12 +483,12 @@
     text-transform: uppercase;
 }
 
-.slide .cyber-contrast p,
-.slide .cyber-contrast li {
+.slide .comparison p,
+.slide .comparison li {
     font-size: clamp(1.15rem, 1.65vw, 1.75rem);
 }
 
-.slide .cyber-question {
+.slide .question {
     max-width: 42ch;
     margin-top: var(--space-4);
     padding-left: var(--space-2);
@@ -433,7 +499,7 @@
     line-height: 1.25;
 }
 
-.slide .cyber-terms {
+.slide .term-list {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-1);
@@ -441,7 +507,7 @@
     margin-top: var(--space-3);
 }
 
-.slide .cyber-terms span {
+.slide .term-list span {
     padding: 0.42em 0.7em;
     border: 1px solid color-mix(in srgb, var(--accent), transparent 55%);
     border-radius: 999px;
