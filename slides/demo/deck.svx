@@ -7,27 +7,33 @@ theme: gallery
 
 
 # Cybernetics
-Comprendre et contrôler un monde incertain {.kicker}
+kubernētēs {.kicker}
 
 --- notes
 
-Temps indicatif : **3 minutes**.
+Les progrès accomplis pendant la Seconde Guerre mondiale ne concernent pas seulement les machines à calculer. Le développement du radar, des télécommunications, des systèmes de visée antiaérienne et des premiers dispositifs automatiques fait surgir une série de questions nouvelles : comment une machine reçoit-elle des informations sur son environnement ? Comment peut-elle comparer le résultat de son action à un objectif donné ? Comment peut-elle, enfin, modifier son comportement en fonction de l’écart constaté ?
 
-Cette séquence doit nous permettre de comprendre un cadre intellectuel qui structure, après-guerre, le travail de nombreux pionniers de l’informatique, mais qui déborde largement l’histoire des machines.
+À la fin des années 1940, certains chercheurs commencent à penser que ces questions ne concernent pas uniquement les machines. Un organisme maintient sa température malgré les variations de son environnement ; le cerveau utilise des informations sensorielles pour corriger un geste ; une organisation peut modifier ses décisions en fonction des résultats qu’elle observe. Dans chacun de ces cas, un système reçoit de l’information, agit, mesure les effets de son action et se réajuste.
 
-La cybernétique n’est ni l’ancêtre unique de l’informatique, ni une science parfaitement établie et délimitée. Elle désigne plutôt un moment où des chercheurs venus de disciplines différentes commencent à décrire avec un vocabulaire voisin des phénomènes de **communication**, de **régulation**, d’**organisation** et de **comportement orienté vers un but**.
+C’est dans ce contexte que naît la cybernétique.
 
-Le terme vient du grec *kubernētēs*, le pilote ou le timonier. L’image est importante : piloter ne signifie pas connaître à l’avance chaque mouvement de la mer. Cela consiste à observer la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger.
+Le terme s’impose en 1948 avec la publication du livre de Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine* — que l’on peut traduire par *La cybernétique, ou le contrôle et la communication chez l’animal et la machine*.
 
-Nous avancerons autour d’une question simple : **comment agir de manière réglée dans un monde que l’on ne peut ni connaître complètement, ni prévoir parfaitement ?**
+Le mot « cybernétique » vient du grec *kubernētēs*, qui signifie « pilote » ou « timonier ». L’image est importante. Piloter un navire ne consiste pas à connaître à l’avance chacun des mouvements de la mer, du vent ou de la houle. Il faut observer la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger continuellement le cap. Le contrôle cybernétique ne désigne donc pas nécessairement une maîtrise totale de l’environnement : il consiste plutôt à guider une action dans un monde complexe, changeant et en partie imprévisible.
 
-Le chapitre suivra trois mouvements :
+Le terme existait cependant avant que Wiener ne lui donne son sens moderne. Au XIXe siècle, André-Marie Ampère avait déjà employé le mot « cybernétique » pour désigner une science du gouvernement, au sens politique. Wiener apprendra par la suite l’existence de cet usage antérieur. Cette proximité entre l’art de piloter et l’art de gouverner n’est pas seulement anecdotique : nous verrons que certains usages de la cybernétique entreront en résonance avec des manières de concevoir le gouvernement des sociétés et, notamment, avec un certain art libéral de gouverner.
 
-1. des concepts se forment dans des domaines différents — rétroaction, information, système, émergence et auto-organisation ;
-2. les conférences Macy les mettent explicitement en relation et contribuent à stabiliser une langue commune ;
-3. cette grammaire devient aussi une manière de penser le gouvernement, dont nous examinerons les promesses et les dangers.
+Chez Wiener, toutefois, le point de départ n’est pas une théorie du gouvernement des êtres humains. Il s’agit d’abord de comprendre comment une machine ou un organisme peut maintenir une trajectoire, poursuivre un but ou préserver une certaine stabilité malgré les perturbations. La cybernétique se présente ainsi comme l’étude des mécanismes de communication, de contrôle et de régulation chez les êtres vivants comme dans les machines. Elle réunit des chercheurs venus de domaines très différents — mathématiques, ingénierie, physiologie, neurologie, psychologie ou sciences sociales — qui découvrent qu’ils peuvent décrire certains de leurs problèmes à l’aide d’un vocabulaire commun.
 
-Il ne s’agit donc pas d’une chronologie continue. Les dates se chevauchent, certains concepts précèdent Macy et d’autres continuent à être élaborés après les conférences. Nous suivrons une **progression conceptuelle**, en signalant localement les retours et les prolongements historiques.
+Il n’est pourtant pas facile de présenter clairement ce qu’est la cybernétique.
+
+Une première difficulté tient à la circulation constante des modèles entre des domaines très différents. Les notions de commande et de contrôle issues de l’ingénierie servent à penser le vivant ; les circuits électroniques fournissent des modèles du cerveau ; les sociétés et les organisations sont, à leur tour, décrites comme des systèmes de communication et de régulation. Ces rapprochements ont parfois produit des hypothèses et des résultats scientifiques féconds. Mais tous n’ont pas la même solidité : lorsqu’un modèle passe de la machine à l’organisme, puis de l’organisme à la société, il peut perdre en précision ce qu’il gagne en pouvoir d’évocation. Il faudra donc rester attentif à la différence entre un modèle rigoureux, une analogie utile et une simple métaphore.
+
+Une seconde difficulté tient au statut historique de la cybernétique. Celle-ci ne désigne pas une science parfaitement unifiée, mais plutôt un mouvement intellectuel qui se développe principalement entre les années 1940 et 1960 et dont les contours demeurent incertains. La cybernétique s’est bien dotée de rencontres, de revues, d’associations et de quelques institutions ; elle ne s’est cependant pas durablement stabilisée comme une discipline générale comparable à la physique, à la biologie ou à l’économie. À partir des années 1960 et 1970, son nom perd progressivement de sa visibilité dans de nombreux pays, tandis que ses concepts sont repris et transformés par d’autres domaines : l’automatique, la théorie des systèmes, les sciences cognitives, l’intelligence artificielle, les interfaces homme-machine, le management ou encore certains courants du néolibéralisme. Peu d’institutions universitaires conservent aujourd’hui le nom de « cybernétique ». Pourtant, plusieurs notions qu’elle a contribué à rapprocher — information, rétroaction, système, régulation, comportement, auto-organisation — sont devenues omniprésentes, y compris dans les sciences de l’information et de la communication.
+
+Cette dissociation entre le recul du nom et la diffusion des concepts donne parfois à la cybernétique une apparence mystérieuse. Elle devient tantôt une origine cachée à laquelle on attribue l’informatique, l’intelligence artificielle, les sciences cognitives, le management, les réseaux ou le gouvernement algorithmique ; tantôt un courant si difficile à délimiter qu’il semble ne plus rien désigner de précis.
+
+Il faudra éviter ces deux écueils. Dans la suite du cours, nous chercherons à montrer précisément ce que l’intelligence artificielle et certains phénomènes contemporains doivent à la cybernétique, sans faire de celle-ci le mythe fondateur qui expliquerait à lui seul l’ensemble de notre présent.
 
 ---
 <!-- slide: id="004a1-constellation" title="Une constellation conceptuelle" steps=0 -->
@@ -96,11 +102,11 @@ Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entr
 3. anticiper une position future ;
 4. corriger continuellement la prédiction à partir de nouvelles observations.
 
-Laisser l’animation accomplir un cycle complet : les quatre verbes au bas de l’image permettent de nommer successivement ces opérations. Insister sur le dernier mouvement, qui ramène l’écart observé vers le dispositif de mesure : c’est lui qui transforme une suite d’actions en **boucle de rétroaction**.
+Laisser l’animation accomplir un cycle complet : les quatre verbes au bas de l’image permettent de nommer successivement ces opérations. Insister sur le dernier mouvement, qui ramène l’écart entre la position anticipée et la position ensuite observée vers le calcul : la prédiction suivante est recalée. Il s’agit ici d’une boucle de correction du calcul, pas d’un effet du tir qui reviendrait mécaniquement depuis la cible.
 
 Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d'incertitudes, d’organismes et de machines qui réagissent.
 
-Elle déplace la manière de penser le contrôle. Dans un modèle très simple de commandement, un centre connaît la situation, donne un ordre, puis l’ordre est exécuté. Dans une boucle cybernétique, l’action est toujours provisoire : elle produit un effet, cet effet est mesuré, puis l’action suivante est ajustée.
+Elle ouvre sur une manière différente de penser le contrôle. Ici, les observations successives recalent la prédiction. Dans une boucle de régulation, l’action est en plus toujours provisoire : elle modifie le système, cet effet est mesuré, puis l’action suivante est ajustée.
 
 Le contrôle devient donc moins la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger les écarts**.
 
@@ -111,6 +117,10 @@ Il faut aussi conserver l’ambivalence historique de cette scène. Des concepts
 Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il besoin de prévoir exactement ce que vous alliez faire ? »
 
 La réponse attendue est non. Il lui suffit de détecter un écart, de recalculer et de proposer une nouvelle action. C’est cette capacité de correction qui permet de **piloter sans tout prévoir**.
+
+### Transition
+
+Ce premier exemple nous apprend donc à suivre une relation entre mesure, prédiction et correction, sans encore devoir décrire tout ce qui se passe dans l’avion ou chez le pilote. Il prépare ainsi, sans encore s’y confondre, la rétroaction : le thermostat permettra d’isoler le cas où l’effet d’une action sur un système revient modifier l’action suivante.
 
 [Sources]
 - Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
@@ -483,9 +493,13 @@ Nous avons défini un système par ses éléments, leurs relations et la fronti�
 
 Dans leur article de 1943, Rosenblueth, Wiener et Bigelow proposent d’étudier un objet à partir de son comportement observable plutôt que de commencer par sa matière ou sa structure interne. Cette approche permet de comparer des dispositifs différents en décrivant leurs entrées, leurs sorties et la relation entre elles.
 
+Revenons à la visée antiaérienne : le dispositif exploite une série de positions et leurs variations sans devoir expliquer la psychologie du pilote ni connaître intégralement le fonctionnement de l’avion.
+
 Cette méthode prépare ce que W. Ross Ashby systématisera en 1956 sous le nom de théorie de la **boîte noire**. Le terme et le problème viennent de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend explicitement cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
 Mais une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée.
+
+Ce déplacement n’est pas la rétroaction elle-même : la rétroaction décrit le retour des effets dans l’action suivante ; la boîte noire désigne la méthode qui étudie un système à partir de ses entrées, de ses sorties et de son comportement observable sans partir de tous ses mécanismes internes.
 
 ### Une finalité sans conscience
 
