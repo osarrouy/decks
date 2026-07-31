@@ -30,3 +30,14 @@ Les composants locaux s’importent avec l’alias stable :
   import MonComposant from '$components/MonComposant.svelte'
 </script>
 ```
+
+## Indications dans les notes
+
+Dans une section `--- notes`, préfixer une indication destinée à la personne qui présente avec le callout Markdown `[!COMMENT]` :
+
+```md
+> [!COMMENT]
+> Montrer la trajectoire sur la slide.
+```
+
+Ce bloc reçoit un style distinct dans le panneau **Notes** de `/presenter`. Il n’apparaît pas sur la slide projetée.

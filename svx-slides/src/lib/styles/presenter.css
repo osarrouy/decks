@@ -6,68 +6,68 @@
 
 /* Racine de la vue présentateur : page sombre scrollable. */
 .presenter-root {
-  min-height: 100vh;
-  overflow: auto;
-  padding: 1rem;
-  background: #101012;
-  color: #f7f3ea;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 1rem;
+    background: #101012;
+    color: #f7f3ea;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Grille principale : aperçus empilés à gauche, notes plus larges à droite. */
 .presenter-grid {
-  display: grid;
-  grid-template-columns: minmax(20rem, 0.82fr) minmax(28rem, 1.18fr);
-  gap: 1rem;
-  height: calc(100vh - 2rem);
-  min-height: 34rem;
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.82fr) minmax(28rem, 1.18fr);
+    gap: 1rem;
+    height: calc(100vh - 2rem);
+    min-height: 34rem;
 }
 
 /* Panneau générique de la vue présentateur. */
 .presenter-panel {
-  border: 1px solid rgb(255 255 255 / 0.12);
-  border-radius: 1rem;
-  background: rgb(255 255 255 / 0.055);
-  overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 0.055);
+    overflow: hidden;
 }
 
 /* En-tête d’un panneau présentateur. */
 .presenter-panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid rgb(255 255 255 / 0.1);
-  color: rgb(255 255 255 / 0.68);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    color: rgb(255 255 255 / 0.68);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 /* Colonne d’aperçus : slide actuelle au-dessus, slide suivante en dessous. */
 .presenter-preview-stack {
-  display: grid;
-  grid-template-rows: minmax(0, 1.22fr) minmax(8rem, 0.78fr);
-  gap: 1rem;
-  min-height: 0;
+    display: grid;
+    grid-template-rows: minmax(0, 1.22fr) minmax(8rem, 0.78fr);
+    gap: 1rem;
+    min-height: 0;
 }
 
 /* Panneaux contenant les aperçus de slides. */
 .presenter-current,
 .presenter-next {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 /* Zone de padding autour d’une prévisualisation de slide. */
 .presenter-preview {
-  flex: 1;
-  min-height: 0;
-  display: grid;
-  place-items: center;
-  padding: 0.75rem;
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    padding: 0.75rem;
 }
 
 /*
@@ -76,212 +76,238 @@
   entièrement ici.
 */
 .presenter-preview-viewport {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-  border-radius: 0.7rem;
-  background: var(--bg);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    background: var(--bg);
 }
 
 /* Canvas plein écran centré, réduit par SlidePreview avec un transform uniforme. */
 .presenter-preview-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  will-change: transform;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    will-change: transform;
 }
 
 .presenter-preview-canvas .slide {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /* Colonne latérale : notes dominantes et contrôles. */
 .presenter-side {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  gap: 1rem;
-  min-height: 0;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 1rem;
+    min-height: 0;
 }
 
 /* Panneau de notes : occupe la majeure partie de la colonne et scrolle en interne. */
 .presenter-notes {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  font-family: var(--font-notes);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    font-family: var(--font-notes);
 }
 
 .presenter-notes-content,
-.presenter-notes > .muted {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  padding: 1.15rem 1.25rem;
-  font-size: var(--font-notes-size);
-  font-weight: var(--notes-weight);
+.presenter-notes>.muted {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 1.15rem 1.25rem;
+    font-size: var(--font-notes-size);
+    font-weight: var(--notes-weight);
 }
 
 /* Surface Markdown des notes : rythme de lecture continu et largeur confortable. */
 .presenter-notes-content {
-  overflow-wrap: anywhere;
+    overflow-wrap: anywhere;
 }
 
-.presenter-notes-content > :first-child {
-  margin-top: 0;
+.presenter-notes-content> :first-child {
+    margin-top: 0;
 }
 
-.presenter-notes-content > :last-child {
-  margin-bottom: 0;
+.presenter-notes-content> :last-child {
+    margin-bottom: 0;
 }
 
 /* Titres Markdown des notes. */
 .presenter-notes :where(h1, h2, h3, h4, h5, h6) {
-  margin: 1.45em 0 0.55em;
-  color: #fff;
-  font-weight: 680;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+    margin: 1.45em 0 0.55em;
+    color: #fff;
+    font-weight: 680;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
 }
 
 .presenter-notes h1 {
-  font-size: 1.65rem;
+    font-size: 1.65rem;
 }
 
 .presenter-notes h2 {
-  padding-bottom: 0.32em;
-  border-bottom: 1px solid rgb(255 255 255 / 0.12);
-  font-size: 1.4rem;
+    padding-bottom: 0.32em;
+    border-bottom: 1px solid rgb(255 255 255 / 0.12);
+    font-size: 1.4rem;
 }
 
 .presenter-notes h3 {
-  color: color-mix(in srgb, var(--accent), white 18%);
-  font-size: 1.18rem;
+    color: color-mix(in srgb, var(--accent), white 18%);
+    font-size: 1.18rem;
 }
 
 .presenter-notes :where(h4, h5, h6) {
-  font-size: 1.05rem;
+    font-size: 1.05rem;
 }
 
 /* Paragraphes et listes dans les notes converties depuis Markdown. */
 .presenter-notes :where(p, li) {
-  color: rgb(255 255 255 / 0.83);
-  line-height: 1.45;
+    color: rgb(255 255 255 / 0.83);
+    line-height: 1.45;
 }
 
 .presenter-notes p {
-  margin: 0.7em 0;
+    margin: 0.7em 0;
 }
 
 /* Indentation et rythme des listes dans les notes. */
 .presenter-notes :where(ul, ol) {
-  margin: 0.7em 0;
-  padding-left: 1.45rem;
+    margin: 0.7em 0;
+    padding-left: 1.45rem;
 }
 
-.presenter-notes li + li {
-  margin-top: 0.32em;
+.presenter-notes li+li {
+    margin-top: 0.32em;
 }
 
-.presenter-notes li > :where(ul, ol) {
-  margin-block: 0.32em;
+.presenter-notes li> :where(ul, ol) {
+    margin-block: 0.32em;
 }
 
 /* Emphase, liens et citations Markdown. */
 .presenter-notes strong {
-  color: #fff;
-  font-weight: 720;
+    color: #fff;
+    font-weight: 720;
 }
 
 .presenter-notes a {
-  color: color-mix(in srgb, var(--accent), white 22%);
-  text-decoration-color: color-mix(in srgb, var(--accent), transparent 42%);
-  text-underline-offset: 0.18em;
+    color: color-mix(in srgb, var(--accent), white 22%);
+    text-decoration-color: color-mix(in srgb, var(--accent), transparent 42%);
+    text-underline-offset: 0.18em;
 }
 
 .presenter-notes a:hover {
-  text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
 }
 
 .presenter-notes blockquote {
-  margin: 1rem 0;
-  padding: 0.15rem 0 0.15rem 1rem;
-  border-left: 3px solid color-mix(in srgb, var(--accent), transparent 18%);
-  color: rgb(255 255 255 / 0.68);
+    margin: 1rem 0;
+    padding: 0.15rem 0 0.15rem 1rem;
+    border-left: 3px solid color-mix(in srgb, var(--accent), transparent 18%);
+    color: rgb(255 255 255 / 0.68);
 }
 
 .presenter-notes blockquote p {
-  color: inherit;
+    color: inherit;
+}
+
+.presenter-notes blockquote.presenter-note-comment {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid color-mix(in srgb, var(--accent), transparent 72%);
+    border-left: 4px solid color-mix(in srgb, var(--accent), transparent 10%);
+    border-radius: 0.55rem;
+    background: color-mix(in srgb, var(--accent), transparent 92%);
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    font-style: normal;
+}
+
+.presenter-notes blockquote.presenter-note-comment::before {
+    display: block;
+    color: color-mix(in srgb, var(--accent), white 18%);
+    content: 'Indication';
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.presenter-notes blockquote.presenter-note-comment p {
+    margin: 0.35em 0 0;
+    line-height: 1.4;
 }
 
 .presenter-notes hr {
-  margin: 1.4rem 0;
-  border: 0;
-  border-top: 1px solid rgb(255 255 255 / 0.14);
+    margin: 1.4rem 0;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255 / 0.14);
 }
 
 /* Code inline dans les notes. */
 .presenter-notes code {
-  padding: 0.1rem 0.25rem;
-  border-radius: 0.25rem;
-  background: rgb(255 255 255 / 0.10);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.9em;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.25rem;
+    background: rgb(255 255 255 / 0.10);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
 }
 
 .presenter-notes pre {
-  overflow: auto;
-  margin: 1rem 0;
-  padding: 0.9rem 1rem;
-  border: 1px solid rgb(255 255 255 / 0.1);
-  border-radius: 0.65rem;
-  background: rgb(0 0 0 / 0.28);
+    overflow: auto;
+    margin: 1rem 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 0.65rem;
+    background: rgb(0 0 0 / 0.28);
 }
 
 .presenter-notes pre code {
-  padding: 0;
-  background: none;
+    padding: 0;
+    background: none;
 }
 
 /* Barre de contrôles : navigation, ouverture projection, timer. */
 .presenter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem;
 }
 
 /* Bouton générique de la vue présentateur. */
 .presenter-button {
-  border: 1px solid rgb(255 255 255 / 0.16);
-  border-radius: 999px;
-  padding: 0.65rem 0.95rem;
-  background: rgb(255 255 255 / 0.08);
-  color: white;
-  cursor: pointer;
+    border: 1px solid rgb(255 255 255 / 0.16);
+    border-radius: 999px;
+    padding: 0.65rem 0.95rem;
+    background: rgb(255 255 255 / 0.08);
+    color: white;
+    cursor: pointer;
 }
 
 /* État hover des boutons présentateur. */
 .presenter-button:hover {
-  background: rgb(255 255 255 / 0.14);
+    background: rgb(255 255 255 / 0.14);
 }
 
 /* Méta-information de droite dans les contrôles, actuellement le timer. */
 .presenter-meta {
-  margin-left: auto;
-  color: rgb(255 255 255 / 0.62);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.9rem;
+    margin-left: auto;
+    color: rgb(255 255 255 / 0.62);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9rem;
 }
 
 /* Adaptation mobile/tablette : la colonne latérale passe sous la slide. */
 @media (max-width: 980px) {
-  .presenter-grid {
-    grid-template-columns: 1fr;
-  }
+    .presenter-grid {
+        grid-template-columns: 1fr;
+    }
 }

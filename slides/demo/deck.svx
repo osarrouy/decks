@@ -70,9 +70,9 @@ Quatre questions guideront le parcours : comment corriger une action à partir d
 
 </div>
 
-<figure class="wiener-portrait">
+<figure class="wiener">
 
-![Norbert Wiener devant un tableau couvert d’équations](/wiener.jpg){data-glow="strong"}
+![Norbert Wiener](/wiener.jpg){data-glow="strong"}
 
 </figure>
 
@@ -82,7 +82,7 @@ Norbert Wiener est un mathématicien, physicien et philosophe américain.
 
 Il a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation.
 
-Il a notamment travaillé, pendant la seconde guerre mondiale, avec l’ingénieur Julian Bigelow, sur des problèmes de visée antiaérienne.
+Il a notamment travaillé, pendant la seconde guerre mondiale, sur des problèmes de visée antiaérienne, avec l’ingénieur Julian Bigelow, .
 
 ---
 
@@ -95,32 +95,60 @@ Il a notamment travaillé, pendant la seconde guerre mondiale, avec l’ingénie
 
 --- notes
 
-Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la mesure, le calcul, le tir et l’arrivée du projectile, la cible s’est déplacée. Il faut donc :
+Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la détection de la cible, la transmission de la mesure, le calcul de la trajectoire du missile, le déclenchement du tir et l’arrivée du projectile, l’avion s’est évidemment déplacé. Il faut donc viser une position qui n’est pas encore observée.
+
+Le problème combine plusieurs difficultés :
+
+- la cible se déplace rapidement ;
+- le pilote peut en modifier la trajectoire de façon imprévisible ;
+- la mesure comporte du bruit et des erreurs ;
+- le calcul et l’action prennent du temps ;
+- chaque nouvelle observation peut rendre l’estimation précédente obsolète.
+
+Le dispositif doit donc accomplir plusieurs opérations :
 
 1. mesurer une trajectoire partielle ;
-2. distinguer le mouvement du bruit et des erreurs de mesure ;
-3. anticiper une position future ;
-4. corriger continuellement la prédiction à partir de nouvelles observations.
+2. distinguer autant que possible le mouvement du bruit ;
+3. estimer une position future ;
+4. comparer cette estimation aux nouvelles positions observées ;
+5. modifier la prédiction suivante.
 
-Laisser l’animation accomplir un cycle complet : les quatre verbes au bas de l’image permettent de nommer successivement ces opérations. Insister sur le dernier mouvement, qui ramène l’écart entre la position anticipée et la position ensuite observée vers le calcul : la prédiction suivante est recalée. Il s’agit ici d’une boucle de correction du calcul, pas d’un effet du tir qui reviendrait mécaniquement depuis la cible.
 
-Cette situation n’« invente » pas à elle seule la cybernétique, mais elle lui fournit une scène fondatrice. Le monde auquel elle répond n’est plus celui d’une mécanique parfaitement prévisible à partir d’un état initial. C’est un monde de délais, de bruit, d’adversaires, d'incertitudes, d’organismes et de machines qui réagissent.
+Ce problème ne fonde pas à lui tout seul la cybernétique. Il lui propose en revanche un monde. Un monde qui n'est plus entièrement prévisivible à partir d'un état initial. Un monde fait de délais, de perturbations, d’erreurs de mesure et dispositifs qui réagissent les uns aux autres.
+
+Or les complications de ce monde sont importantes parce qu'elles imposent de penser autrement le problème du contrôle. Non plus depuis l'hypothèse d'une certaine prédicitibilité que garantirait une représentation parfaite ou totale de l'avenir. Mais depuis la contrainte d'une incertitude fondamentale, première, ontologique. Une contrainte transformant le contrôle en un processus continu d'adapatation, d'ajustement et de réduction des écarts entre le réel et sa projection par l'action d'un système.
+
+> [!COMMENT]
+> Laisser l’animation accomplir un cycle complet et insister sur le dernier mouvement, qui ramène l’écart entre la position anticipée et la position ensuite observée vers le calcul : la prédiction suivante est ré-ajustée.
+
+Ce phénomène, nous le trouvons, partout : dans le GPS qui recalcule votre itinéraire lorsque vous vous êtes écartés de la route ; dans le routage des données sur le réseau Internet ; dans le LLM qui s'ajuste à la conversation que vous tenez avec lui ; mais aussi, par exemple, dans la gestion de la propagation du COVID ou dans 
+
+à partir d'une représentation parfaite ou totale de l'avenir garantissant la prédictibilité de ce monde, mais depuis une incertitude fondamentale, première, ontologique, 
+
+mais en posant l'incertitude comme une de ses réalités fondamentales. Une 
+
+
+La configuration de ce monde est importante parce qu'elle impose de poser autrement le problème du contrôle. Prédiction . INCERTITUDE.
 
 Elle ouvre sur une manière différente de penser le contrôle. Ici, les observations successives recalent la prédiction. Dans une boucle de régulation, l’action est en plus toujours provisoire : elle modifie le système, cet effet est mesuré, puis l’action suivante est ajustée.
 
-Le contrôle devient donc moins la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger les écarts**.
+Dans chacun de ces cas, le contrôle relève moins de la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger des écarts** à l'intérieur d'un système dont l'efficace tient moins à ce qu'il possèderait une représentation parfaite de l'avenir, qu'à sa capacité à  **ajuster son action à partir de nouvelles observations**.
 
-Il faut aussi conserver l’ambivalence historique de cette scène. Des concepts qui seront ensuite utilisés pour comprendre la coordination, la vie ou l’apprentissage se forment dans un programme militaire de prédiction et de tir. Cela ne suffit pas à réduire toute la cybernétique à une technologie militaire, mais cela aide à comprendre pourquoi les notions de cible, de comportement, de mesure et de correction y sont si centrales.
+On parle alors de boucle de rétroaction.
+
+
+
 
 ### Question aux étudiants
 
-Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il besoin de prévoir exactement ce que vous alliez faire ? »
+> [!COMMENT]
+> Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il besoin de prévoir exactement ce que vous alliez faire ? »
 
 La réponse attendue est non. Il lui suffit de détecter un écart, de recalculer et de proposer une nouvelle action. C’est cette capacité de correction qui permet de **piloter sans tout prévoir**.
 
 ### Transition
 
-Ce premier exemple nous apprend donc à suivre une relation entre mesure, prédiction et correction, sans encore devoir décrire tout ce qui se passe dans l’avion ou chez le pilote. Il prépare ainsi, sans encore s’y confondre, la rétroaction : le thermostat permettra d’isoler le cas où l’effet d’une action sur un système revient modifier l’action suivante.
+Ce premier exemple nous apprend donc à suivre une relation entre mesure, prédiction et correction, sans encore devoir décrire tout ce qui se passe dans l’avion ou chez le pilote. Il prépare ainsi, sans encore s’y confondre, la rétroaction : 
 
 [Sources]
 - Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
@@ -130,53 +158,28 @@ Ce premier exemple nous apprend donc à suivre une relation entre mesure, prédi
 <!-- slide: id="004e-retroaction" title="La rétroaction" steps=4 -->
 
 <script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+  import TemperatureFeedbackCurve from '$components/TemperatureFeedbackCurve.svelte'
 </script>
 
 <p class="kicker">Feedback · causalité circulaire</p>
 
+
+
 # La sortie revient dans l’entrée
 
-<div class="sequence">
-  <span>objectif</span><span class="arrow">→</span>
-  <span>action</span><span class="arrow">→</span>
-  <span>effet</span><span class="arrow">→</span>
-  <span>écart mesuré</span><span class="arrow">↺</span>
-</div>
-
-<Fragment at={1}>
-
-<p class="statement">La cause produit un effet qui <strong>modifie la cause suivante</strong>.</p>
-
-</Fragment>
-
-<Fragment at={2}>
-
-- **Rétroaction négative** : réduire l’écart, stabiliser.
-
-</Fragment>
-
-<Fragment at={3}>
-
-- **Rétroaction positive** : amplifier une variation.
-
-</Fragment>
-
-<Fragment at={4}>
-
-<p class="question">La boucle ne supprime pas l’incertitude : elle permet de corriger en cours d’action.</p>
-
-</Fragment>
+<TemperatureFeedbackCurve />
 
 --- notes
 
 Temps indicatif : **6 minutes**.
 
-Le dispositif antiaérien est complexe : il combine mesure, prédiction, délai, bruit et réaction d’un adversaire. Pour isoler la structure de régulation que nous venons d’y rencontrer, prenons maintenant un dispositif beaucoup plus simple et familier.
 
-### Exemple du thermostat
+Le thermostat tout-ou-rien reste notre exemple, mais nous allons maintenant regarder non plus le dispositif lui-même : nous allons suivre **l’évolution de la température de la pièce dans le temps**.
 
-On règle une température souhaitée. Un capteur mesure la température actuelle. Si elle est inférieure à la consigne, le chauffage s’active ; si elle la dépasse, il s’arrête. L’effet de l’action — la nouvelle température — revient donc dans le système sous forme d’information.
+La ligne horizontale représente une consigne de 20 °C et la zone rose une petite bande de régulation. Sous le seuil bas, le chauffage s’allume ; au-dessus du seuil haut, il s’arrête. La température n’est donc pas parfaitement immobile : elle oscille normalement autour de la consigne. Une régulation est stable lorsque ces oscillations restent limitées dans une zone acceptable.
+
+> [!COMMENT]
+> Faire avancer les quatre étapes : montrer la première commutation ; prolonger la courbe bien réglée dans sa bande étroite ; faire apparaître les grandes oscillations du système mal réglé ; révéler enfin le rôle de l’inertie et du retard de mesure.
 
 Ce schéma rompt avec une représentation strictement linéaire de la causalité :
 
@@ -188,9 +191,13 @@ Dans une boucle :
 
 On parle de **causalité circulaire**. Cela ne signifie pas une cause magique qui se produirait elle-même. Cela signifie que le comportement du système se déploie dans le temps et que ses effets deviennent de nouvelles conditions.
 
+
+
 ### Deux types de rétroaction
 
-La **rétroaction négative** réduit un écart. Si une pièce devient trop froide, le chauffage compense. Le mot « négative » ne signifie pas mauvaise : il désigne le fait que la réponse s’oppose à la variation. Elle favorise la stabilité, l’équilibre ou l’homéostasie.
+La **rétroaction négative** réduit un écart. Sur la courbe rose, les allumages et arrêts successifs maintiennent la température dans une bande étroite autour de la consigne. Le mot « négative » ne signifie donc pas mauvaise ; il désigne le fait que la réponse s’oppose à la variation.
+
+La stabilisation n’est toutefois pas automatique. Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’agit toujours d’une rétroaction négative. Mais une pièce et un radiateur possèdent une inertie thermique ; le chauffage continue à produire des effets après son arrêt. Si les seuils sont mal choisis ou si la mesure arrive trop tard, la température dépasse largement la cible avant que la correction inverse ne produise son effet. La boucle peut alors entretenir de grandes oscillations.
 
 La **rétroaction positive** amplifie au contraire une variation. Un micro trop proche d’un haut-parleur reprend le son amplifié, qui est de nouveau amplifié : le système s’emballe. Dans les phénomènes sociaux, une rumeur peut gagner en visibilité parce que sa visibilité attire de nouvelles reprises. « Positive » ne signifie donc pas bénéfique.
 
