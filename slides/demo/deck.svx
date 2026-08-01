@@ -9,7 +9,7 @@ kubernētēs {.kicker}
 
 --- notes
 
-Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domainesmaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
+Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
 
 Ces technologies ont soulevé toute une série de nouvelles questions : comment le radar peut-il repérer la position et la direction de l'avion ; comment le système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?
 
@@ -49,72 +49,27 @@ Ce choix n'est pas complètement anecdotique. Gouverner un navire ne consiste pa
 
 Or c’est précisément ce que Norbert Wiener cherche à penser : une modalité du contrôle qui ne consiste pas à maîtriser un environnement entièrement connu, mais à guider une action dans un monde complexe, changeant et en partie imprévisible.
 
-Wiener apprendra après coup que le terme cybernétique existait en fait déjà. André-Marie Ampère l'avait employé, au XIXe siècle, pour désigner une science du gouvernement des hommes - des hommes eux aussi changeants et imprévisibles. Cette proximité, bien que fortuite, n’est pas sans importance : nous verrons que certains concepts de la cybernétique résonnent avec les théories néo-libérale du gouvernement des hommes.
+Wiener découvrira plus tard que le mot « cybernétique » avait déjà été employé avant lui. André-Marie Ampère l'avait utilisé, au XIXe siècle, pour désigner une science du gouvernement des hommes - eux aussi changeants et imprévisibles. Cette proximité, bien que fortuite, n’est pas sans importance : nous verrons que certains concepts de la cybernétique résonnent avec les théories néo-libérale du gouvernement des hommes.
 
 ### Définition
 
 Chez Wiener, toutefois, le point de départ n’est pas une théorie du gouvernement des êtres humains. Il s’agit d’abord de comprendre comment une machine ou un organisme peut maintenir une trajectoire, poursuivre un but ou préserver une certaine stabilité malgré les perturbations extérieures. Il définira ainsi la cybernétique comme *l’étude des mécanismes de communication, de contrôle et de régulation chez les êtres vivants comme dans les machines*.
 
-Or, entre les années 1940 et 1960, ce projet suscite un vif intérêt chez des chercheurs pourtant issus de disciplines très diverses. Des ingénieurs commencent ainsi à décrire le fonctionnement des machines à l’aide de notions issues de la physiologie ; des neurologues comparent le fonction des réseaux neuronaux à ceux des circuits informatiques ; et des psychologues ou des chercheurs en sciences sociales utilisent des notions issues de la cybernétique pour analyser l’apprentissage, la communication ou la décision collective.
+Mais pourquoi, alors, s'arrêter sur la cybernernétique dont les préoccupations semblent assez éloignées des notres ? Parce que, entre les années 1940 et 1960, la cybernétique fédère un grand nombre de chercheurs, pourtant issus de disciplines très diverses, autour d'un langage et de problèmes communs. Des ingénieurs commencent alors à décrire le fonctionnement des machines à l’aide de notions issues de la physiologie ; des neurologues comparent le fonction des réseaux neuronaux à ceux des circuits informatiques ; et des psychologues ou des chercheurs en sciences sociales utilisent des notions issues de la cybernétique pour analyser l’apprentissage, la communication ou la décision collective.
+
+La cybernétique exercera ainsi une influence décisive sur la seconde moitié du XXIème siècle. On trouve aujourd'hui encore un trace de son héritage, direct ou indirect, dans l'architecture du réseau Internet, dans les réseaux de neurones artificiels de l'IA, dans les théories du management ou dans les politiques néo-libérales de la Silicon Valley.
 
 ### Mise en garde
 
-Cette circulation entre des domaines très éloignés fait la richesse de la cybernétique, mais elle rend aussi sa définition difficile. La cybernétique ne porte pas sur un objet unique. Elle propose plutôt un vocabulaire commun pour décrire des mécanismes de communication, de contrôle et de régulation dans des réalités aussi différentes qu’une machine, un organisme ou une société. Ces rapprochements peuvent être féconds, mais ils demandent de la prudence : un modèle gagne parfois en portée ce qu’il perd en précision lorsqu’il passe d’un domaine à un autre.
+La cybernétique s'est construite en faisant circuler ses concepts entre des disciplines très éloignées. Cette diversité fait sa richesse, mais rend aussi sa définition difficile. La cybernétique ne porte pas sur un objet unique. Elle propose plutôt un vocabulaire commun pour décrire des mécanismes de communication, de contrôle et de régulation dans des réalités aussi différentes qu’une machine, un organisme ou une société. Ces rapprochements peuvent être féconds, mais ils demandent de la prudence : un modèle gagne parfois en portée ce qu’il perd en précision lorsqu’il passe d’un domaine à un autre.
 
 Son histoire ajoute une autre difficulté. La cybernétique ne s’est pas durablement imposée comme une science unifiée ni comme une discipline autonome, comparable à la physique, à la biologie ou à l’économie. Elle a surtout constitué un mouvement intellectuel, particulièrement actif entre les années 1940 et 1960. À partir des années 1960 et 1970, son nom devient moins visible, tandis que ses concepts sont repris par d’autres domaines : l’automatique, la théorie des systèmes, les sciences cognitives, l’intelligence artificielle, les interfaces homme-machine, le management ou certains courants du néolibéralisme. Même si peu d’institutions portent encore le nom de « cybernétique », des notions comme l’information, la rétroaction, le système, la régulation, le comportement et l’auto-organisation sont devenues centrales dans de nombreux domaines.
 
-Le recul du terme et la diffusion de ces concepts entretiennent parfois une certaine confusion. La cybernétique est tantôt présentée comme l’origine cachée de l’informatique, de l’intelligence artificielle, des sciences cognitives, du management ou du gouvernement algorithmique ; tantôt comme un courant si vaste qu’il ne désignerait plus rien de précis.
+Ce double mouvement de disparition de la cybernétique et de diffusion paradoxale de ses concepts entretient parfois une certaine confusion. La cybernétique est présentée tantôt comme l’origine cachée de l’informatique, de l’intelligence artificielle, des sciences cognitives, du management ou du gouvernement algorithmique ; tantôt comme un courant si vaste qu’il ne désignerait plus rien de précis.
 
-Il faut éviter ces deux excès. La cybernétique n’explique pas à elle seule notre présent, mais elle a contribué à fournir des concepts que de nombreux domaines ont ensuite repris et transformés. La suite du cours cherchera à préciser ce que l’intelligence artificielle et certains phénomènes contemporains lui doivent réellement.
+Nous essaierons dans ce cours d'éviter ces deux ecueils. Nous nous attacherons ainsi à en présenter les principaux concepts, à en retracer brièvement l'histoire, mais aussi à en caractériser la rationalité pour comprendre ce que certains phénomènes contemporains, comme l'intelligence artificielle, lui doivent encore, sans chercher nécessairement à identifier en elle l'origine de toute chose.
 
----
-<!-- slide: id="004a1-constellation" title="Une constellation conceptuelle" steps=0 -->
-
-<div class="layout center">
-
-<div>
-
-<p class="kicker">Sous-chapitre I</p>
-
-# Une constellation conceptuelle
-
-<p class="lead muted">Rétroaction · information · systèmes · émergence</p>
-
-</div>
-
-</div>
-
---- notes
-
-Temps indicatif : **1 minute**.
-
-Nous allons d’abord isoler plusieurs concepts qui ne naissent ni au même endroit ni pour résoudre le même problème. L’enjeu n’est pas encore de définir « la » cybernétique comme une doctrine, mais de comprendre pourquoi ces opérations vont progressivement devenir compatibles.
-
-Quatre questions guideront le parcours : comment corriger une action à partir de ses effets ? Comment transmettre un signal malgré le bruit ? Comment décrire un ensemble de relations ? Comment un ordre collectif peut-il apparaître sans plan central détaillé ?
----
-<!-- slide: id="004aa-wiener" title="Norbert Wiener" steps=0 layout="two-columns" -->
-
-<div>
-
-# Norbert Wiener
-
-1894–1964 {.kicker}
-
-</div>
-
-<figure class="wiener">
-
-![Norbert Wiener](/wiener.jpg){data-glow="strong"}
-
-</figure>
-
---- notes
-
-Norbert Wiener est un mathématicien, physicien et philosophe américain.
-
-Il a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation.
-
-Il a notamment travaillé, pendant la seconde guerre mondiale, sur des problèmes de visée antiaérienne, avec l’ingénieur Julian Bigelow, .
+Et pour comprendre cette histoire, revenons d’abord à ses origines : pendant la guerre, Norbert Wiener et l’ingénieur Julian Bigelow travaillent sur des systèmes de visée antiaérienne.
 
 ---
 
@@ -127,9 +82,9 @@ Il a notamment travaillé, pendant la seconde guerre mondiale, sur des problème
 
 --- notes
 
-Un canon ne peut pas simplement viser l’endroit où l’avion se trouve : entre la détection de la cible, la transmission de la mesure, le calcul de la trajectoire du missile, le déclenchement du tir et l’arrivée du projectile, l’avion s’est évidemment déplacé. Il faut donc viser une position qui n’est pas encore observée.
+Le défi que la défense antiaérienne pose à Wiener est simple. Un canon ne peut pas viser l’endroit où se trouve l’avion : entre la détection de la cible, la transmission de la mesure, le calcul de la trajectoire, le déclenchement du tir et l’arrivée du projectile, l’avion s’est déjà déplacé. Il faut donc viser une position qui n’a pas encore été observée - et sur laquelle on ne peut que spéculer.
 
-Le problème combine plusieurs difficultés :
+Cette situation comporte plusieurs difficultés :
 
 - la cible se déplace rapidement ;
 - le pilote peut en modifier la trajectoire de façon imprévisible ;
@@ -137,20 +92,18 @@ Le problème combine plusieurs difficultés :
 - le calcul et l’action prennent du temps ;
 - chaque nouvelle observation peut rendre l’estimation précédente obsolète.
 
-Ce problème ne fonde pas à lui tout seul la cybernétique. Il lui propose en revanche un monde. Un monde qui n'est plus entièrement prévisivible à partir d'un état initial. Un monde fait de délais, de perturbations, d’erreurs de mesure et dispositifs qui réagissent les uns aux autres.
+Ce problème amène Wiener et les cybernéticiens à reformuler entièrement la question du contrôle. Il ne s’agit plus de concevoir le contrôle comme la maîtrise totale d’un monde entièrement prévisible, dont il suffirait de connaître les lois pour anticiper chaque évolution.La défense antiaérienne révèle au contraire un monde fait de délais, de perturbations, d’erreurs de mesure et de dispositifs qui réagissent les uns aux autres — un monde difficile à modéliser dans sa totalité.
 
-Or les complications de ce monde sont importantes parce qu'elles imposent de penser autrement le problème du contrôle. Non plus depuis l'hypothèse d'une certaine prédicitibilité que garantirait une représentation parfaite ou totale de l'avenir. Mais depuis la contrainte d'une incertitude fondamentale, première, ontologique. Une contrainte transformant le contrôle en un processus continu d'adapatation, d'ajustement et de réduction des écarts entre le réel et sa projection par l'action d'un système.
+Contrôler signifie alors être capable de s’ajuster à mesure que la situation évolue : observer, anticiper, comparer les résultats à l’objectif et corriger l’action. *Le contrôle devient ainsi un processus continu de régulation dans un monde incertain et imprévisible.*
 
 > [!COMMENT]
 > Laisser l’animation accomplir un cycle complet et insister sur le dernier mouvement, qui ramène l’écart entre la position anticipée et la position ensuite observée vers le calcul : la prédiction suivante est ré-ajustée.
 
-Ce phénomène, nous le trouvons, partout : dans le GPS qui recalcule votre itinéraire lorsque vous vous êtes écartés de la route ; dans le routage des données sur le réseau Internet ; dans le LLM qui s'ajuste à la conversation que vous tenez avec lui ; mais aussi, par exemple, dans le fonctionnement des algorithmes de recommandation des réseaux sociaux ou dans la gestion de la propagation du COVID.
+Ce processus d'ajustement continu, nous le trouvons aujourd'hui partout : dans le GPS qui recalcule votre itinéraire lorsque vous vous êtes écartés de la route ; dans le routage des données sur le réseau Internet ; dans le LLM qui s'ajuste à la conversation que vous tenez avec lui ; dans le fonctionnement des algorithmes de recommandation des réseaux sociaux ; dans la gestion de la propagation du COVID.
 
-Dans chacun de ces cas, le contrôle relève moins de la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger des écarts** à l'intérieur d'un système dont l'efficacité tient moins à ce qu'il possèderait une représentation parfaite de l'avenir, qu'à sa capacité à  **ajuster son action à partir de nouvelles observations**.
-
+Dans chacun de ces cas, le contrôle repose moins sur la possession d’un savoir total que sur la capacité à **recevoir rapidement des informations pertinentes et à corriger les écarts**. Le système n’a pas besoin de disposer d’une représentation parfaite de l’avenir : son efficacité tient à sa capacité à **ajuster son action à partir de nouvelles observations**.
 
 On parle alors de *boucle de rétroaction*, ou, en anglais, de *feedback*.
-
 
 [Sources]
 - Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
@@ -172,24 +125,16 @@ feedback {.kicker}
 
 --- notes
 
-Temps indicatif : **6 minutes**.
+Dans une représentation strictement linéaire de la causalité, `A` produit `B`, et l’analyse s’arrête là.
 
 > [!COMMENT]
-> À l’arrivée sur la slide, suivre la flèche de A vers B. À l’étape suivante, faire apparaître le retour orthogonal de B vers A ; préciser oralement qu’il modifie l’état suivant de A.
+> Passer à l'étape suivante
 
+ Dans une boucle, `A` modifie `B`, puis le nouvel état de `B` revient modifier l’état suivant de `A`.
 
-Dans une représentation strictement linéaire de la causalité, `A` produit `B`, et l’analyse s’arrête là. Dans une boucle, `A` modifie `B`, puis le nouvel état de `B` revient modifier l’état suivant de `A`.
+On parle alors de **causalité circulaire**. Cela ne signifie pas qu’un phénomène serait à lui-même sa propre cause. Dans la causalité circulaire, la circularité n'est pas logique, mais chronologique : elle se déploie dans le temps. Les effets d’une action y deviennent les conditions ultérieures d'actions à venir.
 
-On parle alors de **causalité circulaire**. Cela ne signifie pas qu’une cause se produirait magiquement elle-même. La circularité n'est pas strictement logique, mais chronologique, elle se déploie dans le temps : les effets d’une action deviennent les conditions ultérieures d'actions futures.
-
-Le thermostat fournit un simple, souvent repris, de ce principe. La fonction d'un thermostat est de piloter la température d'une pièce.
-
-- Une température souhaitée, appellée consigne, lui est fournie.
-- Un capteur mesure la température présente.
-- Si la température est inférieure à la consigne, le chauffage s’active.
-- Le chauffage modifie la température de la pièce.
-- La nouvelle température est mesurée.
-- Cette mesure détermine l’action suivante.
+Le thermostat fournit un exemple simple et canonique de ce principe.
 
 ---
 <!-- slide: id="004e-temperature" title="Les variations de température" steps=4 -->
@@ -201,6 +146,15 @@ Le thermostat fournit un simple, souvent repris, de ce principe. La fonction d'u
 <TemperatureFeedbackCurve />
 
 --- notes
+
+La fonction d'un thermostat est de piloter la température d’une pièce. 
+
+- Un objectif de température, appellée consigne, lui est fourni.
+- Un capteur mesure la température actuel.
+- Si la température est inférieure à la consigne, le chauffage s’active.
+- Le chauffage modifie la température de la pièce.
+- La nouvelle température est mesurée.
+- Cette mesure détermine l’action suivante.
 
 Le thermostat tout-ou-rien reste notre exemple, mais nous allons maintenant regarder non plus le dispositif lui-même : nous allons suivre **l’évolution de la température de la pièce dans le temps**.
 

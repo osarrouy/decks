@@ -110,6 +110,9 @@ Dans les phénomènes sociaux, la visibilité peut également alimenter la visib
 ### L’action orientée vers un but
 
 
+un phénolène serait à lui-même sa propre cause.
+
+
 Nous avons introduit le concept de rétroaction avec l'exemple très simple du thermostat.
 
 Les cybernéticiens, eux, identifient de telles boucles de rétroaction dans une multiplicité de phénomène : le ré-enforcement des réseaux neuronaux, les bulles financières, 
