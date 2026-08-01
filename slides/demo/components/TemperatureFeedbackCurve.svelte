@@ -8,13 +8,13 @@
     $: oscillating = $step >= 3;
     $: explained = $step >= 4;
     $: status = explained
-        ? "La rétroaction négative stabilise dans une zone ; sa largeur dépend des seuils, de l’inertie et du délai de mesure."
+        ? "La rétroaction négative ne suffit pas : son gain et son délai déterminent si elle amortit ou entretient les oscillations."
         : oscillating
-          ? "Des seuils mal choisis ou une mesure trop tardive peuvent produire de grandes oscillations."
+          ? "Mal réglées, des corrections trop fortes ou trop tardives entretiennent l’oscillation."
           : settled
-            ? "Bien réglée, la température continue d’osciller, mais reste dans une bande étroite autour de la consigne."
+            ? "Bien réglées, les corrections diminuent à mesure que la température approche de la consigne."
             : started
-              ? "Sous le seuil bas, le chauffage s’allume ; au-dessus du seuil haut, il s’arrête."
+              ? "Chaque écart déclenche une correction de sens opposé."
               : "La consigne fixe une température cible de 20 °C.";
 </script>
 
@@ -25,7 +25,7 @@
     data-oscillating={oscillating}
     data-explained={explained}
     role="img"
-    aria-label="Graphique comparant deux thermostats tout-ou-rien à rétroaction négative. Une courbe bien réglée oscille faiblement dans une bande étroite autour de vingt degrés. Une courbe mal réglée produit de grandes oscillations à cause de seuils inadaptés, de l’inertie thermique ou d’une mesure trop tardive."
+    aria-label="Graphique comparant deux régulations par rétroaction négative. Une courbe bien réglée oscille de moins en moins et se stabilise autour de vingt degrés. Une courbe mal réglée dépasse continuellement la consigne à cause de corrections trop fortes ou trop tardives."
 >
     <div class="legend" aria-hidden="true">
         <span class="setpoint-key">consigne · 20 °C</span>
@@ -83,7 +83,7 @@
         <path
             class="curve stable-curve"
             pathLength="1"
-            d="M92 390 C145 380 177 285 230 188 C278 118 330 202 383 247 C437 288 492 234 548 218 C612 200 668 229 727 237 C790 245 834 217 878 225 C914 232 934 240 950 224"
+            d="M92 390 C145 380 177 285 230 188 C278 118 330 202 383 247 C437 288 492 234 548 218 C612 200 668 229 727 233 C790 237 848 228 950 230"
         ></path>
 
         <path
@@ -94,28 +94,28 @@
 
         <g class="corrections">
             <line x1="176" y1="330" x2="176" y2="252"></line>
-            <text x="188" y="295">allumer</text>
+            <text x="188" y="295">chauffer</text>
             <line x1="313" y1="164" x2="313" y2="207"></line>
-            <text x="325" y="182">arrêter</text>
+            <text x="325" y="182">ralentir</text>
         </g>
 
         <g class="stable-label">
             <line x1="720" y1="234" x2="782" y2="278"></line>
-            <text x="790" y="282">oscillation contenue</text>
+            <text x="790" y="282">écart amorti</text>
         </g>
 
         <g class="tuning-labels">
             <line x1="230" y1="105" x2="294" y2="82"></line>
-            <text x="304" y="86">chauffage trop prolongé</text>
+            <text x="304" y="86">correction trop forte</text>
             <line x1="726" y1="385" x2="786" y2="354"></line>
-            <text x="796" y="358">mesure trop tardive</text>
+            <text x="796" y="358">correction trop tardive</text>
         </g>
     </svg>
 
     <div class="comparison">
         <div class="comparison-card stable-card" data-active={settled}>
             <strong>Stabilisation</strong>
-            <span>La température reste dans une bande étroite.</span>
+            <span>Les corrections deviennent plus petites.</span>
         </div>
         <div class="comparison-card unstable-card" data-active={oscillating}>
             <strong>Oscillation entretenue</strong>

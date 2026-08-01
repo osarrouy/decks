@@ -88,26 +88,10 @@ L’objectif est de faire apparaître trois idées :
 
 **Temps indicatif : 6 minutes.**
 
-La structure rencontrée dans le dispositif antiaérien peut être isolée sous une forme générale :
 
-`objectif → action → effet → écart mesuré → nouvelle action`
-
-L’effet d’une action devient l’une des causes de l’action suivante. C’est ce que l’on appelle une **boucle de rétroaction**, ou *feedback*.
-
-Dans une représentation strictement linéaire de la causalité, `A` produit `B`, puis l’analyse s’arrête. Dans une boucle, `A` modifie `B`, puis le nouvel état de `B` revient modifier l’état suivant de `A`.
-
-On parle alors de **causalité circulaire**. Cela ne signifie pas qu’une cause se produirait magiquement elle-même. La circularité se déploie dans le temps : les effets d’une action deviennent de nouvelles conditions pour les actions ultérieures.
 
 ### Le thermostat
 
-Le thermostat fournit une version simple de cette structure.
-
-- Une température souhaitée constitue la **consigne**.
-- Un capteur mesure la température présente.
-- Si la température est inférieure à la consigne, le chauffage s’active.
-- Le chauffage modifie la température de la pièce.
-- La nouvelle température est mesurée.
-- Cette mesure détermine l’action suivante.
 
 Le thermostat n’a pas besoin de prévoir exactement l’évolution de toutes les molécules d’air de la pièce. Il lui suffit d’observer une variable pertinente, de la comparer à une consigne et de corriger l’écart.
 

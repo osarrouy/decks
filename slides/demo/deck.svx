@@ -4,30 +4,67 @@ theme: gallery
 ---
 <!-- slide: id="001-ouverture" title="Ouverture" steps=0 -->
 
-
-
 # Cybernetics
 kubernētēs {.kicker}
 
 --- notes
 
-Les progrès accomplis pendant la Seconde Guerre mondiale ne concernent pas seulement les machines à calculer. Le développement du radar, des télécommunications, des systèmes de visée antiaérienne et des premiers dispositifs automatiques fait surgir une série de questions nouvelles : comment une machine reçoit-elle des informations sur son environnement ? Comment peut-elle comparer le résultat de son action à un objectif donné ? Comment peut-elle, enfin, modifier son comportement en fonction de l’écart constaté ?
+Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domainesmaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
 
-À la fin des années 1940, certains chercheurs commencent à penser que ces questions ne concernent pas uniquement les machines. Un organisme maintient sa température malgré les variations de son environnement ; le cerveau utilise des informations sensorielles pour corriger un geste ; une organisation peut modifier ses décisions en fonction des résultats qu’elle observe. Dans chacun de ces cas, un système reçoit de l’information, agit, mesure les effets de son action et se réajuste.
+CCes technologies ont soulevé toute une série de nouvelles questions : comment le radar repère-t-il la position et la direction de l'avion ? Comment le système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ? Et si l’avion change de trajectoire, comment ajuster la visée ?
 
-C’est dans ce contexte que naît la cybernétique.
+ Ces questions peuvent sembler très techniques, voire sans grand intérêt. Pourtant, à la fin des années 1940, plusieurs chercheurs commencent à comprendre qu’elles ne concernent pas uniquement les machines. La même manière de raisonner pourrait servir à analyser des phénomènes qui, à première vue, n’ont rien à voir les uns avec les autres : comment un organisme maintient-il sa température malgré les variations de son environnement ; comment le cerveau utilise-t-il des informations sensorielles pour corriger un geste ; comment une organisation modifie-t-elle ses décisions en fonction des résultats qu’elle observe.
 
-Le terme s’impose en 1948 avec la publication du livre de Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine* — que l’on peut traduire par *La cybernétique, ou le contrôle et la communication chez l’animal et la machine*.
+Quel est le point commun entre ces phénomènes ? Dans chaque cas, un système reçoit des informations, agit sur son environnement, observe les effets de son action, puis ajuste son comportement en conséquence.
 
-Le mot « cybernétique » vient du grec *kubernētēs*, qui signifie « pilote » ou « timonier ». L’image est importante. Piloter un navire ne consiste pas à connaître à l’avance chacun des mouvements de la mer, du vent ou de la houle. Il faut observer la situation, comparer la trajectoire réelle à la trajectoire souhaitée, puis corriger continuellement le cap. Le contrôle cybernétique ne désigne donc pas nécessairement une maîtrise totale de l’environnement : il consiste plutôt à guider une action dans un monde complexe, changeant et en partie imprévisible.
+C'est à l'étude de ce type de phénomène que va - originellement du moins - se consacrer la cybernétique.
 
-Le terme existait cependant avant que Wiener ne lui donne son sens moderne. Au XIXe siècle, André-Marie Ampère avait déjà employé le mot « cybernétique » pour désigner une science du gouvernement, au sens politique. Wiener apprendra par la suite l’existence de cet usage antérieur. Cette proximité entre l’art de piloter et l’art de gouverner n’est pas seulement anecdotique : nous verrons que certains usages de la cybernétique entreront en résonance avec des manières de concevoir le gouvernement des sociétés et, notamment, avec un certain art libéral de gouverner.
+---
+<!-- slide: id="004aa-wiener" title="Norbert Wiener" steps=0 layout="two-columns" -->
 
-Chez Wiener, toutefois, le point de départ n’est pas une théorie du gouvernement des êtres humains. Il s’agit d’abord de comprendre comment une machine ou un organisme peut maintenir une trajectoire, poursuivre un but ou préserver une certaine stabilité malgré les perturbations. La cybernétique se présente ainsi comme l’étude des mécanismes de communication, de contrôle et de régulation chez les êtres vivants comme dans les machines. Elle réunit des chercheurs venus de domaines très différents — mathématiques, ingénierie, physiologie, neurologie, psychologie ou sciences sociales — qui découvrent qu’ils peuvent décrire certains de leurs problèmes à l’aide d’un vocabulaire commun.
+<div>
 
-Il n’est pourtant pas facile de présenter clairement ce qu’est la cybernétique.
+# Norbert Wiener
 
-Une première difficulté tient à la circulation constante des modèles entre des domaines très différents. Les notions de commande et de contrôle issues de l’ingénierie servent à penser le vivant ; les circuits électroniques fournissent des modèles du cerveau ; les sociétés et les organisations sont, à leur tour, décrites comme des systèmes de communication et de régulation. Ces rapprochements ont parfois produit des hypothèses et des résultats scientifiques féconds. Mais tous n’ont pas la même solidité : lorsqu’un modèle passe de la machine à l’organisme, puis de l’organisme à la société, il peut perdre en précision ce qu’il gagne en pouvoir d’évocation. Il faudra donc rester attentif à la différence entre un modèle rigoureux, une analogie utile et une simple métaphore.
+1894–1964 {.kicker}
+
+</div>
+
+<figure class="wiener">
+
+![Norbert Wiener](/wiener.jpg){data-glow="strong"}
+</figure>
+
+--- notes
+
+Le terme de cybernétique s’impose en 1948 avec la publication d'un livre de Norbert Wiener intitulé *Cybernetics, or Control and Communication in the Animal and the Machine* — que l’on peut traduire par *La cybernétique, ou le contrôle et la communication chez l’animal et la machine*.
+
+Norbert Wiener est un mathématicien, physicien et philosophe américain qui a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation - et qui a justement travaillé, pendant la guerre, sur des systèmes de visée anti-aérienne.
+
+### Étymologie
+
+Le mot « cybernétique » vient du grec *kubernētēs* qui signifie « pilote » ou « timonier » - et constitue aussi la racine de mots comme « gouvernail » ou « gouvernement ».
+
+Ce choix n'est pas complètement anecdotique. Gouverner un navire ne consiste pas à connaître à l’avance chacun des mouvements de la mer, du vent ou de la houle mais à composer avec un environnement changeant et incertain.
+
+Or c’est précisément ce que Norbert Wiener cherche à penser : un contrôle cybernétique qui ne consiste pas à maîtriser un environnement entièrement connu, mais à guider une action dans un monde complexe, changeant et en partie imprévisible.
+
+Wiener apprendra après coup que le terme cybernétique existait en fait déjà. André-Marie Ampère l'avait employé, au XIXe siècle, pour désigner une science du gouvernement des hommes - des hommes eux aussi changeants et imprévisibles. Cette proximité, bien que fortuite, n’est pas sans importance : nous verrons que certains concepts de la cybernétique résonnent avec les théories néo-libérale du gouvernement des hommes.
+
+### Définition
+
+Chez Wiener, toutefois, le point de départ n’est pas une théorie du gouvernement des êtres humains. Il s’agit d’abord de comprendre comment une machine ou un organisme peut maintenir une trajectoire, poursuivre un but ou préserver une certaine stabilité malgré les perturbations extérieures. Il définira ainsi la cybernétique comme *l’étude des mécanismes de communication, de contrôle et de régulation chez les êtres vivants comme dans les machines*.
+
+Or, entre les années 1940 et 1960, ce projet suscite un vif intérêt chez des chercheurs issus de disciplines très diverses. Des ingénieurs commencent ainsi à décrire le fonctionnement des machines à l’aide de notions issues de la physiologie ; à l'inverse, des neurologues comparent le fonction des réseaux neuronaux à ceux des circuits informatiques ; et des psychologues ou des chercheurs en sciences sociales utilisent des notions issues de la cybernétique pour analyser l’apprentissage, la communication ou la décision collective.
+
+### Mise en garde
+
+Cette circulation entre des domaines très éloignés a fait la richesse de la cybernétique, mais elle rend aussi sa définition difficile. La cybernétique n’a jamais été une discipline spécialisée dans un seul objet : elle a constitué un langage commun pour étudier des phénomènes qui peuvent avoir une forme analogue — communication, contrôle, régulation — tout en étant, dans les faits, très différents selon qu’ils concernent une machine, un organisme ou une société. Ces rapprochements ont pu produire des hypothèses fécondes, mais ils doivent être utilisés avec prudence : lorsqu’un modèle passe de la machine à l’organisme, puis de l’organisme à la société, il gagne parfois en portée ce qu’il perd en précision.
+
+La cybernétique est également difficile à définir en raison de son statut historique. Elle n'a jamais constituée une science unifiée - comparable à la physique, à la biologie ou à l’économie. Il serait plus juste de la définir comme un mouvement intellectuel ou une école de pensée historiquement située et qui échouera pour l'essentiel à se constituer comme une discipline autonome. La mode cybernétique s'estompera ainsi à partir des années 1960 et 1970 tandis que ses concepts sont repris et transformés par d’autres disciplines : l’automatique, la théorie des systèmes, les sciences cognitives, l’intelligence artificielle, les interfaces homme-machine, le management ou certains courants du néolibéralisme. 
+
+Même si peu d’institutions portent encore aujourd’hui le nom de « cybernétique », les notions qu’elle a contribué à rapprocher — information, rétroaction, système, régulation, comportement et auto-organisation — sont devenues centrales dans de nombreux domaines, notamment dans les sciences de l’information et de la communication.
+
 
 Une seconde difficulté tient au statut historique de la cybernétique. Celle-ci ne désigne pas une science parfaitement unifiée, mais plutôt un mouvement intellectuel qui se développe principalement entre les années 1940 et 1960 et dont les contours demeurent incertains. La cybernétique s’est bien dotée de rencontres, de revues, d’associations et de quelques institutions ; elle ne s’est cependant pas durablement stabilisée comme une discipline générale comparable à la physique, à la biologie ou à l’économie. À partir des années 1960 et 1970, son nom perd progressivement de sa visibilité dans de nombreux pays, tandis que ses concepts sont repris et transformés par d’autres domaines : l’automatique, la théorie des systèmes, les sciences cognitives, l’intelligence artificielle, les interfaces homme-machine, le management ou encore certains courants du néolibéralisme. Peu d’institutions universitaires conservent aujourd’hui le nom de « cybernétique ». Pourtant, plusieurs notions qu’elle a contribué à rapprocher — information, rétroaction, système, régulation, comportement, auto-organisation — sont devenues omniprésentes, y compris dans les sciences de l’information et de la communication.
 
@@ -105,15 +142,6 @@ Le problème combine plusieurs difficultés :
 - le calcul et l’action prennent du temps ;
 - chaque nouvelle observation peut rendre l’estimation précédente obsolète.
 
-Le dispositif doit donc accomplir plusieurs opérations :
-
-1. mesurer une trajectoire partielle ;
-2. distinguer autant que possible le mouvement du bruit ;
-3. estimer une position future ;
-4. comparer cette estimation aux nouvelles positions observées ;
-5. modifier la prédiction suivante.
-
-
 Ce problème ne fonde pas à lui tout seul la cybernétique. Il lui propose en revanche un monde. Un monde qui n'est plus entièrement prévisivible à partir d'un état initial. Un monde fait de délais, de perturbations, d’erreurs de mesure et dispositifs qui réagissent les uns aux autres.
 
 Or les complications de ce monde sont importantes parce qu'elles imposent de penser autrement le problème du contrôle. Non plus depuis l'hypothèse d'une certaine prédicitibilité que garantirait une représentation parfaite ou totale de l'avenir. Mais depuis la contrainte d'une incertitude fondamentale, première, ontologique. Une contrainte transformant le contrôle en un processus continu d'adapatation, d'ajustement et de réduction des écarts entre le réel et sa projection par l'action d'un système.
@@ -121,58 +149,63 @@ Or les complications de ce monde sont importantes parce qu'elles imposent de pen
 > [!COMMENT]
 > Laisser l’animation accomplir un cycle complet et insister sur le dernier mouvement, qui ramène l’écart entre la position anticipée et la position ensuite observée vers le calcul : la prédiction suivante est ré-ajustée.
 
-Ce phénomène, nous le trouvons, partout : dans le GPS qui recalcule votre itinéraire lorsque vous vous êtes écartés de la route ; dans le routage des données sur le réseau Internet ; dans le LLM qui s'ajuste à la conversation que vous tenez avec lui ; mais aussi, par exemple, dans la gestion de la propagation du COVID ou dans 
+Ce phénomène, nous le trouvons, partout : dans le GPS qui recalcule votre itinéraire lorsque vous vous êtes écartés de la route ; dans le routage des données sur le réseau Internet ; dans le LLM qui s'ajuste à la conversation que vous tenez avec lui ; mais aussi, par exemple, dans le fonctionnement des algorithmes de recommandation des réseaux sociaux ou dans la gestion de la propagation du COVID.
 
-à partir d'une représentation parfaite ou totale de l'avenir garantissant la prédictibilité de ce monde, mais depuis une incertitude fondamentale, première, ontologique, 
-
-mais en posant l'incertitude comme une de ses réalités fondamentales. Une 
+Dans chacun de ces cas, le contrôle relève moins de la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger des écarts** à l'intérieur d'un système dont l'efficacité tient moins à ce qu'il possèderait une représentation parfaite de l'avenir, qu'à sa capacité à  **ajuster son action à partir de nouvelles observations**.
 
 
-La configuration de ce monde est importante parce qu'elle impose de poser autrement le problème du contrôle. Prédiction . INCERTITUDE.
+On parle alors de *boucle de rétroaction*, ou, en anglais, de *feedback*.
 
-Elle ouvre sur une manière différente de penser le contrôle. Ici, les observations successives recalent la prédiction. Dans une boucle de régulation, l’action est en plus toujours provisoire : elle modifie le système, cet effet est mesuré, puis l’action suivante est ajustée.
-
-Dans chacun de ces cas, le contrôle relève moins de la possession d’un savoir total que la capacité à **recevoir rapidement des informations pertinentes et à corriger des écarts** à l'intérieur d'un système dont l'efficace tient moins à ce qu'il possèderait une représentation parfaite de l'avenir, qu'à sa capacité à  **ajuster son action à partir de nouvelles observations**.
-
-On parle alors de boucle de rétroaction.
-
-
-
-
-### Question aux étudiants
-
-> [!COMMENT]
-> Demander : « Lorsque votre GPS recalcule un trajet après une erreur, avait-il besoin de prévoir exactement ce que vous alliez faire ? »
-
-La réponse attendue est non. Il lui suffit de détecter un écart, de recalculer et de proposer une nouvelle action. C’est cette capacité de correction qui permet de **piloter sans tout prévoir**.
-
-### Transition
-
-Ce premier exemple nous apprend donc à suivre une relation entre mesure, prédiction et correction, sans encore devoir décrire tout ce qui se passe dans l’avion ou chez le pilote. Il prépare ainsi, sans encore s’y confondre, la rétroaction : 
 
 [Sources]
 - Norbert Wiener, *Extrapolation, Interpolation, and Smoothing of Stationary Time Series*, travail diffusé en 1942 sous la forme d’un mémorandum classifié, puis publié en volume en 1949 (Technology Press du MIT / John Wiley ; Chapman & Hall au Royaume-Uni), https://mitpress.mit.edu/9780262230025/extrapolation-interpolation-and-smoothing-of-stationary-time-series/ et https://doi.org/10.2307/2981007.
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 [/Sources]
+
 ---
-<!-- slide: id="004e-retroaction" title="La rétroaction" steps=4 -->
+# Rétroaction
+feedback {.kicker}
+
+---
+<!-- slide: id="004e-retroaction" title="La rétroaction" steps=1 -->
 
 <script>
-  import TemperatureFeedbackCurve from '$components/TemperatureFeedbackCurve.svelte'
+  import CausalityFeedback from '$components/CausalityFeedback.svelte'
 </script>
 
-<p class="kicker">Feedback · causalité circulaire</p>
-
-
-
-# La sortie revient dans l’entrée
-
-<TemperatureFeedbackCurve />
+<CausalityFeedback />
 
 --- notes
 
 Temps indicatif : **6 minutes**.
 
+> [!COMMENT]
+> À l’arrivée sur la slide, suivre la flèche de A vers B. À l’étape suivante, faire apparaître le retour orthogonal de B vers A ; préciser oralement qu’il modifie l’état suivant de A.
+
+
+Dans une représentation strictement linéaire de la causalité, `A` produit `B`, et l’analyse s’arrête là. Dans une boucle, `A` modifie `B`, puis le nouvel état de `B` revient modifier l’état suivant de `A`.
+
+On parle alors de **causalité circulaire**. Cela ne signifie pas qu’une cause se produirait magiquement elle-même. La circularité n'est pas strictement logique, mais chronologique, elle se déploie dans le temps : les effets d’une action deviennent les conditions ultérieures d'actions futures.
+
+Le thermostat fournit un simple, souvent repris, de ce principe. La fonction d'un thermostat est de piloter la température d'une pièce.
+
+- Une température souhaitée, appellée consigne, lui est fournie.
+- Un capteur mesure la température présente.
+- Si la température est inférieure à la consigne, le chauffage s’active.
+- Le chauffage modifie la température de la pièce.
+- La nouvelle température est mesurée.
+- Cette mesure détermine l’action suivante.
+
+---
+<!-- slide: id="004e-temperature" title="Les variations de température" steps=4 -->
+
+<script>
+  import TemperatureFeedbackCurve from '$components/TemperatureFeedbackCurve.svelte'
+</script>
+
+<TemperatureFeedbackCurve />
+
+--- notes
 
 Le thermostat tout-ou-rien reste notre exemple, mais nous allons maintenant regarder non plus le dispositif lui-même : nous allons suivre **l’évolution de la température de la pièce dans le temps**.
 
@@ -181,25 +214,23 @@ La ligne horizontale représente une consigne de 20 °C et la zone rose une peti
 > [!COMMENT]
 > Faire avancer les quatre étapes : montrer la première commutation ; prolonger la courbe bien réglée dans sa bande étroite ; faire apparaître les grandes oscillations du système mal réglé ; révéler enfin le rôle de l’inertie et du retard de mesure.
 
-Ce schéma rompt avec une représentation strictement linéaire de la causalité :
+### Rétroaction négative
 
-`A cause B`, puis l’histoire s’arrête.
-
-Dans une boucle :
-
-`A modifie B`, puis l’état de `B` revient modifier le prochain état de `A`.
-
-On parle de **causalité circulaire**. Cela ne signifie pas une cause magique qui se produirait elle-même. Cela signifie que le comportement du système se déploie dans le temps et que ses effets deviennent de nouvelles conditions.
+On parle ici de rétroaction négative dans la mesure où cette rétroaction a pour fonction de réduire un écart, de s'opposer à une variation. Si la pièce refroidit, le thermostat compense le refroidissement. A l'inverse, si la pièce est trop chaude, le thermostat réduit la chaleur. Le mot « négative » ne signifie pas donc mauvaise ou nuisible. Il indique que la réponse agit dans le sens opposé à la perturbation.
 
 
+### Rétroaction positive
 
-### Deux types de rétroaction
+Il existe aussi la **rétroaction positive** qui amplifie une variation. Lorsqu’un microphone reprend le son d’un haut-parleur, le signal amplifié est capté puis amplifié de nouveau. La boucle peut produire un emballement : c’est l’effet Larsen.
 
-La **rétroaction négative** réduit un écart. Sur la courbe rose, les allumages et arrêts successifs maintiennent la température dans une bande étroite autour de la consigne. Le mot « négative » ne signifie donc pas mauvaise ; il désigne le fait que la réponse s’oppose à la variation.
+Dans les phénomènes sociaux, la visibilité peut également alimenter la visibilité. Une rumeur très partagée devient plus visible ; cette visibilité provoque de nouveaux partages, qui l’amplifient encore. Le mot « positive » ne signifie donc pas bénéfique. A vrai dire, les boucles de rétroaction positive créent souvent des systemes divergents et instables.
 
-La stabilisation n’est toutefois pas automatique. Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’agit toujours d’une rétroaction négative. Mais une pièce et un radiateur possèdent une inertie thermique ; le chauffage continue à produire des effets après son arrêt. Si les seuils sont mal choisis ou si la mesure arrive trop tard, la température dépasse largement la cible avant que la correction inverse ne produise son effet. La boucle peut alors entretenir de grandes oscillations.
+### Rétroaction et régulation
 
-La **rétroaction positive** amplifie au contraire une variation. Un micro trop proche d’un haut-parleur reprend le son amplifié, qui est de nouveau amplifié : le système s’emballe. Dans les phénomènes sociaux, une rumeur peut gagner en visibilité parce que sa visibilité attire de nouvelles reprises. « Positive » ne signifie donc pas bénéfique.
+Notez toutefois qu'une boucle de rétroaction négative n'implique pas nécessaire la stabilité. Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’agit toujours d’une rétroaction négative.
+
+Mais une pièce et un radiateur possèdent une inertie thermique ; le chauffage continue à produire des effets après son arrêt. Si les seuils sont mal choisis ou si la mesure arrive trop tard, la température dépasse largement la cible avant que la correction inverse ne produise son effet. La boucle peut alors entretenir de grandes oscillations.
+
 
 ### Ce que la boucle change politiquement
 
