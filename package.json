@@ -6,6 +6,7 @@
   "packageManager": "pnpm@9.14.4",
   "scripts": {
     "dev:demo": "node svx-slides/src/cli/index.mjs dev slides/demo",
+    "dev:economics": "node svx-slides/src/cli/index.mjs dev slides/economics",
     "build:demo": "node svx-slides/src/cli/index.mjs build slides/demo --public",
     "build:demo:public": "node svx-slides/src/cli/index.mjs build slides/demo --public",
     "build:demo:presenter": "node svx-slides/src/cli/index.mjs build slides/demo --presenter",

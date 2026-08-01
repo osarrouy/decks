@@ -1,0 +1,1113 @@
+---
+title: Économie des données — de l’attention à l’IA
+theme: gallery
+---
+<!-- slide: id="001-ouverture" title="Ouverture" layout="cover" steps=0 -->
+
+<div class="economics-hero">
+  <p class="kicker">Introduction aux cultures numériques · 4 heures</p>
+  <h1>Qui capte quoi ?</h1>
+  <p class="hero-subtitle">De l’économie de l’attention à l’IA contemporaine</p>
+  <div class="hero-line"><span>attention</span><span>→</span><span>trace</span><span>→</span><span>prédiction</span></div>
+</div>
+
+--- notes
+
+Bienvenue. Ce cours ne part pas de l’idée que « les utilisateurs sont le produit », formule commode mais trop courte. Nous allons suivre une transformation plus précise : une activité ordinaire devient une trace ; la trace devient un signal mesurable ; le signal entre dans une boucle technique et économique ; la boucle produit des prédictions et oriente en retour l’expérience.
+
+Question d’ouverture : qu’est-ce qu’une plateforme peut savoir de vous après dix minutes de navigation — et qu’est-ce qu’elle ne sait toujours pas ?
+
+Annonce du parcours : histoire de la publicité en ligne, économie de l’attention, plateformes sociales, design de la captation, capitalisme de surveillance, puis transition vers le deep learning et les LLM.
+
+Temps indicatif : 3 minutes.
+---
+<!-- slide: id="002-question" title="La question" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Une scène ordinaire</p>
+
+# Vous ouvrez un fil d’actualité
+
+<div class="sequence large-sequence">
+  <Fragment at={1}><span>vous regardez</span></Fragment>
+  <span class="arrow">→</span>
+  <Fragment at={2}><span>la plateforme mesure</span></Fragment>
+  <span class="arrow">→</span>
+  <Fragment at={3}><span>le fil se recompose</span></Fragment>
+</div>
+
+<p class="question">Que devient votre attention lorsqu’elle revient modifier ce qui vous est montré ?</p>
+
+--- notes
+
+Faire avancer les trois étapes. Demander aux étudiants d’énumérer les traces possibles : durée de visionnage, arrêt, défilement, clic, partage, commentaire, appareil, heure, localisation approximative.
+
+Insister sur la distinction entre la trace et l’expérience : dix-huit secondes de visionnage sont une mesure utile pour un système ; elles ne disent pas automatiquement ce que la vidéo a signifié pour la personne.
+
+Temps indicatif : 4 minutes.
+---
+<!-- slide: id="003-carte" title="Le parcours" steps=0 -->
+
+<p class="kicker">Le fil directeur</p>
+
+# Quatre déplacements
+
+<div class="card-grid four-cards">
+  <div class="concept-card"><span class="card-index">01</span><h3>Rendre visible</h3><p>Mesurer une audience, une impression, un clic.</p></div>
+  <div class="concept-card"><span class="card-index">02</span><h3>Rendre calculable</h3><p>Transformer une activité en signal et en métrique.</p></div>
+  <div class="concept-card"><span class="card-index">03</span><h3>Rendre prévisible</h3><p>Estimer ce qu’une personne fera ensuite.</p></div>
+  <div class="concept-card"><span class="card-index">04</span><h3>Rendre orientable</h3><p>Modifier le contexte dans lequel elle choisit.</p></div>
+</div>
+
+--- notes
+
+Ces quatre verbes organisent le cours. Ils ne décrivent pas quatre étapes parfaitement séparées : elles se superposent. La publicité traditionnelle mesure déjà ; le web accélère la mesure. La recommandation ne fait pas que prédire ; elle recompose l’environnement de choix.
+
+Temps indicatif : 3 minutes.
+---
+<!-- slide: id="004-seuil" title="Séquence I" layout="cover" steps=0 -->
+
+<div class="layout center">
+<div>
+<p class="kicker">Séquence I · Médias et rareté</p>
+# De l’audience à l’économie de l’attention
+<p class="lead muted">Ce qui est rare n’est pas toujours ce qui est vendu.</p>
+</div>
+</div>
+
+--- notes
+
+Transition. Avant les plateformes, les médias avaient déjà appris à constituer un public, à le mesurer et à le vendre à des annonceurs.
+
+Temps indicatif : 2 minutes.
+---
+<!-- slide: id="005-audience" title="Audience commodity" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Dallas Smythe · audience commodity</p>
+
+# Ce que les médias vendent
+
+<div class="flow vertical-flow">
+  <Fragment at={1}><div class="flow-node">contenu</div></Fragment>
+  <span class="arrow">↓</span>
+  <Fragment at={2}><div class="flow-node accent-node">attention mesurée</div></Fragment>
+  <span class="arrow">↓</span>
+  <Fragment at={3}><div class="flow-node">audience proposée aux annonceurs</div></Fragment>
+</div>
+
+<p class="statement">Le public n’est pas seulement destinataire : il est aussi <strong>constitué comme une offre</strong>.</p>
+
+--- notes
+
+Smythe analyse les médias financés par la publicité : le contenu attire et organise l’attention ; cette audience, mesurée par l’audimat ou d’autres instruments, devient une marchandise négociable.
+
+Précision historique : les textes de Smythe sont cités selon des éditions et recueils différents. Le texte « On the Audience Commodity and Its Work » est souvent référencé à 1977, tandis que le recueil *Dependency Road* date de 1981. Ne pas attribuer une date unique sans préciser la source.
+
+La thèse ne signifie pas que le contenu ne compte pas. Il est une condition de constitution de l’audience, et sa forme transforme la qualité de l’attention disponible.
+
+Temps indicatif : 5 minutes.
+
+[Sources]
+- Dallas W. Smythe, « Communications: Blindspot of Western Marxism », *Canadian Journal of Political and Social Theory*, 1977.
+- Dallas W. Smythe, *Dependency Road: Communications, Capitalism, Consciousness and Canada*, Ablex, 1981.
+[/Sources]
+---
+<!-- slide: id="006-biface" title="Marché biface" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Deux faces · une infrastructure</p>
+
+# Un marché ne relie pas seulement deux personnes
+
+<div class="two-sided-market">
+  <Fragment at={1}><div class="market-side"><strong>Usagers</strong><span>attention · traces · activité</span></div></Fragment>
+  <div class="platform-core">PLATEFORME<br><small>mesure · classement · mise en relation</small></div>
+  <Fragment at={2}><div class="market-side"><strong>Annonceurs</strong><span>budget · message · objectif</span></div></Fragment>
+</div>
+
+<Fragment at={3}><p class="statement">La valeur vient aussi de la <strong>coordination</strong> entre les deux faces.</p></Fragment>
+
+--- notes
+
+Introduire le marché biface sans remplacer Smythe par une formule économique. Une plateforme offre souvent un service subventionné ou gratuit à une face pour attirer l’autre. Plus il y a d’usagers, plus l’inventaire publicitaire peut être valorisé ; plus il y a d’annonceurs, plus le service peut être financé et amélioré.
+
+Précision : « si c’est gratuit, c’est toi le produit » décrit parfois une asymétrie, mais il écrase les échanges multiples. L’utilisateur peut être une source de données, un producteur de contenu, un destinataire de service et une audience vendue sous forme de possibilités d’exposition — pas une marchandise unique et simple.
+
+Question : une bibliothèque publique, un moteur de recherche et un réseau social ont-ils le même modèle biface ? Qu’est-ce qui change lorsque l’infrastructure est financée par l’impôt, l’abonnement ou la publicité ?
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="007-attention" title="Rareté" steps=0 -->
+
+<p class="kicker">Herbert Simon · Michael Goldhaber</p>
+
+# Dans un monde riche en information
+
+<div class="attention-equation">
+  <div><span class="big-number">∞</span><small>information disponible</small></div>
+  <span class="equation-arrow">→</span>
+  <div><span class="big-number limited">1</span><small>attention située</small></div>
+</div>
+
+<p class="statement">L’abondance informationnelle ne supprime pas la rareté : elle la <strong>déplace</strong>.</p>
+
+--- notes
+
+Simon écrit en 1971 que, dans un monde riche en information, la richesse d’information crée une pauvreté d’attention. Chez lui, il s’agit d’abord d’une limite des capacités de traitement et de décision, pas encore d’une théorie complète des plateformes.
+
+Goldhaber popularise ensuite l’expression « attention economy » dans le contexte de l’Internet des années 1990. L’information numérique se copie à coût marginal faible ; l’attention humaine reste située, finie, concurrentielle.
+
+Précision : ne pas dire que l’attention est une ressource naturellement fixe ou qu’elle se mesure comme une quantité homogène. Il existe des formes d’attention différentes, des pratiques collectives et des dispositifs qui peuvent soutenir ou fragmenter l’attention.
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- Herbert A. Simon, « Designing Organizations for an Information-Rich World », 1971.
+- Michael H. Goldhaber, « The Attention Economy and the Net », *First Monday*, 1997, https://doi.org/10.5210/fm.v2i4.519.
+[/Sources]
+---
+<!-- slide: id="008-activite-1" title="Activité 1" steps=0 layout="center" -->
+
+<div class="layout center">
+<div class="activity-card">
+<p class="kicker">Deux minutes seul·e · cinq minutes à deux</p>
+<h1>Qu’est-ce qui est vendu ?</h1>
+<p class="lead">Choisissez : journal gratuit, chaîne de télévision, moteur de recherche, réseau social.</p>
+<p class="question">Quel contenu attire ? Quelle audience est mesurée ? Quelle promesse est faite à l’annonceur ?</p>
+</div>
+</div>
+
+--- notes
+
+Faire répondre les étudiants en trois colonnes : contenu / mesure / promesse. Il faut faire apparaître que « l’attention » n’est pas seulement une durée : elle peut être segmentée par contexte, profil supposé, engagement ou probabilité d’action.
+
+Mise en commun rapide. Garder les réponses au tableau : elles serviront à comparer l’affichage, la recherche et le fil social.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="009-banniere" title="1994" steps=0 layout="two-columns" -->
+
+<div>
+<p class="kicker">HotWired · 27 octobre 1994</p>
+# « You will. »
+<p class="lead">La première bannière largement reconnue comme telle : AT&T invite à cliquer.</p>
+</div>
+
+<div class="image-card">
+<img src="/first_add.png" alt="Première bannière AT&T sur HotWired" data-glow="soft" />
+<p class="caption">Une publicité pour Internet… sur Internet.</p>
+</div>
+
+--- notes
+
+La bannière AT&T apparaît sur HotWired le 27 octobre 1994, avec la phrase « Have you ever clicked your mouse right HERE? … YOU WILL. » Elle renvoie vers une page qui présente des usages du futur numérique.
+
+Vigilance historique : le chiffre de 44 % est le taux de clic rapporté pour cette campagne inaugurale, dans un contexte de curiosité exceptionnel. Ce n’est ni une moyenne de l’époque ni une mesure directement comparable aux taux actuels ; les conventions de comptage et les audiences diffèrent.
+
+Ce premier geste est déjà double : attirer l’attention et produire une mesure immédiate de la réaction. Le clic devient une trace observable, donc une unité possible de facturation.
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- Wired, « The First Banner Ad », 27 octobre 2010, https://www.wired.com/2010/10/1027first-banner-ad/.
+[/Sources]
+---
+<!-- slide: id="010-metriques" title="Métriques" steps=4 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">Une histoire des unités de valeur</p>
+
+# De la visibilité à l’action
+
+<div class="metric-row">
+  <Fragment at={1}><div class="metric"><b>CPM</b><span>1 000 impressions</span><small>être vu</small></div></Fragment>
+  <Fragment at={2}><div class="metric"><b>CPC</b><span>1 clic</span><small>manifester un intérêt</small></div></Fragment>
+  <Fragment at={3}><div class="metric"><b>CPA</b><span>1 action</span><small>convertir</small></div></Fragment>
+  <Fragment at={4}><div class="metric"><b>RTB</b><span>1 impression</span><small>enchérir maintenant</small></div></Fragment>
+</div>
+
+<p class="statement">Chaque métrique est aussi une <strong>théorie miniature du comportement</strong>.</p>
+
+--- notes
+
+CPM : l’annonceur paie pour mille impressions. CPC : il paie pour un clic. CPA : il paie pour une action définie — achat, inscription, téléchargement — souvent mesurée après le clic. RTB : ce n’est pas un modèle de facturation en soi, mais un mécanisme automatisé d’achat et de vente d’impressions, souvent impression par impression.
+
+Vigilance : ne pas présenter une trajectoire universelle où le CPM serait simplement remplacé par le CPC puis le CPA. Ces modèles coexistent selon les formats, les contrats et les objectifs.
+
+Le déplacement conceptuel est important : plus on avance vers l’action, plus le marché exige du suivi, de l’attribution et des hypothèses sur ce que l’utilisateur aurait fait sans la publicité.
+
+Temps indicatif : 7 minutes.
+---
+<!-- slide: id="011-google" title="Google" steps=0 -->
+
+<p class="kicker">BackRub · PageRank · 1996–1998</p>
+
+# Avant la régie, un problème de classement
+
+<div class="rank-diagram">
+  <div class="rank-node">page A</div><span>→</span><div class="rank-node highlighted">page B</div><span>←</span><div class="rank-node">page C</div>
+</div>
+
+<p class="statement">PageRank convertit les liens en <strong>signaux d’autorité</strong>.</p>
+<p class="muted center-text">Un lien compte davantage lorsqu’il vient d’une page elle-même reconnue.</p>
+
+--- notes
+
+Larry Page et Sergey Brin travaillent à Stanford sur BackRub à partir de 1996. PageRank s’inspire notamment de l’analogie entre liens hypertextes et citations scientifiques : un lien est un vote, mais un vote pondéré par l’autorité de la page qui le porte.
+
+Il faut distinguer deux histoires : l’algorithme de classement organique et le modèle économique publicitaire. Le moteur peut organiser l’information sans être encore une régie rentable.
+
+Cette distinction sera ensuite travaillée : quand des résultats sponsorisés sont classés par un algorithme de pertinence, la frontière entre organiser et monétiser l’accès devient plus difficile à maintenir visible.
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- Sergey Brin et Lawrence Page, « The Anatomy of a Large-Scale Hypertextual Web Search Engine », *Computer Networks*, 1998.
+[/Sources]
+---
+<!-- slide: id="012-overture" title="GoTo / Overture" steps=3 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">1997–2003 · enchères sur mots-clés</p>
+
+# Le clic devient un marché
+
+<div class="auction-board">
+  <Fragment at={1}><div><span class="bid">pharmacie</span><small>mot-clé</small></div></Fragment>
+  <Fragment at={2}><div class="bids"><span>1,20 $</span><span>0,95 $</span><span>0,72 $</span></div></Fragment>
+  <Fragment at={3}><div class="winner">résultat sponsorisé<br><small>paiement au clic</small></div></Fragment>
+</div>
+
+<p class="question">Que mesure un clic — et que ne mesure-t-il pas ?</p>
+
+--- notes
+
+GoTo.com, futur Overture, introduit à la fin des années 1990 un modèle de liens sponsorisés fondé sur les mots-clés et le paiement au clic. Le moteur lie une requête exprimée à un marché publicitaire.
+
+Le CPC ne mesure pas une intention transparente. Un clic peut être curiosité, erreur, recherche d’information, acte d’achat ou simple réponse à la mise en page.
+
+Vigilance : ne pas raconter Google comme l’inventeur unique du pay-per-click. GoTo/Overture a joué un rôle décisif dans la formalisation du modèle ; Google a ensuite intégré et industrialisé ces principes dans son propre environnement.
+
+Temps indicatif : 7 minutes.
+
+[Sources]
+- Google, « Google Launches AdWords Select », février 2002, https://googlepress.blogspot.com/2002/02/google-launches-self-service-advertising.html.
+- Google, « Google Launches Advertising Program », octobre 2000, https://googlepress.blogspot.com/2000/10/google-launches-advertising-program.html.
+[/Sources]
+---
+<!-- slide: id="013-adwords" title="AdWords" steps=0 -->
+
+<p class="kicker">Google · 2000 → 2002 → 2005</p>
+
+# La pertinence devient calculable
+
+<div class="timeline compact-timeline">
+  <div><b>2000</b><span>AdWords<br><small>lancement, principalement au CPM</small></span></div>
+  <div><b>2002</b><span>AdWords Select<br><small>CPC et enchères</small></span></div>
+  <div><b>2005</b><span>Quality Score<br><small>qualité nommée et formalisée</small></span></div>
+  <div><b>2018</b><span>Google Ads<br><small>un périmètre élargi</small></span></div>
+</div>
+
+<p class="statement">L’annonce n’est pas seulement achetée : elle est <strong>évaluée</strong>.</p>
+
+--- notes
+
+Séquence à tenir précisément : Google lance AdWords en octobre 2000, avec un produit initial principalement fondé sur l’exposition. En février 2002, AdWords Select introduit une offre self-service et CPC avec enchères. Google utilise déjà des éléments de performance et de pertinence dans le classement ; Quality Score formalise ensuite cette logique comme concept nommé, généralement situé en 2005.
+
+Vigilance : ne pas dire que Quality Score invente soudainement toute pertinence, ni projeter les composants actuels exactement tels quels sur 2005. Les métriques et leur poids ont évolué.
+
+Le geste économique est double : réduire le risque pour l’annonceur et faire de l’expérience de recherche une variable de l’optimisation publicitaire.
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- Google Press Archive, 2000 et 2002, liens indiqués sur la slide précédente.
+- Google Ads Help, « About Quality Score », https://support.google.com/google-ads/answer/2454010.
+[/Sources]
+---
+<!-- slide: id="014-enchere" title="Enchère" steps=0 -->
+
+<p class="kicker">Une formule simplifiée</p>
+
+# Qui apparaît en premier ?
+
+<div class="formula-card">
+  <div class="formula">Ad Rank ≈ enchère × qualité attendue</div>
+  <p>La formule réelle varie selon les systèmes, les formats et les périodes.</p>
+</div>
+
+<div class="rank-list">
+  <span><b>A</b> 2,00 $ × qualité 4 = <strong>8</strong></span>
+  <span><b>B</b> 1,40 $ × qualité 8 = <strong>11,2</strong></span>
+  <span><b>C</b> 2,50 $ × qualité 2 = <strong>5</strong></span>
+</div>
+
+<p class="question">Le plus offrant n’est pas nécessairement le mieux placé.</p>
+
+--- notes
+
+La slide ne donne pas la formule complète d’une enchère actuelle. Elle sert à comprendre une inflexion : la plateforme cherche à tenir ensemble revenu publicitaire et expérience de recherche.
+
+Le Quality Score visible aujourd’hui est un outil de diagnostic ; il ne résume pas à lui seul la formule d’enchère en temps réel. Les composants souvent cités sont le CTR attendu, la pertinence de l’annonce et l’expérience de la page de destination.
+
+Question : qui définit la « qualité » ? La plateforme, à partir de quelles traces ? Qu’est-ce qui devient invisible lorsque la qualité est réduite à des signaux observables ?
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="015-boucle" title="Boucle publicitaire" steps=4 -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<p class="kicker">De la mesure à l’optimisation</p>
+
+# Une publicité apprend de sa propre diffusion
+
+<div class="loop-diagram">
+  <Fragment at={1}><div class="loop-step">requête</div></Fragment>
+  <span>→</span>
+  <Fragment at={2}><div class="loop-step">annonce affichée</div></Fragment>
+  <span>→</span>
+  <Fragment at={3}><div class="loop-step accent-node">clic / conversion</div></Fragment>
+  <span>↺</span>
+  <Fragment at={4}><div class="loop-step">enchère ajustée</div></Fragment>
+</div>
+
+<p class="statement">La publicité devient une <strong>infrastructure de rétroaction</strong>.</p>
+
+--- notes
+
+Faire nommer le signal qui revient : CTR, conversion, coût par acquisition, valeur de panier, temps avant action. La plateforme n’observe pas « l’intérêt » en soi ; elle observe des événements qu’elle a décidé de considérer comme indicateurs.
+
+Le système apprend donc aussi ce qu’il doit regarder. Une métrique n’est pas un miroir neutre : elle sélectionne une réalité et rend certaines actions plus visibles que d’autres.
+
+Faire le lien avec la cybernétique sans transformer le cours en cours de cybernétique : une boucle décrit le retour des effets sur l’action suivante ; elle n’établit pas que l’utilisateur est entièrement déterminé.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="016-trace" title="Trace et profil" steps=0 -->
+
+<p class="kicker">Du contexte au comportement</p>
+
+# Une trace n’est pas encore une personne
+
+<div class="trace-grid">
+  <div><b>Trace</b><span>requête · clic · pause · localisation</span></div>
+  <div><b>Signal</b><span>probabilité · catégorie · score</span></div>
+  <div><b>Profil</b><span>segment exploitable pour une décision</span></div>
+</div>
+
+<p class="statement">Le profil est une <strong>construction opérationnelle</strong>, pas une intériorité découverte.</p>
+
+--- notes
+
+Faire distinguer ce que la plateforme observe et ce qu’elle infère. Une requête sur un symptôme ne prouve pas une maladie ; une pause sur une vidéo ne prouve pas une adhésion ; une localisation ne suffit pas à définir une identité.
+
+Le ciblage comportemental s’appuie sur des historiques et des inférences. La prédiction peut être utile sans être vraie au sens biographique. Ce qui importe pour le marché est souvent la performance statistique sur un segment.
+
+Transition : pour rendre cette opération possible à grande échelle, il faut suivre les usagers au-delà d’une page, d’une session ou d’un service.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="017-cookies" title="Suivre" steps=0 -->
+
+<p class="kicker">Tracking · cookies · pixels · fingerprinting</p>
+
+# Pour mesurer une action, il faut la retrouver
+
+<div class="tracking-path">
+  <div class="path-node">annonce</div><span>→</span><div class="path-node">clic</div><span>→</span><div class="path-node">site marchand</div><span>→</span><div class="path-node highlighted">achat attribué</div>
+</div>
+
+<div class="privacy-note"><strong>Question de fond :</strong> combien de contextes différents faut-il relier pour dire qu’une action est « la même » personne ?</div>
+
+--- notes
+
+Le CPA et l’attribution poussent à relier une impression, un clic et une action ultérieure. Les mécanismes ont changé : cookies tiers, pixels, identifiants publicitaires, login commun, fingerprinting, données croisées.
+
+Vigilance : ne pas présenter tous ces mécanismes comme équivalents ni supposer que chacun est toujours présent. Leur disponibilité dépend des navigateurs, des appareils, des règles de consentement et des stratégies des plateformes.
+
+Le problème conceptuel est celui de l’identité technique : la plateforme cherche moins à connaître une personne dans toute son épaisseur qu’à relier des événements afin de calculer une probabilité et une valeur.
+
+Temps indicatif : 7 minutes.
+---
+<!-- slide: id="018-rtb" title="Real-Time Bidding" steps=0 -->
+
+<p class="kicker">Programmatique · enchère impression par impression</p>
+
+# Une page se charge. Un marché s’active.
+
+<div class="rtb-flow">
+  <div class="rtb-column"><b>1</b><span>éditeur / SSP</span><small>propose l’impression</small></div>
+  <div class="rtb-column"><b>2</b><span>ad exchange</span><small>fait circuler la demande</small></div>
+  <div class="rtb-column"><b>3</b><span>DSP / annonceurs</span><small>évaluent et enchérissent</small></div>
+  <div class="rtb-column"><b>4</b><span>publicité</span><small>est livrée</small></div>
+</div>
+
+<p class="statement">L’unité négociée devient l’<strong>impression située</strong> — dans un contexte, pour un profil supposé.</p>
+
+--- notes
+
+Le RTB est un mécanisme d’achat automatisé d’inventaire publicitaire, généralement impression par impression. Un éditeur ou une SSP émet une requête ; des acheteurs évaluent l’impression ; une enchère se déroule ; la création gagnante est livrée.
+
+Vigilance : le RTB n’est pas toute la publicité programmatique, ni une garantie de ciblage parfait. Il décrit une couche technique du marché. Les chaînes réelles peuvent inclure des intermédiaires, de la fraude, des impressions invisibles et des données incomplètes.
+
+Ne pas donner un chiffre unique de durée (« 120 ms ») comme une loi générale. La latence dépend des systèmes et des configurations. L’intérêt pédagogique est la compression temporelle : une décision économique est automatisée au moment même où la page s’affiche.
+
+Temps indicatif : 7 minutes.
+
+[Sources]
+- IAB Tech Lab, OpenRTB, https://iabtechlab.com/standards/openrtb/.
+- IAB, « Real-Time Bidding », https://www.iab.com/insights/real-time-bidding/.
+[/Sources]
+---
+<!-- slide: id="019-activite-2" title="Activité 2" steps=0 layout="center" -->
+
+<div class="layout center">
+<div class="activity-card wide-activity">
+<p class="kicker">Étude de cas · 10 minutes</p>
+<h1>Un clic, quatre histoires</h1>
+<div class="case-grid">
+  <div><b>1</b><span>Un clic accidentel</span></div>
+  <div><b>2</b><span>Une recherche sincère</span></div>
+  <div><b>3</b><span>Une conversion</span></div>
+  <div><b>4</b><span>Un clic acheté</span></div>
+</div>
+<p class="question">Lequel de ces événements justifie le même prix ?</p>
+</div>
+</div>
+
+--- notes
+
+Par groupes de trois. Chaque groupe choisit un événement et répond : que mesure la plateforme ? que croit-elle mesurer ? que devrait-elle savoir pour attribuer correctement une valeur ?
+
+La discussion doit faire apparaître la distance entre événement et interprétation. L’économie publicitaire ne supprime pas cette distance ; elle l’industrialise et la rend calculable.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="020-seuil-social" title="Séquence II" layout="cover" steps=0 -->
+
+<div class="layout center">
+<div>
+<p class="kicker">Séquence II · Plateformes sociales</p>
+# Quand l’attention devient une boucle
+<p class="lead muted">Le fil ne se contente pas de recevoir l’activité : il la reconfigure.</p>
+</div>
+</div>
+
+--- notes
+
+Pause possible de 10 minutes ici. Le cours reprend avec les réseaux sociaux : on passe de la recherche d’une intention exprimée au classement continu d’une activité sociale.
+
+Temps indicatif : 2 minutes, hors pause.
+---
+<!-- slide: id="021-modele-social" title="Réseaux sociaux" steps=0 -->
+
+<p class="kicker">Contenu · infrastructure · publicité</p>
+
+# Le service est aussi un dispositif de production
+
+<div class="social-model">
+  <div class="social-layer"><b>Usagers</b><span>publient · réagissent · restent</span></div>
+  <div class="social-layer highlighted"><b>Fil</b><span>classe · recommande · notifie</span></div>
+  <div class="social-layer"><b>Annonceurs</b><span>achètent · ciblent · mesurent</span></div>
+</div>
+
+<p class="statement">La plateforme ne vend pas seulement un espace : elle organise une <strong>circulation</strong>.</p>
+
+--- notes
+
+Le modèle des réseaux sociaux ajoute une difficulté : les usagers ne sont pas seulement une audience qui reçoit un contenu produit ailleurs. Ils produisent une grande partie des contenus, des interactions et des signaux qui rendent le service attractif.
+
+La plateforme organise cette activité par un fil, des notifications, des recommandations et des règles de visibilité. L’attention est donc à la fois captée, produite et redistribuée.
+
+Question : si le fil est personnalisé, qui est l’auteur de ce que vous voyez — les personnes suivies, vous, la plateforme, les annonceurs, ou la combinaison des quatre ?
+
+Temps indicatif : 7 minutes.
+---
+<!-- slide: id="022-boucle-sociale" title="Rétroaction sociale" steps=0 -->
+
+<p class="kicker">Une boucle de visibilité</p>
+
+# Ce qui est visible devient plus actif
+
+<div class="social-loop">
+  <div>publication</div><span>→</span><div>engagement</div><span>→</span><div class="accent-node">classement</div><span>→</span><div>visibilité</div><span>↺</span>
+</div>
+
+<p class="statement">La popularité observée devient une condition de la popularité suivante.</p>
+
+--- notes
+
+Cette boucle peut stabiliser ou amplifier. Un contenu qui reçoit des réactions est davantage distribué ; sa distribution produit de nouvelles réactions ; la plateforme apprend à associer certaines formes de contenu à une probabilité d’engagement.
+
+Ne pas en déduire que l’algorithme favorise toujours le conflit. Les effets dépendent des objectifs, du classement, des politiques de modération, des communautés, du contexte et des changements de produit.
+
+La question politique devient : quel objectif est optimisé ? Temps passé, sessions, commentaires, satisfaction déclarée, sécurité, revenu ? Chaque objectif construit une expérience différente.
+
+Temps indicatif : 7 minutes.
+---
+<!-- slide: id="023-recommandation" title="Recommandation" steps=0 -->
+
+<p class="kicker">Ne pas tout confondre</p>
+
+# Publicité, classement, recommandation
+
+<div class="comparison three-comparison">
+  <div><h3>Classement</h3><p>Ordonner des éléments déjà disponibles.</p><small>« Qu’est-ce qui vient d’abord ? »</small></div>
+  <div><h3>Recommandation</h3><p>Sélectionner ce qui pourrait vous intéresser.</p><small>« Que vous proposer ensuite ? »</small></div>
+  <div><h3>Publicité</h3><p>Vendre une exposition ou une action.</p><small>« Qui paie pour apparaître ? »</small></div>
+</div>
+
+<p class="question">Un même écran peut faire fonctionner les trois à la fois.</p>
+
+--- notes
+
+Les trois opérations sont souvent liées dans l’interface mais ne sont pas identiques. Une publicité peut être classée ; une recommandation peut être organique ou sponsorisée ; un classement peut être produit sans publicité directe.
+
+Cette distinction évite une critique trop vague de « l’algorithme ». Il faut demander quelle fonction est en jeu, quelle donnée l’alimente et quel acteur a intérêt à son résultat.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="024-captologie" title="Captologie" steps=0 -->
+
+<p class="kicker">B. J. Fogg · design comportemental</p>
+
+# Concevoir les conditions d’une action
+
+<div class="captology-grid">
+  <div><b>Motivation</b><span>Pourquoi agir ?</span></div>
+  <div><b>Capacité</b><span>Est-ce facile maintenant ?</span></div>
+  <div><b>Déclencheur</b><span>Qu’est-ce qui relance l’action ?</span></div>
+</div>
+
+<p class="statement">La captologie analyse le design comme une <strong>technologie d’influence</strong>.</p>
+
+--- notes
+
+La captologie — persuasive technology — désigne l’étude et la conception de technologies destinées à influencer des attitudes ou des comportements. Elle n’est pas synonyme de manipulation : une notification de rappel de médicament et une relance destinée à prolonger une session peuvent utiliser des déclencheurs comparables avec des finalités différentes.
+
+Le cadre de Fogg est une entrée pédagogique, pas une loi complète du comportement. Ajouter le contexte, les habitudes, les normes sociales, les intérêts économiques et la possibilité réelle de refuser.
+
+Question : quelle différence entre aider quelqu’un à accomplir une intention et créer une intention profitable à la plateforme ?
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- B. J. Fogg, *Persuasive Technology: Using Computers to Change What We Think and Do*, Morgan Kaufmann, 2003.
+[/Sources]
+---
+<!-- slide: id="025-dark-patterns" title="Dark patterns" steps=0 -->
+
+<p class="kicker">Interface · consentement · sortie</p>
+
+# Quand le choix reste visible — mais pas vraiment libre
+
+<div class="pattern-grid">
+  <div><b>Asymétrie</b><span>« accepter » est immédiat ; refuser exige plusieurs écrans.</span></div>
+  <div><b>Confusion</b><span>les catégories et les boutons ne disent pas la même chose.</span></div>
+  <div><b>Pression</b><span>urgence, honte ou rareté mises en scène.</span></div>
+  <div><b>Inertie</b><span>le réglage par défaut devient le réglage durable.</span></div>
+</div>
+
+<p class="statement">Un dark pattern n’est pas une interface sombre : c’est une <strong>orientation trompeuse ou manipulatoire</strong>.</p>
+
+--- notes
+
+Définir dark patterns avec le rapport de la FTC : pratiques de conception qui trompent ou manipulent les consommateurs pour acheter ou céder des informations personnelles. Donner l’exemple du consentement : bouton « tout accepter » très visible, refus enfoui, formulations vagues.
+
+Distinguer :
+- captologie : champ général de conception persuasive ;
+- dark pattern : catégorie critique de pratiques manipulatoires ou trompeuses ;
+- dark design : terme plus large, moins stabilisé, à employer en le définissant.
+
+Vigilance : une interface difficile n’est pas automatiquement un dark pattern. Il faut examiner l’intention, l’asymétrie, l’information disponible et l’effet probable sur une décision significative.
+
+Temps indicatif : 8 minutes.
+
+[Sources]
+- Federal Trade Commission, *Bringing Dark Patterns to Light*, 2022, https://www.ftc.gov/reports/bringing-dark-patterns-light.
+- Commission européenne, *Behavioural study on unfair commercial practices in the digital environment*, 2022, DOI: 10.2838/859030.
+[/Sources]
+---
+<!-- slide: id="026-recompense" title="Récompense intermittente" steps=0 -->
+
+<p class="kicker">Notification · attente · retour</p>
+
+# Le fil ne promet pas toujours quelque chose
+
+<div class="slot-loop">
+  <div class="slot">ouvrir</div><span>→</span><div class="slot">actualiser</div><span>→</span><div class="slot highlighted">récompense variable</div><span>↺</span>
+</div>
+
+<p class="question">Pourquoi revenir lorsqu’on ne sait pas exactement ce qui apparaîtra ?</p>
+
+--- notes
+
+Introduire avec prudence l’analogie avec les machines à sous. Le renforcement intermittent est un concept de psychologie comportementale ; il ne suffit pas à expliquer l’usage des plateformes, qui dépend aussi des relations sociales, des habitudes, du contenu et de l’architecture technique.
+
+Le point pédagogique : la plateforme peut organiser un rythme d’attente et de récompense variable. Les notifications et le défilement peuvent rendre l’action de retour facile, fréquente et difficile à interrompre.
+
+Ne pas diagnostiquer un effet psychologique universel à partir d’un pattern d’interface. Demander aux étudiants de décrire une expérience plutôt que de conclure immédiatement à une addiction.
+
+Temps indicatif : 6 minutes.
+
+[Sources]
+- B. F. Skinner, travaux sur les programmes de renforcement, à distinguer des usages populaires de l’analogie.
+[/Sources]
+---
+<!-- slide: id="027-files" title="Facebook Files" steps=0 -->
+
+<p class="kicker">Documents internes · 2021</p>
+
+# Ce que les métriques peuvent faire aux contenus
+
+<div class="files-flow">
+  <div>objectif de visibilité</div><span>→</span><div>contenu qui retient</div><span>→</span><div class="accent-node">signal de réussite</div><span>→</span><div>plus de distribution</div>
+</div>
+
+<p class="statement">Le problème n’est pas seulement ce que l’algorithme « choisit » : c’est ce que l’environnement <strong>rend rentable de produire</strong>.</p>
+
+--- notes
+
+Les Facebook Files rendus publics en 2021 par Frances Haugen ont documenté des tensions internes autour des effets des systèmes de classement, de la portée de certains contenus et des arbitrages entre engagement, sécurité et revenu.
+
+Vigilance historique et méthodologique : ne pas dire que ces documents prouvent que les algorithmes obligent partout les journalistes ou les usagers à produire de la haine. Ils montrent des cas, des alertes, des mécanismes et des arbitrages documentés ; leur généralisation demande une enquête distincte.
+
+Pour Twitter/X et d’autres plateformes, les changements de classement et leurs effets doivent être étudiés séparément. Ne pas transformer un cas en loi universelle de la recommandation.
+
+Question : si un contenu clivant obtient plus de réactions mais dégrade la qualité de l’espace public, quelle métrique devrait compter ? Qui a le pouvoir de la changer ?
+
+Temps indicatif : 8 minutes.
+
+[Sources]
+- Wall Street Journal, *The Facebook Files*, 2021.
+- Frances Haugen, témoignage devant le Sénat américain, 5 octobre 2021.
+[/Sources]
+---
+<!-- slide: id="028-activite-3" title="Activité 3" steps=0 -->
+
+<p class="kicker">Audit d’une interface · 15 minutes</p>
+
+# Décrire avant de dénoncer
+
+<div class="audit-grid">
+  <div><b>1</b><span>Quel est le geste demandé ?</span></div>
+  <div><b>2</b><span>Quel est le défaut ou le chemin le plus facile ?</span></div>
+  <div><b>3</b><span>Quelle information manque au moment du choix ?</span></div>
+  <div><b>4</b><span>Qui gagne si l’utilisateur continue ?</span></div>
+</div>
+
+<p class="question">Choisissez une notification, un consentement ou une désinscription.</p>
+
+--- notes
+
+Par groupes. L’objectif n’est pas de chercher un exemple spectaculaire, mais de décrire une séquence réelle : action proposée, friction, défaut, information, bénéficiaire.
+
+Faire produire une phrase du type : « L’interface rend X facile et Y difficile ; cela augmente probablement Z ; il faudrait vérifier cette hypothèse par… »
+
+Cette formulation sépare observation, hypothèse et preuve. Elle évite de transformer tout design persuasif en intention malveillante certaine.
+
+Temps indicatif : 8 minutes.
+---
+<!-- slide: id="029-seuil-surveillance" title="Séquence III" layout="cover" steps=0 -->
+
+<div class="layout center">
+<div>
+<p class="kicker">Séquence III · Données et pouvoir</p>
+# De l’attention à la prédiction
+<p class="lead muted">La publicité ciblée n’est peut-être que le premier marché.</p>
+</div>
+</div>
+
+--- notes
+
+Transition vers Zuboff. Il ne s’agit pas de présenter une vérité unique, mais une grille critique qui aide à décrire un déplacement : extraire des traces au-delà de ce qui est nécessaire au service, les transformer en capacités de prévision, puis construire des marchés autour de ces prévisions.
+
+Temps indicatif : 2 minutes.
+---
+<!-- slide: id="030-zuboff" title="Zuboff" steps=0 -->
+
+<p class="kicker">Surveillance capitalism · 2019</p>
+
+# Du service fourni au surplus comportemental
+
+<div class="zuboff-chain">
+  <div><b>Expérience</b><span>ce que vous faites pour utiliser le service</span></div>
+  <span>+</span>
+  <div class="highlighted"><b>Surplus</b><span>ce qui est extrait au-delà du service</span></div>
+  <span>→</span>
+  <div><b>Prédiction</b><span>ce que vous pourriez faire ensuite</span></div>
+  <span>→</span>
+  <div><b>Marché</b><span>qui paie pour agir sur cette probabilité</span></div>
+</div>
+
+<p class="statement">La donnée n’est pas seulement une matière première : elle devient une <strong>capacité d’anticipation</strong>.</p>
+
+--- notes
+
+Présenter Zuboff comme une conceptualisation critique. Le surplus comportemental désigne, dans son analyse, la part de données extraite au-delà de ce qui est nécessaire à la fourniture immédiate du service, puis utilisée pour produire des prédictions et des produits de prédiction.
+
+Précision importante : cela ne signifie pas nécessairement que Google ou Meta revendent des fichiers bruts contenant « votre vie ». Le marché peut porter sur des segments, des probabilités, des audiences et des possibilités d’action.
+
+Autre précision : Zuboff fait de la publicité en ligne le premier terrain de déploiement exemplaire, mais elle décrit une logique plus large que la publicité.
+
+Temps indicatif : 8 minutes.
+
+[Sources]
+- Shoshana Zuboff, *The Age of Surveillance Capitalism*, PublicAffairs, 2019 ; traduction française, Zulma, 2020.
+[/Sources]
+---
+<!-- slide: id="031-extension" title="Extension" steps=0 -->
+
+<p class="kicker">Même logique, autres domaines</p>
+
+# Quand la prédiction sort de l’écran
+
+<div class="domain-grid">
+  <div>assurance</div><div>travail</div><div>santé</div><div>mobilité</div><div>ville</div><div>sécurité</div>
+</div>
+
+<p class="statement">Prévoir n’est pas seulement décrire : c’est parfois <strong>redistribuer des droits, des prix et des possibilités</strong>.</p>
+
+--- notes
+
+Donner des exemples avec précaution : tarification assurantielle, logiciels de surveillance du travail, quantified self, reconnaissance faciale, predictive policing. Distinguer ce qui est déployé, expérimenté, juridiquement autorisé ou seulement proposé.
+
+La question n’est pas seulement « est-ce exact ? », mais aussi « que se passe-t-il lorsque la prédiction devient une décision ? » Une probabilité de risque peut modifier le prix, l’accès, le recrutement ou la surveillance et produire les comportements qu’elle prétend seulement anticiper.
+
+Temps indicatif : 7 minutes.
+---
+<!-- slide: id="032-limites" title="Limites" steps=0 -->
+
+<p class="kicker">Ce que la trace ne contient pas</p>
+
+# Prédire n’est pas comprendre
+
+<div class="limits-grid">
+  <div><b>Une durée</b><span>n’est pas une signification.</span></div>
+  <div><b>Une corrélation</b><span>n’est pas une cause.</span></div>
+  <div><b>Une probabilité</b><span>n’est pas un destin.</span></div>
+</div>
+
+<p class="question">Que faut-il ajouter pour passer du signal à l’interprétation ?</p>
+
+--- notes
+
+Cette slide protège le cours contre son propre vocabulaire critique. La plateforme peut avoir une prédiction utile sans posséder une compréhension de la personne. La performance statistique est locale à une tâche, une population, une période et une définition du succès.
+
+Le profil peut aussi reconduire les inégalités présentes dans les données. Une prédiction n’est pas neutre parce qu’elle est calculée ; elle dépend de la catégorie, de la variable cible et de l’usage qui en est fait.
+
+Faire le lien avec la suite : les mêmes mots — données, entraînement, prédiction, optimisation — réapparaissent dans l’IA, mais avec d’autres architectures et d’autres enjeux.
+
+Temps indicatif : 6 minutes.
+---
+<!-- slide: id="033-seuil-ia" title="Séquence IV" layout="cover" steps=0 -->
+
+<div class="layout center">
+<div>
+<p class="kicker">Séquence IV · Transition</p>
+# De la publicité à l’IA
+<p class="lead muted">Une continuité d’infrastructures, pas une causalité unique.</p>
+</div>
+</div>
+
+--- notes
+
+La formule à éviter : « on sait faire des LLM parce qu’on a voulu faire de la publicité ciblée ». La relation est historique, industrielle et financière, mais indirecte et plurielle.
+
+Temps indicatif : 2 minutes.
+---
+<!-- slide: id="034-ecosysteme" title="Écosystème" steps=0 -->
+
+<p class="kicker">Ce qui se cumule</p>
+
+# Ce que l’économie publicitaire a contribué à construire
+
+<div class="ecosystem-grid">
+  <div><b>Données</b><span>traces, corpus, logs, évaluations</span></div>
+  <div><b>Calcul</b><span>GPU, centres de données, optimisation</span></div>
+  <div><b>Compétences</b><span>ingénierie, statistiques, ML</span></div>
+  <div><b>Capital</b><span>revenus, investissements, industrialisation</span></div>
+</div>
+
+<p class="statement">La publicité finance une partie de l’écosystème — elle n’en est pas l’<strong>origine unique</strong>.</p>
+
+--- notes
+
+Relier sans simplifier : les grandes plateformes publicitaires ont accumulé des revenus, des infrastructures de calcul, des données d’usage et des compétences en apprentissage automatique. Elles ont aussi fourni des environnements de déploiement pour des systèmes de recommandation et de prédiction.
+
+Mais le deep learning vient d’une histoire beaucoup plus large : recherche publique et universitaire, réseaux neuronaux, rétropropagation, architectures, jeux de données, matériel spécialisé, investissements privés et militaires, communautés open source.
+
+Le financement publicitaire est une condition d’écosystème pour certains acteurs ; il n’explique pas seul l’existence des LLM. Cette distinction est une exigence de causalité, pas une nuance décorative.
+
+Temps indicatif : 8 minutes.
+---
+<!-- slide: id="035-prediction-llm" title="Prédiction" steps=0 -->
+
+<p class="kicker">Une même grammaire — des objets différents</p>
+
+# Cibler et générer : comparer sans confondre
+
+<div class="compare-ai">
+  <div><h3>Publicité ciblée</h3><p>Prédire une action ou une conversion à partir de traces.</p><span>objectif : allocation / influence</span></div>
+  <div><h3>LLM</h3><p>Prédire un prochain token à partir d’un contexte.</p><span>objectif : génération conditionnelle</span></div>
+</div>
+
+<p class="statement">Même mot — <strong>prédiction</strong> — mais tâches, données, sorties et pouvoirs différents.</p>
+
+--- notes
+
+Un modèle de recommandation peut estimer la probabilité d’un clic ; un LLM calcule des distributions sur des tokens et produit une séquence. Les deux mobilisent apprentissage, optimisation et calcul, mais ils ne poursuivent pas la même tâche.
+
+Le LLM n’est pas une machine publicitaire par nature. Il peut être intégré à des services financés par la publicité ou produire des effets de captation, mais son architecture et son régime économique doivent être analysés séparément.
+
+Question : quand une réponse générée paraît personnalisée, quelle trace ou quel contexte a pu la rendre possible ? Et que ne sait-elle pas pour autant ?
+
+Temps indicatif : 8 minutes.
+---
+<!-- slide: id="036-chaine-ia" title="Chaîne de production" steps=0 -->
+
+<p class="kicker">Du corpus au service</p>
+
+# Un modèle n’est pas tout le système
+
+<div class="ai-pipeline">
+  <div><b>Corpus</b><small>données et textes</small></div><span>→</span>
+  <div><b>Entraînement</b><small>ajuster des paramètres</small></div><span>→</span>
+  <div><b>Évaluation</b><small>mesurer des performances</small></div><span>→</span>
+  <div><b>Déploiement</b><small>interface, coût, usages</small></div>
+</div>
+
+<p class="question">Où se situe le pouvoir : dans les poids, les données, l’interface ou l’infrastructure ?</p>
+
+--- notes
+
+Faire dessiner une chaîne complète. Les paramètres du modèle ne suffisent pas : choix du corpus, nettoyage, annotation, évaluation, garde-fous, interface, prix, collecte des interactions et intégration au travail comptent aussi.
+
+Cette slide reprend la question du début : ce qui est fait avec les traces dépend du dispositif dans lequel elles entrent. Pour l’IA comme pour la publicité, l’objet technique est pris dans un marché et une organisation.
+
+Temps indicatif : 8 minutes.
+---
+<!-- slide: id="037-activite-finale" title="Activité finale" steps=0 -->
+
+<p class="kicker">Synthèse · 20 minutes</p>
+
+# Anatomie d’une fonctionnalité
+
+<div class="final-grid">
+  <div><b>1</b><span>Quelle activité produit une trace ?</span></div>
+  <div><b>2</b><span>Quel signal est calculé ?</span></div>
+  <div><b>3</b><span>Quelle boucle est alimentée ?</span></div>
+  <div><b>4</b><span>Qui gagne quoi ?</span></div>
+  <div><b>5</b><span>Quelle expérience est orientée ?</span></div>
+  <div><b>6</b><span>Quel lien avec l’IA peut-on établir sans exagérer ?</span></div>
+</div>
+
+<p class="question">Choisissez : fil recommandé, publicité de recherche, consentement ou assistant conversationnel.</p>
+
+--- notes
+
+Travail en groupes de quatre. Chaque groupe choisit une fonctionnalité et remplit les six cases. Il doit produire une présentation de deux minutes qui distingue les faits établis, les hypothèses et les questions ouvertes.
+
+Grille de restitution :
+- activité et trace ;
+- signal et métrique ;
+- boucle de rétroaction ;
+- bénéficiaires et coûts ;
+- forme d’expérience ;
+- relation prudente à l’IA.
+
+Temps indicatif : 13 minutes.
+---
+<!-- slide: id="038-conclusion" title="Conclusion" steps=3 layout="center" -->
+
+<script>
+  import Fragment from '@svx-slides/core/components/Fragment.svelte'
+</script>
+
+<div class="layout center">
+<div>
+<p class="kicker">À retenir</p>
+<h1>La question n’est pas seulement : qui possède les données ?</h1>
+<Fragment at={1}><p class="lead">Qui définit ce qui mérite d’être mesuré ?</p></Fragment>
+<Fragment at={2}><p class="lead">Qui transforme le signal en décision ?</p></Fragment>
+<Fragment at={3}><p class="lead accent-text">Qui peut interrompre la boucle — ou en changer la règle ?</p></Fragment>
+</div>
+</div>
+
+--- notes
+
+Reprendre les quatre déplacements : rendre visible, calculable, prévisible, orientable. La publicité ciblée n’est pas un objet isolé : elle est une scène où se rencontrent économie biface, métriques, infrastructures, design et pouvoir.
+
+La transition vers l’IA ne doit pas fermer le cours par une équation simple. Elle ouvre une méthode : suivre les traces, les boucles, les objectifs, les intermédiaires et les formes d’expérience.
+
+Question finale à laisser ouverte : peut-on habiter des infrastructures numériques sans que toute expérience soit convertie en signal exploitable ?
+
+Temps indicatif : 5 minutes.
+---
+<!-- slide: id="039-references" title="Références" steps=0 -->
+
+<p class="kicker">Pour poursuivre</p>
+
+# Quelques portes d’entrée
+
+<div class="references-grid">
+  <div><b>Économie de l’attention</b><span>Simon · Goldhaber · Smythe · Wu · Hwang</span></div>
+  <div><b>Capitalisme de surveillance</b><span>Zuboff</span></div>
+  <div><b>Publicité numérique</b><span>Google Press · IAB Tech Lab · rapports FTC</span></div>
+  <div><b>Design et comportement</b><span>Fogg · FTC · Commission européenne</span></div>
+  <div><b>IA et apprentissage</b><span>McCulloch & Pitts · Rosenblatt · littérature ML</span></div>
+</div>
+
+<p class="muted reference-foot">Les références détaillées et les vigilances historiques figurent dans les notes speaker.</p>
+
+
+<style>
+  :global {
+    .slide {
+    --economics-ink: #211b29;
+    --economics-accent: #d63b78;
+    --economics-soft: #f4e6ee;
+    --economics-blue: #5b6ee1;
+  }
+
+  h1 { max-width: 20ch; }
+  .economics-hero { display: grid; gap: 1.4rem; align-content: center; min-height: 64vh; }
+  .economics-hero h1 { font-size: clamp(4rem, 10vw, 9rem); line-height: .88; max-width: 8ch; }
+  .hero-subtitle { font-size: clamp(1.5rem, 2.5vw, 2.5rem); max-width: 22ch; }
+  .hero-line, .sequence, .flow, .social-loop, .files-flow, .tracking-path, .rank-diagram, .loop-diagram, .rtb-flow, .ai-pipeline { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+  .hero-line { color: var(--economics-accent); font-family: var(--font-mono); font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
+  .large-sequence { margin: 3.4rem 0; font-size: clamp(1.2rem, 2.6vw, 2.5rem); }
+  .arrow, .equation-arrow { color: var(--economics-accent); font-family: var(--font-mono); font-size: 1.5em; }
+  .question { margin-top: 2rem; max-width: 34ch; font-size: clamp(1.15rem, 2.1vw, 2rem); }
+  .statement { margin-top: 2rem; max-width: 38ch; font-size: clamp(1.15rem, 2vw, 1.85rem); }
+  .muted { color: var(--muted); }
+  .center-text { text-align: center; max-width: none; }
+  .accent-text, .highlighted, .accent-node { color: var(--economics-accent); }
+  .card-grid, .four-cards, .concept-card, .comparison, .pattern-grid, .case-grid, .audit-grid, .domain-grid, .limits-grid, .ecosystem-grid, .references-grid, .final-grid { display: grid; gap: 1rem; }
+  .card-grid { grid-template-columns: repeat(3, 1fr); margin-top: 2rem; }
+  .four-cards { grid-template-columns: repeat(4, 1fr); }
+  .concept-card, .activity-card, .market-side, .social-layer, .metric, .formula-card, .privacy-note, .pattern-grid > div, .case-grid > div, .audit-grid > div, .domain-grid > div, .limits-grid > div, .ecosystem-grid > div, .references-grid > div, .final-grid > div, .compare-ai > div { padding: 1rem 1.1rem; border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); border-radius: 1rem; background: color-mix(in srgb, white 42%, transparent); }
+  .concept-card h3, .comparison h3, .compare-ai h3 { margin: .4rem 0; }
+  .concept-card p, .comparison p, .compare-ai p, .concept-card span, .metric span, .metric small { display: block; }
+  .card-index, .kicker, .caption, .metric b, .case-grid b, .audit-grid b, .final-grid b { font-family: var(--font-mono); }
+  .card-index { color: var(--economics-accent); font-size: .8rem; }
+  .vertical-flow { flex-direction: column; align-items: stretch; max-width: 28rem; margin: 2rem auto 0; text-align: center; }
+  .flow-node { padding: 1.1rem 1.4rem; border: 1px solid var(--economics-accent); border-radius: .8rem; }
+  .two-sided-market { display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; gap: 1rem; margin: 4rem 0 2rem; }
+  .market-side { display: grid; gap: .4rem; text-align: center; }
+  .market-side span, .social-layer span, .rtb-column small, .references-grid span, .final-grid span { color: var(--muted); font-size: .9rem; }
+  .platform-core { padding: 2rem 1rem; border-radius: 50%; aspect-ratio: 1; display: grid; place-content: center; text-align: center; color: white; background: var(--economics-accent); font-family: var(--font-mono); }
+  .platform-core small { font-family: var(--font-body); font-size: .7rem; }
+  .attention-equation { display: flex; align-items: center; justify-content: center; gap: 2.5rem; margin: 3rem 0; }
+  .attention-equation > div { display: grid; text-align: center; gap: .4rem; }
+  .big-number { font-size: 7rem; line-height: .8; color: var(--economics-accent); font-family: var(--font-mono); }
+  .big-number.limited { color: var(--economics-blue); }
+  .image-card { display: grid; gap: .8rem; justify-items: center; }
+  .image-card img { width: min(32vw, 28rem); max-height: 48vh; object-fit: contain; border-radius: .5rem; }
+  .caption { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+  .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: 3rem; }
+  .metric { display: grid; gap: .55rem; min-height: 9rem; align-content: center; }
+  .metric b { color: var(--economics-accent); font-size: 1.6rem; }
+  .metric span { font-size: 1rem; }
+  .metric small { color: var(--muted); }
+  .rank-diagram { justify-content: center; margin: 4rem 0 2rem; font-family: var(--font-mono); }
+  .rank-node, .path-node, .loop-step, .slot { padding: 1rem 1.3rem; border: 1px solid currentColor; border-radius: .8rem; }
+  .rank-node.highlighted, .path-node.highlighted, .loop-step.accent-node, .slot.highlighted { background: var(--economics-soft); }
+  .auction-board { display: grid; grid-template-columns: 1fr 1fr 1.3fr; align-items: center; gap: 1.4rem; margin: 3rem 0; }
+  .auction-board > div { display: grid; gap: .5rem; text-align: center; }
+  .bid { padding: 1rem; border: 1px solid var(--economics-accent); border-radius: .8rem; font-family: var(--font-mono); }
+  .bids { font-family: var(--font-mono); }
+  .bids span { display: block; padding: .45rem; border-bottom: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); }
+  .winner { padding: 1.3rem; background: var(--economics-accent); color: white; border-radius: .8rem; }
+  .winner small { font-family: var(--font-mono); }
+  .timeline { display: grid; gap: 1rem; margin-top: 3rem; }
+  .compact-timeline { grid-template-columns: repeat(4, 1fr); }
+  .timeline > div { display: grid; gap: .65rem; }
+  .timeline b { color: var(--economics-accent); font-family: var(--font-mono); }
+  .timeline span { border-left: 2px solid var(--economics-accent); padding-left: .8rem; }
+  .timeline small { color: var(--muted); }
+  .formula-card { margin: 3rem auto 1.5rem; max-width: 46rem; text-align: center; }
+  .formula { font-family: var(--font-mono); font-size: clamp(1.2rem, 3vw, 2.5rem); color: var(--economics-accent); }
+  .formula-card p { color: var(--muted); }
+  .rank-list { display: grid; gap: .4rem; max-width: 38rem; margin: auto; font-family: var(--font-mono); }
+  .rank-list span { display: flex; justify-content: space-between; border-bottom: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); padding: .3rem; }
+  .trace-grid, .captology-grid, .domain-grid, .limits-grid, .ecosystem-grid, .references-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+  .trace-grid > div, .captology-grid > div { display: grid; gap: .5rem; padding: 1.2rem; border-top: 4px solid var(--economics-accent); background: color-mix(in srgb, white 36%, transparent); }
+  .trace-grid span, .captology-grid span { color: var(--muted); }
+  .tracking-path, .loop-diagram, .social-loop, .files-flow { justify-content: center; margin: 4rem 0 2rem; font-family: var(--font-mono); }
+  .privacy-note { margin: 2rem auto; max-width: 52rem; }
+  .rtb-flow { justify-content: center; align-items: stretch; margin-top: 3rem; }
+  .rtb-column { display: grid; gap: .55rem; width: 10rem; padding: 1rem; border-top: 4px solid var(--economics-accent); }
+  .rtb-column b { font-family: var(--font-mono); color: var(--economics-accent); }
+  .social-model { display: grid; gap: .8rem; max-width: 45rem; margin: 3rem auto; }
+  .social-layer { display: flex; justify-content: space-between; align-items: baseline; }
+  .social-layer.highlighted { border-color: var(--economics-accent); background: var(--economics-soft); }
+  .three-comparison { grid-template-columns: repeat(3, 1fr); margin-top: 3rem; }
+  .comparison > div, .compare-ai > div { padding: 1.2rem; }
+  .comparison small, .compare-ai span { color: var(--muted); font-family: var(--font-mono); font-size: .75rem; }
+  .pattern-grid, .case-grid, .audit-grid, .final-grid { grid-template-columns: repeat(2, 1fr); margin-top: 3rem; }
+  .pattern-grid > div, .case-grid > div, .audit-grid > div, .final-grid > div { display: flex; gap: 1rem; align-items: baseline; }
+  .slot-loop { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 4rem 0 2rem; font-family: var(--font-mono); }
+  .zuboff-chain { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: .7rem; align-items: center; margin-top: 3rem; }
+  .zuboff-chain > div { min-height: 8rem; padding: 1rem; display: grid; align-content: center; gap: .6rem; border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); border-radius: .8rem; }
+  .zuboff-chain span { color: var(--economics-accent); font-family: var(--font-mono); }
+  .zuboff-chain div span { color: var(--muted); font-family: var(--font-body); font-size: .85rem; }
+  .domain-grid { grid-template-columns: repeat(3, 1fr); }
+  .domain-grid > div { text-align: center; font-size: 1.2rem; }
+  .compare-ai { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; }
+  .compare-ai > div:last-child { border-color: var(--economics-blue); }
+  .ai-pipeline { justify-content: center; margin-top: 4rem; }
+  .ai-pipeline > div { display: grid; gap: .4rem; padding: 1rem; border: 1px solid var(--economics-accent); border-radius: .8rem; }
+  .ai-pipeline small { color: var(--muted); }
+  .activity-card { max-width: 48rem; padding: 2rem; border: 1px solid var(--economics-accent); border-radius: 1.2rem; }
+  .wide-activity { max-width: 62rem; }
+  .activity-card h1 { max-width: none; }
+  .case-grid { margin-top: 2rem; }
+  .references-grid { grid-template-columns: repeat(2, 1fr); }
+  .references-grid > div, .final-grid > div { display: grid; gap: .4rem; }
+  .reference-foot { margin-top: 2rem; }
+  @media (max-width: 900px) {
+    .four-cards, .metric-row, .compact-timeline, .trace-grid, .captology-grid, .domain-grid, .ecosystem-grid, .references-grid, .three-comparison { grid-template-columns: repeat(2, 1fr); }
+    .two-sided-market, .zuboff-chain { grid-template-columns: 1fr; }
+    .platform-core { border-radius: 1rem; aspect-ratio: auto; }
+    .rtb-flow { flex-wrap: wrap; }
+  }
+  }
+</style>
+
+
+--- notes
+
+Références principales mobilisées dans le cours :
+
+- Herbert A. Simon, « Designing Organizations for an Information-Rich World », 1971.
+- Dallas W. Smythe, « Communications: Blindspot of Western Marxism », 1977 ; *Dependency Road*, 1981.
+- Michael H. Goldhaber, « The Attention Economy and the Net », *First Monday*, 1997.
+- Tim Wu, *The Attention Merchants*, 2016.
+- Tim Hwang, *Subprime Attention Crisis*, 2020/2022 selon l’édition.
+- Shoshana Zuboff, *The Age of Surveillance Capitalism*, 2019 ; traduction française, 2020.
+- B. J. Fogg, *Persuasive Technology*, 2003.
+- Federal Trade Commission, *Bringing Dark Patterns to Light*, 2022.
+- Google Press Archive, annonces AdWords 2000 et AdWords Select 2002.
+- IAB Tech Lab, OpenRTB.
+
+Cette première version privilégie un parcours conceptuel et des activités. Les chiffres de marché, les captures d’écrans et les études de cas contemporaines pourront être ajoutés après validation du fil pédagogique.

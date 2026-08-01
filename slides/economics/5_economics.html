@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Economics - Introduction aux Cultures Numériques</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Introduction aux Cultures Numériques</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <style>
+.mdbook-alerts {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-left: 0.25em solid var(--mdbook-alerts-color);
+}
+
+.mdbook-alerts > *:first-child {
+  margin-top: 0;
+}
+
+.mdbook-alerts > *:last-child {
+  margin-bottom: 0;
+}
+
+.mdbook-alerts-title {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  line-height: 1;
+  color: var(--mdbook-alerts-color);
+  text-transform: capitalize;
+}
+
+.mdbook-alerts-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+  background-color: currentColor;
+  -webkit-mask: no-repeat center / 100%;
+  mask: no-repeat center / 100%;
+  -webkit-mask-image: var(--mdbook-alerts-icon);
+  mask-image: var(--mdbook-alerts-icon);
+}
+
+.mdbook-alerts-note {
+  --mdbook-alerts-color: rgb(9, 105, 218);
+  /* https://icon-sets.iconify.design/material-symbols/info-outline-rounded/ */
+  --mdbook-alerts-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11q-.425 0-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8q0 .425.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"%2F%3E%3C%2Fsvg%3E');
+}
+
+.mdbook-alerts-tip {
+  --mdbook-alerts-color: rgb(26, 127, 55);
+  /* https://icon-sets.iconify.design/material-symbols/lightbulb-outline-rounded/ */
+  --mdbook-alerts-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" d="M12 22q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22m-3-3q-.425 0-.712-.288T8 18q0-.425.288-.712T9 17h6q.425 0 .713.288T16 18q0 .425-.288.713T15 19zm-.75-3q-1.725-1.025-2.738-2.75T4.5 9.5q0-3.125 2.188-5.312T12 2q3.125 0 5.313 2.188T19.5 9.5q0 2.025-1.012 3.75T15.75 16zm.6-2h6.3q1.125-.8 1.738-1.975T17.5 9.5q0-2.3-1.6-3.9T12 4Q9.7 4 8.1 5.6T6.5 9.5q0 1.35.613 2.525T8.85 14M12 14"%2F%3E%3C%2Fsvg%3E');
+}
+
+.mdbook-alerts-important {
+  --mdbook-alerts-color: rgb(130, 80, 223);
+  /* https://icon-sets.iconify.design/material-symbols/chat-info-outline-rounded/ */
+  --mdbook-alerts-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" d="M12 7q.425 0 .713-.288T13 6q0-.425-.288-.712T12 5q-.425 0-.712.288T11 6q0 .425.288.713T12 7m0 8q.425 0 .713-.288T13 14v-4q0-.425-.288-.712T12 9q-.425 0-.712.288T11 10v4q0 .425.288.713T12 15m-6 3l-2.3 2.3q-.475.475-1.088.213T2 19.575V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm-.85-2H20V4H4v13.125zM4 16V4z"%2F%3E%3C%2Fsvg%3E');
+}
+
+.mdbook-alerts-warning {
+  --mdbook-alerts-color: rgb(154, 103, 0);
+  /* https://icon-sets.iconify.design/material-symbols/warning-outline-rounded/ */
+  --mdbook-alerts-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" d="M2.725 21q-.275 0-.5-.137t-.35-.363q-.125-.225-.137-.488t.137-.512l9.25-16q.15-.25.388-.375T12 3q.25 0 .488.125t.387.375l9.25 16q.15.25.138.513t-.138.487q-.125.225-.35.363t-.5.137zm1.725-2h15.1L12 6zM12 18q.425 0 .713-.288T13 17q0-.425-.288-.712T12 16q-.425 0-.712.288T11 17q0 .425.288.713T12 18m0-3q.425 0 .713-.288T13 14v-3q0-.425-.288-.712T12 10q-.425 0-.712.288T11 11v3q0 .425.288.713T12 15m0-2.5"%2F%3E%3C%2Fsvg%3E');
+}
+
+.mdbook-alerts-caution {
+  --mdbook-alerts-color: rgb(207, 34, 46);
+  /* https://icon-sets.iconify.design/material-symbols/brightness-alert-outline-rounded/ */
+  --mdbook-alerts-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" d="M12 17q.425 0 .713-.288T13 16q0-.425-.288-.712T12 15q-.425 0-.712.288T11 16q0 .425.288.713T12 17m0-4q.425 0 .713-.288T13 12V8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8v4q0 .425.288.713T12 13m-3.35 7H6q-.825 0-1.412-.587T4 18v-2.65L2.075 13.4q-.275-.3-.425-.662T1.5 12q0-.375.15-.737t.425-.663L4 8.65V6q0-.825.588-1.412T6 4h2.65l1.95-1.925q.3-.275.663-.425T12 1.5q.375 0 .738.15t.662.425L15.35 4H18q.825 0 1.413.588T20 6v2.65l1.925 1.95q.275.3.425.663t.15.737q0 .375-.15.738t-.425.662L20 15.35V18q0 .825-.587 1.413T18 20h-2.65l-1.95 1.925q-.3.275-.662.425T12 22.5q-.375 0-.737-.15t-.663-.425zm.85-2l2.5 2.5l2.5-2.5H18v-3.5l2.5-2.5L18 9.5V6h-3.5L12 3.5L9.5 6H6v3.5L3.5 12L6 14.5V18zm2.5-6"%2F%3E%3C%2Fsvg%3E');
+}
+
+</style>
+<h1 id="economics"><a class="header" href="#economics">Economics</a></h1>
+<h2 id="histoire"><a class="header" href="#histoire">Histoire</a></h2>
+<p>L’évolution de la publicité en ligne</p>
+<p>On retient souvent comme étant la premiere bannière publicitaire le cas suivant :</p>
+<p>Today we feature the first-ever banner ad, which appeared on Wired magazine’s website hotwired.com on October 27, 1994, as our marketing moment.
+It was an ad for AT&amp;T that asked users “Have you ever clicked your mouse right HERE?” with an arrow pointing to text that read “YOU WILL.”
+According to Joe McCambley, who helped create the ad, it was part of a larger AT&amp;T campaign that focused on “futuristic technological wonders” like being able to talk to a friend via video on a phone or being able to borrow books from libraries thousands of miles away.
+Once viewers clicked on the banner ad, they were directed to a tour of some of the world’s greatest museums.
+Three years ago, in the Harvard Business Review, McCambley wrote about his experience creating the first banner ad:</p>
+<p>Mettre une photo à partir de ce site :</p>
+<p>https://www.yahoo.com/news/first-ever-banner-ad-083000895.html?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAB1J_IFN7Jq9bVOZDjK__Cl0WQ-V6JNmH0P5IciUkjp2MVFJ_7EIYoBdqlAy87ODdeKGkqQ3KMrPr6GqCSlOokaISVnR9Ml_8yyut0oQx3oFbUWuwRfKUIPZFZo2WtLLZmzwmxTfjEtKciKcBp3W01D8D8-XtIbk3HPM2Q4IQgku</p>
+<blockquote>
+<p>“That first banner that Modem Media, the fledgling digital agency where I worked, built for AT&amp;T, was helpful, and it was useful. At a time when people wondered what the Web was all about, it connected visitors of hotwired.com to a tour of seven of the world’s finest art museums. It demonstrated how AT&amp;T could transport people through space and time via the Internet — just as AT&amp;T had done 100 years earlier with the first long distance network. Of those who saw the ad, 44% clicked.”</p>
+</blockquote>
+<p>C'était sur le site de hotwired, depuis devenu wired:</p>
+<p>https://www.wired.com/2010/10/1027hotwired-banner-ads/</p>
+<p>Banner ads caught on quickly. In 1995, Yahoo announced an advertising deal for their own primitive banner ads—with the logos of five sponsor companies rotating daily atop Yahoo’s site. By the time the Internet Archive’s Wayback Machine captured the first glimpse of HotWired, in 1997, there were multiple advertisements on the site, including display ads for discount PCs and data centers. The real problem for HotWired’s ad agency at the time, Ryan Singel wrote for Wired in 2010, “was realizing that banner ads would be clickable, so it had to create websites for its clients, who weren’t even sure that interacting online was a good idea—or that the ads were even legal.”</p>
+<p>When people clicked AT&amp;T’s 1994 banner ad, they wound up at a simple landing page that offered more information about AT&amp;T. The answer to “Have you ever clicked your mouse right here?” became, on the new page, “You did! Now let’s see what else you’ll do.”</p>
+<p>À partir de 1994, la publicité sur Internet était principalement vendue selon un modèle basé sur le nombre d’impressions. Les annonceurs payaient des frais fixes pour afficher leurs publicités un certain nombre de fois (généralement par lot de 1 000 affichages ou “impressions”). Les contrats étaient négociés au cas par cas, avec des montants minimums élevés (souvent de quelques milliers de dollars par mois), rendant l’entrée dans ce marché lente et coûteuse.</p>
+<p>En 1997, Overture (anciennement GoTo, aujourd’hui intégré à Yahoo!) a introduit un modèle entièrement nouveau pour la vente de publicité en ligne. Dans ce nouveau système, chaque annonceur soumettait une enchère indiquant le montant qu’il était prêt à payer par clic, pour un mot-clé spécifique. Ce modèle permettait aux annonceurs de mieux cibler leurs publicités : au lieu de payer pour une bannière visible par l’ensemble des visiteurs d’un site web, ils pouvaient définir les mots-clés pertinents pour leurs produits et attribuer une valeur à chaque clic généré par ces mots-clés.</p>
+<h2 id="google"><a class="header" href="#google">Google</a></h2>
+<p>Les fondements de l'histoire de l'entreprise Google commencent par la rencontre de deux étudiants de l'université Stanford en 1995. Sergey Brin, alors âgé de vingt-trois ans, et Larry Page, vingt-quatre ans, sont « pratiquement en désaccord sur tout »40. Cela ne les empêche pourtant pas, en janvier 1996, de commencer à travailler sur un nouveau moteur de recherche41,42.</p>
+<p>Les fondateurs de Google, alors doctorants, observent la façon dont sont classés les résultats lorsqu'ils effectuent des recherches dans les bases de données scientifiques. Ils constatent que l'exploitation des informations contenues dans la structure hypertextuelle dépend de la nature des liens entre les documents. Ainsi, l'idée d'analyser les liens inter-documents repose sur l'observation d'une caractéristique de la littérature scientifique et des modes d'organisation du Science Citation Index (SCI), qui consiste à attribuer une valeur à une publication scientifique proportionnellement au nombre de publications qui la cite. Ce principe revient aux travaux de Jon Kleinberg qui avait mis au point pour IBM l'algorithme HITS (Hyperlink-Induced Topic Search) qui prenait en considération l'autorité d'une page en fonction du nombre de liens pointant vers elle43. C'est donc en s'inspirant des travaux de Jon Kleinberg que les deux étudiants mettent au point l'algorithme de classement des pages web appelé PageRank. Celui-ci prend en considération les liens pointant vers une page comme un vote pour cette page. Plus une page recevrait de vote, plus elle serait considérée comme étant pertinente et plus le vote de cette page, lorsqu'elle pointerait elle-même vers d'autres pages, aurait de la valeur41.</p>
+<p>Ils nomment leur projet BackRub40. Ils imaginent un logiciel qui analyserait les relations entre les sites web afin d'offrir des meilleurs résultats que ceux donnés par leurs concurrents de l'époque, AltaVista notamment.</p>
+<p>Une fois leurs travaux terminés, les deux étudiants commencent à concrétiser leur projet de moteur de recherche et achètent à cet effet un téraoctet de disques durs d'occasion, afin de créer une base de données. Cette installation sommaire prend place dans la chambre de Larry Page44. Sergey loue un bureau et se met en quête de financements. David Filo, fondateur de Yahoo!, convient de l'intérêt de leurs recherches, mais les encourage à créer leur propre moteur de recherche plutôt que vendre leurs travaux44.</p>
+<p>Andy Bechtolsheim, l'un des fondateurs de Sun Microsystems, se laisse convaincre par Sergey et Larry et leur fait un chèque de 100 000 $ pour financer leur moteur. La société Google n'est toutefois pas encore créée et Larry garde le chèque dans son tiroir pendant quelques semaines, le temps d'achever les formalités légales44. Le nom de domaine « google.com » est enregistré le 15 septembre 1997. Les deux entrepreneurs sollicitent parallèlement famille et amis et parviennent finalement à réunir un million de dollars pour fonder la compagnie. Google Inc. s'installe dans le garage Google de Menlo Park, loué par une amie, en septembre 1998. La société emploie alors trois personnes : Sergey, Larry et Craig Silverstein, qui est aujourd'hui directeur de Google Technology44.</p>
+<p>Google est constitué en société en 1998.</p>
+<h2 id=""><a class="header" href="#"></a></h2>
+<p>Au début des années 2000, Google est un moteur de recherche prospère mais sans modèle économique viable, ce qui ne pose pas encore problème en pleine bulle Internet. Les investissements affluent et Brin et Page refusent de prioriser la publicité, craignant qu’elle n’altère la pertinence des résultats de recherche au profit de considérations économiques.</p>
+<p>À cette époque, les revenus de Google proviennent principalement de la vente de licences à des portails comme Yahoo!, et non de la publicité. En décembre 1999, Google introduit la publicité dans son moteur de recherche à partir de publicité sponsorisées liées aux mots clés de la recherche, que Brin et PAge acceptent à condition qu'ils soient clairement marqués et différenciés des résultats de recherche classique. Mais ces mécanismes publicitaires sont très basiques.</p>
+<p>Pendant ce temps là, d'autres startups défrichaint le secteur de la publicité en ligne, en inventant le pay-per-click.</p>
+<p>Overture (anciennement GoTo.com) a transformé la publicité en ligne en introduisant le modèle du pay-per-click (PPC), aujourd’hui incontournable dans le fonctionnement des moteurs de recherche comme Google.</p>
+<p>Points essentiels :
+•	Création en 1998 : Fondée sous le nom de GoTo.com, la société a développé un moteur de recherche où les annonceurs pouvaient enchérir pour apparaître en tête des résultats. Ils ne payaient que lorsqu’un utilisateur cliquait sur leur annonce.
+•	Présentation au TED : En février 1998, Jeffrey Brewer a présenté ce concept novateur lors de la conférence TED en Californie, marquant une avancée majeure dans la publicité digitale.
+•	Acquisition stratégique : GoTo.com a renforcé sa position en acquérant World Wide Web Worm (WWWW), l’un des plus anciens moteurs de recherche.
+•	Croissance rapide : Dès juillet 1998, certaines enchères atteignaient un dollar par clic. En juin 1999, GoTo.com lançait une plateforme permettant aux annonceurs de gérer leurs mots-clés et enchères en temps réel.
+•	Rachat par Yahoo! : En 2003, Yahoo! a acquis Overture pour 1,63 milliard de dollars, intégrant ainsi ce modèle PPC à ses services.</p>
+<p>Impact :
+L’innovation d’Overture a non seulement redéfini la publicité en ligne mais a aussi ouvert la voie à des géants comme Google, qui ont perfectionné ce modèle avec Google AdWords (désormais Google Ads).</p>
+<h2 id="léclatement-de-la-bulle-internet"><a class="header" href="#léclatement-de-la-bulle-internet">L'éclatement de la bulle Internet</a></h2>
+<p>Lorsque la bulle Internet éclate en avril 2000, les choses changent.Les investisseurs cessent d'injecter de l'argent magique de toute part dans les startups de la silicon Valley. Les investissements en veulent maintenant vraiment pour leur argent - plutot qu'une promesse de rentabilité dans le futur. La pression s'accroit donc sur Google pour rationaliser son modèle économique et fournir des perspectives de retour sur investissement plus immédiate.</p>
+<p>Brin et Page vont donc renoncer à leur aversion, de notoriété publique, pour la publicité en ligne.</p>
+<p>« Page demanda que l’ensemble du processus soit simplifié pour les annonceurs. Dans cette nouvelle approche, ilrépéta avec insistance qu’ils « ne devraient même pas être impliqués dans le choix des mots-clés : Google les choisirait pour eux. »</p>
+<p>« Sur le plan opérationnel, cela signifiait que Google canaliserait
+son propre cache grandissant de données comportementales ainsi
+que sa puissance et son expertise informatiques vers une seule et
+unique tâche, à savoir faire coïncider publicités et requêtes. Une
+nouvelle rhétorique se mit en place pour légitimer ce changement
+inattendu. S’il fallait faire de la publicité, alors celle-ci devait être
+« pertinente » pour les utilisateurs. Les annonces publicitaires ne
+seraient plus liées aux mots-clés d’une requête de recherche ; ce
+serait plutôt une annonce particulière qui « ciblerait » un individu
+particulier. Sécuriser ce saint graal de la publicité assurerait à la fois
+la pertinence pour les utilisateurs et la valeur pour les annonceurs
+publicitaires. »</p>
+<h2 id="adwords"><a class="header" href="#adwords">AdWords</a></h2>
+<p>Google introduit son dispositif publicitaire AdWords (qui deviendra Google Ads en 2018) en octobre 2000.</p>
+<p>Google a introduit la publicité dans ses résultats de recherche en octobre 2000 avec le lancement de Google AdWords.</p>
+<p>Contexte :
+•	Initialement, Google était réticent à l’idée d’intégrer des publicités dans ses résultats de recherche, préférant se concentrer sur la qualité des résultats organiques.
+•	Cependant, face aux besoins de monétisation croissants et à la demande des entreprises, Google a lancé AdWords comme un moyen pour les annonceurs de placer des publicités textuelles à côté des résultats de recherche.</p>
+<p>Fonctionnement initial d’AdWords (2000) :
+•	Modèle au CPM (Cost Per Mille) : Au départ, AdWords fonctionnait sur un modèle où les annonceurs payaient en fonction du nombre d’impressions (1000 vues).
+•	Positionnement simple : Les annonces étaient affichées en fonction du montant de l’enchère, et l’annonceur le plus offrant obtenait la meilleure place.
+•	Pas encore d’enchères au second prix : Le système d’enchères au second prix (GSP) et le coût par clic (CPC) n’ont été introduits qu’en 2002.</p>
+<p>Impact :
+•	L’introduction de la publicité dans les résultats de recherche a marqué un tournant majeur pour Google, contribuant à faire d’AdWords (aujourd’hui Google Ads) l’une des plateformes publicitaires les plus lucratives au monde.
+•	L’approche de Google, en mettant l’accent sur des annonces discrètes et pertinentes, a également contribué à différencier l’entreprise de ses concurrents à l’époque.</p>
+<p>Le mécanisme, a l'époque, est peu novateur. Les publicités, liées à des mots-clés, sont facturées au coût par mille impressions (CPM). Ce mécanisme, s'il permet d'assurer une forme de ciblage du public en proposant des publicités liées aux termes de recherche, n'optimise ni les couts pour l'annonceur - on paye à l'impression et pas au clic - ni n'offre encore de ciblages très fin.</p>
+<p>Elles offrent quand même une certaine efficacité puisqu'elle sont liées aux recherches, et permettent à google, de commencer à étudier, en interne le taux de clic, click-trough-rate ou CTR.</p>
+<p>Dans les toutes premières versions d’AdWords, avant l’introduction du modèle d’enchères au second prix (GSP) en 2002, le système d’enchères était basé uniquement sur un modèle de coût par mille impressions (CPM), plutôt qu’un coût par clic (CPC).</p>
+<p>Fonctionnement initial d’AdWords (2000 - début 2002) :
+1.	Paiement au CPM (Cost Per Mille) :
+•	Les annonceurs payaient en fonction du nombre d’impressions (par tranche de 1000 vues), peu importe si les utilisateurs cliquaient sur l’annonce ou non.
+•	L’accent était mis sur la visibilité de l’annonce plutôt que sur l’engagement direct des utilisateurs.
+2.	Positionnement basé sur l’enchère la plus élevée :
+•	L’annonceur qui enchérissait le plus haut pour un mot-clé voyait son annonce apparaître en première position.
+•	Contrairement au modèle ultérieur (GSP), chaque annonceur payait exactement ce qu’il avait enchéri, sans ajustement basé sur la compétition.
+•	Cela signifiait qu’un annonceur pouvait payer beaucoup plus que le concurrent juste en dessous de lui, ce qui rendait le système moins optimal.
+3.	Pas de prise en compte de la pertinence :
+•	L’ordre des annonces était déterminé uniquement par l’enchère maximale, sans considération de la pertinence ou du taux de clic (CTR).
+•	Cela pouvait aboutir à des annonces peu pertinentes apparaissant en haut des résultats, simplement parce que l’annonceur avait payé plus.</p>
+<p>Pourquoi ce système a changé :
+•	Inefficacité pour les annonceurs : Les annonceurs pouvaient dépenser beaucoup sans garantie de retour sur investissement.
+•	Manque d’incitation à la qualité : Puisque la qualité de l’annonce (CTR, pertinence) n’était pas prise en compte, certaines annonces peu engageantes prenaient des positions élevées simplement par la force de l’enchère.
+•	Problèmes d’engagement des utilisateurs : Google voulait maximiser l’expérience utilisateur en affichant des annonces plus pertinentes et intéressantes, ce qui nécessitait une approche différente.</p>
+<p>Passage au modèle CPC en 2002 :</p>
+<p>Avec l’introduction du modèle d’enchères au second prix généralisé (GSP), Google est passé au coût par clic (CPC), où les annonceurs ne paient que lorsque l’utilisateur clique sur l’annonce.
+•	Ce modèle a aligné les intérêts de Google, des annonceurs et des utilisateurs, en favorisant des annonces plus pertinentes et engageantes.
+•	La position des annonces a commencé à dépendre à la fois de l’enchère et du Quality Score (basé sur le CTR, la pertinence et la qualité de la page de destination).</p>
+<p>Ce n'est qu'en 2002 que Google se décide à modifier en profondeur le mécanisme sous-jacent à AdWords en introduisant deux changements profonds. D'une part la facturation au cout par Clic (CPC) et d'autres par en introduisant un nouveau mécanisme d'enchere, le GSP.</p>
+<h3 id="generalized-first-price-auctions"><a class="header" href="#generalized-first-price-auctions">Generalized First-Price Auctions</a></h3>
+<p>La publicité n’était plus vendue par lot de 1 000 impressions, mais au clic, un par un. Chaque fois qu’un utilisateur cliquait sur un lien sponsorisé, le compte de l’annonceur était automatiquement débité du montant de son enchère la plus récente. Les liens sponsorisés étaient affichés par ordre décroissant en fonction des enchères, donnant ainsi plus de visibilité aux annonces les plus élevées.</p>
+<p>Ce système s’est rapidement imposé grâce à sa simplicité d’utilisation, ses coûts d’entrée très faibles et la transparence du mécanisme. Overture est ainsi devenu le fournisseur de publicité pour les principaux moteurs de recherche, tels que Yahoo! et MSN. Toutefois, bien que ce modèle ait rencontré un grand succès, le mécanisme d’enchères lui-même présentait certaines failles. Overture et les annonceurs ont rapidement constaté que ce système était instable, notamment en raison de la possibilité de modifier les enchères très fréquemment.</p>
+<p>Le problème principal est que ce mécanisme n'est pas truthfull : le prix que les annonceurs sont prets à payer n'est pas la valeur réelle qu'ils tirent de la publicité, mais un pur effet du jeu de concurrence avec les autres annonceurs.</p>
+<p>Note that this auction is not truthful - if everyone bid their true values, each
+bidder would gain by reducing their own bid to just above the next highest.
+Also note that this auction exhibits cycling behaviours [2]. Suppose the bids
+are as above.</p>
+<p><strong>Exemple</strong></p>
+<p>Dans une enchère publicitaire, les annonces en première position reçoivent plus de clics (200 par heure) que celles en deuxième position (100 par heure). Trois annonceurs ont des valeurs par clic de 10 $, 4 $ et 2 $. Si l’annonceur 2 mise 2,01 $ pour garantir une place, l’annonceur 1 n’a pas besoin de miser plus que 2,02 $ pour rester au sommet. Cela pousse les annonceurs à enchérir de façon continue (2,03 $, 2,04 $, etc.), créant une spirale sans équilibre stable.</p>
+<p>Les annonceurs investissent alors dans des robots d’enchères pour ajuster leurs offres rapidement, ce qui n’est ni socialement efficace ni bénéfique pour les revenus des moteurs de recherche. Si certains annonceurs disposent de robots rapides tandis que d’autres réagissent lentement (par exemple, une fois par jour), les revenus restent faibles. Même si l’annonceur 1 a une valeur élevée, il suffit que l’annonceur 3 fixe son enchère à 2,00 $ pour que les revenus plafonnent à 2,02 $ par clic.</p>
+<p>L’étude souligne que ces coûts liés à la manipulation des enchères sont souvent répercutés sur les vendeurs, et que des disparités de vitesse entre robots et humains réduisent les bénéfices potentiels des enchères, même lorsque les valeurs par clic sont élevées.</p>
+<p>Note that in these bidding wars, all bids will stay close to the lowest bid
+necessary to get the last spot. Thus the search engine’s revenue will never get
+too high.</p>
+<h3 id="generalized-second-price-auctions"><a class="header" href="#generalized-second-price-auctions">Generalized Second-Price Auctions.</a></h3>
+<p>Under
+the generalized first-price auction, the advertiser
+who could react to competitors’ moves fastest
+had a substantial advantage. The mechanism
+therefore encouraged inefficient investments in
+gaming the system, causing volatile prices and
+allocative inefficiencies. Google addressed these
+problems when it introduced its own pay-per-click
+system, AdWords Select, in February 2002.
+Google also recognized that an advertiser in
+position i will never want to pay more than one
+bid increment above the bid of the advertiser in
+position (i 1), and adopted this principle in its
+newly designed generalized second-price auc-
+tion mechanism. In the simplest GSP auction,
+an advertiser in position i pays a price per click
+equal to the bid of an advertiser in position (i_1) plus a minimum increment (typically $0.01).
+This second-price structure makes the market
+more user friendly and less susceptible to
+gaming.</p>
+<p>Mise à Jour Majeure, nouvelle tarification  au CPC (+ CTR) en plus du CPM</p>
+<p>En octobre 2000, Google lance son système Google AdWords, permettant aux annonceurs de créer des publicités apparaissant dans le moteur de recherche Google. Cependant, le paiement par clic n'est lancé que début 2002 ; auparavant les annonceurs sont facturés au coût par mille impressions (CPM).</p>
+<p>« Les premières annonces de Google avaient été jugées plus efficaces que la majeure partie des publicités en ligne, parce qu’elles
+étaient liées à des requêtes de recherche et que Google pouvait
+suivre les utilisateurs quand ils cliquaient effectivement sur une
+annonce, pratique connue sous le nom de « taux de clics ». Malgré
+cela, les annonceurs étaient facturés de manière conventionnelle,
+en fonction du nombre de personnes ayant vu l’annonce. Dès que
+Search commença à s’étendre, Google créa le système en libre-service AdWords, dans lequel une requête utilisant le mot-clé de l’annonceur incluait la zone de texte de cet annonceur ainsi qu’un lien
+vers sa page d’accueil. Le tarif publicitaire dépendait de la position
+de l’annonce sur la page de résultats de recherche.La start-up rivale de la recherche, Overture, avait développé
+un système d’enchères sur Internet pour le positionnement de la
+page web qui lui permettait de mieux trier la publicité ciblée sur
+les mots-clés. Google allait opérer un renforcement transformationnel sur ce modèle, lequel était destiné à modifier le cours du
+capitalisme de l’information. Comme un journaliste de Bloomberg
+l’expliqua en 2006, « Google maximise le revenu qu’il tire de ce
+précieux bien foncier en donnant la[…] »</p>
+<p>https://www.bloomberg.com/news/articles/2006-03-05/the-secret-to-googles-success</p>
+<p>C'est la qu'ils embauchent Eric Schmidt et le nomment président.</p>
+<h2 id="enchere-vs-rtb"><a class="header" href="#enchere-vs-rtb">Enchere vs RTB</a></h2>
+<p>Pour faire cours, la principale innovation du RTB c'est que la publicité est ciblée et non pas générique. Le développement des enchères en temps réel (RTB) a transformé le paysage de la publicité numérique. Le RTB permet l'achat d'une impression publicitaire individuelle en temps réel, ce qui facilite le ciblage direct des utilisateurs et optimise le processus d'achat7. Cette technologie a ouvert de nouvelles opportunités de recherche dans des domaines tels que l'apprentissage automatique et l'optimisation des revenus.</p>
+<p>La spécificité du Real-Time Bidding (RTB) par rapport aux enchères publicitaires classiques réside dans sa rapidité, son automatisation et son ciblage précis. Voici les principales différences :</p>
+<ol>
+<li>
+<p>Fonctionnement en temps réel :
+•	RTB : Chaque impression publicitaire est mise aux enchères instantanément (en quelques millisecondes) dès qu’un utilisateur charge une page web. L’annonceur qui remporte l’enchère voit son annonce affichée immédiatement.
+•	Enchères classiques : Les enchères sont souvent programmées à l’avance, par campagne ou par lot d’impressions, sans cette dimension d’instantanéité.</p>
+</li>
+<li>
+<p>Personnalisation et ciblage :
+•	RTB : L’achat se fait impression par impression, permettant un ciblage ultra-précis basé sur des données comportementales, démographiques ou contextuelles de l’utilisateur (âge, localisation, centres d’intérêt, etc.).
+•	Enchères normales : Le ciblage est plus large et moins granulaire, souvent défini par segments d’audience sans ajustement dynamique en fonction de l’utilisateur individuel.</p>
+</li>
+<li>
+<p>Automatisation complète :
+•	RTB : L’ensemble du processus est automatisé et piloté par des algorithmes et des plateformes DSP (Demand-Side Platform). Cela permet d’ajuster les enchères en temps réel pour maximiser le retour sur investissement.
+•	Enchères classiques : Les enchères sont souvent manuelles ou semi-automatisées, nécessitant une gestion plus lourde par les annonceurs ou les agences.</p>
+</li>
+<li>
+<p>Optimisation budgétaire :
+•	RTB : L’annonceur n’achète que les impressions qui correspondent à ses critères précis, réduisant ainsi le gaspillage publicitaire.
+•	Enchères classiques : Les annonceurs paient pour un volume d’impressions global, sans garantie que chaque impression atteigne la cible idéale.</p>
+</li>
+<li>
+<p>Échelle et flexibilité :
+•	RTB : Il permet d’acheter des impressions publicitaires sur des milliers de sites simultanément, via des ad exchanges (places de marché publicitaire).
+•	Enchères classiques : L’achat se fait souvent auprès d’éditeurs spécifiques, limitant l’échelle et la diversité des emplacements disponibles.</p>
+</li>
+</ol>
+<p>En résumé : Le RTB offre une publicité plus efficace, plus réactive et mieux ciblée, là où les enchères classiques sont plus rigides et moins personnalisées.</p>
+<h2 id="timeline-de-google-ads-ici"><a class="header" href="#timeline-de-google-ads-ici">Timeline de Google Ads ici</a></h2>
+<p>https://www.mauricelargeron.com/histoire-de-google-adwords-2/</p>
+<h2 id="références"><a class="header" href="#références">Références</a></h2>
+<p>https://www.e-marketing.fr/Thematique/cross-canal-1094/Infographies/Voyage-dans-l-histoire-du-programmatique-Et-demain--250741.htm</p>
+<p>https://www.ppchero.com/a-history-of-google-adwords-and-google-ads-revolutionizing-digital-advertising-marketing-since-2000/</p>
+<p>Zuboff, S. (2020). L’Âge du capitalisme de surveillance : Le combat pour un avenir humain face aux nouvelles frontières du pouvoir. Zulma.
+Hwang, T. (2022). Le grand krach de l’attention : La publicité en ligne et le temps de cerveau disponible. C&amp;F Éditions.
+Filter Bubble ?</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter_4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter_4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
