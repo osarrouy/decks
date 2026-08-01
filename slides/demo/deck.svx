@@ -13,7 +13,7 @@ Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, 
 
 Ces technologies ont soulevé toute une série de nouvelles questions : comment le radar peut-il repérer la position et la direction de l'avion ; comment le système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?
 
- Ces questions peuvent sembler très techniques, voire sans grand intérêt. Pourtant, à la fin des années 1940, plusieurs chercheurs commencent à comprendre qu’elles ne concernent pas uniquement les machines. La même manière de raisonner pourrait servir à analyser des phénomènes qui, à première vue, n’ont rien à voir les uns avec les autres : comment un organisme maintient-il sa température malgré les variations de son environnement ; comment le cerveau utilise-t-il des informations sensorielles pour corriger un geste ; comment une organisation modifie-t-elle ses décisions en fonction des résultats qu’elle observe.
+Ces questions peuvent sembler très techniques, voire sans grand intérêt. Pourtant, à la fin des années 1940, plusieurs chercheurs commencent à comprendre qu’elles ne concernent pas uniquement les machines. La même manière de raisonner pourrait servir à analyser des phénomènes qui, à première vue, n’ont rien à voir les uns avec les autres : comment un organisme maintient-il sa température malgré les variations de son environnement ; comment le cerveau utilise-t-il des informations sensorielles pour corriger un geste ; comment une organisation modifie-t-elle ses décisions en fonction des résultats qu’elle observe.
 
 Quel est le point commun entre ces phénomènes ? Dans chaque cas, un système reçoit des informations, agit sur son environnement, observe les effets de son action, puis ajuste son comportement en conséquence.
 
@@ -56,6 +56,9 @@ Wiener découvrira plus tard que le mot « cybernétique » avait déjà été e
 Chez Wiener, toutefois, le point de départ n’est pas une théorie du gouvernement des êtres humains. Il s’agit d’abord de comprendre comment une machine ou un organisme peut maintenir une trajectoire, poursuivre un but ou préserver une certaine stabilité malgré les perturbations extérieures. Il définira ainsi la cybernétique comme *l’étude des mécanismes de communication, de contrôle et de régulation chez les êtres vivants comme dans les machines*.
 
 Mais pourquoi, alors, s'arrêter sur la cybernernétique dont les préoccupations semblent assez éloignées des notres ? Parce que, entre les années 1940 et 1960, la cybernétique fédère un grand nombre de chercheurs, pourtant issus de disciplines très diverses, autour d'un langage et de problèmes communs. Des ingénieurs commencent alors à décrire le fonctionnement des machines à l’aide de notions issues de la physiologie ; des neurologues comparent le fonction des réseaux neuronaux à ceux des circuits informatiques ; et des psychologues ou des chercheurs en sciences sociales utilisent des notions issues de la cybernétique pour analyser l’apprentissage, la communication ou la décision collective.
+
+
+CONF2RENCE MACY ICI ?
 
 La cybernétique exercera ainsi une influence décisive sur la seconde moitié du XXIème siècle. On trouve aujourd'hui encore un trace de son héritage, direct ou indirect, dans l'architecture du réseau Internet, dans les réseaux de neurones artificiels de l'IA, dans les théories du management ou dans les politiques néo-libérales de la Silicon Valley.
 
@@ -152,7 +155,7 @@ La fonction d'un thermostat est de piloter la température d’une pièce.
 - Un objectif de température, appellée consigne, lui est fourni.
 - Un capteur mesure la température actuel.
 - Si la température est inférieure à la consigne, le chauffage s’active.
-- Le chauffage modifie la température de la pièce.
+- Le chauffage modifie alors la température de la pièce.
 - La nouvelle température est mesurée.
 - Cette mesure détermine l’action suivante.
 
@@ -243,26 +246,51 @@ La notion de rétroaction répond à la question : comment un système peut-il c
 
 Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc codifier ce réel pour l'analyser : la température mesurée par un capteur ou l'écho capté par un radar.
 
-Le problème est que ces phénomènes n’ont, matériellement, rien de commun. Et pourtant, chacun relève bien d'une opération analogue : *une variation est détectée, codée puis transmise pour modifier ce qui se produit ensuite*.
+Le problème est évidemment que ces phénomènes n’ont matériellement ou empriquement rien de commun. Il n'y a pas grand rapport entre la température d'une pièce et la position d'un avion dans le ciel.
 
-Cette variation peut être :
+Les cybernéticiens vont donc se doter d'un concept très général pour s'abstraire de la réalité de ces phénomènes et en conserver ce qui les intéresse : ce qui peut être transmis, détecté et mesuré comme une différence entre plusieurs états possibles. C'est ce qu'ils appelleront *l'information*.
 
-- une température convertie en signal électrique ;
-- un écho radar traduit en coordonnées ;
-- une variation de glycémie à laquelle répond une régulation hormonale ;
-- une impulsion transmise entre des neurones ;
-- un temps de visionnage transformé en indice comportemental.
+Comme souvent chez les cybernéticiens, la notion d'information constitue comme un concept générique et transdisciplinaire dont le sens exact varie d'un domaine d'application à l'autre.
 
-Pour décrire ces réalités dans une même grammaire, il faut faire abstraction de leur support matériel — et même, dans un premier temps, de leur signification. On peut alors considérer chaque observation relativement à l’ensemble des variations attendues : **était-elle prévisible, ou au contraire improbable ?**
-
-Une observation très attendue modifie peu notre incertitude. Une observation improbable la réduit davantage : sa survenue nous apprend davantage.
-
-C’est cette quantité, définie statistiquement et indépendamment du support matériel, que Claude Shannon appelle **information**.
-La notion d'information, formalisée par Claude Shannon, va apporter une réponse particulièrement opportune à cette question.
+On en retient toutefois le plus souvent une définition particulière. Celle proposée en 1948 par Claude Shannon dans son article *A Mathematical Theory of Communication*.
 
 ---
 
-<!-- slide: id="004f1-information-shannon" title="Mesurer l’information" steps=0 layout="center" -->
+
+
+--- notes
+
+Le problème auquel se confronte à l'époque Shannon lui vient de l’ingénierie des télécommunications : comment représenter des messages, mesurer la capacité de transmission d’un canal et transmettre ces messages malgré le bruit ?
+
+Le schéma général distingue :
+
+- une source qui produit des messages ;
+- un dispositif qui les encode en signaux ;
+- un canal dans lequel du bruit peut intervenir ;
+- un dispositif de réception ;
+- une destination.
+
+La question de Shannon, lorsqu'il propose ce schéma, est : comment mesurer la quantité réelle d'information qu'il s'agit de transmettre et ainsi déterminer si un canal donné peut y parvenir ou non malgré le bruit qui le perturbera.
+
+Shannon ne cherche donc pas à qualifier le sens, la vérité ou l’importance sociale d’un message. Il cherche à quantifier la quantité d'information transmise.
+
+La question peut paraître absurde. Comment pourrait-on mesurer une quantité d'information ?
+
+[!EXEMPLE]
+Il fait beau aujourd'hui.
+J'ai faim.
+
+Shannon apporte une réponse élégante à ce problème en partant de l'intuition suivante : une observation très attendue modifie peu notre incertitude et apporte donc peu d'information ; à l'inverse, une observation improbable réduit plus fortement notre incertitude et nous apporte donc plus d'information.
+
+[!EXEMPLE]
+Apprendre que le soleil s’est levé ce matin apporte peu d’information.
+Apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
+Imaginez une boîte qui répond « oui » ou « non » à vos questions. Si elle répond toujours « oui », sa réponse ne vous apprend jamais rien : vous saviez déjà ce qu'elle allait vous répondre. Si, au contraire, elle répond « oui » ou « non » avec autant de chances, vous ne pouvez pas prévoir sa réponse. Lorsque vous la découvrez, vous recevez de l'information.
+
+Shannon propose donc une conception probabiliste de l’information, que l’on peut formaliser ainsi.
+
+--- 
+<!-- slide: layout="center" -->
 
 <p class="statement formula" aria-label="I de x égale moins le logarithme en base deux de la probabilité de x" aria-describedby="shannon-formula-source">
   <var>I</var>(<var>x</var>) = −log<sub>2</sub> <var>p</var>(<var>x</var>)<sup class="footnote-ref" aria-hidden="true">1</sup>
@@ -273,7 +301,9 @@ La notion d'information, formalisée par Claude Shannon, va apporter une répons
     <li id="shannon-formula-source">Shannon, 1948a, pp. 379–380.</li>
   </ol>
 </footer>
+
 --- notes
+
 
 ### Lire la formule
 
@@ -282,32 +312,29 @@ La notion d'information, formalisée par Claude Shannon, va apporter une répons
 - `I(x)` mesure l’information apportée par sa survenue.
 - Avec un logarithme en base 2, cette information s’exprime en **bits**.
 
-Shannon publie, en 1948, un article intitulé *A Mathematical Theory of Communication*.
 
-Son problème n'est pas directement, alors, celui de boucles de rétro-action, ou de la cybernétique, mais celui des télécommunications : comment représenter des messages, évaluer la capacité d’un canal et transmettre ces messages malgré l’incertitude et le bruit ?
 
-L’idée est très simple : *plus un événement est improbable, plus sa survenue nous apprend quelque chose*.
+Pour décrire ces réalités dans une même grammaire, il faut faire abstraction de leur support matériel — et même, dans un premier temps, de leur signification. On peut alors considérer chaque observation relativement à l’ensemble des variations attendues : **était-elle prévisible, ou au contraire improbable ?**
 
-Imagine une boîte qui répond « oui » ou « non ».
+Une observation très attendue modifie peu notre incertitude. Une observation improbable la réduit davantage : sa survenue nous apprend davantage.
 
-- Si elle répond toujours « oui », sa réponse ne t’apprend rien : tu la connaissais déjà. L’information vaut **0 bit**.
-- Si elle répond « oui » ou « non » avec autant de chances, tu ne peux pas prévoir sa réponse. Lorsque tu la découvres, tu reçois **1 bit** d’information.
+C’est cette quantité, définie statistiquement et indépendamment du support matériel, que Claude Shannon appelle **information**.
 
-Pour une pièce équilibrée :
 
-`I(x) = −log₂(½) = 1 bit`
-
-Apprendre que le soleil s’est levé ce matin apporte peu d’information ; apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
-
-La notion d'information formalisée par Shannon mesure donc la **surprise statistique**, pas la signification. Un message peut être très imprévisible et donc contenir beaucoup d’information au sens mathématique, tout en ne voulant absolument rien dire.
 
 ### Une définition volontairement abstraite
 
-L’information ne désigne donc pas une connaissance pertinente ni ne mesure la vérité d'un enoncé. Elle dépend d’un ensemble de messages possibles et de leur probabilité.
+La notion d'information formalisée par Shannon mesure donc la **surprise statistique**, pas la signification. Un message peut être très improbable et donc apporter beaucoup d’information au sens mathématique, tout en n’ayant aucun sens pour son destinataire. Inversement, une phrase hautement prévisible peut posséder une signification importante dans une situation donnée.
 
-Si je vous dis que demain le soleil se lèvera, le message a du sens mais apporte peu d’information au sens de Shannon : il était presque certain. Si je tire une carte parmi de nombreuses possibilités et vous annonce laquelle, le message réduit davantage l’incertitude.
+[!EXEMPLE]
+Balakoukamouki
+Je t'aime
 
 Cette abstraction permet de traiter de manière comparable du texte, du son ou une suite d’états électriques. Le contenu peut être codé en symboles, transmis et reconstruit sans que l’ingénieur ait besoin d’interpréter sa signification.
+
+Shannon met les dimensions sémantiques entre parenthèses parce qu’elles ne sont pas nécessaires au problème d’ingénierie qu’il formalise. Il ne démontre pas que le sens n’existe pas ou qu’il serait réductible à une quantité de bits
+
+
 
 ### Ce que Shannon dit — et ne dit pas
 
@@ -336,6 +363,8 @@ Mais le mot ne conserve pas partout le même sens : **grandeur statistique chez 
 Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire un effet. Une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations.
 
 Pour comprendre ce qu’une information peut modifier, il faut donc identifier les composantes entre lesquelles elle circule, les relations qui les unissent et la frontière qui distingue cet ensemble de son environnement. La question se déplace alors : de l’information elle-même vers l’ensemble organisé au sein duquel elle prend effet.
+
+A l'intérieur de quel systèmes est-elle probabable ou improbable ? Et quel information ce système regarde -t-il ?
 
 Cette transition ne doit pas effacer les différences entre les domaines. Pour appliquer strictement la théorie de Shannon, il faut toujours définir des événements possibles, leurs probabilités, un codage, un canal et du bruit. Une concentration hormonale ou un geste dans une interaction sociale ne deviennent pas automatiquement des « messages » shannoniens.
 
