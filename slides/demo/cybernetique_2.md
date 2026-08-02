@@ -27,69 +27,6 @@ La Seconde Guerre mondiale radicalise ce problème. Il ne s’agit plus seulemen
 > L’industrie avait posé un problème de coordination ; la guerre en fait un problème de prédiction sous contrainte de temps.
 
 ---
-
-## 3. La scène antiaérienne : cible, mesure et erreur
-
-**Temps indicatif : 6 à 7 minutes.**
-
-Pendant la Seconde Guerre mondiale, Norbert Wiener et l’ingénieur Julian Bigelow travaillent sur des problèmes de prédiction liés au tir antiaérien.
-
-Un canon ne peut pas simplement viser l’endroit où l’avion se trouve. Entre la détection de la cible, la transmission de la mesure, le calcul de la trajectoire, le déclenchement du tir et l’arrivée du projectile, l’avion s’est déplacé. Il faut viser une position qui n’est pas encore observée.
-
-Le problème combine plusieurs difficultés :
-
-- la cible se déplace rapidement ;
-- le pilote peut en modifier la trajectoire de façon imprévisible ;
-- la mesure comporte du bruit et des erreurs ;
-- le calcul et l’action prennent du temps ;
-- chaque nouvelle observation peut rendre l’estimation précédente obsolète.
-
-Le dispositif doit donc accomplir plusieurs opérations :
-
-1. mesurer une trajectoire partielle ;
-2. distinguer autant que possible le mouvement du bruit ;
-3. estimer une position future ;
-4. comparer cette estimation aux nouvelles positions observées ;
-5. modifier la prédiction suivante.
-
-Une simplification décisive intervient ici. Pour le problème considéré, l’avion et le pilote peuvent être traités comme une **boîte noire**. Le dispositif ne cherche pas à connaître la psychologie du pilote, la totalité du fonctionnement de l’appareil ou les raisons de chaque changement de direction. Il sélectionne ce qui lui est utile : une position qui varie dans le temps.
-
-Le pilote et l’avion sont ainsi provisoirement réduits à un point, ou à une série de positions successives. Cette abstraction produit un gain considérable : le comportement devient mathématiquement traitable. On peut comparer une trajectoire attendue à une trajectoire observée et calculer l’écart entre elles.
-
-Mais l’abstraction a également un prix. Elle ne conserve pas l’objet tout entier. Elle rend certaines relations visibles en éliminant une grande partie de la réalité. Ce point sera important lorsque des modèles analogues seront appliqués aux organismes, aux personnes ou aux sociétés.
-
-L’opération centrale peut être formulée simplement :
-
-- une position est attendue ;
-- une position est observée ;
-- un écart apparaît entre les deux ;
-- cet écart modifie la prédiction suivante.
-
-
-
-
-### Question aux étudiants
-
-> Qu’est-ce que le système doit connaître de l’avion pour corriger son estimation ? Qu’est-ce qu’il peut ignorer ?
-
-L’objectif est de faire apparaître trois idées :
-
-1. un modèle sélectionne seulement certaines propriétés ;
-2. cette sélection permet d’agir sans connaissance totale ;
-3. ce qui est exclu du modèle peut redevenir important lorsque l’on change de question.
-
-### Transition
-
-> L’innovation n’est pas de supprimer l’erreur, mais de faire de l’erreur une information utilisable.
-
----
-
-## 4. La rétroaction : corriger plutôt que tout prévoir
-
-**Temps indicatif : 6 minutes.**
-
-
-
 ### Le thermostat
 
 
@@ -167,46 +104,11 @@ La pièce chauffée ne rentre pas matériellement dans le thermostat. L’avion 
 
 Cette opération implique déjà une réduction. Le réel n’est jamais mesuré dans sa totalité. Un capteur ne saisit que ce pour quoi il a été conçu. Ce qui n’est pas converti en signal ne pourra ni être comparé à la consigne ni déclencher une correction.
 
-### Le problème de Shannon
-
-En 1948, Claude Shannon publie « A Mathematical Theory of Communication ». Son problème vient de l’ingénierie des télécommunications : comment représenter des messages, mesurer la capacité d’un canal et transmettre ces messages malgré le bruit ?
-
-Le schéma général distingue :
-
-- une source qui produit des messages ;
-- un dispositif qui les encode en signaux ;
-- un canal dans lequel du bruit peut intervenir ;
-- un dispositif de réception ;
-- une destination.
-
-La théorie de Shannon ne mesure pas directement le sens, la vérité ou l’importance sociale d’un message. Elle traite des possibilités parmi lesquelles un message peut être sélectionné et de leur probabilité.
-
-Pour un événement `x`, l’information apportée par sa survenue peut être représentée ainsi :
-
-[
-I(x) = -\log\_2 p(x)
-]
-
-- `x` est l’événement observé ;
-- `p(x)` est sa probabilité ;
-- `I(x)` mesure l’information apportée par sa survenue ;
-- le logarithme en base 2 permet d’exprimer cette quantité en **bits**.
-
-Plus un événement est probable, moins sa survenue modifie notre incertitude. Plus il est improbable, plus sa survenue est informative relativement à l’ensemble de possibilités considéré.
-
-Si une source répond toujours « oui », la réponse était déjà connue : elle apporte zéro bit. Si elle répond « oui » ou « non » avec la même probabilité, apprendre la réponse permet de distinguer deux possibilités équiprobables : cela correspond à un bit.
-
-Il est utile de distinguer l’information apportée par un événement particulier de l’**entropie informationnelle** d’une source. L’entropie correspond à l’information moyenne attendue lorsque la source produit différents événements possibles :
-
-[
-H(X) = -\sum\_x p(x)\log\_2 p(x)
-]
-
-Cette distinction évite de transformer trop rapidement une formule relative à des messages possibles en mesure générale de « l’ordre du monde ».
-
 ### Information et signification
 
-Un message peut être très improbable et donc apporter beaucoup d’information au sens mathématique, tout en n’ayant aucun sens pour son destinataire. Inversement, une phrase hautement prévisible peut posséder une signification importante dans une situation donnée.
+
+Elle n'a donc pas de rapport immédiat avec le sens ou la signification.
+
 
 Shannon met les dimensions sémantiques entre parenthèses parce qu’elles ne sont pas nécessaires au problème d’ingénierie qu’il formalise. Il ne démontre pas que le sens n’existe pas ou qu’il serait réductible à une quantité de bits.
 
@@ -226,7 +128,7 @@ Chez Shannon, l’information répond à un problème précisément délimité d
 
 Chez Wiener, elle s’inscrit parfois dans une réflexion plus générale sur l’organisation, le vivant et l’entropie. Wiener présente les organismes comme des îlots capables de maintenir temporairement leur organisation dans un monde marqué par la dégradation et l’irréversibilité.
 
-Cette extension est intellectuellement féconde, mais elle change de niveau. La capacité à quantifier des messages dans un canal ne démontre pas automatiquement que l’information constitue la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
+
 
 Shannon lui-même mettra en garde, dans « The Bandwagon » en 1956, contre les extensions qui déplaceraient quelques mots — information, entropie, redondance — sans définir de nouvelles hypothèses ni fournir de vérifications empiriques.
 

@@ -41,3 +41,12 @@ Dans une section `--- notes`, préfixer une indication destinée à la personne 
 ```
 
 Ce bloc reçoit un style distinct dans le panneau **Notes** de `/presenter`. Il n’apparaît pas sur la slide projetée.
+
+Pour distinguer un exemple pédagogique d’une indication de mise en scène, utiliser `[!EXEMPLE]` :
+
+```md
+> [!EXEMPLE]
+> Le thermostat est un exemple simple de rétroaction.
+```
+
+Ce bloc reçoit un style distinct dans le panneau **Notes** de `/presenter`. Il reste réservé aux notes du speaker et n’apparaît pas dans la projection.

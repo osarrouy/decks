@@ -240,11 +240,12 @@ Il faut insister ici sur le fait qu'on peut voir des boucles de rétrocaction pa
 
 </Fragment>
 
+Notation probabiliste : $I(x) = -\log_2 p(x)$.
 --- notes
 
 La notion de rétroaction répond à la question : comment un système peut-il corriger son action à partir de ses effets ? Mais elle en soulève aussi une seconde : comment intégrer ces effets dans un système ? Comment les codifier, les mesurer, les transmettre ?
 
-Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc codifier ce réel pour l'analyser : la température mesurée par un capteur ou l'écho capté par un radar.
+Le réel, en effet, n'entre pas tout entier dans un dispositif. La pièce chauffée ne rentre pas dans le thermostat. L'avion ne rentre pas dans le système de visée. Il faut donc réduire le réel : y sélectionner une variable et la codifier : la température mesurée par un capteur ou l'écho capté par un radar.
 
 Le problème est évidemment que ces phénomènes n’ont matériellement ou empriquement rien de commun. Il n'y a pas grand rapport entre la température d'une pièce et la position d'un avion dans le ciel.
 
@@ -252,7 +253,7 @@ Les cybernéticiens vont donc se doter d'un concept très général pour s'abstr
 
 Comme souvent chez les cybernéticiens, la notion d'information constitue comme un concept générique et transdisciplinaire dont le sens exact varie d'un domaine d'application à l'autre.
 
-On en retient toutefois le plus souvent une définition particulière. Celle proposée en 1948 par Claude Shannon dans son article *A Mathematical Theory of Communication*.
+Une définition, toutefois, a marqué les esprits. Celle proposée en 1948 par Claude Shannon dans son article *A Mathematical Theory of Communication*.
 
 ---
 
@@ -270,21 +271,21 @@ Le schéma général distingue :
 - un dispositif de réception ;
 - une destination.
 
-La question de Shannon, lorsqu'il propose ce schéma, est : comment mesurer la quantité réelle d'information qu'il s'agit de transmettre et ainsi déterminer si un canal donné peut y parvenir ou non malgré le bruit qui le perturbera.
+La question de Shannon, lorsqu'il propose ce schéma, est : comment mesurer la quantité d'information que l'on peut transmettre à travers un canal donné malgré le bruit.
 
 Shannon ne cherche donc pas à qualifier le sens, la vérité ou l’importance sociale d’un message. Il cherche à quantifier la quantité d'information transmise.
 
 La question peut paraître absurde. Comment pourrait-on mesurer une quantité d'information ?
 
-[!EXEMPLE]
-Il fait beau aujourd'hui.
-J'ai faim.
+> [!EXEMPLE]
+> Il fait beau aujourd'hui.
+> J'ai faim.
 
-Shannon apporte une réponse élégante à ce problème en partant de l'intuition suivante : une observation très attendue modifie peu notre incertitude et apporte donc peu d'information ; à l'inverse, une observation improbable réduit plus fortement notre incertitude et nous apporte donc plus d'information.
+Shannon apporte une réponse élégante à ce problème en partant de l'intuition suivante : une observation très attendue modifie peu notre incertitude et apporte donc peu d'information ; à l'inverse, une observation improbable réduit fortement notre incertitude et nous apporte donc plus d'information.
 
-[!EXEMPLE]
-Apprendre que le soleil s’est levé ce matin apporte peu d’information.
-Apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
+> [!EXEMPLE]
+> Apprendre que le soleil s’est levé ce matin apporte peu d’information.
+> Apprendre qu’il a neigé en plein Sahara en apporte beaucoup.
 Imaginez une boîte qui répond « oui » ou « non » à vos questions. Si elle répond toujours « oui », sa réponse ne vous apprend jamais rien : vous saviez déjà ce qu'elle allait vous répondre. Si, au contraire, elle répond « oui » ou « non » avec autant de chances, vous ne pouvez pas prévoir sa réponse. Lorsque vous la découvrez, vous recevez de l'information.
 
 Shannon propose donc une conception probabiliste de l’information, que l’on peut formaliser ainsi.
@@ -292,9 +293,9 @@ Shannon propose donc une conception probabiliste de l’information, que l’on 
 --- 
 <!-- slide: layout="center" -->
 
-<p class="statement formula" aria-label="I de x égale moins le logarithme en base deux de la probabilité de x" aria-describedby="shannon-formula-source">
-  <var>I</var>(<var>x</var>) = −log<sub>2</sub> <var>p</var>(<var>x</var>)<sup class="footnote-ref" aria-hidden="true">1</sup>
-</p>
+$$
+I(x) = -\log_2 p(x)
+$$
 
 <footer class="slide-footnotes" aria-label="Références">
   <ol>
@@ -305,58 +306,98 @@ Shannon propose donc une conception probabiliste de l’information, que l’on 
 --- notes
 
 
-### Lire la formule
+### La formule de l'information
+
+La formule projetée est : `I(x) = -log₂ p(x)`.
 
 - `x` désigne l’événement observé.
 - `p(x)` est la probabilité de cet événement.
 - `I(x)` mesure l’information apportée par sa survenue.
 - Avec un logarithme en base 2, cette information s’exprime en **bits**.
 
+La slide suivante distingue l’entropie thermodynamique, l’entropie de Shannon et l’usage cybernétique de la « néguentropie ».
+
+### Information ≠ sens
+
+Cette définition de l'information mesure la *surprise statistique*. Elle ne dit donc rien du sens ou de la signification d'un message.
+
+Un message peut être très improbable et donc apporter beaucoup d’information mais n'avoir aucun sens pour son destinataire. Un énoncé hautement prévisible peut à l'inverse faire sens dans un contexte donné.
+
+> [!EXEMPLE]
+> Balakoukamouki
+> Je t'aime
+
+Ce choix est volontaire. Il permet de traiter de manière analogue du texte, du son ou une suite d’états électriques. Le contenu peut ainsi être codé en symboles, transmis et reconstruit sans que l’ingénieur ait besoin d’interpréter sa signification.
+
+### Le destin d'une notion
+
+Le caractère très général de cette définition va contribuer à sa diffusion.
+
+Dès la fin des années 1940, la notion d’information commence ainsi à circuler au-delà du domaine des télécommunications et est progressivement mobilisée pour décrire non seulement des dispositifs techniques, mais aussi l’organisation du vivant, le fonctionnement du cerveau ou les forces du marché.
+
+En biologie moléculaire, elle sert par exemple à décrire la transmission et la traduction de séquences dans la fabrication des protéines. En neurosciences, elle permet de penser les systèmes sensoriels comme des dispositifs qui filtrent les régularités et sélectionnent les différences pertinentes. 
+
+La même notion s’étend ensuite aux sciences sociales et à l’économie. Elle permet de décrire la circulation des messages, la coordination des organisations et le fonctionnement de leurs boucles de rétroaction. Les prix, eux, commencent à être compris comme des signaux qui condensent et diffusent des connaissances dispersées. 
+
+À mesure qu’il se diffuse, le concept d’information gagne en généralité, mais perd en spécificité. Chez Shannon, il répond à un problème précisément délimité : représenter et transmettre des messages dans un canal soumis au bruit. Chez Wiener et d’autres cybernéticiens, il quitte progressivement ce cadre technique pour devenir un langage plus général de l’organisation du vivant et des systèmes. L’information n’y désigne plus seulement une grandeur calculable ; elle renvoie plus largement à ce qui permet à un système de repérer des différences, de corriger ses écarts et de *maintenir provisoirement son organisation dans un monde soumis à la dégradation et à l’irréversibilité*.
+
+Ce déplacement est teinté d'une certaine obsesssion des cybernéticiens à l'endroit du désordre spontané vers lequel, croient-il, le monde tend spontanément. Ils théorisent cette inquiétude en convoquant un concept issu de la thermodynamique : l'entropie.
 
 
-Pour décrire ces réalités dans une même grammaire, il faut faire abstraction de leur support matériel — et même, dans un premier temps, de leur signification. On peut alors considérer chaque observation relativement à l’ensemble des variations attendues : **était-elle prévisible, ou au contraire improbable ?**
+---
+# L'information contre l'entropie
+Thermodynamique et cybernétique {.kicker}
 
-Une observation très attendue modifie peu notre incertitude. Une observation improbable la réduit davantage : sa survenue nous apprend davantage.
-
-C’est cette quantité, définie statistiquement et indépendamment du support matériel, que Claude Shannon appelle **information**.
-
-
-
-### Une définition volontairement abstraite
-
-La notion d'information formalisée par Shannon mesure donc la **surprise statistique**, pas la signification. Un message peut être très improbable et donc apporter beaucoup d’information au sens mathématique, tout en n’ayant aucun sens pour son destinataire. Inversement, une phrase hautement prévisible peut posséder une signification importante dans une situation donnée.
-
-[!EXEMPLE]
-Balakoukamouki
-Je t'aime
-
-Cette abstraction permet de traiter de manière comparable du texte, du son ou une suite d’états électriques. Le contenu peut être codé en symboles, transmis et reconstruit sans que l’ingénieur ait besoin d’interpréter sa signification.
-
-Shannon met les dimensions sémantiques entre parenthèses parce qu’elles ne sont pas nécessaires au problème d’ingénierie qu’il formalise. Il ne démontre pas que le sens n’existe pas ou qu’il serait réductible à une quantité de bits
+<div class="entropy-prose">
 
 
 
-### Ce que Shannon dit — et ne dit pas
+<p>Cette image nourrit une inquiétude cybernétique : comment maintenir une forme, un ordre ou une finalité dans un monde traversé par le bruit et la désorganisation ? Chez Wiener, l’information peut alors apparaître comme une « entropie négative » : elle rend des différences détectables, transmissibles et utilisables pour orienter une action.</p>
 
-Shannon précise que les messages ont fréquemment une signification, mais que ces aspects sémantiques ne sont pas pertinents pour le problème d’ingénierie qu’il formalise. C’est une mise entre parenthèses méthodologique, pas une démonstration selon laquelle le sens n’existerait pas.
+<p>Mais l’information ne vainc pas l’entropie. Elle n’est ni une substance ni une force opposée au désordre : c’est une grandeur liée à l’incertitude d’une source et aux opérations d’un système qui sélectionne des signaux. Toute organisation locale a un coût matériel ; la cybernétique apprend moins à abolir le désordre qu’à le contenir par la mesure et la rétroaction.</p>
 
-La distinction est décisive pour des étudiants en information-communication :
+</div>
 
-- l’information au sens de Shannon mesure des possibilités, des probabilités et des contraintes de transmission ;
-- la signification suppose des codes, des situations, des interprètes et des pratiques sociales ;
-- la valeur d’une information dépend aussi d’un contexte et d’un usage.
+--- notes
+
+En physique, l’entropie désigne les transformations spontanées qui tendent à dissiper les différences et à homogénéiser l'état d'un système.
+
+[!EXEMPLES]
+Imaginez une tasse de café chaud posée sur une table. Au début, l’énergie est concentrée : le café est beaucoup plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit, l’air se réchauffe imperceptiblement, et la différence de température disparaît. En revanche, il est presqu'impossible de re-réchauffer le café en utilisant la chaleur de la pièce. L'état du système s'est diffusé et ce mouvement est irréversible : il est impossible (ou en tout cas difficile) de le réorganiser.
+
+[!EXEMPLES]
+Imaginez encore une goutte d’encre dans un verre d’eau. La goutte se diffuse jusqu’à colorer tout le verre. Il existe très peu de manières pour que toute l’encre reste rassemblée dans un coin, mais énormément de manières pour qu’elle soit dispersée dans l’eau. Le système évolue spontanément vers l’état le plus probable. C’est cette tendance que l’on appelle, de manière simplifiée, une tendance au désordre.
+
+C’est ce que décrit l’entropie : non pas une disparition de l’énergie, mais sa **dispersion**. L’énergie existe toujours, mais elle est moins concentrée et donc moins disponible pour produire un travail organisé : moins disposée au contrôle et à son organisation. Dans un système isolé, les transformations spontanées vont généralement vers ces états où l’énergie est plus répartie.
+
+DONNER DES EXEMPLES DE DEPLACEMENT DE CE CONCEPT EN SCIENCES SOCIALE. UNE ORGANISATION TEND VERS LE DESORDRE SI IL N'Y A RIEN POUR ORGANISER LES HUMAINS.
+
+Or la cybernétique s’intéresse précisément à la manière dont un système peut maintenir une différence dans un monde où les différences tendent spontanément à se dissiper. L’information permet de distinguer, de sélectionner ou de faire circuler certaines différences au milieu d’un ensemble de possibilités.
+
+Du coup, Les boucles de rétroaction, en créant un feedback infromationnel, permettrait d'après les cybernéticiens de lutter contre cette dissipation / désordre spontané en maintenant des ilots d'organisation, de maintien des états organisés.
+
+Un système ne conserve jamais tout l’ordre du monde. Il sélectionne des variables, construit des signaux, mesure des écarts et dépense des ressources pour maintenir une organisation locale. La mesure et la rétroaction ne suppriment donc pas le désordre ; elles organisent une réponse située à sa propagation.
+
+Dans le vocabulaire cybernétique, l’information peut alors apparaître comme une forme de **néguentropie** — non comme une force qui abolirait la tendance spontanée au désordre, mais comme ce qui rend possible son repérage et une action locale pour le contenir.
+
+Wiener rapproche explicitement information et « negative entropy » dans *Cybernetics* : l’information mesure le degré d’organisation, tandis que l’entropie mesure la désorganisation. Il faut présenter cette formule comme une manière cybernétique de penser le problème, pas comme une loi physique selon laquelle l’information supprimerait l’entropie.
+
+Cette extension est intellectuellement féconde, mais elle change de niveau. La capacité à quantifier des messages dans un canal ne démontre pas automatiquement que l’information constitue la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
 Le risque apparaît lorsque l’on transforme une abstraction très puissante en ontologie générale : parce que tout peut être codé comme information, on conclurait que tout **n’est que** de l’information.
 
 Shannon mettra lui-même en garde contre ce glissement dans « The Bandwagon » en 1956. Il ne rejette pas les usages de la théorie de l’information en biologie, en psychologie ou dans les sciences sociales. Il rappelle en revanche qu’on ne peut pas y transposer quelques mots — « information », « entropie », « redondance » — comme s’ils constituaient déjà une explication. Ces extensions exigent de nouvelles hypothèses et des vérifications empiriques.
 
-### Le destin de la notion
+TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT SON ORGANISATION ? OU EST LA FRONTIERE ? DONNER DES EXMPLES CONCRETS.
 
-Dans les décennies qui entourent et suivent Shannon, l’information devient un langage permettant de décrire non seulement des dispositifs techniques, mais aussi l’organisation du vivant et le fonctionnement du cerveau. Francis Crick décrit la synthèse des protéines à partir des transferts possibles ou impossibles d’« information séquentielle » entre acides nucléiques et protéines. Horace Barlow présente les voies sensorielles comme des dispositifs qui filtrent les régularités et réduisent la redondance des signaux reçus. Avec Gregory Bateson, le déplacement est plus radical encore : l’information n’est plus seulement ce qui réduit statistiquement une incertitude, mais une « différence qui produit une différence » pour un organisme ou un système capable d’y répondre.
+[Sources]
+- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, MIT Press, 1948, notamment le chapitre I.
+- Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
+[/Sources]
 
-Cette manière de penser gagne également les sciences sociales et l’économie. Margaret Mead contribue à faire de la cybernétique un langage transversal permettant d’interroger les communications, les organisations et leurs propres boucles de rétroaction. Dès 1945, Friedrich Hayek avait décrit le système des prix comme un mécanisme qui condense et fait circuler des connaissances dispersées ; George Stigler étudiera ensuite le coût de l’acquisition d’information, puis George Akerlof les effets des asymétries d’information sur les marchés.
 
-Mais le mot ne conserve pas partout le même sens : **grandeur statistique chez Shannon, différence efficace chez Bateson, connaissance distribuée chez Hayek, ressource inégalement détenue chez les économistes**. Son destin est moins celui d’une théorie appliquée uniformément que celui d’un langage commun, transformé à mesure qu’il circule.
+
+
 
 ### De l’information au système
 
@@ -391,6 +432,7 @@ Pour comprendre comment elles pourront néanmoins être rapprochées, il nous ma
 - George J. Stigler, « The Economics of Information », *Journal of Political Economy*, 69(3), 1961, p. 213–225, https://doi.org/10.1086/258464.
 - George A. Akerlof, « The Market for “Lemons”: Quality Uncertainty and the Market Mechanism », *Quarterly Journal of Economics*, 84(3), 1970, p. 488–500, https://doi.org/10.2307/1879431.
 [/Sources]
+
 ---
 <!-- slide: id="004fa-systeme" title="Qu’est-ce qu’un système ?" steps=3 -->
 

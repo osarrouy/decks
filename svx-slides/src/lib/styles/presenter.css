@@ -244,6 +244,32 @@
     line-height: 1.4;
 }
 
+.presenter-notes blockquote.presenter-note-example {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid color-mix(in srgb, #3b9ca5, transparent 54%);
+    border-left: 4px solid #3b9ca5;
+    border-radius: 0.55rem;
+    background: color-mix(in srgb, #3b9ca5, transparent 89%);
+    color: rgb(255 255 255 / 0.86);
+}
+
+.presenter-notes blockquote.presenter-note-example::before {
+    display: block;
+    color: #72d0d6;
+    content: 'Exemple';
+    font-family: var(--font-mono);
+    font-size: 0.72em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.presenter-notes blockquote.presenter-note-example p {
+    margin: 0.35em 0 0;
+    line-height: 1.4;
+}
+
 .presenter-notes hr {
     margin: 1.4rem 0;
     border: 0;

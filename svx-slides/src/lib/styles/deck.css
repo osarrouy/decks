@@ -230,6 +230,19 @@
     font-weight: 100;
 }
 
+/* Formules KaTeX en bloc : taille lisible en projection et débordement contrôlé. */
+.slide .math-display {
+    margin: var(--space-4) auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: clamp(1.5rem, 3vw, 3.8rem);
+    text-align: center;
+}
+
+.slide .math-inline {
+    white-space: nowrap;
+}
+
 /* Références bibliographiques d’articles mises en évidence. */
 .slide .citation {
     color: var(--accent);

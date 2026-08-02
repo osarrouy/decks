@@ -6,16 +6,24 @@ function normalizeNotesMarkdown(markdown: string) {
     .replace(/^\[\/Sources\]\s*$/gim, '')
 }
 
-function decorateCommentCallouts(html: string) {
+function decorateNoteCallout(html: string, tag: string, className: string) {
   return html
     .replace(
-      /<blockquote>\n<p>\[!COMMENT\]<\/p>/g,
-      '<blockquote class="presenter-note-comment">'
+      new RegExp(`<blockquote>\n<p>\\[!${tag}\\]<\/p>`, 'g'),
+      `<blockquote class="${className}">`
     )
     .replace(
-      /<blockquote>\n<p>\[!COMMENT\]\n/g,
-      '<blockquote class="presenter-note-comment">\n<p>'
+      new RegExp(`<blockquote>\n<p>\\[!${tag}\\]\n`, 'g'),
+      `<blockquote class="${className}">\n<p>`
     )
+}
+
+function decorateNoteCallouts(html: string) {
+  return decorateNoteCallout(
+    decorateNoteCallout(html, 'COMMENT', 'presenter-note-comment'),
+    'EXEMPLE',
+    'presenter-note-example'
+  )
 }
 
 export function notesToHtml(markdown = '') {
@@ -23,5 +31,5 @@ export function notesToHtml(markdown = '') {
     allowDangerousHtml: false
   })
 
-  return decorateCommentCallouts(html)
+  return decorateNoteCallouts(html)
 }

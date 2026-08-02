@@ -1,4 +1,6 @@
+import rehypeKatex from 'rehype-katex'
 import remarkDirective from 'remark-directive'
+import remarkMath from 'remark-math'
 
 const directiveLayoutNames = new Set(['columns', 'two-columns', 'center', 'cover', 'stack', 'grid'])
 const directiveColumnNames = new Set(['column', 'left', 'right'])
@@ -284,10 +286,12 @@ export function svxSlidesMdsvexOptions(options = {}) {
     ...options,
     remarkPlugins: [
       ...(options.remarkPlugins || []),
+      remarkMath,
       remarkDirective,
       remarkLayoutDirectives,
       remarkPandocAttributes
-    ]
+    ],
+    rehypePlugins: [...(options.rehypePlugins || []), rehypeKatex]
   }
 }
 

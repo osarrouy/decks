@@ -21,5 +21,7 @@
 /* Runtime visuel des slides : scène, surface, typographie, fragments. */
 @import './deck.css' layer(deck);
 
+/* Rendu statique des formules LaTeX produites par rehype-katex. */
+@import 'katex/dist/katex.min.css';
 /* Vue présentateur : panneaux, notes, contrôles, prévisualisations. */
 @import './presenter.css' layer(components);
