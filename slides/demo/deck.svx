@@ -348,45 +348,35 @@ Ce déplacement est teinté d'une certaine obsesssion des cybernéticiens à l'e
 # L'information contre l'entropie
 Thermodynamique et cybernétique {.kicker}
 
-<div class="entropy-prose">
-
-
-
-<p>Cette image nourrit une inquiétude cybernétique : comment maintenir une forme, un ordre ou une finalité dans un monde traversé par le bruit et la désorganisation ? Chez Wiener, l’information peut alors apparaître comme une « entropie négative » : elle rend des différences détectables, transmissibles et utilisables pour orienter une action.</p>
-
-<p>Mais l’information ne vainc pas l’entropie. Elle n’est ni une substance ni une force opposée au désordre : c’est une grandeur liée à l’incertitude d’une source et aux opérations d’un système qui sélectionne des signaux. Toute organisation locale a un coût matériel ; la cybernétique apprend moins à abolir le désordre qu’à le contenir par la mesure et la rétroaction.</p>
-
-</div>
-
 --- notes
 
-En physique, l’entropie désigne les transformations spontanées qui tendent à dissiper les différences et à homogénéiser l'état d'un système.
+En physique l’entropie décrit la tendance spontanée d’un système isolé à disperser son énergie et à réduire les différences qui le structurent.
 
 [!EXEMPLES]
-Imaginez une tasse de café chaud posée sur une table. Au début, l’énergie est concentrée : le café est beaucoup plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit, l’air se réchauffe imperceptiblement, et la différence de température disparaît. En revanche, il est presqu'impossible de re-réchauffer le café en utilisant la chaleur de la pièce. L'état du système s'est diffusé et ce mouvement est irréversible : il est impossible (ou en tout cas difficile) de le réorganiser.
+Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit  et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
 
 [!EXEMPLES]
-Imaginez encore une goutte d’encre dans un verre d’eau. La goutte se diffuse jusqu’à colorer tout le verre. Il existe très peu de manières pour que toute l’encre reste rassemblée dans un coin, mais énormément de manières pour qu’elle soit dispersée dans l’eau. Le système évolue spontanément vers l’état le plus probable. C’est cette tendance que l’on appelle, de manière simplifiée, une tendance au désordre.
+Une goutte d'encre dans un verre d'eau. L'encre se diffuse jusqu'à colorer tout le verre. Là encore ce processus spontané est difficilement réversible. Il est impossible de re-concentrer le colorant dans l'eau.
 
-C’est ce que décrit l’entropie : non pas une disparition de l’énergie, mais sa **dispersion**. L’énergie existe toujours, mais elle est moins concentrée et donc moins disponible pour produire un travail organisé : moins disposée au contrôle et à son organisation. Dans un système isolé, les transformations spontanées vont généralement vers ces états où l’énergie est plus répartie.
+C’est ce que décrit l’entropie : une tendance spontanée à la dispersion de l'énergie. Ou, pour le dire autrement, une tendance spontanée des systèmes physiques à tendre vers leur état de désorganisation maximal.
 
-DONNER DES EXEMPLES DE DEPLACEMENT DE CE CONCEPT EN SCIENCES SOCIALE. UNE ORGANISATION TEND VERS LE DESORDRE SI IL N'Y A RIEN POUR ORGANISER LES HUMAINS.
+Pourquoi parler ici de désorganisation ? Parce que l’énergie ainsi dispersée devient moins disponible pour produire un travail organisé : les différences s’effacent, et le système dispose de moins de ressources pour maintenir sa structure ou orienter son action.
 
-Or la cybernétique s’intéresse précisément à la manière dont un système peut maintenir une différence dans un monde où les différences tendent spontanément à se dissiper. L’information permet de distinguer, de sélectionner ou de faire circuler certaines différences au milieu d’un ensemble de possibilités.
+Là où l'information tend à produire des différences identifiables et transmissibles, l'entropie décrit une tendance spontanée de ces différences à se dissiper progressivement.
 
-Du coup, Les boucles de rétroaction, en créant un feedback infromationnel, permettrait d'après les cybernéticiens de lutter contre cette dissipation / désordre spontané en maintenant des ilots d'organisation, de maintien des états organisés.
+Or cette opposition de l'information et de l'entropie peut être transposée à d'autres domaines.
 
-Un système ne conserve jamais tout l’ordre du monde. Il sélectionne des variables, construit des signaux, mesure des écarts et dépense des ressources pour maintenir une organisation locale. La mesure et la rétroaction ne suppriment donc pas le désordre ; elles organisent une réponse située à sa propagation.
+[!EXEMPLES]
+Un organisme qui n'a plus accès à son environnement pour réguler sa température.
+Une équipe de foot qui ne peut ni se voir ni se parler.
 
-Dans le vocabulaire cybernétique, l’information peut alors apparaître comme une forme de **néguentropie** — non comme une force qui abolirait la tendance spontanée au désordre, mais comme ce qui rend possible son repérage et une action locale pour le contenir.
+Wiener et d’autres cybernéticiens étendent donc l’usage de la notion d’information : non plus une mesure formelle de l'incertitude mais une forme générale et structurante de *néguentropie*.
 
-Wiener rapproche explicitement information et « negative entropy » dans *Cybernetics* : l’information mesure le degré d’organisation, tandis que l’entropie mesure la désorganisation. Il faut présenter cette formule comme une manière cybernétique de penser le problème, pas comme une loi physique selon laquelle l’information supprimerait l’entropie.
+Les boucles de rétroaction sont pensées comme des mécanismes permettant d'opposer localement une résistance aux forces inexorables de l'entropie.
 
-Cette extension est intellectuellement féconde, mais elle change de niveau. La capacité à quantifier des messages dans un canal ne démontre pas automatiquement que l’information constitue la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
+Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Oui, tout ou presque peut être codé comme information. Cela ne signifie pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
-Le risque apparaît lorsque l’on transforme une abstraction très puissante en ontologie générale : parce que tout peut être codé comme information, on conclurait que tout **n’est que** de l’information.
-
-Shannon mettra lui-même en garde contre ce glissement dans « The Bandwagon » en 1956. Il ne rejette pas les usages de la théorie de l’information en biologie, en psychologie ou dans les sciences sociales. Il rappelle en revanche qu’on ne peut pas y transposer quelques mots — « information », « entropie », « redondance » — comme s’ils constituaient déjà une explication. Ces extensions exigent de nouvelles hypothèses et des vérifications empiriques.
+Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et des vérifications empiriques.
 
 TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT SON ORGANISATION ? OU EST LA FRONTIERE ? DONNER DES EXMPLES CONCRETS.
 

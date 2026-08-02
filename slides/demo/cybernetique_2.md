@@ -120,21 +120,6 @@ Pour des étudiants en information-communication, la distinction est essentielle
 
 Une plateforme peut savoir qu’une vidéo a été regardée pendant dix-huit secondes. Cette trace peut être très utile pour prédire ou orienter un comportement. Elle ne contient pas automatiquement le sens que la vidéo a eu pour la personne.
 
-### Shannon et Wiener
-
-Shannon et Wiener travaillent à la même époque sur des problèmes proches, mais leurs usages du mot « information » ne doivent pas être confondus.
-
-Chez Shannon, l’information répond à un problème précisément délimité de représentation et de transmission des messages.
-
-Chez Wiener, elle s’inscrit parfois dans une réflexion plus générale sur l’organisation, le vivant et l’entropie. Wiener présente les organismes comme des îlots capables de maintenir temporairement leur organisation dans un monde marqué par la dégradation et l’irréversibilité.
-
-
-
-Shannon lui-même mettra en garde, dans « The Bandwagon » en 1956, contre les extensions qui déplaceraient quelques mots — information, entropie, redondance — sans définir de nouvelles hypothèses ni fournir de vérifications empiriques.
-
-La formule à retenir est donc :
-
-> **Parce qu’un phénomène peut être codé comme information, il ne s’ensuit pas que ce phénomène ne soit rien d’autre que de l’information.**
 
 ### Question aux étudiants
 
