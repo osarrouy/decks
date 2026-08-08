@@ -9,6 +9,15 @@ kubernētēs {.kicker}
 
 --- notes
 
+### Cadre du cours
+
+1. **Pas d’ordinateurs en cours.** Je vous demanderai donc de venir avec du papier et des crayons. Pourquoi cette règle ? Parce que nous allons essayer de travailler la présence — ou, plus exactement, la qualité de notre présence. Ce que je vous transmets pourrait, pour une large part, être retrouvé ou reformulé avec ChatGPT. Mais un cours ne se réduit pas à un contenu transmissible : la manière dont une pensée se construit, se raconte et se discute compte aussi. Nous avons tous, moi compris, de bonnes raisons d’être ailleurs ou de manquer d’attention. Rien ne vous oblige à être ici. Mais si nous choisissons d’y être, essayons de l’être réellement, et de faire de ce moment autre chose qu’une simple mise à disposition d’informations.
+
+2. **Vous pouvez enregistrer le cours.** Les téléphones peuvent donc être utilisés pour cela, et éventuellement pour produire ensuite une retranscription avec Whisper ou un autre outil — les dictaphones d’iOS proposent déjà cette fonction, et des solutions existent également sur Android. L’idée est de pouvoir déposer le téléphone et ne pas avoir à prendre des notes exhaustives en permanence. Vous pouvez partager ces enregistrements et ces retranscriptions entre vous, mais je vous demande de ne pas les diffuser publiquement. Ce n’est pas d’abord une question de propriété intellectuelle : je veux pouvoir parler librement, sans devoir anticiper la réaction de personnes qui ne partagent ni le contexte ni la présence de ce cours.
+
+3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
+
+
 Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
 
 Ces technologies ont soulevé toute une série de nouvelles questions : comment le radar peut-il repérer la position et la direction de l'avion ; comment le système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?

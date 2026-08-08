@@ -203,7 +203,7 @@
 
 /* Kicker gallery : petit label mono magenta au-dessus du titre. */
 [data-theme='gallery'] .slide .kicker {
-    font-size: var(--small-size);
+    font-size: var(--text-size);
     font-weight: 200;
     letter-spacing: 0.24em;
 }

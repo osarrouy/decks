@@ -12,7 +12,51 @@ Hello world
 
 
 ---
+## Olivier Sarrouy
+olivier.sarrouy@univ-rennes2.fr {.kicker}
 
+
+--- notes
+
+Je vais prendre quelques minutes, avant de présenter le cours, pour me présenter à vous. Non pas que ma destinée soit fascinante mais parce qu'il importe que vous compreniez d’où je parle.
+
+Le savoir tel qu’il vous sera transmis à l’université sera assez différent du savoir qui vous a été transmis au lycée : moins dogmatique, plus critique.
+
+Qu'est-ce qu'on entend par _savoir critique_ ? Non pas un savoir qui critiquerait nécessairement l'ordre des choses, mais un savoir qui, en même temps qu'il discute d'un thème, prend simultanément pour objet ses propres conditions de production.
+
+On ne problématise et on ne conceptualise pas les choses de la même manière selon qu’on est un homme blanc de la classe moyenne ou une femme de ménage racisée ; selon qu’on est un philosophe de l’ENS ou un ouvrier métallurgiste ; selon qu’on est européen qui a profité (même malgré lui) de la colonisation et de la mondialisation ou un indigène Yanomami brésilien qui a vu son monde ravagé par cette même colonisation.
+
+Les questions qui s’imposent à nous dans l’expérience ordinaire du monde social dépendent de notre parcours personnel. Et nos questions théoriques en découlent.Or mon parcours est quand même relativement particulier.
+
+Formation scientifique
+
+Prépa /CentraleSupélec / Doctorat en informatique / Déprime ...
+
+Master Information-Communication / Thèse Information-Communication sur les les modes d’existence des collectifs du web et l’ordre qui nait parfois de leur désordre.
+
+Maître de Conférences.
+
+Expériences politiques qui m’ont conduit à développer une certaine curiosité à l’endroit des cryptomonnaies et des technologies blockchain.
+
+↦ Distributed Gallery.
+
+↦ Mise en disponibilité.
+
+↦ Wespr / Aragon / Freelance.
+
+↦ Maître de Conférences à mi-temps.
+
+
+
+Je suis donc une espèce de gauchiste libertaire ou libéral qui a connu un Internet qui n'existe plus, que vous n'avez d'ailleurs jamais connu, et dans lequel j'ai à tort identifié un espace de liberté et de débordement possible du monde - un possible qui a suscité chez moi beaucoup d'espoirs et dans lequel j'ai investi beaucoup d'énergie.
+
+J'en suis évidemment revenu lorsqu'Internet est devenu un espace de contrôlé, d'abêtissement et de renforcement de toutes les dominations qu'il promettait de destituer.
+
+C'est donc en tant que jeune quarantenaire un peu dépressif et tristement cynique que je m'adresserai ici à vous.
+
+De quoi, donc, ce personnage va-t-il vous parler ?
+
+---
 ## Programme
 
 - Pré-histoire 4
@@ -23,3 +67,26 @@ Hello world
 - Economie de la donnée
 - IA contemporaine
 - Interpassivité
+
+---
+
+## Modalités
+
+Je n'ai pas 60 ans mais j'ai vu, en 10 ou 15 ans, le métier d'enseignant changer.
+
+Votre capacité d'attention diminue à cause des réseaux sociaux et des smartphones - ma capacité d'attention diminue aussi du reste. Le résultat est le même. Enseigner signifie aujourd'hui : entrer dans une espèce de lutte pour l'attention contre TikTok, Instagram ou YouTube que l'essentiel d'entre vous consulte pendant les cours. Il va de soi que même en y mettant du mien, le combat est perdu d'avance. Et que j'avoue ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour de toute façon n'y rien suivre et passer deux heures sur Instagram. La vie est courte : restez chez vous !
+
+Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un. Les universitaires ont tendance à fétichiser l'importance de l'écrit dans la structuration de la pensée. Il importe donc de rappeler qu'il y a à peine un siècle ou deux, l'essentiel de la population était analphabète. La culture de l'écriture livresque aura donc été une courte parenthèse dans l'histoire de l'humanité. Et on ne peut pas dire que la courte parenthèse pendant laquelle la culture de l'écrit et du livre a régné en maitre a été particulièrement vertueuse : deux guerres mondiales, plusieurs génocides, etc. L'humanité faisait sans la culture de l'écrit avant, elle fera sans après. La question n'est donc pas tant de savoir comment lutter CONTRE la disparition progressive de cette culture de l'écrit que de savoir ce que signifie enseigner À PARTIR de là.
+
+De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour que ces cours se passent le mieux possible, qu’ils soient aussi agréables et utiles que possible, pour vous comme pour moi.
+
+1. **Pas d’ordinateurs en cours.** Je vous demanderai donc de venir avec du papier et des crayons. Pourquoi cette règle ? Parce que nous allons essayer de travailler la présence — ou, plus exactement, la qualité de notre présence. Une grande partie de ce que je vous raconte pourrait être retrouvée ou reformulée avec ChatGPT. Mais un cours ne se réduit pas à un contenu transmissible : la manière dont une pensée se construit, se raconte et se discute compte aussi. Nous avons tous, moi compris, de bonnes raisons d’être ailleurs ou de manquer d’attention. Rien ne vous oblige à être ici. Mais si nous choisissons d’y être, essayons de l’être réellement, et de faire de ce moment autre chose qu’une simple mise à disposition d’informations.
+
+2. **Vous pouvez enregistrer le cours.** Vous pourrez donc utiliser vos téléphones pour cela, puis produire une retranscription avec Whisper ou un autre outil — les dictaphones d’iOS proposent déjà cette fonction, et des solutions existent également sur Android. L’idée est de pouvoir poser le téléphone et de ne pas avoir à prendre des notes exhaustives en permanence. Vous pouvez partager ces enregistrements et ces retranscriptions entre vous, mais je vous demande de ne pas les diffuser publiquement. Ce n’est pas d’abord une question de propriété intellectuelle : je veux pouvoir parler librement, sans devoir anticiper la réaction de personnes qui ne partagent ni le contexte ni la présence de ce cours.
+
+3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
+
+
+
+---
+## Examens
