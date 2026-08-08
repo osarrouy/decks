@@ -1,0 +1,25 @@
+---
+title: Introduction
+theme: gallery
+---
+
+# Introduction aux Cultures Numériques
+Olivier Sarrouy {.kicker}
+
+--- notes
+
+Hello world
+
+
+---
+
+## Programme
+
+- Pré-histoire 4
+- Cybernetics 2
+- Micro-informatique 2
+10
+- Réseaux sociaux et phénomènes de foule ?
+- Economie de la donnée
+- IA contemporaine
+- Interpassivité

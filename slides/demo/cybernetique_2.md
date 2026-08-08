@@ -127,74 +127,9 @@ Une plateforme peut savoir qu’une vidéo a été regardée pendant dix-huit se
 
 Réponse attendue : elle dispose d’une trace exploitable relativement à certains objectifs, mais pas automatiquement de l’interprétation de l’expérience.
 
-### Transition
 
-> Dès lors que des phénomènes différents peuvent être décrits comme des transformations de signaux, ils deviennent formellement comparables.
 
----
 
-# II. Un schème change d’échelle
-
-## De la machine à l’animal et à la société
-
----
-
-## 6. Décrire un comportement de l’extérieur
-
-**Temps indicatif : 5 minutes.**
-
-Dans « Behavior, Purpose and Teleology », publié en 1943, Arturo Rosenblueth, Norbert Wiener et Julian Bigelow proposent d’étudier certains objets à partir de leur comportement observable plutôt que de commencer par leur matière ou par tous leurs mécanismes internes.
-
-Cette méthode permet de comparer des dispositifs très différents à partir de leurs entrées, de leurs sorties et des relations entre elles.
-
-Un thermostat maintient une température. Un missile poursuit une cible. Un organisme régule certaines constantes. Une personne ajuste son geste pour atteindre un objet. Ces comportements peuvent être décrits comme orientés vers un état final sans supposer que tous les systèmes concernés possèdent une intention consciente.
-
-### Une finalité sans intention
-
-La cybernétique réintroduit ainsi la **finalité** dans la description scientifique sans affirmer qu’un but futur agit magiquement sur le présent.
-
-Le but est matérialisé dans le système :
-
-- par une consigne ;
-- par une structure ;
-- par une organisation physiologique ;
-- par une règle de comparaison ;
-- par une boucle qui transforme les écarts présents en corrections présentes.
-
-Dire qu’un thermostat « cherche » à maintenir une température constitue une description fonctionnelle de son comportement. Cela ne signifie pas qu’il désire consciemment cette température.
-
-Cette distinction deviendra importante pour l’intelligence artificielle. Dire qu’un système optimise une fonction ne signifie pas qu’il comprend ou souhaite l’objectif inscrit dans cette fonction.
-
-### La boîte noire
-
-W. Ross Ashby systématise en 1956 la méthode de la **boîte noire**. Face à un dispositif dont l’intérieur n’est pas directement accessible ou dont la complexité est trop grande, l’observateur agit sur certaines entrées et étudie les sorties obtenues.
-
-Une boîte noire n’est pas nécessairement un objet mystérieux. C’est souvent un choix de niveau d’analyse. On décide provisoirement que la connaissance complète des mécanismes internes n’est pas nécessaire pour répondre à la question posée.
-
-Le choix peut être légitime et puissant. Il permet de construire un modèle sans attendre une connaissance exhaustive. Mais il faut toujours demander ce que la mise en boîte noire élimine.
-
-Traiter un pilote comme un point mobile peut être suffisant pour calculer une trajectoire. Traiter un étudiant comme un taux de réussite peut être suffisant pour construire un tableau de bord. Dans le second cas, l’opération risque toutefois de rendre invisibles l’expérience vécue, les inégalités, les apprentissages non quantifiés et la transformation intellectuelle.
-
-### Comparer des relations plutôt que des substances
-
-Le déplacement intellectuel important se situe ici :
-
-> On ne compare plus seulement des objets par ce dont ils sont faits ; on compare des comportements par la forme de leurs relations.
-
-Cette méthode rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Mais une comparaison formelle ne supprime pas les différences de nature et d’histoire :
-
-- un organisme possède un métabolisme et une histoire évolutive ;
-- une machine a été construite selon un projet ;
-- une institution possède un droit, des conflits et des rapports de pouvoir ;
-- une personne interprète les situations dans lesquelles elle agit.
-
-Le gain du modèle est réel. Son prix est la sélection.
-
-### Transition
-
-> Le même schème peut désormais circuler entre plusieurs disciplines ; les conférences Macy lui donnent un lieu de rencontre.
-
----
 
 ## 7. Les conférences Macy : construire une comparabilité
 

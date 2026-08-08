@@ -132,7 +132,9 @@
 /* Surface gallery : fond blanc net, sans gradient décoratif. */
 [data-theme='gallery'] .slide {
     background: var(--bg);
+    container-type: size;
 }
+
 
 /* Les quatre repères appartiennent à la slide, indépendamment du header. */
 [data-theme='gallery'] .slide::before {
@@ -151,6 +153,27 @@
     content: '';
     pointer-events: none;
 }
+
+/*
+  Les halos restent dans le cadre défini par les repères d’angle.
+  Les unités de conteneur bornent le frame à la surface réelle de la slide,
+  y compris dans la vue présentateur.
+*/
+[data-theme='gallery'] .slide .image-glow-frame {
+    box-sizing: border-box;
+    max-width: calc((100cqw - 2 * var(--corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, 4.4rem)) / 1.2);
+    max-height: calc((100cqh - 2 * var(--corner-mark-offset-vertical) - 2 * var(--image-glow-blur, 4.4rem)) / 1.2);
+}
+
+[data-theme='gallery'] .slide .image-glow-frame>img {
+    width: auto;
+    height: auto;
+    max-width: calc((100cqw - 2 * var(--corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, 4.4rem)) / 1.2);
+    max-height: calc((100cqh - 2 * var(--corner-mark-offset-vertical) - 2 * var(--image-glow-blur, 4.4rem)) / 1.2);
+    object-fit: contain;
+}
+
+
 
 /* Titres gallery : Instrument Serif droit, très fin et très serré. */
 [data-theme='gallery'] .slide h1,

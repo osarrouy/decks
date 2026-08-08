@@ -207,38 +207,9 @@ Il faut insister ici sur le fait qu'on peut voir des boucles de rétrocaction pa
 - Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
 [/Sources]
 ---
-<!-- slide: id="004f-information" title="L'information" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Shannon · 1948</p>
 
 # L’information n’est pas le sens
-
-<Fragment at={1}>
-
-<div class="sequence">
-  <span>source</span><span class="arrow">→</span>
-  <span>signal</span><span class="arrow">→</span>
-  <span>canal + bruit</span><span class="arrow">→</span>
-  <span>récepteur</span>
-</div>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<p class="statement">Mesurer une <strong>incertitude</strong> et la réduction produite par un message.</p>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="question">Une théorie de la transmission peut ignorer ce que le message veut dire.</p>
-
-</Fragment>
+Shannon · 1948 {.kicker}
 
 Notation probabiliste : $I(x) = -\log_2 p(x)$.
 --- notes
@@ -257,7 +228,7 @@ Une définition, toutefois, a marqué les esprits. Celle proposée en 1948 par C
 
 ---
 
-
+REMETTRE LE SCHEMA ICI 
 
 --- notes
 
@@ -319,7 +290,7 @@ La slide suivante distingue l’entropie thermodynamique, l’entropie de Shanno
 
 ### Information ≠ sens
 
-Cette définition de l'information mesure la *surprise statistique*. Elle ne dit donc rien du sens ou de la signification d'un message.
+Cette définition de l'information mesure la *surprise statistique*. Elle ne dit rien du sens ou de la signification d'un message.
 
 Un message peut être très improbable et donc apporter beaucoup d’information mais n'avoir aucun sens pour son destinataire. Un énoncé hautement prévisible peut à l'inverse faire sens dans un contexte donné.
 
@@ -331,7 +302,7 @@ Ce choix est volontaire. Il permet de traiter de manière analogue du texte, du 
 
 ### Le destin d'une notion
 
-Le caractère très général de cette définition va contribuer à sa diffusion.
+Le caractère très général de cette définition contribue à sa diffusion.
 
 Dès la fin des années 1940, la notion d’information commence ainsi à circuler au-delà du domaine des télécommunications et est progressivement mobilisée pour décrire non seulement des dispositifs techniques, mais aussi l’organisation du vivant, le fonctionnement du cerveau ou les forces du marché.
 
@@ -339,7 +310,7 @@ En biologie moléculaire, elle sert par exemple à décrire la transmission et l
 
 La même notion s’étend ensuite aux sciences sociales et à l’économie. Elle permet de décrire la circulation des messages, la coordination des organisations et le fonctionnement de leurs boucles de rétroaction. Les prix, eux, commencent à être compris comme des signaux qui condensent et diffusent des connaissances dispersées. 
 
-À mesure qu’il se diffuse, le concept d’information gagne en généralité, mais perd en spécificité. Chez Shannon, il répond à un problème précisément délimité : représenter et transmettre des messages dans un canal soumis au bruit. Chez Wiener et d’autres cybernéticiens, il quitte progressivement ce cadre technique pour devenir un langage plus général de l’organisation du vivant et des systèmes. L’information n’y désigne plus seulement une grandeur calculable ; elle renvoie plus largement à ce qui permet à un système de repérer des différences, de corriger ses écarts et de *maintenir provisoirement son organisation dans un monde soumis à la dégradation et à l’irréversibilité*.
+En se diffusant, le concept d’information gagne en généralité, mais perd en spécificité. Chez Shannon, il répond à un problème précisément délimité : représenter et transmettre des messages dans un canal soumis au bruit. Chez Wiener et d’autres cybernéticiens, il devient progressivement un langage plus général de l’organisation du vivant et des systèmes. L’information n’y désigne plus seulement une grandeur calculable ; elle renvoie plus largement à ce qui permet à un système d'identifier des différences pertinentes dans son environnement pour  *maintenir provisoirement son organisation dans un monde spontanément soumis à une désorganisation irréversible*.
 
 Ce déplacement est teinté d'une certaine obsesssion des cybernéticiens à l'endroit du désordre spontané vers lequel, croient-il, le monde tend spontanément. Ils théorisent cette inquiétude en convoquant un concept issu de la thermodynamique : l'entropie.
 
@@ -376,7 +347,10 @@ Les boucles de rétroaction sont pensées comme des mécanismes permettant d'opp
 
 Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Oui, tout ou presque peut être codé comme information. Cela ne signifie pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
-Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et des vérifications empiriques.
+Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et de vérifications empiriques.
+
+Cette extension n'est pas entièrement 
+
 
 TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT SON ORGANISATION ? OU EST LA FRONTIERE ? DONNER DES EXMPLES CONCRETS.
 
@@ -387,11 +361,11 @@ TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT
 
 
 
-
-
 ### De l’information au système
 
 Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire un effet. Une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations.
+
+L'information et les boucles de rétroaction ne sont donc opératoires qu'à l'intérieur d'un système donné 
 
 Pour comprendre ce qu’une information peut modifier, il faut donc identifier les composantes entre lesquelles elle circule, les relations qui les unissent et la frontière qui distingue cet ensemble de son environnement. La question se déplace alors : de l’information elle-même vers l’ensemble organisé au sein duquel elle prend effet.
 
@@ -401,15 +375,6 @@ Cette transition ne doit pas effacer les différences entre les domaines. Pour a
 
 Enfin, un système ne mesure jamais « tout ». Il sélectionne une variable : une température, une vitesse, un clic, un nombre d’erreurs. Cette sélection prépare déjà ce qui pourra être vu et corrigé.
 
-### Question aux étudiants
-
-« Une plateforme qui sait que vous avez regardé une vidéo pendant 18 secondes connaît-elle le sens que cette vidéo a eu pour vous ? »
-
-Elle possède une trace très utile pour certains calculs ; elle ne possède pas automatiquement votre interprétation.
-
-Rétroaction et information ne constituent pas une doctrine unique. Elles répondent à des problèmes différents : l’une décrit le retour des effets dans l’action, l’autre les conditions de représentation et de transmission d’un signal.
-
-Pour comprendre comment elles pourront néanmoins être rapprochées, il nous manque encore une unité d’analyse : **qu’appelons-nous un système, et où en traçons-nous la frontière ?**
 
 [Sources]
 - Claude E. Shannon, « A Mathematical Theory of Communication », *Bell System Technical Journal*, 27, 1948, p. 379–423 et 623–656, https://doi.org/10.1002/j.1538-7305.1948.tb00917.x.
@@ -424,200 +389,148 @@ Pour comprendre comment elles pourront néanmoins être rapprochées, il nous ma
 [/Sources]
 
 ---
-<!-- slide: id="004fa-systeme" title="Qu’est-ce qu’un système ?" steps=3 -->
+<!-- slide: id="004fa-systeme" title="Qu’est-ce qu’un système ?" steps=0 -->
 
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Éléments · relations · frontière</p>
-
-# Qu’appelons-nous un système ?
-
-<div class="card-grid">
-
-<Fragment at={1}>
-<div class="concept-card">
-  <h3>Éléments</h3>
-  <p>Des composantes repérées à une certaine échelle.</p>
-</div>
-</Fragment>
-
-<Fragment at={2}>
-<div class="concept-card">
-  <h3>Relations</h3>
-  <p>Le changement de l’une affecte l’état des autres.</p>
-</div>
-</Fragment>
-
-<Fragment at={3}>
-<div class="concept-card">
-  <h3>Frontière</h3>
-  <p>Un dedans distingué de son environnement.</p>
-</div>
-</Fragment>
-
-</div>
-
-<p class="statement">La boucle décrit une <strong>relation dans le temps</strong> ; l’information, ce qui peut y circuler.</p>
+## Sytème
+Éléments · relations · frontière {.kicker}
 
 --- notes
 
 Temps indicatif : **5 minutes**.
 
-Avant d’entrer dans les conférences Macy, il nous manque le mot qui permet de réunir ce que nous venons de voir : le mot **système**.
+
+
 
 Le terme n’est ni inventé par Wiener ni réservé à la cybernétique. La théorie générale des systèmes de Ludwig von Bertalanffy se développe au même moment depuis la biologie. Pour ce cours, retenons une définition opératoire : **un système est un ensemble d’éléments dont les relations produisent une dynamique que les éléments isolés ne suffisent pas à expliquer**.
 
-Trois décisions sont donc nécessaires :
 
-- identifier des éléments à une certaine échelle ;
-- observer les relations par lesquelles leurs états s’affectent mutuellement ;
-- tracer une frontière entre le système et son environnement.
+La notion de système désigne moins les qualités intrinsèques de quelque chose qu'_une manière d'approcher et d'analyser cette chose_.
 
-### Reprendre le thermostat
+Comment une approche systémique envisage-t-elle le réel ? Comme _un ensemble d'éléments dont les relations produisent un comportement que l'analyse de ces éléments ne permet pas à elle seule d'expliquer_.
 
-Le thermostat seul n’est pas toute la boucle. Selon la question posée, le système peut comprendre le capteur, le chauffage et la pièce ; la température extérieure devient alors une perturbation venue de l’environnement. Le capteur transforme une différence de température en signal. Ce signal modifie le chauffage ; le chauffage modifie la température ; la nouvelle température revient au capteur.
+[EXEMPLE!]
+Le système-thermostat ne régule la température d'une pièce que de l'articulation de divers éléments qui ne régulent rien à eux seul. Le capteur ne régule rien s'il n'est pas relié au chauffage. Le chauffage ne régule rien s'il n'est pas connecté au capteur. Et l'ensemble ne régule rien s'il aucune consigne ne lui est donnée. Le thermostat permet ainsi de distinguer une explication élémentaire d’une explication systémique. Une analyse élémentaire décrit le capteur, le chauffage ou la consigne. Une analyse systémique étudie la boucle de rétroaction qui les relie et _l'organisation relationnelle_ de ces divers éléments.
 
-Les trois notions s’articulent ainsi :
+[EXEMPLE!]
+La jalousie. 
 
-- le **système** désigne l’ensemble relationnel que l’on choisit d’observer ;
-- l’**information** désigne les différences susceptibles d’être codées et transmises entre ses composantes ;
-- la **rétroaction** désigne le retour des effets d’une action sur les actions suivantes.
+[EXEMPLE!]
+Les bulles financières.
 
-Cette articulation rend possible un premier déplacement : une boucle analogue peut-elle être repérée dans un organisme, un cerveau, une famille ou une société ? Poser la question ne revient pas encore à affirmer que ces réalités sont identiques.
 
-Avant d’observer la circulation de ce vocabulaire entre les disciplines, il faut toutefois préciser la méthode : un système peut être étudié à partir de ses entrées, de ses sorties et de son comportement, sans que tous ses mécanismes internes soient déjà connus.
-
-### Une frontière construite
-
-La frontière d’un système n’est pas toujours donnée d’avance. Inclure ou exclure le milieu, l’observateur, une institution ou une histoire transforme l’explication. Nous reviendrons sur ce choix lorsque nous aborderons la boîte noire : penser en systèmes est puissant précisément parce que cela sélectionne certaines relations — et laisse nécessairement autre chose dehors.
-
+[EXEMPLE!]
+On veut sortir vite et on écrase tout le monde
 [Sources]
 - Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
-- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
-- W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall / John Wiley, 1956.
 [/Sources]
+
 ---
-<!-- slide: id="004g-systeme-et-finalite" title="Système et finalité" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Entrées · sorties · comportement</p>
-
-# Décrire un système de l’extérieur
-
-<Fragment at={1}>
-
-<div class="sequence">
-  <span>environnement</span><span class="arrow">→</span>
-  <span>système</span><span class="arrow">→</span>
-  <span>comportement observable</span>
-</div>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<p class="statement">Décrire une <strong>finalité sans supposer une intention</strong>.</p>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="question">Où placer la frontière du système — et qui décide ce qui reste dehors ?</p>
-
-</Fragment>
+### Dedans / dehors 
 
 --- notes
 
-Temps indicatif : **5 minutes**.
+Cette manière d'analyser le réel comme effet d'une certaine organisation relationnelle soulève la question des limites que l'on fixe à la définition d'un système. Il n'existe aucun système intrinsèquement clos sur lui-même. Un système appartient toujours à un système plus large que lui dont il ne constitue qu'un élément parmi d'autres.
 
-Nous avons défini un système par ses éléments, leurs relations et la frontière qui les sépare d’un environnement. Reste une question de méthode : faut-il connaître tous ses mécanismes internes pour décrire son comportement ?
+[EXEMPLE!]
+Un organisme est en contact permanent avec son environnement : il doit réguler sa température, son taux d'oxygène, ingèrer des aliments et de l'eau et évacuer ce qui doit l'être ... Un organisme est donc toujours en relation avec d'autres organismes et composent avec eux un meta-système.
 
-### Du mécanisme au comportement
+Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne relève d'un choix analytique et méthodologique : quelle problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
 
-Dans leur article de 1943, Rosenblueth, Wiener et Bigelow proposent d’étudier un objet à partir de son comportement observable plutôt que de commencer par sa matière ou sa structure interne. Cette approche permet de comparer des dispositifs différents en décrivant leurs entrées, leurs sorties et la relation entre elles.
+[EXEMPLE!]
+Le thermostat. Est-ce qu'on inclut au système-thermostat un capteur mesurant le degré d'ouverture des fenêtres ? L'ouverture ou la fermeture des volets ? Le taux d'ensoleillement ? Le niveaux de CO_2 dans l'atmosphère ? La pression atmosphérique dans l'Atlantique nord ? Ou est-ce qu'on considère qu'elles doivent être traitées comme des perturbations d'un environnement dont le capteur de température « condense » toute l'information ? Tout dépend du problème que l'on souhaite poser : celui du maintient de la température dans une cusine ou celui du réchauffement climatique.
 
-Revenons à la visée antiaérienne : le dispositif exploite une série de positions et leurs variations sans devoir expliquer la psychologie du pilote ni connaître intégralement le fonctionnement de l’avion.
+[EXEMPLE!]
+La jalousie. On analyse le système familial ? On inclue le conjoint qui ment pour éviter les problèmes ? On ne voit pas du tout les memes choses et on ne se pose pas du tout les mêmes questions.
 
-Cette méthode prépare ce que W. Ross Ashby systématisera en 1956 sous le nom de théorie de la **boîte noire**. Le terme et le problème viennent de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend explicitement cette méthode aux organismes, aux comportements et aux systèmes complexes.
+La définition d'un système et de ses frontières dépend donc de la question que l'on se pose. _La frontière ne sépare pas simplement le réel en deux. Elle définit les problèmes qu'ont y fait apparaitre et la manière dont on peut les aborder._
 
-Mais une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée.
+--- 
+### ~~Dedans~~ / dehors 
 
-Ce déplacement n’est pas la rétroaction elle-même : la rétroaction décrit le retour des effets dans l’action suivante ; la boîte noire désigne la méthode qui étudie un système à partir de ses entrées, de ses sorties et de son comportement observable sans partir de tous ses mécanismes internes.
+Le choix d'une frontière sépare en particulier ce à quoi on s'intéresse de ce que l'on choisit d'ignorer. Les cybernéticiens considèrent en effet qu'un système peut être étudié par l'analyse des seules relations entre ses entrées et ses sorties ou des relations entre les éléments qui le composent. C'est-à-dire sans s'intéresser à la nature de ces éléments.
 
-### Une finalité sans conscience
+Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie en 1943 un article intitulé _Behavior, Purpose and Teleology_ dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de commencer par leur matière ou par tous leurs mécanismes internes.
 
-Un thermostat maintient une température ; un missile poursuit une cible ; un organisme régule certaines constantes. Leur comportement peut être décrit comme orienté vers un état final sans leur attribuer une intention consciente.
+[EXEMPLE!]
+Dans le cas du système de régulation thermique, on observe comment une consigne et des perturbations environnementales produisent une évolution déterminée de la température de la pièce. 
 
-La cybernétique réintroduit ainsi la **finalité** dans la science sans revenir à l’idée qu’un but futur agirait magiquement sur le présent. Le but est matérialisé par une consigne, une structure ou une boucle. Ce sont les écarts présents qui produisent les corrections présentes.
+[EXEMPLE!]
+Position de l'avion -> tire de l'avion. On ne s'intéresse pas à la psychologie du pilote.
+La visée anti-aérienne. Revenons à la visée antiaérienne : le dispositif exploite une série de positions et leurs variations sans devoir expliquer la psychologie du pilote ni connaître intégralement le fonctionnement de l’avion.
 
-Cette distinction nous sera utile lorsque nous parlerons d’intelligence artificielle. Dire qu’un système optimise une fonction ne signifie pas qu’il comprend ou désire son objectif. L’orientation de son comportement peut provenir de son architecture et de ses règles.
+[EXEMPLE!]
+CRISE AGRICOLE, EFFET SUR LES PRIX. On s'intéresse au effet : moins de récolte / variation de prix. Pas à la pscyhologie des agriculteurs, des traders, aux cause du raté agricole, etc.
 
-### Les frontières ne sont jamais innocentes
+On parle alors d'une approche par _boite noire_ en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend explicitement cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
-Parler d’un système suppose de décider :
+L'intérêt d'une telle méthode est évident. Elle permet de rapprocher des réalités différentes dès lors qu'elle présentent des relations analogues entre leurs entrées et leurs sortie. 
 
-- quels éléments lui appartiennent ;
-- quelles interactions sont traitées comme entrées ou sorties ;
-- quelles variables sont pertinentes ;
-- quelle durée doit être observée ;
-- quel état compte comme stabilité ou réussite.
+Mais elle permet surtout d'opérer un déplacement du regard : au lieu de définir le système par sa substance intérieure, on l’appréhende depuis l’extérieur, à partir des différences qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
 
-Ces choix peuvent être justifiés, mais ils ne sont pas donnés par la nature une fois pour toutes. Si l’on analyse une université comme un système d’optimisation du taux de réussite, on rend visibles certains écarts et l’on en rend d’autres secondaires : la qualité de l’expérience, les inégalités de conditions, la transformation intellectuelle.
+COMPORTEMENT vs MECANISMES OU INTENTIONNALITE.
 
-La cybernétique apporte donc une méthode puissante, mais elle oblige à demander : **qui définit le système, ses frontières et ses objectifs ?**
+INSISTER SUR LE FAIT QUE C'EST UNE RUTPURE DANS LA PENSEE DE LA SUBSTANCE DES CHOSES. QUI SUIS-JE ? NON. PLUTOT : COMMENT JE ME COMPORTE.
 
-Décrire des éléments et leurs relations ouvre alors une nouvelle question : comment des interactions locales peuvent-elles faire apparaître, à l’échelle de l’ensemble, des propriétés qu’aucun élément ne possède isolément ?
+[WARNING!]
+Traiter un système comme une boîte noire ne signifie pas que son intérieur serait inconnaissable, mais que l’on choisit provisoirement de ne pas l’analyser pour se concentrer sur son comportement observable et sur ses relations avec l’environnement.une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée. Le choix peut être légitime et puissant. Il permet de construire un modèle sans attendre une connaissance exhaustive. Mais il faut toujours demander ce que la mise en boîte noire élimine.
+
+Traiter un pilote comme un point mobile peut être suffisant pour calculer une trajectoire. Traiter un étudiant comme un taux de réussite peut être suffisant pour construire un tableau de bord. Dans le second cas, l’opération risque toutefois de rendre invisibles l’expérience vécue, les inégalités, les apprentissages non quantifiés et la transformation intellectuelle.
+
+L'approche par boite noire n'implique pas de se désinteresser définitivement des élements composant un système. On peut évidemment, lorsque cela est pertinent, ouvrir une boite noire et analyser comment les éléments qui la composent sont reliés entre eux. Mais ces éléments deviennent alors, eux-mêmes des boites noire. L'approche par boite noire est ainsi récursive.
+
+[EXEMPLE!]
+Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteur de témpérature ou si le chauffage repose sur une chaudière au gaz ou une chaudière au fioul. Il lui importe seulement de savoir comment ces éléments sont réliés entre eux et de déterminer comment ces relations peuvent être organisées pour assurer la régulation de la température.
+
+
+
+[EXEMPLE!]
+Homo oeconomicus
+
+Le déplacement intellectuel important se situe ici : On ne compare plus seulement des objets par ce dont ils sont faits ; on compare des comportements qu'on explique non plus par leur mécanisme interne mais par l'ordre de leur relations. ICI ENCORE RUPTURE IMPORTANTE DAANS LA PENSEE OCCIDENTALE.
+
+TRANSITION EFFET EMERGENTS : LES EFFETS QUEXERCENT LES SYSTEMES EPUVENT AVOIR DES FINALITES QUI N'APPARTIENNENT A AUCUN DES ELEMENTS.
+
+Cette méthode rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Mais une comparaison formelle ne supprime pas les différences de nature et d’histoire :
+
+- un organisme possède un métabolisme et une histoire évolutive ;
+- une machine a été construite selon un projet ;
+- une institution possède un droit, des conflits et des rapports de pouvoir ;
+- une personne interprète les situations dans lesquelles elle agit.
+
+Ce déplacement est aussi important parce qu'il permet de comprendre qu'un système peut produire des effets qui n'appartiennent à aucun de ses éléments.
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 - W. Ross Ashby, *An Introduction to Cybernetics*, chap. 6, « The Black Box », Chapman & Hall / John Wiley, 1956, https://doi.org/10.5962/bhl.title.5851.
 [/Sources]
+
 ---
-<!-- slide: id="004ga-emergence" title="Émergence" steps=3 -->
 
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
+### Finalité sans intention
 
-<p class="kicker">Éléments · relations · changement d’échelle</p>
+La cybernétique réintroduit ainsi la **finalité** dans la science sans revenir à l’idée qu’un but futur agirait magiquement sur le présent. Le but est matérialisé par une consigne, une structure ou une boucle. Ce sont les écarts présents qui produisent les corrections présentes. PAS DE CONSCIENCE OU D'INTENTIONNALITE
 
-# Quand le tout fait apparaître du nouveau
+[EXEMPLE!]
+Un thermostat maintient une température ; un missile poursuit une cible ; un organisme régule certaines constantes. Leur comportement peut être décrit comme orienté vers un état final sans leur attribuer une intention consciente. Dire qu’un thermostat « cherche » à maintenir une température constitue une description fonctionnelle de son comportement. Cela ne signifie pas qu’il désire consciemment cette température.
 
-<div class="card-grid">
+Ces comportements peuvent être décrits comme orientés vers un état final sans supposer que tous les systèmes concernés possèdent une intention consciente ou une volonté.
 
-<Fragment at={1}>
-<div class="concept-card">
-  <h3>Éléments</h3>
-  <p>Pris isolément, chacun accomplit relativement peu.</p>
-</div>
-</Fragment>
 
-<Fragment at={2}>
-<div class="concept-card">
-  <h3>Interactions</h3>
-  <p>Leurs états s’affectent et composent une dynamique.</p>
-</div>
-</Fragment>
+Cette distinction nous sera utile lorsque nous parlerons d’intelligence artificielle. Dire qu’un système optimise une fonction ne signifie pas qu’il comprend ou désire son objectif. L’orientation de son comportement peut provenir de son architecture et de ses règles.
 
-<Fragment at={3}>
-<div class="concept-card">
-  <h3>Ensemble</h3>
-  <p>Une propriété apparaît à l’échelle collective.</p>
-</div>
-</Fragment>
+Le comportement d'un système constitue un effet émergent qui n'a pas à être poursuivi par aucun de ses éléments.
 
-</div>
+---
 
-<p class="statement">L’émergence nomme un <strong>changement d’échelle</strong> — pas encore son mécanisme.</p>
+### Emergence
 
---- notes
+Décrire des éléments et leurs relations ouvre alors une nouvelle question : comment des interactions locales peuvent-elles faire apparaître, à l’échelle de l’ensemble, des propriétés qu’aucun élément ne possède isolément ?
 
-Temps indicatif : **5 minutes**.
+
+Exemple : Stygmergie / Murmuration
+Exemple: Réseaux de neurones.
+
+Exemple : main invisible du marché.
 
 Le concept d’**émergence** est plus ancien que la cybernétique, mais il trouve dans la pensée systémique un terrain privilégié. Il désigne le fait qu’un ensemble possède des propriétés que ses éléments, considérés isolément, ne possèdent pas.
 
@@ -641,6 +554,9 @@ L’émergence désigne donc d’abord un **problème de composition et d’éch
 - Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
 - Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
 [/Sources]
+
+Ca devient intéressant quand on s'intéresse à des phénomènes sociaux : crash( On veut être riche et on se ruine.), on court vite pour sortir, etc.
+
 ---
 <!-- slide: id="004h-auto-organisation" title="Auto-organisation" steps=3 -->
 

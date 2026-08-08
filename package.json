@@ -5,8 +5,10 @@
   "type": "module",
   "packageManager": "pnpm@9.14.4",
   "scripts": {
+    "dev:intro": "node svx-slides/src/cli/index.mjs dev slides/introduction",
     "dev:demo": "node svx-slides/src/cli/index.mjs dev slides/demo",
     "dev:economics": "node svx-slides/src/cli/index.mjs dev slides/economics",
+    "dev:history": "node svx-slides/src/cli/index.mjs dev slides/history-1",
     "build:demo": "node svx-slides/src/cli/index.mjs build slides/demo --public",
     "build:demo:public": "node svx-slides/src/cli/index.mjs build slides/demo --public",
     "build:demo:presenter": "node svx-slides/src/cli/index.mjs build slides/demo --presenter",
