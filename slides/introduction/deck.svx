@@ -86,7 +86,5 @@ De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour q
 
 3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
 
-
-
 ---
 ## Examens
