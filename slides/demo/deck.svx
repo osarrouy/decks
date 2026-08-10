@@ -11,9 +11,9 @@ kubernētēs {.kicker}
 
 Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
 
-Ces technologies ont soulevé toute une série de nouvelles questions : comment le radar peut-il repérer la position et la direction de l'avion ; comment le système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?
+Ces technologies ont soulevé toute une série de nouvelles questions : comment un radar peut-il repérer la position et la direction d'un avion ; comment un système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?
 
-Ces questions peuvent sembler très techniques, voire sans grand intérêt. Pourtant, à la fin des années 1940, plusieurs chercheurs commencent à comprendre qu’elles ne concernent pas uniquement les machines. La même manière de raisonner pourrait servir à analyser des phénomènes qui, à première vue, n’ont rien à voir les uns avec les autres : comment un organisme maintient-il sa température malgré les variations de son environnement ; comment le cerveau utilise-t-il des informations sensorielles pour corriger un geste ; comment une organisation modifie-t-elle ses décisions en fonction des résultats qu’elle observe.
+Ces questions peuvent sembler très techniques, voire sans grand intérêt. Pourtant, à la fin des années 1940, plusieurs chercheurs commencent à comprendre qu’elles ne concernent pas uniquement les machines. La même manière de raisonner peut servir à analyser des phénomènes qui, à première vue, n’ont rien à voir les uns avec les autres : comment un organisme maintient-il sa température malgré les variations de son environnement ; comment le cerveau utilise-t-il des informations sensorielles pour corriger un geste ; comment une organisation modifie-t-elle ses décisions en fonction des résultats qu’elle observe.
 
 Quel est le point commun entre ces phénomènes ? Dans chaque cas, un système reçoit des informations, agit sur son environnement, observe les effets de son action, puis ajuste son comportement en conséquence.
 
@@ -324,10 +324,10 @@ Thermodynamique et cybernétique {.kicker}
 En physique l’entropie décrit la tendance spontanée d’un système isolé à disperser son énergie et à réduire les différences qui le structurent.
 
 [!EXEMPLES]
-Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit  et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
+Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
 
 [!EXEMPLES]
-Une goutte d'encre dans un verre d'eau. L'encre se diffuse jusqu'à colorer tout le verre. Là encore ce processus spontané est difficilement réversible. Il est impossible de re-concentrer le colorant dans l'eau.
+Une goutte d'encre dans un verre d'eau. L'encre se diffuse jusqu'à colorer tout le verre. Là encore ce processus spontané est difficilement réversible. Il est compliqué de re-concentrer le colorant dans l'eau.
 
 C’est ce que décrit l’entropie : une tendance spontanée à la dispersion de l'énergie. Ou, pour le dire autrement, une tendance spontanée des systèmes physiques à tendre vers leur état de désorganisation maximal.
 
@@ -345,7 +345,7 @@ Wiener et d’autres cybernéticiens étendent donc l’usage de la notion d’i
 
 Les boucles de rétroaction sont pensées comme des mécanismes permettant d'opposer localement une résistance aux forces inexorables de l'entropie.
 
-Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Oui, tout ou presque peut être codé comme information. Cela ne signifie pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
+Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Conçue comme néguentropie l'information peut-être identifié absolument partout. Cela peut parfois conduire à un tour de passe-passe épistémoligique. Oui, tout ou presque peut être codé comme information. Cela ne signifie toutefois pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
 Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et de vérifications empiriques.
 
@@ -398,106 +398,75 @@ Enfin, un système ne mesure jamais « tout ». Il sélectionne une variable : u
 
 Temps indicatif : **5 minutes**.
 
+La première théorie générale des système est proposée dans les années 1950, sous l'influence de la cybernétique, par Ludwig von Bertalanffy, à partir de réflexions issues de la biologie. Nous retiendrons dans ce cours une définition opératoire de la notion de système comme *un ensemble d’éléments dont les relations produisent un comportement qu'une analyse isolée de ces éléments ne suffit pas à expliquer*.
 
-
-
-Le terme n’est ni inventé par Wiener ni réservé à la cybernétique. La théorie générale des systèmes de Ludwig von Bertalanffy se développe au même moment depuis la biologie. Pour ce cours, retenons une définition opératoire : **un système est un ensemble d’éléments dont les relations produisent une dynamique que les éléments isolés ne suffisent pas à expliquer**.
-
-
-La notion de système désigne moins les qualités intrinsèques de quelque chose qu'_une manière d'approcher et d'analyser cette chose_.
-
-Comment une approche systémique envisage-t-elle le réel ? Comme _un ensemble d'éléments dont les relations produisent un comportement que l'analyse de ces éléments ne permet pas à elle seule d'expliquer_.
+Cette définition peut toutefois être trompeuse parce qu'elle laisse passer que ce sont d'abord des qualités intrinsèque d'un objet qui font ou non de lui un système. Or la qualification de système relève plutôt _d'une manière d'approcher et d'analyser ce objet_.
 
 [EXEMPLE!]
-Le système-thermostat ne régule la température d'une pièce que de l'articulation de divers éléments qui ne régulent rien à eux seul. Le capteur ne régule rien s'il n'est pas relié au chauffage. Le chauffage ne régule rien s'il n'est pas connecté au capteur. Et l'ensemble ne régule rien s'il aucune consigne ne lui est donnée. Le thermostat permet ainsi de distinguer une explication élémentaire d’une explication systémique. Une analyse élémentaire décrit le capteur, le chauffage ou la consigne. Une analyse systémique étudie la boucle de rétroaction qui les relie et _l'organisation relationnelle_ de ces divers éléments.
+La jalousie dans un couple. Une personne ment ou cache certaines choses. L'autre adopte un comportement jaloux et provoque des disputes à n'en plus finir. Une manière traditionnelle d'aborder ce problème consiste à expliquer ces comportements par la psychologie des protagonistes. De par leur histoire, l'un a adopté un comportement évitant, et l'autre un comportement jaloux. Une approche systèmique s'intéressera aux boucles de rétroaction auto-entretenue par la relation plutôt qu'a la psychologie de ses protagonistes.Une personne devient jalouse ; pour éviter les disputes, son partenaire lui cache certaines choses ou lui ment. Ce mensonge est alors interprété comme une confirmation des soupçons initiaux, ce qui renforce la jalousie. Pour éviter de nouvelles tensions, le partenaire ment à nouveau, alimentant ainsi davantage la méfiance.
 
-[EXEMPLE!]
-La jalousie. 
+Cet exemple permet de comprendre que le réel n'est pas intrinsèquement systémique ou non-systémique. Mais qu'il est possible d'analyser tout phénomène depuis une approche systémique en le l'analysant comme _l'effet d'une certain configuration relationnelle_.
 
-[EXEMPLE!]
-Les bulles financières.
-
-
-[EXEMPLE!]
-On veut sortir vite et on écrase tout le monde
 [Sources]
 - Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
 [/Sources]
 
 ---
-### Dedans / dehors 
+### Dedans / dehors
+Frontières {.kicker}
 
 --- notes
 
-Cette manière d'analyser le réel comme effet d'une certaine organisation relationnelle soulève la question des limites que l'on fixe à la définition d'un système. Il n'existe aucun système intrinsèquement clos sur lui-même. Un système appartient toujours à un système plus large que lui dont il ne constitue qu'un élément parmi d'autres.
+Cette approche soulève évidemment la question des limites que l'on fixe à la définition d'un système. Car en réalité, tout est relié à tout.
 
 [EXEMPLE!]
-Un organisme est en contact permanent avec son environnement : il doit réguler sa température, son taux d'oxygène, ingèrer des aliments et de l'eau et évacuer ce qui doit l'être ... Un organisme est donc toujours en relation avec d'autres organismes et composent avec eux un meta-système.
+Votre organisme peut être pensé comme un système mais il est évidemment en lien avec son environnement : il doit réguler sa température, son taux d'oxygène, ingèrer des aliments et de l'eau et évacuer ce qui doit l'être ... Or ces éléments sont eux-même dépendants de systèmes complexes : la température de l'air dépend - entre autres - de choix de politiques énergétiques américains, qui dépendent eux-mêmes de l'élection présidentielle, qui dépend elle-même du cours du maïs ou de la diffusion du fentanyl.
 
-Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne relève d'un choix analytique et méthodologique : quelle problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
-
-[EXEMPLE!]
-Le thermostat. Est-ce qu'on inclut au système-thermostat un capteur mesurant le degré d'ouverture des fenêtres ? L'ouverture ou la fermeture des volets ? Le taux d'ensoleillement ? Le niveaux de CO_2 dans l'atmosphère ? La pression atmosphérique dans l'Atlantique nord ? Ou est-ce qu'on considère qu'elles doivent être traitées comme des perturbations d'un environnement dont le capteur de température « condense » toute l'information ? Tout dépend du problème que l'on souhaite poser : celui du maintient de la température dans une cusine ou celui du réchauffement climatique.
+Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne _relève d'un choix analytique et méthodologique_ : quelle problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
 
 [EXEMPLE!]
-La jalousie. On analyse le système familial ? On inclue le conjoint qui ment pour éviter les problèmes ? On ne voit pas du tout les memes choses et on ne se pose pas du tout les mêmes questions.
+L'organisme. Est-ce qu'on souhaite étudier les mécanismes de régulation biologique de l'organisme ou les liens entre les problématiques de santé publique et le réchauffement climatique ?
+La jalousie. Est-ce qu'on souhaite étudier les dynamiques relationnelles d'un couple ou les effets d'une histoire familiale ancienne sur le comportements d'un individu ?
 
 La définition d'un système et de ses frontières dépend donc de la question que l'on se pose. _La frontière ne sépare pas simplement le réel en deux. Elle définit les problèmes qu'ont y fait apparaitre et la manière dont on peut les aborder._
 
 --- 
 ### ~~Dedans~~ / dehors 
 
-Le choix d'une frontière sépare en particulier ce à quoi on s'intéresse de ce que l'on choisit d'ignorer. Les cybernéticiens considèrent en effet qu'un système peut être étudié par l'analyse des seules relations entre ses entrées et ses sorties ou des relations entre les éléments qui le composent. C'est-à-dire sans s'intéresser à la nature de ces éléments.
+Le choix de ces frontières est important, notamment parce qu'il détermine ce à quoi on s'intéresse et ce que l'on choisit d'ignorer.
 
-Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie en 1943 un article intitulé _Behavior, Purpose and Teleology_ dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de commencer par leur matière ou par tous leurs mécanismes internes.
-
-[EXEMPLE!]
-Dans le cas du système de régulation thermique, on observe comment une consigne et des perturbations environnementales produisent une évolution déterminée de la température de la pièce. 
+Or l'ignorance est un élément constitutif de l'approche cybernétique. L'idée des cybernéticiens est la suivante : le réel est parfois trop complexe pour être analysé ou modélisé car, en dernière analyse, le modéliser impliquerait de le reconstituer en entier.
 
 [EXEMPLE!]
-Position de l'avion -> tire de l'avion. On ne s'intéresse pas à la psychologie du pilote.
-La visée anti-aérienne. Revenons à la visée antiaérienne : le dispositif exploite une série de positions et leurs variations sans devoir expliquer la psychologie du pilote ni connaître intégralement le fonctionnement de l’avion.
+La météo. En théorie, prédire avec précision la météo d'un point donné 24h à l'avance impliquerait de connaître et de modéliser l’ensemble des états pertinents du système atmosphérique : la température, la pression et l’humidité de chaque point de l’atmosphère, les mouvements de l’air, les échanges avec les océans et les sols, le rayonnement solaire, etc. Une description exhaustive du réelle impliquerait de reconstituer l’atmosphère tout entière — jusque dans ses innombrables interactions microscopiques. La tâche est évidemment insurmontable. Mais peu importe. Il est, en pratique, possible de produire des prévisions assez précises en ne retenant que certaines variables, à une certaine échelle, et en corrigeant régulièrement le modèle à partir de nouvelles observations. L’ignorance n’est donc pas ici un simple défaut que l’on devrait progressivement combler. Elle est _constitutive de l’approche_ : le modèle fonctionne précisément parce qu’il ne cherche pas à reproduire le réel dans son intégralité mais qu'il sélectionne quelques relations pertinentes pour répondre à une question donnée : *la température va-t-elle augementer ou baisser demain ?*
+
+La méconnaissance n'est donc pas nécessairement un _bug_. C'est parfois une _feature_ : une sorte d'ignorance organisée. C'est parce qu'on choisit de laisser activement dans l'ombre certains phénomènes qu'il devient possible de rendre d'autres relations observables, opératoires et prévibles. 
+
+Car en réalité, choisir d'ignorer le détail de certains éléments n'implique pas nécessairement de ne pouvoir rien en dire. En 1943, Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie ainsi un article intitulé _Behavior, Purpose and Teleology_, dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de leur mode de fonctionnement interne.
 
 [EXEMPLE!]
-CRISE AGRICOLE, EFFET SUR LES PRIX. On s'intéresse au effet : moins de récolte / variation de prix. Pas à la pscyhologie des agriculteurs, des traders, aux cause du raté agricole, etc.
+La visée anti-aérienne. On peut tout à fait décrire le fonctionnement du système en étudiant l'adaptation du mécanisme de visée aux positions successives de l’avion sans nécessairement s'intéresser à la psychologie du pilote ou au fonctionnement mécanique de l'avion. L’avion n’est pas totalement ignoré : il est _réduit à ce qui importe pour le comportement étudié_.
 
-On parle alors d'une approche par _boite noire_ en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend explicitement cette méthode aux organismes, aux comportements et aux systèmes complexes.
+[EXEMPLE!]
+L'impact d'une crise agricole sur le prix des légumes ou des céréales. On peut décrire le système à partir d’une relation relativement simple : une diminution de la récolte réduit l’offre disponible ; cette modification de l’offre produit une variation des prix. Il n'est pas forcément nécessaire, pour prévoir l'impact de cette crise sur les prix, de s'intéresser à la psychologie des agriculteurs, aux anticipations des traders, aux stratégies des distributeurs ou aux causes précises de la mauvaise récolte. Tous ces éléments peuvent être pertinents pour aborder d’autres questions, mais peuvent complexifier inutilement la prédiction de l'impact de la crise sur les prix.
 
-L'intérêt d'une telle méthode est évident. Elle permet de rapprocher des réalités différentes dès lors qu'elle présentent des relations analogues entre leurs entrées et leurs sortie. 
+On parle alors d'une approche par _boite noire_, en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
-Mais elle permet surtout d'opérer un déplacement du regard : au lieu de définir le système par sa substance intérieure, on l’appréhende depuis l’extérieur, à partir des différences qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
 
-COMPORTEMENT vs MECANISMES OU INTENTIONNALITE.
 
-INSISTER SUR LE FAIT QUE C'EST UNE RUTPURE DANS LA PENSEE DE LA SUBSTANCE DES CHOSES. QUI SUIS-JE ? NON. PLUTOT : COMMENT JE ME COMPORTE.
+L'important, ici, est la conversion du regard à laqulle invite cette approche. On ne cherche plus à définir un système par sa substance intérieure, de son fonctionnement interne, ou de l'intention qui le guide. On l’appréhende depuis l’extérieur, à partir des informations qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
+
+Ce déplacement constitue une rupture avec une pensée de la substance, pour laquelle chaque chose posséderait une nature ou une identité relativement stable qu’il faudrait découvrir. La question n’est plus alors : qu'est-ce que cette chose, mais comment se comporte-t-elle dans un environnement donné ?
+
+L’identité d’un système se comprend alors moins comme une essence que comme un ensemble de relations, de transformations et de régularités observables.
 
 [WARNING!]
-Traiter un système comme une boîte noire ne signifie pas que son intérieur serait inconnaissable, mais que l’on choisit provisoirement de ne pas l’analyser pour se concentrer sur son comportement observable et sur ses relations avec l’environnement.une boîte noire n’est pas nécessairement mystérieuse. C’est un choix de niveau d’analyse : nous décidons provisoirement que certains mécanismes internes ne sont pas nécessaires pour répondre à la question posée. Le choix peut être légitime et puissant. Il permet de construire un modèle sans attendre une connaissance exhaustive. Mais il faut toujours demander ce que la mise en boîte noire élimine.
+Considérer un système comme une boîte noire ne signifie pas que son fonctionnement serait intrinsèquement in-connaissable. Mais que l'on choisit provisoirement de ne pas l’analyser pour se concentrer sur son comportement observable et sur ses relations avec l’environnement.
 
-Traiter un pilote comme un point mobile peut être suffisant pour calculer une trajectoire. Traiter un étudiant comme un taux de réussite peut être suffisant pour construire un tableau de bord. Dans le second cas, l’opération risque toutefois de rendre invisibles l’expérience vécue, les inégalités, les apprentissages non quantifiés et la transformation intellectuelle.
-
-L'approche par boite noire n'implique pas de se désinteresser définitivement des élements composant un système. On peut évidemment, lorsque cela est pertinent, ouvrir une boite noire et analyser comment les éléments qui la composent sont reliés entre eux. Mais ces éléments deviennent alors, eux-mêmes des boites noire. L'approche par boite noire est ainsi récursive.
+L'approche par boite noire n'implique d'ailleurs pas de se désinteresser définitivement de l'intérieur d'un système. Lorsque cela est pertinent, on peut décider d'ouvrir la boite noire et d'analyser les éléments qui la composent. Ces éléments deviennent alors, eux-mêmes, des boites noire de niveau inférieur. L'approche par boite noire est donc récursive.
 
 [EXEMPLE!]
-Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteur de témpérature ou si le chauffage repose sur une chaudière au gaz ou une chaudière au fioul. Il lui importe seulement de savoir comment ces éléments sont réliés entre eux et de déterminer comment ces relations peuvent être organisées pour assurer la régulation de la température.
-
-
-
-[EXEMPLE!]
-Homo oeconomicus
-
-Le déplacement intellectuel important se situe ici : On ne compare plus seulement des objets par ce dont ils sont faits ; on compare des comportements qu'on explique non plus par leur mécanisme interne mais par l'ordre de leur relations. ICI ENCORE RUPTURE IMPORTANTE DAANS LA PENSEE OCCIDENTALE.
-
-TRANSITION EFFET EMERGENTS : LES EFFETS QUEXERCENT LES SYSTEMES EPUVENT AVOIR DES FINALITES QUI N'APPARTIENNENT A AUCUN DES ELEMENTS.
-
-Cette méthode rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Mais une comparaison formelle ne supprime pas les différences de nature et d’histoire :
-
-- un organisme possède un métabolisme et une histoire évolutive ;
-- une machine a été construite selon un projet ;
-- une institution possède un droit, des conflits et des rapports de pouvoir ;
-- une personne interprète les situations dans lesquelles elle agit.
-
-Ce déplacement est aussi important parce qu'il permet de comprendre qu'un système peut produire des effets qui n'appartiennent à aucun de ses éléments.
+Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteur de témpérature ou si le chauffage repose sur une chaudière au gaz ou une chaudière au fioul. Il lui importe seulement de savoir comment ces éléments sont réliés entre eux et de déterminer comment ces relations peuvent être organisées pour assurer la régulation de la température. En revanche, s'il souhaite optimiser la consommation énergétique, il lui faudra sans doute entrer de le détail de ces éléments pour analyser les différences de dynamiques thermiques entre un chauffage éléctrique, une chauidère au gaz ou une chaudière au fioul.
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
@@ -505,30 +474,29 @@ Ce déplacement est aussi important parce qu'il permet de comprendre qu'un syst�
 [/Sources]
 
 ---
+### Une finalité sans intention
 
-### Finalité sans intention
+Dès lors que l’on décrit un système à partir de son comportement, une question nouvelle apparaît : certains comportements semblent orientés vers une fin, alors même qu’aucune intention consciente ne les commande.
 
-La cybernétique réintroduit ainsi la **finalité** dans la science sans revenir à l’idée qu’un but futur agirait magiquement sur le présent. Le but est matérialisé par une consigne, une structure ou une boucle. Ce sont les écarts présents qui produisent les corrections présentes. PAS DE CONSCIENCE OU D'INTENTIONNALITE
+Un thermostat « maintient » une température, mais il ne sait pas ce qu’est une température et ne désire rien ; un organisme régule son équilibre interne sans avoir à se représenter explicitement la finalité de cette régulation.
 
-[EXEMPLE!]
-Un thermostat maintient une température ; un missile poursuit une cible ; un organisme régule certaines constantes. Leur comportement peut être décrit comme orienté vers un état final sans leur attribuer une intention consciente. Dire qu’un thermostat « cherche » à maintenir une température constitue une description fonctionnelle de son comportement. Cela ne signifie pas qu’il désire consciemment cette température.
+La cybernétique réintroduit ainsi la notion de _finalité_ dans la description scientifique, mais en la détachant de toute intention psychologique : un système peut se comporter comme s’il poursuivait un but simplement parce que ses relations internes et ses boucles de rétroaction l’orientent vers un état donné.
 
-Ces comportements peuvent être décrits comme orientés vers un état final sans supposer que tous les systèmes concernés possèdent une intention consciente ou une volonté.
+L'absence de lien entre le but que semble poursuivre un système et l'intention qui l'anime - ou plutôt l'intention qui l'anime pas - illustre un autre concept structurant de la cybernétique : l'existence de _comportements émergents_. 
 
-
-Cette distinction nous sera utile lorsque nous parlerons d’intelligence artificielle. Dire qu’un système optimise une fonction ne signifie pas qu’il comprend ou désire son objectif. L’orientation de son comportement peut provenir de son architecture et de ses règles.
-
-Le comportement d'un système constitue un effet émergent qui n'a pas à être poursuivi par aucun de ses éléments.
+À l’échelle d’un ensemble, des régularités ou des orientations peuvent apparaître sans avoir été pensées, visées ou inscrites dans aucun de ses éléments.
 
 ---
-
 ### Emergence
 
 Décrire des éléments et leurs relations ouvre alors une nouvelle question : comment des interactions locales peuvent-elles faire apparaître, à l’échelle de l’ensemble, des propriétés qu’aucun élément ne possède isolément ?
 
+On peut trouver des exemple de tels comportements émergents partout.
 
 Exemple : Stygmergie / Murmuration
 Exemple: Réseaux de neurones.
+[EXEMPLE!]
+On veut sortir vite et on écrase tout le monde
 
 Exemple : main invisible du marché.
 
