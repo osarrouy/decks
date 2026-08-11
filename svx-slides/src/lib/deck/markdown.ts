@@ -1,5 +1,5 @@
 import { micromark } from 'micromark'
-
+import { directive, directiveHtml } from 'micromark-extension-directive'
 function normalizeNotesMarkdown(markdown: string) {
   return markdown
     .replace(/^\[Sources\]\s*$/gim, '### Sources')
@@ -18,6 +18,19 @@ function decorateNoteCallout(html: string, tag: string, className: string) {
     )
 }
 
+const noteDirectiveHtml = directiveHtml({
+  '*'(directive) {
+    if (directive.type !== 'containerDirective') return false
+    this.raw(directive.content || '')
+  },
+  comment(directive) {
+    this.raw(`<blockquote class="presenter-note-comment">${directive.content || ''}</blockquote>`)
+  },
+  example(directive) {
+    this.raw(`<blockquote class="presenter-note-example">${directive.content || ''}</blockquote>`)
+  }
+})
+
 function decorateNoteCallouts(html: string) {
   return decorateNoteCallout(
     decorateNoteCallout(html, 'COMMENT', 'presenter-note-comment'),
@@ -28,7 +41,9 @@ function decorateNoteCallouts(html: string) {
 
 export function notesToHtml(markdown = '') {
   const html = micromark(normalizeNotesMarkdown(markdown.trim()), {
-    allowDangerousHtml: false
+    allowDangerousHtml: false,
+    extensions: [directive()],
+    htmlExtensions: [noteDirectiveHtml]
   })
 
   return decorateNoteCallouts(html)

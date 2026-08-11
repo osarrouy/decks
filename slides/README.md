@@ -33,20 +33,37 @@ Les composants locaux s’importent avec l’alias stable :
 
 ## Indications dans les notes
 
-Dans une section `--- notes`, préfixer une indication destinée à la personne qui présente avec le callout Markdown `[!COMMENT]` :
+Dans une section `--- notes`, utiliser les directives conteneur `:::comment` et `:::example` pour annoter plusieurs paragraphes :
+
+```md
+:::comment
+Montrer la trajectoire sur la slide.
+
+Insister sur la différence entre position mesurée et position anticipée.
+:::
+```
+
+Une directive `:::comment` reçoit un style distinct dans le panneau **Notes** de `/presenter`. Elle n’apparaît pas sur la slide projetée.
+
+Pour distinguer un exemple pédagogique d’une indication de mise en scène, utiliser `:::example` :
+
+```md
+:::example
+Le thermostat est un exemple simple de rétroaction.
+
+La consigne est conçue de l’extérieur ; la régulation, elle, est produite
+par la boucle de rétroaction.
+:::
+```
+
+Ces deux directives peuvent contenir plusieurs paragraphes, listes et autres éléments Markdown. Elles restent réservées aux notes du speaker et n’apparaissent pas dans la projection.
+
+L’ancien format en blockquote reste accepté :
 
 ```md
 > [!COMMENT]
-> Montrer la trajectoire sur la slide.
-```
+> Une indication courte.
 
-Ce bloc reçoit un style distinct dans le panneau **Notes** de `/presenter`. Il n’apparaît pas sur la slide projetée.
-
-Pour distinguer un exemple pédagogique d’une indication de mise en scène, utiliser `[!EXEMPLE]` :
-
-```md
 > [!EXEMPLE]
-> Le thermostat est un exemple simple de rétroaction.
+> Un exemple court.
 ```
-
-Ce bloc reçoit un style distinct dans le panneau **Notes** de `/presenter`. Il reste réservé aux notes du speaker et n’apparaît pas dans la projection.

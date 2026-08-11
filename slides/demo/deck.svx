@@ -9,7 +9,7 @@ kubernētēs {.kicker}
 
 --- notes
 
-Nous avons beaucoup insisté jusqu'ici sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
+Nous avons beaucoup insisté sur les avancées dont ont bénéficié, durant la seconde mondiale, les machines à calculer. Or ces progrès se sont en réalité étendus à bien d'autres domaines : radars, télécommunications, systèmes de visée anti-aérienne, etc.
 
 Ces technologies ont soulevé toute une série de nouvelles questions : comment un radar peut-il repérer la position et la direction d'un avion ; comment un système de visée anti-aérienne peut-il calculer, à partir de ces données, où viser ; et si l’avion change de trajectoire, comment ajuster la visée ?
 
@@ -452,9 +452,7 @@ L'impact d'une crise agricole sur le prix des légumes ou des céréales. On peu
 
 On parle alors d'une approche par _boite noire_, en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
-
-
-L'important, ici, est la conversion du regard à laqulle invite cette approche. On ne cherche plus à définir un système par sa substance intérieure, de son fonctionnement interne, ou de l'intention qui le guide. On l’appréhende depuis l’extérieur, à partir des informations qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
+L'important, ici, est la conversion du regard à laquelle invite cette approche. On ne cherche plus à définir un système par sa substance intérieure, de son fonctionnement interne, ou de l'intention qui le guide. On l’appréhende depuis l’extérieur, à partir des informations qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
 
 Ce déplacement constitue une rupture avec une pensée de la substance, pour laquelle chaque chose posséderait une nature ou une identité relativement stable qu’il faudrait découvrir. La question n’est plus alors : qu'est-ce que cette chose, mais comment se comporte-t-elle dans un environnement donné ?
 

@@ -203,7 +203,7 @@
 
 /* Kicker gallery : petit label mono magenta au-dessus du titre. */
 [data-theme='gallery'] .slide .kicker {
-    font-size: var(--text-size);
+    /*font-size: var(--text-size);*/
     font-weight: 200;
     letter-spacing: 0.24em;
 }
@@ -219,4 +219,85 @@
 /* Barre de progression affinée dans le thème gallery. */
 [data-theme='gallery'].deck::after {
     height: 2px;
+}
+
+/*
+  Vue présentateur : les notes reprennent la surface blanche et les repères
+  d’angle de la slide, sans conserver la cartographie sombre par défaut.
+*/
+[data-theme='gallery'] .presenter-notes {
+    --note-corner-offset: 0.85rem;
+    --note-corner-half: var(--corner-mark-half);
+    --note-corner-size: var(--corner-mark-size);
+    --note-corner-stroke-half: var(--corner-mark-stroke-half);
+    border: 0;
+    border-radius: 0;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes .presenter-panel-header {
+    border-bottom-color: var(--rule);
+    background: var(--bg);
+    color: var(--muted);
+}
+
+[data-theme='gallery'] .presenter-notes-content {
+    background-color: var(--bg);
+    background:
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes :where(h1, h2, h3, h4, h5, h6) {
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes :where(p, li) {
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes strong {
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes a {
+    color: var(--accent);
+}
+
+[data-theme='gallery'] .presenter-notes blockquote {
+    border-left: 0;
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes blockquote.presenter-note-comment,
+[data-theme='gallery'] .presenter-notes blockquote.presenter-note-example {
+    --note-corner-offset: 0.7rem;
+    border: 0;
+    border-radius: 0;
+    background-color: var(--bg);
+    background:
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
+        var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes blockquote.presenter-note-comment::before,
+[data-theme='gallery'] .presenter-notes blockquote.presenter-note-example::before {
+    color: var(--accent);
 }
