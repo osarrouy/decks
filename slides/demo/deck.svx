@@ -545,30 +545,31 @@ La notion d’émergence désigne le fait qu’un système peut présenter, à l
 **Évacuation**. Chacun se dirige vers la sortie en se dépechant. La convergence des trajectoires augmente la densité et les pressions au niveau des portes de sortie. Cela ralentit finalement le flux que tout le monde souhaiterait en réalité accélérer. Paradoxalement : slower is faster.
 :::
 
-Ces exemples n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
+Le déplacement important consiste, dans chacun de ces cas, à passer du niveau local au niveau global ou systémique. Non plus en cherchant l’origine d’une propriété complexe dans un élément isolé ; mais en étudiant l’organisation de ses relations, leurs effets réciproques, leurs temporalités, etc.
 
-Le déplacement important consiste à passer du niveau local au niveau collectif. Il ne suffit pas de chercher l’origine d’une propriété complexe dans un élément isolé ; il faut aussi examiner l’organisation des relations, leurs effets réciproques, leurs temporalités et les contraintes qui les orientent.
+::warning
+La notion d'émergence ne suffit donc pas à expliquer comment des propriétés globales apparaissent : il nomme le problème qu’il faut encore analyser. Il reste encore, au cas par cas, à analyser les interactions entre les éléments, les boucles qui amplifient ou stabilisent certains états, les contraintes du milieu, les seuils à partir desquels un changement devient visible, les temporalités du phénomène, l’échelle à laquelle la propriété devient observable, etc.
+:::
+
+La notion d'émergence ne constitue donc pas une réponse magique au problème de la complexité. Elle n'en reste pas moins pertinente. Notamment parce qu'elle invite à s'intéresser moins aux comportements individuels qu'aux manières qu'ont ces comportements de s'aggréger pour produire des effets qui, souvent, leur échappent.
+
+---
 
 
-Parler d’échelle ne signifie pas seulement changer la taille de l’objet observé. Il s’agit surtout de passer d’un niveau local — les éléments et leurs interactions — à un niveau collectif, où l’on peut observer une forme, une régularité ou un effet nouveau.
+**Ségrégation urbaine**. Thomas Schelling imagine une ville représentée par un damier, sur lequel vivent deux groupes d’habitants. Chaque personne accepte de vivre dans un quartier mélangé, mais souhaite tout de même avoir une certaine proportion de voisins appartenant à son propre groupe — par exemple, au moins un tiers. Si cette condition n’est pas remplie, elle déménage vers une case disponible où elle se sent davantage à sa place.
 
-Cela ne signifie pas que le mot « émergence » suffise à expliquer comment ces capacités apparaissent : il nomme le problème qu’il faut encore analyser.
+La règle individuelle paraît modérée : personne ne demande que tous ses voisins lui ressemblent, et personne ne formule nécessairement le projet d’une ville entièrement séparée. Pourtant, lorsque chaque habitant applique cette règle à son voisinage immédiat, les déplacements successifs produisent progressivement des zones de plus en plus homogènes. Une ségrégation marquée apparaît alors à l’échelle de la ville.
 
-Dire qu’une propriété « émerge » ne suffit donc pas à l’expliquer. Il faut encore identifier :
+Le modèle montre donc comment une préférence locale relativement faible peut produire un effet collectif beaucoup plus radical qu’elle. Il ne suffit pas d’examiner les intentions individuelles pour comprendre la configuration globale : il faut aussi observer les interactions entre les choix, les places disponibles et la dynamique des déplacements.
 
-- les interactions entre les éléments ;
-- les boucles qui amplifient ou stabilisent certains états ;
-- les contraintes du milieu ;
-- les seuils à partir desquels un changement devient visible ;
-- les temporalités du phénomène ;
-- l’échelle à laquelle la propriété devient observable.
+Ce modèle a toutefois de fortes limites. Il réduit la population à deux groupes, suppose des préférences simples et laisse largement de côté les rapports de pouvoir, les discriminations, l’histoire du racisme, les politiques urbaines, le marché immobilier et les inégalités d’accès au logement. Il ne constitue donc ni une explication complète de la ségrégation réelle, ni une théorie adéquate du racisme. Il sert plus modestement à montrer comment des décisions locales peuvent produire, par leur composition, une structure spatiale globale que personne n’a nécessairement conçue comme telle.
 
 L’émergence nomme ainsi un problème de composition : comment des comportements individuels se combinent-ils pour produire un comportement collectif ? Ce problème est politiquement important, car les effets collectifs ne correspondent pas nécessairement aux intentions de ceux qui y participent.
 
 Mais l’absence d’intention collective ne signifie pas l’absence de pouvoir ou de responsabilité. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels. De même, les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
 
 :::example
-**Ségrégation urbaine**. Dans le modèle de Thomas Schelling, des préférences individuelles relativement modérées peuvent produire une séparation très marquée des groupes à l’échelle d’une ville. Aucun habitant ne doit nécessairement vouloir une ville entièrement ségrégée pour que cette configuration apparaisse. Le modèle est simplifié : il ne remplace pas l’analyse historique du racisme, des politiques foncières et des inégalités, mais il montre comment des décisions locales peuvent produire un effet spatial global.
+**Ségrégation urbaine**. Dans son modèle en damier, Thomas Schelling montre que des préférences individuelles relativement modérées peuvent produire une séparation très marquée des groupes à l’échelle d’une ville : aucun habitant ne doit nécessairement souhaiter une ville entièrement ségrégée pour que cette configuration apparaisse. Le modèle a toutefois de fortes limites. Il simplifie les préférences et pense peu les rapports de pouvoir, les discriminations, l’histoire du racisme et les inégalités d’accès au logement ; il ne faut donc pas y voir une explication de la ségrégation réelle, ni une manière adéquate de penser le racisme. Il permet seulement d’observer comment des décisions locales peuvent produire un effet spatial global.
 
 **Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés.
 
@@ -593,6 +594,20 @@ La politique ne consiste donc pas seulement à transformer les consciences indiv
 L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. L’auto-organisation pose une question plus dynamique : par quel processus un ordre se forme-t-il ou se maintient-il sans qu’un centre n’ait prescrit chaque détail ?
 
 L’absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir. Une organisation peut être distribuée tout en dépendant de canaux de communication, de ressources, de critères de réussite et d’un environnement. La question suivante sera donc moins « y a-t-il un chef ? » que : « Quelles conditions permettent aux actions locales de composer un ordre global, et qui définit ces conditions ? »
+
+
+:::warning
+Les exemples donnés au début n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
+:::
+
+TRANSITION AUTO-ORGANISATION 
+
+
+:::warning
+Ces exemples n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
+:::
+
+TRANSITION AUTO-ORGANISATION 
 
 ---
 ## Auto-organisation
