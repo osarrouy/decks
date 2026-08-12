@@ -222,43 +222,75 @@
 }
 
 /*
-  Vue présentateur : les notes reprennent la surface blanche et les repères
-  d’angle de la slide, sans conserver la cartographie sombre par défaut.
+  Vue présentateur Gallery : une surface blanche unique, avec les mêmes
+  repères d’angle que les slides pour délimiter chaque panneau.
 */
-[data-theme='gallery'] .presenter-notes {
-    --note-corner-offset: 0.85rem;
-    --note-corner-half: var(--corner-mark-half);
-    --note-corner-size: var(--corner-mark-size);
-    --note-corner-stroke-half: var(--corner-mark-stroke-half);
+[data-theme='gallery'].presenter-root {
+    background: var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-panel {
+    --panel-corner-background:
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--panel-corner-offset) - var(--panel-corner-half)) top calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) / var(--panel-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) top calc(var(--panel-corner-offset) - var(--panel-corner-half)) / 1px var(--panel-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--panel-corner-offset) - var(--panel-corner-half)) top calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) / var(--panel-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) top calc(var(--panel-corner-offset) - var(--panel-corner-half)) / 1px var(--panel-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--panel-corner-offset) - var(--panel-corner-half)) bottom calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) / var(--panel-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) bottom calc(var(--panel-corner-offset) - var(--panel-corner-half)) / 1px var(--panel-corner-size) no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--panel-corner-offset) - var(--panel-corner-half)) bottom calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) / var(--panel-corner-size) 1px no-repeat,
+        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--panel-corner-offset) - var(--panel-corner-stroke-half)) bottom calc(var(--panel-corner-offset) - var(--panel-corner-half)) / 1px var(--panel-corner-size) no-repeat;
+    --panel-corner-half: var(--corner-mark-half);
+    --panel-corner-offset: 1rem;
+    --panel-corner-size: var(--corner-mark-size);
+    --panel-corner-stroke-half: var(--corner-mark-stroke-half);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     border: 0;
     border-radius: 0;
     background: var(--bg);
     color: var(--fg);
 }
 
-[data-theme='gallery'] .presenter-notes .presenter-panel-header {
+[data-theme='gallery'] .presenter-panel::before {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: var(--panel-corner-background);
+    content: '';
+    pointer-events: none;
+}
+
+[data-theme='gallery'] .presenter-panel-header {
+    position: relative;
+    z-index: 1;
     border-bottom-color: var(--rule);
     background: var(--bg);
     color: var(--muted);
 }
 
+[data-theme='gallery'] .presenter-preview {
+    background: var(--bg);
+}
+
+[data-theme='gallery'] .presenter-preview-viewport {
+    border-radius: 0;
+    background: var(--bg);
+}
+
 [data-theme='gallery'] .presenter-notes-content {
-    background-color: var(--bg);
-    background:
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        var(--bg);
+    background: var(--bg);
+    background-image: none;
     color: var(--fg);
 }
 
 [data-theme='gallery'] .presenter-notes :where(h1, h2, h3, h4, h5, h6) {
     color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes h2 {
+    border-bottom-color: var(--rule);
 }
 
 [data-theme='gallery'] .presenter-notes :where(p, li) {
@@ -274,30 +306,57 @@
 }
 
 [data-theme='gallery'] .presenter-notes blockquote {
-    border-left: 0;
     color: var(--fg);
 }
 
 [data-theme='gallery'] .presenter-notes blockquote.presenter-note-comment,
 [data-theme='gallery'] .presenter-notes blockquote.presenter-note-example {
-    --note-corner-offset: 0.7rem;
-    border: 0;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
     border-radius: 0;
-    background-color: var(--bg);
-    background:
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) top calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) top calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) left calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) / var(--note-corner-size) 1px no-repeat,
-        linear-gradient(var(--corner-mark-color) 0 0) right calc(var(--note-corner-offset) - var(--note-corner-stroke-half)) bottom calc(var(--note-corner-offset) - var(--note-corner-half)) / 1px var(--note-corner-size) no-repeat,
-        var(--bg);
+    background: var(--bg);
+    background-image: none;
     color: var(--fg);
 }
 
 [data-theme='gallery'] .presenter-notes blockquote.presenter-note-comment::before,
 [data-theme='gallery'] .presenter-notes blockquote.presenter-note-example::before {
     color: var(--accent);
+}
+
+[data-theme='gallery'] .presenter-notes hr {
+    border-top-color: var(--rule);
+}
+
+[data-theme='gallery'] .presenter-notes code {
+    background: var(--accent-soft);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-notes pre {
+    border-color: var(--rule);
+    border-radius: 0;
+    background: #f7f7f5;
+}
+
+[data-theme='gallery'] .presenter-controls {
+    position: relative;
+    z-index: 1;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-button {
+    border-color: var(--rule);
+    border-radius: 0;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+[data-theme='gallery'] .presenter-button:hover {
+    background: var(--accent-soft);
+}
+
+[data-theme='gallery'] .presenter-meta {
+    color: var(--muted);
 }

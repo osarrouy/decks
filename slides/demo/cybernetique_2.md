@@ -141,7 +141,7 @@ Leur premier titre est révélateur : *Feedback Mechanisms and Circular Causal S
 
 Les concepts, les expériences et les disciplines se développent en parallèle. Les participants essaient de comprendre si des problèmes rencontrés dans des domaines très différents peuvent être comparés.
 
-On y rencontre, avec des présences variables selon les sessions, des mathématiciens, des ingénieurs, des neurophysiologistes, des psychologues et des anthropologues, parmi lesquels Warren McCulloch, Walter Pitts, John von Neumann, Norbert Wiener, Arturo Rosenblueth, Margaret Mead, Gregory Bateson et Heinz von Foerster.
+
 
 ### Une conversation avant d’être une doctrine
 
@@ -175,118 +175,9 @@ L’objet isolé compte moins que la structure des relations. On ne demande plus
 
 ### Commensurabilité formelle
 
-Il serait toutefois faux d’affirmer que les conférences auraient établi l’identité du cerveau, de la machine et de la société.
 
-La formulation la plus juste est :
 
-> **Les conférences Macy construisent un espace dans lequel un langage commun peut circuler entre des disciplines hétérogènes.**
 
-Ce langage produit une **commensurabilité formelle**. On peut dessiner des boucles analogues et comparer certains comportements. Mais la comparaison ne démontre pas une identité ontologique.
-
-Un thermostat, un cerveau et une institution peuvent tous comporter des rétroactions. Cela ne fait pas d’eux trois exemplaires d’un même être.
-
-### Question aux étudiants
-
-> Si une entreprise et une fourmilière peuvent toutes deux être décrites comme des réseaux, qu’avons-nous réellement démontré ?
-
-Réponse attendue : nous avons rendu certaines relations comparables ; nous n’avons pas établi que ces réalités fonctionnent ou existent de la même manière.
-
-### Transition
-
-> À Macy, le modèle voyage entre les disciplines ; chez Mead et Bateson, les relations sociales elles-mêmes deviennent l’objet.
-
----
-
-## 8. Systèmes, relations et auto-organisation
-
-**Temps indicatif : 7 minutes.**
-
-Le mot **système** n’est ni inventé par Wiener ni réservé à la cybernétique. La théorie générale des systèmes de Ludwig von Bertalanffy se développe au même moment depuis la biologie. Pour ce cours, une définition opératoire suffit :
-
-> **Un système est un ensemble d’éléments dont les relations produisent une dynamique que les éléments isolés ne suffisent pas à expliquer.**
-
-Décrire un système suppose au moins trois décisions :
-
-1. identifier des éléments à une certaine échelle ;
-2. observer les relations par lesquelles leurs états s’affectent ;
-3. tracer une frontière entre le système et son environnement.
-
-Cette frontière n’est pas toujours donnée d’avance. Inclure ou exclure le milieu, l’observateur, une institution ou une histoire transforme l’explication.
-
-### Reprendre le thermostat
-
-Le thermostat isolé n’est pas toute la boucle. Selon la question posée, le système peut comprendre le capteur, le chauffage et la pièce. La température extérieure constitue alors une perturbation venue de l’environnement.
-
-Les notions précédentes s’articulent ainsi :
-
-- le **système** désigne l’ensemble relationnel choisi pour l’analyse ;
-- l’**information** désigne les différences codées et transmises entre ses composantes ;
-- la **rétroaction** désigne le retour des effets sur les actions ultérieures.
-
-### Bateson : la relation comme unité d’analyse
-
-Gregory Bateson avait étudié avant Macy la **schismogenèse**, c’est-à-dire le processus par lequel des individus ou des groupes accentuent mutuellement leurs différences.
-
-Une démonstration de puissance appelle une démonstration plus forte. La réponse renforce la conduite initiale, qui provoque une nouvelle réponse. La boucle permet de penser une escalade sociale sans chercher une cause unique située dans l’un des participants.
-
-Le groupe de Palo Alto appliquera ensuite ce raisonnement aux relations familiales. Plus une personne insiste, plus une autre se retire ; plus elle se retire, plus la première insiste. Chaque conduite est à la fois une réponse à ce qui précède et une condition de ce qui suit.
-
-Cette analyse ne doit pas dissoudre les personnes dans le système. L’histoire, les asymétries, la violence et le pouvoir ne deviennent pas secondaires parce qu’un diagramme peut représenter les échanges.
-
-Margaret Mead insistera plus tard sur une difficulté supplémentaire : l’observatrice appartient elle-même aux circuits de communication qu’elle décrit. La frontière entre le système et son observation doit donc devenir un problème explicite.
-
-### Émergence
-
-L’**émergence** désigne un changement d’échelle. Un ensemble peut posséder une propriété que ses éléments isolés ne possèdent pas.
-
-Un conducteur immobile ne constitue pas un embouteillage. Pourtant, les ajustements de nombreux conducteurs peuvent produire un ralentissement collectif qu’aucun d’eux n’a décidé. Un neurone isolé ne pense pas ; un réseau de neurones participe à des activités de perception, de mémoire ou de raisonnement.
-
-Mais dire qu’une propriété « émerge » ne suffit pas à l’expliquer. Il faut encore identifier :
-
-- les interactions entre les éléments ;
-- les boucles qui amplifient ou stabilisent certains états ;
-- les contraintes du milieu ;
-- les seuils ;
-- les temporalités ;
-- l’échelle à laquelle la propriété devient observable.
-
-L’émergence nomme d’abord un problème de composition.
-
-### Auto-organisation
-
-L’**auto-organisation** pose une question plus dynamique : comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive ?
-
-Chaque composante peut disposer d’une information limitée. Les ajustements répétés produisent néanmoins une configuration collective : stabilisation, différenciation, apprentissage ou réorganisation.
-
-Cette notion semble s’opposer au commandement central. Elle promet de coordonner sans hiérarchie omnisciente et de préserver l’initiative locale.
-
-Il faut cependant formuler immédiatement sa limite :
-
-> **Sans centre ne signifie pas sans règles, sans infrastructure, sans environnement ni sans histoire.**
-
-Un système auto-organisé dépend toujours :
-
-- de règles d’interaction ;
-- de canaux de communication ;
-- de ressources ;
-- de critères de stabilité ;
-- d’une manière de distinguer ce qui compte comme réussite ou comme erreur.
-
-Celui qui fixe ce cadre peut exercer un pouvoir considérable sans donner d’ordres détaillés.
-
-L’auto-organisation peut donc distribuer réellement l’initiative. Elle peut aussi déplacer le contrôle vers les conditions dans lesquelles les initiatives locales doivent s’exercer.
-
-### Exemple pédagogique
-
-Un travail de groupe peut s’organiser sans chef désigné. Cette absence de hiérarchie visible ne supprime pas la consigne, l’échéance, la plateforme, le mode d’évaluation ni les inégalités de parole.
-
-La question n’est pas seulement : « Le groupe a-t-il un chef ? » Elle est : « Qui a défini le cadre dans lequel son auto-organisation doit avoir lieu ? »
-
-### Transition
-
-> Plus le modèle devient général, plus il faut distinguer ce qu’il décrit, ce qu’il compare et ce qu’il prétend expliquer.
-
----
 
 ## 9. Du modèle au mythe : trois niveaux à ne pas confondre
 
