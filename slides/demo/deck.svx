@@ -69,7 +69,7 @@ Cette effervescence est souvent illustrée par un cycle de conférences qui, ent
 
 Les conférences Macy se tiennent à New York entre 1946 et 1953, au cours d’un cycle de dix rencontres. Elles réunissent des chercheurs issus de disciplines variées : mathématiques, ingénierie, neurophysiologie, psychologie, psychiatrie, biologie, anthropologie et sciences sociales.
 
-On y retrouve notamment Walter Pitts et Warren McCulloch, qui ont proposé un modèle logique de l’activité neuronale ; Norbert Wiener, qui contribue à formaliser la cybernétique ; John von Neumann, pionnier de l’architecture des ordinateurs ; Margaret Mead et Gregory Bateson, anthropologues ; Arturo Rosenblueth, médecin et physiologiste ; ainsi que Heinz von Foerster, biophysicien. La composition du groupe varie cependant selon les conférences.
+On y retrouve notamment Walter Pitts et Warren McCulloch, auteurs d’un modèle logique de l’activité neuronale ; Norbert Wiener, qui contribue à formaliser la cybernétique ; John von Neumann, pionnier de l’architecture des ordinateurs ; Margaret Mead et Gregory Bateson, anthropologues ; Arturo Rosenblueth, médecin et physiologiste ; ainsi que Heinz von Foerster, biophysicien. La composition du groupe varie cependant selon les conférences.
 
 Ces chercheurs ne forment pas une école homogène et ne partagent pas nécessairement les mêmes objectifs. Ils confrontent néanmoins des problèmes, des modèles et des méthodes issus de domaines différents. Certains fonctionnements peuvent alors être comparés sans que les objets étudiés soient confondus.
 
@@ -82,12 +82,12 @@ La coordination d’un groupe social et l’organisation d’un organisme : comm
 :::
 
 :::warning
-Les conférences Macy ne sont pas l’origine unique de la cybernétique. Nombre des concepts de la cybernétique existaient bien avant ; d'autres apparaîtront bien plus tard. Elles en constituent donc plutôt une scène de composition : un lieu où des formalismes déjà existants sont comparés, déplacés et progressivement reconnus comme éléments d’un champ commun.
+Les conférences Macy ne sont pas l’origine unique de la cybernétique. Nombre de ses concepts leur sont antérieurs, tandis que d’autres seront élaborés plus tard. Elles constituent plutôt une scène de composition : un lieu où des formalismes déjà en circulation sont comparés, déplacés et progressivement reconnus comme les éléments d’un champ commun.
 :::
 
-Il nous importe peu de discerner ici ce qui s'est précisément dit à Macy de ce qui s'est dit ailleurs. L'important est plutôt ce que l'organisation de ces conférence indique de la cybernétique et de son esprit. Des chercheurs issus de disciplines différentes commencent à poser des questions comparables à propos d’objets très différents. C’est cette possibilité de traduction entre des problèmes éloignés qui donne à la cybernétique son caractère transversal.
+L’enjeu n’est pas ici de reconstituer précisément tout ce qui s’est dit à Macy, ni d’attribuer aux conférences chaque concept de la cybernétique. Il s’agit plutôt de comprendre ce que leur fonctionnement rend visible : des chercheurs issus de disciplines différentes commencent à poser des questions comparables à propos d’objets très hétérogènes. C’est cette possibilité de faire circuler des problèmes, des modèles et des méthodes entre des domaines éloignés qui donne à la cybernétique son caractère transversal.
 
-Or cette manière nouvelle de rapprocher des problèmes issus de disciplines différentes exercera une influence décisive sur les sciences et les techniques de la seconde moitié du XXème. On trouve aujourd'hui encore une trace - directe ou indirecte - de cet héritage dans l'architecture du réseau Internet, dans les réseaux de neurones artificiels de l'IA, dans les théories du management ou dans les politiques néo-libérales de la Silicon Valley.
+Cette manière de rapprocher des problèmes issus de disciplines différentes contribuera à orienter une partie des sciences et des techniques de la seconde moitié du XXᵉ siècle. On peut encore en retrouver aujourd'hui des prolongements, directs ou indirects, dans certains principes des réseaux informatiques, dans les réseaux de neurones artificiels, dans les théories du management et dans certaines conceptions de la régulation sociale développées au sein de la Silicon Valley.
 
 Nous allons donc consacrer les prochaines heures de ce cours à introduire les principaux concepts de la cybernétique et examiner cet héritage. Mais avant cela, quelques mises en garde.
 
