@@ -187,7 +187,7 @@ Le thermostat fournit un exemple simple et canonique de ce principe.
 
 --- notes
 
-La fonction d'un thermostat est de piloter la température d’une pièce. 
+La fonction d'un thermostat est de piloter la température d’une pièce. Cette fonction est assurée de la manière suivante :
 
 - Un objectif de température, appellée consigne, lui est fourni.
 - Un capteur mesure la température actuel.
@@ -430,7 +430,7 @@ Cette définition peut toutefois être trompeuse parce qu'elle laisse passer que
 [EXEMPLE!]
 La jalousie dans un couple. Une personne ment ou cache certaines choses. L'autre adopte un comportement jaloux et provoque des disputes à n'en plus finir. Une manière traditionnelle d'aborder ce problème consiste à expliquer ces comportements par la psychologie des protagonistes. De par leur histoire, l'un a adopté un comportement évitant, et l'autre un comportement jaloux. Une approche systèmique s'intéressera aux boucles de rétroaction auto-entretenue par la relation plutôt qu'a la psychologie de ses protagonistes.Une personne devient jalouse ; pour éviter les disputes, son partenaire lui cache certaines choses ou lui ment. Ce mensonge est alors interprété comme une confirmation des soupçons initiaux, ce qui renforce la jalousie. Pour éviter de nouvelles tensions, le partenaire ment à nouveau, alimentant ainsi davantage la méfiance.
 
-Cet exemple permet de comprendre que le réel n'est pas intrinsèquement systémique ou non-systémique. Mais qu'il est possible d'analyser tout phénomène depuis une approche systémique en le l'analysant comme _l'effet d'une certain configuration relationnelle_.
+Cet exemple permet de comprendre que le réel n'est pas intrinsèquement systémique ou non-systémique. Mais qu'il est possible d'analyser tout phénomène depuis une approche systémique en le l'analysant comme _l'effet d'une certaine configuration relationnelle_.
 
 [Sources]
 - Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
@@ -442,23 +442,25 @@ Frontières {.kicker}
 
 --- notes
 
-Cette approche soulève évidemment la question des limites que l'on fixe à la définition d'un système. Car en réalité, tout est relié à tout.
+Cette approche soulève la question des limites que l'on fixe à la définition d'un système. Car, en réalité, tout est relié à tout.
 
 [EXEMPLE!]
 Votre organisme peut être pensé comme un système mais il est évidemment en lien avec son environnement : il doit réguler sa température, son taux d'oxygène, ingèrer des aliments et de l'eau et évacuer ce qui doit l'être ... Or ces éléments sont eux-même dépendants de systèmes complexes : la température de l'air dépend - entre autres - de choix de politiques énergétiques américains, qui dépendent eux-mêmes de l'élection présidentielle, qui dépend elle-même du cours du maïs ou de la diffusion du fentanyl.
 
-Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne _relève d'un choix analytique et méthodologique_ : quelle problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
+Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne _relève d'un choix analytique et méthodologique_ : quel problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
 
-[EXEMPLE!]
+:::example
 L'organisme. Est-ce qu'on souhaite étudier les mécanismes de régulation biologique de l'organisme ou les liens entre les problématiques de santé publique et le réchauffement climatique ?
-La jalousie. Est-ce qu'on souhaite étudier les dynamiques relationnelles d'un couple ou les effets d'une histoire familiale ancienne sur le comportements d'un individu ?
+
+La jalousie. Est-ce qu'on souhaite étudier les dynamiques relationnelles d'un couple ou les effets d'une histoire familiale ancienne sur le comportement d'un individu ?
+:::
 
 La définition d'un système et de ses frontières dépend donc de la question que l'on se pose. _La frontière ne sépare pas simplement le réel en deux. Elle définit les problèmes qu'ont y fait apparaitre et la manière dont on peut les aborder._
 
 --- 
 ### ~~Dedans~~ / dehors 
 
-Le choix de ces frontières est important, notamment parce qu'il détermine ce à quoi on s'intéresse et ce que l'on choisit d'ignorer.
+Le choix de ces frontières est notamment important parce qu'il détermine ce à quoi on s'intéresse et ce que l'on choisit d'ignorer.
 
 Or l'ignorance est un élément constitutif de l'approche cybernétique. L'idée des cybernéticiens est la suivante : le réel est parfois trop complexe pour être analysé ou modélisé car, en dernière analyse, le modéliser impliquerait de le reconstituer en entier.
 
@@ -483,8 +485,9 @@ Ce déplacement constitue une rupture avec une pensée de la substance, pour laq
 
 L’identité d’un système se comprend alors moins comme une essence que comme un ensemble de relations, de transformations et de régularités observables.
 
-[WARNING!]
-Considérer un système comme une boîte noire ne signifie pas que son fonctionnement serait intrinsèquement in-connaissable. Mais que l'on choisit provisoirement de ne pas l’analyser pour se concentrer sur son comportement observable et sur ses relations avec l’environnement.
+:::warning
+Considérer un système comme une boîte noire ne signifie pas que son fonctionnement serait intrinsèquement inconnaissable. Cela signifie que l’on choisit provisoirement de ne pas l’analyser pour se concentrer sur son comportement observable et sur ses relations avec l’environnement.
+:::
 
 L'approche par boite noire n'implique d'ailleurs pas de se désinteresser définitivement de l'intérieur d'un système. Lorsque cela est pertinent, on peut décider d'ouvrir la boite noire et d'analyser les éléments qui la composent. Ces éléments deviennent alors, eux-mêmes, des boites noire de niveau inférieur. L'approche par boite noire est donc récursive.
 
@@ -505,61 +508,99 @@ Un thermostat « maintient » une température, mais il ne sait pas ce qu’est 
 
 La cybernétique réintroduit ainsi la notion de _finalité_ dans la description scientifique, mais en la détachant de toute intention psychologique : un système peut se comporter comme s’il poursuivait un but simplement parce que ses relations internes et ses boucles de rétroaction l’orientent vers un état donné.
 
-L'absence de lien entre le but que semble poursuivre un système et l'intention qui l'anime - ou plutôt l'intention qui l'anime pas - illustre un concept structurant de la cybernétique : l'existence de _comportements émergents_. 
+Ce phénomène dérive d'un problème central de la cybernétique : l'existence de comportements émergents.
 
-À l’échelle d’un ensemble, des régularités ou des orientations peuvent apparaître sans avoir été pensées, visées ou inscrites dans aucun de ses éléments.
+
+
 
 ---
-### Emergence
+<script>
+  import BackgroundVideo from '$components/BackgroundVideo.svelte'
+</script>
+
+<BackgroundVideo src="/murmuration.mp4">
+
+  ## Émergence
+  Interactions locales · propriétés globales {.kicker}
+
+</BackgroundVideo>
+
+--- notes
+
+La notion d’émergence désigne le fait qu’un système peut présenter, à l’échelle globale, des régularités ou des propriétés qui ne sont pas présentes dans ses éléments considérés isolément. Les interactions locales entre ces éléments peuvent ainsi produire des comportements collectifs qu’aucun d’eux n’a nécessairement voulu ni anticipé.
+
+
 
 --- notes
 
 :::example
-**Murmurations**. Un groupe d’étourneaux produit des figures aériennes coordonnées à partir de règles locales d’imitation et d’ajustement, sans chef ni intention collective préalable.
+**Murmuration**. Chaque étourneau ajuste sa vitesse et sa trajectoire en fonction de quelques proches voisins. Une figure collective se forme alors sans qu'aucun chef ne coordonne l'ensemble du groupe.
 
-**Réseaux de neurones**. Un neurone ne pense ni ne reconnaît des mots. Mais l'interaction de milliards de neurones peut faire émerger ce qu'on appelle intelligence.
+**Réseau neuronal**. Un neurone isolé ne perçoit pas et ne raisonne pas. Les capacités de perception, de mémoire ou de raisonnement sont liées à l’activité organisée d’un très grand nombre de neurones. 
 
-**Embouteillages**. Chaque automobiliste cherche simplement à maintenir une distance de sécurité et à avancer, mais ces réactions locales peuvent produire une onde de ralentissement qui se propage sans accident ni obstacle identifiable.
+**Embouteillage**. Chaque automobiliste cherche simplement avancer et à maintenir une distance de sécurité. Ces ajustements peuvent pourtant produire une onde de ralentissement qui se propage sans accident ni obstacle identifiable. Le ralentissement collectif n’est voulu par aucun conducteur pris isolément.
 
-**Bulles et crashs financiers**. Chaque acteur cherche à accroitre sa richesse mais les anticipations et les imitations réciproques amplifient certains comportements jusqu’à former une bulle, puis provoquer un mouvement collectif de vente et un krach. Chacun souhaitait s'enrichir et tout le monde finit ruiné.
+**Bulle financière**. Chaque acteur cherche à accroître son patrimoine. Les anticipations et les imitations réciproques amplifient les achats et font monter les prix au-delà de ce que les fondamentaux justifient. Lorsque quelques-uns s'en aperçoivent, un mouvement inverse de krash s'amorce. Personne ne décide intentionnellemet de produire un krach. Mais l'aggrégation des décisions individuelles le précipite.
+
+**Évacuation**. Chacun se dirige vers la sortie en se dépechant. La convergence des trajectoires augmente la densité et les pressions au niveau des portes de sortie. Cela ralentit finalement le flux que tout le monde souhaiterait en réalité accélérer. Paradoxalement : slower is faster.
 :::
 
+Ces exemples n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
 
-Le concept d’**émergence** désigne le fait qu’un ensemble possède des propriétés que ses éléments, considérés isolément, ne possèdent pas.
-
-Le déplacement important consiste à changer d’échelle. On ne cherche plus la propriété complexe dans un élément particulier : on étudie l’organisation des relations, leurs temporalités et leurs effets collectifs.
-
+Le déplacement important consiste à passer du niveau local au niveau collectif. Il ne suffit pas de chercher l’origine d’une propriété complexe dans un élément isolé ; il faut aussi examiner l’organisation des relations, leurs effets réciproques, leurs temporalités et les contraintes qui les orientent.
 
 
-Mais dire qu’une propriété « émerge » ne suffit pas à l’expliquer. Il faut encore identifier :
+Parler d’échelle ne signifie pas seulement changer la taille de l’objet observé. Il s’agit surtout de passer d’un niveau local — les éléments et leurs interactions — à un niveau collectif, où l’on peut observer une forme, une régularité ou un effet nouveau.
+
+Cela ne signifie pas que le mot « émergence » suffise à expliquer comment ces capacités apparaissent : il nomme le problème qu’il faut encore analyser.
+
+Dire qu’une propriété « émerge » ne suffit donc pas à l’expliquer. Il faut encore identifier :
 
 - les interactions entre les éléments ;
 - les boucles qui amplifient ou stabilisent certains états ;
 - les contraintes du milieu ;
-- les seuils ;
-- les temporalités ;
+- les seuils à partir desquels un changement devient visible ;
+- les temporalités du phénomène ;
 - l’échelle à laquelle la propriété devient observable.
 
-L’émergence nomme d’abord un problème de composition.
+L’émergence nomme ainsi un problème de composition : comment des comportements individuels se combinent-ils pour produire un comportement collectif ? Ce problème est politiquement important, car les effets collectifs ne correspondent pas nécessairement aux intentions de ceux qui y participent.
+
+Mais l’absence d’intention collective ne signifie pas l’absence de pouvoir ou de responsabilité. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels. De même, les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
+
+:::example
+**Ségrégation urbaine**. Dans le modèle de Thomas Schelling, des préférences individuelles relativement modérées peuvent produire une séparation très marquée des groupes à l’échelle d’une ville. Aucun habitant ne doit nécessairement vouloir une ville entièrement ségrégée pour que cette configuration apparaisse. Le modèle est simplifié : il ne remplace pas l’analyse historique du racisme, des politiques foncières et des inégalités, mais il montre comment des décisions locales peuvent produire un effet spatial global.
+
+**Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés.
+
+**Panique bancaire**. Chaque déposant peut retirer son argent parce qu’il craint que les autres le fassent avant lui. Si suffisamment de personnes agissent ainsi, la crainte individuelle peut contribuer à produire la crise collective qu’elle anticipait. L’assurance des dépôts, les règles de liquidité et l’intervention de la banque centrale modifient les conditions de cette dynamique.
+:::
+
+La compréhension des phénomènes émergents déplace donc la question politique. Il ne s’agit pas seulement de convaincre les individus de changer d’avis ou de comportement. Il faut aussi examiner les environnements dans lesquels leurs actions se composent : les infrastructures, les règles, les prix, les incitations, les informations disponibles, les seuils et les possibilités de circulation.
+
+Cette idée permet de comprendre un aspect de l’analyse du néolibéralisme par Michel Foucault. Dans ses cours au Collège de France, Foucault décrit une forme de gouvernement qui ne cherche pas uniquement à imposer directement une conduite. Elle agit aussi sur le milieu dans lequel les individus prennent leurs décisions : concurrence, prix, circulation, risques et incitations. Il ne s’agit pas d’une théorie foucaldienne de l’émergence, mais d’un point de comparaison utile : gouverner peut consister à aménager les conditions dans lesquelles des comportements individuels produisent des effets collectifs.
+
+Cette intervention sur l’environnement peut prendre des formes très différentes :
+
+- modifier les règles et les incitations, par exemple avec une tarification de la congestion ou une assurance des dépôts ;
+- modifier les infrastructures, par exemple en séparant et en distribuant les flux lors d’une évacuation ;
+- modifier la visibilité et l’ordre des choix, comme le font les systèmes de recommandation ;
+- modifier l’information disponible et les seuils d’action, notamment dans les politiques de santé publique.
+
+Les nudges offrent une version minimale de cette logique. Un autocollant représentant une mouche au fond d’un urinoir peut orienter l’attention et réduire les projections, sans interdire aucun comportement. Cet exemple est utile pour comprendre une action sur l’environnement de choix, mais il ne doit pas être transformé en solution politique générale : l’efficacité d’un nudge dépend du contexte, et son caractère apparemment doux ne le rend pas nécessairement neutre.
+
+La politique ne consiste donc pas seulement à transformer les consciences individuelles. Elle consiste aussi à agir sur les conditions qui permettent à ces comportements de se composer. Cette approche ne supprime ni le conflit ni la responsabilité : elle oblige à demander qui construit les règles, qui contrôle les infrastructures et qui bénéficie des effets collectifs produits.
+
+L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. L’auto-organisation pose une question plus dynamique : par quel processus un ordre se forme-t-il ou se maintient-il sans qu’un centre n’ait prescrit chaque détail ?
+
+L’absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir. Une organisation peut être distribuée tout en dépendant de canaux de communication, de ressources, de critères de réussite et d’un environnement. La question suivante sera donc moins « y a-t-il un chef ? » que : « Quelles conditions permettent aux actions locales de composer un ordre global, et qui définit ces conditions ? »
+
+---
+## Auto-organisation
+Socialisme ou barbarie {.kicker}
+Socialisme ou zombie {.kicker}
 
 
-POLITIQUEMENT : CE QU'ON PRODUIT COLLECTIVEMENT N'A PAS FORCEMENT DE RAPPORT AVEC CE QU'ON PRODUIT INDIVIDUELLEMENT.
-
-
-On veut sortir vite et on écrase tout le monde
-
-CHANGE AUSSI L'INTERVENTION POLITIQUE : NON PAS NECESSAIREMENT AGIR SUR LES INTENTIONS MAIS AGIR SUR L'ENVIRONNEMENT. C.f. les bites de sorties et les nudges de manière générale (toilettes)
-
-C.F. Hayek et l'analyse de Foucault.
-
-### Émergence
-
-L’**émergence** désigne un changement d’échelle. Un ensemble peut posséder une propriété que ses éléments isolés ne possèdent pas.
-
-
-
-
-
+--- notes
 ### Auto-organisation
 
 L’**auto-organisation** pose une question plus dynamique : par quel processus un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive ? 
@@ -594,30 +635,6 @@ Un travail de groupe peut s’organiser sans chef désigné. Cette absence de hi
 
 La question n’est pas seulement : « Le groupe a-t-il un chef ? » Elle est : « Qui a défini le cadre dans lequel son auto-organisation doit avoir lieu ? »
 
-### Transition
-
-> Plus le modèle devient général, plus il faut distinguer ce qu’il décrit, ce qu’il compare et ce qu’il prétend expliquer.
-
----
-
-### Une description, pas encore une explication
-
-Le mot reste dangereux s’il devient une réponse magique. Dire qu’une propriété « émerge » ne dit pas encore par quelles opérations elle apparaît. Il faut identifier :
-
-- les interactions entre les éléments ;
-- les boucles qui stabilisent ou amplifient certains états ;
-- les contraintes imposées par l’environnement ;
-- les seuils et les changements de temporalité ;
-- le niveau auquel la propriété devient observable.
-
-L’émergence désigne donc d’abord un **problème de composition et d’échelle**. 
-
-
-
-
-La slide précédente décrivait un changement d’échelle : des propriétés collectives apparaissent dans un ensemble organisé. L’auto-organisation déplace la question vers le **processus**.
-
-### Qu’est-ce qui s’auto-organise ?
 
 On parle d’auto-organisation lorsqu’un ordre global apparaît ou se maintient à partir des interactions entre les éléments du système, sans qu’un centre décrive à chacun sa place finale.
 
