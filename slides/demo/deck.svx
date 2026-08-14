@@ -242,31 +242,20 @@ Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’a
 
 ### Rétroaction et contrôle
 
-Un dispositif de contrôle n’a plus besoin de prévoir une fois pour toutes le comportement futur. Il peut mesurer les écarts et intervenir continuellement. Ce point permettra plus tard de comprendre la critique de Tiqqun : un pouvoir peut fonctionner moins par ordre unique que par captation d’informations, comparaison à une norme et correction permanente.
+L'important ici est de comprendre qu'un dispositif de contrôle n’a pas nécessairement besoin de prévoir une fois pour toutes le comportement futur. Il peut mesurer les écarts et intervenir continuellement. Un pouvoir peut fonctionner moins par ordre unique que par captation d’informations, comparaison à une norme et correction permanente.
 
+:::warning
 Mais la rétroaction n’est pas en elle-même autoritaire. Le même principe peut décrire la régulation d’un organisme, l’apprentissage par l’erreur ou l’autonomie d’une unité locale. La question politique porte sur **qui définit l’objectif, qui mesure l’écart et qui peut modifier la règle**.
-
-### Petite interaction
-
-Demander aux étudiants de classer trois exemples :
-
-- thermostat : plutôt rétroaction négative ;
-- effet Larsen : rétroaction positive ;
-- fil de recommandation : plusieurs boucles possibles, parfois stabilisatrices, souvent amplificatrices.
-
-Pour que l’effet d’une action puisse revenir modifier l’action suivante, il faut toutefois qu’une différence dans le monde devienne un signal mesurable et transmissible. Le mot « information » vient ici très vite — mais il ne désigne pas nécessairement une signification. C’est cette distinction que permet d’introduire Shannon.
-
-Il faut insister ici sur le fait qu'on peut voir des boucles de rétrocaction partout : économie, sciences sociales, etc.
+:::
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
 - Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
 [/Sources]
+
 ---
 ## Information
 Shannon · 1948 {.kicker}
-
-Notation probabiliste : $I(x) = -\log_2 p(x)$.
 --- notes
 
 La notion de rétroaction répond à la question : comment un système peut-il corriger son action à partir de ses effets ? Mais elle en soulève aussi une seconde : comment intégrer ces effets dans un système ? Comment les codifier, les mesurer, les transmettre ?
@@ -282,8 +271,11 @@ Comme souvent chez les cybernéticiens, la notion d'information constitue comme 
 Une définition, toutefois, a marqué les esprits. Celle proposée en 1948 par Claude Shannon dans son article *A Mathematical Theory of Communication*.
 
 ---
+<script>
+</script>
 
-REMETTRE LE SCHEMA ICI 
+METTRE ICI SCHEME DE SHANNON AVEC EMETTEUR ET RECEPTEUR
+
 
 --- notes
 
@@ -415,7 +407,6 @@ TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT
 [/Sources]
 
 
-
 ### De l’information au système
 
 Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire des effets. Une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations.
@@ -529,9 +520,6 @@ La cybernétique réintroduit ainsi la notion de _finalité_ dans la description
 
 Ce phénomène dérive d'un problème central de la cybernétique : l'existence de comportements émergents.
 
-
-
-
 ---
 <script>
   import BackgroundVideo from '$components/BackgroundVideo.svelte'
@@ -563,12 +551,54 @@ La notion d’émergence désigne le fait qu’un système peut présenter, à l
 Le déplacement important consiste, dans chacun de ces cas, à passer du niveau local au niveau global ou systémique. Non plus en cherchant l’origine d’une propriété complexe dans un élément isolé ; mais en étudiant l’organisation de ses relations, leurs effets réciproques, leurs temporalités, etc.
 
 ::warning
-La notion d'émergence ne suffit donc pas à expliquer comment des propriétés globales apparaissent : il nomme le problème qu’il faut encore analyser. Il reste encore, au cas par cas, à analyser les interactions entre les éléments, les boucles qui amplifient ou stabilisent certains états, les contraintes du milieu, les seuils à partir desquels un changement devient visible, les temporalités du phénomène, l’échelle à laquelle la propriété devient observable, etc.
+La notion d'émergence ne suffit pas à expliquer comment des propriétés globales apparaissent : il nomme le problème qu’il faut encore analyser. Il reste encore, au cas par cas, à analyser les interactions entre les éléments, les boucles qui amplifient ou stabilisent certains états, les contraintes du milieu, les seuils à partir desquels un changement devient visible, les temporalités du phénomène, l’échelle à laquelle la propriété devient observable, etc.
 :::
 
-La notion d'émergence ne constitue donc pas une réponse magique au problème de la complexité. Elle n'en reste pas moins pertinente. Notamment parce qu'elle invite à s'intéresser moins aux comportements individuels qu'aux manières qu'ont ces comportements de s'aggréger pour produire des effets qui, souvent, leur échappent.
+De ce point de vue, les exemples examinés ici n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres révèlent une instabilité ou produisent un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade.
+
+L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration. Elle peut aussi engendrer des dynamiques catastrophiques. Mais elle peut également favoriser l’instauration d’une certaine stabilité sans qu’une instance centrale de contrôle ait à en assurer la régulation. C’est ce que l’on appelle l’auto-organisation.
+
+[Sources]
+- Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
+- Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
+[/Sources]
+
+---
+## Auto-organisation
+Socialisme ou barbarie {.kicker}
+
+--- notes
+
+La question de l'auto-organisation est la suivante : par quel prmécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
+
+L'important ici est de comprendre que l'absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir.
+
+:::example
+Les murmurations d'étourneaux apparaissent parce que chaque étourneau se tient à un système de règle très strict.
+
+Réseaux neuronaux. Les interactions entres les neurones de notre cerveau suivent elles-aussi une grammaire très stricte.
+
+Blockchain et bitoin ?
+:::
+
+Ces exemples sont importants. Ils permettent de comprendre que le problème de l'auto-organisation est souvent plus délicat que ce qu'il laisse entendre.
+
+L’auto-organisation est souvent présentée comme l’opposé du commandement central. Elle permettrait de coordonner les actions sans dépendre d’une hiérarchie capable de tout prévoir, tout en laissant une place importante aux initiatives locales. Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. La question n’est donc pas seulement de savoir s’il existe ou non un chef. Il faut aussi se demander : _quel environnement, quel cadre permettent à des actions locales de produire un ordre collectif, et qui définit ce cadre ?_
+
+Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut pourtant exercer un pouvoir considérable en déterminant les possibilités d’action, les informations disponibles et les résultats qui seront valorisés.
+
+EXAMPLE ?
+
+L’auto-organisation invite ainsi à déplacer l’analyse de l’ordre collectif. Celui-ci ne se trouve pas toujours dans les intentions explicites des acteurs, mais dans la manière dont leurs actions s’agrègent et produisent des effets qui leur échappent souvent. ENVIRONNEMENT / INFRASTRUCTURE Des décisions individuelles peuvent donc contribuer à une dynamique collective que personne n’a directement voulue ni planifiée.
+
+Cette perspective est particulièrement importante pour l’analyse politique. Elle permet de comprendre comment des formes d’inégalité, de séparation ou de domination peuvent se maintenir sans dépendre d’une volonté centrale clairement identifiable. Pour l’étudier, il faut alors examiner les règles locales, les préférences individuelles et les mécanismes d’agrégation qui transforment ces éléments en structures collectives.
 
 Or cela peut  être particulièrement pertinent pour repenser politiquement un certain nombre de problèmes.
+
+[Sources]
+- W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
+- Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
+[/Sources]
 
 ---
 <!-- slide: id="004ga-schelling" title="La ségrégation selon Schelling" steps=1 layout="center" -->
@@ -603,124 +633,28 @@ Ce modèle est dramatiquement réducteur. Le problème de la ségrégation racia
 
 Il ne faut donc pas tenir le modèle de Schelling pour une explication convaincante de la ségrégation raciale. Il n'est reste pas moins que ce modèle un phénomène politiquement intéressant : une préférence locale relativement faible peut produire un effet collectif beaucoup plus radical. Il ne suffit donc pas d’examiner les intentions individuelles pour comprendre la configuration globale : il faut aussi observer les interactions entre les choix, les places disponibles et la dynamique des déplacements.
 
-
-Mais l’absence d’intention collective ne signifie pas l’absence de pouvoir ou de responsabilité. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels. De même, les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
-
+:::warning
+L’absence d’intention collective ne signifie pas l’absence de pouvoir ou de responsabilité. 
+:::
+ 
 :::example
-**Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés.
+**Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés dans le but de capter l'attention et de sur-visibiliser les contenus déjà très visibiles. La viralité organique est loin. Les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
 
-**Panique bancaire**. Chaque déposant peut retirer son argent parce qu’il craint que les autres le fassent avant lui. Si suffisamment de personnes agissent ainsi, la crainte individuelle peut contribuer à produire la crise collective qu’elle anticipait. L’assurance des dépôts, les règles de liquidité et l’intervention de la banque centrale modifient les conditions de cette dynamique.
+**Panique bancaire**. Chaque déposant peut retirer son argent parce qu’il craint que les autres le fassent avant lui. Si suffisamment de personnes agissent ainsi, la crainte individuelle peut contribuer à produire la crise collective qu’elle anticipait. L’assurance des dépôts, les règles de liquidité et l’intervention de la banque centrale modifient les conditions de cette dynamique. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels.
 :::
 
-La compréhension des phénomènes émergents déplace donc la question politique. Il ne s’agit pas seulement de convaincre les individus de changer d’avis ou de comportement. Il faut aussi examiner les environnements dans lesquels leurs actions se composent : les infrastructures, les règles, les prix, les incitations, les informations disponibles, les seuils et les possibilités de circulation.
+### Des acteurs à l'environnement
+
+La compréhension de ces phénomènes déplace donc la question politique. Il ne s’agit pas seulement de convaincre les individus de changer d’avis ou de comportement. Il faut aussi examiner les environnements dans lesquels leurs actions se composent : les infrastructures, les règles, les prix, les incitations, les informations disponibles, les seuils et les possibilités de circulation.
+
+Les nudges offrent une version minimale de cette logique. Un autocollant représentant une mouche au fond d’un urinoir peut orienter l’attention et réduire les projections, sans interdire aucun comportement.
+
+L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. La politique ne consiste donc pas seulement à transformer les consciences individuelles. Elle consiste aussi à agir sur les conditions qui permettent à ces comportements de se composer. Cette approche ne supprime ni le conflit ni la responsabilité : elle oblige à demander qui construit les règles, qui contrôle les infrastructures et qui bénéficie des effets collectifs produits.
+
+CA ON LE GARDE POUR HAYEK ?
 
 Cette idée permet de comprendre un aspect de l’analyse du néolibéralisme par Michel Foucault. Dans ses cours au Collège de France, Foucault décrit une forme de gouvernement qui ne cherche pas uniquement à imposer directement une conduite. Elle agit aussi sur le milieu dans lequel les individus prennent leurs décisions : concurrence, prix, circulation, risques et incitations. Il ne s’agit pas d’une théorie foucaldienne de l’émergence, mais d’un point de comparaison utile : gouverner peut consister à aménager les conditions dans lesquelles des comportements individuels produisent des effets collectifs.
 
-Cette intervention sur l’environnement peut prendre des formes très différentes :
-
-- modifier les règles et les incitations, par exemple avec une tarification de la congestion ou une assurance des dépôts ;
-- modifier les infrastructures, par exemple en séparant et en distribuant les flux lors d’une évacuation ;
-- modifier la visibilité et l’ordre des choix, comme le font les systèmes de recommandation ;
-- modifier l’information disponible et les seuils d’action, notamment dans les politiques de santé publique.
-
-Les nudges offrent une version minimale de cette logique. Un autocollant représentant une mouche au fond d’un urinoir peut orienter l’attention et réduire les projections, sans interdire aucun comportement. Cet exemple est utile pour comprendre une action sur l’environnement de choix, mais il ne doit pas être transformé en solution politique générale : l’efficacité d’un nudge dépend du contexte, et son caractère apparemment doux ne le rend pas nécessairement neutre.
-
-La politique ne consiste donc pas seulement à transformer les consciences individuelles. Elle consiste aussi à agir sur les conditions qui permettent à ces comportements de se composer. Cette approche ne supprime ni le conflit ni la responsabilité : elle oblige à demander qui construit les règles, qui contrôle les infrastructures et qui bénéficie des effets collectifs produits.
-
-L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. L’auto-organisation pose une question plus dynamique : par quel processus un ordre se forme-t-il ou se maintient-il sans qu’un centre n’ait prescrit chaque détail ?
-
-L’absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir. Une organisation peut être distribuée tout en dépendant de canaux de communication, de ressources, de critères de réussite et d’un environnement. La question suivante sera donc moins « y a-t-il un chef ? » que : « Quelles conditions permettent aux actions locales de composer un ordre global, et qui définit ces conditions ? »
-
-
-:::warning
-Les exemples donnés au début n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
-:::
-
-TRANSITION AUTO-ORGANISATION 
-
-
-:::warning
-Ces exemples n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres font apparaître une instabilité ou un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade. L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration.
-:::
-
-TRANSITION AUTO-ORGANISATION 
-
----
-## Auto-organisation
-Socialisme ou barbarie {.kicker}
-Socialisme ou zombie {.kicker}
-
-
---- notes
-### Auto-organisation
-
-L’**auto-organisation** pose une question plus dynamique : par quel processus un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive ? 
-
-
-Chaque composante peut disposer d’une information limitée. Les ajustements répétés produisent néanmoins une configuration collective : stabilisation, différenciation, apprentissage ou réorganisation.
-
-Cette notion semble s’opposer au commandement central. Elle promet de coordonner sans hiérarchie omnisciente et de préserver l’initiative locale.
-
-Il faut cependant formuler immédiatement sa limite :
-
-> **Sans centre ne signifie pas sans règles, sans infrastructure, sans environnement ni sans histoire.**
-
-Un système auto-organisé dépend toujours :
-
-- de règles d’interaction ;
-- de canaux de communication ;
-- de ressources ;
-- de critères de stabilité ;
-- d’une manière de distinguer ce qui compte comme réussite ou comme erreur.
-
-Celui qui fixe ce cadre peut exercer un pouvoir considérable sans donner d’ordres détaillés.
-
-L’auto-organisation peut donc distribuer réellement l’initiative. Elle peut aussi déplacer le contrôle vers les conditions dans lesquelles les initiatives locales doivent s’exercer.
-
-Exemple : main invisible du marché.
-
-
-### Exemple pédagogique
-
-Un travail de groupe peut s’organiser sans chef désigné. Cette absence de hiérarchie visible ne supprime pas la consigne, l’échéance, la plateforme, le mode d’évaluation ni les inégalités de parole.
-
-La question n’est pas seulement : « Le groupe a-t-il un chef ? » Elle est : « Qui a défini le cadre dans lequel son auto-organisation doit avoir lieu ? »
-
-
-On parle d’auto-organisation lorsqu’un ordre global apparaît ou se maintient à partir des interactions entre les éléments du système, sans qu’un centre décrive à chacun sa place finale.
-
-Dans un réseau, chaque élément peut ne disposer que d’une information locale. Pourtant, les ajustements répétés produisent une configuration collective : une stabilisation, une différenciation de fonctions, une mémoire ou une capacité d’adaptation.
-
-W. Ross Ashby utilise très tôt le terme pour étudier des systèmes dynamiques capables de converger vers des états stables. Heinz von Foerster compliquera ensuite l’idée d’un système qui s’organiserait absolument « tout seul » : un système ouvert dépend d’un environnement dont il reçoit de l’énergie, de la matière et des perturbations.
-
-### La promesse politique
-
-L’auto-organisation semble s’opposer au commandement central : coordonner sans hiérarchie, laisser les unités locales s’adapter, faire confiance à l’intelligence distribuée.
-
-Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. Celui qui fixe ce cadre peut exercer un pouvoir considérable sans donner d’ordres détaillés.
-
-Il faut donc tenir ensemble deux possibilités :
-
-- l’auto-organisation peut **réellement distribuer l’initiative** et limiter le centre ;
-- elle peut aussi **déplacer le contrôle** vers les règles du jeu, les objectifs et les infrastructures.
-
-### Question aux étudiants
-
-Prendre l’exemple d’un travail de groupe sans chef désigné. Le groupe peut s’auto-organiser, mais dépend encore de la consigne, de l’échéance, de la plateforme utilisée, du mode d’évaluation et des inégalités de parole.
-
-L’absence de chef visible ne supprime pas les conditions qui orientent l’activité.
-
-Nous disposons maintenant des principales pièces de la grammaire : régulation, information, système, comportement, émergence et auto-organisation. Elles ne forment pourtant pas encore une doctrine unique. Il faut maintenant entrer dans le lieu où leur rapprochement devient un projet explicite.
-
-[Sources]
-- W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
-- Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
-[/Sources]
-
-[Sources]
-- Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
-- Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
-[/Sources]
 ---
 # Du pilotage au gouvernement
 

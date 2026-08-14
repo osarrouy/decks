@@ -1,0 +1,34 @@
+---
+title: Introduction
+theme: gallery
+---
+
+# Introduction aux Cultures Numériques
+Olivier Sarrouy {.kicker}
+
+--- notes
+
+Hello world
+
+
+---
+## Olivier Sarrouy
+olivier.sarrouy@univ-rennes2.fr {.kicker}
+
+
+
+
+1. Définition des réseaux sociaux
+2. public / privé
+3. Gatekeeper
+4. Les nouveaux gatekeeper
+3. Structure des réseaux sociaux (Erdos) / hub
+5. Algorithmes comme nouveaux gatekeepers
+2. Bulles de filtres / polarisation
+4. Viralité
+4. Identité vs interpassivité
+
+
+--- notes
+
+J
