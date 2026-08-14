@@ -28,17 +28,23 @@ const noteDirectiveHtml = directiveHtml({
   },
   example(directive) {
     this.raw(`<blockquote class="presenter-note-example">${directive.content || ''}</blockquote>`)
+  },
+  warning(directive) {
+    this.raw(`<blockquote class="presenter-note-warning">${directive.content || ''}</blockquote>`)
   }
 })
 
 function decorateNoteCallouts(html: string) {
   return decorateNoteCallout(
-    decorateNoteCallout(html, 'COMMENT', 'presenter-note-comment'),
-    'EXEMPLE',
-    'presenter-note-example'
+    decorateNoteCallout(
+      decorateNoteCallout(html, 'COMMENT', 'presenter-note-comment'),
+      'EXEMPLE',
+      'presenter-note-example'
+    ),
+    'WARNING',
+    'presenter-note-warning'
   )
 }
-
 export function notesToHtml(markdown = '') {
   const html = micromark(normalizeNotesMarkdown(markdown.trim()), {
     allowDangerousHtml: false,

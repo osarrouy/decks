@@ -150,6 +150,10 @@ On parle alors de *boucle de rétroaction*, ou, en anglais, de *feedback*.
 # Rétroaction
 feedback {.kicker}
 
+--- notes
+
+Pour comprendre les boucles de rétroaction, le mieux est de revenir à la manière dont nous envisageons spontanément les mécanismes de causalité.
+
 ---
 <!-- slide: id="004e-retroaction" title="La rétroaction" steps=1 -->
 
@@ -163,21 +167,25 @@ feedback {.kicker}
 
 Dans une représentation strictement linéaire de la causalité, `A` cause `B`. Et l’analyse s’arrête là.
 
+:::example
+J'appuie sur la pédale d'accélérateur. La voiture accélère.
+
+J'allume le chauffage. La pièce se réchauffe.
+::::
+
 > [!COMMENT]
 > Passer à l'étape suivante
 
- Dans une boucle de rétroaciton, `A` modifie `B`, puis le nouvel état de `B` modifie en retour l’état suivant de `A`.
-
-On parle alors de _causalité circulaire_.
+ Dans une boucle de rétroaction, `A` modifie `B`, puis le nouvel état de `B` modifie en retour l’état suivant de `A`. On parle alors de _causalité circulaire_.
 
 :::warning
-La causalité circulaire ne signifie pas qu’un phénomène serait à lui-même sa propre cause. La circularité n'y est pas logique, mais chronologique : elle se déploie dans le temps. Les effets d’une action y deviennent les conditions ultérieures d'actions à venir.
+La causalité circulaire ne signifie pas qu’un phénomène serait à lui-même sa propre cause. La circularité n'y est pas _logique_, mais _chronologique_ : elle se déploie dans le temps. Les effets d’une action y deviennent les conditions ultérieures d'actions à venir.
 :::
 
 Le thermostat fournit un exemple simple et canonique de ce principe.
 
 ---
-<!-- slide: id="004e-temperature" title="Les variations de température" steps=4 -->
+<!-- slide: id="004e-temperature" title="Les variations de température" steps=5 -->
 
 <script>
   import TemperatureFeedbackCurve from '$components/TemperatureFeedbackCurve.svelte'
@@ -189,39 +197,50 @@ Le thermostat fournit un exemple simple et canonique de ce principe.
 
 La fonction d'un thermostat est de piloter la température d’une pièce. Cette fonction est assurée de la manière suivante :
 
-- Un objectif de température, appellée consigne, lui est fourni.
-- Un capteur mesure la température actuel.
-- Si la température est inférieure à la consigne, le chauffage s’active.
-- Le chauffage modifie alors la température de la pièce.
-- La nouvelle température est mesurée.
-- Cette mesure détermine l’action suivante.
-
-Le thermostat tout-ou-rien reste notre exemple, mais nous allons maintenant regarder non plus le dispositif lui-même : nous allons suivre **l’évolution de la température de la pièce dans le temps**.
-
-La ligne horizontale représente une consigne de 20 °C et la zone rose une petite bande de régulation. Sous le seuil bas, le chauffage s’allume ; au-dessus du seuil haut, il s’arrête. La température n’est donc pas parfaitement immobile : elle oscille normalement autour de la consigne. Une régulation est stable lorsque ces oscillations restent limitées dans une zone acceptable.
-
-> [!COMMENT]
-> Faire avancer les quatre étapes : montrer la première commutation ; prolonger la courbe bien réglée dans sa bande étroite ; faire apparaître les grandes oscillations du système mal réglé ; révéler enfin le rôle de l’inertie et du retard de mesure.
+- Un objectif de température, appelée consigne, lui est fourni.
+- Un capteur mesure la température actuelle.
+- Si la température est inférieure à la consigne, le chauffage est activé.
+- Next step
+- Le chauffage modifie alors la température de la pièce : la courbe monte.
+- Next step
+- Le chauffage est coupé lorsque la température atteint ou dépasse la consigne ; la pièce se refroidit alors progressivement et la courbe redescend.
+- Next step
+- La température est à nouveau mesurée ; le thermostat peut réactiver le chauffage pour réduire l’écart.
 
 ### Rétroaction négative
 
-On parle ici de rétroaction négative dans la mesure où cette rétroaction a pour fonction de réduire un écart, de s'opposer à une variation. Si la pièce refroidit, le thermostat compense le refroidissement. A l'inverse, si la pièce est trop chaude, le thermostat réduit la chaleur. Le mot « négative » ne signifie pas donc mauvaise ou nuisible. Il indique que la réponse agit dans le sens opposé à la perturbation.
+On parle ici de _rétroaction négative_ dans la mesure où la rétroaction s'opposent aux variations de l'environnement. Si la pièce refroidit, le thermostat compense le refroidissement. A l'inverse, si la pièce est trop chaude, le thermostat réduit la chaleur.
 
+:::warning
+Le qualificatif de rétroaction _négative_ ne signifie donc pas que cette rétroaction serait mauvaise ou nuisible. Il indique que sa réponse agit dans le sens opposé à la perturbation.
+:::
+
+Les boucles de rétroaction négatives ont souvent pour fonction d'assurer la régulation d'un système. Vous voyez ici que, si le système thermostatique est convenablement conçu et réglé, la témperature de la pièce finit par se stabiliser autour de la consigne.
 
 ### Rétroaction positive
 
-Il existe aussi la **rétroaction positive** qui amplifie une variation. Lorsqu’un microphone reprend le son d’un haut-parleur, le signal amplifié est capté puis amplifié de nouveau. La boucle peut produire un emballement : c’est l’effet Larsen.
+Il existe aussi des **rétroactions positives** qui amplifient une variation. 
 
-Dans les phénomènes sociaux, la visibilité peut également alimenter la visibilité. Une rumeur très partagée devient plus visible ; cette visibilité provoque de nouveaux partages, qui l’amplifient encore. Le mot « positive » ne signifie donc pas bénéfique. A vrai dire, les boucles de rétroaction positive créent souvent des systemes divergents et instables.
+:::example
+Lorsqu’un microphone reprend le son d’un haut-parleur, le signal amplifié est capté puis amplifié de nouveau. La boucle peut produire un emballement : c’est l’effet Larsen.
+
+Dans les phénomènes sociaux, la visibilité peut également alimenter la visibilité. Une rumeur très partagée devient plus visible ; cette visibilité provoque de nouveaux partages, qui l’amplifient encore.
+:::
+:::warning
+Le qualificatif de rétroaction _positive_ ne signifie donc pas que cette rétroaction serait bénéfique. A vrai dire, les boucles de rétroaction positive créent souvent des systemes divergents et instables.
+:::
 
 ### Rétroaction et régulation
 
-Notez toutefois qu'une boucle de rétroaction négative n'implique pas nécessaire la stabilité. Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’agit toujours d’une rétroaction négative.
+Les boucles de rétroaction négative ne suffisent d'ailleurs pas toujours, elles non plus, à assurer la stabilité d'un système.
 
-Mais une pièce et un radiateur possèdent une inertie thermique ; le chauffage continue à produire des effets après son arrêt. Si les seuils sont mal choisis ou si la mesure arrive trop tard, la température dépasse largement la cible avant que la correction inverse ne produise son effet. La boucle peut alors entretenir de grandes oscillations.
+:::comment
+next step
+:::
 
+Sur la courbe orange, la réponse reste de sens opposé à l’écart : il s’agit toujours d’une rétroaction négative. Mais une pièce et un radiateur possèdent une inertie thermique ; le chauffage continue à produire des effets après son arrêt. Si les seuils sont mal choisis ou si la mesure arrive trop tard, la température dépasse largement la cible avant que la correction inverse ne produise son effet. La boucle peut alors entretenir de grandes oscillations.
 
-### Ce que la boucle change politiquement
+### Rétroaction et contrôle
 
 Un dispositif de contrôle n’a plus besoin de prévoir une fois pour toutes le comportement futur. Il peut mesurer les écarts et intervenir continuellement. Ce point permettra plus tard de comprendre la critique de Tiqqun : un pouvoir peut fonctionner moins par ordre unique que par captation d’informations, comparaison à une norme et correction permanente.
 
@@ -582,7 +601,7 @@ Ce modèle est dramatiquement réducteur. Le problème de la ségrégation racia
 **Empiriquement, la ségrégation américaine n'est pas émergente.** Elle a été produite institutionnellement : redlining (classement discriminatoire de certains quartiers comme « à risque », entraînant notamment le refus de prêts immobilier), covenants raciaux (clauses raciales restrictives interdisant la vente ou la location d’un logement à des personnes de certains groupes raciaux), blockbusting (pratique consistant à provoquer une panique raciale pour inciter des propriétaires blancs à vendre à bas prix, puis revendre les logements plus cher), refus de prêts, urban renewal (rénovation urbaine — souvent, historiquement, la démolition de quartiers populaires et le déplacement de leurs habitants), zonage exclusif (règles d’urbanisme qui limitent certains types de logements ou d’habitants et excluent indirectement les ménages modestes ou certains groupes sociaux), etc.  L'explcation de Schelling efface un siècle de politique publique délibérée.
 :::
 
-Il ne faut donc pas tenir le modèle de Schelling pour une explication convaincante de la ségrégation raciale. Il n'est reste pas moins que ce modèle révèlement politiquement XXXX : une préférence locale relativement faible peut produire un effet collectif beaucoup plus radical. Il ne suffit pas d’examiner les intentions individuelles pour comprendre la configuration globale : il faut aussi observer les interactions entre les choix, les places disponibles et la dynamique des déplacements.
+Il ne faut donc pas tenir le modèle de Schelling pour une explication convaincante de la ségrégation raciale. Il n'est reste pas moins que ce modèle un phénomène politiquement intéressant : une préférence locale relativement faible peut produire un effet collectif beaucoup plus radical. Il ne suffit donc pas d’examiner les intentions individuelles pour comprendre la configuration globale : il faut aussi observer les interactions entre les choix, les places disponibles et la dynamique des déplacements.
 
 
 Mais l’absence d’intention collective ne signifie pas l’absence de pouvoir ou de responsabilité. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels. De même, les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
@@ -703,151 +722,10 @@ Nous disposons maintenant des principales pièces de la grammaire : régulation,
 - Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
 [/Sources]
 ---
-
-
-<!-- slide: id="004d-langage-commun" title="Une langue commune" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Animal · machine · société</p>
-
-# Une grammaire commune
-
-<div class="card-grid">
-
-<Fragment at={1}>
-<div class="concept-card">
-  <h3>Réguler</h3>
-  <p>Se maintenir ou corriger une trajectoire malgré les perturbations.</p>
-</div>
-</Fragment>
-
-<Fragment at={2}>
-<div class="concept-card">
-  <h3>Communiquer</h3>
-  <p>Sélectionner et transmettre des différences pertinentes.</p>
-</div>
-</Fragment>
-
-<Fragment at={3}>
-<div class="concept-card">
-  <h3>Organiser</h3>
-  <p>Coordonner des relations sans décrire chaque action à l’avance.</p>
-</div>
-</Fragment>
-
-</div>
-
-<p class="statement"><strong>Commensurabilité formelle</strong> ≠ identité des êtres</p>
-
---- notes
-
-Temps indicatif : **5 minutes**.
-
-Le titre complet du livre de Wiener publié en 1948 est *Cybernetics, or Control and Communication in the Animal and the Machine*. L’opération intellectuelle centrale apparaît déjà dans ce titre : rapprocher des êtres vivants et des dispositifs techniques à partir de problèmes de communication et de régulation.
-
-La langue commune permet de poser les mêmes questions dans plusieurs domaines :
-
-- quelles différences un système reçoit-il de son environnement ?
-- comment transforme-t-il ces entrées en actions ?
-- comment les effets de son action reviennent-ils modifier son comportement ?
-- comment conserve-t-il une certaine stabilité malgré les perturbations ?
-- comment une organisation collective se forme-t-elle à partir d’interactions locales ?
-
-L’objet isolé compte moins que la structure de ses relations. Au lieu de demander uniquement « de quoi cette chose est-elle faite ? », on demande : « que reçoit-elle, que produit-elle, et comment son comportement évolue-t-il ? »
-
-Cette méthode rend comparables une régulation physiologique, un pilote automatique, un réseau de neurones ou une organisation. Mais elle privilégie ce qui peut être décrit comme relation entre états, signaux, objectifs et corrections. Or un organisme possède un métabolisme et une histoire évolutive ; une machine a été construite ; une institution comporte du droit, des conflits et des rapports de pouvoir.
-
-La formule à retenir est donc : **commensurabilité formelle n’est pas identité ontologique**. Une même grammaire peut représenter certains rapports sans démontrer que les réalités représentées ont la même nature.
-
-[Sources]
-- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, Hermann & Cie / MIT Press, 1948.
-- Claus Pias (dir.), *Cybernetics: The Macy Conferences 1946–1953. The Complete Transactions*, Diaphanes / University of Chicago Press.
-- Jean-Pierre Dupuy, *Aux origines des sciences cognitives*, La Découverte, 1994.
-[/Sources]
----
-<!-- slide: id="004da-prolongements-sociaux" title="Prolongements sociaux" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Mead · Bateson · Palo Alto</p>
-
-# Quand les relations deviennent l’objet
-
-<div class="card-grid">
-
-<Fragment at={1}>
-<div class="concept-card">
-  <h3>Culture</h3>
-  <p>Des conduites prises dans des patterns d’interaction et d’apprentissage.</p>
-</div>
-</Fragment>
-
-<Fragment at={2}>
-<div class="concept-card">
-  <h3>Escalade</h3>
-  <p>Chaque réponse amplifie la conduite à laquelle elle répond.</p>
-</div>
-</Fragment>
-
-<Fragment at={3}>
-<div class="concept-card">
-  <h3>Famille</h3>
-  <p>Chaque réponse devient le contexte de la réponse suivante.</p>
-</div>
-</Fragment>
-
-</div>
-
-<p class="statement">Ne plus isoler une cause : <strong>suivre une configuration de relations</strong>.</p>
-
---- notes
-
-Temps indicatif : **6 minutes**.
-
-Cette slide ne décrit pas un résultat qui serait sorti achevé des conférences Macy. Elle suit un **prolongement** : la manière dont Margaret Mead, Gregory Bateson et, plus tard, le groupe de Palo Alto déplacent la grammaire cybernétique vers les relations sociales.
-
-### Mead et Bateson : la culture comme configuration relationnelle
-
-Mead et Bateson arrivent à Macy avec une anthropologie déjà attentive aux gestes répétés, aux formes d’apprentissage et aux contextes de communication. Le vocabulaire cybernétique leur permet de reformuler une intuition : une conduite ne s’explique pas toujours par les propriétés d’un individu isolé ; elle peut être la réponse à une autre conduite, qui se trouve à son tour transformée.
-
-Bateson relit par exemple la **schismogenèse** — le processus par lequel des groupes ou des individus accentuent mutuellement leurs différences — comme une dynamique de rétroaction. Une démonstration de puissance appelle une démonstration plus forte ; cette réponse confirme et amplifie la première. La boucle permet de penser une escalade sociale sans chercher une cause unique située dans l’un des participants.
-
-Mead ne fournit pas à Macy une théorie achevée de « la société comme système d’information ». Son rôle est plutôt de faire entrer les problèmes anthropologiques dans la conversation commune et, plus tard, d’insister sur un point que la première cybernétique laissait souvent au dehors : l’observatrice participe elle-même aux circuits de communication qu’elle décrit.
-
-### Palo Alto : la famille comme système de communication
-
-Dans les années 1950, Bateson et ses collaborateurs déplacent ce raisonnement vers la communication familiale. Prenons un exemple simple : plus une personne insiste, plus l’autre se retire ; plus elle se retire, plus la première insiste. Chercher laquelle « cause » à elle seule le conflit manque la structure temporelle. Chaque conduite est à la fois une réponse à ce qui précède et un signal qui prépare ce qui suit.
-
-Le symptôme peut alors être interrogé comme un élément d’un système de communication. Ce déplacement nourrira les thérapies systémiques : on ne regarde plus seulement ce qui se passe *dans* un individu, mais les boucles relationnelles auxquelles il participe.
-
-Il faut toutefois éviter de dissoudre les personnes dans le système. L’histoire, la violence, les asymétries et le pouvoir ne deviennent pas secondaires parce qu’un diagramme peut représenter les échanges. C’est précisément cette ambivalence — puissance descriptive de la boucle, risque d’effacement de ce qui échappe au modèle — qui ouvre le dernier sous-chapitre.
-
-[Sources]
-- Gregory Bateson, *Naven*, 2e éd. augmentée, Stanford University Press, 1958 [1936].
-- Gregory Bateson, Don D. Jackson, Jay Haley et John Weakland, « Toward a Theory of Schizophrenia », *Behavioral Science*, 1(4), 1956, p. 251–264, https://doi.org/10.1002/bs.3830010402.
-- Margaret Mead, « The Cybernetics of Cybernetics », dans Heinz von Foerster et al. (dir.), *Purposive Systems*, Spartan Books, 1968.
-[/Sources]
----
-<!-- slide: id="004e3-politique" title="Du pilotage au gouvernement" steps=0 -->
-
-<div class="layout center">
-
-<div>
-
-<p class="kicker">Sous-chapitre III</p>
-
 # Du pilotage au gouvernement
 
 <p class="lead muted">Autonomie distribuée · mesure · contrôle</p>
 
-</div>
-
-</div>
 
 --- notes
 

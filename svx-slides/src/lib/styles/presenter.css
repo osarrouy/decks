@@ -270,6 +270,32 @@
     line-height: 1.4;
 }
 
+.presenter-notes blockquote.presenter-note-warning {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid color-mix(in srgb, #d99a3e, transparent 48%);
+    border-left: 4px solid #d99a3e;
+    border-radius: 0.55rem;
+    background: color-mix(in srgb, #d99a3e, transparent 88%);
+    color: rgb(255 255 255 / 0.88);
+}
+
+.presenter-notes blockquote.presenter-note-warning::before {
+    display: block;
+    color: #f0bd6b;
+    content: 'Attention';
+    font-family: var(--font-mono);
+    font-size: 0.72em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.presenter-notes blockquote.presenter-note-warning p {
+    margin: 0.35em 0 0;
+    line-height: 1.4;
+}
+
 .presenter-notes hr {
     margin: 1.4rem 0;
     border: 0;
