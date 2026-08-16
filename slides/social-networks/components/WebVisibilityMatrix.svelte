@@ -53,8 +53,8 @@
     >
         <div class="axis-line axis-line-x" aria-hidden="true"></div>
         <div class="axis-line axis-line-y" aria-hidden="true"></div>
-        <div class="axis-label axis-label-y-top">PERSONNALITÉ</div>
-        <div class="axis-label axis-label-y-bottom">QUIDAM</div>
+        <div class="axis-label axis-label-y-top">INTÉRÊT PUBLIC</div>
+        <div class="axis-label axis-label-y-bottom">INTÉRÊT PRIVE</div>
         <div class="axis-label axis-label-x-left">PROFESSIONNEL</div>
         <div class="axis-label axis-label-x-right">AMATEUR</div>
 
@@ -71,9 +71,6 @@
             {/each}
         </div>
     </div>
-    <figcaption>
-        Deux axes pour situer des formes de prise de parole en ligne.
-    </figcaption>
 </figure>
 
 <style>
@@ -93,44 +90,54 @@
         z-index: 1;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        border: 1px solid
-            color-mix(in srgb, var(--foreground, var(--fg)) 38%, transparent);
-        background: color-mix(in srgb, white 35%, transparent);
+        /*border: 1px solid*/
+        border: none;
+        /*color-mix(in srgb, var(--foreground, var(--fg)) 38%, transparent);*/
+        /*background: color-mix(in srgb, white 35%, transparent);*/
     }
 
     .quadrant {
-        min-height: 8.7rem;
+        min-height: 1rem;
         padding: 1rem 1.15rem;
-        background: color-mix(in srgb, white 38%, transparent);
+        min-height: 80%;
+        /*background: color-mix(in srgb, white 38%, transparent);*/
     }
 
-    .quadrant:nth-child(odd) {
+    /*.quadrant:nth-child(odd) {
         border-right: 1px solid
             color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
-    }
+    }*/
 
-    .quadrant:nth-child(-n + 2) {
+    /*.quadrant:nth-child(-n + 2) {
         border-bottom: 1px solid
             color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
-    }
+    }*/
 
     .quadrant h3 {
         max-width: 17ch;
         margin: 0;
         color: var(--accent);
         font-family: var(--font-mono);
-        font-size: clamp(0.78rem, 1.1vw, 1rem);
+        font-size: 1.3rem;
+        font-weight: 100;
+        /*font-size: clamp(0.78rem, 1.1vw, 1rem);*/
         line-height: 1.15;
         text-transform: uppercase;
     }
 
     .quadrant ul {
         display: grid;
-        gap: 0.22rem;
+        /*gap: 0.22rem;*/
         margin: 0.75rem 0 0;
-        padding-left: 1rem;
-        color: var(--muted);
-        font-size: clamp(0.78rem, 1.15vw, 1rem);
+        padding: 0;
+        font-weight: 300;
+        /*padding-left: 1rem;*/
+        /*color: var(--muted);*/
+        list-style-type: none;
+    }
+
+    .quadrant ul li {
+        font-size: 1.3rem; /*clamp(0.5rem, 0.5vw, 0.5rem);*/
     }
 
     .quadrant li::marker {
@@ -164,11 +171,12 @@
         z-index: 3;
         color: var(--accent);
         font-family: var(--font-mono);
-        font-size: clamp(0.62rem, 0.9vw, 0.78rem);
+        font-size: 1em;
         letter-spacing: 0.06em;
         line-height: 1;
         text-transform: uppercase;
         white-space: nowrap;
+        font-weight: 100;
     }
 
     .axis-label-y-top {
@@ -186,21 +194,13 @@
     .axis-label-x-left {
         top: 50%;
         left: 0;
-        transform: translateY(-50%);
+        transform: translateX(-100%) translateY(-50%);
     }
 
     .axis-label-x-right {
         top: 50%;
         right: 0;
-        transform: translateY(-50%);
-    }
-
-    figcaption {
-        margin-top: 0.45rem;
-        color: var(--muted);
-        font-size: 0.72rem;
-        letter-spacing: 0.04em;
-        text-align: center;
+        transform: translateX(100%) translateY(-50%);
     }
 
     @media (max-width: 700px) {
