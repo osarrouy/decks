@@ -31,4 +31,183 @@ olivier.sarrouy@univ-rennes2.fr {.kicker}
 
 --- notes
 
-J
+---
+
+# Réseaux Sociaux Numériques
+
+--- notes
+
+On peut considérer que l’irruption des Réseaux Sociaux Numériques (RSN), au cours des années 2000 et 2010, a constitué un moment de rupture dans notre rapport aux technologies numériques et dans l’extension de leur hégémonie.
+
+Il est délicat de définir ce que constitue exactement un réseau social numérique. Il peut en être donnée une première définition technique ou architecturale.
+
+danah boyd et Nicole Ellison (2007) définissent ainsi, dans un article précurseur, les réseaux sociaux numériques à partir de deux caractéristiques :
+
+1. L’utilisateur y dispose d’une page personnelle.
+2. L’utilisateur peut s’y abonner à d’autres utilisateurs avec lesquels interagir.
+
+Cette définition retient donc le mode d’organisation et d’exploration des contenus comme critère de définition des RSN.
+
+Contrairement au site d’un journal dont le contenu est organisé chronologiquement, ou à Wikipedia dont le contenu est organisé thématiquement, les RSN placent les auteurs de ces contenus comme le principe de leur organisation et de leur exploration.
+
+Le propre d’un RSN est qu’il y est moins question des contenus qui y sont produits et partagés que de l’auteur.ice qui s’exprime et se dévoile à travers ces contenus.
+
+D’une certaine manière, les RSN marqueraient ainsi, techniquement, le grand retour de l’ego dans l’économie du discours - c’est-à-dire dans la manière dont ces discours sont produits, reçus et mis en circulation.
+
+Notons que cette particularité tend à s’effacer avec la marchandisation et le phénomène de l’AI slope. Mettons toutefois de côté cette question sur le moment, et revenons à la particularité originelle des réseaux sociaux numériques.
+
+Nous verrons, au cours des séances à venir, que cette particularité architecturale s’articule étroitement à d’autres spécificités.
+
+D’abord par la manière dont les RSN ont suscité une certaine démocratisation de la parole publique.
+
+Les RSN sont en effets organisés autour de partage de contenus dont le format est conçu pour réduire drastiquement les coûts cognitifs et les barrières d’entrée à l’expression publique.
+
+Il est plus simple de rédiger un tweet de 140 caractères que de rédiger un article de blog de trois pages, et il est encore plus simple de partager une photo prise avec son smartphone que de rédiger un tweet - de même qu’il est plus simple de liker une photo que de produire un cliché original.
+
+L’usage de formats d’expression accessibles a ainsi permis à une population jusqu’ici exclue de l’expression publique d’y faire irruption avec ses codes et ses modes d’expression propres.
+
+Ce bouleversement démographique s’est aussi accompagné d’une modification profonde de la parole publique elle-même - et des manières et de son contenu.
+
+Nous nous étions habitués à ce que l’expression publique - les discours qui se tiennent à la télé, à la radio, dans la presse - porte sur des thématiques d’intérêt public : la politique, l’économie, la culture, etc.
+
+Or, sur les réseaux sociaux, il est principalement question du quotidien, du soi et de ses errances. 
+
+Cette irruption du privé et de l’intime dans l’espace public provoque une importante restructuration de notre économie discursive.
+
+Se côtoient désormais, sur Twitter ou Instagram, des discours de natures tout à fait distinctes : les déclarations du président de la République partagent ainsi notre feed avec les photos de vacances d’une inconnue, des organes de presse avec des comptes humoristiques, des institutions internationales avec les peines de coeur de notre voisin.
+
+Cet entrelacement de discours hétéroclites modifie en profondeur l’architecture et l’expérience qu’il nous est donné de faire de la parole publique.
+
+---
+## Sphère publique _vs_ sphère privée
+
+--- notes
+
+Nous allons maintenant nous intéresser aux effets qu’exercent la démocratisation du Web et des réseaux sociaux numériques sur la structuration de la **sphère publique** et de la **sphère privée**.
+
+La sphère publique désigne le champ social à travers lequel des individus et des groupes cherchent à faire reconnaître certains problèmes comme relevant de l’intérêt collectif, en discutent et forment à leur propos des opinions.
+
+:::example
+La réforme des retraites, la fermeture d'un hopital de campagne ou la pollution d'une rivière constitue des problèmes d'intérêt public.
+
+À l'inverse, un dîner familial, une conversation entre amis ou une décision médicale personnelle relèvent de la sphère privée tant qu’ils n'ont pas été présentés comme des problèmes concernant un ensemble plus large de personnes.
+
+Ainsi, selon que votre maladie est dûe aux hasards de la vie ou à une pollution systémique de l'environnement, la question ne sera pas la même.
+:::
+
+Le caractère public ou privé d'un fait n'en constitue donc pas une propriété fixe. Il dépend de la manière dont une société détermine le cercle des personnes concernées par ce fait. Le regard peut se déplacer au cours de l’histoire : ce qui était considéré comme une affaire privée peut devenir un enjeu public, tandis que ce qui relevait auparavant du public peut être renvoyé à la vie privée.
+
+:::example
+Les violences faites aux femmes ont longtemps été considérées comme une question privée ne concernant que les couples impliqués. On pense aujourd'hui qu'elles ne constituent pas une succession de faits divers individuels mais relèvent d'une violence systémique dont la mise en discussion publique résulte de mobilisations sociales et politiques.
+:::
+
+La publicité d'un fait ou d'une question ne dépend donc pas uniquement de sa visibilité. Kant a sans doute été l'un des premiers à conceptualiser rigoureusement ce problème : rendre une question publique ne consiste pas seulement à la rendre visible, mais aussi à la formuler de telle sorte à ce qu'elle puisse être soumise à la discussion - études scientifiques, arguments généralisables, etc. - et permettre la formation d’un jugement collectif.
+
+:::example
+Dire « je n'aime pas la viande et je n'aime pas qu'on fasse du mal à des animaux » n'est pas la même chose que de démontrer les liens entre élevage animal et réchauffement climatique, financer des études sur les conditions d'abattage, quantifier le nombre d'animaux abattus chaque année, etc.
+:::
+
+La sphère publique n'a pas toujours occupée une fonction sociale structurante. Elle n'apparait en Occident, dans sa forme actuelle en tout cas, qu'au XVIIIe siècle.
+
+---
+# Jurgen Habermas
+	Habermas, J. (1998). *L'Espace public*. Paris: Payot.
+
+--- notes 
+
+Jürgen Habermas est un philosophe et sociologue allemand, membre de la deuxième génération de l’École de Francfort, connu notamment pour ses travaux sur la communication, la démocratie et la formation de l’opinion publique.
+
+Dans *L’Espace public*, il a étudié la naissance historique de la sphère publique moderne : la manière dont, à partir du XVIIIe siècle, se développent en Europe des lieux, des pratiques et des médias — salons, cafés, sociétés de lecture et titres de presse — à partir desquels une opinion publique peut progressivement se former et exercer une pression ou un contrepoids sur les décisions de l’État.
+
+:::warning
+Habermas utilise la notion allemande d’*Öffentlichkeit* souvent traduit en français par _espace public_. Dans ce cours nous utiliserons indistinctement les termes d'espace public et de sphère publique.
+:::
+
+L'espace public bourgeois crée un monde commun de discussion. La presse, les cafés, les salons et les sociétés de lecture donnent à des individus qui ne se connaissent pas directement des objets d’attention partagés — décisions politiques, événements économiques, questions morales ou faits sociaux. En discutant publiquement de ces sujets, ils peuvent transformer des expériences et des intérêts particuliers en problèmes présentés comme concernant la collectivité.
+
+L’espace public joue également un rôle de médiation et de contrôle du pouvoir. Il constitue un espace intermédiaire entre la société civile et l’État, dans lequel les décisions et l’action des autorités peuvent être rendues visibles, discutées et critiquées. L’opinion publique peut ainsi fonctionner comme une forme de contre-pouvoir et comme une source de légitimation des décisions politiques : gouverner ne consiste plus seulement à exercer une autorité, mais aussi à pouvoir justifier son action devant un public.
+
+:::warning
+Cette conception est cependant normative et historiquement située. L’accès à ces espaces de discussion reste longtemps réservé à certains groupes sociaux, notamment aux hommes instruits et appartenant aux classes privilégiées. La sphère publique n’est donc jamais parfaitement ouverte, égalitaire ou démocratique.
+:::
+
+Il faut bien comprendre ce que Habermas cherche à historiciser. Il ne s’agit pas de dater l’apparition des discussions collectives — les sociétés ont toujours débattu de leurs affaires communes — mais d’identifier le moment où ces discussions commencent à s’organiser durablement dans des lieux, des pratiques et des médias spécifiques. La question devient alors celle des conditions qui permettent à des individus dispersés de se constituer en public, de partager des objets d’attention et de former une opinion collective.
+
+Pour comprendre comment cette articulation s’est historiquement organisée, il faut maintenant la mettre en regard de la distinction entre sphère publique et sphère privée. Cette distinction ne renvoie pas seulement à des contenus différents : elle s’appuie aussi sur des espaces, des pratiques et des dispositifs matériels qui déterminent ce qui peut circuler et auprès de qui.
+
+Jusqu’à une période récente, une séparation matérielle et technique relativement nette existait entre les échanges privés — le domicile, les lettres, le téléphone — et les espaces publics médiatiques — la presse, la radio et la télévision.
+
+Cette séparation n’était jamais absolue : les lettres pouvaient être publiées, les conversations rapportées et la presse révéler des informations privées. Mais les moyens techniques de diffusion limitaient fortement la circulation immédiate d’une conversation ou d’une expérience personnelle. Ce qui se passait dans la sphère privée y restait donc plus facilement contenu.
+
+Le Web et les réseaux sociaux ont profondément transformé cette frontière. Ils permettent à chacun de publier, de commenter et de partager des contenus potentiellement visibles par un très grand nombre de personnes. Une conversation privée peut être capturée et diffusée ; une expérience intime peut devenir un témoignage public ; un événement local peut acquérir une visibilité nationale ou mondiale.
+
+Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé, mais ils l’ont rendue plus poreuse, instable et négociable. Ils multiplient les situations dans lesquelles un contenu destiné à un cercle restreint devient visible au-delà de son public initial.
+
+---
+
+<script>
+  import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
+</script>
+ 
+<p class="kicker">Professionnel · amateur · personnalité · quidam</p>
+
+# Quatre espaces de visibilité
+
+<WebVisibilityMatrix />
+
+--- notes
+
+Cette première version reprend la logique du schéma fourni : deux axes permettent de situer des formes de prise de parole et de circulation dans le web.
+
+
+L'axe horizontal concerne le « qui parle » : des professionnels - journalistes, éditorialistes, intellectuels, personnalités politiques, etc. - à gauche ou des amateurs comme vous et moi à droite.
+
+L'axe vertical concerne lui le contenu du discours. Non plus « qui parle » mais « de quoi ça parle » : de sujets d'intérêt public en haut - les déplacements d'Emmanuel Macron, les orientations politiques de la BCE, les dingueries de Poutine, etc. - ou de situations de la vie ordinaire en bas - le marché de Douarnenez, mes peines de coeur, votre avis sur le dernier romain que vous avez lu, etc.
+
+Ces axes ne définissent pas des catégories étanches : une même personne peut se déplacer de l’un à l’autre selon le contexte, le dispositif et le degré de visibilité qui lui est accordé. Les exemples sont donc indicatifs ; ils servent avant tout à faire comprendre le fonctionnement des deux axes.
+
+Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes distincts de prise de parole, de circulation de l’information et de visibilité.
+
+---
+### La sphère publique restreinte
+**En haut à gauche.**
+
+Dans notre schéma, nous appelons « sphère publique restreinte » le quadrant dans lequel des professionnels — journalistes, éditorialistes, intellectuels ou responsables politiques — parlent de sujets explicitement considérés comme relevant de l’intérêt public. Il renvoie aux formes de publicité politique et médiatique qui se développent progressivement entre le XVIIe et le XVIIIe siècle, avec la naissance de la presse d’opinion et la multiplication des lieux de discussion politique.
+
+Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité reste limité à un petit nombre d’acteurs, et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
+
+---
+### L’élargissement de la sphère publique
+**En bas à gauche.**
+
+Dans ce quadrant, des professionnels rendent publiques des situations et des expériences de la vie ordinaire. Il ne s’agit plus seulement de suivre l’activité des institutions et des personnalités politiques : la presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
+
+Cet élargissement se produit surtout au XIXe siècle avec l’essor de la presse de masse et les progrès de l’alphabétisation. Pour conquérir un lectorat plus large, les journaux diversifient leurs sujets et cherchent à intéresser des lecteurs dont les vies sont parfois très éloignées les unes des autres.
+
+**Exemples :** le journal télévisé de 13 heures, le micro-trottoir ou le reportage sur un marché.
+
+La photographie puis le reportage audiovisuel rendent également les événements plus immédiatement visibles. Les médias permettent ainsi à des individus qui ne se rencontrent pas directement de partager des informations, des expériences et des préoccupations, et de se représenter comme appartenant à un même monde commun.
+
+**Exemple :** la manière dont les médias construisent un « problème de l’immigration », y compris dans des territoires où les habitants ont peu de contacts directs avec les personnes immigrées.
+
+L’essor de la presse illustrée et de la publicité commerciale contribue aussi à exposer davantage la vie privée. Les controverses que cette exposition suscite participent à la construction progressive de protections juridiques de la vie privée. Comme avec les réseaux sociaux aujourd’hui, l’apparition de nouveaux médias transforme rapidement les pratiques, tandis que le droit s’adapte plus lentement.
+
+Ces deux premiers quadrants correspondent aux espaces publics médiatiques traditionnels : la presse, la radio et la télévision.
+
+Leur fonctionnement repose en grande partie sur des **gatekeepers**, ou « portiers ». Les journalistes, les rédacteurs en chef et les éditorialistes sélectionnent, hiérarchisent et mettent en forme les informations : ils décident, selon des critères professionnels, politiques et économiques, de ce qui mérite d’être vu, entendu ou lu.
+
+Ils contribuent ainsi à façonner l’*agenda public*, c’est-à-dire l’ensemble des sujets dont une société parle à un moment donné.
+
+### Quand visibilité et intérêt public tendent à coïncider
+
+Nous pouvons maintenant préciser le rapport entre les deux dimensions de la publicité distinguées plus haut : rendre une information visible au plus grand nombre, d’une part, et la présenter comme une question digne de l’attention et de la discussion collectives, d’autre part. Ces deux dimensions ne sont pas nécessairement équivalentes : une information peut être très visible sans véritablement relever de l’intérêt public, tandis qu’un problème collectif peut rester invisible ou ne pas être reconnu comme tel.
+
+Dans les médias traditionnels, elles tendent pourtant à se confondre. Les *gatekeepers* ne se contentent pas de rendre des informations visibles : ils sélectionnent celles qu’ils jugent suffisamment importantes pour être publiées. Dans ce dispositif, le fait d’être rendu public tend donc à conférer à un contenu le statut de question d’intérêt public. À l’inverse, ce qui n’est pas sélectionné reste largement invisible, même si cela concerne un grand nombre de personnes.
+
+Cette équivalence est pourtant toujours discutable. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
+
+La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc aussi des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
+
+Gardons cette distinction à l’esprit pour examiner les deux autres quadrants du schéma. Le Web et les réseaux sociaux mettent à mal l’équivalence entre visibilité et intérêt public qui structurait largement les médias traditionnels.
+
+Ils transforment l’espace public selon au moins deux dimensions : ils multiplient le nombre de personnes capables de prendre la parole publiquement et ils transforment la matière, les formats et les manières de rendre cette parole visible.

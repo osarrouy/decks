@@ -1,0 +1,220 @@
+<script lang="ts">
+    type Quadrant = {
+        position: string;
+        title: string;
+        examples: string[];
+    };
+
+    const quadrants: Quadrant[] = [
+        {
+            position: "top-left",
+            title: "Sphère publique restreinte",
+            examples: [
+                "tribune signée",
+                "expert·e reconnu·e",
+                "blog professionnel",
+            ],
+        },
+        {
+            position: "top-right",
+            title: "Web participatif",
+            examples: [
+                "blog personnel",
+                "vidéo amateur",
+                "contribution à Wikipédia",
+            ],
+        },
+        {
+            position: "bottom-left",
+            title: "Espace public",
+            examples: [
+                "journal télévisé",
+                "site de presse",
+                "émission de radio",
+            ],
+        },
+        {
+            position: "bottom-right",
+            title: "Web en clair-obscur",
+            examples: [
+                "pseudonyme sur un forum",
+                "commentaire",
+                "groupe privé",
+            ],
+        },
+    ];
+</script>
+
+<figure class="web-visibility">
+    <div
+        class="matrix"
+        role="img"
+        aria-label="Matrice des publics du web : de professionnel à amateur, et de personnalité à quidam."
+    >
+        <div class="axis-line axis-line-x" aria-hidden="true"></div>
+        <div class="axis-line axis-line-y" aria-hidden="true"></div>
+        <div class="axis-label axis-label-y-top">PERSONNALITÉ</div>
+        <div class="axis-label axis-label-y-bottom">QUIDAM</div>
+        <div class="axis-label axis-label-x-left">PROFESSIONNEL</div>
+        <div class="axis-label axis-label-x-right">AMATEUR</div>
+
+        <div class="quadrant-grid">
+            {#each quadrants as quadrant}
+                <section class={`quadrant ${quadrant.position}`}>
+                    <h3>{quadrant.title}</h3>
+                    <ul>
+                        {#each quadrant.examples as example}
+                            <li>{example}</li>
+                        {/each}
+                    </ul>
+                </section>
+            {/each}
+        </div>
+    </div>
+    <figcaption>
+        Deux axes pour situer des formes de prise de parole en ligne.
+    </figcaption>
+</figure>
+
+<style>
+    .web-visibility {
+        width: min(100%, 64rem);
+        margin: 1.5rem auto 0;
+        color: var(--foreground, var(--fg));
+    }
+
+    .matrix {
+        position: relative;
+        padding: 2.3rem 6.8rem;
+    }
+
+    .quadrant-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border: 1px solid
+            color-mix(in srgb, var(--foreground, var(--fg)) 38%, transparent);
+        background: color-mix(in srgb, white 35%, transparent);
+    }
+
+    .quadrant {
+        min-height: 8.7rem;
+        padding: 1rem 1.15rem;
+        background: color-mix(in srgb, white 38%, transparent);
+    }
+
+    .quadrant:nth-child(odd) {
+        border-right: 1px solid
+            color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
+    }
+
+    .quadrant:nth-child(-n + 2) {
+        border-bottom: 1px solid
+            color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
+    }
+
+    .quadrant h3 {
+        max-width: 17ch;
+        margin: 0;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: clamp(0.78rem, 1.1vw, 1rem);
+        line-height: 1.15;
+        text-transform: uppercase;
+    }
+
+    .quadrant ul {
+        display: grid;
+        gap: 0.22rem;
+        margin: 0.75rem 0 0;
+        padding-left: 1rem;
+        color: var(--muted);
+        font-size: clamp(0.78rem, 1.15vw, 1rem);
+    }
+
+    .quadrant li::marker {
+        color: var(--accent);
+    }
+
+    .axis-line {
+        position: absolute;
+        z-index: 2;
+        background: var(--accent);
+        opacity: 0.75;
+        pointer-events: none;
+    }
+
+    .axis-line-x {
+        top: 50%;
+        right: 1.2rem;
+        left: 1.2rem;
+        height: 2px;
+    }
+
+    .axis-line-y {
+        top: 1.2rem;
+        bottom: 1.2rem;
+        left: 50%;
+        width: 2px;
+    }
+
+    .axis-label {
+        position: absolute;
+        z-index: 3;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: clamp(0.62rem, 0.9vw, 0.78rem);
+        letter-spacing: 0.06em;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .axis-label-y-top {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .axis-label-y-bottom {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .axis-label-x-left {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .axis-label-x-right {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    figcaption {
+        margin-top: 0.45rem;
+        color: var(--muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        text-align: center;
+    }
+
+    @media (max-width: 700px) {
+        .matrix {
+            padding-inline: 4.8rem;
+        }
+
+        .quadrant {
+            min-height: 8rem;
+            padding: 0.8rem;
+        }
+
+        .quadrant ul {
+            padding-left: 0.85rem;
+        }
+    }
+</style>
