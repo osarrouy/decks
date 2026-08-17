@@ -3,39 +3,20 @@ title: Introduction
 theme: gallery
 ---
 
-# Introduction aux Cultures Numériques
-Olivier Sarrouy {.kicker}
+# Réseaux Sociaux Numérique
+RSN {.kicker}
 
 --- notes
-
-Hello world
-
-
----
-## Olivier Sarrouy
-olivier.sarrouy@univ-rennes2.fr {.kicker}
-
-
-
 
 1. Définition des réseaux sociaux
 2. public / privé
 3. Gatekeeper
-4. Les nouveaux gatekeeper
+4. Les nouveaux gatekeeper 2h
 3. Structure des réseaux sociaux (Erdos) / hub
-5. Algorithmes comme nouveaux gatekeepers
+5. Algorithmes comme nouveaux gatekeepers 2h 
 2. Bulles de filtres / polarisation
-4. Viralité
-4. Identité vs interpassivité
-
-
---- notes
-
----
-
-# Réseaux Sociaux Numériques
-
---- notes
+4. Viralité 2h 
+4. Identité vs interpassivité 2h
 
 On peut considérer que l’irruption des Réseaux Sociaux Numériques (RSN), au cours des années 2000 et 2010, a constitué un moment de rupture dans notre rapport aux technologies numériques et dans l’extension de leur hégémonie.
 
@@ -261,9 +242,9 @@ Ce régime d’expression a su profiter des opportunités offertes par l’abais
 
 L’espace public traditionnel a en effet ceci de particulier qu’il est, pour l’essentiel, dominé par une classe sociale relativement homogène. La plupart des journalistes, éditorialistes, experts, etc. ont des parcours sociaux et professionnels analogues. Ils partagent une même lecture du réel, parlent le même langage, sont préoccupés par les mêmes questions et tendent à défendre des intérêts particuliers.
 
-Le web, en abaissant les couts de publicisation et de diffusion de la parole, on permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
+Le web, en abaissant les couts de publicisation et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
 
-Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels, concept désignant une sphère publique alternative où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
+Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels : un espace public alternatif où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
 
 Ce concept s’oppose à la vision consensuelle de l’espace public proposée par Jürgen Habermas, qui se concentre principalement sur la sphère publique bourgeoise et tend à ignorer les dynamiques conflictuelles inhérentes aux sociétés modernes.
 
@@ -277,3 +258,88 @@ Ce concept s’oppose à la vision consensuelle de l’espace public proposée p
 --- notes 
 
 ### Web en clair-obscur
+
+Ce dernier quadrant est sans doute le plus significatif - à la fois par son extension, mais aussi par la manière dont il brouille les frontières autrefois établies entre sphère publique et sphère privée.
+
+Il s’agit d’hommes et de femmes ordinaires qui parlent de choses ordinaires - parfois même très intimes - à d’autres hommes et femmes ordinaires, mais qui le font publiquement.
+
+Cette catégorie de prise de parole s’est surtout développée avec les réseaux sociaux numériques, qui ont rendu publiques et partageables des dimensions autrefois confinées aux échanges interpersonnels : les conversations, les relations sociales, les goûts, les passions et les choix individuels.
+
+### Les contenus conversationnels
+
+L’essentiel des contenus partagés sur ces réseaux ne constitue pas, en effet, du contenu informationnel - *i.e.* du contenu présentant un intérêt intrinsèque - mais du **contenu conversationnel**. 
+
+Ces contenus conversationnels ne constituent pas des contenus auto-référents, supposés trouver en eux-mêmes leur propre valeur, mais des contenus n’ayant d’autre fonction que de nourrir un processus de socialisation. Cette particularité est d'ailleurs inscrite dans l'architecture même des plateformes.
+
+:::example
+**Snapchat.** Dans le dispositif initial de Snapchat, la photographie est conçue pour disparaître rapidement : elle n’a pas vocation à devenir une œuvre durable ou à laisser une trace autonome, mais à entretenir une relation et à participer à une interaction sociale.
+
+**Facebook et Instagram.** Le partage d’une photographie ou d’une vidéo vise souvent moins à produire un contenu autonome qu’à susciter des réactions — commentaires, mentions « j’aime » ou partages. Ces réactions sont ensuite prises en compte par les dispositifs de classement algorithmique, qui contribuent à déterminer la visibilité du contenu.
+:::
+
+C’est aussi à cette catégorie là de parole qu’est adressée le plus de critiques par de nombreux intellectuels et éditorialistes : qui sont donc tous ces gens qui donnent leur avis sur tout, tout le temps, sans n’être compétent en rien ; et n’ont-ils rien de mieux à faire qu’à étaler publiquement leur vie, leur intimité, leur quotidien, souvent en l’entremêlant de manière confuse avec des thématiques que l’on pourrait juger plus importantes : parler de ses règles pour critiquer le patriarcat, se mettre en scène dans sa cuisine pour critique la mal-bouffe, etc.
+
+Il importe pourtant de ne pas réduire la formation de l’opinion à la réception des médias. Les conversations ordinaires jouent depuis longtemps un rôle essentiel dans la sociabilité, mais aussi dans la manière dont les individus interprètent, discutent et adoptent — ou rejettent — les informations qui circulent publiquement.
+
+### L’opinion et la foule
+
+Dans *L’Opinion et la foule* (1901), Gabriel Tarde permet de penser cette formation de l’opinion à partir de deux mouvements complémentaires.
+
+Le premier est **vertical** : les médias font circuler des informations, des récits et des thèmes vers un public dispersé. En lisant un journal, en regardant la télévision ou en écoutant un podcast, chacun prend connaissance d’événements et de problèmes qui deviennent alors susceptibles d’être partagés avec d’autres.
+
+Le second est **horizontal** : ces informations sont reprises, discutées et réinterprétées dans les échanges ordinaires — en famille, entre amis, avec des collègues ou dans les conversations de café. Une actualité générale y est rapportée à des expériences concrètes : une crise économique devient la perte d’un emploi, une hausse du prix du pétrole devient une difficulté pour un agriculteur, et une controverse médiatique est confrontée aux opinions de l’entourage.
+
+L’opinion ne se forme donc pas seulement au moment où les individus lisent ou écoutent les médias. Elle se construit aussi, et souvent surtout, dans ces conversations qui donnent un sens situé à l’actualité, la rendent discutable et permettent de l’adopter, de la transformer ou de la contester.
+
+### Le two-step flow of communication
+
+Un modèle qui a beaucoup discuté de ce fait est celui du Two-Step Flow of Communication, développé par Paul Lazarsfeld et Elihu Katz dans les années 1940, et qui propose une théorie de la communication de masse selon laquelle l’influence des médias sur le public se fait en deux étapes.
+
+1.	Première étape : Les informations provenant des médias de masse (journaux, radio, télévision) ne touchent pas directement la majorité des individus, mais sont d’abord reçues par un groupe d’leaders d’opinion. Ces leaders d’opinion sont des personnes bien informées, souvent en position d’influence dans leur communauté ou leur cercle social.
+2.	Deuxième étape : Ces leaders d’opinion transmettent ensuite l’information aux autres membres de leur entourage, jouant ainsi le rôle de médiateurs entre les médias et le public. Par leurs interactions sociales, ils influencent l’opinion et les comportements de leurs proches, parfois plus efficacement que les médias eux-mêmes.
+
+Ce modèle montre ainsi que la communication interpersonnelle joue un rôle essentiel dans la formation des opinions et des attitudes. Les leaders d’opinion ne transmettent pas mécaniquement les informations reçues : ils les interprètent, les relient à des expériences concrètes et les rendent discutables dans leur entourage.
+
+L’appropriation interpersonnelle de l’actualité est donc un phénomène ancien. Ce qui change avec les réseaux sociaux numériques, c’est que les conversations qui se déroulaient autrefois dans l’intimité du face-à-face ont désormais avoir lieu publiquement.
+
+La conversation ordinaire, qui s’évanouissait autrefois dans le bavardage du café ou dans l’échange familial, laisse désormais des traces : elle peut être enregistrée, commentée, partagée et circuler au-delà du cercle dans lequel elle a pris naissance.
+
+Nous avons toujours discuté des décisions des politiques, des idées des philosophes et de l’autorité des experts. Nous avons toujours réinscrit les préoccupations politiques dans la conversation et dans la vie ordinaire. Mais ces échanges restaient généralement invisibles pour les personnes et les institutions qui détenaient le pouvoir de définir les sujets légitimes de discussion.
+
+Ce n’est plus nécessairement le cas : la clameur des conversations ordinaires peut désormais parvenir directement aux responsables politiques, aux experts et aux médias. Elle peut même recouvrir les voix autorisées qui parlaient jusque-là depuis une tribune relativement inaccessible.
+
+Le point important est donc qu’il n’existe plus de séparation formelle et stable entre l’espace de diffusion de l’information et les dynamiques conversationnelles. Les mêmes plateformes permettent à la fois de recevoir une actualité, de la commenter, de la transformer et de la rendre visible à d’autres publics.
+
+Cette ouverture dissocie la visibilité d'un contenu de son importance ou de son intérêt. Le fait qu’une information soit accessible au plus grand nombre ne signifie pas qu’elle présente un intérêt pour la discussion collective ou qu’elle concerne effectivement la collectivité.
+
+Il est important d’insister sur cette nouveauté fondamentale : il existe, sur Internet, énormément d’informations publiques et accessibles (au sens de la première définition de l’espace public) qui n’ont aucune importance pour la discussion collective de l’intérêt général (au sens de la seconde définition).
+
+C’est cette dissociation entre visibilité et importance qui horrifie le plus souvent les intellectuels autorisés qui y voient une contestation infondée de leur autorité.
+
+Car de fait, les conversations ordinaires sont rarement consacrées à des sujets d’intérêt général et, quand elles le sont, elles ne volent pas nécessairement haut : commentaires, anecdotes, insultes, plaisanteries, etc. Ce fait n'est pas nouveau. Ce qu'il l'est est que ces conversations ont dorénavant lieu sous le regard de tous.
+
+Or ce basculement de la visibilité produit aussi une rupture de contexte. Nous jugeons souvent plus sévèrement les conversations des autres, que nous découvrons de l’extérieur, que les nôtres, dont nous comprenons les références, les intentions et le contexte. Ce qui nous paraît insignifiant ou outrancier chez autrui peut ainsi prendre un sens évident pour ceux qui participent à l’échange.
+
+
+Est-ce que tout cela signifie pour autant que la visibilité est maintenant distribuée de façon égalitaire et que chacun a un accès analogue à l'espace public ? Absolument pas.
+
+Il n'existe en fait rien de moins plat qu'un réseau.
+
+---
+
+<!-- slide: id="power-law" title="Loi de puissance" steps=1 layout="center" -->
+<script>
+  import PowerLaw from '$components/PowerLaw.svelte'
+</script>
+
+<p class="kicker">Concentration · visibilité · longue traîne</p>
+
+# La loi de puissance
+
+<PowerLaw concentration="low" concentrateAtStep={1} animateConcentration={true} />
+
+--- notes
+
+À l’état initial, la courbe montre une distribution moins concentrée : la visibilité est inégalement répartie, mais la longue traîne reste moins éloignée des objets les mieux classés.
+
+À l’étape suivante, la courbe se resserre progressivement vers les premiers rangs : la concentration augmente et les inégalités de visibilité deviennent plus fortes. Une fois cette transformation achevée, la couleur fait apparaître l’illustration du principe 80/20 : environ 20 % des objets concentrent environ 80 % de la visibilité. Cette relation est un repère pédagogique, et non une propriété universelle de toutes les distributions en loi de puissance.
