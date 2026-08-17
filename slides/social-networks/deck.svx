@@ -153,57 +153,127 @@ Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé
 
 --- notes
 
-Cette première version reprend la logique du schéma fourni : deux axes permettent de situer des formes de prise de parole et de circulation dans le web.
-
 
 L'axe horizontal concerne le « qui parle » : des professionnels - journalistes, éditorialistes, intellectuels, personnalités politiques, etc. - à gauche ou des amateurs comme vous et moi à droite.
 
 L'axe vertical concerne lui le contenu du discours. Non plus « qui parle » mais « de quoi ça parle » : de sujets d'intérêt public en haut - les déplacements d'Emmanuel Macron, les orientations politiques de la BCE, les dingueries de Poutine, etc. - ou de situations de la vie ordinaire en bas - le marché de Douarnenez, mes peines de coeur, votre avis sur le dernier romain que vous avez lu, etc.
 
-Ces axes ne définissent pas des catégories étanches : une même personne peut se déplacer de l’un à l’autre selon le contexte, le dispositif et le degré de visibilité qui lui est accordé. Les exemples sont donc indicatifs ; ils servent avant tout à faire comprendre le fonctionnement des deux axes.
+Ces axes ne définissent pas des catégories étanches : un propos peut se déplacer de l’un à l’autre selon le contexte, le dispositif et le degré de visibilité qui lui est accordé. Les exemples sont donc indicatifs ; ils servent avant tout à faire comprendre le fonctionnement des deux axes.
 
 Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes distincts de prise de parole, de circulation de l’information et de visibilité.
 
 ---
+<script>
+  import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
+</script>
+ 
+<WebVisibilityMatrix activeQuadrant={1}/>
+
+--- notes
+
 ### La sphère publique restreinte
-**En haut à gauche.**
 
-Dans notre schéma, nous appelons « sphère publique restreinte » le quadrant dans lequel des professionnels — journalistes, éditorialistes, intellectuels ou responsables politiques — parlent de sujets explicitement considérés comme relevant de l’intérêt public. Il renvoie aux formes de publicité politique et médiatique qui se développent progressivement entre le XVIIe et le XVIIIe siècle, avec la naissance de la presse d’opinion et la multiplication des lieux de discussion politique.
+En haut à gauche, nous trouvons la **sphère publique restreinte** : des professionnels — journalistes, éditorialistes, intellectuels ou responsables politiques — y discutent de sujets explicitement considérés comme relevant de l’intérêt public.
 
-Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité reste limité à un petit nombre d’acteurs, et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
+:::examples
+Les propositions de loi, la géopolitique, la politique économique, etc.
+:::
+
+Ce quadrant renvoie aux formes de publicité politique et médiatique qui se développent progressivement entre le XVIIe et le XVIIIe siècle, avec la naissance de la presse d’opinion et la multiplication des lieux de discussion politique.
+
+Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité y est limitée à un petit nombre d’acteurs autorisés et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
 
 ---
-### L’élargissement de la sphère publique
-**En bas à gauche.**
+<script>
+  import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
+</script>
+ 
+<WebVisibilityMatrix activeQuadrant={2}/>
 
-Dans ce quadrant, des professionnels rendent publiques des situations et des expériences de la vie ordinaire. Il ne s’agit plus seulement de suivre l’activité des institutions et des personnalités politiques : la presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
+--- notes 
+
+### L’élargissement de la sphère publique
+
+En bas à gauche, nous trouvons encore des professionels de la parole publique, mais qui discutent cette fois des situations et des expériences de la vie quotidienne. Il ne s’agit plus seulement de suivre l’activité des institutions et des personnalités politiques : la presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
+
+:::example
+Le journal télévisé de 13 heures, le micro-trottoir, le marronier de la neige à Noël ou le reportage sur un marché.
+:::
 
 Cet élargissement se produit surtout au XIXe siècle avec l’essor de la presse de masse et les progrès de l’alphabétisation. Pour conquérir un lectorat plus large, les journaux diversifient leurs sujets et cherchent à intéresser des lecteurs dont les vies sont parfois très éloignées les unes des autres.
 
-**Exemples :** le journal télévisé de 13 heures, le micro-trottoir ou le reportage sur un marché.
-
 La photographie puis le reportage audiovisuel rendent également les événements plus immédiatement visibles. Les médias permettent ainsi à des individus qui ne se rencontrent pas directement de partager des informations, des expériences et des préoccupations, et de se représenter comme appartenant à un même monde commun.
 
-**Exemple :** la manière dont les médias construisent un « problème de l’immigration », y compris dans des territoires où les habitants ont peu de contacts directs avec les personnes immigrées.
+:::example
+La manière dont les médias construisent un « problème de l’immigration », y compris dans des territoires où les habitants ont peu de contacts directs avec les personnes immigrées.
+:::
 
 L’essor de la presse illustrée et de la publicité commerciale contribue aussi à exposer davantage la vie privée. Les controverses que cette exposition suscite participent à la construction progressive de protections juridiques de la vie privée. Comme avec les réseaux sociaux aujourd’hui, l’apparition de nouveaux médias transforme rapidement les pratiques, tandis que le droit s’adapte plus lentement.
 
 Ces deux premiers quadrants correspondent aux espaces publics médiatiques traditionnels : la presse, la radio et la télévision.
 
+### Gatekeepers
+
 Leur fonctionnement repose en grande partie sur des **gatekeepers**, ou « portiers ». Les journalistes, les rédacteurs en chef et les éditorialistes sélectionnent, hiérarchisent et mettent en forme les informations : ils décident, selon des critères professionnels, politiques et économiques, de ce qui mérite d’être vu, entendu ou lu.
 
-Ils contribuent ainsi à façonner l’*agenda public*, c’est-à-dire l’ensemble des sujets dont une société parle à un moment donné.
+Ils contribuent ainsi à façonner l’**agenda public**, c’est-à-dire l’ensemble des sujets dont une société parle à un moment donné.
 
 ### Quand visibilité et intérêt public tendent à coïncider
 
-Nous pouvons maintenant préciser le rapport entre les deux dimensions de la publicité distinguées plus haut : rendre une information visible au plus grand nombre, d’une part, et la présenter comme une question digne de l’attention et de la discussion collectives, d’autre part. Ces deux dimensions ne sont pas nécessairement équivalentes : une information peut être très visible sans véritablement relever de l’intérêt public, tandis qu’un problème collectif peut rester invisible ou ne pas être reconnu comme tel.
+Nous voyons ici comment s'articule, traditionnellement, les deux acceptions de la notion de publicité.
 
-Dans les médias traditionnels, elles tendent pourtant à se confondre. Les *gatekeepers* ne se contentent pas de rendre des informations visibles : ils sélectionnent celles qu’ils jugent suffisamment importantes pour être publiées. Dans ce dispositif, le fait d’être rendu public tend donc à conférer à un contenu le statut de question d’intérêt public. À l’inverse, ce qui n’est pas sélectionné reste largement invisible, même si cela concerne un grand nombre de personnes.
+Dans un premier sens, rendre une information publique signifie la rendre visible et accessible au plus grand nombre ; dans un second sens, cela signifie la présenter comme une question qui concerne la collectivité et qui mérite, à ce titre, d’être discutée publiquement.
 
-Cette équivalence est pourtant toujours discutable. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
+Ces deux dimensions peuvent coïncider, mais elles ne se confondent pas nécessairement. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
 
-La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc aussi des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
+Dans les médias traditionnels, ces deux acceptions de la notion de publicité tendent à se confondre. Les *gatekeepers* ne se contentent pas de rendre des informations visibles : ils sélectionnent celles qu’ils jugent suffisamment importantes pour être publiées.
 
-Gardons cette distinction à l’esprit pour examiner les deux autres quadrants du schéma. Le Web et les réseaux sociaux mettent à mal l’équivalence entre visibilité et intérêt public qui structurait largement les médias traditionnels.
+La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
 
-Ils transforment l’espace public selon au moins deux dimensions : ils multiplient le nombre de personnes capables de prendre la parole publiquement et ils transforment la matière, les formats et les manières de rendre cette parole visible.
+La fonction des gatekeepers est ainsi d'assurer, avec plus ou moins de succès, la coincidence ou l'équivalence entre les deux acceptions de la notion de publicité. Faire en sorte que soit rendu visible ce qui relève de l'intérêt public. Et à l'inverse, laisser dans l'obscurité ce qu'ils considèrent ne pas l'être. La tâche, d'ailleurs, n'était pas toujours simple.
+
+:::example
+Le cas de Mazarine Pingeot pose une question délicate : fallait-il rendre publique l’existence de la fille cachée du président François Mitterrand ? Cette information relevait de sa vie privée, mais elle pouvait aussi être considérée comme un enjeu public dans la mesure où ce secret était susceptible d’être utilisé politiquement contre le président ou d’interroger les intérêts de l’État.
+:::
+
+La coincidence entre publicité comme visibilité et publicité comme intérêt ne fonctionnait que parce que les gatekeeper détenait une sorte de monopole sur les conditions d'accès à la visibilité. Or le web et le RSN ont ébranlé ce monopole.
+
+ Le Web et les réseaux sociaux mettent ainsi à mal l’équivalence entre visibilité et intérêt public qui structurait largement les médias traditionnels.
+
+Ils transforment l’espace public selon au moins deux dimensions : ils multiplient le nombre de personnes capables de prendre la parole publiquement et ils transforment la matière, les formats et les régimes de visibilité de cette parole.
+
+---
+<script>
+  import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
+</script>
+ 
+<WebVisibilityMatrix activeQuadrant={3}/>
+
+--- notes 
+
+### Le web participatif
+
+Le cadran situé en haut à droite de notre schéma rassemble les individus « ordinaires » - *i.e.* n’appartenant pas au petit monde des gatekeepers - s’exprimant publiquement sur des thèmes explicitement présentés comme relevant de l’intérêt intérêt commun : politique, économie, écologie, etc.
+
+Cette forme d’expression s’est démocratisée à partir du début des années 2000, principalement avec la naissance des plateformes de blogging, puis de vlogging, mais aussi avec l’émergence - somme toute très relative - du journalisme participatif : Rue89, Huffington Post, Indymedia, Glupatate, Le canard réfractaire, etc.
+
+Ce régime d’expression a su profiter des opportunités offertes par l’abaissement drastique des coûts de publication et de diffusion offert par le web pour contourner le filtre politique qu’imposaient jusqu’ici les *gatekeepers.*
+
+L’espace public traditionnel a en effet ceci de particulier qu’il est, pour l’essentiel, dominé par une classe sociale relativement homogène. La plupart des journalistes, éditorialistes, experts, etc. ont des parcours sociaux et professionnels analogues. Ils partagent une même lecture du réel, parlent le même langage, sont préoccupés par les mêmes questions et tendent à défendre des intérêts particuliers.
+
+Le web, en abaissant les couts de publicisation et de diffusion de la parole, on permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
+
+Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels, concept désignant une sphère publique alternative où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
+
+Ce concept s’oppose à la vision consensuelle de l’espace public proposée par Jürgen Habermas, qui se concentre principalement sur la sphère publique bourgeoise et tend à ignorer les dynamiques conflictuelles inhérentes aux sociétés modernes.
+
+---
+<script>
+  import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
+</script>
+ 
+<WebVisibilityMatrix activeQuadrant={4}/>
+
+--- notes 
+
+### Web en clair-obscur

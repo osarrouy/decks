@@ -1,12 +1,18 @@
 <script lang="ts">
+    type QuadrantNumber = 1 | 2 | 3 | 4;
+
     type Quadrant = {
+        number: QuadrantNumber;
         position: string;
         title: string;
         examples: string[];
     };
 
+    export let activeQuadrant: QuadrantNumber | null = null;
+
     const quadrants: Quadrant[] = [
         {
+            number: 1,
             position: "top-left",
             title: "Sphère publique restreinte",
             examples: [
@@ -16,6 +22,7 @@
             ],
         },
         {
+            number: 3,
             position: "top-right",
             title: "Web participatif",
             examples: [
@@ -25,6 +32,7 @@
             ],
         },
         {
+            number: 2,
             position: "bottom-left",
             title: "Espace public",
             examples: [
@@ -34,6 +42,7 @@
             ],
         },
         {
+            number: 4,
             position: "bottom-right",
             title: "Web en clair-obscur",
             examples: [
@@ -60,7 +69,14 @@
 
         <div class="quadrant-grid">
             {#each quadrants as quadrant}
-                <section class={`quadrant ${quadrant.position}`}>
+                <section
+                    class={`quadrant ${quadrant.position} ${
+                        activeQuadrant !== null &&
+                        quadrant.number !== activeQuadrant
+                            ? "quadrant--muted"
+                            : ""
+                    }`}
+                >
                     <h3>{quadrant.title}</h3>
                     <ul>
                         {#each quadrant.examples as example}
@@ -94,6 +110,10 @@
         border: none;
         /*color-mix(in srgb, var(--foreground, var(--fg)) 38%, transparent);*/
         /*background: color-mix(in srgb, white 35%, transparent);*/
+    }
+
+    .quadrant--muted {
+        opacity: 0.08;
     }
 
     .quadrant {
