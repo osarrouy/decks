@@ -13,9 +13,9 @@ RSN {.kicker}
 3. Gatekeeper
 4. Les nouveaux gatekeeper 2h
 3. Structure des réseaux sociaux (Erdos) / hub
-5. Algorithmes comme nouveaux gatekeepers 2h 
+5. Algorithmes comme nouveaux gatekeepers 2h
 2. Bulles de filtres / polarisation
-4. Viralité 2h 
+4. Viralité 2h
 4. Identité vs interpassivité 2h
 
 On peut considérer que l’irruption des Réseaux Sociaux Numériques (RSN), au cours des années 2000 et 2010, a constitué un moment de rupture dans notre rapport aux technologies numériques et dans l’extension de leur hégémonie.
@@ -51,7 +51,7 @@ Ce bouleversement démographique s’est aussi accompagné d’une modification 
 
 Nous nous étions habitués à ce que l’expression publique - les discours qui se tiennent à la télé, à la radio, dans la presse - porte sur des thématiques d’intérêt public : la politique, l’économie, la culture, etc.
 
-Or, sur les réseaux sociaux, il est principalement question du quotidien, du soi et de ses errances. 
+Or, sur les réseaux sociaux, il est principalement question du quotidien, du soi et de ses errances.
 
 Cette irruption du privé et de l’intime dans l’espace public provoque une importante restructuration de notre économie discursive.
 
@@ -94,7 +94,7 @@ La sphère publique n'a pas toujours occupée une fonction sociale structurante.
 # Jurgen Habermas
 	Habermas, J. (1998). *L'Espace public*. Paris: Payot.
 
---- notes 
+--- notes
 
 Jürgen Habermas est un philosophe et sociologue allemand, membre de la deuxième génération de l’École de Francfort, connu notamment pour ses travaux sur la communication, la démocratie et la formation de l’opinion publique.
 
@@ -129,7 +129,7 @@ Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé
 <script>
   import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
 </script>
- 
+
 <WebVisibilityMatrix />
 
 --- notes
@@ -147,7 +147,7 @@ Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes
 <script>
   import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
 </script>
- 
+
 <WebVisibilityMatrix activeQuadrant={1}/>
 
 --- notes
@@ -168,10 +168,10 @@ Cette sphère est dite « restreinte » parce que l’accès à la parole et à 
 <script>
   import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
 </script>
- 
+
 <WebVisibilityMatrix activeQuadrant={2}/>
 
---- notes 
+--- notes
 
 ### L’élargissement de la sphère publique
 
@@ -227,10 +227,10 @@ Ils transforment l’espace public selon au moins deux dimensions : ils multipli
 <script>
   import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
 </script>
- 
+
 <WebVisibilityMatrix activeQuadrant={3}/>
 
---- notes 
+--- notes
 
 ### Le web participatif
 
@@ -244,6 +244,8 @@ L’espace public traditionnel a en effet ceci de particulier qu’il est, pour 
 
 Le web, en abaissant les couts de publicisation et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
 
+
+
 Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels : un espace public alternatif où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
 
 Ce concept s’oppose à la vision consensuelle de l’espace public proposée par Jürgen Habermas, qui se concentre principalement sur la sphère publique bourgeoise et tend à ignorer les dynamiques conflictuelles inhérentes aux sociétés modernes.
@@ -252,10 +254,10 @@ Ce concept s’oppose à la vision consensuelle de l’espace public proposée p
 <script>
   import WebVisibilityMatrix from '$components/WebVisibilityMatrix.svelte'
 </script>
- 
+
 <WebVisibilityMatrix activeQuadrant={4}/>
 
---- notes 
+--- notes
 
 ### Web en clair-obscur
 
@@ -267,7 +269,7 @@ Cette catégorie de prise de parole s’est surtout développée avec les résea
 
 ### Les contenus conversationnels
 
-L’essentiel des contenus partagés sur ces réseaux ne constitue pas, en effet, du contenu informationnel - *i.e.* du contenu présentant un intérêt intrinsèque - mais du **contenu conversationnel**. 
+L’essentiel des contenus partagés sur ces réseaux ne constitue pas, en effet, du contenu informationnel - *i.e.* du contenu présentant un intérêt intrinsèque - mais du **contenu conversationnel**.
 
 Ces contenus conversationnels ne constituent pas des contenus auto-référents, supposés trouver en eux-mêmes leur propre valeur, mais des contenus n’ayant d’autre fonction que de nourrir un processus de socialisation. Cette particularité est d'ailleurs inscrite dans l'architecture même des plateformes.
 
@@ -293,14 +295,15 @@ L’opinion ne se forme donc pas seulement au moment où les individus lisent ou
 
 ### Le two-step flow of communication
 
-Un modèle qui a beaucoup discuté de ce fait est celui du Two-Step Flow of Communication, développé par Paul Lazarsfeld et Elihu Katz dans les années 1940, et qui propose une théorie de la communication de masse selon laquelle l’influence des médias sur le public se fait en deux étapes.
+Les analyses de Tarde trouvent un écho, plusieurs décennies plus tard, dans les recherches consacrées à l’essor des médias de masse. Dans les années 1940, la presse et la radio touchent un public de plus en plus large, avant la généralisation de la télévision, qui prolongera ensuite ce système de médias de masse. Les chercheurs s’interrogent alors sur la manière dont ces médias influencent réellement les opinions et les comportements : leurs messages atteignent-ils directement les individus, ou passent-ils par les relations sociales ordinaires ?
 
-1.	Première étape : Les informations provenant des médias de masse (journaux, radio, télévision) ne touchent pas directement la majorité des individus, mais sont d’abord reçues par un groupe d’leaders d’opinion. Ces leaders d’opinion sont des personnes bien informées, souvent en position d’influence dans leur communauté ou leur cercle social.
-2.	Deuxième étape : Ces leaders d’opinion transmettent ensuite l’information aux autres membres de leur entourage, jouant ainsi le rôle de médiateurs entre les médias et le public. Par leurs interactions sociales, ils influencent l’opinion et les comportements de leurs proches, parfois plus efficacement que les médias eux-mêmes.
+Une première réponse est formulée par Paul Lazarsfeld, Bernard Berelson et Hazel Gaudet dans *The People’s Choice* (1944), à partir d’une enquête sur l’élection présidentielle américaine de 1940. Elihu Katz et Paul Lazarsfeld prolongent ensuite cette recherche dans *Personal Influence* (1955), où ils formalisent le modèle du **two-step flow of communication**, ou « flux de communication en deux étapes ».
 
-Ce modèle montre ainsi que la communication interpersonnelle joue un rôle essentiel dans la formation des opinions et des attitudes. Les leaders d’opinion ne transmettent pas mécaniquement les informations reçues : ils les interprètent, les relient à des expériences concrètes et les rendent discutables dans leur entourage.
+Selon ce modèle, l’influence des médias ne se déploie pas simplement du média vers un public passif. Les informations sont d’abord reçues par des personnes particulièrement attentives et bien informées — les **leaders d’opinion** — qui occupent une position d’influence dans leur entourage. Elles sont ensuite transmises aux autres membres du groupe par les conversations, les recommandations et les échanges ordinaires.
 
-L’appropriation interpersonnelle de l’actualité est donc un phénomène ancien. Ce qui change avec les réseaux sociaux numériques, c’est que les conversations qui se déroulaient autrefois dans l’intimité du face-à-face ont désormais avoir lieu publiquement.
+Les leaders d’opinion ne jouent donc pas le rôle de simples relais : ils sélectionnent, interprètent et mettent en contexte les informations reçues. Le modèle montre ainsi que l’influence des médias est inséparable de la communication interpersonnelle, qui peut parfois peser davantage sur les opinions et les comportements que l’exposition directe aux médias.
+
+L’appropriation interpersonnelle de l’actualité est donc un phénomène ancien. Ce qui change avec les réseaux sociaux numériques, c’est que les conversations qui se déroulaient autrefois dans l’intimité du face-à-face peuvent désormais avoir lieu publiquement.
 
 La conversation ordinaire, qui s’évanouissait autrefois dans le bavardage du café ou dans l’échange familial, laisse désormais des traces : elle peut être enregistrée, commentée, partagée et circuler au-delà du cercle dans lequel elle a pris naissance.
 
@@ -320,10 +323,9 @@ Car de fait, les conversations ordinaires sont rarement consacrées à des sujet
 
 Or ce basculement de la visibilité produit aussi une rupture de contexte. Nous jugeons souvent plus sévèrement les conversations des autres, que nous découvrons de l’extérieur, que les nôtres, dont nous comprenons les références, les intentions et le contexte. Ce qui nous paraît insignifiant ou outrancier chez autrui peut ainsi prendre un sens évident pour ceux qui participent à l’échange.
 
+Est-ce que tout cela signifie pour autant que la visibilité est maintenant distribuée de façon égalitaire et que chacun a un accès analogue à l'espace public ?
 
-Est-ce que tout cela signifie pour autant que la visibilité est maintenant distribuée de façon égalitaire et que chacun a un accès analogue à l'espace public ? Absolument pas.
-
-Il n'existe en fait rien de moins plat qu'un réseau.
+Absolument pas. Il n'existe en fait rien de moins plat qu'un réseau.
 
 ---
 
@@ -340,6 +342,35 @@ Il n'existe en fait rien de moins plat qu'un réseau.
 
 --- notes
 
-À l’état initial, la courbe montre une distribution moins concentrée : la visibilité est inégalement répartie, mais la longue traîne reste moins éloignée des objets les mieux classés.
+La visibilité sur le Web constitue un exemple particulièrement parlant de distribution en loi de puissance : quelques contenus ou quelques comptes concentrent une très grande part de l’attention, tandis qu’une immense quantité de contenus reste peu vue.
 
-À l’étape suivante, la courbe se resserre progressivement vers les premiers rangs : la concentration augmente et les inégalités de visibilité deviennent plus fortes. Une fois cette transformation achevée, la couleur fait apparaître l’illustration du principe 80/20 : environ 20 % des objets concentrent environ 80 % de la visibilité. Cette relation est un repère pédagogique, et non une propriété universelle de toutes les distributions en loi de puissance.
+Une loi de puissance est une relation mathématique dans laquelle une grandeur varie comme une puissance négative d’une autre : **y = C × x⁻ᵅ**. Elle se reconnaît à une forte concentration des valeurs élevées et à une longue traîne de valeurs faibles.
+
+Imaginez que la courbe affichée ici présente de manière grossière la distribution des vue sur l'ensemble des contenus publiés sur Instagram. Les contenus sur la gauche affichent beaucoup de vues. Les contenus sur la droite n'en affiche aucune. 
+
+Le propre d'une loi de puissance est qu'elle ne se concentre pas autour d’une valeur typique comme une loi normale mais qu'elle accorde davantage de poids aux valeurs extrêmes : elle traduit ainsi une distribution très inégalitaire - et nous verrons bientôt pourquoi.
+
+On retrouve des distributions de ce type dans des domaines très différents : en économie, avec la distribution des revenus et des patrimoines étudiée par Vilfredo Pareto ; en linguistique, avec la fréquence des mots ; dans les réseaux, avec la répartition du nombre de connexions entre les nœuds ; dans la recherche, avec la concentration des citations ; ou encore dans l’urbanisme, avec la taille des villes. Sur le Web, les audiences, les abonnements, les liens entrants et les vues suivent souvent des distributions très inégalitaires de ce type.
+
+On parle parfois de **loi des 80/20** ou de **principe de Pareto** pour désigner une forme particulière de cette concentration : environ 20 % des causes ou des objets produiraient environ 80 % des effets ou des résultats. L’expression renvoie à l’observation faite par Pareto, à la fin du XIXe siècle, selon laquelle une part réduite de la population italienne possédait une grande partie des terres. Le rapport 80/20 est toutefois un repère approximatif, et non la définition mathématique d’une loi de puissance : toutes les distributions de ce type ne suivent pas exactement cette proportion.
+
+En réalité, plus les phénomènes étudiés concernent de larges ensembles, plus la distribution est inégalitaire. Sur le web, la visibilité s'approche ainsi plus d'une loi des 90 / 10 que d'une loi des 80 / 20. 
+
+Il n'est donc pas vrai que, sur les RSN, tout le monde aurait accès égal à la visibilité - ou qu'il n'y aurait plus de gatekeeper.
+
+La différence tient à ce que les modalités de distribution de cette visibilité sont très différentes de ce qu'elles étaients dans l'espace public traditionnel. 
+
+Là où les contenus étaient filtrés avant même d'obtenir de la visibilité, aujourd'hui tout peut être publié, et la visbilité leur est octroyé a posteriori.
+
+--- 
+### Publish, then filter
+
+--- notes
+
+Clay Shirky décrit ce renversement par la formule **« publish, then filter »** : publier d’abord, filtrer ensuite. Dans l’espace public traditionnel, le fonctionnement était plutôt celui du **filter, then publish** : avant qu’une information ou une parole puisse atteindre un large public, elle devait être sélectionnée, éditée et validée par un journal, une chaîne de radio ou de télévision, ou encore par une institution reconnue.
+
+Le Web inverse l’ordre de ces opérations. La baisse des coûts de publication permet à un très grand nombre d’acteurs de mettre en ligne des textes, des images et des vidéos sans obtenir au préalable l’autorisation d’un gatekeeper. Le filtrage intervient ensuite, au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des systèmes de classement algorithmique. La plupart des contenus restent peu vus, mais ils peuvent théoriquement être publiés avant d’être sélectionnés par ces mécanismes de circulation et de visibilité.
+
+Cette inversion ne signifie donc pas que le Web aurait supprimé les filtres ou rendu la visibilité égalitaire. Elle déplace et transforme les gatekeepers : aux journalistes et aux rédacteurs en chef s’ajoutent désormais les plateformes, les algorithmes, les métriques d’engagement, les réseaux d’abonnés et les influenceurs. Ces nouveaux intermédiaires ne sélectionnent pas nécessairement les contenus selon leur intérêt public ; ils privilégient souvent la popularité, la vitesse de circulation, la réactivité ou la capacité à retenir l’attention.
+
+La dynamique de distribution de la visibilité est ainsi inversée : dans l’espace public traditionnel, un petit nombre de gatekeepers déterminait d’abord ce qui pouvait atteindre le public ; sur le Web, un très grand nombre d’acteurs peut d’abord publier, avant que la visibilité ne se concentre à nouveau sur un nombre réduit de contenus et de comptes. L’inégalité de visibilité n’a donc pas disparu : elle se recompose autour de nouveaux gatekeepers et peut même être renforcée par les logiques de recommandation, les effets de réseau et les distributions en loi de puissance.
