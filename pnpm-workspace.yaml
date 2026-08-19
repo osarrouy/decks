@@ -1,4 +1,5 @@
 packages:
   - svx-slides
   - themes/*
+  - packages/*
   - slides/*

@@ -173,6 +173,35 @@
     object-fit: contain;
 }
 
+/*
+  Image occupant presque toute la surface utile de la slide.
+  Usage : ![Boulier](/boulier.jpg){data-slide-image="fill"}
+  ou      ![Boulier](/boulier.jpg){.slide-image-fill}
+*/
+[data-theme='gallery'] .slide> :where(img[data-slide-image='fill'], img.slide-image-fill),
+[data-theme='gallery'] .slide>.image-glow-frame:has(> img[data-slide-image='fill']),
+[data-theme='gallery'] .slide>.image-glow-frame:has(> img.slide-image-fill) {
+    width: fit-content;
+    max-width: calc(100cqw + 2 * var(--corner-mark-outset));
+    height: fit-content;
+    max-height: calc(100cqh + 2 * var(--corner-mark-outset));
+    place-self: center;
+    object-fit: contain;
+
+}
+
+[data-theme='gallery'] .slide>.image-glow-frame:has(> img[data-slide-image='fill'])>img,
+[data-theme='gallery'] .slide>.image-glow-frame:has(> img.slide-image-fill)>img,
+[data-theme='gallery'] .slide>img[data-slide-image='fill'],
+[data-theme='gallery'] .slide>img.slide-image-fill {
+    width: auto;
+    max-width: calc(100cqw + 2 * var(--corner-mark-outset));
+    height: auto;
+    max-height: calc(100cqh + 2 * var(--corner-mark-outset));
+    object-fit: contain;
+}
+
+
 
 
 /* Titres gallery : Instrument Serif droit, très fin et très serré. */

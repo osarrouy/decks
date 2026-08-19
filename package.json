@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@9.14.4",
+  "dependencies": {
+    "@svx-slides/components": "workspace:*"
+  },
   "scripts": {
     "dev:intro": "node svx-slides/src/cli/index.mjs dev slides/introduction",
     "dev:demo": "node svx-slides/src/cli/index.mjs dev slides/demo",

@@ -36,9 +36,8 @@ L’histoire du numérique consiste, originellement du moins, en une série d’
 ---
 
 <!-- slide: id="history-003-boulier" title="Boulier" steps=0 -->
-<!--<img class="history-asset" src="/assets/boulier.jpg" alt="boulier" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;" />-->
 
-![Boulier](/boulier.jpg){data-glow="strong"}
+![Boulier](/boulier.jpg){data-glow="strong" data-slide-image="fill"}
 
 --- notes
 
@@ -48,13 +47,13 @@ Nous situerons donc l’origine de cette histoire dans l’apparition, autour du
 
 Il s’agira principalement, dans ce qui suit, de donner à voir la relation intime qu’entretiennent alors l’élaboration de ces machines et le développement, simultané, de l’État et du capitalisme.
 
-Nous verrons ainsi que l’automatisation du calcul y relevait d’un défi intellectuel autant que d’une demande politique : formaliser, pour les automatiser, les principes de la pensée logique ; et simultanément, soumettre le désordre des hommes à la régularité et à la rigidité du chiffre.
+Nous verrons ainsi que l’automatisation du calcul rrelèvealorselève alors d’un défi intellectuel autant que d’une demande politique : formaliser, pour les automatiser, les principes de la pensée logique ; et simultanément, soumettre le désordre des hommes à la régularité et à la rigidité du chiffre.
 
 ---
 <!-- slide: id="history-004-blaise-pascal" title="Blaise Pascal" steps=0 layout="two-columns"-->
 
 <script>
-  import Persona from '$components/Persona.svelte'
+  import Persona from '@svx-slides/components/Persona.svelte'
 </script>
 
 
