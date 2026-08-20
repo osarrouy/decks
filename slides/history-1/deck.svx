@@ -77,19 +77,20 @@ De ces expériences éparses, nous pouvons toutefois retenir une connivence esse
 
 Dès le XVIIᵉ siècle, le calcul va ainsi quitter le champ exclusif du savant pour devenir une technique de gouvernement. Et en retour, les nécessités nouvelles de l’économie et de l’État ne cesseront de stimuler le fantasme d’une mise en calcul de l’esprit et de ses opérations.
 
-On retrouvera d’ailleurs cette étrange union au coeur des préoccupations qui animeront l’inventeur de ce que l’on considère parfois comme le premier ordinateur mécanique : Charles Babbage.
+On retrouvera d’ailleurs cette articulation entre formalisation de la pensée et organisation du travail dans les projets de Charles Babbage.
 
 ---
 <Persona name="Charles Babbage" dates="1791 - 1871" picture="/babbage.webp" />
 
 --- notes
 
-Babbage, mathématicien, ingénieur et économiste anglais du XIXᵉ siècle, est hanté par le spectre de l’erreur humaine.
+Babbage, mathématicien, ingénieur et économiste anglais du XIXᵉ siècle, ne cherche pas à automatiser « la pensée » en général.
+
+Au début du XIXᵉ siècle, un *computer* désigne encore une personne chargée d’effectuer des calculs à la main pour l’État, la marine ou les sociétés savantes. Ces calculateurs sont souvent des femmes, parce que ce travail est perçu comme répétitif, minutieux et subalterne. Il peut même être effectué à domicile, ce qui constitue une première forme de réseau de calcul.
 
 Nous sommes en plein XIXᵉ siècle et, en Angleterre, la révolution industrielle bat son plein.
 
----
-![Révolution industrielle](/industrial_revolution.png){data-glow="strong" class="slide-image-fill"}
+Le calcul est au coeur de cette révolution : dans les tables de navigation liées au commerce maritime et à l’expansion coloniale, dans les calculs astronomiques, et dans les séries numériques nécessaires à la maîtrise des machines à vapeur.
 
 --- notes
 
@@ -106,16 +107,19 @@ Babbage va donc exhumer l’héritage de Pascal et s’atteler à la conception 
 
 --- notes
 
-Cet effort aboutira, dès les années 1820, à la conception du ***Difference Engine*** : une machine conçue pour appliquer automatiquement la méthode des différences finies - un mode particulier de calcul très répétitif.
+Le projet de la ***Difference Engine***, conçu au début des années 1820, vise à appliquer automatiquement la méthode des différences finies. Cette méthode permet de produire certaines tables numériques par une suite d’additions, sans recalculer chaque valeur depuis zéro.
 
-Il s’agit là de la première tentative de mécaniser, à grande échelle, le calcul.
+En France, Gaspard de Prony avait organisé ce calcul en trois niveaux : mathématiciens, algébristes, puis *computers* exécutant les additions et les soustractions. Babbage cherche à mécaniser ce troisième niveau, souvent confié à des femmes parce qu’il est répétitif et minutieux.
+
+La machine est spécialisée : elle incorpore un algorithme déterminé et n’est pas programmable au sens général. Elle constitue néanmoins une première tentative de mécaniser à grande échelle le calcul.
 
 ---
-![Analytical engine](/analytical_engine.jpg){data-glow="strong" class="slide-image-fill"}
+![Analytical engine](/analytical_engine.jpg){class="slide-image-fill" style="max-width:100%;max-height:68vh;object-fit:contain;"}
+<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">Modèle d’essai partiel de l’Analytical Engine, Science Museum</p>
 
 --- notes
 
-Mais Babbage veut aller plus loin. Il conçoit, dans les années 1830, l’***Analytical Engine***.
+Mais Babbage veut aller plus loin. À partir de 1834, il conçoit l’***Analytical Engine***.
 
 Le *Difference Engine* se contentait de reproduire en série une opération arithmétique simple. L’*Analytical Engine*, lui, devait être capable de s’adapter à une infinité de calculs et constituer ainsi la première machine à calculer **programmable**.
 
@@ -123,9 +127,7 @@ On peut, de ce point de vue, considérer le *Difference Engine* comme l’ancêt
 
 La machine analytique ne fonctionnera jamais, en grande partie en raison de la piètre qualité des pièces mécaniques disponibles à l’époque - en partie aussi parce que Babbage ne va cesser d’en modifier les plans.
 
-:::comment
-La version présentée ici constitue un reproduction exposée au Science Museum de Londres. Elle est composée de 8000 pièces et pèse 5 tonnes.
-:::
+L’*Analytical Engine* ne sera jamais achevée. Le projet reste pris dans des difficultés de financement, de fabrication et de coopération avec les ingénieurs et les ateliers, tandis que Babbage en modifie régulièrement les plans. Le Science Museum conserve seulement un modèle d’essai partiel, réalisé autour du *Mill* et d’un mécanisme d’impression.
 
 Ce qui importe ici est toutefois moins le destin commercial de la machine analytique que l’ambition qu’elle porte : non plus répéter à l’infini des additions ou des soustractions mais enchainer, par elle-même, des séquences arbitraires d’opérations.
 
@@ -140,21 +142,15 @@ Ce qui importe ici est toutefois moins le destin commercial de la machine analyt
 
 C’est ici qu’intervient Ada Lovelace, fille de Lord Byron, mais surtout brillante mathématicienne.
 
-Elle publie, en 1843, des *Notes sur la machine analytique*, qui deviendront plus célèbres que la machine elle-même.
+En 1843, elle traduit le texte de Luigi Menabrea sur l’*Analytical Engine* et lui ajoute des *Notes* plus longues que le texte original. Elle y décrit notamment un « diagram » pour le calcul des nombres de Bernoulli, généralement considéré comme le premier programme documenté pour une machine.
 
-Elle comprend que la machine analytique peut-être programmée et qu’elle ne se limite donc pas au calcul numérique.
+Lovelace comprend que la machine ne doit pas seulement manipuler des nombres comme des quantités : des nombres peuvent aussi représenter des lettres, des sons ou d’autres symboles. Elle envisage ainsi la possibilité de composer de la musique à partir d’opérations formelles.
 
-On peut, en théorie, lui fournir des suites d’instructions, non seulement pour traiter des nombres, mais aussi pour manipuler des symboles, des structures logiques, voire de la musique.
+Elle ne parle pas encore d’« algorithme », mais de *diagram* et de « science des opérations ». Elle affirme également que la machine ne peut rien « originer » : elle ne fait que ce que nous savons lui ordonner.
 
-Lovelace est ainsi la première à entrevoir que les machines pourraient un jour composer, écrire, inventer.
+Le langage de programmation Ada sera nommé en son hommage. Mais son histoire ne doit pas faire oublier les nombreuses femmes anonymes qui effectuaient alors le travail quotidien du calcul.
 
-Elle pressent aussi que l’aptitude à comprendre les machines et à parler leur langue - à programmer, donc - deviendra peut-être, un jour, un art.
-
-L’un des tous premiers langage de programmation, au XXᵉ siècle, sera ainsi nommé *Ada*, en hommage à Lady Lovelace.
-
-L’ambition d’Ada Lovelace restera toutefois différée pendant plus d’un siècle.
-
-Il faudra, pour la concrétiser, prouver que toute création peut être traduite en données, que toute donnée peut-être manipulée à travers une succession d’opérations logiques élémentaires, prouver enfin que ces opérations logiques élémentaires sont calculables. Nous en sommes loin.
+L’ambition de la machine analytique restera toutefois différée pendant plus d’un siècle. Son intérêt historique tient précisément à cette séparation anticipée entre une machine matérielle et les suites d’instructions qui peuvent la commander.
 
 Les préoccupations de l’époque sont plus directement pratiques.
 
@@ -1163,6 +1159,9 @@ Ces contradictions mettront quelques années à se déployer pleinement, au mome
 ### Histoire de l'informatique
 Breton, P. (1990). *Une histoire de l’informatique*. Seuil.
 https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours
+Pasquinelli, M. (2023). *The Eye of the Master: A Social History of Artificial Intelligence*. Verso, chap. 2.
+Science Museum Group. *Babbage’s Analytical Engine, 1834–1871 (Trial model)*.
+https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model
 
 ---
 
