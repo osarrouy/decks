@@ -150,8 +150,47 @@ function serializeFrontmatter(metadata) {
     .join('\n')}\n---\n\n`
 }
 
+const sharedComponentImport = "import { Persona } from '@svx-slides/components'"
+
+function maskFencedCode(content) {
+  return content.replace(/^```[^\n]*(?:\n|$)[\s\S]*?^```[ \t]*(?:\n|$)/gm, (block) =>
+    block.replace(/[^\n]/g, ' ')
+  )
+}
+
+function removeManualSharedImports(content) {
+  const masked = maskFencedCode(content)
+  const importPattern =
+    /^[ \t]*import\s+(?:\{\s*Persona\s*\}|Persona)\s+from\s+['"]@svx-slides\/components(?:\/Persona\.svelte)?['"];?[ \t]*(?:\r?\n|$)/gm
+  const matches = [...masked.matchAll(importPattern)]
+  let result = content
+
+  for (const match of matches.reverse()) {
+    if (match.index === undefined) continue
+    result = `${result.slice(0, match.index)}${result.slice(match.index + match[0].length)}`
+  }
+
+  return result
+}
+
+function injectSharedComponentImports(content) {
+  const withoutManualImport = removeManualSharedImports(content)
+  const masked = maskFencedCode(withoutManualImport)
+  const scripts = [...masked.matchAll(/<script(?:\s[^>]*)?>/g)]
+  const script = scripts.find(
+    (match) => !/\bmodule\b/.test(match[0]) && !/\bcontext\s*=\s*['"]module['"]/.test(match[0])
+  )
+
+  if (!script || script.index === undefined) {
+    return `<script>\n  ${sharedComponentImport}\n</script>\n\n${withoutManualImport.trim()}`
+  }
+
+  const insertion = script.index + script[0].length
+  return `${withoutManualImport.slice(0, insertion)}\n  ${sharedComponentImport}${withoutManualImport.slice(insertion)}`
+}
+
 function renderGeneratedSlide(slide) {
-  return `${serializeFrontmatter(slide.metadata)}${slide.content.trim()}\n`
+  return `${serializeFrontmatter(slide.metadata)}${injectSharedComponentImports(slide.content.trim())}\n`
 }
 
 function posixish(path) {

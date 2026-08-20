@@ -13,7 +13,7 @@ L’objet de ce chapitre est de proposer une brève histoire des technologies nu
 
 Lorsqu’on raconte une histoire, la linéarité de la narration laisse souvent entendre que ce qui s'est passé n'aurait pu se passer autrement. L’historiographie tend ainsi à produire une sorte de nécessité historique qui n'existe pas.
 
-L’Histoire empirique est faite de rencontres, de hasards, d’indéterminations qu’il est tentant de considérer après coup comme des nécessités qu’elles ne constituaient pourtant pas.
+L’Histoire empirique est faite de rencontres, de hasards, d’indéterminations qu’il est tentant de considérer après coup comme des nécessités qu’elles ne constituaient pas.
 
 Il faut donc faire attention lorsqu'on raconte l'histoire de quelque chose, à ne pas produire du déterminisme, de la nécessité, là où il n'y en avait pas.
 
@@ -26,116 +26,61 @@ L’essentiel de ces protagonistes a été oublié par l’histoire officielle. 
 L’histoire (trop) concise que je vais proposer ici sera donc nécessairement fragmentaire et ne pourra rendre hommage à toutes celles et tous ceux qui y ont été impliqués.
 
 ---
-
-## 1. Les prémices
-
---- notes
-
-L’histoire du numérique consiste, originellement du moins, en une série d’efforts plus ou moins aboutis pour automatiser les opérations de calcul.
-
----
-
-<!-- slide: id="history-003-boulier" title="Boulier" steps=0 -->
-
 ![Boulier](/boulier.jpg){data-glow="strong" data-slide-image="fill"}
 
 --- notes
 
-Nous pourrions ainsi faire remonter les origines de cette histoire à l’invention du boulier. Une telle entreprise serait toutefois fastidieuse et de peu d’intérêt pour ce qui nous concerne.
+Nous pourrions ainsi faire remonter les origines de cette histoire à l’invention du **boulier**. Une telle entreprise serait toutefois fastidieuse et de peu d’intérêt pour ce qui nous concerne. Nous situerons donc l’origine de cette histoire dans l’apparition, autour du 17ème siècle, des premières « calculatrices » mécaniques.
 
-Nous situerons donc l’origine de cette histoire dans l’apparition, autour du 17ème siècle, des premières « calculatrices » mécaniques.
+Il s’agira principalement, dans ce qui suit, de donner à voir la relation intime qu’entretiennent la conception de ces machines et le développement simultané de l’État et du capitalisme.
 
-Il s’agira principalement, dans ce qui suit, de donner à voir la relation intime qu’entretiennent alors l’élaboration de ces machines et le développement, simultané, de l’État et du capitalisme.
-
-Nous verrons ainsi que l’automatisation du calcul rrelèvealorselève alors d’un défi intellectuel autant que d’une demande politique : formaliser, pour les automatiser, les principes de la pensée logique ; et simultanément, soumettre le désordre des hommes à la régularité et à la rigidité du chiffre.
+Nous verrons ainsi que l’automatisation du calcul relève alors d’un défi intellectuel autant que d’une demande politique : formaliser, pour les automatiser, les principes de la pensée logique ; et simultanément, soumettre le désordre des hommes à la régularité et à la rigidité du chiffre.
 
 ---
-<!-- slide: id="history-004-blaise-pascal" title="Blaise Pascal" steps=0 layout="two-columns"-->
-
-<script>
-  import Persona from '@svx-slides/components/Persona.svelte'
-</script>
-
-
-<Persona name="Blaise Pascal" dates="1623 - 1662" />
-
-![Blaise Pascal](/pascal.jpeg){data-glow="strong"}
-
-<!--<img class="history-asset" src="/pascal.jpeg" alt="pascal" style="max-width:100%;max-height:68vh;object-fit:contain;" />-->
+<Persona name="Blaise Pascal" dates="1623 - 1662" picture="/pascal.jpeg" />
 
 --- notes
 
 Les tentatives d’automatisation du calcul se multiplient à partir du XVIIᵉ siècle.
 
-On retient souvent la **Pascaline** comme exemple privilégié de cette séquence historique. Son inventeur, le philosophe français Blaise Pascal, est en effet passé à la postérité et a pu transmettre son héritage à travers ses écrits.
+Conçue entre 1642 et 1645, la **Pascaline** est souvent retenue comme exemple privilégié de cette séquence historique. Son inventeur, le philosophe français Blaise Pascal, est en effet passé à la postérité et a pu transmettre son héritage à travers ses écrits.
 
-La Pascaline, conçue entre 1642 et 1645, constitue une sorte de calculatrice mécanique, permettant de réalisant automatiquement des additions et des soustractions.
+La Pascaline est une sorte de calculatrice mécanique, permettant de réaliser automatiquement des additions et des soustractions.
 
 ---
-
-<!-- slide: id="history-005-pascaline" title="Pascaline" steps=0 -->
-<img class="history-asset" src="/assets/pascaline.png" alt="pascaline" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">La Pascaline</p>
+![Pascaline](/pascaline.png){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
 L’intérêt de la Pascaline, toutefois, est moins technique qu’historique. Blaise Pascal la conçoit en effet en réponse aux problèmes pratiques rencontrés alors par l’administration royale.
 
-Le père de Blaise Pascal est percepteur. Il lève l’impôt en Haute-Normandie pour le compte du roi Louis XIII - et de son ministre Richelieu.
+Le père de Blaise Pascal est percepteur. Il lève l’impôt en Haute-Normandie pour le compte du roi Louis XIII - et de son ministre Richelieu. Or, ce 17ème siècle est celui de l’absolutisme royal, de la centralisation des pouvoirs et de l’extension des prérogatives de l’administration.
 
-Or, ce 17ème siècle est celui de l’absolutisme royal, de la centralisation des pouvoirs et de l’extension des prérogatives de l’administration.
+L’État, dans son souci de se moderniser, va exiger la précision des comptes, la discipline des nombres, la régularité des écritures. Il faut, par le nombre, produire de la lisibilité, afin que personne ne puisse se soustraire à la mécanique implacable de l’impôt. La Pascaline vient répondre à cette demande. Elle est l’instrument d’une **microphysique du pouvoir fiscal**.
 
-L’État, dans son souci de se moderniser, va exiger la précision des comptes, la discipline des nombres, la régularité des écritures.
-
-Il faut, par le nombre, produire de la lisibilité, afin que personne ne puisse se soustraire à la mécanique implacable de l’impôt.
-
-La Pascaline vient répondre à cette demande. Elle est l’instrument d’une microphysique du pouvoir fiscal.
-
-Bien sûr, l’ambition de Blaise Pascal ne se limite pas à ces préoccupations strictement administratives.
-
-L’invention est aussi une démonstration : Blaise Pascal veut prouver que les opérations de l’esprit peuvent être transférées dans une machine, qu’un processus mental peut être traduit en un processus mécanique.
+Bien sûr, l’ambition de Blaise Pascal ne se limite pas à ces préoccupations strictement administratives. L’invention est aussi une démonstration : Blaise Pascal veut prouver que les opérations de l’esprit peuvent être transférées dans une machine, qu’un processus mental peut être traduit en un processus mécanique.
 
 ---
-
-<!-- slide: id="history-006-gottfried-wilhelm-leibniz" title="Gottfried Wilhelm Leibniz" steps=0 -->
-## Gottfried Wilhelm Leibniz
-1646-1716
-<img class="history-asset" src="/assets/leibniz.png" alt="leibniz" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Gottfried Wilhelm Leibniz" dates="1646 - 1716" picture="/leibniz.png" />
 
 --- notes
 
-Ce projet sera reconduit et précisé, quelques décennies plus tard, par le philosophe et mathématicien allemand Gottfried Leibniz.
-
-En 1673, Leibniz met au point une machine capable non seulement d’additionner et de soustraire, mais aussi de multiplier et diviser automatiquement : la « **Stepped Reckoner** ».
-
-Ce travail ne constitue toutefois, pour Leibniz, que la première étape d’un projet plus ambitieux.
+Ce projet sera reconduit et précisé, quelques décennies plus tard, par le philosophe et mathématicien allemand Gottfried Leibniz. En 1673, Leibniz met au point une machine capable non seulement d’additionner et de soustraire, mais aussi de multiplier et diviser automatiquement : la **Stepped Reckoner**. Ce travail ne constitue toutefois, pour Leibniz, que la première étape d’un projet plus ambitieux.
 
 Leibniz rêve de mettre au point un système de symboles et de règles formels qui permettrait d’automatiser non plus seulement le calcul arithmétique, mais toute opération portant sur des propositions logiques : ce qu’il appelle un ***calculus ratiocinator***.
 
 Ce n’est plus seulement la levée de l’impôt mais la pensée toute entière que Leibniz cherche alors à rationaliser et à automatiser à travers un dispositif mécanique.
 
-Ces initiatives, toutefois, échouent ou se perdent.
+Ces initiatives, toutefois, échouent ou se perdent. La Pascaline ne s’imposera pas : seule une vingtaine d’exemplaires en seront produits. Le projet de Leibniz, lui, restera suspendu : il faudra attendre le XXème siècle pour que son rêve de réduction intégrale de la pensée à la calculabilité ne se transforme en réalité concrète.
 
-La Pascaline ne s’imposera pas : seule une vingtaine d’exemplaires en seront produits.
-
-Le projet de Leibniz, lui, restera suspendu : il faudra attendre le XXème siècle pour que son rêve de réduction intégrale de la pensée à la calculabilité ne se transforme en réalité concrète.
-
-De ces expériences éparses, nous pouvons toutefois retenir une connivence essentielle entre deux dynamiques qui ne cesseront, à travers leur rencontre, de fixer le destin des machines à calculer.
-
-D’un côté : la volonté de formaliser la pensée, de réduire le raisonnement à une syntaxe, à une mécanique de signes, afin de le rendre calculable.
-
-De l’autre : la volonté de l’État de plier les corps et les richesses à une arithmétique de la gestion, d’inscrire l’obéissance dans l’économie du chiffre.
+De ces expériences éparses, nous pouvons toutefois retenir une connivence essentielle entre deux dynamiques qui ne cesseront, à travers leur rencontre, de fixer le destin des machines à calculer. D’un côté : la volonté de formaliser la pensée, de réduire le raisonnement à une syntaxe, à une mécanique de signes, afin de le rendre calculable. De l’autre : la volonté de l’État de plier les corps et les richesses à une arithmétique de la gestion, d’inscrire l’obéissance dans l’économie du chiffre.
 
 Dès le XVIIᵉ siècle, le calcul va ainsi quitter le champ exclusif du savant pour devenir une technique de gouvernement. Et en retour, les nécessités nouvelles de l’économie et de l’État ne cesseront de stimuler le fantasme d’une mise en calcul de l’esprit et de ses opérations.
 
 On retrouvera d’ailleurs cette étrange union au coeur des préoccupations qui animeront l’inventeur de ce que l’on considère parfois comme le premier ordinateur mécanique : Charles Babbage.
 
 ---
-
-<!-- slide: id="history-007-charles-babbage" title="Charles Babbage" steps=0 -->
-## Charles Babbage
-1791-1871
-<img class="history-asset" src="/assets/babbage.webp" alt="babbage" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Charles Babbage" dates="1791 - 1871" picture="/babbage.webp" />
 
 --- notes
 
@@ -144,9 +89,7 @@ Babbage, mathématicien, ingénieur et économiste anglais du XIXᵉ siècle, es
 Nous sommes en plein XIXᵉ siècle et, en Angleterre, la révolution industrielle bat son plein.
 
 ---
-
-<!-- slide: id="history-008-industrial-revolution" title="Industrial Revolution" steps=0 -->
-<img class="history-asset" src="/assets/industrial_revolution.png" alt="industrial revolution" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+![Révolution industrielle](/industrial_revolution.png){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
