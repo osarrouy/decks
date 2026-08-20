@@ -97,49 +97,35 @@ Le Royaume-Uni est en train de devenir l’usine du monde, et partout, les geste
 
 Le calcul est, évidemment, au coeur de cette révolution : dans les tables de navigation qui guident les marins à travers l’Atlantique du commerce triangulaire, dans les calculs astronomiques par lesquels ces marins s’orientent, dans les séries numériques, aussi, à partir desquelles on s’efforce alors de dompter le pouvoir nouveau des machines à vapeur.
 
-Or ces calculs, réalisés à la main, sont truffés d’erreurs. Les machines cassent, les marins se perdent, les marchandises disparaissent.
-
-Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire.
+Or ces calculs, réalisés à la main, sont truffés d’erreurs. Les machines cassent, les marins se perdent, les marchandises disparaissent. Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire.
 
 Babbage va donc exhumer l’héritage de Pascal et s’atteler à la conception d’une machine visant à automatiser - et donc à prévenir de toute erreur humaine - les nombreuses opérations de calcul que requièrent la révolution industrielle et la mondialisation qui l’accompagne.
 
 ---
-
-<!-- slide: id="history-009-difference-engine" title="Difference Engine" steps=0 -->
-<img class="history-asset" src="/assets/difference_engine.png" alt="difference engine" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">difference engine</p>
+![Difference engine](/difference_engine.png){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
-Cet effort aboutira, dès les années 1820, à la conception du ***Difference Engine***.
-
-Le *Difference Engine* est une machine conçue pour appliquer automatiquement la méthode des différences finies - un mode particulier de calcul très répétitif.
+Cet effort aboutira, dès les années 1820, à la conception du ***Difference Engine*** : une machine conçue pour appliquer automatiquement la méthode des différences finies - un mode particulier de calcul très répétitif.
 
 Il s’agit là de la première tentative de mécaniser, à grande échelle, le calcul.
 
 ---
-
-<!-- slide: id="history-010-analytical-engine" title="Analytical Engine" steps=0 -->
-<img class="history-asset" src="/assets/analytical_engine.jpg" alt="analytical engine" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">Machine analytique</p>
+![Analytical engine](/analytical_engine.jpg){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
 Mais Babbage veut aller plus loin. Il conçoit, dans les années 1830, l’***Analytical Engine***.
 
-Le *Difference Engine* se contentait de reproduire en série une opération arithmétique simple.
+Le *Difference Engine* se contentait de reproduire en série une opération arithmétique simple. L’*Analytical Engine*, lui, devait être capable de s’adapter à une infinité de calculs et constituer ainsi la première machine à calculer **programmable**.
 
-L’*Analytical Engine*, lui, devait être capable de s’adapter à une infinité de calculs et constituer ainsi la première machine à calculer **programmable**.
-
-On peut, de ce point de vue, considérer le *Difference Engine* comme l’ancêtre de l’ordinateur.
-
-Cette machine possédait en effet une mémoire, une unité de calcul, un système d’instructions.
-
-Son architecture était donc très proche, d’un point de vue logique, des ordinateurs actuels - même si sa conception était évidemment mécanique, et non électronique.
+On peut, de ce point de vue, considérer le *Difference Engine* comme l’ancêtre de l’ordinateur. Cette machine possédait en effet une mémoire, une unité de calcul, un système d’instructions. Son architecture était donc très proche, d’un point de vue logique, des ordinateurs actuels - même si sa conception était évidemment mécanique, et non électronique.
 
 La machine analytique ne fonctionnera jamais, en grande partie en raison de la piètre qualité des pièces mécaniques disponibles à l’époque - en partie aussi parce que Babbage ne va cesser d’en modifier les plans.
 
+:::comment
 La version présentée ici constitue un reproduction exposée au Science Museum de Londres. Elle est composée de 8000 pièces et pèse 5 tonnes.
+:::
 
 Ce qui importe ici est toutefois moins le destin commercial de la machine analytique que l’ambition qu’elle porte : non plus répéter à l’infini des additions ou des soustractions mais enchainer, par elle-même, des séquences arbitraires d’opérations.
 
@@ -278,7 +264,7 @@ Il développe ainsi une algèbre binaire reposant sur deux valeurs fondamentales
 
 Il démontre ainsi que les raisonnements logiques peuvent être ramenés à des opérations de calcul dans un espace booléen composé uniquement de 0 et de 1.
 
-Cette avancée ne s’accompagnera pas immédiatement d’innovations techniques. Elle aura en revanche des répercussions décisives sur la pensée de son époque - et des siècles suivant.
+Cette avancée ne s’accompagnera pas immédiatement d’innovations techniques. Elle aura en revanche des répercussions décisives sur la pensée de son époque - et des siècles suivants.
 
 Dorénavant, il sera acquis que tout problème logique peut-être exprimé dans l’espace booléen et ainsi être transformé en un problème calculable.
 
