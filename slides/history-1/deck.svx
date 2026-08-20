@@ -136,11 +136,11 @@ Ce qui importe ici est toutefois moins le destin commercial de la machine analyt
 <!-- slide: id="history-011-ada-lovelace" title="Ada Lovelace" steps=0 -->
 ## Ada Lovelace
 1815-1852
-<img class="history-asset" src="/assets/lovelace.jpg" alt="lovelace" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<img class="history-asset" src="/lovelace.jpg" alt="lovelace" style="max-width:100%;max-height:68vh;object-fit:contain;" />
 
 --- notes
 
-C’est ici qu’intervient Ada Lovelace, fille de Lord Byron, mais surtout brillante mathématicienne.
+C’est ici qu’intervient Ada Lovelace, fille du poète Lord Byron et de la mathématicienne Anne Isabella Milbanke.
 
 En 1843, elle traduit le texte de Luigi Menabrea sur l’*Analytical Engine* et lui ajoute des *Notes* plus longues que le texte original. Elle y décrit notamment un « diagram » pour le calcul des nombres de Bernoulli, généralement considéré comme le premier programme documenté pour une machine.
 
