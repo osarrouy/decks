@@ -92,7 +92,7 @@ Nous sommes en plein XIXᵉ siècle et, en Angleterre, la révolution industriel
 
 Le calcul est au coeur de cette révolution : dans les tables de navigation liées au commerce maritime et à l’expansion coloniale, dans les calculs astronomiques, et dans les séries numériques nécessaires à la maîtrise des machines à vapeur.
 
---- notes
+Or ces calculs, réalisés à la main, sont longs, coûteux et exposés aux erreurs. Babbage cherche donc à mécaniser une partie de ce travail intellectuel répétitif, afin d’accélérer la production de tables numériques et d’en améliorer la régularité.
 
 Le Royaume-Uni est en train de devenir l’usine du monde, et partout, les gestes et les rythmes se voient soumis à la rationalité mécanique des machines.
 
@@ -121,11 +121,11 @@ La machine est spécialisée : elle incorpore un algorithme déterminé et n’e
 
 Mais Babbage veut aller plus loin. À partir de 1834, il conçoit l’***Analytical Engine***.
 
-Le *Difference Engine* se contentait de reproduire en série une opération arithmétique simple. L’*Analytical Engine*, lui, devait être capable de s’adapter à une infinité de calculs et constituer ainsi la première machine à calculer **programmable**.
+La *Difference Engine* était spécialisée et exécutait un algorithme incorporé dans ses engrenages. L’*Analytical Engine*, elle, devait pouvoir exécuter une grande variété de suites d’opérations : c’est un projet de machine générale et programmable.
 
-On peut, de ce point de vue, considérer le *Difference Engine* comme l’ancêtre de l’ordinateur. Cette machine possédait en effet une mémoire, une unité de calcul, un système d’instructions. Son architecture était donc très proche, d’un point de vue logique, des ordinateurs actuels - même si sa conception était évidemment mécanique, et non électronique.
+Ses plans prévoient un *Store* — une mémoire —, un *Mill* — une unité de calcul —, ainsi qu’un système de contrôle. Les instructions et les données doivent être introduites par des cartes perforées, selon un principe déjà utilisé par le métier Jacquard. Son architecture était donc très proche, d’un point de vue logique, des ordinateurs actuels - même si sa conception était évidemment mécanique, et non électronique.
 
-La machine analytique ne fonctionnera jamais, en grande partie en raison de la piètre qualité des pièces mécaniques disponibles à l’époque - en partie aussi parce que Babbage ne va cesser d’en modifier les plans.
+Il faut donc distinguer les deux machines : la *Difference Engine* n’est pas un ordinateur programmable au sens contemporain ; l’*Analytical Engine* en constitue un projet mécanique général, dont l’architecture annonce certains principes des ordinateurs modernes.
 
 L’*Analytical Engine* ne sera jamais achevée. Le projet reste pris dans des difficultés de financement, de fabrication et de coopération avec les ingénieurs et les ateliers, tandis que Babbage en modifie régulièrement les plans. Le Science Museum conserve seulement un modèle d’essai partiel, réalisé autour du *Mill* et d’un mécanisme d’impression.
 
