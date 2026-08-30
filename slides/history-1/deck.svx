@@ -184,8 +184,9 @@ Or cette gouvernementalité a besoin d’un savoir spécifique. C’est dans ce 
 
 La statistique, en effet, ne se contente pas de décrire la population : elle la rend calculable et permet d’agir sur elle à partir de taux, de moyennes, de tendances et de risques plutôt que sur chaque individu. Elle transforme une multiplicité d’habitants en une population lisible et gouvernable — pour la fiscalité, la conscription, la santé publique, la main-d’oeuvre ou la planification.
 
-Exemmple du suicide 
-
+:::example
+L'étude statistique du suicide offre un exemple paradigmatique de ce phénomène. Considéré isolément, le suicide semble en effet relever d’une décision strictement individuelle. Pourtant, l’étude statistique de séries suffisamment longues — notamment depuis les travaux d’Émile Durkheim à la fin du XIXe siècle — fait apparaître des régularités dans les taux de suicide selon les périodes, les groupes sociaux et les degrés d’intégration sociale. Ces régularités ne suppriment pas la singularité de chaque acte, mais elles rendent visibles des conditions collectives qui n’apparaissent pas à l’échelle individuelle. Elles peuvent dès lors orienter des politiques publiques de prévention : accès aux soins psychiques, dispositifs d’écoute et d’intervention d’urgence, lutte contre l’isolement ou prise en compte des situations sociales à risque.
+:::
 
 C’est dans ce contexte que les États-Unis publient, en 1889, un appel d’offre pour automatiser le processus de traitement des données du recensement prévu en 1890. Les données issues du recensement de 1880, en effet, ne sont toujours pas traitées près d’une décennie après leur collecte. À l’approche du recensement suivant, les États-Unis lancent donc un appel d’offres pour automatiser le traitement de ces données et éviter un nouveau délai de cette ampleur.
 
@@ -197,16 +198,14 @@ Cet appel d'offre sera remporté par un certain Hermann Hollerith..
 
 --- notes
 
-Hermann Hollerith est un ingénieur américain d’origine allemande.
-
-Pour répondre à l’appel d’offres du gouvernement américain, Hollerith propose une machine à cartes visant à produire de la statistique : la **tabulatrice**. Il remportera le marché du recensement de 1890.
+Hermann Hollerith est un ingénieur américain d’origine allemande qui a conçu une machine à cartes visant à produire de la statistique : la **tabulatrice**.
 
 ---
 ![Tabulatrice](/tabulatrice.jpg){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
-La tabulatrice conçue par Herman Hollerith s’inspire des machines à calculer traditionnelles, mais en dépasse les limites par le recours à une technologie nouvelle pour l’époque : l’électricité.
+La tabulatrice d'Hollerith s’inspire des machines à calculer traditionnelles, mais en dépasse les limites par le recours à une technologie nouvelle pour l’époque : l’électricité.
 
 Chaque individu y est représenté par une carte perforée, divisée en lignes et colonnes. Ces perforations codent des informations propres à chaque individu : âge, sexe, profession, situation familiale, etc. La carte est insérée dans la machine, au-dessus d’un ensemble de petits réservoirs remplis de mercure. Une série d’aiguilles métalliques explore alors la carte. Lorsque l’aiguille rencontre une perforation, elle entre en contact avec le mercure. Ce contact ferme un circuit électrique et actionne un compteur. La machine additionne ainsi les données et produit automatiquement des statistiques.
 
