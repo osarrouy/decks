@@ -84,23 +84,17 @@ On retrouvera d’ailleurs cette articulation entre formalisation de la pensée 
 
 --- notes
 
-Babbage, mathématicien, ingénieur et économiste anglais du XIXᵉ siècle, ne cherche pas à automatiser « la pensée » en général.
+Babbage, mathématicien, ingénieur et économiste anglais du XIXᵉ siècle, est habité par les fantasmes de son époque.
 
-Au début du XIXᵉ siècle, un *computer* désigne encore une personne chargée d’effectuer des calculs à la main pour l’État, la marine ou les sociétés savantes. Ces calculateurs sont souvent des femmes, parce que ce travail est perçu comme répétitif, minutieux et subalterne. Il peut même être effectué à domicile, ce qui constitue une première forme de réseau de calcul.
-
-Nous sommes en plein XIXᵉ siècle et, en Angleterre, la révolution industrielle bat son plein.
+Nous sommes en plein XIXe siècle et, en Angleterre, la révolution industrielle bat son plein. Le Royaume-Uni est en train de devenir l’usine du monde, et partout, les gestes et les rythmes se voient soumis à la rationalité mécanique des machines.
 
 Le calcul est au coeur de cette révolution : dans les tables de navigation liées au commerce maritime et à l’expansion coloniale, dans les calculs astronomiques, et dans les séries numériques nécessaires à la maîtrise des machines à vapeur.
 
-Or ces calculs, réalisés à la main, sont longs, coûteux et exposés aux erreurs. Babbage cherche donc à mécaniser une partie de ce travail intellectuel répétitif, afin d’accélérer la production de tables numériques et d’en améliorer la régularité.
+Or, au début du XIXe siècle, un *computer* désigne encore une personne chargée d’effectuer à la main des calculs pour l’État, la marine ou les sociétés savantes. Ces calculateurs sont souvent des femmes, d'ailleurs, parce que ce travail est perçu comme répétitif, minutieux et subalterne. Il peut même être effectué à domicile, ce qui constitue une première forme de réseau de calcul.
 
-Le Royaume-Uni est en train de devenir l’usine du monde, et partout, les gestes et les rythmes se voient soumis à la rationalité mécanique des machines.
+Ces calculs, réalisés à la main, sont évidemment longs, coûteux et exposés à l'erreur. Les machines cassent, les marins se perdent, les marchandises disparaissent. Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire. 
 
-Le calcul est, évidemment, au coeur de cette révolution : dans les tables de navigation qui guident les marins à travers l’Atlantique du commerce triangulaire, dans les calculs astronomiques par lesquels ces marins s’orientent, dans les séries numériques, aussi, à partir desquelles on s’efforce alors de dompter le pouvoir nouveau des machines à vapeur.
-
-Or ces calculs, réalisés à la main, sont truffés d’erreurs. Les machines cassent, les marins se perdent, les marchandises disparaissent. Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire.
-
-Babbage va donc exhumer l’héritage de Pascal et s’atteler à la conception d’une machine visant à automatiser - et donc à prévenir de toute erreur humaine - les nombreuses opérations de calcul que requièrent la révolution industrielle et la mondialisation qui l’accompagne.
+Babbage cherche donc à mécaniser une partie de ce travail intellectuel répétitif, afin d’accélérer la production de tables numériques et d’en améliorer la régularité.
 
 ---
 ![Difference engine](/difference_engine.png){data-glow="strong" class="slide-image-fill"}
@@ -119,7 +113,7 @@ La machine est spécialisée : elle incorpore un algorithme déterminé et n’e
 
 --- notes
 
-Mais Babbage veut aller plus loin. À partir de 1834, il conçoit l’***Analytical Engine***.
+Mais Babbage veut aller plus loin. À partir de 1834, il travaille sur l’***Analytical Engine***.
 
 La *Difference Engine* était spécialisée et exécutait un algorithme incorporé dans ses engrenages. L’*Analytical Engine*, elle, devait pouvoir exécuter une grande variété de suites d’opérations : c’est un projet de machine générale et programmable.
 
@@ -133,16 +127,13 @@ Ce qui importe ici est toutefois moins le destin commercial de la machine analyt
 
 ---
 
-<!-- slide: id="history-011-ada-lovelace" title="Ada Lovelace" steps=0 -->
-## Ada Lovelace
-1815-1852
-<img class="history-asset" src="/lovelace.jpg" alt="lovelace" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Ada Lovelace" dates="1815-1852" picture="/lovelace.jpg" />
 
 --- notes
 
 C’est ici qu’intervient Ada Lovelace, fille du poète Lord Byron et de la mathématicienne Anne Isabella Milbanke.
 
-En 1843, elle traduit le texte de Luigi Menabrea sur l’*Analytical Engine* et lui ajoute des *Notes* plus longues que le texte original. Elle y décrit notamment un « diagram » pour le calcul des nombres de Bernoulli, généralement considéré comme le premier programme documenté pour une machine.
+En 1843, elle traduit le texte de Luigi Menabrea sur l’*Analytical Engine* et lui ajoute des *Notes* plus longues que le texte original. Elle y décrit notamment un « diagram » pour le calcul des nombres de Bernoulli, généralement considéré comme le premier programme documenté pour une machine.
 
 Lovelace comprend que la machine ne doit pas seulement manipuler des nombres comme des quantités : des nombres peuvent aussi représenter des lettres, des sons ou d’autres symboles. Elle envisage ainsi la possibilité de composer de la musique à partir d’opérations formelles.
 
@@ -150,81 +141,67 @@ Elle ne parle pas encore d’« algorithme », mais de *diagram* et de « scienc
 
 Le langage de programmation Ada sera nommé en son hommage. Mais son histoire ne doit pas faire oublier les nombreuses femmes anonymes qui effectuaient alors le travail quotidien du calcul.
 
+### Un héritage
+
 L’ambition de la machine analytique restera toutefois différée pendant plus d’un siècle. Son intérêt historique tient précisément à cette séparation anticipée entre une machine matérielle et les suites d’instructions qui peuvent la commander.
 
-Les préoccupations de l’époque sont plus directement pratiques.
+Mais les préoccupations de l’époque sont plus directement pratiques. Le développement du capitalisme et de l’État moderne va réclamer des machines qu’elles rendent lisibles, par la manipulation du chiffre, le désordre des hommes et les hasards de leurs destins.
 
-Le développement du capitalisme et de l’État moderne va réclamer des machines qu’elles rendent lisibles, par la manipulation du chiffre, le désordre des hommes et les hasards de leurs destins.
+---
+## The control revolution
 
-Un homme, et une invention technique, vont de ce point de vue marquer la fin du XIXᵉ et le début du XXᵉ siècle.
+--- notes
+
+Jusqu’au XVIIᵉ siècle, les sociétés européennes sont majoritairement féodales et rurales.
+
+Mais, au cours des XVIIᵉ, XVIIIᵉ et surtout XIXᵉ siècles, l’économie des pays européens s’industrialise progressivement, en même temps que leurs appareils d’État se complexifient et se ramifient.
+
+L’industrialisation transforme profondément les vitesses et les échelles de l’activité humaine. La vapeur accélère la production et les transports. Le chemin de fer déplace rapidement des personnes et des marchandises sur de longues distances. Le télégraphe permet à un message de voyager plus vite que son porteur. Les entreprises et les administrations coordonnent des ensembles toujours plus vastes.
+
+Ces innovations ne résolvent pas seulement certains problèmes : elles en produisent aussi de nouveaux. Une locomotive peut aller plus vite qu’un cheval, mais il faut savoir où se trouvent les autres trains, organiser les croisements, transmettre les horaires et éviter les collisions. Une usine peut produire davantage, mais il faut coordonner l’approvisionnement, le travail, le stockage et la distribution du torrent de produits qui en sortent. Les marchandises peuvent traverser un continent, mais il faut savoir où elles se trouvent et à qui elles sont destinées.
+
+L’historien James R. Beniger décrit rétrospectivement cette transformation comme une **révolution du contrôle**. L’accélération des flux matériels — production, transports, marchandises, informations — crée une crise de coordination. Elle s’accompagne du développement de technologies de l’information, de procédures administratives et de dispositifs de suivi.
+
+Cette révolution ne concerne d'ailleurs pas que le secteur industriel ou privé. Elle affecte également la rationalité de l'État et du pouvoir.
+
+Les analyses du philosophe Michel Foucault permettent d'éclairer ce phénomène. Il montre ainsi que, jusqu'au XVIIè siècle, le pouvoir opère d'abord comme un pouvoir souverain s'exerçant sur un territoire et sur des sujets : il prélève, édicte la loi et se réserve le droit de « faire mourir ou de laisser vivre ». À partir du XVIIe siècle, ce pouvoir, s'il ne disparaît pas, se complète de nouveaux dispositifs.
+
+D’abord, une **anatomo-politique** discipline les corps individuels : les rendre utiles, dociles et productifs. Puis, surtout au XVIIIᵉ et au XIXᵉ siècle, une **biopolitique** qui prend pour objet la population comme réalité collective : naissances, mortalité, santé, circulation, richesse et force de travail : combien d’individus cette population compte-t-elle, comment est-elle répartie sur le territoire, qu’y produit-elle, quelle est son état de santé, de quoi meurt-elle, etc. ? Le pouvoir cherche alors moins seulement à interdire qu’à réguler, prévoir et optimiser les processus de la vie : « faire vivre et laisser mourir ».
+
+Ces préoccupations, évidemment, ne sont pas guidées par un souci altruiste. S’il s’agit de rendre ces populations lisibles, c’est pour optimiser la quantité de ressources - en hommes comme en richesses - qui peut en être extraite. Combien d’hommes puis-je lever pour mon armée ? Quel impôt mon État peut-il raisonnablement espérer prélever ? Comment, alors, optimiser l’usage de ces ressources pour maximiser la puissance de mon État ? Comment, aussi, agir sur le taux de natalité et le taux de mortalité pour optimiser la quantité de main d’oeuvre disponible ? Voilà les questions que se pose alors l’État - et qu’il continue, du reste, à se poser.
+
+Il ne s’agit pas d’un remplacement soudain de la souveraineté par la biopolitique, ni d’une causalité simple entre révolution industrielle et biopouvoir : ces mécanismes se superposent. La révolution du contrôle de Beniger décrit la crise de coordination liée à l’industrialisation ; la grille de Foucault montre comment des techniques de discipline et de régulation rendent cette coordination politiquement opératoire. Leur convergence devient particulièrement visible au XIXᵉ siècle.
+
+Cette gouvernementalité a besoin d’un savoir spécifique. C’est dans ce contexte que va naitre la statistique - du mot Staat, État - à partir du XVIIᵉ siècle. En 1662, John Graunt analyse ainsi, pour la première fois, les registres de mortalité londoniens pour y identifier des régularités : âge des décès, causes de mortalité, etc. Les statistiques démographiques, économiques et sanitaires vont dès lors constituer un des outils de mise en lisibilité privilégié du corps social des États modernes.
+
+La statistique, en effet, ne se contente donc pas de décrire la population : elle la rend calculable et permet d’agir sur elle à partir de taux, de moyennes, de tendances et de risques plutôt que sur chaque individu. Elle transforme une multiplicité d’habitants en une population lisible et gouvernable — pour la fiscalité, la conscription, la santé publique, la main-d’oeuvre ou la planification.
+
+C'est dans ce contexte que les recensements vont se multiplier, en Europe, puis aux États-Unis. Or, un tel travail de récolte et d'aggrégation des données à n'est pas sans poser problème. En 1889, les données du recensement américain de 1880 ne sont toujours pas traitées, alors qu'un nouveau recensement est planifié pour 1890. Les États-Unis lancent donc un appel d’offres pour automatiser le traitement de ces données.
+
+C’est dans ce contexte qu’intervient Hermann Hollerith.
 
 ---
 
-<!-- slide: id="history-012-hermann-hollerith" title="Hermann Hollerith" steps=0 -->
-## Hermann Hollerith
-1860 - 1929
-<img class="history-asset" src="/assets/hollerith.jpg" alt="hollerith" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Hermann Hollerith" dates="1860 - 1929" picture="/hollerith.jpg" />
 
 --- notes
 
 Cet homme est Hermann Hollerith, un ingénieur américain d’origine allemande.
 
-Plus que l’homme, il importe surtout, pour comprendre l’invention d’Hollerith, de se replacer dans le contexte historique de son époque.
-
-Jusqu’au XVIIᵉ siècle, les sociétés européennes sont majoritairement féodales et rurales.
-
-Mais, au cours des XVIIᵉ, XVIIIᵉ et XIXᵉ siècles, l’économie des pays européens s’industrialise progressivement, en même temps que leurs appareils d’État se complexifient et se ramifient.
-
-Il devient une préoccupation centrale, pour ces États, que de développer un certain savoir des populations qu’ils gouvernent : combien d’individus cette population compte-t-elle, comment est-elle répartie sur le territoire, qu’y produit-elle, quelle est son état de santé, de quoi meurt-elle, etc. ?
-
-Ces préoccupations, évidemment, ne sont pas guidées par un souci altruiste. S’il s’agit de rendre ces populations lisibles, c’est pour optimiser la quantité de ressources - en hommes comme en richesses - qui peut en être extraite.
-
-Combien d’hommes puis-je lever pour mon armée ? Quel impôt mon État peut-il raisonnablement espérer prélever ? Comment, alors, optimiser l’usage de ces ressources pour maximiser la puissance de mon État ? Comment, aussi, agir sur le taux de natalité et le taux de mortalité pour optimiser la quantité de main d’oeuvre disponible ? Voilà les questions que se pose alors l’État - et qu’il continue, du reste, à se poser.
-
-C’est dans ce contexte que va naitre la statistique - du mot Staat, État - à partir du XVIIᵉ siècle.
-
-En 1662, John Graunt analyse ainsi, pour la première fois, les registres de mortalité londoniens pour y identifier des régularités : âge des décès, causes de mortalité, etc.
-
-Les statistiques démographiques, économiques et sanitaires vont dès lors constituer un des outils de mise en lisibilité privilégié du corps social des États modernes.
-
-La statistique permet de transformer le désordre de la population en tableaux, en chiffres, en données intelligibles et exploitables.
-
-En organisant le désordre des hommes, la statistique les rend gouvernables.
-
-Les décennies et siècles suivants vont donc voir les opérations de recensements se multiplier, en Europe puis aux États-Unis, pour dénombrer les habitants, mesurer leurs richesses, organiser leur conscription, etc.
-
-C’est dans ce contexte que les États-Unis publient, en 1889, un appel d’offre pour automatiser le processus de traitement des données du recensement prévu en 1890.
-
-Les données issues du recensement de 1880, en effet, ne sont toujours pas traitées près d’une décennie après leur collecte.
-
-Hollerith va remporter cet appel d’offre avec une machine analytique à cartes visant à produire de la statistique : la **tabulatrice**.
+Il, va, pour répondre à l'appel d'offre du gouvernement américain qu'il remportera, proposer le développement d'une machine à cartes visant à produire de la statistique : la **tabulatrice**.
 
 ---
-
-<!-- slide: id="history-013-tabulatrice" title="Tabulatrice" steps=0 -->
-<img class="history-asset" src="/assets/tabulatrice.jpg" alt="tabulatrice" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+![Tabulatrice](/tabulatrice.jpg){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
 La tabulatrice conçue par Herman Hollerith s’inspire des machines à calculer traditionnelles, mais en dépasse les limites par le recours à une technologie nouvelle pour l’époque : l’électricité.
 
-Chaque individu y est représenté par une carte perforée, divisée en lignes et colonnes. Ces perforations codent des informations propres à chaque individu : âge, sexe, profession, situation familiale, etc.
+Chaque individu y est représenté par une carte perforée, divisée en lignes et colonnes. Ces perforations codent des informations propres à chaque individu : âge, sexe, profession, situation familiale, etc. La carte est insérée dans la machine, au-dessus d’un ensemble de petits réservoirs remplis de mercure. Une série d’aiguilles métalliques explore alors la carte. Lorsque l’aiguille rencontre une perforation, elle entre en contact avec le mercure. Ce contact ferme un circuit électrique et actionne un compteur. La machine additionne ainsi les données et produit automatiquement des statistiques.
 
-La carte est insérée dans la machine, au-dessus d’un ensemble de petits réservoirs remplis de mercure.
+Grâce à cette innovation, les données du recensement de 1890 aux États-Unis sont traitées en seulement 6 semaines. La tabulatrice s’imposa très vite dans divers secteurs : administrations d’État, compagnies d’assurance, chemin de fer, comptabilité, etc. La machine de Hollerith constitue ainsi le premier cas historique d’usage à grande échelle d’une machine à calculer pour organiser le désordre des hommes.
 
-Une série d’aiguilles métalliques explore alors la carte. Lorsque l’aiguille rencontre une perforation, elle entre en contact avec le mercure. Ce contact ferme un circuit électrique et actionne un compteur.
-
-La machine additionne ainsi les données et produit automatiquement des statistiques.
-
-Grâce à cette innovation, les données du recensement de 1890 aux États-Unis sont traitées en seulement 6 semaines.
-
-La tabulatrice s’imposa très vite dans divers secteurs : administrations d’État, compagnies d’assurance, chemin de fer, comptabilité, etc.
-
-La machine de Hollerith constitue ainsi le premier cas historique d’usage à grande échelle d’une machine à calculer pour organiser le désordre des hommes.
-
-En 1911, la *Tabulating Machine Company* d’Hollerith fusionnera avec trois autre compagnies pour former la *Computing-Tabulating-Recording Company*.
-
-Dix ans plus tard, son chiffre d’affaire aura triplé et son CEO, Thomas J. Watson, rebaptisera l’entreprise *International Business Machines Corporation* : IBM.
+En 1911, la *Tabulating Machine Company* d’Hollerith fusionnera avec trois autre compagnies pour former la *Computing-Tabulating-Recording Company*. Dix ans plus tard, son chiffre d’affaire aura triplé et son CEO, Thomas J. Watson, rebaptisera l’entreprise *International Business Machines Corporation* : IBM.
 
 ---
 
@@ -1160,6 +1137,9 @@ Ces contradictions mettront quelques années à se déployer pleinement, au mome
 Breton, P. (1990). *Une histoire de l’informatique*. Seuil.
 https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours
 Pasquinelli, M. (2023). *The Eye of the Master: A Social History of Artificial Intelligence*. Verso, chap. 2.
+Foucault, M. (1976). *Histoire de la sexualité I : La volonté de savoir*. Gallimard.
+Foucault, M. (2004). *Sécurité, territoire, population. Cours au Collège de France (1977–1978)*. Seuil/Gallimard.
+Beniger, J. R. (1986). *The Control Revolution: Technological and Economic Origins of the Information Society*. Harvard University Press.
 Science Museum Group. *Babbage’s Analytical Engine, 1834–1871 (Trial model)*.
 https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model
 
