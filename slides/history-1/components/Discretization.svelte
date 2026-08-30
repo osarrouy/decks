@@ -9,12 +9,12 @@
     );
     const levels = [
         [255, 255, 255, 255, 192, 0, 255],
-        [255, 255, 255, 160, 32, 255, 255],
+        [255, 255, 255, 255, 160, 32, 255],
         [255, 255, 255, 128, 0, 128, 255],
         [255, 255, 128, 0, 128, 255, 255],
-        [255, 128, 0, 128, 255, 255, 255],
-        [255, 128, 0, 128, 255, 255, 255],
-        [255, 255, 255, 255, 255, 255, 255],
+        [255, 128, 0, 255, 255, 255, 255],
+        [255, 0, 128, 255, 255, 255, 255],
+        [255, 224, 255, 255, 255, 255, 255],
     ];
     const formatLevel = (level: number) => String(level);
     const textColor = (level: number) => (level < 128 ? "#fff" : "var(--fg)");
@@ -45,8 +45,6 @@
                 d="M 62 190 C 68 165 77 139 96 121 C 112 106 130 102 147 90 C 164 78 173 59 178 39"
             />
         </svg>
-
-        <p>La forme n’est pas encore découpée en cases.</p>
     </section>
 
     <div class="arrow" data-active={$step >= 1} aria-hidden="true">→</div>
@@ -88,8 +86,6 @@
                 {/each}
             </g>
         </svg>
-
-        <p>Chaque case devient un <em>pixel</em>.</p>
     </section>
 
     <div class="arrow" data-active={$step >= 2} aria-hidden="true">→</div>

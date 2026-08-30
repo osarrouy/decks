@@ -164,21 +164,32 @@ L’historien James R. Beniger décrit rétrospectivement cette transformation c
 
 Cette révolution ne concerne d'ailleurs pas que le secteur industriel ou privé. Elle affecte également la rationalité de l'État et du pouvoir.
 
-Les analyses du philosophe Michel Foucault permettent d'éclairer ce phénomène. Il montre ainsi que, jusqu'au XVIIè siècle, le pouvoir opère d'abord comme un pouvoir souverain s'exerçant sur un territoire et sur des sujets : il prélève, édicte la loi et se réserve le droit de « faire mourir ou de laisser vivre ». À partir du XVIIe siècle, ce pouvoir, s'il ne disparaît pas, se complète de nouveaux dispositifs.
+Les analyses du philosophe Michel Foucault permettent d'éclairer ce déplacement historique. Il montre ainsi que, jusqu'au XVIIè siècle, le pouvoir opère d'abord comme un pouvoir souverain s'exerçant sur un territoire et sur des sujets : il prélève, édicte la loi et se réserve le droit de « faire mourir ou de laisser vivre ». À partir du XVIIe siècle, ce pouvoir, s'il ne disparaît pas, se complète de nouveaux dispositifs.
 
-D’abord, une **anatomo-politique** discipline les corps individuels : elle cherche à les rendre utiles, dociles et productifs. Puis, surtout aux XVIIIᵉ et XIXᵉ siècles, une **biopolitique** prend pour objet la population comme réalité collective : naissances, mortalité, santé, circulation, richesse et force de travail — combien d’individus cette population compte-t-elle, comment est-elle répartie sur le territoire, qu’y produit-elle, quel est son état de santé, de quoi meurt-elle, etc. ? Le pouvoir cherche alors moins seulement à interdire qu’à réguler, prévoir et optimiser les processus de la vie : « faire vivre et laisser mourir ».
+D’abord, une **anatomo-politique** discipline les corps individuels : elle cherche à les rendre utiles, dociles et productifs. La discipline agit sur les gestes, les temps, les espaces et les comportements ordinaires, plutôt que seulement par l’interdiction ou la sanction.
+
+Dans une école, par exemple, les élèves sont répartis dans un espace ordonné, soumis à un emploi du temps, à des exercices et à des examens. La caserne, l’atelier, l’hôpital ou la prison utilisent des dispositifs comparables : chacun y est localisé, surveillé, évalué et comparé aux autres. L’examen rend les individus visibles et produit des normes auxquelles ils sont incités à se conformer.
+
+À cette orthopédie sociale s’articule ensuite, surtout à partir des XVIIIe et XIXe siècles, une **biopolitique** qui prend pour objet la population comme réalité collective : naissances, mortalité, santé, circulation, richesse et force de travail — combien d’individus cette population compte-t-elle, comment est-elle répartie sur le territoire, qu’y produit-elle, quel est son état de santé, de quoi meurt-elle, etc. ? Le pouvoir cherche alors moins à interdire qu’à réguler, prévoir et optimiser les processus de la vie : non plus « faire mourir ou laisser vivre » mais « faire vivre et laisser mourir ».
+
+Un premier exemple apparaît avec la variole, la vaccination et l’hygiène publique aux XVIIIe et XIXe siècles. Les pouvoirs ne se contentent plus de sanctionner une infraction ou de secourir ponctuellement les victimes d’une épidémie : ils comptent les naissances et les décès, surveillent la mortalité, organisent la vaccination, contrôlent l’eau et l’assainissement. Des phénomènes biologiques deviennent ainsi des problèmes administratifs et des objectifs de gouvernement. Les autorités anciennes pouvaient déjà intervenir lors des famines ou des épidémies, mais elles ne disposaient pas — et ne cherchaient pas encore à produire — une gestion continue de la santé d’une population à partir de taux, de catégories et de normes.
+
+Un exemple récent est fourni par la pandémie de Covid-19. Le nombre de cas, le taux de reproduction, l’occupation des lits, l’âge ou les comorbidités transforment une maladie individuelle en indicateurs de l’état d’une population. Ces mesures orientent les confinements, le port du masque, la vaccination, la priorisation des soins et la répartition des ressources. Les quarantaines existaient déjà dans les villes anciennes ; la nouveauté tient moins à l’apparition soudaine d’une politique sanitaire qu’à son échelle, à sa continuité et à son pilotage statistique en temps réel.
 
 Ces préoccupations, évidemment, ne sont pas guidées par un souci altruiste. S’il s’agit de rendre ces populations lisibles, c’est pour optimiser la quantité de ressources - en hommes comme en richesses - qui peut en être extraite. Combien d’hommes puis-je lever pour mon armée ? Quel impôt mon État peut-il raisonnablement espérer prélever ? Comment, alors, optimiser l’usage de ces ressources pour maximiser la puissance de mon État ? Comment, aussi, agir sur le taux de natalité et le taux de mortalité pour optimiser la quantité de main d’oeuvre disponible ? Voilà les questions que se pose alors l’État - et qu’il continue, du reste, à se poser.
 
 Il ne s’agit pas d’un remplacement soudain de la souveraineté par la biopolitique, ni d’une causalité simple entre révolution industrielle et biopouvoir : ces mécanismes se superposent. La révolution du contrôle de Beniger décrit la crise de coordination liée à l’industrialisation ; la grille de Foucault montre comment des techniques de discipline et de régulation rendent cette coordination politiquement opératoire. Leur convergence devient particulièrement visible au XIXᵉ siècle.
 
-Cette gouvernementalité a besoin d’un savoir spécifique. C’est dans ce contexte que va naître la statistique — du mot *Staat*, État — à partir du XVIIᵉ siècle. En 1662, John Graunt analyse ainsi, pour la première fois, les registres de mortalité londoniens pour y identifier des régularités : âge des décès, causes de mortalité, etc. Les statistiques démographiques, économiques et sanitaires vont dès lors constituer l’un des outils privilégiés de mise en lisibilité du corps social des États modernes.
+Or cette gouvernementalité a besoin d’un savoir spécifique. C’est dans ce contexte que va naître la statistique — du mot *Staat*, État — à partir du XVIIᵉ siècle. En 1662, John Graunt analyse ainsi, pour la première fois, les registres de mortalité londoniens pour y identifier des régularités : âge des décès, causes de mortalité, etc. Les statistiques démographiques, économiques et sanitaires vont dès lors constituer l’un des outils privilégiés de mise en lisibilité du corps social des États modernes.
 
 La statistique, en effet, ne se contente pas de décrire la population : elle la rend calculable et permet d’agir sur elle à partir de taux, de moyennes, de tendances et de risques plutôt que sur chaque individu. Elle transforme une multiplicité d’habitants en une population lisible et gouvernable — pour la fiscalité, la conscription, la santé publique, la main-d’oeuvre ou la planification.
 
-C’est le recensement précédent qui alerte : celui de 1880 a demandé plus de huit ans pour être achevé. À l’approche du recensement suivant, prévu pour 1890, les États-Unis lancent donc un appel d’offres pour automatiser le traitement de ces données et éviter un nouveau délai de cette ampleur.
+Exemmple du suicide 
 
-C’est dans ce contexte qu’intervient Hermann Hollerith.
+
+C’est dans ce contexte que les États-Unis publient, en 1889, un appel d’offre pour automatiser le processus de traitement des données du recensement prévu en 1890. Les données issues du recensement de 1880, en effet, ne sont toujours pas traitées près d’une décennie après leur collecte. À l’approche du recensement suivant, les États-Unis lancent donc un appel d’offres pour automatiser le traitement de ces données et éviter un nouveau délai de cette ampleur.
+
+Cet appel d'offre sera remporté par un certain Hermann Hollerith..
 
 ---
 
@@ -186,7 +197,7 @@ C’est dans ce contexte qu’intervient Hermann Hollerith.
 
 --- notes
 
-Cet homme est Hermann Hollerith, un ingénieur américain d’origine allemande.
+Hermann Hollerith est un ingénieur américain d’origine allemande.
 
 Pour répondre à l’appel d’offres du gouvernement américain, Hollerith propose une machine à cartes visant à produire de la statistique : la **tabulatrice**. Il remportera le marché du recensement de 1890.
 
@@ -201,7 +212,7 @@ Chaque individu y est représenté par une carte perforée, divisée en lignes e
 
 Grâce à cette innovation, le décompte de la population du recensement de 1890 est achevé en environ six mois — le Franklin Institute en situe l’achèvement au 12 décembre 1890 —, tandis que la tabulation détaillée des données prend encore deux ans. La tabulatrice s’impose ensuite dans divers secteurs : administrations d’État, compagnies d’assurance, chemins de fer, comptabilité, etc.
 
-L’usage de la tabulatrice par les compagnies d’assurance constitue un exemple décisif. Le système de Hollerith est déjà testé en 1887 sur des données de mortalité pour des compagnies d’assurance, avant même le recensement de 1890. L’assurance n’est donc pas une application tardive de la tabulatrice : elle fait partie des premiers milieux qui rendent son développement économiquement utile.
+L’usage de la tabulatrice par les compagnies d’assurance constitue un exemple décisif. Le système de Hollerith est déjà testé en 1887 sur des données de mortalité pour des compagnies d’assurance, avant même le recensement de 1890. L’assurance n’est donc pas une application tardive de la tabulatrice : elle fait partie des premiers milieux qui rendent son développement économiquement utile. Ce n'est pas tout à fait un hasard.
 
 Dans l’assurance-vie, chaque assuré peut être représenté par un dossier puis par une carte : âge, sexe, profession, lieu de résidence, montant de la police, prime versée, état de santé ou issue du contrat. La tabulatrice ne « comprend » pas le destin d’un individu ; elle trie, croise et additionne des séries de dossiers. Elle transforme ainsi une pluralité de décès ou de sinistres singuliers en taux de mortalité, fréquences de sinistres, coûts moyens et écarts entre catégories.
 
@@ -342,6 +353,9 @@ Le processus se déroule en plusieurs étapes :
 
 Le rendu final d’une image numérique dépend de deux paramètres : la **résolution spatiale** (le nombre de pixels utilisés) et la **profondeur de codage** (le nombre de valeurs possibles par pixel). Plus ces deux dimensions sont élevées, plus l’image numérique se rapproche du rendu continu de l’image analogique.
 
+Le son fournit un autre exemple : une variation continue de la pression de l’air est transformée par le microphone en signal électrique, puis échantillonnée à intervalles réguliers. Lors de l’enregistrement, ce signal est échantillonné à 44 100 Hz par canal et chaque échantillon est quantifié sur 16 bits. Un CD stéréo contient donc deux flux de 44 100 échantillons par seconde, un pour chaque canal. La fréquence d’échantillonnage détermine la précision temporelle ; le nombre de bits détermine la finesse des niveaux d’intensité. Si ces deux paramètres sont trop faibles, certaines variations disparaissent ou sont déformées.
+
+Le même principe s’applique aux capteurs de température, de lumière ou de mouvement : une grandeur physique varie continûment, mais la machine n’enregistre qu’une suite de mesures numériques. Une vidéo combine ainsi plusieurs discrétisations : chaque image est découpée en pixels, chaque pixel reçoit des valeurs de couleur, et l’ensemble est échantillonné plusieurs fois par seconde. La numérisation ne copie donc pas le réel point par point ; elle en construit une représentation calculable à partir d’un nombre fini de mesures.
 ---
 
 <!-- slide: id="history-020-3-la-seconde-guerre-mondiale" title="3. La seconde guerre mondiale" steps=0 -->
