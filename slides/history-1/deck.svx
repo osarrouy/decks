@@ -374,76 +374,77 @@ alors elle écrit Y, se déplace vers la droite
 et passe dans l’état q'.
 ```
 
-Cette règle ne décrit pas seulement une valeur de sortie. Elle décrit une action, puis une nouvelle situation à partir de laquelle une autre règle pourra être appliquée.
+Cette règle ne décrit pas seulement une valeur de sortie. Elle décrit une action, puis une nouvelle situation - un nouvel état - à partir de laquelle une autre règle pourra être appliquée.
 :::
 
-Cette table de règles est fixée pour une machine. D’une exécution à l’autre, c’est typiquement l’entrée qui change ; si l’on modifie la table, on définit une autre machine. Turing va toutefois montrer qu’on peut imaginer une **machine universelle** : une machine dont les propres règles restent fixes et qui peut simuler n’importe quelle autre machine de Turing.
-
-
-
-A posteriori, la machine universelle de Turing montre qu’une machine peut recevoir sur son ruban la description codée d’une autre machine et de son entrée, puis en simuler l’exécution.
-
-Cette construction ne vise pas à décrire directement un ordinateur concret. Elle fournit un cadre formel pour penser ce qu’est un calcul, pour étudier ses limites et pour distinguer le mécanisme qui exécute les règles de la description des règles elle-même. Ses travaux contribuent d’abord à une réponse négative à l’Entscheidungsproblem : il n’existe pas de procédure unique décidant la validité de toutes les formules de la logique du premier ordre.
-
-
-
-L’apport de Turing est donc différent de celui de Boole : Boole donne aux relations logiques une structure algébrique ; Turing formalise une procédure qui peut enchaîner des opérations, utiliser une mémoire et éventuellement ne jamais s’arrêter.
-
-L’importance du modèle de Turing tient surtout à l’universalité : une machine universelle garde ses propres règles fixes, mais peut traiter comme des données la description d’une autre machine et l’entrée de celle-ci. Rétrospectivement, cette idée fonde le rapprochement entre calcul et programmation : un même mécanisme général peut exécuter des calculs différents lorsque leur description est fournie sous une forme codée.
-
-Un ordinateur réel n’est pas littéralement une machine de Turing : sa mémoire est finie et son organisation matérielle dépend d’autres contributions, notamment les architectures à programme enregistré associées aux travaux de von Neumann et d’autres acteurs. Turing fournit néanmoins un modèle théorique de l’universalité du calcul et de la séparation entre un mécanisme d’exécution, un programme et des données.
-
-Ce modèle, toutefois, reste très théorique. Comment, techniquement, concrétiser sa réalisation ?
-
-
-Pour établir un raccord avec une réalisation matérielle, il faut coder les états et les symboles par des suites de bits. Une condition telle que « la machine est dans l’état `q` et lit le symbole `X` » ne devient une fonction booléenne qu’après cet encodage.
-
-On peut alors synthétiser des fonctions logiques qui calculent la prochaine action : le prochain état, le symbole à écrire ou le déplacement à effectuer. Cette logique combinatoire ne conserve pas à elle seule l’état de la machine : des dispositifs de mémoire et de séquencement/contrôle sont également nécessaires.
-
-Ce rapprochement avec Shannon est rétrospectif : Turing ne construit pas un circuit et Shannon ne réalise pas, à lui seul, une machine de Turing complète. Les résultats de Shannon permettront néanmoins de comprendre comment matérialiser la logique de telles règles.
+Cette table de règles est fixée pour une machine : si l’on modifie la table, on définit une autre machine. Turing va toutefois montrer qu’on peut imaginer une **machine universelle** : une machine dont les propres règles restent fixes mais lui permettent de simuler n’importe quelle autre machine de Turing.
 
 ---
 
-<!-- slide: id="history-018-claude-shannon" title="Claude Shannon" steps=0 -->
-<div style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);align-items:center;gap:calc(var(--grid-unit) * 6);width:100%;">
-  <div>
-    <p class="kicker">1937–1938 · CIRCUITS DE COMMUTATION</p>
-    <h2>Claude Shannon</h2>
-    <p style="max-width:20ch;">La logique devient un dispositif électrique.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;margin-top:calc(var(--grid-unit) * 4);font-family:var(--font-mono);font-size:clamp(0.75rem,1.15vw,1.2rem);text-align:center;">
-      <div style="border:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">ENTRÉES</span><br /><code>0 / 1</code></div>
-      <div style="border-block:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">RELAIS</span><br /><strong>ET · OU · NON</strong></div>
-      <div style="border:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">SORTIE</span><br /><code>0 / 1</code></div>
-    </div>
-    <p style="margin-top:calc(var(--grid-unit) * 3);font-family:var(--font-mono);font-size:clamp(0.85rem,1.25vw,1.3rem);">Boole : expression logique<br />Shannon : circuit correspondant</p>
-  </div>
-  <div style="display:grid;justify-items:center;">
-    <img src="/assets/shannon.png" alt="Claude Shannon" data-glow="strong" style="max-width:100%;max-height:48vh;object-fit:contain;" />
-  </div>
-</div>
+<!-- slide: id="history-018-turing-universal" title="Machine de Turing universelle" steps=4 -->
+<script>
+  import TuringUniversalMachine from '$components/TuringUniversalMachine.svelte'
+</script>
+
+<TuringUniversalMachine />
+
+--- notes
+
+Pour comprendre la différence une machine universelle nommée U et la machine illustrée précédemment, appelons cette dernière une machine ordinaire, ou machine particulière.
+
+Une machine ordinaire possède une table de transition qui lui est propre. Cette table constitue sa procédure : si on la modifie, on définit une autre machine. D’une exécution à l’autre, l’entrée peut changer, mais les règles de la machine restent les mêmes.
+
+Une machine universelle, au contraire, conserve ses propres règles fixes. Nommons cette machine universelle `U`. Celle-ci reçoit sur son ruban une description codée d’une autre machine `M` et de l’entrée `w` de cette machine. On peut penser à M comme à un programme et à w comme à ses données : par exemple, Photoshop et une image particulière.
+
+:::example
+Dans l’animation, le ruban contient un **extrait** de la table de `M` :
+
+```text
+q₀ + 1 → 0, R, q₁
+q₁ + 0 → 1, R, q₁
+```
+
+et l’entrée `w` vaut `1`. Il ne s’agit pas de la table complète de `M`, mais d’un fragment suffisant pour rendre visible le principe.
+:::
+
+U ne remplace pas sa propre table de règles par celle de `M`. Elle parcourt la description codée, y retrouve la transition qui correspond à l’état et au symbole simulés, puis simule l’action de cette transition : écrire un symbole, déplacer la tête et mettre à jour l’état simulé. Elle recommence ensuite avec la configuration suivante.
+
+La différence essentielle est donc la suivante :
+
+```text
+machine ordinaire :
+    ses règles définissent directement son comportement
+
+machine universelle U :
+    ses règles fixes interprètent la description d’une autre machine
+```
+
+La machine universelle formalise l’idée d’un mécanisme général capable d’exécuter une grande variété de procédures lorsque leur description est fournie sous une forme codée. Le programme peut ainsi être traité comme une donnée.
+
+Cette idée préfigure le principe de l’ordinateur programmable : un même dispositif matériel peut exécuter des calculs différents sans que l’on reconstruise son mécanisme à chaque fois. Il suffit de lui fournir une autre description des opérations à effectuer : un autre programme
+
+Il faut toutefois éviter d’identifier la machine universelle de Turing à l’ordinateur concret. La machine de Turing possède un ruban potentiellement illimité et décrit un modèle abstrait. Un ordinateur réel possède une mémoire finie et son architecture à programme enregistré résulte d’autres travaux, notamment ceux associés à von Neumann. Turing fournit surtout le modèle théorique de l’universalité du calcul et de la séparation entre mécanisme d’exécution, programme et données.
+
+Pour construire matériellement un tel dispositif, il faudrait encoder les états et les symboles, sélectionner les transitions avec de la logique, conserver la configuration courante avec des dispositifs de mémoire et organiser le séquencement des actions. C’est à ce niveau que les résultats de Shannon permettront, rétrospectivement, de comprendre comment matérialiser une partie de la logique de ces transitions.
+
+---
+<Persona name="Claude Shannon" dates="1916 - 2001" picture="/shannon.png" />
 
 --- notes
 
 À la fin des années 1930, le mathématicien américain **Claude Shannon** établit un lien entre l’algèbre de Boole et les circuits de commutation. Il achève son mémoire de master au MIT en 1937 ; une version de ce travail, *A Symbolic Analysis of Relay and Switching Circuits*, est publiée en 1938.
 
-L’apport de Shannon est différent de celui de Boole : Boole avait transformé des relations logiques en opérations symboliques ; Shannon montre comment ces opérations peuvent être traduites en connexions électriques utilisant notamment des relais électromécaniques.
+Boole avait transformé des relations logiques en opérations symboliques ; Shannon montre comment ces opérations symboliques peuvent être traduites en connexions électriques utilisant notamment des relais électromécaniques.
 
-Un relais possède des états physiques distincts, par exemple un contact ouvert ou fermé. On peut leur associer conventionnellement les valeurs `0` et `1`.
+Un relais possède en effet des états physiques distincts, par exemple un contact ouvert ou fermé. On peut leur associer conventionnellement les valeurs `0` et `1`.
 
-Les informations peuvent alors être **codées en binaire**, sous forme de suites de `0` et de `1`. C'est-ce que l'on appelle la numérisation des données.
+Une expression logique peut ainsi être transformée en circuit de commutation matériel. Shannon ne propose pas une théorie générale du calcul et ne construit pas, à lui seul, une machine de Turing complète. Il fournit un principe de réalisation pour la logique de fonctions données.
 
-:::
+Les informations peuvent ainsi être **codées en binaire**, sous forme de suites de `0` et de `1`, puis soumises à des opérations logiques implémentées par des relais électro-mécaniques afin d'être manipulées.
 
-Une expression logique peut ainsi être transformée en circuit de commutation. Shannon ne propose pas une théorie générale du calcul et ne construit pas, à lui seul, une machine de Turing complète. Il fournit un principe de réalisation pour la logique de fonctions données.
-
-Le raccord avec Turing est rétrospectif. Après avoir codé les états et les symboles d’une machine par des bits, on peut exprimer les conditions de sa table de transition sous forme de fonctions booléennes, puis synthétiser la logique correspondante avec des circuits.
-
-Cette logique combinatoire calcule une action à partir des entrées présentes. Des dispositifs de mémoire et de séquencement/contrôle restent nécessaires pour conserver l’état de la machine et organiser l’enchaînement des actions.
-
-Le fait de représenter des états physiques par `0` et `1` explique pourquoi ces circuits se prêtent au traitement d’informations binaires. Il ne s’agit pas encore de la numérisation au sens strict : la slide suivante montrera comment une information analogique peut être convertie en une représentation numérique.
+Comment, alors, représenter l'information sous la forme de `0` et de `1`. C'est ce qu'on appelle le processus de numérisation.
 
 ---
-
 <!-- slide: id="history-019-3e14c2a3c9574088990af7840e46ce57acea9259" title="Numériser une image" steps=2 -->
 <script>
   import Discretization from '$components/Discretization.svelte'
@@ -471,24 +472,18 @@ Le rendu final d’une image numérique dépend de deux paramètres : la **réso
 Le son fournit un autre exemple : une variation continue de la pression de l’air est transformée par le microphone en signal électrique, puis échantillonnée à intervalles réguliers. Lors de l’enregistrement, ce signal est échantillonné à 44 100 Hz par canal et chaque échantillon est quantifié sur 16 bits. Un CD stéréo contient donc deux flux de 44 100 échantillons par seconde, un pour chaque canal. La fréquence d’échantillonnage détermine la précision temporelle ; le nombre de bits détermine la finesse des niveaux d’intensité. Si ces deux paramètres sont trop faibles, certaines variations disparaissent ou sont déformées.
 
 Le même principe s’applique aux capteurs de température, de lumière ou de mouvement : une grandeur physique varie continûment, mais la machine n’enregistre qu’une suite de mesures numériques. Une vidéo combine ainsi plusieurs discrétisations : chaque image est découpée en pixels, chaque pixel reçoit des valeurs de couleur, et l’ensemble est échantillonné plusieurs fois par seconde. La numérisation ne copie donc pas le réel point par point ; elle en construit une représentation calculable à partir d’un nombre fini de mesures.
+
 ---
 
 <!-- slide: id="history-020-3-la-seconde-guerre-mondiale" title="3. La seconde guerre mondiale" steps=0 -->
-## 3. La seconde guerre mondiale
+## war, war, war
+En fait on a de l'argent {.kicker}
 
 --- notes
 
-À la fin des années 1930, les principes théoriques essentiels de l’informatique moderne sont donc établis.
+À la fin des années 1930, les principes théoriques essentiels de l’informatique moderne sont donc établis. Personne, toutefois, ne s’est encore attelé à concrétiser ces idées. Un tel effort réclamerait, en effet, de longues et couteuses recherches. L’Europe comme les États-Unis payent encore le prix de la grande guerre et de la crise de 1929. L’heure n’est pas au financement de curiosités intellectuelles.
 
-Personne, toutefois, ne s’est encore attelé à concrétiser ces idées. Un tel effort réclamerait, en effet, de longues et couteuses recherches .
-
-L’Europe comme les États-Unis payent encore le prix de la grande guerre et de la crise de 1929. L’heure n’est pas au financement de curiosités intellectuelles.
-
-Le déclenchement de la seconde guerre mondiale va pourtant, en ce domaine comme dans tant d’autres, tout changer. L’informatique, lubie d’intellectuels, devient une nécessité d’État.
-
-La cryptographie, le calcul balistique et le projet Manhattan, en particulier, vous requérir des quantités de calcul astronomiques.
-
-Les financements vont donc abonder pour accélérer la mise au point des premiers ordinateurs modernes.
+Le déclenchement de la seconde guerre mondiale va pourtant, en ce domaine comme dans tant d’autres, tout changer. L’informatique, lubie d’intellectuels, devient une nécessité d’État. La cryptographie, le calcul balistique et le projet Manhattan, en particulier, vous requérir des quantités de calcul astronomiques. Les financements vont donc abonder pour accélérer la mise au point des premiers ordinateurs modernes.
 
 ---
 
@@ -522,7 +517,9 @@ Ce câblage, considéré comme une tache répétitive et sans intérêt, sera do
 
 Ces femmes deviendront ainsi les premières programmeuses de l’histoire - quoique leur héritage sera longtemps ignoré.
 
-L’*EDVAC*, conçu sur la base de l’*ENIAC*, dépassera cette limitation grâce à l’adoption d’une architecture dite de **von Neumann**, du nom du mathématicien et physicien qui l’établira, permettant de stocker les programmes dans la mémoire même de la machine.
+L’*EDVAC*, conçu sur la base de l’*ENIAC*, dépassera cette limitation en introduisant une idée décisive : le **programme enregistré**. Les instructions ne sont plus inscrites définitivement dans les circuits ou imposées par un recâblage ; elles sont codées et stockées dans la mémoire de la machine, avec les données qu’elles doivent traiter. L’unité de contrôle peut alors lire une instruction, l’interpréter, l’exécuter, puis passer à la suivante.
+
+Cette organisation sera associée à l’**architecture de von Neumann**. Elle concrétise, dans une machine électronique à mémoire finie, une idée déjà présente dans la machine universelle de Turing : un mécanisme général peut exécuter des calculs différents lorsque la description des opérations lui est fournie sous une forme codée. Le matériel reste en grande partie le même ; c’est le programme stocké qui change..
 
 L’*EDVAC* est ainsi considéré comme l’un des premiers ordinateurs universellement programmables.
 
