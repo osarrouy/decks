@@ -92,7 +92,7 @@ Le calcul est au coeur de cette révolution : dans les tables de navigation lié
 
 Or, au début du XIXe siècle, un *computer* désigne encore une personne chargée d’effectuer à la main des calculs pour l’État, la marine ou les sociétés savantes. Certaines femmes travaillent déjà dans ces bureaux et réseaux de calcul ; la féminisation de ces équipes s’accentue surtout à la fin du XIXe siècle, lorsque le calcul est davantage organisé comme un travail de bureau répétitif. Il peut même être effectué à domicile, ce qui constitue une première forme de réseau de calcul.
 
-Ces calculs, réalisés à la main, sont évidemment longs, coûteux et exposés à l'erreur. Les machines cassent, les marins se perdent, les marchandises disparaissent. Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire. 
+Ces calculs, réalisés à la main, sont évidemment longs, coûteux et exposés à l'erreur. Les machines cassent, les marins se perdent, les marchandises disparaissent. Ces erreurs sont des accidents, et les accidents constituent déjà, pour le XIXème siècle, une anomalie qu’il convient de prévenir, d’éliminer, de circonscrire.
 
 Babbage cherche donc à mécaniser une partie de ce travail intellectuel répétitif, afin d’accélérer la production de tables numériques et d’en améliorer la régularité.
 
@@ -494,22 +494,20 @@ Le déclenchement de la seconde guerre mondiale va pourtant, en ce domaine comme
 
 --- notes
 
-Ces recherches aboutissent, à la fin de la guerre, à la conception de ce qu’on considère parfois comme les premiers ordinateurs « modernes » :
-l’**ENIAC** en 1945, puis l’**EDVAC** en 1949.
+Ces recherches aboutissent, à la fin de la guerre, à la conception de ce qu’on considère parfois comme les premiers ordinateurs « modernes » : l’**ENIAC** en 1945, puis l’**EDVAC** en 1949.
 
 Ces machines sont « modernes » en ceci que leur fonctionnement repose, pour la première fois, sur des composants électroniques : des tubes à vide - ou lampes électroniques.
 
 Ces tubes ne sont pas encore des transistors miniaturisés en silicium, comme ceux qui équipent nos ordinateurs actuels. Ils ressemblent plutôt à de grosses ampoules. On les retrouve d’ailleurs encore aujourd’hui dans certains amplis à lampe, réputés pour leur son chaud et légèrement saturé.
 
-Ces ordinateurs ne ressemblent donc en rien aux MacBooks contemporains. L’ENIAC pesait près de trente tonnes et occupait la surface d’un gymnase. Quand on l'allume pour la première fois, les lumières de Philadelphie vacillent.
+Ces ordinateurs ne ressemblent donc en rien aux MacBooks contemporains. L’ENIAC pèse près de trente tonnes et occupe la surface d’un gymnase. Quand on l'allume pour la première fois, les lumières de Philadelphie vacillent.
 
 L’ENIAC, par ailleurs, ne ne permettait pas de charger et de stocker des « programmes ». Il devait être à chaque fois reprogrammé à la main en recablant ses circuits.
 
 ---
 
-<!-- slide: id="history-022-eniac" title="Eniac" steps=0 -->
-<img class="history-asset" src="/assets/eniac.png" alt="eniac" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;pointer-events:none;" />
-<p class="history-caption" style="position:relative;z-index:1;font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">ENIAC</p>
+![ENIAC](/eniac.png){data-glow="strong" class="slide-image-fill"}
+
 
 --- notes
 
