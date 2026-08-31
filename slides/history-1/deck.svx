@@ -241,45 +241,110 @@ Une telle formalisation, toutefois, fait encore défaut au début du XXᵉ sièc
 Une succession d’avancées théoriques va néanmoins répondre à ce problème. La première d’entre elle réclame un léger retour en arrière.
 
 ---
-<Persona name="George Boole" dates="1815 - 1854" picture="/bool.webp" />
+<Persona name="George Boole" dates="1815 - 1864" picture="/bool.webp" />
 
 --- notes
 
-George Boole est un mathématicien, logicien et philosophe britannique, considéré comme l’inventeur de l’algèbre dite **booléenne**.
+George Boole est un mathématicien, logicien et philosophe britannique, considéré comme l’un des fondateurs de la logique symbolique moderne.
 
 :::comment
-La logique constitue un champ de la philosophie et des mathématiques qui s’efforce d’identifier les règles permettant de distinguer un raisonnement valide d’un raisonnement non-valide.
+La logique est un champ de la philosophie et des mathématiques qui cherche à expliciter les règles qui permettent de distinguer un raisonnement valide d’un raisonnement non valide.
 :::
 
-Dans son ouvrage majeur *An Investigation of the Laws of Thought* (1854), Boole montre que les propositions logiques peuvent être représentées par des symboles et manipulées selon des règles algébriques simples.
+La logique existait bien avant Boole, notamment sous la forme de règles portant sur les propositions et les raisonnements. Mais ces règles restaient principalement des règles d’inférence : elles indiquaient comment passer correctement d’énoncés à d’autres énoncés.
 
-Il développe ainsi une algèbre binaire reposant sur deux valeurs fondamentales - vrai ou faux, notées 1 et 0 - et des opérations équivalentes à celles que nous appelons aujourd’hui ET, OU et NON.
+:::example
+Un exemple classique de syllogisme aristotélicien :
 
-Il démontre ainsi que les raisonnements logiques peuvent être ramenés à des opérations de calcul dans un espace booléen composé uniquement de 0 et de 1.
+```text
+Tous les êtres humains sont mortels.
+Socrate est un être humain.
+Donc Socrate est mortel.
+```
 
-Cette avancée ne s’accompagnera pas immédiatement d’innovations techniques. Elle aura en revanche des répercussions décisives sur la pensée de son époque - et des siècles suivants.
+La conclusion est valide parce que sa forme garantit que, si les deux prémisses sont vraies, la conclusion l’est également. La logique étudie ici la règle qui permet de passer des prémisses à la conclusion.
 
-Dorénavant, il sera acquis que tout problème logique peut-être exprimé dans l’espace booléen et ainsi être transformé en un problème calculable.
+Cet exemple permet de préciser l’apport de Boole. La logique aristotélicienne disposait déjà de termes et de formes schématiques. Boole donne aux relations logiques une structure algébrique : elles peuvent désormais être calculées, transformées et simplifiées selon des règles symboliques.
+:::
 
-Reste alors à définir, formellement, ce qu’est un calcul, et comment en automatiser, éventuellement, l’exécution.
+
+
+
+---
+<div>
+<p class="kicker">EXEMPLE</p>
+<p style="font-family:var(--font-mono);font-size:clamp(1rem,1.8vw,1.9rem);">Accès autorisé = B ET C</p>
+<p style="font-size:clamp(1rem,1.45vw,1.55rem);">Une règle de décision devient une fonction que l’on peut évaluer.</p>
+<table style="border-collapse:collapse;margin-top:calc(var(--grid-unit) * 3);font-family:var(--font-mono);font-size:clamp(0.9rem,1.25vw,1.3rem);text-align:center;">
+    <thead>
+    <tr><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">B</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">C</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">B ET C</th></tr>
+    </thead>
+    <tbody>
+    <tr><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">0</td></tr>
+    <tr><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">1</td><td style="padding:0.35em 0.9em;">0</td></tr>
+    <tr><td style="padding:0.35em 0.9em;">1</td><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">0</td></tr>
+    <tr><td style="padding:0.35em 0.9em;">1</td><td style="padding:0.35em 0.9em;">1</td><td style="padding:0.35em 0.9em;color:var(--accent);">1</td></tr>
+    </tbody>
+</table>
+</div>
+
+--- notes
+
+Une proposition peut prendre deux valeurs de vérité — vrai ou faux — et les opérations **ET**, **OU** et **NON** permettent de construire des expressions plus complexes.
+
+:::example
+Supposons :
+
+```text
+B = le badge est valide
+C = le code est correct
+```
+
+La règle « l’accès est autorisé si le badge est valide et si le code est correct » s’écrit :
+
+```text
+Accès autorisé = B ET C
+```
+
+Pour chaque combinaison de `B` et `C`, on peut calculer le résultat :
+
+```text
+B   C   B ET C
+0   0     0
+0   1     0
+1   0     0
+1   1     1
+```
+
+La logique devient ainsi une opération systématique sur des symboles.
+:::
+L’apport décisif n’est donc pas l’invention de la logique, ni même la simple distinction entre vrai et faux. C’est le fait de rendre les relations logiques **calculables** : une expression symbolique peut être évaluée selon des règles qui ne dépendent plus de son contenu particulier.
+
+Cette avancée reste à l'époque une avancée purement mathématique : Boole ne construit pas d’ordinateur et ne décrit encore aucun dispositif matériel apte à mettre en oeuvre ou à vérifier ces règles de composition. Elle rend toutefois possible une nouvelle manière de penser la logique : non seulement comme un ensemble de raisonnements valides, mais comme un domaine où l’on peut appliquer des opérations et produire mécaniquement un résultat.
+
+Néanmoins, la calculabitité logique dont il est ici question n'est pas encore celle des ordinateurs. Une expression propositionnelle finie peut être évaluée de façon simple - par exemple avec une table de vérité. Cela ne signifie pas encore que toute question logique possède une procédure mécanique de décision.
+
+Ce problème sera abordé bien plus tard - notamment par Alan Turing.
+
 
 ---
 <Persona name="Alan Turing" dates="1912 - 1954" picture="/turing.jpg" />
 
 --- notes
 
-En 1936, Alan Turing, mathématicien anglais, rédige et soumet un article fondateur, publié en 1937 sous le titre *On Computable Numbers, with an Application to the Entscheidungsproblem*. Il y propose un modèle théorique du calcul. Son travail s’inscrit notamment dans le prolongement d’une question posée par David Hilbert : existe-t-il une procédure générale et mécanique permettant de déterminer si une proposition logique est valide ?
+En 1936, Alan Turing, mathématicien anglais, rédige et soumet un article fondateur, publié en 1937 sous le titre *On Computable Numbers, with an Application to the Entscheidungsproblem*. Il y propose un modèle théorique du calcul.
 
-Pour avancer, Turing cherche à formaliser ce qu’est une procédure de calcul : une suite d’opérations élémentaires appliquées à des symboles selon des règles précises : ce qu'on appelle aujourd'hui un **algorithme**.
+La question à laquelle Turing s'efforce de répondre est alors celle de L’**Entscheidungsproblem** - formulée notamment  dans le programme de Hilbert : existe-t-il une procédure mécanique permettant de décider, pour toute formule de la logique du premier ordre, si elle est valide ?
+
+Le lien avec Boole doit être compris avec prudence. Boole a montré qu’un domaine du raisonnement pouvait être algébrisé et traité par des règles symboliques. L’_Entscheidungsproblem_ pose une question plus générale : existe-t-il une procédure mécanique unique permettant de décider, pour toute formule de la logique du premier ordre, si elle est valide, quelle que soit sa complexité ?
+
+Turing cherche donc à préciser ce que signifie « une procédure mécanique » : une suite d’opérations élémentaires appliquées à des symboles selon des règles précises - ce qu’on appelle aujourd’hui un **algorithme**.
 
 On peut donner une première image de cette idée avec une recette de cuisine, qui décrit étape par étape les actions à effectuer pour obtenir un résultat. Néanmoins, contrairement à une recette ordinaire, les instructions d’un algorithme doivent être suffisamment précises pour ne pas nécessiter d’interprétation humaine.
 
-Turing imagine alors une machine — purement théorique — capable d’exécuter automatiquement un calcul décrit par une suite de règles. Une machine de Turing se compose ainsi d’un ruban potentiellement illimité, divisé en cases et utilisé comme mémoire, d’une tête capable de lire et d’écrire des symboles, ainsi que d’un nombre fini d’états et de règles de transition qui déterminent son comportement.
-
-Turing montre ensuite qu’il est possible de concevoir une **machine universelle** : une machine capable de simuler n’importe quelle autre machine de Turing à partir de la description de ses règles. Cette construction ne vise pas à décrire directement un ordinateur concret, mais à fournir un cadre formel pour penser ce qu’est un calcul et pour étudier ses limites. Aujourd’hui, la machine de Turing constitue l’un des modèles théoriques fondamentaux de l’informatique.
+Turing imagine alors une machine — purement théorique — capable d’exécuter automatiquement un calcul décrit par une suite de règles.
 
 ---
-
 <!-- slide: id="history-017-turing-machine" title="Machine de Turing" steps=3 -->
 <script>
   import TuringMachine from '$components/TuringMachine.svelte'
@@ -289,45 +354,90 @@ Turing montre ensuite qu’il est possible de concevoir une **machine universell
 
 --- notes
 
-La **machine de Turing** est un modèle théorique qui se compose d’un ruban potentiellement illimité, divisé en cases.
+Une machine de Turing se compose ainsi d’un ruban potentiellement illimité, divisé en cases et utilisé comme mémoire, d’une tête capable de lire et d’écrire des symboles, ainsi que d’un nombre fini d’états et de règles de transition qui déterminent son comportement.
 
-Chaque case peut contenir un symbole — par exemple `0`, `1` ou un symbole vide.
+Chaque case peut contenir un symbole appartenant à un alphabet fini — par exemple `0`, `1` ou un symbole vide.
 
-Une tête de lecture/écriture se déplace sur ce ruban et peut effectuer trois opérations élémentaires :
-
-1. Lire le symbole présent sous la tête
-2. Écrire ou modifier ce symbole
-3. Se déplacer d’une case vers la gauche ou vers la droite
+Une tête de lecture/écriture se déplace sur ce ruban. Elle peut lire le symbole présent, écrire ou modifier ce symbole, puis se déplacer d’une case vers la gauche ou vers la droite.
 
 L’idée décisive introduite par Turing est que le comportement de la machine dépend à la fois du **symbole lu sur le ruban** et de l’**état interne de la machine**.
 
 Selon ces deux informations, une règle de transition lui indique quoi faire : écrire un symbole, se déplacer, et éventuellement changer d’état.
 
-Cette table de règles est fixée pour une exécution donnée. En la modifiant, on définit une autre machine et donc un autre calcul. C’est en ce sens que le modèle est programmable.
+:::example
+Une règle peut être formulée ainsi :
 
-A posteriori, la machine universelle de Turing montrera qu’une seule machine peut simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
+```text
+Si la machine est dans l’état q
+et lit le symbole X,
+alors elle écrit Y, se déplace vers la droite
+et passe dans l’état q'.
+```
 
-Ainsi, Turing offre un modèle théorique rigoureux du calcul mécanique, qui constitue l’une des bases de l’informatique moderne.
+Cette règle ne décrit pas seulement une valeur de sortie. Elle décrit une action, puis une nouvelle situation à partir de laquelle une autre règle pourra être appliquée.
+:::
+
+Cette table de règles est fixée pour une exécution donnée. En la modifiant, on définit une autre machine et donc un autre calcul. Turing va toutefois montrer qu'on peut en fait imaginer une **machine universelle** : une machine capable de simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
+
+---
+
+--- notes
+
+A posteriori, la machine universelle de Turing montre qu’une seule machine peut simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
+
+Cette construction ne vise pas à décrire directement un ordinateur concret, mais à fournir un cadre formel pour penser ce qu’est un calcul et pour étudier ses limites. Ses travaux contribuent d'abord à une réponse négative à l’Entscheidungsproblem : il n’existe pas de procédure unique décidant la validité de toutes les formules de la logique du premier ordre. Mais ils vont aussi fournir, par une sorte d'effet de bord, le modèle formel de ce qui deviendra bientôt l'ordinateur.
+
+
+L’apport de Turing est donc différent de celui de Boole : Boole rend calculables des expressions logiques finies ; Turing formalise une procédure qui peut enchaîner des opérations, utiliser une mémoire et éventuellement ne jamais s’arrêter.
 
 Ce modèle, toutefois, reste très théorique. Comment, techniquement, concrétiser sa réalisation ?
+
+
+Pour établir un raccord avec une réalisation matérielle, il faut coder les états et les symboles par des suites de bits. Une condition telle que « la machine est dans l’état `q` et lit le symbole `X` » ne devient une fonction booléenne qu’après cet encodage.
+
+On peut alors synthétiser des fonctions logiques qui calculent la prochaine action : le prochain état, le symbole à écrire ou le déplacement à effectuer. Cette logique combinatoire ne conserve pas à elle seule l’état de la machine : des dispositifs de mémoire et de séquencement/contrôle sont également nécessaires.
+
+Ce rapprochement avec Shannon est rétrospectif : Turing ne construit pas un circuit et Shannon ne réalise pas, à lui seul, une machine de Turing complète. Les résultats de Shannon permettront néanmoins de comprendre comment matérialiser la logique de telles règles.
 
 ---
 
 <!-- slide: id="history-018-claude-shannon" title="Claude Shannon" steps=0 -->
-## Claude Shannon
-1916 - 2001
-<img class="history-asset" src="/assets/shannon.png" alt="shannon" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<div style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);align-items:center;gap:calc(var(--grid-unit) * 6);width:100%;">
+  <div>
+    <p class="kicker">1937–1938 · CIRCUITS DE COMMUTATION</p>
+    <h2>Claude Shannon</h2>
+    <p style="max-width:20ch;">La logique devient un dispositif électrique.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;margin-top:calc(var(--grid-unit) * 4);font-family:var(--font-mono);font-size:clamp(0.75rem,1.15vw,1.2rem);text-align:center;">
+      <div style="border:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">ENTRÉES</span><br /><code>0 / 1</code></div>
+      <div style="border-block:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">RELAIS</span><br /><strong>ET · OU · NON</strong></div>
+      <div style="border:1px solid var(--rule);padding:calc(var(--grid-unit) * 2) var(--grid-unit);"><span style="color:var(--muted);">SORTIE</span><br /><code>0 / 1</code></div>
+    </div>
+    <p style="margin-top:calc(var(--grid-unit) * 3);font-family:var(--font-mono);font-size:clamp(0.85rem,1.25vw,1.3rem);">Boole : expression logique<br />Shannon : circuit correspondant</p>
+  </div>
+  <div style="display:grid;justify-items:center;">
+    <img src="/assets/shannon.png" alt="Claude Shannon" data-glow="strong" style="max-width:100%;max-height:48vh;object-fit:contain;" />
+  </div>
+</div>
 
 --- notes
 
-À la fin des années 1930, le mathématicien américain **Claude Shannon** montre que l’**algèbre de Boole** peut être mise en œuvre avec des circuits électriques utilisant des relais électromécaniques.
+À la fin des années 1930, le mathématicien américain **Claude Shannon** établit un lien entre l’algèbre de Boole et les circuits de commutation. Il achève son mémoire de master au MIT en 1937 ; une version de ce travail, *A Symbolic Analysis of Relay and Switching Circuits*, est publiée en 1938.
 
-Des circuits peuvent ainsi représenter les opérations logiques élémentaires : **ET — OU — NON**
+L’apport de Shannon est différent de celui de Boole : Boole avait transformé des relations logiques en opérations symboliques ; Shannon montre comment ces opérations peuvent être traduites en connexions électriques utilisant notamment des relais électromécaniques.
 
-Une expression logique peut donc être transformée en circuit électrique. En combinant ces circuits, il devient possible d’envisager la réalisation matérielle de systèmes capables de **calculer** et de **mémoriser**. Cette approche contribue au passage de la logique mathématique à l’informatique électronique.
+Un relais possède des états physiques distincts, par exemple un contact ouvert ou fermé. On peut leur associer conventionnellement les valeurs `0` et `1`.
 
 Les informations peuvent alors être **codées en binaire**, sous forme de suites de `0` et de `1`. C'est-ce que l'on appelle la numérisation des données.
- C'est-ce que l'on appelle la numérisation des données.
+
+:::
+
+Une expression logique peut ainsi être transformée en circuit de commutation. Shannon ne propose pas une théorie générale du calcul et ne construit pas, à lui seul, une machine de Turing complète. Il fournit un principe de réalisation pour la logique de fonctions données.
+
+Le raccord avec Turing est rétrospectif. Après avoir codé les états et les symboles d’une machine par des bits, on peut exprimer les conditions de sa table de transition sous forme de fonctions booléennes, puis synthétiser la logique correspondante avec des circuits.
+
+Cette logique combinatoire calcule une action à partir des entrées présentes. Des dispositifs de mémoire et de séquencement/contrôle restent nécessaires pour conserver l’état de la machine et organiser l’enchaînement des actions.
+
+Le fait de représenter des états physiques par `0` et `1` explique pourquoi ces circuits se prêtent au traitement d’informations binaires. Il ne s’agit pas encore de la numérisation au sens strict : la slide suivante montrera comment une information analogique peut être convertie en une représentation numérique.
 
 ---
 
