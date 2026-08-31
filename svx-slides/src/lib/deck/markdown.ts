@@ -45,12 +45,22 @@ function decorateNoteCallouts(html: string) {
     'presenter-note-warning'
   )
 }
-export function notesToHtml(markdown = '') {
+function hidePresenterNotes(html: string) {
+  return html.replace(/<blockquote class="presenter-note-comment">[\s\S]*?<\/blockquote>/g, '')
+}
+
+export type NotesAudience = 'presenter' | 'student'
+
+export function notesToHtml(
+  markdown = '',
+  options: { audience?: NotesAudience } = {}
+) {
   const html = micromark(normalizeNotesMarkdown(markdown.trim()), {
     allowDangerousHtml: false,
     extensions: [directive()],
     htmlExtensions: [noteDirectiveHtml]
   })
 
-  return decorateNoteCallouts(html)
+  const decorated = decorateNoteCallouts(html)
+  return options.audience === 'student' ? hidePresenterNotes(decorated) : decorated
 }

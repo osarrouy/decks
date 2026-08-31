@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 
@@ -188,14 +189,62 @@ function injectSharedComponentImports(content) {
   const insertion = script.index + script[0].length
   return `${withoutManualImport.slice(0, insertion)}\n  ${sharedComponentImport}${withoutManualImport.slice(insertion)}`
 }
+function normalizeStaticAssetUrls(content, deckRoot) {
+  if (!deckRoot) return content
 
-function renderGeneratedSlide(slide) {
-  return `${serializeFrontmatter(slide.metadata)}${injectSharedComponentImports(slide.content.trim())}\n`
+  return content.replace(/(["'`])\/assets\/([^"'`\s)]+)/g, (match, quote, asset) => {
+    const rootAsset = resolve(deckRoot, 'static', asset)
+    const nestedAsset = resolve(deckRoot, 'static', 'assets', asset)
+    return existsSync(rootAsset) && !existsSync(nestedAsset) ? `${quote}/${asset}` : match
+  })
+}
+
+function renderGeneratedSlide(slide, deckRoot) {
+  const rendered = `${serializeFrontmatter(slide.metadata)}${injectSharedComponentImports(slide.content.trim())}\n`
+  return normalizeStaticAssetUrls(rendered, deckRoot)
 }
 
 function posixish(path) {
   return path.replace(/\\/g, '/')
 }
+
+function filterStudentNotes(markdown) {
+  const lines = markdown.split('\n')
+  const filtered = []
+  let inCommentDirective = false
+  let inCommentCallout = false
+
+  for (const line of lines) {
+    if (inCommentDirective) {
+      if (/^\s*:::\s*$/.test(line)) inCommentDirective = false
+      continue
+    }
+
+    if (/^\s*:::\s*comment\b/i.test(line)) {
+      inCommentDirective = true
+      continue
+    }
+
+    if (/^\s*>\s*\[!COMMENT\]\s*$/i.test(line)) {
+      inCommentCallout = true
+      continue
+    }
+
+    if (inCommentCallout) {
+      if (/^\s*>\s?/.test(line) || /^\s*$/.test(line)) continue
+      inCommentCallout = false
+    }
+
+    filtered.push(line)
+  }
+
+  return filtered.join('\n').trim()
+}
+
+function transformNotes(notes, audience) {
+  return audience === 'student' ? filterStudentNotes(notes) : notes
+}
+
 
 async function cleanGeneratedFiles(outDir) {
   try {
@@ -239,8 +288,9 @@ async function generateSingleFileDeck(options) {
   await Promise.all(
     deck.slides.flatMap((slide) => {
       const fileStem = `${String(slide.order).padStart(3, '0')}-${slide.id}`
-      const writes = [writeIfChanged(join(outDir, `${fileStem}.svx`), renderGeneratedSlide(slide))]
-      if (slide.notes) writes.push(writeIfChanged(join(outDir, `${fileStem}.notes.md`), `${slide.notes.trim()}\n`))
+      const notes = slide.notes ? transformNotes(slide.notes, options.notesAudience) : ''
+      const writes = [writeIfChanged(join(outDir, `${fileStem}.svx`), renderGeneratedSlide(slide, options.root))]
+      if (notes) writes.push(writeIfChanged(join(outDir, `${fileStem}.notes.md`), `${notes}\n`))
       return writes
     })
   )
@@ -265,6 +315,7 @@ export function svxSlidesSingleFileDeck(options = {}) {
       outDir: template.outDir,
       slideSeparator: template.slideSeparator,
       notesSeparator: template.notesSeparator,
+      notesAudience: options.notesAudience ?? 'presenter',
       clean: options.clean ?? true
     }
   }

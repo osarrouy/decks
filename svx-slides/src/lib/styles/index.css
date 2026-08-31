@@ -25,3 +25,5 @@
 @import 'katex/dist/katex.min.css';
 /* Vue présentateur : panneaux, notes, contrôles, prévisualisations. */
 @import './presenter.css' layer(components);
+/* Page de révision : slide courante et notes empilées. */
+@import './student.css' layer(components);

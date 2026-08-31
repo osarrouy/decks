@@ -116,6 +116,10 @@
     font-family: var(--font-notes);
 }
 
+/*.presenter-notes strong {
+    font-weight: 400;
+}*/
+
 .presenter-notes-content,
 .presenter-notes>.muted {
     flex: 1;

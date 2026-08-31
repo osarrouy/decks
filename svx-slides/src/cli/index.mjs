@@ -11,8 +11,9 @@ function usage() {
   console.log(`svx-slides
 
 Usage:
-  svx-slides dev <deck-dir> [--host 0.0.0.0] [--port 5173]
-  svx-slides build <deck-dir> [--public|--presenter]
+  svx-slides dev <deck-dir> [--students] [--host 0.0.0.0] [--port 5173]
+  svx-slides build <deck-dir> [--public|--presenter|--students]
+  svx-slides export <deck-dir>
   svx-slides preview <deck-dir> [--host 0.0.0.0] [--port 4173]
 `)
 }
@@ -84,8 +85,8 @@ async function loadDeckConfig(realConfigPath) {
   }
 }
 
-async function ensureRuntimeApp(deckRoot) {
-  const appRoot = resolve(deckRoot, '.svx-slides/app')
+async function ensureRuntimeApp(deckRoot, options = {}) {
+  const appRoot = resolve(deckRoot, `.svx-slides/${options.view === 'students' ? 'student-app' : 'app'}`)
   const srcRoot = resolve(appRoot, 'src')
   const routesRoot = resolve(srcRoot, 'routes')
   const generatedRoot = resolve(srcRoot, 'generated')
@@ -95,9 +96,11 @@ async function ensureRuntimeApp(deckRoot) {
   const appStaticDir = resolve(appRoot, 'static')
   const componentsDir = resolve(deckRoot, 'components')
   const deckFile = resolve(deckRoot, 'deck.svx')
+  const presenterRoute = resolve(routesRoot, 'presenter')
 
   await mkdir(routesRoot, { recursive: true })
-  await mkdir(resolve(routesRoot, 'presenter'), { recursive: true })
+  if (options.view === 'students') await rm(presenterRoute, { recursive: true, force: true })
+  else await mkdir(presenterRoute, { recursive: true })
   await mkdir(generatedRoot, { recursive: true })
   await mkdir(resolve(srcRoot, 'lib'), { recursive: true })
   await mkdir(appStaticDir, { recursive: true })
@@ -112,6 +115,8 @@ async function ensureRuntimeApp(deckRoot) {
   const coreStylesDir = resolve(coreRoot, 'src/lib/styles')
   await writeFile(deckConfigPath, `export default ${JSON.stringify(deckConfig, null, 2)}\n`)
 
+  const pageComponent = options.view === 'students' ? 'StudentView' : 'DeckView'
+
   await writeFile(
     resolve(appRoot, 'package.json'),
     JSON.stringify({ type: 'module', private: true, name: 'svx-slides-runtime-app' }, null, 2) + '\n'
@@ -124,7 +129,7 @@ async function ensureRuntimeApp(deckRoot) {
 
   await writeFile(
     resolve(appRoot, 'vite.config.mjs'),
-    `import { resolve } from 'node:path'\nimport { sveltekit } from '@sveltejs/kit/vite'\nimport { svxSlidesSingleFileDeck } from '@svx-slides/core/vite'\nimport { defineConfig } from 'vite'\nimport deckConfig from ${jsString(pathToFileURL(deckConfigPath).href)}\n\nconst deckRoot = ${jsString(deckRoot)}\nconst coreRoot = ${jsString(coreRoot)}\nconst themePackage = ${jsString(themePackage)}\nconst themeStylePath = ${jsString(themeStylePath)}\nconst coreStylesDir = ${jsString(coreStylesDir)}\n\nfunction normalizePath(path) {\n  return path?.replace(/\\\\/g, '/')\n}\n\nfunction isWatchedStyle(file) {\n  const normalized = normalizePath(file)\n  const coreRoot = normalizePath(coreStylesDir)\n  const themeFile = normalizePath(themeStylePath)\n\n  return normalized === themeFile || normalized?.startsWith(coreRoot + '/')\n}\n\nfunction svxSlidesThemeCss() {\n  return {\n    name: 'svx-slides:theme-css',\n    resolveId(id) {\n      if (id === 'virtual:svx-slides/styles.css') return '\\0virtual:svx-slides/styles.css'\n    },\n    load(id) {\n      if (id !== '\\0virtual:svx-slides/styles.css') return\n      return \`@import '@svx-slides/core/styles.css';\\n@import '\${themePackage}/style.css';\\n\`\n    },\n    configureServer(server) {\n      server.watcher.add(coreStylesDir)\n      if (themeStylePath) server.watcher.add(themeStylePath)\n\n      server.watcher.on('change', (file) => {\n        if (!isWatchedStyle(file)) return\n\n        const mod = server.moduleGraph.getModuleById('\\0virtual:svx-slides/styles.css')\n        if (mod) server.moduleGraph.invalidateModule(mod)\n        server.ws.send({ type: 'full-reload' })\n      })\n    }\n  }\n}\n\nexport default defineConfig({\n  root: ${jsString(appRoot)},\n  plugins: [\n    svxSlidesSingleFileDeck({\n      root: deckRoot,\n      source: deckConfig.template?.source ?? 'deck.svx',\n      outDir: ${jsString(rel(deckRoot, resolve(srcRoot, 'generated/deck')))},\n      slideSeparator: deckConfig.template?.slideSeparator ?? '---',\n      notesSeparator: deckConfig.template?.notesSeparator ?? '--- notes'\n    }),\n    svxSlidesThemeCss(),\n    sveltekit()\n  ],\n  resolve: {\n    alias: {\n      '$deck-config': ${jsString(deckConfigPath)},\n      '$components': ${jsString(componentsDir)}\n    }\n  },\n  optimizeDeps: {\n    exclude: ['@svx-slides/core', themePackage]\n  },\n  server: {\n    fs: {\n      allow: [deckRoot, coreRoot, resolve(deckRoot, '../..')]\n    }\n  },\n  ssr: {\n    noExternal: ['@svx-slides/core', themePackage]\n  }\n})\n`
+    `import { resolve } from 'node:path'\nimport { sveltekit } from '@sveltejs/kit/vite'\nimport { svxSlidesSingleFileDeck } from '@svx-slides/core/vite'\nimport { defineConfig } from 'vite'\nimport deckConfig from ${jsString(pathToFileURL(deckConfigPath).href)}\n\nconst deckRoot = ${jsString(deckRoot)}\nconst coreRoot = ${jsString(coreRoot)}\nconst themePackage = ${jsString(themePackage)}\nconst themeStylePath = ${jsString(themeStylePath)}\nconst coreStylesDir = ${jsString(coreStylesDir)}\n\nfunction normalizePath(path) {\n  return path?.replace(/\\\\/g, '/')\n}\n\nfunction isWatchedStyle(file) {\n  const normalized = normalizePath(file)\n  const coreRoot = normalizePath(coreStylesDir)\n  const themeFile = normalizePath(themeStylePath)\n\n  return normalized === themeFile || normalized?.startsWith(coreRoot + '/')\n}\n\nfunction svxSlidesThemeCss() {\n  return {\n    name: 'svx-slides:theme-css',\n    resolveId(id) {\n      if (id === 'virtual:svx-slides/styles.css') return '\\0virtual:svx-slides/styles.css'\n    },\n    load(id) {\n      if (id !== '\\0virtual:svx-slides/styles.css') return\n      return \`@import '@svx-slides/core/styles.css';\\n@import '\${themePackage}/style.css';\\n\`\n    },\n    configureServer(server) {\n      server.watcher.add(coreStylesDir)\n      if (themeStylePath) server.watcher.add(themeStylePath)\n\n      server.watcher.on('change', (file) => {\n        if (!isWatchedStyle(file)) return\n\n        const mod = server.moduleGraph.getModuleById('\\0virtual:svx-slides/styles.css')\n        if (mod) server.moduleGraph.invalidateModule(mod)\n        server.ws.send({ type: 'full-reload' })\n      })\n    }\n  }\n}\n\nexport default defineConfig({\n  root: ${jsString(appRoot)},\n  plugins: [\n    svxSlidesSingleFileDeck({\n      root: deckRoot,\n      source: deckConfig.template?.source ?? 'deck.svx',\n      outDir: ${jsString(rel(deckRoot, resolve(srcRoot, 'generated/deck')))},\n      slideSeparator: deckConfig.template?.slideSeparator ?? '---',\n      notesSeparator: deckConfig.template?.notesSeparator ?? '--- notes',\n      notesAudience: ${jsString(options.view === 'students' ? 'student' : 'presenter')}\n    }),\n    svxSlidesThemeCss(),\n    sveltekit()\n  ],\n  resolve: {\n    alias: {\n      '$deck-config': ${jsString(deckConfigPath)},\n      '$components': ${jsString(componentsDir)}\n    }\n  },\n  optimizeDeps: {\n    exclude: ['@svx-slides/core', themePackage]\n  },\n  server: {\n    fs: {\n      allow: [deckRoot, coreRoot, resolve(deckRoot, '../..')]\n    }\n  },\n  ssr: {\n    noExternal: ['@svx-slides/core', themePackage]\n  }\n})\n`
   )
 
   await writeFile(
@@ -146,19 +151,22 @@ async function ensureRuntimeApp(deckRoot) {
 
   await writeFile(
     resolve(routesRoot, '+page.svelte'),
-    `<script lang="ts">\n  import { DeckView } from '@svx-slides/core'\n  import { deck } from '$lib/deck'\n</script>\n\n<DeckView {deck} />\n`
+    `<script lang="ts">\n  import { ${pageComponent} } from '@svx-slides/core'\n  import { deck } from '$lib/deck'\n</script>\n\n<${pageComponent} {deck} />\n`
   )
 
-  await writeFile(
-    resolve(routesRoot, 'presenter/+page.svelte'),
-    `<script lang="ts">\n  import { PresenterView } from '@svx-slides/core'\n  import { deck } from '$lib/deck'\n</script>\n\n<PresenterView {deck} />\n`
-  )
+  if (options.view !== 'students') {
+    await writeFile(
+      resolve(presenterRoute, '+page.svelte'),
+      `<script lang="ts">\n  import { PresenterView } from '@svx-slides/core'\n  import { deck } from '$lib/deck'\n</script>\n\n<PresenterView {deck} />\n`
+    )
+  }
 
   return { appRoot, configFile: resolve(appRoot, 'vite.config.mjs') }
 }
 
 async function runDev(deckRoot, flags) {
-  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot)
+  const view = flags.students ? 'students' : 'deck'
+  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot, { view })
   process.chdir(appRoot)
   const server = await createServer({
     root: appRoot,
@@ -173,19 +181,18 @@ async function runDev(deckRoot, flags) {
 }
 
 async function runBuild(deckRoot, flags) {
-  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot)
-  process.env.VITE_INCLUDE_NOTES = flags.presenter ? 'true' : 'false'
+  const view = flags.students ? 'students' : 'deck'
+  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot, { view })
+  process.env.VITE_INCLUDE_NOTES = flags.presenter || flags.students ? 'true' : 'false'
   await rm(resolve(deckRoot, 'build'), { recursive: true, force: true })
   process.chdir(appRoot)
   await build({ root: appRoot, configFile })
 }
 
 async function runPreview(deckRoot, flags) {
-  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot)
-  process.chdir(appRoot)
   const server = await preview({
-    root: appRoot,
-    configFile,
+    root: deckRoot,
+    build: { outDir: 'build' },
     preview: {
       host: flags.host === true ? '0.0.0.0' : flags.host,
       port: flags.port ? Number(flags.port) : undefined
@@ -196,7 +203,7 @@ async function runPreview(deckRoot, flags) {
 
 const { command, deckDirArg, flags } = parseArgs(process.argv.slice(2))
 
-if (!command || flags.help || flags.h) {
+if (!command || command === '--help' || command === '-h' || flags.help || flags.h) {
   usage()
   process.exit(command ? 0 : 1)
 }
@@ -206,6 +213,7 @@ const deckRoot = resolve(process.cwd(), deckDirArg)
 try {
   if (command === 'dev') await runDev(deckRoot, flags)
   else if (command === 'build') await runBuild(deckRoot, flags)
+  else if (command === 'export') await runBuild(deckRoot, { ...flags, students: true })
   else if (command === 'preview') await runPreview(deckRoot, flags)
   else {
     usage()

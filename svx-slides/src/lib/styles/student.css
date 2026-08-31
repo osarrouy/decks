@@ -1,0 +1,177 @@
+/*
+  Page de révision : chaque slide est suivie de ses notes.
+  La navigation reste celle du contrôleur commun et respecte les steps.
+*/
+.student-root {
+    height: 100vh;
+    overflow: auto;
+    background:
+        radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent), transparent 88%), transparent 35rem),
+        #101012;
+    color: #f7f3ea;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.student-shell {
+    width: min(100% - 2rem, 76rem);
+    margin: 0 auto;
+    padding: 1.5rem 0 4rem;
+}
+
+.student-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.student-kicker {
+    margin: 0 0 0.4rem;
+    color: color-mix(in srgb, var(--accent), white 18%);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.student-header h1 {
+    max-width: 28ch;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    letter-spacing: -0.045em;
+    line-height: 1;
+}
+
+.student-counter {
+    flex: 0 0 auto;
+    color: rgb(255 255 255 / 0.62);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.student-counter strong {
+    color: #fff;
+    font-size: 1.35rem;
+}
+
+.student-counter span {
+    color: rgb(255 255 255 / 0.45);
+}
+
+.student-slide-panel,
+.student-notes {
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 0.055);
+    overflow: hidden;
+}
+
+.student-slide-viewport {
+    width: 100%;
+    aspect-ratio: var(--aspect-width) / var(--aspect-height);
+    overflow: hidden;
+    background: var(--bg);
+}
+
+
+.student-slide-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    color: rgb(255 255 255 / 0.72);
+    font-size: 0.86rem;
+}
+
+.student-slide-footer span:last-child {
+    color: rgb(255 255 255 / 0.42);
+    font-size: 0.76rem;
+}
+
+.student-notes {
+    margin-top: 1.25rem;
+}
+
+.student-notes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    color: rgb(255 255 255 / 0.68);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.student-notes-header span:last-child {
+    overflow: hidden;
+    color: rgb(255 255 255 / 0.42);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.student-notes-content,
+.student-notes-empty {
+    padding: 1.25rem 1.5rem;
+}
+
+.student-notes-content {
+    overflow: visible;
+}
+
+.student-notes-empty {
+    margin: 0;
+}
+
+.student-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.student-controls button {
+    padding: 0.65rem 1rem;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-radius: 0.55rem;
+    background: rgb(255 255 255 / 0.08);
+    color: #fff;
+    cursor: pointer;
+}
+
+.student-controls button:hover,
+.student-controls button:focus-visible {
+    border-color: color-mix(in srgb, var(--accent), white 25%);
+    background: color-mix(in srgb, var(--accent), transparent 76%);
+}
+
+@media (max-width: 44rem) {
+    .student-shell {
+        width: min(100% - 1rem, 76rem);
+        padding-top: 1rem;
+    }
+
+    .student-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .student-slide-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .student-notes-content,
+    .student-notes-empty {
+        padding: 1rem;
+    }
+}

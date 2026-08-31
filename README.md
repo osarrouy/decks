@@ -36,6 +36,7 @@ Le runner vit dans `@svx-slides/core` :
 svx-slides dev slides/demo
 svx-slides build slides/demo --public
 svx-slides build slides/demo --presenter
+svx-slides export slides/demo
 svx-slides preview slides/demo
 ```
 
@@ -71,6 +72,18 @@ Le build est écrit dans :
 ```txt
 slides/demo/build/
 ```
+
+Pour produire un support de révision destiné aux étudiants :
+
+```bash
+pnpm export:demo
+pnpm export:history
+
+# Servir le build étudiant de l’histoire
+pnpm preview:history
+```
+
+Les fichiers sont générés respectivement sous `slides/demo/build/` et `slides/history-1/build/`. Les flèches, la barre espace et les boutons permettent de naviguer ; les `steps` restent pris en compte. Les indications réservées au présentateur (`:::comment` et `[!COMMENT]`) sont supprimées avant l’import et ne sont donc pas embarquées dans le livrable étudiant.
 
 ## Structure d’un projet de slides
 

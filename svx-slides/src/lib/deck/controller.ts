@@ -37,7 +37,7 @@ export function createDeckController(
 ) {
   const broadcast = options.broadcast ?? true
   const updateUrl = options.updateUrl ?? true
-  const state = writable<PresentationState>(parseHash(slideCount, getMaxStep))
+  const state = writable<PresentationState>({ slide: 0, step: 0 })
 
   let channel: BroadcastChannel | undefined
   let applyingRemote = false
@@ -116,7 +116,8 @@ export function createDeckController(
   }
 
   function mount() {
-    if (!browser) return () => {}
+    if (!browser) return () => { }
+    state.set(parseHash(slideCount, getMaxStep))
 
     if (broadcast) {
       channel = new BroadcastChannel(`svx-slides:${deckId}`)

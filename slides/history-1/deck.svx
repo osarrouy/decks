@@ -241,17 +241,15 @@ Une telle formalisation, toutefois, fait encore défaut au début du XXᵉ sièc
 Une succession d’avancées théoriques va néanmoins répondre à ce problème. La première d’entre elle réclame un léger retour en arrière.
 
 ---
-
-<!-- slide: id="history-015-george-boole" title="George Boole" steps=0 -->
-## George Boole
-1815 - 1854
-<img class="history-asset" src="/assets/bool.webp" alt="bool" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="George Boole" dates="1815 - 1854" picture="/bool.webp" />
 
 --- notes
 
 George Boole est un mathématicien, logicien et philosophe britannique, considéré comme l’inventeur de l’algèbre dite **booléenne**.
 
-La logique constitue un champ de la philosophie et des mathématiques qui s’efforce d’identifier les règles permettant de distinguer un raisonnement valide d’un raisonnement non valide.
+:::comment
+La logique constitue un champ de la philosophie et des mathématiques qui s’efforce d’identifier les règles permettant de distinguer un raisonnement valide d’un raisonnement non-valide.
+:::
 
 Dans son ouvrage majeur *An Investigation of the Laws of Thought* (1854), Boole montre que les propositions logiques peuvent être représentées par des symboles et manipulées selon des règles algébriques simples.
 
@@ -266,44 +264,48 @@ Dorénavant, il sera acquis que tout problème logique peut-être exprimé dans 
 Reste alors à définir, formellement, ce qu’est un calcul, et comment en automatiser, éventuellement, l’exécution.
 
 ---
-
-<!-- slide: id="history-016-alan-turing" title="Alan Turing" steps=0 -->
-## Alan Turing
-1912 - 1954
-<img class="history-asset" src="/assets/turing.jpg" alt="turing" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Alan Turing" dates="1912 - 1954" picture="/turing.jpg" />
 
 --- notes
 
-En 1936, Alan Turing, mathématicien anglais, publie un article fondateur où il propose un modèle théorique de machine à calculer universelle. Son objectif est de répondre à une question centrale posée par le mathématicien David Hilbert : **quels problèmes peuvent être résolus par le calcul, et lesquels ne le peuvent pas ?**
+En 1936, Alan Turing, mathématicien anglais, rédige et soumet un article fondateur, publié en 1937 sous le titre *On Computable Numbers, with an Application to the Entscheidungsproblem*. Il y propose un modèle théorique du calcul. Son travail s’inscrit notamment dans le prolongement d’une question posée par David Hilbert : existe-t-il une procédure générale et mécanique permettant de déterminer si une proposition logique est valide ?
 
-Pour avancer, Turing propose une définition précise de ce qu’est un calcul : une suite d’opérations élémentaires appliquées à des données, autrement dit un algorithme. On peut illustrer cette idée par l’exemple d’une recette de cuisine, qui décrit étape par étape les actions à effectuer pour obtenir un résultat.
+Pour avancer, Turing cherche à formaliser ce qu’est une procédure de calcul : une suite d’opérations élémentaires appliquées à des symboles selon des règles précises : ce qu'on appelle aujourd'hui un **algorithme**.
 
-Il imagine alors une machine — purement théorique — capable d’exécuter automatiquement n’importe quelle suite d’opérations de ce type : la **machine de Turing**. Elle se compose d’un ruban infini servant de mémoire, d’une tête de lecture/écriture, et d’un ensemble fini d’instructions qui déterminent son comportement.
+On peut donner une première image de cette idée avec une recette de cuisine, qui décrit étape par étape les actions à effectuer pour obtenir un résultat. Néanmoins, contrairement à une recette ordinaire, les instructions d’un algorithme doivent être suffisamment précises pour ne pas nécessiter d’interprétation humaine.
 
-Cette construction abstraite n’a pas pour but de décrire une machine concrète, mais de fournir un **cadre formel** pour penser la notion de calcul et les limites de la calculabilité. A posteriori, la machine de Turing est devenue l’un des modèles théoriques fondamentaux de l’informatique moderne.
+Turing imagine alors une machine — purement théorique — capable d’exécuter automatiquement un calcul décrit par une suite de règles. Une machine de Turing se compose ainsi d’un ruban potentiellement illimité, divisé en cases et utilisé comme mémoire, d’une tête capable de lire et d’écrire des symboles, ainsi que d’un nombre fini d’états et de règles de transition qui déterminent son comportement.
+
+Turing montre ensuite qu’il est possible de concevoir une **machine universelle** : une machine capable de simuler n’importe quelle autre machine de Turing à partir de la description de ses règles. Cette construction ne vise pas à décrire directement un ordinateur concret, mais à fournir un cadre formel pour penser ce qu’est un calcul et pour étudier ses limites. Aujourd’hui, la machine de Turing constitue l’un des modèles théoriques fondamentaux de l’informatique.
 
 ---
 
-<!-- slide: id="history-017-turing-machine" title="Turing Machine" steps=0 -->
-<img class="history-asset" src="/assets/turing_machine.png" alt="turing machine" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="history-017-turing-machine" title="Machine de Turing" steps=3 -->
+<script>
+  import TuringMachine from '$components/TuringMachine.svelte'
+</script>
+
+<TuringMachine />
 
 --- notes
 
-La **machine de Turing** est un modèle théorique qui se compose d’un ruban infini, divisé en cases.
+La **machine de Turing** est un modèle théorique qui se compose d’un ruban potentiellement illimité, divisé en cases.
 
 Chaque case peut contenir un symbole — par exemple `0`, `1` ou un symbole vide.
 
-Un curseur — ou **tête de lecture/écriture** — se déplace sur ce ruban et peut effectuer trois opérations élémentaires :
+Une tête de lecture/écriture se déplace sur ce ruban et peut effectuer trois opérations élémentaires :
 
 1. Lire le symbole présent sous la tête
 2. Écrire ou modifier ce symbole
 3. Se déplacer d’une case vers la gauche ou vers la droite
 
-L’idée décisive introduite par Turing est que le comportement de la machine dépend à la fois du **symbole lu sur le ruban** et de **l’état interne de la machine**.
+L’idée décisive introduite par Turing est que le comportement de la machine dépend à la fois du **symbole lu sur le ruban** et de l’**état interne de la machine**.
 
-Selon ces deux informations, la machine suit une règle qui lui indique quoi faire : écrire un symbole, se déplacer, et éventuellement changer d’état.
+Selon ces deux informations, une règle de transition lui indique quoi faire : écrire un symbole, se déplacer, et éventuellement changer d’état.
 
-Cette logique de règles fait de la machine de Turing une **machine programmable** : en changeant les règles, on change le calcul qu’elle exécute.
+Cette table de règles est fixée pour une exécution donnée. En la modifiant, on définit une autre machine et donc un autre calcul. C’est en ce sens que le modèle est programmable.
+
+A posteriori, la machine universelle de Turing montrera qu’une seule machine peut simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
 
 Ainsi, Turing offre un modèle théorique rigoureux du calcul mécanique, qui constitue l’une des bases de l’informatique moderne.
 
@@ -318,13 +320,14 @@ Ce modèle, toutefois, reste très théorique. Comment, techniquement, concréti
 
 --- notes
 
-La réponse à la question de la réalisation technique d’une machine de Turing sera amorcée par le mathématicien américain **Claude Shannon**.
+À la fin des années 1930, le mathématicien américain **Claude Shannon** montre que l’**algèbre de Boole** peut être mise en œuvre avec des circuits électriques utilisant des relais électromécaniques.
 
-Entre 1937 et 1938, Shannon montre que l’**algèbre de Boole** peut être implémentée à l’aide de composants électrotechniques, en particulier des relais électromécaniques. Cette découverte révolutionnaire établit un pont inédit entre deux domaines jusque-là séparés : les mathématiques logiques et l’ingénierie électrique.
+Des circuits peuvent ainsi représenter les opérations logiques élémentaires : **ET — OU — NON**
 
-Concrètement, Shannon démontre qu’un circuit de relais peut être conçu pour représenter les opérations logiques élémentaires (ET, OU, NON). Cela signifie qu’il devient possible, en théorie, de réaliser techniquement une machine de Turing en assemblant de tels circuits.
+Une expression logique peut donc être transformée en circuit électrique. En combinant ces circuits, il devient possible d’envisager la réalisation matérielle de systèmes capables de **calculer** et de **mémoriser**. Cette approche contribue au passage de la logique mathématique à l’informatique électronique.
 
-Or, à la même époque, on sait déjà exprimer toute donnée sous forme binaire, c’est-à-dire comme une succession de `0` et de `1`. On parle alors de **numérisation**.
+Les informations peuvent alors être **codées en binaire**, sous forme de suites de `0` et de `1`. C'est-ce que l'on appelle la numérisation des données.
+ C'est-ce que l'on appelle la numérisation des données.
 
 ---
 

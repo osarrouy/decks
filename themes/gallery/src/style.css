@@ -211,6 +211,11 @@
     font-weight: 100;
 }
 
+[data-theme='gallery'] .slide strong,
+[data-theme='gallery'] .presenter-notes strong {
+    font-weight: 400;
+}
+
 /* Strong dans les titres gallery : garde la couleur noire, augmente seulement le poids. */
 [data-theme='gallery'] .slide h1 strong,
 [data-theme='gallery'] .slide h2 strong {

@@ -16,6 +16,7 @@
     "./styles.css": "./src/lib/styles/index.css",
     "./components/DeckView.svelte": "./src/lib/components/DeckView.svelte",
     "./components/Fragment.svelte": "./src/lib/components/Fragment.svelte",
+    "./components/StudentView.svelte": "./src/lib/components/StudentView.svelte",
     "./components/PresenterView.svelte": "./src/lib/components/PresenterView.svelte",
     "./components/SlideSurface.svelte": "./src/lib/components/SlideSurface.svelte",
     "./components/TwoColumns.svelte": "./src/lib/components/TwoColumns.svelte",
