@@ -377,18 +377,21 @@ et passe dans l’état q'.
 Cette règle ne décrit pas seulement une valeur de sortie. Elle décrit une action, puis une nouvelle situation à partir de laquelle une autre règle pourra être appliquée.
 :::
 
-Cette table de règles est fixée pour une exécution donnée. En la modifiant, on définit une autre machine et donc un autre calcul. Turing va toutefois montrer qu'on peut en fait imaginer une **machine universelle** : une machine capable de simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
-
----
-
---- notes
-
-A posteriori, la machine universelle de Turing montre qu’une seule machine peut simuler n’importe quelle autre machine de Turing à partir de la description de ses règles.
-
-Cette construction ne vise pas à décrire directement un ordinateur concret, mais à fournir un cadre formel pour penser ce qu’est un calcul et pour étudier ses limites. Ses travaux contribuent d'abord à une réponse négative à l’Entscheidungsproblem : il n’existe pas de procédure unique décidant la validité de toutes les formules de la logique du premier ordre. Mais ils vont aussi fournir, par une sorte d'effet de bord, le modèle formel de ce qui deviendra bientôt l'ordinateur.
+Cette table de règles est fixée pour une machine. D’une exécution à l’autre, c’est typiquement l’entrée qui change ; si l’on modifie la table, on définit une autre machine. Turing va toutefois montrer qu’on peut imaginer une **machine universelle** : une machine dont les propres règles restent fixes et qui peut simuler n’importe quelle autre machine de Turing.
 
 
-L’apport de Turing est donc différent de celui de Boole : Boole rend calculables des expressions logiques finies ; Turing formalise une procédure qui peut enchaîner des opérations, utiliser une mémoire et éventuellement ne jamais s’arrêter.
+
+A posteriori, la machine universelle de Turing montre qu’une machine peut recevoir sur son ruban la description codée d’une autre machine et de son entrée, puis en simuler l’exécution.
+
+Cette construction ne vise pas à décrire directement un ordinateur concret. Elle fournit un cadre formel pour penser ce qu’est un calcul, pour étudier ses limites et pour distinguer le mécanisme qui exécute les règles de la description des règles elle-même. Ses travaux contribuent d’abord à une réponse négative à l’Entscheidungsproblem : il n’existe pas de procédure unique décidant la validité de toutes les formules de la logique du premier ordre.
+
+
+
+L’apport de Turing est donc différent de celui de Boole : Boole donne aux relations logiques une structure algébrique ; Turing formalise une procédure qui peut enchaîner des opérations, utiliser une mémoire et éventuellement ne jamais s’arrêter.
+
+L’importance du modèle de Turing tient surtout à l’universalité : une machine universelle garde ses propres règles fixes, mais peut traiter comme des données la description d’une autre machine et l’entrée de celle-ci. Rétrospectivement, cette idée fonde le rapprochement entre calcul et programmation : un même mécanisme général peut exécuter des calculs différents lorsque leur description est fournie sous une forme codée.
+
+Un ordinateur réel n’est pas littéralement une machine de Turing : sa mémoire est finie et son organisation matérielle dépend d’autres contributions, notamment les architectures à programme enregistré associées aux travaux de von Neumann et d’autres acteurs. Turing fournit néanmoins un modèle théorique de l’universalité du calcul et de la séparation entre un mécanisme d’exécution, un programme et des données.
 
 Ce modèle, toutefois, reste très théorique. Comment, techniquement, concrétiser sa réalisation ?
 
