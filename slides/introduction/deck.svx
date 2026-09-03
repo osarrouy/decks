@@ -18,7 +18,11 @@ olivier.sarrouy@univ-rennes2.fr {.kicker}
 
 --- notes
 
-Je vais prendre quelques minutes, avant de présenter le cours, pour me présenter à vous. Non pas que ma destinée soit fascinante mais parce qu'il importe que vous compreniez d’où je parle.
+On va aborder dans ce cours diverses questions historiques, techniques (à la marge), économiques, philosophiques et politiques qui on trait aux technologies numériques : à Internet, à la surveillance de masse, aux réseaux sociaux, aux IAs, etc.
+
+Nous en reparlerons tout à l'heure mais ce cours va en réalité s'étaler sur deux années - la L1 et la L2 et nous n'aborderons donc pas tout cette année.
+
+Mais avant d'entrer dans le détail, je voudrais prendre quelques minutes, pour me présenter à vous. Non pas que ma destinée soit particulèrement fascinante mais parce qu'il importe que vous compreniez d’où je parle.
 
 Le savoir tel qu’il vous sera transmis à l’université sera assez différent du savoir qui vous a été transmis au lycée : moins dogmatique, plus critique.
 
@@ -26,7 +30,9 @@ Qu'est-ce qu'on entend par _savoir critique_ ? Non pas un savoir qui critiquerai
 
 On ne problématise et on ne conceptualise pas les choses de la même manière selon qu’on est un homme blanc de la classe moyenne ou une femme de ménage racisée ; selon qu’on est un philosophe de l’ENS ou un ouvrier métallurgiste ; selon qu’on est européen qui a profité (même malgré lui) de la colonisation et de la mondialisation ou un indigène Yanomami brésilien qui a vu son monde ravagé par cette même colonisation.
 
-Les questions qui s’imposent à nous dans l’expérience ordinaire du monde social dépendent de notre parcours personnel. Et nos questions théoriques en découlent.Or mon parcours est quand même relativement particulier.
+La plupart des questions théoriques que nous nous posons, elles découlent des problèmes ou des tensions que l’expérience ordinaire du monde social impose à nos à vies.
+
+Or, de ce point de vue, mon parcours est quand même relativement particulier.
 
 Formation scientifique
 
@@ -50,6 +56,10 @@ Expériences politiques qui m’ont conduit à développer une certaine curiosit
 
 Je suis donc une espèce de gauchiste libertaire ou libéral qui a connu un Internet qui n'existe plus, que vous n'avez d'ailleurs jamais connu, et dans lequel j'ai à tort identifié un espace de liberté et de débordement possible du monde - un possible qui a suscité chez moi beaucoup d'espoirs et dans lequel j'ai investi beaucoup d'énergie.
 
+Comprenez que l'Internet que j'ai connu était celui d'eMule ou de Napster - qui ont été remplacés par Netflix et Spotify - des plateformes de chat sans surveillance (qui ont été remplacé par Messenger ou WhatsApp), des premières expériences des Dark Market où on pouvait acheter des drogues ou des numéros de carte bancaire piratées sans que personne ne surveille rien.
+
+C'était, pour le meilleur comme pour le pire, évidemment, un espace de liberté - qu'à ma toute petite échelle, avec quelques petits projets anecdotiques par-ci par-là, j'ai contribué à faconner.
+
 J'en suis évidemment revenu lorsqu'Internet est devenu un espace de contrôlé, d'abêtissement et de renforcement de toutes les dominations qu'il promettait de destituer.
 
 C'est donc en tant que jeune quarantenaire un peu dépressif et tristement cynique que je m'adresserai ici à vous.
@@ -66,17 +76,36 @@ De quoi, donc, ce personnage va-t-il vous parler ?
 - Réseaux sociaux et phénomènes de foule ?
 - Economie de la donnée
 - IA contemporaine
-- Interpassivité
+- Interpassivité 4h
+
+histoire 4 séances = 8h
+Réseaux sociaux = 4h
+Economie = 4h
+Interpassivité = 4h
+
+18h - 2h intro IA prompting, etc. = 16h : 8 séances
+
+4 histoire
+2 réseaux sociaux
+2 Interpassivité
 
 ---
-
 ## Modalités
 
-Je n'ai pas 60 ans mais j'ai vu, en 10 ou 15 ans, le métier d'enseignant changer.
+Je n'ai pas 60 ans mais, au cours des 10 ou 15 ans pendant lesquels j'ai enseigné, j'ai vu l'institution universitaire et le métier d'enseignant changer.
 
-Votre capacité d'attention diminue à cause des réseaux sociaux et des smartphones - ma capacité d'attention diminue aussi du reste. Le résultat est le même. Enseigner signifie aujourd'hui : entrer dans une espèce de lutte pour l'attention contre TikTok, Instagram ou YouTube que l'essentiel d'entre vous consulte pendant les cours. Il va de soi que même en y mettant du mien, le combat est perdu d'avance. Et que j'avoue ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour de toute façon n'y rien suivre et passer deux heures sur Instagram. La vie est courte : restez chez vous !
+Votre capacité d'attention diminue à cause des réseaux sociaux et des smartphones - ma capacité d'attention diminue aussi du reste. Ce n'est pas du tout de votre fait mais le résultat est le même. Enseigner signifie aujourd'hui : entrer dans une espèce de lutte permanente pour l'attention contre TikTok, Instagram ou YouTube que l'essentiel d'entre vous consulte pendant les cours. Même en y mettant du mien, le combat est perdu d'avance. 
 
-Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un. Les universitaires ont tendance à fétichiser l'importance de l'écrit dans la structuration de la pensée. Il importe donc de rappeler qu'il y a à peine un siècle ou deux, l'essentiel de la population était analphabète. La culture de l'écriture livresque aura donc été une courte parenthèse dans l'histoire de l'humanité. Et on ne peut pas dire que la courte parenthèse pendant laquelle la culture de l'écrit et du livre a régné en maitre a été particulièrement vertueuse : deux guerres mondiales, plusieurs génocides, etc. L'humanité faisait sans la culture de l'écrit avant, elle fera sans après. La question n'est donc pas tant de savoir comment lutter CONTRE la disparition progressive de cette culture de l'écrit que de savoir ce que signifie enseigner À PARTIR de là.
+Entendons-nous bien. Je ne crois pas que vous soyiez moins malin que v
+
+
+
+
+restez chez vous !
+
+Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un.
+
+Les universitaires ont tendance à fétichiser l'importance de l'écrit dans la structuration de la pensée. Il importe donc de rappeler qu'il y a à peine un siècle ou deux, l'essentiel de la population était analphabète. La culture de l'écriture livresque aura donc été une courte parenthèse dans l'histoire de l'humanité. Et on ne peut pas dire que la courte parenthèse pendant laquelle la culture de l'écrit et du livre a régné en maitre a été particulièrement vertueuse : deux guerres mondiales, plusieurs génocides, etc. L'humanité faisait sans la culture de l'écrit avant, elle fera sans après. La question n'est donc pas tant de savoir comment lutter CONTRE la disparition progressive de cette culture de l'écrit que de savoir ce que signifie enseigner À PARTIR de là.
 
 De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour que ces cours se passent le mieux possible, qu’ils soient aussi agréables et utiles que possible, pour vous comme pour moi.
 
@@ -84,7 +113,44 @@ De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour q
 
 2. **Vous pouvez enregistrer le cours.** Vous pourrez donc utiliser vos téléphones pour cela, puis produire une retranscription avec Whisper ou un autre outil — les dictaphones d’iOS proposent déjà cette fonction, et des solutions existent également sur Android. L’idée est de pouvoir poser le téléphone et de ne pas avoir à prendre des notes exhaustives en permanence. Vous pouvez partager ces enregistrements et ces retranscriptions entre vous, mais je vous demande de ne pas les diffuser publiquement. Ce n’est pas d’abord une question de propriété intellectuelle : je veux pouvoir parler librement, sans devoir anticiper la réaction de personnes qui ne partagent ni le contexte ni la présence de ce cours.
 
-3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
+3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Je n'ai pas encore totalement défini la forme que prendra cette IA et son interface : c'est beaucoup de travail. Quoi qu'il en soit ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
+
+
+J'avoue, d'ailleurs, ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour, de toute façon, ne rien en suivre et passer deux heures sur Instagram. La vie est courte : ce qu'il nous reste vivre - ce qu'il vous reste à vivre - est précieux et je doute que vous revienne, au seuil de la mort, le souvenir d'un reel Instagram ou d'un short de YouTube.
+
+Mon propos serait donc le suivant : je peux tout à fait entendre que nous n'ayiez pas envie de venir en cours. Vous avez 18, 19 ans et vous avez sans doute mieux à vivre que de vous ennuyez sur les bancs de l'université. Et c'est ok et je ne vous en veux absolument pas pour ça.
+
+Mais si vous venez en cours, je vous en prie : soyez présents. Faisons de ce moment un moment de présence réelle, d'échange, de discussion, de partage. Disputons-nous s'il le faut mais restons vivants.
+
 
 ---
 ## Examens
+
+
+---
+
+## Et aussi ...
+
+Ma génération a échoué et si ce n'est évidemment pas de mon seul fait - j'ai fait de mon mieux, ou j'ai cru faire de mon mieux - j'aimerais quand meme que vous entendiez nos excuses - ou les miennes en tout cas. J'aurais voulu que votre monde soit plus heureux que le mien et pour l'essentiel il ne l'est pas - loin de là.
+
+
+
+Je viens d'un monde où quand il faisait beau, nous pouvions emmener les étudiants dehors pour faire cours assis dans la pelouse. Je viens d'un monde où lorsqu'un de vos camarades exilé était menacé d'expulsion, nous pouvions, pendant le temps du cours partir avec les étudiants qui le souhaitaient pour bloquer la préfecture et réclamer sa régularisation.
+
+Si nous allions faire cours dehors aujourd'hui, certains ne manqueront pas de s'en plaindre, et la présidence ne ratera pas l'occasion de nous rappeler à l'ordre au nom de je ne sais quelle norme de sécurité. Si nous essayions d'aller bloquer la préfecture aujourd'hui pour réclamer la régularisation d'un de vos camarades, la police nous arrêterait, nous frapperait et nous trainerait au tribunal.
+
+
+
+
+
+aujourd'hui. Si cela police vous frapper vous enfermer. Si dehors, certains étudiants se plaindrais la présidence, probablement nous causer des ennuis, me causer des ennuis. Je suis déjà en assez mauvais termes avec l'institution. Bref, le monde s'est assagi. Le monde s'est fâché. À vrai dire et habiter ce monde devient de plus en plus triste et ennuye.
+Par ailleurs, la fonction même d'enseignants a changé si je suis tout à fait honnête en quelques heures, je peux vous expliquer comment me remplacer par ChatGPT ça suffit de savoir poser les bonnes questions, il suffirait que je vous transmette un plan et quelques noms d'auteur ou quelques lignes, directrice quelques indications pour savoir comment interroger ChatGPT, et vous pourriez avoir accès à un savoir qui en réalité déborde en extension, le mien même si dans les faits en intensité dans sa poésie propre, ce serait pas du même ce serait pas du même ordre. Ça pose question quand est-ce qu'aujourd'hui le travail d'enseignant
+
+---
+## VSS
+
+https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences
+
+vss-sse@univ-rennes.fr
+
+VSS : BDE : on y a pas pensé

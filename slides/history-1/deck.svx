@@ -535,224 +535,30 @@ Entre temps, les usages de l’informatique naissante seront circonscrits à la 
 
 ---
 
-<!-- slide: id="history-023-4-la-cybernetique" title="4. La cybernétique" steps=0 -->
-## 4. La cybernétique
-kybernētikḗ
-
---- notes
-
-La cybernétique est une discipline née dans les années 1940, qui s’intéresse aux mécanismes de régulation, de communication et de contrôle dans les systèmes, qu’ils soient vivants, techniques ou sociaux.
-
-Le mot cybernétique provient du grec ancien *kybernētikḗ*, qui signifie « art de gouverner » ou « art du pilotage », terme lui-même dérivé de *kybernētēs* (κυβερνήτης), qui signifie « gouvernail », « pilote » ou « celui qui dirige ». On devine d’ailleurs derrière l’emploi de ce terme un certain rapprochement entre l’art de *gouverner* et l’art de *naviguer* - à vue si j’ose dire.
-
-Ce rapprochement n’est pas nouveau. Platon, déjà, comparait « l'art de gouverner les hommes » à « l’art de gouverner un navire ». C’est que, dans un cas comme dans l’autre, il s’agit bien d’imposer - ou plutôt de *composer* - un ordre à partir de phénomènes spontanément chaotiques.
-
-Or la cybernétique, nous allons le voir, est précisément une science - ou aurait désiré être une science - de la *domestication du chaos*.
-
-Quel rapport avec le sujet qui nous occupe ? Pour le comprendre, il nous faut nous tourner vers le père fondateur - ou l’un des pères fondateurs - de cette discipline : Norbert Wiener
-
----
-
-<!-- slide: id="history-024-norbert-wiener" title="Norbert Wiener" steps=0 -->
-##  Norbert Wiener
-1896 - 1964
-<img class="history-asset" src="/assets/aea0a10abefd323079ac9b79b3f873889650598b.webp" alt="aea0a10abefd323079ac9b79b3f873889650598b" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
---- notes
-
-Norbert Wiener est un mathématicien, physicien et philosophe américain.
-
-Il a consacré l’essentiel de sa carrière à des problèmes de mathématiques appliquées, de traitement signal et d’automatisation.
-
-Wiener a par exemple travaillé, pendant la guerre, sur des systèmes de défense anti-aériens capables de suivre automatiquement les avions ennemis et de prédire leurs trajectoires - pour optimiser la réponse des canons antiaériens.
-
----
-
-<!-- slide: id="history-025-slide-025" title="Slide 025" steps=0 -->
-Wiener, N. (1948). *Cybernetics: Or Control and Communication in the Animal and the Machine*.
- Wiener, N. (1950). *The Human Use of Human Beings: Cybernetics and Society*.
-
---- notes
-
-Norbert Wiener a publié deux principaux ouvrages.
-
-
-
-Le premier est assez technique et difficile d’accès. Le second plus généraliste et accessible.
-
-Ces recherches l’ont conduit à formaliser mathématiquement le fonctionnement de systèmes de contrôle automatisés basés sur des boucles de rétroaction - c’est-à-dire des systèmes qui ajustent leur fonctionnement aux effets qu’ils exercent eux-mêmes sur leur environnement.
-
-Le problème du contrôle dans des systèmes complexes peut être approché par un exemple un peu bête : le thermostat.
-
----
-
-<!-- slide: id="history-026-f39604e6260d1ba60efaa3e56b02995169df58fa" title="F39604E6260D1Ba60Efaa3E56B02995169Df58Fa" steps=0 -->
-<img class="history-asset" src="/assets/f39604e6260d1ba60efaa3e56b02995169df58fa.png" alt="f39604e6260d1ba60efaa3e56b02995169df58fa" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-
-<!-- slide: id="history-027-b0f17b4e94de1b4052930d28bfc9eefb15d0ce2f" title="B0F17B4E94De1B4052930D28Bfc9Eefb15D0Ce2F" steps=0 -->
-<img class="history-asset" src="/assets/b0f17b4e94de1b4052930d28bfc9eefb15d0ce2f.png" alt="b0f17b4e94de1b4052930d28bfc9eefb15d0ce2f" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-
-<!-- slide: id="history-028-63014278f5acd9d336b39b522823e378d64a33b2" title="63014278F5Acd9D336B39B522823E378D64A33B2" steps=0 -->
-<img class="history-asset" src="/assets/63014278f5acd9d336b39b522823e378d64a33b2.png" alt="63014278f5acd9d336b39b522823e378d64a33b2" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
---- notes
-
-L’exemple un peu idiot en apparence du thermostat permet d’indiquer, conceptuellement, un problème que l’on retrouve en fait dans nombre d’autres systèmes.
-
-Dès qu’un système comporte des boucles de rétro-action, son fonctionnement devient beaucoup plus complexe à anticiper, et ses objectifs à mettre en oeuvre.
-
-Cette notion de boucle de rétroaction est ainsi devenu un concept clé de la cybernétique.
-
-Wiener a en effet compris qu’en formalisant mathématiquement le fonctionnement de ces systèmes complexes - et des boucles de rétroaction qui les constituent - il devenait possible de transformer des systèmes *a priori instables et chaotiques* en systèmes *stables et contrôlables*.
-
-On pourrait croire, bien sûr, que ces procédés ne s’appliquent qu’aux systèmes techniques et ne concernent pas, ou peu, le champ des sciences sociales.
-
-Et pourtant, à la même époque, d’autres scientifiques, issus de champs disciplinaires distincts, vont embrasser avec des outils proches de la cybernétique, toute une série de phénomènes non-techniques distincts.
-
----
-
-<!-- slide: id="history-029-les-conferences-macy" title="Les conférences Macy" steps=0 -->
-### Les conférences Macy
-1942 - 1953
-
---- notes
-
-Les conférences Macy, organisées entre 1946 et 1953, ont joué un rôle clé dans l’établissement de la cybernétique comme domaine interdisciplinaire.
-
-Elles ont réuni des experts en physiologie (Arturo Rosenblueth), psychologie et neurobiologie (Warren McCulloch), ingénierie, anthropologie (Margaret Mead & Gregory Bateson), économie et autres disciplines, pour discuter de sujets comme la communication, le contrôle, et les systèmes complexes.
-
-Qu’est-ce qui rapproche ces chercheurs ? Et qu’ont-ils comme outils communs pour analyser ici le fonctionnement du cerveau, là le comportement animal et ailleurs les relations sociales des humains ?
-
-D’abord un certain nombre **concepts communs** : les concepts d’information, de communication, de systèmes, de boucle de rétroaction.
-
-Ex. Le réseau neuronal, système de signaux electro-chimiques complexes qui donnent lieu à la conscience.
-
-Ex. Les boucles de rétroaction de la jalousie et du silence.
-
-Ensuite un certain regard - un certain **cadre analytique** - à partir duquel analyser les phénomènes - aussi disparates et hétérogènes soient-ils.
-
-On retrouve notamment, chez tous ces auteurs, une certaine volonté d’analyser non plus des individus ou des phénomènes isolés les uns des autres mais des systèmes relationnels.
-
-Il ne s’agit plus de définir et de comprendre les phénomènes par leur essence, par leur substance, par leur nature physique, par ce qu’ils sont, mais d’analyser d’abord les relations entre ces phénomènes et les réalités qu’ils constituent.
-
-Ex. La schizophrénie et le double-bind : « sois spontané ! ».
-
-La cybernétique considère ainsi que ce sont les systèmes de communication à l’intérieur d’un système qui définissent les propriétés de ce système.
-
-Enfin un certain nombre de **problèmes communs** liés aux questions d’entropie, d’ordre et de stabilité.
-
-Ex. Thermostat.
-Ex. Jalousie dans le couple.
-Ex. Bulle spéculative.
-
----
-
-<!-- slide: id="history-030-ordonner" title="Ordonner" steps=0 -->
-<h3 style="position:relative;z-index:1;">Ordonner</h3>
-<h4 style="position:relative;z-index:1;">le</h4>
-<h2 style="position:relative;z-index:1;">désordre</h2>
-<video class="history-asset" src="/assets/3941289-uhd_3840_2160_30fps.mp4" aria-label="3941289 uhd 3840 2160 30fps" autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;opacity:0.2;filter:brightness(1.35);"></video>
-
---- notes
-
-L’attention portée à ces problèmes s’inscrit dans un contexte social et historique particulier : la seconde guerre mondiale prouve à tous - s’il en était besoin - que le développement des sciences et des techniques n’est en rien synonyme de progrès mais peut au contraire conduire les humains à leur propre destruction : solution finale, organisation industrielle de la mort, bombe atomique, etc.
-
-En outre, la complexification technique et sociale des sociétés humaines tend à complexifier les systèmes sociaux - à y introduire de multiples boucles de rétroaction politiques, économiques, médiatiques, etc. - qui tendent à les rendre de plus en plus instables.
-
-La peur générale, dans certains milieux scientifiques, devient celle de l’entropie [^Rodolph Clausius (1865). Deuxième principe de la thermodynamique.] : la disposition spontanée, pour un système, à tendre vers son état de désorganisation maximal.
-
-Par analogie avec la thermodynamique, l’information a d’ailleurs été définie mathématiquement comme une mesure de la réduction d’incertitude, en opposition au bruit
-
-Cette obsession de l’entropie - ou de la lutte contre l’entropie - pré-existe toutefois au mouvement cybernétique mais celui-ci va lui offrir un cadre d’analyse privilégié.
-
-La peur du chaos, du désordre, etc. animent presque toutes les élites depuis l’apparition des société de masses[^Voir, par exemple, Gustave Le Bon. (1895) *Psychologie des foules*, et Edward L. Bernays (1928). *Propaganda*. [dont le premier chapitre s’intitule *Organiser le chaos*].]  : industrielles, urbaines, médiatiques, etc.
-
-Est-il possible, du chaos, d’extraire de l’ordre ? Ou, pour le formuler autrement, est-il possible de *designer* l’environnement au sein duquel s’affirme ce chaos, d’organiser le système relationnel à l’intérieur duquel résonne ce chaos, de telle sorte que de son désordre interne, premier, organique, se dégage spontanément en quelque sorte, une forme d'ordre lisible, stable et prédictible ?
-
-Peut-on, par exemple, laisser les phénomènes de marché jouer librement sans que ceux-ci ne mènent à des crises financières et économiques ? Ou peut-on laisser les citoyens libres de choisir leur destin politique sans que ceux-ci ne se tournent systématiquement vers le fascisme.
-
-Vous le comprendrez, cette question est immédiatement politique. De quel ordre est-il question ? Et cet ordre, à qui s’adresse-t-il ? Qui rend-il lisible et prédictible ? Et au regard de qui ? Pour en faire quoi ?
-
-La cybernétique va offrir un cadre conceptuel trans-disciplinaire pour penser ces problèmes et tenter d’y répondre en s’efforçant de concevoir des systèmes tendant spontanément vers une forme d’auto-organisation et de stabilité.
-
-Nous le verrons, ce fantasme va connaitre deux destins, ou deux modes d’appropriation, qui ne vont cesser de se croiser au cours de l'histoire.
-
-D’un côté, les gouvernants vont reconnaitre dans la cybernétique la promesse d’un mode de gestion des masses visant à assurer, de manière silencieuse et invisible, la stabilité du système - et donc la reconduction de leurs privilèges.
-
-De l’autre, une certaine tradition techno-anarchiste va identifier, dans la cybernétique, la possibilité de modes d’auto-organisation horizontaux et spontanés - enfin débarrassés de toute autorité étatique.
-
-On retrouve aujourd’hui l’héritage cybernétique aussi bien dans les modèles d’IA que dans le système de crédit social chinois, dans les dispositifs de captation de l’attention d’Instagram autant que dans les révoltes du Printemps arabe, dans les fantasmes libertariens des crypto-monnaies aussi bien que dans les délires de la smart-city.
-
-Les ambitions cybernétiques de Wiener et de ses collègues sont toutefois limitées, à l’époque, par la faiblesse des moyens techniques à leur disposition.
-
----
-
-<!-- slide: id="history-031-mainframe" title="Mainframe" steps=0 -->
-<img class="history-asset" src="/assets/mainframe.png" alt="mainframe" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
---- notes
-
-Les ordinateurs existent, certes, mais ils constituent des *mainframes* : de gigantesques machines, très couteuses, occupant des salles entières, mais ne disposant que d’une fraction de la puissance de calcul d’un iPhone - ou même d’une montre connectée. Les ressources sont donc limitées.
-
-Une poignée de projets vont toutefois s’appliquer à en mettre en oeuvre le rêve cybernétique.
-
-C’est, par exemple, le cas du projet *SAGE* (Semi-Automatic Ground Environment), un système militaire de défense aérienne, opérationnel entre 1959 et 1983.
-
-Inspiré par la logique cybernétique (feedback, communication homme-machine), il intégrait un réseau de radars reliés à des ordinateurs qui guidaient les interceptions.
-
-Il s’agit du premier réseau informatique en temps réel, souvent considéré comme le premier système interactif homme-machine à grande échelle.
-
-C’est aussi le cas du projet Cybersyn (1971-1973), une tentative pionnière d’appliquer la cybernétique à la gouvernance économique au Chili sous le président Salvador Allende.
-
-Conçu par l’expert britannique Stafford Beer, il reposait sur un réseau de téléscripteurs installés dans des centaines d’usines, reliés à un centre informatique qui collectait quotidiennement des données de production.
-
-Ces informations alimentaient un logiciel de modélisation permettant d’anticiper les pénuries ou blocages, tandis qu’une salle futuriste de contrôle devait aider les décideurs à piloter l’économie en temps réel.
-
-L’objectif était de rendre la planification plus souple, décentralisée et participative, mais le projet fut interrompu brutalement par le coup d’État de Pinochet en septembre 1973.
-
-Cette idée sera reprise en France dans le rapport Nora-Minc (1977) qui impulsera la naissance du Minitel.
-
-Nous pourrions mentionner encore quelques autres initiatives, notamment en URSS, mais l’essentiel est ailleurs : les fantasmes de la cybernétique ne pouvaient en réalité être accomplis sans une numérisation et une interconnexion générale du monde.
-
----
-
-<!-- slide: id="history-032-5-internet-la-micro-informatique" title="5. Internet &amp; la micro-informatique" steps=0 -->
-## 5. Internet & la micro-informatique
+##  Internet & la micro-informatique
 
 --- notes
 
 Ce fantasme se réalisera par la conjonction de deux processus : la diffusion du réseau Internet et le développement de la micro-informatique.
 
 ---
-
-<!-- slide: id="history-033-internet" title="internet" steps=0 -->
- 5.a
-# internet
-#### Les origines
+## internet
+Les origines {.kicker}
 
 --- notes
 
 Il importe, avant d’entamer ce chapitre, de préciser la différence qui existe en Internet et le web.
 
 ---
-
-<!-- slide: id="history-034-berners-lee-and-cerf" title="Berners Lee And Cerf" steps=0 -->
-<img class="history-asset" src="/assets/berners_lee_and_cerf.jpg" alt="berners lee and cerf" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+![Tim Berners Lee and Vinton Cerf](/berners_lee_and_cerf.jpg){data-glow="strong" class="slide-image-fill"}
 <p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">Tim Berners-Lee &amp; Vint Cerf</p>
+
 
 --- notes
 
-Internet constitue tout à la fois une technologie de communication - les protocoles TCP/IP - et, par extension, un réseau de communication mondial reposant sur cette technologie.
+Internet constitue tout à la fois une technologie de communication - les protocoles TCP/IP - et, par extension, un réseau de communication mondial reposant sur cette technologie. La genèse des protocoles TCP/IP remonte aux années 1960 et leur formalisation sera achevée en 1983.
 
-La genèse des protocoles TCP/IP remonte aux années 1960 et leur formalisation sera achevée en 1983.
-
-Le web, lui, constitue un ensemble de technologies permettant de consulter des pages web par l’intermédiaire d’un navigateur : Chrome, Safari, Firefox, Edge, etc.
-
-Le web est bien plus récent. Il a été inventé par l’informaticien britannique Tim Berners-Lee au début des années 1990.
+Le web, lui, constitue un ensemble de technologies permettant de consulter des pages web par l’intermédiaire d’un navigateur : Chrome, Safari, Firefox, Edge, etc. Il est bien plus récent et a été inventé par l’informaticien britannique Tim Berners-Lee au début des années 1990.
 
 On dit que le web appartient aux couches hautes d’Internet, tandis que les protocoles TCP/IP composent ses couches basses.
 
@@ -761,11 +567,7 @@ Les protocoles TCP/IP, en effet, servent d’appui à bien d’autres applicatio
 Nous pouvons maintenant reprendre notre déroulé historique.
 
 ---
-
-<!-- slide: id="history-035-joseph-c-r-licklider" title="Joseph C. R. Licklider" steps=0 -->
-# Joseph C. R. Licklider
-1915 - 1990
-<img class="history-asset" src="/assets/licklider.jpg" alt="licklider" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<Persona name="Joseph C. R. Licklider" dates="1915 - 1990" picture="/licklider.jpg" />
 
 --- notes
 
@@ -783,6 +585,7 @@ Licklider insiste alors sur la nécessité d’un réseau numérique et surtout 
 
 <!-- slide: id="history-036-phone" title="Phone" steps=0 -->
 <img class="history-asset" src="/assets/phone.webp" alt="phone" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+![Centre de commutation téléphonique](/phone.webp){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
