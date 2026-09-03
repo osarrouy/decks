@@ -69,13 +69,17 @@ De quoi, donc, ce personnage va-t-il vous parler ?
 ---
 ## Programme
 
+--- notes
+
+
 - Pré-histoire 4
 - Cybernetics 2
 - Micro-informatique 2
 10
-- Réseaux sociaux et phénomènes de foule ?
-- Economie de la donnée
-- IA contemporaine
+- Réseaux sociaux et espace public 2h
+- Structure réseaux sociaux 1h
+- Viralité 1h
+- Bulles de filtre et polarisation 2h
 - Interpassivité 4h
 
 histoire 4 séances = 8h
