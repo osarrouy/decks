@@ -67,3 +67,13 @@ L’ancien format en blockquote reste accepté :
 > [!EXEMPLE]
 > Un exemple court.
 ```
+
+## Style des notes de cours
+
+Les notes du speaker doivent servir d’aide-mémoire, et non constituer un texte intégral à lire ou à rédiger mot à mot. Leur longueur est variable : les passages simples restent très courts ; les passages techniques, subtils ou pédagogiquement délicats peuvent être développés davantage.
+
+Privilégier des paragraphes de cours en phrases complètes plutôt qu’une liste de points. La priorité est de conserver l’ordre pédagogique du discours : idée directrice, définitions, enchaînement des mécanismes, exemples, dates et noms, précautions, conclusion et transition vers la slide suivante. La formulation doit rester condensée, mais suffisamment précise pour permettre de retrouver exactement comment articuler et expliquer le propos.
+
+Quand c’est utile, hiérarchiser explicitement ce qui est indispensable à retenir et ce qui relève d’un approfondissement. Signaler aussi les formulations à éviter lorsqu’une simplification risquerait de produire un contresens historique, technique ou conceptuel.
+
+Utiliser `:::example` pour les exemples ou développements à mobiliser oralement, et `:::comment` pour les indications de présentation, de mise en scène ou d’accentuation. Lorsqu’un résumé est demandé, proposer d’abord le texte sans modifier directement le deck ; une modification ne sera effectuée qu’après accord explicite.

@@ -96,14 +96,7 @@ Je n'ai pas 60 ans mais, au cours des 10 ou 15 ans pendant lesquels j'ai enseign
 
 Votre capacité d'attention diminue à cause des réseaux sociaux et des smartphones - ma capacité d'attention diminue aussi du reste. Ce n'est pas du tout de votre fait mais le résultat est le même. Enseigner signifie aujourd'hui : entrer dans une espèce de lutte permanente pour l'attention contre TikTok, Instagram ou YouTube que l'essentiel d'entre vous consulte pendant les cours. Même en y mettant du mien, le combat est perdu d'avance. 
 
-Entendons-nous bien. Je ne crois pas que vous soyiez moins malin que v
-
-
-
-
-restez chez vous !
-
-Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un.
+A cela se rajouter souvent un rapport compliqué à l'écriture.Entendons-nous bien. Je ne crois pas que vous soyiez moins malin que je ne l'étais à votre âge. Au contraire. Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un.
 
 Les universitaires ont tendance à fétichiser l'importance de l'écrit dans la structuration de la pensée. Il importe donc de rappeler qu'il y a à peine un siècle ou deux, l'essentiel de la population était analphabète. La culture de l'écriture livresque aura donc été une courte parenthèse dans l'histoire de l'humanité. Et on ne peut pas dire que la courte parenthèse pendant laquelle la culture de l'écrit et du livre a régné en maitre a été particulièrement vertueuse : deux guerres mondiales, plusieurs génocides, etc. L'humanité faisait sans la culture de l'écrit avant, elle fera sans après. La question n'est donc pas tant de savoir comment lutter CONTRE la disparition progressive de cette culture de l'écrit que de savoir ce que signifie enseigner À PARTIR de là.
 
@@ -116,41 +109,64 @@ De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour q
 3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Je n'ai pas encore totalement défini la forme que prendra cette IA et son interface : c'est beaucoup de travail. Quoi qu'il en soit ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
 
 
-J'avoue, d'ailleurs, ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour, de toute façon, ne rien en suivre et passer deux heures sur Instagram. La vie est courte : ce qu'il nous reste vivre - ce qu'il vous reste à vivre - est précieux et je doute que vous revienne, au seuil de la mort, le souvenir d'un reel Instagram ou d'un short de YouTube.
+Dernier élément. Je ne surveille pas la présence en cours donc libre à vous de venir ou non. Mais par pitié, si vous venez, soyez présent. J'avoue, d'ailleurs, ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour, de toute façon, ne rien en suivre et passer deux heures sur Instagram. La vie est courte : ce qu'il nous reste vivre - ce qu'il vous reste à vivre - est précieux et je doute que vous revienne, au seuil de la mort, le souvenir d'un reel Instagram ou d'un short de YouTube.
 
-Mon propos serait donc le suivant : je peux tout à fait entendre que nous n'ayiez pas envie de venir en cours. Vous avez 18, 19 ans et vous avez sans doute mieux à vivre que de vous ennuyez sur les bancs de l'université. Et c'est ok et je ne vous en veux absolument pas pour ça.
+Par ailleurs comprenez que la fonction de ce cours est que nous partagions quelque chose, meme si la configuration de l'amphi s'y prete mal.
 
-Mais si vous venez en cours, je vous en prie : soyez présents. Faisons de ce moment un moment de présence réelle, d'échange, de discussion, de partage. Disputons-nous s'il le faut mais restons vivants.
+La vérité est que si vous savez prompter une IA et lui poser les bonnes questions je suis remplaçable par chatGPT.Ma fonction n'est donc pas tant de vous transmettre un savoir que de vous transmettre une certaine attitude par rapport à ce savoir et par rapport au monde vis-à-vis duquel ce savoir permet de vous situer.
 
+La mémoire d'une époque où le rapport à ce savoir et le rapport à l'université était un peu plus sauvage et un peu plus libre.
+
+:::example
+Il n'existait pas ParcoursSup
+On faisait les cours dehors quand il faisait beau
+Lorsqu'un de vos camarades exilé était menacé d'expulsion, nous pouvions, pendant le temps du cours partir avec les étudiants qui le souhaitaient pour bloquer la préfecture et réclamer sa régularisation.
+:::
+
+Tout cela est devenu compliqué pour diverses raisons : votre angoisse de l'avenir, entretenue par les médias et ParcoursSup, la rigidification des institutions, la fascisation de la police qui atteint des niveaux de violence inimaginables, etc.
+
+Tout ça est malheureux - et d'autant plus malheureux que vous n'y êtes pour rien et que si quelqu'un doit être tenu responsable de tout cela c'est bien plus ma génération que la votre.
+
+On ne peut pas, malheureusement, changer ces par décret de la volonté. Mais on peut faire en sorte que les quelques heures qu'on passe ensemble soient chouettes, soient drôles, soient bienveillantes et espérer qu'on en ressorte un peu plus libre et heureux qu'on y est rentré.
+
+Essayons.
 
 ---
 ## Examens
 
+QCM | janvier {.kicker}
 
 ---
 
 ## Et aussi ...
 
-Ma génération a échoué et si ce n'est évidemment pas de mon seul fait - j'ai fait de mon mieux, ou j'ai cru faire de mon mieux - j'aimerais quand meme que vous entendiez nos excuses - ou les miennes en tout cas. J'aurais voulu que votre monde soit plus heureux que le mien et pour l'essentiel il ne l'est pas - loin de là.
+--- notes
 
+Le monde social étant ce qu'il est - et les hommes, en particulier, étant ce qu'ils sont - il n'est pas impossible que vous soyez, au cours de votre passage à l'université, confrontées - notamment les femmes - à des dingueries.
 
+On vous a déjà dit un petit mot sur les VSS à la réunion de rentrée. Je me permets d'y revenir rapidement.
 
-Je viens d'un monde où quand il faisait beau, nous pouvions emmener les étudiants dehors pour faire cours assis dans la pelouse. Je viens d'un monde où lorsqu'un de vos camarades exilé était menacé d'expulsion, nous pouvions, pendant le temps du cours partir avec les étudiants qui le souhaitaient pour bloquer la préfecture et réclamer sa régularisation.
+Ce n'est pas pire ici qu'ailleurs, mais c'est pas ouf dans le monde.
 
-Si nous allions faire cours dehors aujourd'hui, certains ne manqueront pas de s'en plaindre, et la présidence ne ratera pas l'occasion de nous rappeler à l'ordre au nom de je ne sais quelle norme de sécurité. Si nous essayions d'aller bloquer la préfecture aujourd'hui pour réclamer la régularisation d'un de vos camarades, la police nous arrêterait, nous frapperait et nous trainerait au tribunal.
+Comportement déplacés, blagues douteuses répétitives, ou juste des situations qui vous mettent mal à l'aise : dans le BDE, entre étudiants, avec certains profs.
 
-
-
-
-
-aujourd'hui. Si cela police vous frapper vous enfermer. Si dehors, certains étudiants se plaindrais la présidence, probablement nous causer des ennuis, me causer des ennuis. Je suis déjà en assez mauvais termes avec l'institution. Bref, le monde s'est assagi. Le monde s'est fâché. À vrai dire et habiter ce monde devient de plus en plus triste et ennuye.
-Par ailleurs, la fonction même d'enseignants a changé si je suis tout à fait honnête en quelques heures, je peux vous expliquer comment me remplacer par ChatGPT ça suffit de savoir poser les bonnes questions, il suffirait que je vous transmette un plan et quelques noms d'auteur ou quelques lignes, directrice quelques indications pour savoir comment interroger ChatGPT, et vous pourriez avoir accès à un savoir qui en réalité déborde en extension, le mien même si dans les faits en intensité dans sa poésie propre, ce serait pas du même ce serait pas du même ordre. Ça pose question quand est-ce qu'aujourd'hui le travail d'enseignant
+L'avantage c'est que l'université est bien consciente de ces problèmes et a mis en place des dispositifs.
 
 ---
-## VSS
-
 https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences
 
 vss-sse@univ-rennes.fr
 
-VSS : BDE : on y a pas pensé
+--- notes
+
+Je passe là dessus parce qu'on vous en a déjà parlé.
+
+Mon point serait : venez nous parlez. N'ayez pas peur, nous sommes bienveillants et notre objectifs n'est ni d'envoyer les gens en prison, ni d'humilier qui que ce soit, mais de faire en sorte que la fac soit un lieu agréable pour tout le monde.
+
+Souvent les étudiants ne viennent pas parce qu'ils ont peur des retombées pour eux ou pour les autres. Gardez en tête qu'on est pas des juges.
+
+Je suis un homme moi-même - né en 85 de surcroit - et il a pu m'arriver d'etre con - et cela m'arrive encore sans doute - donc je sais très bien que des fois on est con sans s'en rendre compte. Mais je sais aussi que c'est important que des gens nous le dise et nous y confronte avec bienveillance, parce que c'est comme ça qu'on devient moins con.
+
+---
+
+Sondage IA. Pour me faire une petite idée de vos usages et préparer la suite du cours.
