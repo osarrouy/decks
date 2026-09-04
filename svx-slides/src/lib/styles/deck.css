@@ -70,8 +70,8 @@
     margin-bottom: var(--space-2);
     font-family: var(--font-heading);
     font-size: var(--heading-2-size);
-    font-weight: 650;
-    letter-spacing: -0.035em;
+    /*font-weight: 650;*/
+    /*letter-spacing: -0.035em;*/
     line-height: 1;
 }
 

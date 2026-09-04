@@ -398,20 +398,6 @@ La question n’est pas simplement : « Faut-il centraliser ou décentraliser ? 
 
 > **Qui institue les conditions dans lesquelles la coordination distribuée doit avoir lieu ?**
 
-### Question aux étudiants
-
-Comparer Cybersyn et le marché décrit par Hayek à l’aide de la grille du cours :
-
-1. Quel est l’objectif du système ?
-2. Quelles informations circulent ?
-3. Qui possède les infrastructures ?
-4. Où se prennent les décisions ?
-5. Qui peut contester les règles ?
-
-### Transition
-
-> Le contrôle ne disparaît pas nécessairement avec le commandement central ; il peut se déplacer vers la conception de l’environnement.
-
 ---
 
 ## 12. Tiqqun : contrôler en faisant circuler

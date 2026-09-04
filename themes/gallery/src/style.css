@@ -92,6 +92,15 @@
     --image-glow-color: var(--accent);
 }
 
+/* Légendes des images. */
+[data-theme='gallery'] .image-caption {
+    font-family: var(--font-mono);
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 /* Header simple du thème gallery : titre à gauche, compteur à droite. */
 [data-theme='gallery'] .deck-header {
     position: relative;
@@ -206,7 +215,8 @@
 
 /* Titres gallery : Instrument Serif droit, très fin et très serré. */
 [data-theme='gallery'] .slide h1,
-[data-theme='gallery'] .slide h2 {
+[data-theme='gallery'] .slide h2,
+[data-theme='gallery'] .slide h3 {
     font-style: normal;
     font-weight: 100;
 }

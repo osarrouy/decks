@@ -3,6 +3,7 @@ title: Histoire du numérique - 1 / 2
 theme: gallery
 ---
 
+
 # Histoire du numérique
 
 --- notes
@@ -109,7 +110,7 @@ La machine est spécialisée : elle incorpore un algorithme déterminé et n’e
 
 ---
 ![Analytical engine](/analytical_engine.jpg){class="slide-image-fill" style="max-width:100%;max-height:68vh;object-fit:contain;"}
-<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">Modèle d’essai partiel de l’Analytical Engine, Science Museum</p>
+<p class="image-caption">Modèle d’essai partiel de l’Analytical Engine, Science Museum</p>
 
 --- notes
 
@@ -551,7 +552,7 @@ Il importe, avant d’entamer ce chapitre, de préciser la différence qui exist
 
 ---
 ![Tim Berners Lee and Vinton Cerf](/berners_lee_and_cerf.jpg){data-glow="strong" class="slide-image-fill"}
-<p class="history-caption" style="font-family:var(--font-mono);font-size:0.75em;letter-spacing:0.08em;text-transform:uppercase;">Tim Berners-Lee &amp; Vint Cerf</p>
+<p class="image-caption">Tim Berners-Lee &amp; Vint Cerf</p>
 
 
 --- notes
@@ -681,7 +682,11 @@ Ce groupe, s’il précède historiquement l’émergence de la culture hippie, 
 ---
 
 <!-- slide: id="history-040-slide-040" title="Slide 040" steps=0 -->
-<p class="history-video-link"><a href="https://www.youtube.com/watch?v=_-QnGBRTV7M" target="_blank" rel="noreferrer">Vidéo externe</a></p>
+<script>
+  import BackgroundVideo from '$components/BackgroundVideo.svelte'
+</script>
+
+<BackgroundVideo src="/hippies.mp4" />
 
 --- notes
 

@@ -1,0 +1,522 @@
+---
+title: Naissance d'Internet et de la micro-informatique
+theme: gallery
+---
+
+# Internet & l'ordinateur personnel
+
+--- notes
+
+Ce fantasme se réalisera par la conjonction de deux processus : la diffusion du réseau Internet et le développement de la micro-informatique.
+
+---
+## internet
+Les origines {.kicker}
+
+--- notes
+
+Il importe, avant d’entamer ce chapitre, de préciser la différence qui existe en Internet et le web.
+
+---
+![Tim Berners Lee and Vinton Cerf](/berners_lee_and_cerf.jpg){data-glow="strong" class="slide-image-fill"}
+<p class="image-caption">Tim Berners-Lee &amp; Vint Cerf</p>
+
+
+--- notes
+
+Internet constitue tout à la fois une technologie de communication - les protocoles TCP/IP - et, par extension, un réseau de communication mondial reposant sur cette technologie. La genèse des protocoles TCP/IP remonte aux années 1960 et leur formalisation sera achevée en 1983.
+
+Le web, lui, constitue un ensemble de technologies permettant de consulter des pages web par l’intermédiaire d’un navigateur : Chrome, Safari, Firefox, Edge, etc. Il est bien plus récent et a été inventé par l’informaticien britannique Tim Berners-Lee au début des années 1990.
+
+On dit que le web appartient aux couches hautes d’Internet, tandis que les protocoles TCP/IP composent ses couches basses.
+
+Les protocoles TCP/IP, en effet, servent d’appui à bien d’autres applications que le web : mail, streaming, partage de fichiers, visio-conférence, etc.
+
+Nous pouvons maintenant reprendre notre déroulé historique.
+
+---
+<Persona name="Joseph C. R. Licklider" dates="1915 - 1990" picture="/licklider.jpg" />
+
+--- notes
+
+L’histoire d’Internet s’ouvre avec la nomination, en 1962, de Joseph Licklider, psychologue et informaticien américain, à la tête de l’IPTO (Information Processing Techniques Office), un département de la DARPA - qui s’appelait encore, à l’époque, ARPA.
+
+Nous sommes, alors, en pleine guerre froide. Après le lancement du Spoutnik soviétique en octobre 1957, les États-Unis craignent un retard technologique et investissent massivement dans la recherche.
+
+L’ARPA finance non seulement des projets à finalité militaire immédiate, mais aussi de nombreux travaux de recherche fondamentale, sans exigences opérationnelles directes - une politique de financement « sans contrepartie » qui favorisera une large vague d’innovations.
+
+Licklider a une idée en tête. Il imagine une véritable symbiose entre l’homme et l’ordinateur. Pour y parvenir, il propose de relier les ordinateurs en réseau, une idée révolutionnaire à une époque où ceux-ci étaient encore composés de gigantesques mainframes.
+
+Licklider insiste alors sur la nécessité d’un réseau numérique et surtout décentralisé, à rebours du modèle dominant : le réseau téléphonique.
+
+---
+![Centre de commutation téléphonique](/phone.webp){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+Le réseau téléphonique de l’époque repose sur une architecture très centralisée.
+
+L’ensemble des circuits de communication, et des usages faits de ces circuits, y sont administrés par un opérateur unique, souvent contrôlé par l’État.
+
+Ce fonctionnement, très simple et très efficace, freine toutefois l’innovation : y introduire de nouveaux usages - par exemple l’établissement d’un circuit de communication numérique entre machine en lieu et place d’un circuit de communication analogique entre humains - réclame que ces usages soient validés par l’opérateur d’État.
+
+L’ingénieur Paul Baran imagine alors une architecture de communication alternative à ce système centralisé.
+
+Cette architecture ne réclame plus d’un opérateur central qu’il organise - et contrôle en les organisant - les opérations de routage entre les différents terminaux. Elle propose à l’inverse que les noeuds du réseaux prennent eux-mêmes en charge la transmission et la redistribution des communications.
+
+Les informations y sont ainsi découpées en paquets indépendants, qui circulent par des routes diverses avant d’être réassemblés à destination : c’est ce qu’on appelle la **commutation par paquets**.
+
+Paul Baran n’est d’ailleurs pas le seul à proposer cette idée. Au même moment, Donald Davies au Royaume-Uni, et Leonard Kleinrock aux États-Unis, développent des réflexions similaires.
+
+Comme souvent en période d’effervescence scientifique, une même idée apparaît simultanément dans plusieurs lieux.
+
+La commutation par paquets change profondément la logique des réseaux. Elle rend la communication plus flexible et plus résiliente, mais surtout plus ouverte.
+
+Techniquement, elle permet de composer entre eux des réseaux reposant sur des technologies distinctes : câbles téléphoniques, fibre optique, satellites, wifi, etc.
+
+Politiquement, elle soustrait le destin du réseau aux limites des frontières nationales et au contrôle d’un opérateur central.
+
+Mais surtout, en adoptant une architecture en couches, elle ouvre le réseau à une infinité d’usages possibles. N’importe quel utilisateur ou communauté peut inventer de nouveaux services, qui se diffusent ensuite à l’ensemble du réseau.
+
+C’est ce principe d’innovation ascendante qui permettra l’essor d’outils aussi divers que le Web, le mail, le streaming ou le peer-to-peer. L’innovation n’est plus contrôlée par un opérateur central, mais repoussée aux limites du réseau.
+
+Il faut au passage nuancer une idée reçue : si Paul Baran avait effectivement réfléchi à la résilience de son système en cas d’attaque nucléaire, cet argument n’a pas été déterminant dans le développement de ses idées. La robustesse du réseau distribuée est un effet secondaire, pas une cause première.
+
+Les premiers efforts pour mettre en oeuvre les intuitions de Licklider et Baran vont émerger dans les années 1960.
+
+En 1969, le premier lien d’ARPANET - l’ancêtre direct d’Internet - est établi entre l’université de Californie à Los Angeles et le Stanford Research Institute. Le réseau s’étend ensuite rapidement à d’autres universités.
+
+Les protocoles TCP/IP sont ensuite proposés dès 1974, par Vint Cerf et Robert Kahn, dans leur article *A Protocol for Packet Network Intercommunication*.
+
+Les premières implémentations expérimentales de ces protocoles apparaissent en 1975, et le véritable tournant a lieu le 1er janvier 1983, lorsque l’ensemble du réseau ARPANET bascule officiellement vers TCP/IP.
+
+À cette époque, ARPANET compte déjà plusieurs centaines de nœuds. Très vite, il échappe au cadre strictement militaire et académique pour être adopté par des communautés universitaires, techniques et contre-culturelles. Internet était né.
+
+---
+## Naissance de la micro-informatique
+
+--- notes
+
+Dans les années 1960, l’informatique repose encore sur d’immenses ordinateurs centraux, les **mainframes**, coûteux et réservés aux grandes institutions. Personne n’imagine alors un ordinateur dans chaque foyer.
+
+Le changement va d’abord venir d’avancées technologiques. L’architecture de base, définie par le modèle de Von Neumann (processeur, mémoire, entrées-sorties), reste la même, mais les composants évoluent rapidement.
+
+À la fin des années 1950, l’invention du **circuit intégré** permet de graver de minuscules transistors sur des puces de silicium. Un transistor, qui occupait auparavant un volume important dans les lampes à vide, ne prend plus qu’un millimètre carré : moins de place, moins de consommation, plus de puissance.
+
+Cette miniaturisation progresse sans cesse : aujourd’hui, on grave à l’échelle du nanomètre (un milliardième de mètre), si bien qu’un circuit de la taille d’un timbre-poste peut contenir plus d’un milliard de transistors.
+
+Ces innovations ouvrent la voie à des mémoires plus étendues et des processeurs plus rapides, jusqu’à l’apparition, au début des années 1970, du microprocesseur : un processeur complet intégré sur une seule puce de silicium.
+
+---
+![IBM 360](/ce7f7a11085b53c977b0ffd1c74469d3e03505b1.jpg){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+En 1964, IBM lance la série des System/360. Ce ne sont pas encore des micro-ordinateurs mais de puissants mainframes, destinés aux grandes entreprises.
+
+Leur importance est ailleurs : pour la première fois, une gamme entière d’ordinateurs repose sur une architecture commune et compatible. Cette standardisation marque un tournant et accélère la diffusion de l’informatique dans le monde professionnel.
+
+La naissance de l’informatique grand public devra, elle, attendre encore quelques années. Elle réclamera, nous allons le voir, un étrange détour contre-culturel.
+
+---
+## La contre-culture californienne
+
+--- notes
+
+L’histoire qui nous intéresse se déroule entre la fin des années 1960 et la fin des années 1970, dans la baie de San Francisco. Ce territoire concentre des universités prestigieuses - Stanford, Berkeley - mais aussi un bouillonnement politique et culturel sans équivalent.
+
+Nous pouvons, au risque de simplifier un peu les choses, y identifier deux principaux courants contestataires.
+
+D’un côté, les luttes qui s’attaquent frontalement au monde dominant : luttes antiracistes (Black Panthers), luttes féministes, luttes contre la guerre du Vietnam, etc.
+
+De l’autre, un mouvement parallèle, moins tourné vers la confrontation que vers l’expérimentation d’alternatives, les **hippies** : installation en communes, expérimentations sexuelles et psychédéliques, expérimentations musicales, spiritualités importées d’Asie, etc.
+
+Ce second mouvement, majoritairement composé d’hommes blancs issus des classes moyennes, entretient par rapport aux mondes de son époque, un rapport ambivalent : se retirer pour expérimenter, s’absenter pour inventer. Cette ambivalence, nous le verrons, marquera profondément leur rapport à la technique.
+
+Un groupe en particulier va retenir notre attention, qui s’est installé en commune, vers 1965, dans un ranch à *La Honda*, à une dizaine de kilomètres de l’université de Stanford.
+
+Ce groupe, s’il précède historiquement l’émergence de la culture hippie, aura sur son histoire un impact décisif.
+
+---
+
+<p class="history-video-link"><a href="https://www.youtube.com/watch?v=_-QnGBRTV7M" target="_blank" rel="noreferrer">Vidéo externe</a></p>
+
+--- notes
+
+Ce groupe ressemble des individus aux parcours et aux personnalités *a priori* hétérogènes.
+
+Le ranch appartient à un certain Ken Kesey, un écrivain américain, qui, avant de se retirer dans la solitude, a notamment écrit *Vol au-dessus d'un nid de coucou* (1962).
+
+Ken Kesey est considéré comme un héritier de la *Beat-Generation*, un mouvement littéraire et artistique libertaire américain, incarné notamment par Jack Kerouac [^*Sur la route* (1957)], Allan Ginsberg[^*Howl* (1957)] ou William S. Burroughs[^*Le Festin nu* (1959)].
+
+La *Beat-Generation* a profondément ébranlé l’Amérique d’après-guerre, en affirmant un certain dégout des normes pudibondes qui étaient les siennes ; en affirmant, aussi, une certaine liberté, et un certain mépris à l’endroit des principaux piliers de l’*american-way-of-life* : le travail, l’argent, la famille.
+
+Un des personnages centraux des romans de la *Beat-Generation*, est un certain Neal Cassady - archétype, alors, d’une certaine jeunesse : incroyablement beau, fou, libre.
+
+Or ce fameux Neal Cassady est un visiteur régulier du ranch de La Honda. Là-bas, il côtoie une nouvelle génération de déserteurs : des *Hells Angels*, mais aussi les *Grateful Dead* - avant garde de la musique psychédélique - et d’autres électrons libres qui se rassembleront pour constituer un groupe hétéroclite: les *Merry Pranksters*.
+
+Les *Pranksters* sillonnent la Californie et les États-Unis dans un bus scolaire appelé le *Furthur* pour organiser des *acid tests* : de gigantesques orgies de LSD qui donneront leur titre à un ouvrage de Tom Wolfe. Les *Grateful Dead* y assurent la bande son et les *Hells Angels* le service d’ordre.
+
+L’un de premiers a voir expérimenté l’acide - apparu sur la côte Est - est d’ailleurs Ken Kesey, qui a rejoint en tant que cobaye, au début des années 1960, une expérimentation organisée secrètement par la CIA pour tester les effets du LSD sur l’esprit humain - vraisemblablement pour essayer d’en extraire quelque chose comme un sérum de vérité.
+
+Kesey, comme la plupart de ses amis, est fasciné par les effets du LSD. Cette fascination, nous allons le voir, lui est étrangement inspirée par la cybernétique.
+
+La plupart des *Pranksters* n’a évidemment pas lu Wiener. De la cybernétique comme savoir, ils ne connaissent pas grand chose - sans doute même, pour l’essentiel : rien.
+
+L’imaginaire cybernétique façonne toutefois leurs perceptions : du cerveau comme système de communication, de la communauté comme organisme, du trip comme opération de réorganisation des flux cérébraux.
+
+Ces fantasmes peuvent prêter à sourire. Ils disent pourtant beaucoup de la manière dont la théorie cybernétique - qui constitue, rappelons-le, une théorie de la commande et du contrôle des systèmes complexes - a pu être détournée et ré-appropriée, pour alimenter un imaginaire de l’auto-organisation, de l’horizontalité et de la symbiose : au niveau individuel (déverrouiller la conscience), interpersonnel (constituer un « esprit de ruche »), et intercommunautaire (créer des réseaux horizontaux entre communes, parfois par radio).
+
+S’il est possible de composer des systèmes complexes auto-organisant, tendant spontanément vers une forme de stabilité et d’auto-reproduction, alors il devient possible d’envisager une forme de vie auto-suffisante à l’écart des États, de leur police, et de leur verticalité.
+
+Nous retrouvons ici la tension inhérente à la théorie cybernétique constituant simultanément une théorie du contrôle social et une théorie de l’auto-organisation.
+
+Vous noterez au passage que les *Pranksters* témoignent, à la fois par leur usage des drogues de synthèse et par leur usage des technologies radios, d’un rapport aux techniques assez éloigné de l’imaginaire traditionnel du retour à la terre.
+
+Il s’agit bien, pour les *Pranksters*, de s’établir en communes. Mais ce mouvement des communes est indissociable d’une réappropriation des technologies les plus avancées de leur époque.
+
+On ne s’étonnera donc pas que ce soit au sein de cette contre-culture que s’expérimentera, très tôt, certains des usages les plus créatifs de la micro-informatique naissante.
+
+Nous allons le voir, cette communauté va venir aux ordinateurs comme ils sont venus à la drogue : dans une quête d’éveil, de débordement de la conscience, et d’expérimentation d’un esprit de ruche ou d’un esprit de groupe : d’une conscience collective.
+
+Un acteur va être d’une importance particulière dans la mise en lien de ces communautés contre-culturelles et des centre de recherches les plus avancés de la baie de San Francisco : Stewart Brand.
+
+---
+<Persona name="Stewart Brand" dates="1938 -" picture="/brand.webp" />
+
+--- notes
+
+Stewart Brand est celui qui va amener le LSD dans les labos et les ordinateurs dans les communes.
+
+Stewart Brand est un membre des Merry Pranksters. Mais il est aussi proche de nombreux chercheurs travaillant sur les technologies informatiques naissantes.
+
+En 1968, un certain Doug Engelbart, qui travaille à l’*Augmentation Research Center* (ARC) du Stanford Research Institute (SRI), financé lui aussi par l’ARPA, va présenter en public un projet sur lequel son équipe travaille depuis longtemps : le NLS (oNLine System).
+
+---
+
+<!-- slide: id="history-042-mother-of-all-demos" title="Mother Of All Demos" steps=0 -->
+<video class="history-asset" src="/assets/mother_of_all_demos.mp4" aria-label="mother of all demos" autoplay loop muted playsinline style="max-width:100%;max-height:68vh;object-fit:contain;"></video>
+
+--- notes
+
+Ce système met en oeuvre une certaine vision de l’humain augmenté par la machine et anticipe parfois avec plusieurs décennies d’avance, ce qui constituera l’avenir de l’informatique : le *Memex* - ancêtre de l’hypertexte - la collaboration à distance sur ordinateur, la première interface graphique accompagnée d’une souris, etc.
+
+Cette démonstration influencera de façon décisive l’avenir de l’industrie informatique, à tel point qu’elle sera qualifiée de *mère de toutes les démos* - ce rituel obligé de l’informatique dont elle inventera le principe même.
+
+Or cette démo est filmée par ... Steward Brand.
+
+Ce n’est pas tout à fait un hasard : Steward Brand sera considéré, dans les années qui suivront, comme l’une des personnalités les plus influentes du réseaux disparates de communes issues du mouvement hippie.
+
+Cette influence s’exercera notamment à travers la publication, entre 1968 et 1972, du *Whole Earth Catalog*.
+
+---
+![Whole earth catalog](/whole_earth_catalog_1.jpg){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+Le *Whole Earth Catalog* se présente comme une sorte d’encyclopédie pour communautés alternatives : recettes de cuisine, spiritualités orientales, bricolage, écologie… mais aussi présentation des technologies les plus récentes de l’époque.
+
+---
+![Whole earth catalog](/whole_earth_catalog_2.jpg){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+Le *Whole Earth Catalog* n’est pas, contrairement aux apparences, une publication de niche. Il sera, en 1971, tiré à plus d’un million d’exemplaires. Steve Jobs dira plus tard qu’il s’agissait d’un véritable « ancêtre d’Internet ».
+
+L’influence du *Whole Earth Catalog* est considérable. Il fait entrevoir aux communautés hippies qu’il est possible de réorienter la technologie - y compris l’informatique - pour en faire un instrument d’émancipation, plutôt qu’un outil réservé aux stricts intérêts militaires et économiques.
+
+C’est dans ce sillage que se fédèrent de nouveaux collectifs, comme le *Homebrew Computer Club* et le *People’s Computer Company*, qui proclame dès 1972 :
+
+> « Les ordinateurs sont principalement utilisés contre le peuple au lieu de le libérer. Il est temps de changer tout cela : nous avons besoin d’ordinateurs pour le peuple. »
+
+Ces groupes contestataires posent les bases d’une informatique « pour tous », à une époque où les industriels ne croient pas à l’avenir de l’ordinateur personnel. La même année, le patron de *DEC* (Digital Equipment Corporation) déclare même ainsi qu’il n’imagine aucun intérêt à voir des ordinateurs dans les foyers américains.
+
+C’est pourtant dans ce contexte que va naître en 1973, à Berkeley, ce qu’on a l’habitude de considérer comme la première communauté virtuelle : *Community Memory*.
+
+---
+![Community Memory](/community_memory.jpg){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+*Community Memory* est souvent considéré comme le premier Bulletin Board System (BBS).
+
+Installé chez un disquaire coopératif, il se présente comme une borne publique connectée à un ordinateur central via modem, où chacun peut déposer ou consulter des messages.
+
+Les usagers y publient des petites annonces, partagent des idées, échangent sur la musique ou la vie communautaire.
+
+Ce dispositif rudimentaire inaugure pourtant une forme de communauté virtuelle, expérimentant dès le début des années 1970 l’idée qu’un réseau informatique pouvait servir de support à la communication horizontale et à l’auto-organisation sociale, bien avant l’avènement d’Internet.
+
+Ces premières expérimentations vont très vite s’accompagner d’une révolution plus profonde : l’invention du micro-ordinateur personnel.
+
+Au milieu des années 1970, l’informatique connaît en effet un tournant décisif. Jusque-là réservée aux laboratoires, aux entreprises et aux universités, elle commence à entrer dans les garages et les salons. Ce basculement se fait par le biais d’une série de machines pionnières.
+
+---
+![Altair 8800](/altair_8800.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+En 1975 apparaît l’Altair 8800, premier micro-ordinateur personnel à toucher le grand public. Vendu en kit, sans clavier ni écran, il se programme à l’aide d’interrupteurs et de diodes clignotantes.
+
+Rudimentaire, mais équipé du processeur Intel 8080 – l’un des premiers relativement puissants et abordables –, l’Altair marque une rupture : pour la première fois, des amateurs peuvent s’approprier directement un ordinateur.
+
+---
+![Apple I](/apple_I.webp){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+L’année suivante, deux jeunes passionnés, Steve Jobs et Steve Wozniak, conçoivent dans le garage des parents de Jobs leur premier ordinateur : l’Apple I. Là encore, il s’agit d’une carte mère à compléter (boîtier, clavier, écran).
+
+---
+![Apple II](/apple_II.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+En 1977, avec l’Apple II, ils franchissent un cap : un ordinateur complet, prêt à l’emploi, doté d’un clavier intégré, d’un affichage couleur et d’un lecteur de disquettes. Relativement abordable (1 298 $), il rencontre un succès immense et propulse Apple au premier plan.
+
+L’industrie comprend alors qu’il existe un marché pour l’informatique personnelle.
+
+---
+![IBM PC](/ibm_pc.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+En 1981, IBM entre dans la course avec l’IBM PC. Sa grande force est d’être conçu comme une machine ouverte, dont les composants peuvent être fournis par différents fabricants. Rapidement, il devient un standard, et ses « clones » se multiplient.
+
+C’est aussi dans ce contexte que Microsoft prend son essor. Bill Gates et Paul Allen, encore étudiants, proposent d’adapter le langage BASIC à l’Altair, bluffant MITS – l’entreprise qui le commercialise – en prétendant l’avoir déjà développé.
+
+L’expérience réussit et leur ouvre les portes d’IBM : ils fournissent le système d’exploitation du PC. N’ayant pas eu le temps de l’écrire eux-mêmes, ils rachètent pour une bouchée de pain un OS existant - le QDOS de Tim Paterson - le rebaptisent MS-DOS, et le licencient à IBM.
+
+Ce choix – conserver la propriété du logiciel et le vendre sous licence – jette les bases du modèle économique qui fera de Microsoft un géant.
+
+Au début des années 1980, l’ordinateur personnel reste encore austère, commandé par lignes de texte tapées au clavier.
+
+Mais en 1983, Apple lance le Lisa, premier ordinateur grand public doté d’une interface graphique et d’une souris, empruntée - ou volée - au Xerox PARC, laboratoire de recherche qui en empruntaient lui-même l’idée à la fameuse démo de Doug Engelbart.
+
+Pour l’anecdote, l’équipe qui travaillait au Xerox PARC sur cette interface comptait parmi ses membres un certain Alan Kay, dont la femme n’était autre que la scénariste de Tron ... le premier film à utiliser des images produites par ordinateur.
+
+---
+![Apple Macintosh](/macintosh.webp){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+Trop cher, le Lisa échoue, mais ouvre la voie au Macintosh (1984), plus accessible et convivial. Pour la première fois, un ordinateur devient utilisable par des non-informaticiens pour des tâches ordinaires : écrire un texte, faire un tableau, dessiner une image.
+
+En 1985, Microsoft suit le mouvement avec Windows 1.0.
+
+À partir de là, l’ordinateur personnel, avec son écran, sa souris et son interface graphique, se généralise. En l’espace d’une décennie, il est passé du garage des hackers et des hobbyistes à l’équipement standard des foyers et des bureaux.
+
+Depuis lors, l’informatique telle qu’on la connaît aujourd’hui - avec un écran, une interface graphique, une souris, etc. - ne va cesser de se développer et de se perfectionner.
+
+En parallèle de cette innovation qu’était l’ordinateur personnel, les mêmes communautés contre-culturelles qui lui avait donné naissance allaient s’approprier Internet.
+
+---
+## D’ARPANET à Internet
+
+--- notes
+
+La fin des années 1970 et le début des années 1980 marquent la fin du mouvement hippie. Les communautés de la baie de San Francisco, pour l’essentiel, se décomposent. Les hippies d’alors ont vieilli et reprennent le cours des vies qu’ils s’étaient pourtant promis de fuir.
+
+La vie en communauté peut être épuisante. Et l’envie de tout partager s’y échouer dans la quotidienneté des querelles ordinaires et la médiocrité des jalousies vulgaires.
+
+Chacun, donc, rentre chez soi. Mais, en rentrant, ramène aussi, chez lui, l’envie de reconduire, autrement, quelque chose de ce qui a échoué.
+
+Ce qui, de la proximité parfois étouffante des communes, n’a su tenir, les héritiers de la contre-culture vont s’attacher à le faire revivre dans la spectralité des interactions en ligne.
+
+Ils seront ainsi parmi les premiers, hors des circuits strictement universitaires et militaires, à s’approprier les premiers réseaux civils (BBS, puis *Usenet* dès 1979), expérimentant l’étrangeté de ce qu’on appellera bientôt les communautés en ligne.
+
+La plus célèbre d’entre elles reste *The WELL* (Whole Earth ’lectronic Link), communauté fondée en 1985, assumant explicitement sa filiation avec le *Whole Earth Catalog*.
+
+---
+<p class="history-video-link"><a href="https://www.youtube.com/watch?v=U_o8gerare0" target="_blank" rel="noreferrer">Vidéo externe</a></p>
+
+--- notes
+
+c.f. vidéo à 19 minutes.
+
+La multiplication des usages rend, au début des années 1980, la gestion d’ARPANET de plus en plus délicate. Le DoD décide donc, en 1983, de scinder le réseau en deux : MILNET (MILitary NETwork), confié au ministère de la Défense et réservé aux communications militaires classées ; et ARPANET, qui reste aux mains de la DARPA pour un usage académique et scientifique.
+
+Quelques années plus tard, la National Science Foundation crée le NSFNET (1985-86), qui en étend l’accès à d’autres acteurs, notamment civils, et en prépare l’ouverture vers ce qui deviendra **Internet**.
+
+La fin des années 1980 et le début des années 1990 constituent ainsi une période charnière : le réseau Internet s’étend mais son accès reste technique et limité à une poignée de technophiles.
+
+Il faudra attendre l’invention et la démocratisation du web, à partir des années 1990, pour qu’Internet s’invite réellement dans nos quotidiens.
+
+---
+## Naissance du web
+
+--- notes
+
+Le réseau Internet a été conçu dans une indifférence minutieuse aux usages qui pourraient en être faits. Ce choix a permis à une multiplicité d’applications non-anticipées d’apparaître.L’une de ces inventions - peut-être la plus décisive - est le web.
+
+---
+<Persona name="Tim Berners-Lee" dates="1955 -" picture="/berners_lee.webp" />
+
+--- notes
+
+La naissance du web peut être attribuée à Tim Berners-Lee, un informaticien britannique qui, à la fin des années 1980, est employé par le CERN.
+
+Il y propose, en 1989, de créer un système **hypertexte distribué** permettant aux chercheurs de lier entre eux, et de consulter plus simplement, la masse de documents qu’ils produisent.
+
+Cette idée, comme toutes les idées, ne tombe pas du ciel. Elle s’inscrit dans un héritage intellectuel déjà dense.
+
+Dès 1945, Vannevar Bush avait imaginé, avec le *Memex* [^Bush, V. (1945). As we may think. *The Atlantic Monthly,* *176*(1), 101–108. https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/], une manière analogue de relier entre eux les savoirs.
+
+Cette ambition, d’ailleurs, avait été déjà concrétisée de manière expérimentale par Douglas Engelbart dans les années 1960, à travers le développement de certains des outils présentés dans sa célèbre démonstration de 1968 : *The Mother of All Demos*.
+
+Berners-Lee va prolonger ces initiatives dans le contexte technologique nouveau qui est celui d’Internet. Le moment est propice : la même année, le CERN décide d’adopter le protocole TCP/IP, et de relier directement son réseau à Internet.
+
+---
+### URL
+Uniform Resource Locator {.kicker}
+
+### HTTP
+HyperText Transfer Protocol {.kicker}
+
+### HTML
+HyperText Markup Language {.kicker}
+
+
+--- notes
+
+Berners-Lee, avec le soutien du chercheur français Robert Cailliau, met alors au point les trois technologies fondamentales du Web : le système d’adressage URL (Uniform Resource Locator), le langage de description des pages HTML (HyperText Markup Language) et le protocole d’échange HTTP (HyperText Transfer Protocol).
+
+---
+![World Wide Web](/www.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+En 1990, il conçoit le premier navigateur, baptisé **WorldWideWeb**, qui est également un éditeur de pages. L’année suivante, en 1991, la première page web est mise en ligne sur le serveur du CERN.
+
+Très vite, d’autres navigateurs apparaissent et contribuent à la diffusion du Web : en 1993, Mosaic introduit une interface graphique simple et conviviale qui séduit un large public ; en 1994, Netscape Navigator s’impose comme une référence ; et en 1995, Microsoft lance Internet Explorer, intégré directement à Windows.
+
+La croissance est alors fulgurante. On dénombre environ 19 000 sites web en 1995, plus de 10 millions en 2000, et aujourd’hui plusieurs milliards. Le Web s’impose rapidement comme un média mondial, capable de diffuser, relier et structurer l’information à grande échelle, et devient en quelques années un espace incontournable d’innovation scientifique, culturelle et économique.
+
+Évidemment, un certain nombre d’esprits malins vont vite s’efforcer de s’enrichir sur ce succès.
+
+---
+### La bulle des Dotcom
+
+--- notes
+
+Au milieu des années 1990, le Web connaît une croissance fulgurante. De nombreux portails émergent et la publicité en ligne devient un modèle économique central. En 1993, Tim O’Reilly lance le *Global Network Navigator* (GNN), considéré comme le premier site financé par la publicité en ligne.
+
+Ce boom s’accompagne d’une explosion des investissements dans les startups du numérique. Beaucoup d’entre elles promettent une croissance exponentielle mais peinent à dégager des revenus, donnant naissance au modèle de la startup « à haut risque » : quelques succès spectaculaires, mais aussi un taux d’échec très élevé (la grande majorité, parfois estimée à trois sur quatre, finissant par disparaître).
+
+---
+![Dot com bubble](/dot_com_bubble.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+La spéculation atteint son paroxysme sur le NASDAQ, l’indice boursier qui concentre la plupart des entreprises technologiques américaines. Entre 1995 et 2000, sa valeur est multipliée par plus de quatre, avant de s’effondrer brutalement entre 2000 et 2002, marquant l’éclatement de la bulle Internet.
+
+Ce phénomène illustre la logique des bulles spéculatives déjà observée historiquement, comme lors de la « tulipomanie » aux Provinces-Unies (1635-1637), où certains bulbes de tulipes atteignirent des prix exorbitants. Dans les deux cas, la peur de « rater l’occasion » (FOMO), les marchés à terme et les prophéties autoréalisatrices ont alimenté la surenchère.
+
+L’explosion de la bulle entraîne de nombreuses faillites et plonge l’industrie du Web dans une crise profonde au début des années 2000. Mais c’est dans ce contexte de désillusion que va émerger ce qu’on appellera bientôt le Web 2.0.
+
+---
+![Nasdaq](/nasdaq.png){data-glow="strong" class="slide-image-fill"}
+
+--- notes
+
+À titre indicatif ceci est la courbe actuelle du NASDAQ (la petite excroissance à gauche étant la bulle des dot-com) ....
+
+---
+## web 2.0
+
+--- notes
+
+Le terme « Web 2.0 » apparaît en 2004. Il désigne le passage d’un web de consultation, où les contenus étaient produits par de petites équipes éditoriales, à un web de participation, où les internautes deviennent eux-mêmes producteurs de contenus.
+
+Ce syntagme est introduit à l’été 2004 par Dale Dougherty, employé de Tim O’Reilly, puis repris et popularisé par O’Reilly et John Battelle (cofondateur du magazine *Wired*).
+
+Pour redonner confiance aux investisseurs après l’éclatement de la bulle, ils organisent à l’automne 2004 la première *Web 2.0 Conference*, qui réunit industriels du web mais aussi financiers et investisseurs.
+
+Leur argument est simple : les entreprises qui ont survécu à la crise sont celles qui reposent sur un modèle « participatif », où les utilisateurs, au lieu de rester de simples consommateurs, deviennent créateurs de contenus. Cette rhétorique permet de redonner de la légitimité à l’industrie numérique et de réorienter le discours vers un web présenté comme innovant et durable.
+
+Concrètement, le Web 2.0 se traduit par l’essor de nouvelles pratiques et plateformes :
+- les **blogs** (Blogger, 1999 ; WordPress, 2003)
+- l’encyclopédie collaborative **Wikipédia** (2001)
+- les premiers réseaux sociaux (**Friendster**, 2002 ; **MySpace**, 2003 ; **Facebook**, 2004)
+- le partage de vidéos avec **YouTube** (2005)
+- les technologies facilitant l’interactivité, comme **Ajax** ou **RSS**
+
+Ce nouvel écosystème ouvre la voie au Web social et interactif que nous connaissons encore aujourd’hui.
+
+---
+
+<!-- slide: id="history-061-time-magazine" title="Time Magazine" steps=0 -->
+<img class="history-asset" src="/assets/time_magazine.jpeg" alt="time magazine" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+En 2006, Time Magazine nous nomme « personnalités de l’année ». Le web contributif que nous connaissons encore aujourd’hui commence à se démocratiser.
+
+L’essor du smartphone (premier iPhone en 2007) accélère encore ce mouvement : chacun dispose désormais d’un appareil photo, d’un ordinateur et d’une connexion Internet dans sa poche, ce qui démultiplie la production et le partage de contenus en ligne.
+
+Cette révolution accompagnera ainsi la naissance de plateformes comme Twitter (2006) ou Instagram (2010).
+
+---
+
+<!-- slide: id="history-062-7-conclusion" title="7 Conclusion" steps=0 -->
+## 7 Conclusion
+
+--- notes
+
+L’avènement du Web 2.0 signe l’arrêt de mort de l’utopie libertaire qui avait nourri la naissance d’Internet et du Web.
+
+Ce basculement n’a rien de soudain : il s’amorce dès le début des années 1990, sous l’effet de plusieurs dynamiques convergentes.
+
+**La démocratisation du Web** modifie profondément la sociologie de ses usagers. Ce qui relevait d’un milieu restreint d’ingénieurs, de chercheurs et de contre-cultures se transforme en un espace accessible à tous.
+
+**Les États réaffirment leur autorité**, notamment à travers la défense de la propriété intellectuelle (lutte contre le piratage, contrôle accru des communications).
+
+**Le marché s’empare du réseau** : Internet apparaît de plus en plus comme une manne financière dont il faut extraire le maximum de valeur.
+
+Il aurait sans doute été naïf de croire qu’Internet et ses communautés pourraient se préserver indéfiniment du monde et de ses institutions. Toute tentative d’autonomie — qu’elle prenne la forme de communautés en ligne, de ZADs ou d’autres expériences — se heurte tôt ou tard au retour, parfois violent, du réel.
+
+Mais il serait faux de croire qu’il ne subsiste rien de cette époque pionnière. Pour le meilleur, et parfois pour le pire, plusieurs héritages demeurent :
+
+-**Une certaine idée de la coopération**. Internet est le fruit d’un travail collectif, fait de milliers de contributions, grandes ou petites. Cette coopération fut rendue possible par son architecture ouverte, modulaire, organisée en couches. Le principe des *RFCs* (*Request for Comments*) en témoigne : depuis 1969, toute nouvelle proposition technique pouvait être discutée publiquement, comme l’avait initié Steve Crocker.
+
+-**Un ethos hacker et libertaire**, qui s’exprime dans la défense du logiciel libre (Stallman, GNU en 1983, puis Linux), en opposition aux modèles propriétaires incarnés par Microsoft.
+
+-**Une conception de l’autonomie individuelle et de la liberté d’expression**, qui se retrouvera dans des mouvements comme *#MeToo*.
+
+-**Une idée de la décentralisation**, ou plutôt d’une méfiance vis-à-vis des institutions trop centralisées. Elle inspire à la fois des médias alternatifs… et leurs avatars douteux, les « médias de réinformation ».
+
+-**Une vision de l’action politique comme agrégation spontanée d’individus**, plutôt que comme mobilisation organisée de masse — qu’on retrouve par exemple dans *Nuit debout*.
+
+La rencontre entre cultures numériques et capitalisme a ainsi produit un ethos hybride, à la fois libertaire et marchand, créatif et spéculatif, prophétique et opportuniste — un mélange caractéristique de la Silicon Valley.
+
+Ces contradictions mettront quelques années à se déployer pleinement, au moment où Internet, longtemps réservé à une élite, deviendra un réseau véritablement mondial et massifié.
+
+---
+
+<!-- slide: id="history-063-bibliographie" title="Bibliographie" steps=0 -->
+## Bibliographie
+
+---
+
+<!-- slide: id="history-064-histoire-de-l-informatique" title="Histoire de l&#x27;informatique" steps=0 -->
+### Histoire de l'informatique
+Breton, P. (1990). *Une histoire de l’informatique*. Seuil.
+https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours
+Pasquinelli, M. (2023). *The Eye of the Master: A Social History of Artificial Intelligence*. Verso, chap. 2.
+Foucault, M. (1976). *Histoire de la sexualité I : La volonté de savoir*. Gallimard.
+Foucault, M. (2004). *Sécurité, territoire, population. Cours au Collège de France (1977–1978)*. Seuil/Gallimard.
+Beniger, J. R. (1986). *The Control Revolution: Technological and Economic Origins of the Information Society*. Harvard University Press.
+Science Museum Group. *Babbage’s Analytical Engine, 1834–1871 (Trial model)*.
+https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model
+The Franklin Institute. *Case Files: Herman Hollerith*.
+https://fi.edu/en/news/case-files-herman-hollerith
+Yates, J. (1993). “Co-evolution of Information-Processing Technology and Use: Interaction between the Life Insurance and Tabulating Industries.” *Business History Review*, 67(1), 1–51.
+https://doi.org/10.2307/3117467
+IBM. *The punched card tabulator*.
+https://www.ibm.com/history/punched-card-tabulator
+
+---
+
+<!-- slide: id="history-065-histoire-d-internet" title="Histoire d&#x27;Internet" steps=0 -->
+### Histoire d'Internet
+Abbate, J. (1999). *Inventing the internet*. MIT Press.
+Turner, F. (2012). *Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence*. C&F Éditions.
