@@ -83,9 +83,7 @@ De quoi, donc, ce personnage va-t-il vous parler ?
 - Interpassivité 4h
 
 histoire 4 séances = 8h
-Réseaux sociaux = 4h
-Economie = 4h
-Interpassivité = 4h
+
 
 18h - 2h intro IA prompting, etc. = 16h : 8 séances
 

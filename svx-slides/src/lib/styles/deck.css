@@ -250,6 +250,12 @@
     font-family: var(--font-mono);
     font-size: var(--small-size);
     font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+.slide .citation+.citation {
+    margin-top: calc(var(--space-1) * 0.5);
 }
 
 /* Appel de note placé après une citation, une formule ou une donnée sourcée. */
