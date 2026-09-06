@@ -686,7 +686,7 @@ Ce groupe, s’il précède historiquement l’émergence de la culture hippie, 
   import BackgroundVideo from '$components/BackgroundVideo.svelte'
 </script>
 
-<BackgroundVideo src="/hippies.mp4" />
+<BackgroundVideo src="/hippies.mp4" overlay={false} />
 
 --- notes
 

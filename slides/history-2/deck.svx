@@ -19,7 +19,6 @@ Il importe, avant d’entamer ce chapitre, de préciser la différence qui exist
 
 ---
 ![Tim Berners Lee and Vinton Cerf](/berners_lee_and_cerf.jpg){data-glow="strong" class="slide-image-fill"}
-<p class="image-caption">Tim Berners-Lee &amp; Vint Cerf</p>
 
 
 --- notes
@@ -139,7 +138,11 @@ Ce groupe, s’il précède historiquement l’émergence de la culture hippie, 
 
 ---
 
-<p class="history-video-link"><a href="https://www.youtube.com/watch?v=_-QnGBRTV7M" target="_blank" rel="noreferrer">Vidéo externe</a></p>
+<script>
+  import BackgroundVideo from '$components/BackgroundVideo.svelte'
+</script>
+
+<BackgroundVideo src="/hippies.mp4" overlay={false} />
 
 --- notes
 
@@ -443,9 +446,7 @@ Concrètement, le Web 2.0 se traduit par l’essor de nouvelles pratiques et pla
 Ce nouvel écosystème ouvre la voie au Web social et interactif que nous connaissons encore aujourd’hui.
 
 ---
-
-<!-- slide: id="history-061-time-magazine" title="Time Magazine" steps=0 -->
-<img class="history-asset" src="/assets/time_magazine.jpeg" alt="time magazine" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+![Time Magazine](/time_magazine.jpeg){data-glow="strong" class="slide-image-fill"}
 
 --- notes
 
@@ -456,9 +457,7 @@ L’essor du smartphone (premier iPhone en 2007) accélère encore ce mouvement 
 Cette révolution accompagnera ainsi la naissance de plateformes comme Twitter (2006) ou Instagram (2010).
 
 ---
-
-<!-- slide: id="history-062-7-conclusion" title="7 Conclusion" steps=0 -->
-## 7 Conclusion
+## Conclusion
 
 --- notes
 
@@ -491,27 +490,37 @@ La rencontre entre cultures numériques et capitalisme a ainsi produit un ethos 
 Ces contradictions mettront quelques années à se déployer pleinement, au moment où Internet, longtemps réservé à une élite, deviendra un réseau véritablement mondial et massifié.
 
 ---
-
-<!-- slide: id="history-063-bibliographie" title="Bibliographie" steps=0 -->
 ## Bibliographie
 
 ---
-
-<!-- slide: id="history-064-histoire-de-l-informatique" title="Histoire de l&#x27;informatique" steps=0 -->
 ### Histoire de l'informatique
+
 Breton, P. (1990). *Une histoire de l’informatique*. Seuil.
+
 https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours
+
 Pasquinelli, M. (2023). *The Eye of the Master: A Social History of Artificial Intelligence*. Verso, chap. 2.
+
 Foucault, M. (1976). *Histoire de la sexualité I : La volonté de savoir*. Gallimard.
+
 Foucault, M. (2004). *Sécurité, territoire, population. Cours au Collège de France (1977–1978)*. Seuil/Gallimard.
+
 Beniger, J. R. (1986). *The Control Revolution: Technological and Economic Origins of the Information Society*. Harvard University Press.
+
 Science Museum Group. *Babbage’s Analytical Engine, 1834–1871 (Trial model)*.
+
 https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model
+
 The Franklin Institute. *Case Files: Herman Hollerith*.
+
 https://fi.edu/en/news/case-files-herman-hollerith
+
 Yates, J. (1993). “Co-evolution of Information-Processing Technology and Use: Interaction between the Life Insurance and Tabulating Industries.” *Business History Review*, 67(1), 1–51.
+
 https://doi.org/10.2307/3117467
+
 IBM. *The punched card tabulator*.
+
 https://www.ibm.com/history/punched-card-tabulator
 
 ---
@@ -519,4 +528,5 @@ https://www.ibm.com/history/punched-card-tabulator
 <!-- slide: id="history-065-histoire-d-internet" title="Histoire d&#x27;Internet" steps=0 -->
 ### Histoire d'Internet
 Abbate, J. (1999). *Inventing the internet*. MIT Press.
+
 Turner, F. (2012). *Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence*. C&F Éditions.

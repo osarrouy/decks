@@ -8,15 +8,20 @@ RSN {.kicker}
 
 --- notes
 
+6h - 12h = 10h
+
 1. Définition des réseaux sociaux
 2. public / privé
-3. Gatekeeper
-4. Les nouveaux gatekeeper 2h
-3. Structure des réseaux sociaux (Erdos) / hub
-5. Algorithmes comme nouveaux gatekeepers 2h
-2. Bulles de filtres / polarisation
-4. Viralité 2h
-4. Identité vs interpassivité 2h
+3. Publish-then-filter
+2h
+
+4. Les nouveaux gatekeeper 4h
+  3. Structure des réseaux sociaux (Erdos) / hub
+  5. Algorithmes comme nouveaux gatekeepers 2h
+  2. Bulles de filtres / polarisation
+  4. Viralité 2h
+
+4. Identité vs interpassivité 4h
 
 On peut considérer que l’irruption des Réseaux Sociaux Numériques (RSN), au cours des années 2000 et 2010, a constitué un moment de rupture dans notre rapport aux technologies numériques et dans l’extension de leur hégémonie.
 
@@ -57,14 +62,12 @@ Cette irruption du privé et de l’intime dans l’espace public provoque une i
 
 Se côtoient désormais, sur Twitter ou Instagram, des discours de natures tout à fait distinctes : les déclarations du président de la République partagent ainsi notre feed avec les photos de vacances d’une inconnue, des organes de presse avec des comptes humoristiques, des institutions internationales avec les peines de coeur de notre voisin.
 
-Cet entrelacement de discours hétéroclites modifie en profondeur l’architecture et l’expérience qu’il nous est donné de faire de la parole publique.
+Nous allons maintenant nous intéresser aux effets qu’exercent la démocratisation du Web et des réseaux sociaux numériques sur la structuration de la **sphère publique** et de la **sphère privée**.
 
 ---
 ## Sphère publique _vs_ sphère privée
 
 --- notes
-
-Nous allons maintenant nous intéresser aux effets qu’exercent la démocratisation du Web et des réseaux sociaux numériques sur la structuration de la **sphère publique** et de la **sphère privée**.
 
 La sphère publique désigne le champ social à travers lequel des individus et des groupes cherchent à faire reconnaître certains problèmes comme relevant de l’intérêt collectif, en discutent et forment à leur propos des opinions.
 
@@ -112,7 +115,14 @@ L’espace public joue également un rôle de médiation et de contrôle du pouv
 Cette conception est cependant normative et historiquement située. L’accès à ces espaces de discussion reste longtemps réservé à certains groupes sociaux, notamment aux hommes instruits et appartenant aux classes privilégiées. La sphère publique n’est donc jamais parfaitement ouverte, égalitaire ou démocratique.
 :::
 
-Il faut bien comprendre ce que Habermas cherche à historiciser. Il ne s’agit pas de dater l’apparition des discussions collectives — les sociétés ont toujours débattu de leurs affaires communes — mais d’identifier le moment où ces discussions commencent à s’organiser durablement dans des lieux, des pratiques et des médias spécifiques. La question devient alors celle des conditions qui permettent à des individus dispersés de se constituer en public, de partager des objets d’attention et de former une opinion collective.
+:::example
+Que répondez-vous aux français qui pensent que ...
+Les sondages montrent que les français veulent que ...
+:::
+
+Il faut bien comprendre ce que Habermas cherche à historiciser. Il ne s’agit pas de dater l’apparition des discussions collectives — les sociétés ont toujours débattu de leurs affaires communes — mais d’identifier le moment où ces discussions commencent à s’organiser durablement dans des lieux, des pratiques et des médias spécifiques à partir desquels ces dicussions peuvent occuper une fonction politique structurelle.
+
+La question devient alors celle des conditions qui permettent à des individus dispersés de se constituer en public, de partager des objets d’attention et de former une opinion collective.
 
 Or l'espace public bourgeois n'est pas né d'une simple idée : il s’est appuyé sur des espaces concrets - d'abord la presse, puis la radio, puis la télévision -, des pratiques - les salons, les rassemblements, les manifestations, etc. - et des dispositifs matériels qui déterminent ce qui peut circuler et auprès de qui.
 
@@ -189,7 +199,9 @@ La photographie puis le reportage audiovisuel rendent également les événement
 La manière dont les médias construisent un « problème de l’immigration », y compris dans des territoires où les habitants ont peu de contacts directs avec les personnes immigrées.
 :::
 
-L’essor de la presse illustrée et de la publicité commerciale contribue aussi à exposer davantage la vie privée. Les controverses que cette exposition suscite participent à la construction progressive de protections juridiques de la vie privée. Comme avec les réseaux sociaux aujourd’hui, l’apparition de nouveaux médias transforme rapidement les pratiques, tandis que le droit s’adapte plus lentement.
+L’essor de la presse illustrée et de la publicité commerciale contribue aussi à exposer davantage la vie privée.
+
+Les controverses que cette exposition suscite participent à la construction progressive de protections juridiques de la vie privée. Comme avec les réseaux sociaux aujourd’hui, l’apparition de nouveaux médias transforme rapidement les pratiques, tandis que le droit s’adapte plus lentement.
 
 Ces deux premiers quadrants correspondent aux espaces publics médiatiques traditionnels : la presse, la radio et la télévision.
 
@@ -201,15 +213,13 @@ Ils contribuent ainsi à façonner l’**agenda public**, c’est-à-dire l’en
 
 ### Quand visibilité et intérêt public tendent à coïncider
 
-Nous voyons ici comment s'articule, traditionnellement, les deux acceptions de la notion de publicité.
+Ces gatekeepers articulent, traditionnellement, deux acceptions différente de la notion de publicité.
 
 Dans un premier sens, rendre une information publique signifie la rendre visible et accessible au plus grand nombre ; dans un second sens, cela signifie la présenter comme une question qui concerne la collectivité et qui mérite, à ce titre, d’être discutée publiquement.
 
 Ces deux dimensions peuvent coïncider, mais elles ne se confondent pas nécessairement. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
 
 Dans les médias traditionnels, ces deux acceptions de la notion de publicité tendent à se confondre. Les *gatekeepers* ne se contentent pas de rendre des informations visibles : ils sélectionnent celles qu’ils jugent suffisamment importantes pour être publiées.
-
-La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
 
 La fonction des gatekeepers est ainsi d'assurer, avec plus ou moins de succès, la coincidence ou l'équivalence entre les deux acceptions de la notion de publicité. Faire en sorte que soit rendu visible ce qui relève de l'intérêt public. Et à l'inverse, laisser dans l'obscurité ce qu'ils considèrent ne pas l'être. La tâche, d'ailleurs, n'était pas toujours simple.
 
@@ -236,15 +246,25 @@ Ils transforment l’espace public selon au moins deux dimensions : ils multipli
 
 Le cadran situé en haut à droite de notre schéma rassemble les individus « ordinaires » - *i.e.* n’appartenant pas au petit monde des gatekeepers - s’exprimant publiquement sur des thèmes explicitement présentés comme relevant de l’intérêt intérêt commun : politique, économie, écologie, etc.
 
-Cette forme d’expression s’est démocratisée à partir du début des années 2000, principalement avec la naissance des plateformes de blogging, puis de vlogging, mais aussi avec l’émergence - somme toute très relative - du journalisme participatif : Rue89, Huffington Post, Indymedia, Glupatate, Le canard réfractaire, etc.
+Cette forme d’expression s’est démocratisée à partir du début des années 2000, principalement avec la naissance des plateformes de blogging, puis de vlogging, mais aussi avec l’émergence - somme toute très relative - du journalisme participatif.
+
+:::example
+Rue89, Huffington Post, Indymedia, Glupatate, Le canard réfractaire, etc.
+:::
+
+Ce sont, aujourd'hui, certains influenceurs politiques sur les réseaux sociaux.
+
+:::example
+Greta Thunberg
+:::
 
 Ce régime d’expression a su profiter des opportunités offertes par l’abaissement drastique des coûts de publication et de diffusion offert par le web pour contourner le filtre politique qu’imposaient jusqu’ici les *gatekeepers.*
+
+La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
 
 L’espace public traditionnel a en effet ceci de particulier qu’il est, pour l’essentiel, dominé par une classe sociale relativement homogène. La plupart des journalistes, éditorialistes, experts, etc. ont des parcours sociaux et professionnels analogues. Ils partagent une même lecture du réel, parlent le même langage, sont préoccupés par les mêmes questions et tendent à défendre des intérêts particuliers.
 
 Le web, en abaissant les couts de publicisation et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
-
-
 
 Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels : un espace public alternatif où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
 
@@ -346,7 +366,7 @@ La visibilité sur le Web constitue un exemple particulièrement parlant de dist
 
 Une loi de puissance est une relation mathématique dans laquelle une grandeur varie comme une puissance négative d’une autre : **y = C × x⁻ᵅ**. Elle se reconnaît à une forte concentration des valeurs élevées et à une longue traîne de valeurs faibles.
 
-Imaginez que la courbe affichée ici présente de manière grossière la distribution des vue sur l'ensemble des contenus publiés sur Instagram. Les contenus sur la gauche affichent beaucoup de vues. Les contenus sur la droite n'en affiche aucune. 
+Imaginez que la courbe affichée ici présente de manière grossière la distribution des vue sur l'ensemble des contenus publiés sur Instagram. Les contenus sur la gauche affichent beaucoup de vues. Les contenus sur la droite n'en affiche aucune.
 
 Le propre d'une loi de puissance est qu'elle ne se concentre pas autour d’une valeur typique comme une loi normale mais qu'elle accorde davantage de poids aux valeurs extrêmes : elle traduit ainsi une distribution très inégalitaire - et nous verrons bientôt pourquoi.
 
@@ -354,64 +374,58 @@ On retrouve des distributions de ce type dans des domaines très différents : e
 
 On parle parfois de **loi des 80/20** ou de **principe de Pareto** pour désigner une forme particulière de cette concentration : environ 20 % des causes ou des objets produiraient environ 80 % des effets ou des résultats. L’expression renvoie à l’observation faite par Pareto, à la fin du XIXe siècle, selon laquelle une part réduite de la population italienne possédait une grande partie des terres. Le rapport 80/20 est toutefois un repère approximatif, et non la définition mathématique d’une loi de puissance : toutes les distributions de ce type ne suivent pas exactement cette proportion.
 
-En réalité, plus les phénomènes étudiés concernent de larges ensembles, plus la distribution est inégalitaire. Sur le web, la visibilité s'approche ainsi plus d'une loi des 90 / 10 que d'une loi des 80 / 20. 
+En réalité, plus les phénomènes étudiés concernent de larges ensembles, plus la distribution est inégalitaire. Sur le web, la visibilité s'approche ainsi plus d'une loi des 90 / 10 que d'une loi des 80 / 20.
 
 Il n'est donc pas vrai que, sur les RSN, tout le monde aurait accès égal à la visibilité - ou qu'il n'y aurait plus de gatekeeper.
 
-La différence tient à ce que les modalités de distribution de cette visibilité sont très différentes de ce qu'elles étaients dans l'espace public traditionnel. 
+La différence tient à ce que les modalités de distribution de cette visibilité sont très différentes de ce qu'elles étaients dans l'espace public traditionnel.
 
 Là où les contenus étaient filtrés avant même d'obtenir de la visibilité, aujourd'hui tout peut être publié, et la visbilité leur est octroyé a posteriori.
 
---- 
+---
 ### Publish, then filter
 
 --- notes
 
-Clay Shirky décrit ce renversement par la formule **« publish, then filter »** : publier d’abord, filtrer ensuite. Dans l’espace public traditionnel, le fonctionnement était plutôt celui du **filter, then publish** : avant qu’une information ou une parole puisse atteindre un large public, elle devait être sélectionnée, éditée et validée par un journal, une chaîne de radio ou de télévision, ou encore par une institution reconnue.
+Clay Shirky décrit ce renversement par la formule **« publish, then filter »** : publier d’abord, filtrer ensuite.
 
-Le Web inverse l’ordre de ces opérations. La baisse des coûts de publication permet à un très grand nombre d’acteurs de mettre en ligne des textes, des images et des vidéos sans obtenir au préalable l’autorisation d’un gatekeeper. Le filtrage intervient ensuite, au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des systèmes de classement algorithmique. La plupart des contenus restent peu vus, mais ils peuvent théoriquement être publiés avant d’être sélectionnés par ces mécanismes de circulation et de visibilité.
+Dans l’espace public traditionnel, le fonctionnement était plutôt celui du **filter, then publish** : avant qu’une information ou une parole puisse atteindre un large public, elle devait être sélectionnée, éditée et validée par un journal, une chaîne de radio ou de télévision, ou encore par une institution reconnue.
 
-Cette inversion ne signifie donc pas que le Web aurait supprimé les filtres ou rendu la visibilité égalitaire. Elle déplace et transforme les gatekeepers : aux journalistes et aux rédacteurs en chef s’ajoutent désormais les plateformes, les algorithmes, les métriques d’engagement, les réseaux d’abonnés et les influenceurs. Ces nouveaux intermédiaires ne sélectionnent pas nécessairement les contenus selon leur intérêt public ; ils privilégient souvent la popularité, la vitesse de circulation, la réactivité ou la capacité à retenir l’attention.
+Le Web inverse l’ordre de ces opérations. La baisse des coûts de publication permet à un très grand nombre d’acteurs de mettre en ligne des textes, des images et des vidéos sans obtenir au préalable l’autorisation d’un gatekeeper.
 
-La dynamique de distribution de la visibilité est ainsi inversée : dans l’espace public traditionnel, un petit nombre de gatekeepers déterminait d’abord ce qui pouvait atteindre le public ; sur le Web, un très grand nombre d’acteurs peut d’abord publier, avant que la visibilité ne se concentre à nouveau sur un nombre réduit de contenus et de comptes. L’inégalité de visibilité n’a donc pas disparu : elle se recompose autour de nouveaux gatekeepers et peut même être renforcée par les logiques de recommandation, les effets de réseau et les distributions en loi de puissance.
----
-<!-- slide: id="social-network-structure-transition" title="Structure relationnelle" steps=0 layout="center" -->
-<p class="kicker">Réseaux sociaux numériques · détour</p>
+La dynamique de distribution de la visibilité est ainsi inversée : dans l’espace public traditionnel, un petit nombre de gatekeepers déterminait d’abord ce qui pouvait atteindre le public ; sur le Web, un très grand nombre d’acteurs peut d’abord publier, avant que la visibilité ne se concentre à nouveau sur un nombre réduit de contenus et de comptes. 
 
-# Les réseaux relationnels
+Le filtrage intervient toujours, mais _a posteriori_ au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des systèmes de classement algorithmique. La plupart des contenus restent peu vus, mais ils peuvent théoriquement être publiés avant d’être sélectionnés par ces mécanismes de circulation et de visibilité.
 
---- notes
-Avant d’entrer dans le détail de ces analyses, je souhaiterais toutefois opérer un certain détour, pour donner à voir la manière dont se structurent, indépendamment des RSN, nos réseaux relationnels.
 
-Les RSN, s’ils ont évidemment modifié les manières que nous avons de nouer et d’entretenir les uns avec les autres des relations, n’ont pas complètement ré-inventé la socialité humaine.
+Example : Grumpy Cat. Charlie Bit my Finger
 
-Leur usage s’inscrit en effet dans des structures relationnelles préexistantes, qu’ils renforcent parfois ou, au contraire, déplacent et transforment.
+Example aussi photo de Londres. La frontière entre les limites du quadrant est poreuse.
 
-Il importe donc, pour étudier l’impact des RSN sur notre socialité, de comprendre que nos réseaux relationnels ont toujours été structurés.
 
----
-<!-- slide: id="social-network-structure-title" title="La structure de nos réseaux sociaux" steps=0 layout="center" -->
-<p class="kicker">II.1</p>
+Ces cas, néanmoins, restent exceptionnels. L'essentiel des contenus publiés sur les RSN n'aggrège que très peu de vue.
 
-# La structure
-#### de nos
-## réseaux sociaux
+L’inégalité de visibilité n’a donc pas disparu : elle se recompose autour de nouveaux gatekeepers. Aux journalistes et aux rédacteurs en chef s’ajoutent désormais les plateformes, les algorithmes, les métriques d’engagement, les réseaux d’abonnés et les influenceurs. Ces nouveaux intermédiaires ne sélectionnent pas nécessairement les contenus selon leur intérêt public ; ils privilégient souvent la popularité, la vitesse de circulation, la réactivité ou la capacité à retenir l’attention.
 
---- notes
-Comment se structurent donc les réseaux relationnels qui nous lient les uns aux autres ? Et comment les RSN contemporains s’insèrent-ils dans ces structures ? 
+Nous allons donc nous intéresser maintenant à ces nouveaux gatekeepers, analyser la manière dont leur fonctionnement structure l'espace public et nous arrêter sur les problèmes que cela peut poser.
 
 ---
-<!-- slide: id="social-network-structure-erdos" title="Paul Erdös" steps=0 layout="two-columns" -->
-<div>
-
-<p class="kicker">1913 - 1996</p>
-
-## Paul Erdös
-
-</div>
-<img src="/assets/erdos.jpeg" alt="Paul Erdös" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+## La structure de nos réseaux sociaux
+De la mauvaise répartition du capital social {.kicker}
 
 --- notes
+
+Le premier opérateur dans cette distribution inégale de la visibilité est le fait que nous ne sommes pas tous identiquement reliés les uns aux autres.
+
+Certains sont très connectés, d'autres non. C'est le cas sur les RSN mais c'est aussi le cas sur les RSN. Comment tout ça s'organise ?
+
+Pour répondre à cette question il faut analyser les manières dont sont structurés, dans la vie ordinaire, nos réseaux relationnels - parce que la structure relationnelle des RSN ne constitue qu'une version radicalisée de nos structures relationnelles traditionnelles.
+
+---
+<Persona name="Paul Erdös" dates="1913 - 1996" picture="/erdos.jpeg" />
+
+--- notes
+
 L’un des tout premier à s’être interrogé sur la structure de nos réseaux relationnels est le mathématicien hongrois Paul Erdös.
 
 Erdös mène une forme de vie assez particulière puisqu’il vit comme un nomade, squattant de canapé en canapé, au gré de ses visites à des collègues chercheurs.
@@ -662,7 +676,7 @@ Le politologue américain Robert Putnam a ainsi proposé, à la fin des années 
 
 Le *bonding* correspond au capital social qui se forme au sein de groupes homogènes, c’est-à-dire entre des personnes partageant des caractéristiques similaires : origine, religion, statut social, etc.
 
-Il renforce la solidarité interne et l’identité collective, en produisant des liens forts basés sur l’entraide et la loyauté. 
+Il renforce la solidarité interne et l’identité collective, en produisant des liens forts basés sur l’entraide et la loyauté.
 
 Mais il a aussi un effet d’exclusion, car il trace des frontières nettes entre « nous » et « les autres ».
 
@@ -675,3 +689,8 @@ Il agit comme un pont qui relie des individus hétérogènes et facilite la circ
 Plus inclusif, il favorise la coopération entre milieux éloignés et joue un rôle crucial dans la cohésion des réseaux relationnels élargis
 
 Si nous rapportons cette analyse à l’approche structurelle suivie jusqu’ici, on peut associer le *bridging* aux liens connectant, par l’intermédiaires des *hubs*, des sous-communautés hétérogènes.
+
+
+---
+
+## Viralité
