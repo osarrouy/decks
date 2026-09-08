@@ -1,0 +1,260 @@
+titre: "Histoire du numérique"
+niveau: ""
+
+description: |
+  Ce cours propose une histoire introductive des technologies numériques,
+  des premières machines à calculer jusqu’au Web 2.0.
+
+  Il suit la transformation progressive du calcul en une activité
+  mécanisable, programmable puis connectée. Cette histoire est abordée
+  avec ses dimensions techniques, scientifiques, économiques et politiques :
+  les machines servent à calculer, mais aussi à rendre les individus,
+  les populations, les échanges et les activités plus lisibles et
+  plus gouvernables.
+
+  Le cours insiste également sur les bifurcations et les contingences
+  historiques. L’informatique et Internet ne sont pas le résultat
+  nécessaire d’une évolution linéaire : ils émergent de rencontres
+  entre recherches théoriques, besoins administratifs et militaires,
+  industries, communautés scientifiques et mouvements contre-culturels.
+
+bibliographie:
+  - reference: "Breton, P. (1990). Une histoire de l’informatique. Seuil."
+  - reference: "CultureGnum. Une brève histoire de l’informatique de 1945 à nos jours."
+    url: "https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours"
+  - reference: "Pasquinelli, M. (2023). The Eye of the Master: A Social History of Artificial Intelligence. Verso, chapitre 2."
+  - reference: "Beniger, J. R. (1986). The Control Revolution: Technological and Economic Origins of the Information Society. Harvard University Press."
+  - reference: "Abbate, J. (1999). Inventing the Internet. MIT Press."
+  - reference: "Turner, F. (2012). Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence. C&F Éditions."
+
+chapitres:
+  - id: "machines-a-calculer"
+    titre: "Des machines à calculer aux machines programmables"
+
+    resume: |
+      Ce chapitre introduit l’histoire du numérique à partir des premières
+      tentatives d’automatisation du calcul. La Pascaline de Blaise Pascal
+      répond à des besoins administratifs liés à la fiscalité, tandis que
+      Leibniz imagine un langage formel capable d’automatiser le raisonnement.
+
+      Au XIXe siècle, Charles Babbage cherche à mécaniser la production
+      des tables numériques. La Difference Engine reste spécialisée, mais
+      l’Analytical Engine annonce une machine générale et programmable,
+      dotée d’une mémoire, d’une unité de calcul et d’un système de contrôle.
+      Ada Lovelace comprend que de tels dispositifs pourraient manipuler
+      des symboles et pas seulement des nombres.
+
+      ## À retenir
+
+      - Le calcul devient progressivement une technique de gouvernement,
+        d’organisation du travail et de production de savoir.
+      - Il faut distinguer une machine spécialisée d’une machine programmable.
+      - Le programme peut être séparé du mécanisme matériel qui l’exécute.
+
+    bibliographie:
+      - reference: "Science Museum Group. Babbage’s Analytical Engine, 1834–1871 (Trial model)."
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model"
+      - reference: "Foucault, M. (1976). Histoire de la sexualité I : La volonté de savoir. Gallimard."
+      - reference: "Foucault, M. (2004). Sécurité, territoire, population. Cours au Collège de France (1977–1978). Seuil/Gallimard."
+      - reference: "The Franklin Institute. Case Files: Herman Hollerith."
+        url: "https://fi.edu/en/news/case-files-herman-hollerith"
+      - reference: "Yates, J. (1993). Co-evolution of Information-Processing Technology and Use: Interaction between the Life Insurance and Tabulating Industries. Business History Review, 67(1), 1–51."
+        url: "https://doi.org/10.2307/3117467"
+      - reference: "IBM. The punched card tabulator."
+        url: "https://www.ibm.com/history/punched-card-tabulator"
+
+  - id: "formalisation-du-calcul"
+    titre: "Formaliser le calcul"
+
+    resume: |
+      Ce chapitre présente les avancées théoriques qui rendent pensable
+      l’automatisation du raisonnement et du calcul.
+
+      George Boole transforme les relations logiques en opérations
+      algébriques calculables. Alan Turing formalise ensuite la notion
+      de procédure mécanique avec sa machine abstraite : lire un symbole,
+      appliquer une règle, écrire, se déplacer et changer d’état.
+      La machine universelle montre qu’un même mécanisme peut simuler
+      d’autres machines lorsque leur description est fournie sous une
+      forme codée.
+
+      Claude Shannon établit enfin un lien entre l’algèbre de Boole
+      et les circuits de commutation. Les fonctions logiques peuvent
+      être réalisées matériellement avec des relais, ce qui prépare
+      le passage vers le traitement d’informations codées en binaire.
+      La numérisation est ensuite présentée comme la conversion d’une
+      information continue en une représentation discrète et calculable.
+
+      ## À retenir
+
+      - Boole formalise la logique ; Turing formalise le calcul ; Shannon
+        montre comment réaliser certaines fonctions logiques matériellement.
+      - Une machine universelle interprète une description de programme
+        au lieu de posséder une seule procédure inscrite dans sa structure.
+      - Le codage binaire et la numérisation sont des étapes distinctes.
+
+    bibliographie: []
+
+  - id: "guerre-et-premiers-ordinateurs"
+    titre: "La guerre et les premiers ordinateurs"
+
+    resume: |
+      À la fin des années 1930, les principes théoriques du calcul moderne
+      sont établis, mais leur réalisation matérielle reste coûteuse.
+      La Seconde Guerre mondiale transforme cette situation : cryptographie,
+      calcul balistique et recherche nucléaire font du calcul une priorité
+      militaire et scientifique.
+
+      L’ENIAC, mis en service en 1945, repose sur des tubes à vide et doit
+      être reprogrammé par câblage. L’EDVAC introduit ensuite le principe
+      du programme enregistré : les instructions et les données sont
+      conservées dans la mémoire de la machine. Cette organisation rend
+      possible une machine électronique générale et programmable.
+
+      Le chapitre aborde également le travail des premières programmeuses,
+      longtemps invisibilisé, ainsi que le passage progressif d’une
+      informatique militaire et scientifique à une informatique civile.
+
+      ## À retenir
+
+      - La guerre accélère le financement et la construction des premiers
+        ordinateurs électroniques.
+      - Le programme enregistré sépare les instructions du câblage matériel.
+      - L’ordinateur existe avant de trouver un usage courant et grand public.
+
+    bibliographie: []
+
+  - id: "reseaux-et-internet"
+    titre: "Des réseaux distribués à Internet"
+
+    resume: |
+      Ce chapitre retrace les origines d’Internet dans le contexte de la
+      guerre froide et des recherches financées par l’ARPA. Joseph Licklider
+      imagine une relation étroite entre les humains et les ordinateurs,
+      tandis que Paul Baran, Donald Davies et Leonard Kleinrock développent
+      des conceptions de réseaux fondées sur la commutation par paquets.
+
+      Contrairement à un réseau téléphonique centralisé, un réseau distribué
+      découpe les informations en paquets qui peuvent emprunter des routes
+      différentes. Cette architecture favorise la résilience, l’interconnexion
+      de réseaux hétérogènes et l’apparition d’usages qui n’ont pas été
+      entièrement prévus par l’opérateur initial.
+
+      ARPANET s’étend à partir de 1969. Les protocoles TCP/IP, proposés par
+      Vint Cerf et Robert Kahn puis adoptés par ARPANET en 1983, fournissent
+      le socle technique d’Internet. Le Web, qui apparaîtra plus tard,
+      doit être distingué d’Internet lui-même.
+
+      ## À retenir
+
+      - Internet est un réseau et un ensemble de protocoles ; le Web est
+        une application qui s’appuie sur ce réseau.
+      - La commutation par paquets et l’architecture en couches facilitent
+        l’interconnexion et l’innovation par les usages.
+      - Le réseau a des origines militaires et scientifiques, mais son
+        développement dépend aussi de communautés civiles et techniques.
+
+    bibliographie:
+      - reference: "Abbate, J. (1999). Inventing the Internet. MIT Press."
+      - reference: "Turner, F. (2012). Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence. C&F Éditions."
+
+  - id: "micro-informatique-et-contre-culture"
+    titre: "La micro-informatique et la contre-culture"
+
+    resume: |
+      Dans les années 1960, l’informatique repose encore sur de puissants
+      ordinateurs centraux réservés aux grandes institutions. La miniaturisation
+      des composants, le circuit intégré et l’apparition du microprocesseur
+      rendent progressivement possible une informatique plus accessible.
+
+      Cette transformation technique rencontre la contre-culture californienne.
+      Les communautés de la baie de San Francisco réinterprètent les ordinateurs
+      comme des instruments d’expérimentation, d’émancipation et d’organisation
+      collective, en lien avec l’imaginaire cybernétique.
+
+      La démonstration de Doug Engelbart en 1968, le Whole Earth Catalog,
+      Community Memory et les premiers collectifs d’amateurs contribuent
+      à faire circuler l’idée d’une informatique pour tous. Cette histoire
+      ne doit toutefois pas être réduite à un récit héroïque : elle mêle
+      des institutions de recherche, des financements militaires,
+      des entreprises et des communautés souvent inégalitaires.
+
+      ## À retenir
+
+      - La miniaturisation transforme les conditions matérielles d’accès
+        à l’informatique.
+      - La contre-culture ne rejette pas simplement la technique ; elle
+        cherche aussi à se la réapproprier.
+      - Les imaginaires de coopération et d’autonomie participent à la
+        formation de la culture informatique contemporaine.
+
+    bibliographie:
+      - reference: "Turner, F. (2012). Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence. C&F Éditions."
+
+  - id: "ordinateur-personnel-et-communautes-en-ligne"
+    titre: "L’ordinateur personnel et les communautés en ligne"
+
+    resume: |
+      L’Altair 8800, l’Apple I, l’Apple II, l’IBM PC et le Macintosh
+      marquent les principales étapes de la diffusion de l’ordinateur
+      personnel. L’informatique quitte progressivement les laboratoires,
+      les entreprises et les garages de passionnés pour entrer dans les
+      foyers et les bureaux.
+
+      Cette diffusion transforme aussi les modèles économiques et les usages.
+      L’ordinateur devient une machine prête à l’emploi, dotée d’un écran,
+      d’un clavier et d’une interface graphique. Le logiciel, notamment
+      avec le modèle de licence de Microsoft, devient un élément central
+      de la valeur industrielle.
+
+      En parallèle, les communautés issues de la contre-culture investissent
+      les premiers réseaux civils, les BBS et Usenet. The WELL prolonge
+      l’imaginaire du Whole Earth Catalog en faisant de la communication
+      en ligne une nouvelle forme de communauté.
+
+      ## À retenir
+
+      - La micro-informatique combine une rupture technique et une
+        transformation des publics de l’informatique.
+      - Le marché de l’ordinateur personnel se construit à travers des
+        standards matériels, des systèmes d’exploitation et des interfaces.
+      - Les communautés en ligne prolongent certains idéaux de coopération,
+        tout en les inscrivant dans des dispositifs techniques.
+
+    bibliographie: []
+
+  - id: "naissance-du-web"
+    titre: "La naissance du Web et sa transformation"
+
+    resume: |
+      Tim Berners-Lee propose au CERN, en 1989, un système hypertexte
+      distribué permettant de relier et de consulter plus facilement
+      les documents produits par les chercheurs. Le Web s’appuie sur
+      trois technologies complémentaires : les URL pour adresser les
+      ressources, HTML pour décrire les pages et HTTP pour les échanger.
+
+      Le premier navigateur, WorldWideWeb, apparaît en 1990 et la première
+      page est mise en ligne en 1991. La diffusion de Mosaic, Netscape
+      Navigator et Internet Explorer transforme rapidement le Web en média
+      mondial.
+
+      Le chapitre étudie ensuite la bulle des Dotcom, l’éclatement du NASDAQ
+      et l’apparition du Web 2.0. Le Web participatif fait des internautes
+      des producteurs de contenus et ouvre la voie aux blogs, aux wikis,
+      aux réseaux sociaux et au partage de vidéos. Cette démocratisation
+      s’accompagne toutefois d’une reprise en main progressive par les
+      États et les marchés.
+
+      ## À retenir
+
+      - Le Web est une technologie construite au-dessus d’Internet.
+      - La diffusion du Web dépend de standards techniques, de navigateurs
+        et de modèles économiques.
+      - Le Web 2.0 associe participation des utilisateurs, plateformes
+        commerciales et nouvelles formes de sociabilité en ligne.
+
+    bibliographie:
+      - reference: "Abbate, J. (1999). Inventing the Internet. MIT Press."
+      - reference: "Bush, V. (1945). As We May Think. The Atlantic Monthly, 176(1), 101–108."
+        url: "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/"
+      - reference: "Turner, F. (2012). Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence. C&F Éditions."

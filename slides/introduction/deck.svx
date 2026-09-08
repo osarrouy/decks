@@ -30,7 +30,7 @@ Qu'est-ce qu'on entend par _savoir critique_ ? Non pas un savoir qui critiquerai
 
 On ne problématise et on ne conceptualise pas les choses de la même manière selon qu’on est un homme blanc de la classe moyenne ou une femme de ménage racisée ; selon qu’on est un philosophe de l’ENS ou un ouvrier métallurgiste ; selon qu’on est européen qui a profité (même malgré lui) de la colonisation et de la mondialisation ou un indigène Yanomami brésilien qui a vu son monde ravagé par cette même colonisation.
 
-La plupart des questions théoriques que nous nous posons, elles découlent des problèmes ou des tensions que l’expérience ordinaire du monde social impose à nos à vies.
+La plupart des questions théoriques que nous nous posons, et les manières qu'on a de se poser ces quesitons, elles découlent des problèmes ou des tensions que l’expérience ordinaire du monde social impose à nos à vies.
 
 Or, de ce point de vue, mon parcours est quand même relativement particulier.
 
@@ -44,14 +44,13 @@ Maître de Conférences.
 
 Expériences politiques qui m’ont conduit à développer une certaine curiosité à l’endroit des cryptomonnaies et des technologies blockchain.
 
-↦ Distributed Gallery.
-
 ↦ Mise en disponibilité.
 
 ↦ Wespr / Aragon / Freelance.
 
-↦ Maître de Conférences à mi-temps.
+↦ Distributed Gallery (leur parler des projets IA)
 
+↦ Maître de Conférences à mi-temps.
 
 
 Je suis donc une espèce de gauchiste libertaire ou libéral qui a connu un Internet qui n'existe plus, que vous n'avez d'ailleurs jamais connu, et dans lequel j'ai à tort identifié un espace de liberté et de débordement possible du monde - un possible qui a suscité chez moi beaucoup d'espoirs et dans lequel j'ai investi beaucoup d'énergie.
@@ -71,45 +70,47 @@ De quoi, donc, ce personnage va-t-il vous parler ?
 
 --- notes
 
-
+Histoire
 - Pré-histoire 4
 - Cybernetics 2
 - Micro-informatique 2
-10
+Un peu chiant, on passera vite sur certains trucs et vous aurez accès aux documents si ça vous intéresse.
+Important de voir d'où tout ça nous vient, et ce que ça nous a légué aussi
 - Réseaux sociaux et espace public 2h
-- Structure réseaux sociaux 1h
-- Viralité 1h
-- Bulles de filtre et polarisation 2h
+- Modification des mécanismes de circulation de l'information :
+  - pourquoi certains sont vsibiles et d'autres non
+  - comment les algos des plateformes faconnent ce qu'on voit
+  - Bulles de filtre et polarisation 2h
+  - Viralité 1h
 - Interpassivité 4h
+Une séance au moins de conclusion, discussion, et aussi vous aidez un peu à faire du prompting et à utiliser l'IA pour vos révisions. Vous présenter une plateforme sur laquelle je travaille si elle est prete.
 
-histoire 4 séances = 8h
+L'année prochaine : Economie de la donnée, Economie de l'attention, Capitalisme de surveillance, Crypto, IA
 
-
-18h - 2h intro IA prompting, etc. = 16h : 8 séances
-
-4 histoire
-2 réseaux sociaux
-2 Interpassivité
 
 ---
 ## Modalités
+De la qualité d'une présence {.kicker}
 
+--- notes
 Je n'ai pas 60 ans mais, au cours des 10 ou 15 ans pendant lesquels j'ai enseigné, j'ai vu l'institution universitaire et le métier d'enseignant changer.
 
 Votre capacité d'attention diminue à cause des réseaux sociaux et des smartphones - ma capacité d'attention diminue aussi du reste. Ce n'est pas du tout de votre fait mais le résultat est le même. Enseigner signifie aujourd'hui : entrer dans une espèce de lutte permanente pour l'attention contre TikTok, Instagram ou YouTube que l'essentiel d'entre vous consulte pendant les cours. Même en y mettant du mien, le combat est perdu d'avance. 
 
-A cela se rajouter souvent un rapport compliqué à l'écriture.Entendons-nous bien. Je ne crois pas que vous soyiez moins malin que je ne l'étais à votre âge. Au contraire. Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un.
+A cela se rajouter souvent un rapport compliqué à l'écriture. Entendons-nous bien. Je ne crois pas que vous soyiez moins malin que je ne l'étais à votre âge. Au contraire. Vous êtes beaucoup plus informés et conscients de l'état du monde que je ne l'étais à votre âge et simultanément votre capacité à organiser et à coucher vos idées par écrit est globalement catastrophique. Je ne sais pas si ce problème en est vraiment un.
 
 Les universitaires ont tendance à fétichiser l'importance de l'écrit dans la structuration de la pensée. Il importe donc de rappeler qu'il y a à peine un siècle ou deux, l'essentiel de la population était analphabète. La culture de l'écriture livresque aura donc été une courte parenthèse dans l'histoire de l'humanité. Et on ne peut pas dire que la courte parenthèse pendant laquelle la culture de l'écrit et du livre a régné en maitre a été particulièrement vertueuse : deux guerres mondiales, plusieurs génocides, etc. L'humanité faisait sans la culture de l'écrit avant, elle fera sans après. La question n'est donc pas tant de savoir comment lutter CONTRE la disparition progressive de cette culture de l'écrit que de savoir ce que signifie enseigner À PARTIR de là.
 
 De ces constats, j’ai donc tiré quelques décisions, un peu radicales, pour que ces cours se passent le mieux possible, qu’ils soient aussi agréables et utiles que possible, pour vous comme pour moi.
 
-1. **Pas d’ordinateurs en cours.** Je vous demanderai donc de venir avec du papier et des crayons. Pourquoi cette règle ? Parce que nous allons essayer de travailler la présence — ou, plus exactement, la qualité de notre présence. Une grande partie de ce que je vous raconte pourrait être retrouvée ou reformulée avec ChatGPT. Mais un cours ne se réduit pas à un contenu transmissible : la manière dont une pensée se construit, se raconte et se discute compte aussi. Nous avons tous, moi compris, de bonnes raisons d’être ailleurs ou de manquer d’attention. Rien ne vous oblige à être ici. Mais si nous choisissons d’y être, essayons de l’être réellement, et de faire de ce moment autre chose qu’une simple mise à disposition d’informations.
+1. **Pas d’ordinateurs en cours.** Je vous demanderai donc de venir avec du papier et des crayons. Pourquoi cette règle ? Parce que nous allons essayer de travailler la présence — ou, plus exactement, la qualité de notre présence. Une grande partie de ce que je vous raconte pourrait être retrouvée ou reformulée avec ChatGPT. Mais un cours ne se réduit pas à un contenu transmissible : la manière dont une pensée se construit, se raconte et se discute compte aussi. Nous avons tous, moi compris, de bonnes raisons d’être ailleurs ou de manquer d’attention. Rien ne vous oblige à être ici. Mais si nous choisissons d’y être, essayons de l’être réellement, et de faire de ce moment autre chose qu’une simple mise à disposition d’informations. Par ailleurs si vous êtes attentifs en cours, vous n'avez presque rien à réviser.
 
-2. **Vous pouvez enregistrer le cours.** Vous pourrez donc utiliser vos téléphones pour cela, puis produire une retranscription avec Whisper ou un autre outil — les dictaphones d’iOS proposent déjà cette fonction, et des solutions existent également sur Android. L’idée est de pouvoir poser le téléphone et de ne pas avoir à prendre des notes exhaustives en permanence. Vous pouvez partager ces enregistrements et ces retranscriptions entre vous, mais je vous demande de ne pas les diffuser publiquement. Ce n’est pas d’abord une question de propriété intellectuelle : je veux pouvoir parler librement, sans devoir anticiper la réaction de personnes qui ne partagent ni le contexte ni la présence de ce cours.
+2. **Vous pouvez enregistrer le cours.** Vous pourrez donc utiliser vos téléphones pour cela, puis produire une retranscription avec Whisper ou un autre outil — les dictaphones d’iOS proposent déjà cette fonction, et des solutions existent également sur Android. L’idée est de pouvoir poser le téléphone et de ne pas avoir à prendre des notes exhaustives en permanence. Vous pouvez partager ces enregistrements et ces retranscriptions entre vous, mais je vous demande de ne pas les diffuser publiquement. Ce n’est pas d’abord une question de propriété intellectuelle : je veux pouvoir parler librement, sans devoir anticiper la réaction de personnes qui ne partagent ni le contexte ni la présence de ce cours. Ca marrange que vous enregistriez par ailleurs, parce que je vais avoir besoin de ces retransccriptions si la mienne foire pour la plateforme que je vous prépare.
 
 3. **Les supports seront disponibles après le cours.** Les slides vous seront transmis, et une IA avec laquelle vous pourrez dialoguer sera également mise à votre disposition pour reprendre les notions, poser des questions et réviser. Je n'ai pas encore totalement défini la forme que prendra cette IA et son interface : c'est beaucoup de travail. Quoi qu'il en soit ces supports ne remplacent pas le cours : ils doivent vous aider à prolonger ce qui aura été travaillé ensemble.
 
+
+Leur faire la démo du site.
 
 Dernier élément. Je ne surveille pas la présence en cours donc libre à vous de venir ou non. Mais par pitié, si vous venez, soyez présent. J'avoue, d'ailleurs, ne pas trop comprendre comment vous pouvez vous lever à 7h et venir en cours pour, de toute façon, ne rien en suivre et passer deux heures sur Instagram. La vie est courte : ce qu'il nous reste vivre - ce qu'il vous reste à vivre - est précieux et je doute que vous revienne, au seuil de la mort, le souvenir d'un reel Instagram ou d'un short de YouTube.
 
@@ -140,7 +141,8 @@ QCM | janvier {.kicker}
 
 ---
 
-## Et aussi ...
+## VSS
+again {.kicker}
 
 --- notes
 
@@ -171,4 +173,13 @@ Je suis un homme moi-même - né en 85 de surcroit - et il a pu m'arriver d'etre
 
 ---
 
+
+## Sondage de rentrée
+Scannez ce QR code pour répondre au questionnaire {.kicker}
+
+<img src="/formulaire-qr-code.png" alt="QR code vers le sondage de rentrée" style="display:block;width:min(42vw,32rem);max-height:56vh;object-fit:contain;margin:var(--space-4) auto 0;" />
+
+--- notes
 Sondage IA. Pour me faire une petite idée de vos usages et préparer la suite du cours.
+
+Aussi créer un groupe de discussion WhatsApp ou Discord ou Signal ou autre. Je vous demande ce que vous utilisez pour que ce soit le plus simple.
