@@ -4,13 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@dg/ui': link:../../../../Code/@dg/packages/ui
+
 importers:
 
   .:
     dependencies:
-      '@svx-slides/components':
+      '@svx-deck/core':
         specifier: workspace:*
-        version: link:packages/components
+        version: link:svx-deck
     devDependencies:
       '@playwright/test':
         specifier: ^1.63.0
@@ -28,11 +31,11 @@ importers:
         specifier: ^5.6.3
         version: 5.9.3
 
-  apps/cours:
+  site:
     dependencies:
       '@dg/ui':
-        specifier: link:../../../../../../Code/@dg/packages/ui
-        version: link:../../../../../../Code/@dg/packages/ui
+        specifier: link:../../../../../Code/@dg/packages/ui
+        version: link:../../../../../Code/@dg/packages/ui
       js-yaml:
         specifier: ^4.3.0
         version: 4.3.2
@@ -49,6 +52,9 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.1.1
         version: 5.1.1(svelte@5.57.0)(vite@6.4.3(@types/node@22.20.1))
+      '@svx-deck/core':
+        specifier: workspace:*
+        version: link:../svx-deck
       svelte:
         specifier: ^5.57.0
         version: 5.57.0
@@ -56,14 +62,11 @@ importers:
         specifier: ^6.4.1
         version: 6.4.3(@types/node@22.20.1)
 
-  packages/components:
+  svx-deck:
     dependencies:
-      svelte:
-        specifier: ^5.19.0
-        version: 5.56.7
-
-  svx-slides:
-    dependencies:
+      '@dg/ui':
+        specifier: link:../../../../../Code/@dg/packages/ui
+        version: link:../../../../../Code/@dg/packages/ui
       '@sveltejs/adapter-static':
         specifier: ^3.0.8
         version: 3.0.10(@sveltejs/kit@2.70.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.57.0)(vite@6.4.3(@types/node@22.20.1)))(svelte@5.57.0)(typescript@5.9.3)(vite@6.4.3(@types/node@22.20.1)))
@@ -73,9 +76,6 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.0
         version: 5.1.1(svelte@5.57.0)(vite@6.4.3(@types/node@22.20.1))
-      '@svx-slides/components':
-        specifier: workspace:*
-        version: link:../packages/components
       katex:
         specifier: ^0.13.24
         version: 0.13.24
@@ -103,14 +103,6 @@ importers:
       vite:
         specifier: ^6.1.0
         version: 6.4.3(@types/node@22.20.1)
-
-  themes/academic: {}
-
-  themes/dark: {}
-
-  themes/default: {}
-
-  themes/gallery: {}
 
 packages:
 
@@ -509,9 +501,6 @@ packages:
 
   '@types/parse5@5.0.3':
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
-
-  '@types/trusted-types@2.0.7':
-    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -918,10 +907,6 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: ^5.0.0 || ^6.0.0
-
-  svelte@5.56.7:
-    resolution: {integrity: sha512-5qERUZX80oQj6XrDMUmD2Uhd/cIpCPDWWKBK3ZHmyRUC9apPyamWM8xMo31mbWsIQxwG2hVoSnOJ/EcnhVkkzQ==}
-    engines: {node: '>=18'}
 
   svelte@5.57.0:
     resolution: {integrity: sha512-NdbDn7fl4be1ViUG0oq/lvG6OZy3oENolV2ONjiqqsfVoeAfzaQAKUcEX3MrQod/Bebv1PgwET9rfXhgn9s4Kg==}
@@ -1345,8 +1330,6 @@ snapshots:
     optional: true
 
   '@types/parse5@5.0.3': {}
-
-  '@types/trusted-types@2.0.7': {}
 
   '@types/unist@2.0.11': {}
 
@@ -1882,27 +1865,6 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - picomatch
-
-  svelte@5.56.7:
-    dependencies:
-      '@jridgewell/remapping': 2.3.5
-      '@jridgewell/sourcemap-codec': 1.5.5
-      '@sveltejs/acorn-typescript': 1.0.11(acorn@8.17.0)
-      '@types/estree': 1.0.9
-      '@types/trusted-types': 2.0.7
-      acorn: 8.17.0
-      aria-query: 5.3.1
-      axobject-query: 4.1.0
-      clsx: 2.1.1
-      devalue: 5.8.2
-      esm-env: 1.2.2
-      esrap: 2.3.0
-      is-reference: 3.0.3
-      locate-character: 3.0.0
-      magic-string: 0.30.21
-      zimmerframe: 1.1.4
-    transitivePeerDependencies:
-      - '@typescript-eslint/types'
 
   svelte@5.57.0:
     dependencies:

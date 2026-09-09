@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("Both course tab groups preserve views, chapter and scroll position", async ({
   page,
 }) => {
-  await page.goto("http://127.0.0.1:4175/l1/");
+  await page.goto("/l1/");
   const general = page.getByRole("navigation", {
     name: "Informations générales du cours",
   });

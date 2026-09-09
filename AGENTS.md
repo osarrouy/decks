@@ -2,7 +2,7 @@
 
 At session start, read `~/Documents/Lilith/persona.md`, then `~/Documents/Lilith/style.md`, then `~/Documents/Lilith/workflows.md`.
 
-# Working on svx-slides
+# Working on University
 
 Shared repository instructions for coding agents. Start with the [project overview](README.md), then read the local `AGENTS.md` and README for the directory you are changing. The current user request takes precedence over these defaults.
 
@@ -23,14 +23,14 @@ Shared repository instructions for coding agents. Start with the [project overvi
 
 ## Code and component design
 
-The existing slide themes and projection/presenter layouts keep their own visual rules. The `@dg/ui` composition and frame rules below apply to the course portal and UI components it consumes. Do not apply the portal reset or Page wrapper to deck surfaces.
+Both the portal and `svx-deck` consume `@dg/ui`. The framework owns projection and presenter geometry; shared design values come from the UI package. Keep deck surfaces independent of the portal Page wrapper.
 
 - **KISS.** Prefer direct logic, short descriptive names and native JavaScript, HTML and Svelte features. Remove dead code and unnecessary indirection in the code being changed. Concision must remain readable.
 - Use `$props` for component inputs, `$state` for mutable UI state and `$derived` for computed values. Reserve `$effect` for browser side effects and clean up timers and listeners. Use callback props, snippets and `$app/state`; use `$bindable` only for intentional two-way bindings. Avoid `svelte/legacy` migration helpers.
 - Keep component markup, logic and styles together in the owning `.svelte` file. This includes pages, layouts, media queries and interaction states.
-- Reuse public components through `@dg/ui`. Keep domain-specific components in their owning app; reusable presentation components belong in the existing slide packages.
-- Prefer composition and direct CSS-valued props. Use `Page` with `width` and `margin`; do not introduce `PageFrame`, abstract size presets or wrappers that duplicate existing frames. Use `Button` with `href` for a link styled as a button.
-- Preserve native semantics, keyboard behavior, visible focus, accessible names and reduced-motion support. Give each app one `main#main` landmark and a `SkipLink` before `Page`.
+- Reuse public components through `@dg/ui`. Keep domain-specific components in their owning app; reusable presentation components belong in `svx-deck`.
+- Prefer composition and direct CSS-valued props. Use `Button` with `href` for a link styled as a button.
+- Preserve native semantics, keyboard behavior, visible focus, accessible names and reduced-motion support. Give each rendered view one `main#main` landmark and a `SkipLink` before it.
 
 ## CSS ownership
 
@@ -58,7 +58,7 @@ The existing slide themes and projection/presenter layouts keep their own visual
 ## Verification and delivery
 
 - Match verification to the change. Documentation-only work needs formatting, local-link and example checks; behavior changes need the relevant existing tests. Add tests for meaningful behavior or fragile regressions, not to mirror a trivial edit.
-- For app or shared UI code, run the relevant checks and build. Verify shared changes across their consumers. The [README commands](README.md#vérifier) are authoritative.
+- For app or shared UI code, run the relevant checks and build. Verify shared changes across their consumers. The [README commands](README.md#verify) are authoritative.
 - For rendered UI changes, inspect the browser on desktop and at a narrow mobile width (around 390 px), in both themes. Check overflow, frame junctions, long text, keyboard interaction and affected state transitions. Compilation alone does not establish visual correctness.
 - When themes or interactive components change, check persistence, reloads, focus restoration and reduced motion where relevant. Review visual snapshot changes before accepting them; do not regenerate snapshots merely to silence failures.
 - If a check or browser tool is unavailable, report what remains unverified. Distinguish pre-existing failures from regressions caused by the change.
@@ -66,6 +66,11 @@ The existing slide themes and projection/presenter layouts keep their own visual
 
 ## Local UI dependency
 
-- The course portal links to the local `@dg/ui` package during development. Keep imports through its public API and resolve a single Svelte runtime. The link will later be replaced by a published version.
+- The portal and framework declare `@dg/ui`; the root pnpm override selects its local checkout during development. Keep imports through its public API and resolve a single Svelte runtime. The link will later be replaced by a published version.
 - Changes to the external UI package belong in its own repository. This workspace owns the portal and presentation integration; do not import tooling from the UI repository.
 - Keep standalone deck development and public, presenter, student and embedded exports usable without building the portal.
+
+## Source layout
+
+- Software lives in `site/` and `svx-deck/`; editorial sources live in `content/` and `decks/`. Read their local instructions before authorized content changes.
+- Preserve authored files byte for byte during architecture and style migrations. Historical imports and metadata in frozen courses are handled at the framework boundary.

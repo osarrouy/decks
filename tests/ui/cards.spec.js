@@ -1,12 +1,30 @@
 import { test, expect } from "@playwright/test";
 
+test("The catalog includes course files without publishing content documentation", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const cards = page.getByRole("region", {
+    name: "Les enseignements",
+    exact: true,
+  });
+  await expect(cards.locator("[data-card]")).toHaveCount(3);
+  for (const slug of ["introduction-aux-cultures-numeriques", "l2", "m2"]) {
+    await expect(cards.locator(`[data-card][href="/${slug}/"]`)).toHaveCount(1);
+  }
+  for (const slug of ["AGENTS", "COURSE_FORMAT"]) {
+    const response = await page.request.get(`/${slug}/`);
+    expect(response.status()).toBe(404);
+  }
+});
+
 for (const theme of ["light", "dark"]) {
   test(`Course cards show a subtle carousel cue on mobile (${theme})`, async ({
     page,
   }) => {
     await page.setViewportSize({ width: 320, height: 800 });
     await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.goto("http://127.0.0.1:4175/");
+    await page.goto("/");
     await page.evaluate(
       (value) => (document.documentElement.dataset.theme = value),
       theme,

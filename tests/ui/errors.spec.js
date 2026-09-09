@@ -3,7 +3,6 @@ import { test, expect } from "@playwright/test";
 const apps = [
   {
     name: "cours",
-    port: 4175,
     title: "Page introuvable",
     home: "Retour à l’accueil",
   },
@@ -23,7 +22,7 @@ for (const app of apps) {
           (value) => localStorage.setItem("dg-theme", value),
           theme,
         );
-        const origin = `http://127.0.0.1:${app.port}`;
+        const origin = test.info().project.use.baseURL;
         const response = await page.goto(`${origin}/missing/deep/page`);
         expect(response.status()).toBe(404);
         await expect(page.getByRole("heading", { level: 1 })).toHaveText(
@@ -81,10 +80,10 @@ for (const app of apps) {
   }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
-    await page.goto(`http://127.0.0.1:${app.port}/404`);
+    await page.goto(`${test.info().project.use.baseURL}/404`);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(app.title);
     await page.getByRole("link", { name: app.home, exact: true }).click();
-    await expect(page).toHaveURL(`http://127.0.0.1:${app.port}/`);
+    await expect(page).toHaveURL(`${test.info().project.use.baseURL}/`);
     await context.close();
   });
 }

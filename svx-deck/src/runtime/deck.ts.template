@@ -1,0 +1,54 @@
+import deckConfig from '$deck-config'
+import type { Deck, DeckConfig, Slide, SlideMetadata } from '@svx-deck/core/deck/types'
+
+const slideModules = import.meta.glob('/src/generated/deck/*.svx', { eager: true }) as Record<
+  string,
+  { default: any; metadata?: SlideMetadata }
+>
+
+const includeNotes = __INCLUDE_NOTES__
+
+const noteModules = (includeNotes
+  ? import.meta.glob('/src/generated/deck/*.notes.md', {
+      eager: true,
+      query: '?raw',
+      import: 'default'
+    })
+  : {}) as Record<string, string>
+
+function slideFileFromPath(path: string) {
+  return path.match(/\/src\/generated\/deck\/([^/]+)\.svx$/)?.[1] ?? path
+}
+
+function orderFromFile(file: string) {
+  return Number(file.match(/^(\d+)/)?.[1] ?? 9999)
+}
+
+function notePathForSlide(path: string) {
+  return path.replace(/\.svx$/, '.notes.md')
+}
+
+const config = (deckConfig ?? { title: 'Slides' }) as DeckConfig
+
+const slides: Slide[] = Object.entries(slideModules)
+  .map(([path, module]) => {
+    const file = slideFileFromPath(path)
+    const metadata = module.metadata ?? {}
+
+    return {
+      id: file,
+      order: orderFromFile(file),
+      title: typeof metadata.title === 'string' ? metadata.title : file.replace(/^\d+[-_]?/, ''),
+      component: module.default,
+      metadata,
+      notes: noteModules[notePathForSlide(path)]
+    }
+  })
+  .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+
+export const deck: Deck = {
+  id: config.id ?? 'deck',
+  title: config.title,
+  description: config.description,
+  slides
+}

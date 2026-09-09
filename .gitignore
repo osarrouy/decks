@@ -1,17 +1,18 @@
 node_modules
 .svelte-kit
-.svx-slides
+.svx-deck
 build
-slides/*/.svx-slides
-slides/*/build
-slides/*/src/generated/deck
+decks/*/src/generated/deck
 .DS_Store
 .env
 .env.*
 !.env.example
 
 # Portal build staging and browser reports
-apps/cours/.slides/
+site/.decks/
 test-results/
 playwright-report/
 *.timestamp-*.mjs
+
+# Historical generated apps are not course sources.
+.svx-slides

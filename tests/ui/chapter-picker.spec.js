@@ -5,7 +5,7 @@ test.use({ viewport: { width: 390, height: 844 } });
 test("Mobile chapters support keyboard navigation, dismissal and course history", async ({
   page,
 }) => {
-  await page.goto("http://127.0.0.1:4175/l1/?onglet=bibliographie");
+  await page.goto("/l1/?onglet=bibliographie");
   const trigger = page.locator(".mobile-chapters summary");
   const menu = page.getByRole("navigation", {
     name: "Choisir un chapitre sur mobile",
@@ -56,9 +56,7 @@ for (const theme of ["light", "dark"]) {
     page,
   }) => {
     await page.setViewportSize({ width: 320, height: 700 });
-    await page.goto(
-      "http://127.0.0.1:4175/l1/?vue=chapitres&section=section-2",
-    );
+    await page.goto("/l1/?vue=chapitres&section=section-2");
     await expect(page.locator(".mobile-chapters summary")).toContainText(
       "Information et communication",
     );

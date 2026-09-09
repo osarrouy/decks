@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("Svelte pages hydrate cleanly and preserve the theme across navigation and reloads", async ({
   page,
+  baseURL,
 }) => {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
@@ -11,7 +12,7 @@ test("Svelte pages hydrate cleanly and preserve the theme across navigation and 
     )
       errors.push(message.text());
   });
-  for (const [origin, start, link] of [["http://127.0.0.1:4175", "/", "L1"]]) {
+  for (const [origin, start, link] of [[baseURL, "/", "L1"]]) {
     await page.goto(origin + start);
     const toggle = page.getByRole("switch", { name: "Dark mode" }).first();
     await toggle.click();

@@ -1,6 +1,3 @@
 packages:
-  - svx-slides
-  - themes/*
-  - packages/*
-  - slides/*
-  - apps/*
+  - site
+  - svx-deck

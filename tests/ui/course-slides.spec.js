@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-const course = `${process.env.COURSE_SLIDES_ORIGIN || "http://127.0.0.1:4175"}/introduction-aux-cultures-numeriques/?vue=chapitres&section=histoire-du-numerique&onglet=slides`;
+const course =
+  "/introduction-aux-cultures-numeriques/?vue=chapitres&section=histoire-du-numerique&onglet=slides";
 
 test("History deck loads its slides and assets, preserves steps, and supports fullscreen", async ({
   page,

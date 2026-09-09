@@ -1,31 +1,26 @@
 {
-  "name": "svx-slides-workspace",
+  "name": "university",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@9.14.4",
   "dependencies": {
-    "@svx-slides/components": "workspace:*"
+    "@svx-deck/core": "workspace:*"
   },
   "scripts": {
-    "dev:intro": "node svx-slides/src/cli/index.mjs dev slides/introduction",
-    "dev:demo": "node svx-slides/src/cli/index.mjs dev slides/demo",
-    "dev:economics": "node svx-slides/src/cli/index.mjs dev slides/economics",
-    "dev:rsn": "node svx-slides/src/cli/index.mjs dev slides/social-networks",
-    "dev:history": "node svx-slides/src/cli/index.mjs dev slides/history-1",
-    "dev:history2": "node svx-slides/src/cli/index.mjs dev slides/history-2",
-    "build:demo": "node svx-slides/src/cli/index.mjs build slides/demo --public",
-    "build:demo:public": "node svx-slides/src/cli/index.mjs build slides/demo --public",
-    "build:demo:presenter": "node svx-slides/src/cli/index.mjs build slides/demo --presenter",
-    "export:demo": "node svx-slides/src/cli/index.mjs export slides/demo",
-    "export:history": "node svx-slides/src/cli/index.mjs export slides/history-1",
-    "preview:demo": "node svx-slides/src/cli/index.mjs preview slides/demo",
-    "preview:history": "node svx-slides/src/cli/index.mjs preview slides/history-1",
-    "check": "pnpm build:demo:public && pnpm build:demo:presenter && pnpm check:cours",
-    "dev:cours": "pnpm --filter cours dev",
-    "build:cours": "pnpm --filter cours build",
-    "preview:cours": "pnpm --filter cours preview",
-    "check:cours": "pnpm --filter cours check && pnpm --filter cours test",
+    "dev": "pnpm --filter site dev",
+    "dev:demo": "svx-deck dev decks/demo",
+    "dev:economics": "svx-deck dev decks/economics",
+    "dev:history-1": "svx-deck dev decks/history-1",
+    "dev:history-2": "svx-deck dev decks/history-2",
+    "dev:introduction": "svx-deck dev decks/introduction",
+    "dev:social-networks": "svx-deck dev decks/social-networks",
+    "build": "pnpm --filter site build",
+    "preview": "pnpm --filter site preview",
+    "deck": "svx-deck",
+    "check:site": "pnpm --filter site check && pnpm --filter site test",
+    "check:deck": "pnpm --filter @svx-deck/core check && pnpm --filter @svx-deck/core test",
+    "check": "pnpm check:deck && pnpm check:site",
     "test:ui": "playwright test --config tooling/playwright.js"
   },
   "devDependencies": {
@@ -34,5 +29,10 @@
     "typescript": "^5.6.3",
     "prettier": "^3",
     "prettier-plugin-svelte": "^3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@dg/ui": "link:../../../../Code/@dg/packages/ui"
+    }
   }
 }

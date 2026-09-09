@@ -49,7 +49,7 @@ for (const theme of ["light", "dark"]) {
         await course.click();
         await expect(course).toHaveAttribute("aria-current", "page");
         await identity.click();
-        await expect(page).toHaveURL("http://127.0.0.1:4175/");
+        await expect(page).toHaveURL("/");
       }
     }
   });
