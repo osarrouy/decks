@@ -11,7 +11,7 @@ function usage() {
   console.log(`svx-slides
 
 Usage:
-  svx-slides dev <deck-dir> [--students] [--host 0.0.0.0] [--port 5173]
+  svx-slides dev <deck-dir> [--students|--embed] [--base /prefix] [--host 0.0.0.0] [--port 5173]
   svx-slides build <deck-dir> [--public|--presenter|--students|--embed] [--base /prefix] [--out-dir path]
   svx-slides export <deck-dir>
   svx-slides preview <deck-dir> [--host 0.0.0.0] [--port 4173]
@@ -86,7 +86,7 @@ async function loadDeckConfig(realConfigPath) {
 }
 
 async function ensureRuntimeApp(deckRoot, options = {}) {
-  const appRoot = resolve(deckRoot, `.svx-slides/${options.view === 'students' ? 'student-app' : options.view === 'embed' ? 'embed-app' : 'app'}`)
+  const appRoot = resolve(deckRoot, `.svx-slides/${options.view === 'students' ? 'student-app' : options.view === 'embed' ? (options.dev ? 'embed-dev-app' : 'embed-app') : 'app'}`)
   const outputDir = options.outputDir ?? resolve(deckRoot, 'build')
   const base = options.base ?? ''
   const srcRoot = resolve(appRoot, 'src')
@@ -168,18 +168,26 @@ async function ensureRuntimeApp(deckRoot, options = {}) {
 
 async function runDev(deckRoot, flags) {
   const view = flags.embed ? 'embed' : flags.students ? 'students' : 'deck'
-  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot, { view })
+  const base = flags.base ?? ''
+  if (typeof base !== 'string' || (base && !/^\/(?!\/)[a-zA-Z0-9_/-]+$/.test(base)) || base.endsWith('/')) {
+    throw new Error('--base must be a path such as /slides/history-1, without a trailing slash')
+  }
+  const { appRoot, configFile } = await ensureRuntimeApp(deckRoot, { view, base, dev: true })
   process.chdir(appRoot)
   const server = await createServer({
     root: appRoot,
     configFile,
     server: {
       host: flags.host === true ? '0.0.0.0' : flags.host,
-      port: flags.port ? Number(flags.port) : undefined
+      port: flags.port ? Number(flags.port) : undefined,
+      strictPort: Boolean(flags['strict-port'])
     }
   })
   await server.listen()
   server.printUrls()
+  // The portal launcher allocates a free port and waits for this ready signal.
+  const address = server.httpServer.address()
+  process.send?.({ type: 'svx-slides:ready', origin: `http://127.0.0.1:${address.port}` })
 }
 
 async function runBuild(deckRoot, flags) {

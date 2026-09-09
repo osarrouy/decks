@@ -1,5 +1,18 @@
 # svx-slides workspace
 
+This workspace contains the standalone slide engine, deck sources and the [course portal](apps/cours/README.md). Standalone slide commands remain independent of the portal.
+
+```sh
+pnpm dev:cours      # portal + live embedded decks, port 5175
+pnpm build:cours    # complete static website in apps/cours/build/
+pnpm preview:cours
+pnpm check:cours
+PLAYWRIGHT_CHANNEL=chrome pnpm test:ui
+```
+
+The portal temporarily links the local `@dg/ui` package; see its [setup instructions](apps/cours/README.md#local-ui-development). Building or exporting an individual deck does not build the portal.
+
+
 Monorepo `pnpm` pour écrire des présentations `mdsvex`/Svelte avec :
 
 - un moteur de rendu indépendant dans `svx-slides/` ;
@@ -11,6 +24,7 @@ Monorepo `pnpm` pour écrire des présentations `mdsvex`/Svelte avec :
 
 ```txt
 /
+  apps/cours/          # portail de cours et intégration des decks
   svx-slides/          # moteur : runtime, contrôleur, composants, CSS commun
   themes/              # thèmes CSS importables indépendamment
     gallery/
@@ -489,6 +503,8 @@ export default {
 
 ```bash
 pnpm check
+pnpm check:cours
+node --test svx-slides/tests/*.mjs
 pnpm build:demo:public
 pnpm build:demo:presenter
 ```

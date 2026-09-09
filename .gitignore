@@ -9,3 +9,9 @@ slides/*/src/generated/deck
 .env
 .env.*
 !.env.example
+
+# Portal build staging and browser reports
+apps/cours/.slides/
+test-results/
+playwright-report/
+*.timestamp-*.mjs

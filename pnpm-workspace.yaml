@@ -3,3 +3,4 @@ packages:
   - themes/*
   - packages/*
   - slides/*
+  - apps/*

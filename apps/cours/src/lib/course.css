@@ -1,0 +1,21 @@
+/* Course-wide defaults, accessibility rules. */
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  text-transform: inherit;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}

@@ -1,0 +1,319 @@
+titre: "Introduction aux Cultures Numériques"
+niveau: "Licence 1"
+
+description: |
+  Ce cours propose une introduction aux techniques, aux pratiques et aux
+  imaginaires qui façonnent les cultures numériques. Il articule une
+  histoire de l’informatique et des réseaux avec une réflexion sur
+  l’information, la communication et les usages contemporains.
+
+  Des premières machines à calculer aux plateformes du quotidien, il invite
+  à comprendre comment les dispositifs numériques se construisent et
+  participent à l’organisation de la vie sociale. Le parcours associe
+  repères historiques, notions fondamentales et analyse de situations concrètes.
+
+bibliographie:
+  - reference: "Cardon, D. (2019). *Culture numérique*. Presses de Sciences Po."
+  - reference: "Jenkins, H. (2006). *Convergence culture: Where old and new media collide*. New York University Press."
+  - reference: "Manovich, L. (2001). *The language of new media*. MIT Press."
+
+chapitres:
+  - id: "histoire-du-numerique"
+    titre: "Histoire du numérique"
+    slides:
+      - titre: "Histoire du numérique"
+        url: "/slides/history-1/index.html"
+        integration: "iframe"
+
+    resume: |
+      Ce chapitre propose une histoire introductive des technologies numériques,
+      des premières machines à calculer jusqu’au Web 2.0.
+
+      Il suit la transformation progressive du calcul en une activité
+      mécanisable, programmable puis connectée. Cette histoire est abordée
+      avec ses dimensions techniques, scientifiques, économiques et politiques :
+      les machines servent à calculer, mais aussi à rendre les individus,
+      les populations, les échanges et les activités plus lisibles et
+      plus gouvernables.
+
+      Le chapitre insiste également sur les bifurcations et les contingences
+      historiques. L’informatique et Internet ne sont pas le résultat
+      nécessaire d’une évolution linéaire : ils émergent de rencontres
+      entre recherches théoriques, besoins administratifs et militaires,
+      industries, communautés scientifiques et mouvements contre-culturels.
+
+      ## Des machines à calculer aux machines programmables
+
+      Cette partie introduit l’histoire du numérique à partir des premières
+      tentatives d’automatisation du calcul. La Pascaline de Blaise Pascal
+      répond à des besoins administratifs liés à la fiscalité, tandis que
+      Leibniz imagine un langage formel capable d’automatiser le raisonnement.
+
+      Au XIXe siècle, Charles Babbage cherche à mécaniser la production
+      des tables numériques. La Difference Engine reste spécialisée, mais
+      l’Analytical Engine annonce une machine générale et programmable,
+      dotée d’une mémoire, d’une unité de calcul et d’un système de contrôle.
+      Ada Lovelace comprend que de tels dispositifs pourraient manipuler
+      des symboles et pas seulement des nombres.
+
+      ### À retenir
+
+      - Le calcul devient progressivement une technique de gouvernement,
+        d’organisation du travail et de production de savoir.
+      - Il faut distinguer une machine spécialisée d’une machine programmable.
+      - Le programme peut être séparé du mécanisme matériel qui l’exécute.
+
+      ## Formaliser le calcul
+
+      Cette partie présente les avancées théoriques qui rendent pensable
+      l’automatisation du raisonnement et du calcul.
+
+      George Boole transforme les relations logiques en opérations
+      algébriques calculables. Alan Turing formalise ensuite la notion
+      de procédure mécanique avec sa machine abstraite : lire un symbole,
+      appliquer une règle, écrire, se déplacer et changer d’état.
+      La machine universelle montre qu’un même mécanisme peut simuler
+      d’autres machines lorsque leur description est fournie sous une
+      forme codée.
+
+      Claude Shannon établit enfin un lien entre l’algèbre de Boole
+      et les circuits de commutation. Les fonctions logiques peuvent
+      être réalisées matériellement avec des relais, ce qui prépare
+      le passage vers le traitement d’informations codées en binaire.
+      La numérisation est ensuite présentée comme la conversion d’une
+      information continue en une représentation discrète et calculable.
+
+      ### À retenir
+
+      - Boole formalise la logique ; Turing formalise le calcul ; Shannon
+        montre comment réaliser certaines fonctions logiques matériellement.
+      - Une machine universelle interprète une description de programme
+        au lieu de posséder une seule procédure inscrite dans sa structure.
+      - Le codage binaire et la numérisation sont des étapes distinctes.
+
+      ## La guerre et les premiers ordinateurs
+
+      À la fin des années 1930, les principes théoriques du calcul moderne
+      sont établis, mais leur réalisation matérielle reste coûteuse.
+      La Seconde Guerre mondiale transforme cette situation : cryptographie,
+      calcul balistique et recherche nucléaire font du calcul une priorité
+      militaire et scientifique.
+
+      L’ENIAC, mis en service en 1945, repose sur des tubes à vide et doit
+      être reprogrammé par câblage. L’EDVAC introduit ensuite le principe
+      du programme enregistré : les instructions et les données sont
+      conservées dans la mémoire de la machine. Cette organisation rend
+      possible une machine électronique générale et programmable.
+
+      Cette partie aborde également le travail des premières programmeuses,
+      longtemps invisibilisé, ainsi que le passage progressif d’une
+      informatique militaire et scientifique à une informatique civile.
+
+      ### À retenir
+
+      - La guerre accélère le financement et la construction des premiers
+        ordinateurs électroniques.
+      - Le programme enregistré sépare les instructions du câblage matériel.
+      - L’ordinateur existe avant de trouver un usage courant et grand public.
+
+      ## Des réseaux distribués à Internet
+
+      Cette partie retrace les origines d’Internet dans le contexte de la
+      guerre froide et des recherches financées par l’ARPA. Joseph Licklider
+      imagine une relation étroite entre les humains et les ordinateurs,
+      tandis que Paul Baran, Donald Davies et Leonard Kleinrock développent
+      des conceptions de réseaux fondées sur la commutation par paquets.
+
+      Contrairement à un réseau téléphonique centralisé, un réseau distribué
+      découpe les informations en paquets qui peuvent emprunter des routes
+      différentes. Cette architecture favorise la résilience, l’interconnexion
+      de réseaux hétérogènes et l’apparition d’usages qui n’ont pas été
+      entièrement prévus par l’opérateur initial.
+
+      ARPANET s’étend à partir de 1969. Les protocoles TCP/IP, proposés par
+      Vint Cerf et Robert Kahn puis adoptés par ARPANET en 1983, fournissent
+      le socle technique d’Internet. Le Web, qui apparaîtra plus tard,
+      doit être distingué d’Internet lui-même.
+
+      ### À retenir
+
+      - Internet est un réseau et un ensemble de protocoles ; le Web est
+        une application qui s’appuie sur ce réseau.
+      - La commutation par paquets et l’architecture en couches facilitent
+        l’interconnexion et l’innovation par les usages.
+      - Le réseau a des origines militaires et scientifiques, mais son
+        développement dépend aussi de communautés civiles et techniques.
+
+      ## La micro-informatique et la contre-culture
+
+      Dans les années 1960, l’informatique repose encore sur de puissants
+      ordinateurs centraux réservés aux grandes institutions. La miniaturisation
+      des composants, le circuit intégré et l’apparition du microprocesseur
+      rendent progressivement possible une informatique plus accessible.
+
+      Cette transformation technique rencontre la contre-culture californienne.
+      Les communautés de la baie de San Francisco réinterprètent les ordinateurs
+      comme des instruments d’expérimentation, d’émancipation et d’organisation
+      collective, en lien avec l’imaginaire cybernétique.
+
+      La démonstration de Doug Engelbart en 1968, le Whole Earth Catalog,
+      Community Memory et les premiers collectifs d’amateurs contribuent
+      à faire circuler l’idée d’une informatique pour tous. Cette histoire
+      ne doit toutefois pas être réduite à un récit héroïque : elle mêle
+      des institutions de recherche, des financements militaires,
+      des entreprises et des communautés souvent inégalitaires.
+
+      ### À retenir
+
+      - La miniaturisation transforme les conditions matérielles d’accès
+        à l’informatique.
+      - La contre-culture ne rejette pas simplement la technique ; elle
+        cherche aussi à se la réapproprier.
+      - Les imaginaires de coopération et d’autonomie participent à la
+        formation de la culture informatique contemporaine.
+
+      ## L’ordinateur personnel et les communautés en ligne
+
+      L’Altair 8800, l’Apple I, l’Apple II, l’IBM PC et le Macintosh
+      marquent les principales étapes de la diffusion de l’ordinateur
+      personnel. L’informatique quitte progressivement les laboratoires,
+      les entreprises et les garages de passionnés pour entrer dans les
+      foyers et les bureaux.
+
+      Cette diffusion transforme aussi les modèles économiques et les usages.
+      L’ordinateur devient une machine prête à l’emploi, dotée d’un écran,
+      d’un clavier et d’une interface graphique. Le logiciel, notamment
+      avec le modèle de licence de Microsoft, devient un élément central
+      de la valeur industrielle.
+
+      En parallèle, les communautés issues de la contre-culture investissent
+      les premiers réseaux civils, les BBS et Usenet. The WELL prolonge
+      l’imaginaire du Whole Earth Catalog en faisant de la communication
+      en ligne une nouvelle forme de communauté.
+
+      ### À retenir
+
+      - La micro-informatique combine une rupture technique et une
+        transformation des publics de l’informatique.
+      - Le marché de l’ordinateur personnel se construit à travers des
+        standards matériels, des systèmes d’exploitation et des interfaces.
+      - Les communautés en ligne prolongent certains idéaux de coopération,
+        tout en les inscrivant dans des dispositifs techniques.
+
+      ## La naissance du Web et sa transformation
+
+      Tim Berners-Lee propose au CERN, en 1989, un système hypertexte
+      distribué permettant de relier et de consulter plus facilement
+      les documents produits par les chercheurs. Le Web s’appuie sur
+      trois technologies complémentaires : les URL pour adresser les
+      ressources, HTML pour décrire les pages et HTTP pour les échanger.
+
+      Le premier navigateur, WorldWideWeb, apparaît en 1990 et la première
+      page est mise en ligne en 1991. La diffusion de Mosaic, Netscape
+      Navigator et Internet Explorer transforme rapidement le Web en média
+      mondial.
+
+      Cette partie étudie ensuite la bulle des Dotcom, l’éclatement du NASDAQ
+      et l’apparition du Web 2.0. Le Web participatif fait des internautes
+      des producteurs de contenus et ouvre la voie aux blogs, aux wikis,
+      aux réseaux sociaux et au partage de vidéos. Cette démocratisation
+      s’accompagne toutefois d’une reprise en main progressive par les
+      États et les marchés.
+
+      ### À retenir
+
+      - Le Web est une technologie construite au-dessus d’Internet.
+      - La diffusion du Web dépend de standards techniques, de navigateurs
+        et de modèles économiques.
+      - Le Web 2.0 associe participation des utilisateurs, plateformes
+        commerciales et nouvelles formes de sociabilité en ligne.
+
+    bibliographie:
+      - reference: "Abbate, J. (1999). *Inventing the Internet*. MIT Press."
+      - reference: "Beniger, J. R. (1986). *The control revolution: Technological and economic origins of the information society*. Harvard University Press."
+      - reference: "Breton, P. (1990). *Une histoire de l’informatique*. Seuil."
+      - reference: "Bush, V. (1945, juillet). As we may think. *The Atlantic Monthly, 176*(1), 101–108. [https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/)"
+        url: "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/"
+      - reference: "CultureGnum. (2018). *Une brève histoire de l’informatique, de 1945 à nos jours* [Vidéo]. Canal-U. [https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours](https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours)"
+        url: "https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours"
+      - reference: "Foucault, M. (1976). *Histoire de la sexualité : Vol. 1. La volonté de savoir*. Gallimard."
+      - reference: "Foucault, M. (2004). *Sécurité, territoire, population : Cours au Collège de France (1977–1978)* (M. Senellart, éd.). Gallimard; Seuil."
+      - reference: "The Franklin Institute. (s. d.). *Case files: Herman Hollerith*. [https://fi.edu/en/news/case-files-herman-hollerith](https://fi.edu/en/news/case-files-herman-hollerith)"
+        url: "https://fi.edu/en/news/case-files-herman-hollerith"
+      - reference: "IBM. (s. d.). *The punched card tabulator*. [https://www.ibm.com/history/punched-card-tabulator](https://www.ibm.com/history/punched-card-tabulator)"
+        url: "https://www.ibm.com/history/punched-card-tabulator"
+      - reference: "Pasquinelli, M. (2023). *The eye of the master: A social history of artificial intelligence*. Verso."
+        note: "Lecture ciblée : chapitre 2."
+      - reference: "Science Museum Group. (s. d.). *Babbage’s Analytical Engine, 1834–1871 (trial model)* [Notice de collection]. [https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model](https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model)"
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model"
+      - reference: "Turner, F. (2012). *Aux sources de l’utopie numérique : De la contre-culture à la cyberculture, Stewart Brand, un homme d’influence* (L. Vannini, trad.). C&F Éditions. (Ouvrage original publié en 2006)"
+      - reference: "Yates, J. (1993). Co-evolution of information-processing technology and use: Interaction between the life insurance and tabulating industries. *Business History Review, 67*(1), 1–51. [https://doi.org/10.2307/3117467](https://doi.org/10.2307/3117467)"
+        url: "https://doi.org/10.2307/3117467"
+
+  # Chapitres suivants : propositions provisoires à retravailler.
+
+  - id: "information-et-communication"
+    titre: "Information et communication"
+
+    resume: |
+      Ce chapitre examine ce qui se transforme lorsqu’un message, une image
+      ou un son devient une donnée que l’on peut stocker, transmettre et
+      calculer. Il introduit les distinctions entre données, information et
+      sens, ainsi que les principales composantes d’une situation de communication.
+
+      À partir d’exemples de messages et de documents numériques, il propose
+      d’observer le rôle du codage, du support et du contexte d’interprétation.
+      La circulation d’une information est ainsi abordée à la fois comme
+      un processus technique et comme une relation entre des personnes.
+
+      ## À retenir
+
+      - Distinguer les données, l’information et le sens.
+      - Identifier le rôle du code, du canal et du contexte dans une communication.
+      - Interroger ce que la mise en données conserve, transforme ou laisse de côté.
+
+    bibliographie: []
+
+  - id: "pratiques-et-cultures-en-reseau"
+    titre: "Pratiques et cultures en réseau"
+
+    resume: |
+      Ce chapitre explore les manières de se rencontrer, de créer et de
+      participer en ligne. Il prend pour points de départ les communautés,
+      les pratiques de partage, le remix et les productions collectives.
+
+      Il invite à analyser les règles et les habitudes qui organisent ces
+      espaces : qui peut participer, comment se construit une réputation,
+      quels contenus deviennent visibles et comment se négocient les désaccords.
+      Les identités numériques sont étudiées à travers la présentation de soi,
+      les traces laissées par les usages et les relations avec les autres.
+
+      ## À retenir
+
+      - Décrire les formes de coopération et de création dans les communautés en ligne.
+      - Repérer les règles explicites et implicites qui organisent la participation.
+      - Relier la présentation de soi aux conditions de visibilité sur les réseaux.
+
+    bibliographie: []
+
+  - id: "plateformes-et-vie-quotidienne"
+    titre: "Plateformes et vie quotidienne"
+
+    resume: |
+      Ce chapitre propose une lecture critique des services numériques
+      utilisés au quotidien : rechercher une information, regarder une vidéo,
+      acheter un produit ou échanger avec ses proches. Il introduit les notions
+      de plateforme, de modèle économique et d’économie de l’attention.
+
+      L’analyse porte sur les interfaces, la collecte de données et les systèmes
+      de recommandation, en examinant leur place dans l’organisation des usages.
+      Des situations concrètes permettent de discuter les possibilités de choix,
+      les dépendances et les moyens de prendre du recul sur ses pratiques.
+
+      ## À retenir
+
+      - Identifier les acteurs et les modèles économiques d’un service numérique.
+      - Examiner les liens entre données, recommandations et attention.
+      - Développer une lecture critique de ses usages et des interfaces qui les organisent.
+
+    bibliographie: []

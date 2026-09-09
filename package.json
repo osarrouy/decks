@@ -21,6 +21,18 @@
     "export:history": "node svx-slides/src/cli/index.mjs export slides/history-1",
     "preview:demo": "node svx-slides/src/cli/index.mjs preview slides/demo",
     "preview:history": "node svx-slides/src/cli/index.mjs preview slides/history-1",
-    "check": "pnpm build:demo:public && pnpm build:demo:presenter"
+    "check": "pnpm build:demo:public && pnpm build:demo:presenter && pnpm check:cours",
+    "dev:cours": "pnpm --filter cours dev",
+    "build:cours": "pnpm --filter cours build",
+    "preview:cours": "pnpm --filter cours preview",
+    "check:cours": "pnpm --filter cours check && pnpm --filter cours test",
+    "test:ui": "playwright test --config tooling/playwright.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5.6.3",
+    "prettier": "^3",
+    "prettier-plugin-svelte": "^3"
   }
 }
