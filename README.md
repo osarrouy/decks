@@ -85,6 +85,37 @@ pnpm preview:history
 
 Les fichiers sont générés respectivement sous `slides/demo/build/` et `slides/history-1/build/`. Les flèches, la barre espace et les boutons permettent de naviguer ; les `steps` restent pris en compte. Les indications réservées au présentateur (`:::comment` et `[!COMMENT]`) sont supprimées avant l’import et ne sont donc pas embarquées dans le livrable étudiant.
 
+## Intégrer un deck dans un autre site
+
+```bash
+node svx-slides/src/cli/index.mjs build slides/history-1 --embed \
+  --base /slides/history-1 --out-dir /tmp/history-1-web
+```
+
+`--embed` produit un lecteur autonome avec boutons précédent/suivant et sélection
+de slide. Les étapes et composants interactifs restent actifs. Les notes ne sont
+pas incluses et aucune route présentateur n’est générée. La navigation ne
+synchronise pas les autres fenêtres ouvertes. Ce mode ne se combine pas avec
+`--students` ou `--presenter`.
+
+`--base` configure le préfixe public SvelteKit et les références littérales aux
+fichiers de `static/` dans les slides et composants. Utiliser un chemin sans slash
+final. Les URL externes restent inchangées ; les chemins construits dynamiquement
+par du code doivent eux-mêmes prendre ce préfixe en compte.
+
+`--out-dir` choisit un répertoire de livraison distinct du build habituel (chemin
+relatif au deck, ou absolu). Un dossier existant non vide doit déjà contenir le
+manifeste `svx-slides.json` d’un export, sauf pour le dossier `build/` habituel.
+Le manifeste indique le mode, le préfixe, la présence de notes et le nombre de slides.
+
+Servir **tout** le répertoire obtenu sous `/slides/history-1/`, puis intégrer
+`/slides/history-1/index.html` dans une iframe. Prévoir une hauteur de `9/16` de
+la largeur, plus `52px` pour les commandes. Le thème reste celui du deck.
+
+Les exports existants sont des sites HTML/CSS/JavaScript statiques : public sans
+notes, présentateur avec notes, étudiant avec notes filtrées. Il n’existe pas de
+commande d’export PDF, PPTX ou vidéo dans la CLI.
+
 ## Structure d’un projet de slides
 
 Un projet typique ressemble à ceci :

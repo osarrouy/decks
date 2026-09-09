@@ -33,7 +33,8 @@
     "./vite": {
       "types": "./src/lib/vite/index.d.ts",
       "default": "./src/lib/vite/index.mjs"
-    }
+    },
+    "./components/EmbeddedView.svelte": "./src/lib/components/EmbeddedView.svelte"
   },
   "peerDependencies": {
     "svelte": "^5.19.0"

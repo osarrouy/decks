@@ -93,6 +93,9 @@ export function createDeckController(
     const target = event.target as HTMLElement | null
     if (target?.matches('input, textarea, select, [contenteditable="true"]')) return
 
+    // Let native buttons and links handle Space themselves.
+    if (event.key === ' ' && target?.closest('button, a[href]')) return
+
     if (['ArrowRight', ' ', 'PageDown'].includes(event.key)) {
       event.preventDefault()
       next()
