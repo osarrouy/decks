@@ -111,7 +111,7 @@ test("frontmatter config works without a config file and custom themes are ignor
     );
   }));
 
-test("embedded generation excludes notes and presenter routes; public generation removes stale presenter routes", async () =>
+test("runtime generation replaces stale routes and controls the presenter route", async () =>
   fixture(async (root) => {
     const embed = await ensureRuntimeApp(root, {
       view: "embed",
@@ -132,6 +132,14 @@ test("embedded generation excludes notes and presenter routes; public generation
     });
     await access(
       resolve(presenter.appRoot, "src/routes/presenter/+page.svelte"),
+    );
+    await writeFile(
+      resolve(presenter.appRoot, "src/routes/presenter/+page 3.svelte"),
+      "stale route",
+    );
+    await ensureRuntimeApp(root, { view: "deck", presenter: true });
+    await assert.rejects(
+      access(resolve(presenter.appRoot, "src/routes/presenter/+page 3.svelte")),
     );
     await ensureRuntimeApp(root, { view: "deck" });
     await assert.rejects(

@@ -40,6 +40,7 @@ export async function ensureRuntimeApp(deckRoot, options = {}) {
     : resolve(appRoot, "static");
   const config = await loadDeckConfig(deckRoot);
   const presenter = view === "deck" && (dev || options.presenter);
+  await rm(routes, { recursive: true, force: true });
   for (const dir of [
     routes,
     resolve(src, "generated"),
@@ -49,7 +50,6 @@ export async function ensureRuntimeApp(deckRoot, options = {}) {
     await mkdir(dir, { recursive: true });
   }
   if (presenter) await mkdir(resolve(routes, "presenter"), { recursive: true });
-  else await rm(resolve(routes, "presenter"), { recursive: true, force: true });
 
   const files = {
     "package.json": JSON.stringify({
