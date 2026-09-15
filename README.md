@@ -48,7 +48,7 @@ pnpm deck export decks/history-1
 pnpm deck preview decks/history-1
 ```
 
-Deck commands do not build or start the course portal. Each deck keeps its generated app under `.svx-deck/` and its default export under `build/`; both are ignored by Git.
+Deck commands do not build or start the course portal. Each deck keeps its generated app under `.svx-deck.nosync/` and its default export under `build/`; both are ignored by Git. The `.nosync` suffix keeps volatile runtime files out of cloud synchronization.
 
 See the [framework guide](svx-deck/README.md) for configuration, syntax and export modes, and the [deck authoring guide](decks/README.md) for speaker notes.
 

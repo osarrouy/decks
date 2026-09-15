@@ -130,6 +130,7 @@ test("runtime generation replaces stale routes and controls the presenter route"
       view: "deck",
       presenter: true,
     });
+    assert.equal(presenter.appRoot, resolve(root, ".svx-deck.nosync/deck"));
     await access(
       resolve(presenter.appRoot, "src/routes/presenter/+page.svelte"),
     );

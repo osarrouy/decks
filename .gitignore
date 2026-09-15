@@ -1,6 +1,7 @@
 node_modules
 .svelte-kit
 .svx-deck
+.svx-deck.nosync
 build
 decks/*/src/generated/deck
 .DS_Store

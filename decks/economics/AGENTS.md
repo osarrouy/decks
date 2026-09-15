@@ -97,7 +97,7 @@ Il doit rester lisible en projection. Les détails historiques, les références
 - Le lancement attendu est `pnpm deck dev decks/economics`.
 - Utiliser la commande générique `pnpm deck` ; aucun script racine propre à ce cours n’est nécessaire.
 - Les vérifications doivent inclure le lancement du serveur, l’ouverture de la projection et de la vue présentateur, ainsi qu’un build public et un build avec notes si le temps le permet.
-- Les fichiers générés (`.svx-deck/`, `build/`) ne doivent pas servir de source éditoriale.
+- Les fichiers générés (`.svx-deck.nosync/`, `build/`) ne doivent pas servir de source éditoriale.
 
 ## Critère de réussite
 

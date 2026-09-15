@@ -4,7 +4,7 @@ import { readdir, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { build, createServer, preview } from "vite";
 
-import { ensureRuntimeApp } from "../runtime/generate.mjs";
+import { ensureRuntimeApp, RUNTIME_DIRECTORY } from "../runtime/generate.mjs";
 
 function usage() {
   console.log(`svx-deck
@@ -92,7 +92,7 @@ async function runBuild(deckRoot, flags) {
   if (
     outputDir === deckRoot ||
     deckRoot.startsWith(outputDir + "/") ||
-    ["static", "components", "source", ".svx-deck"].some(
+    ["static", "components", "source", ".svx-deck", RUNTIME_DIRECTORY].some(
       (name) =>
         outputDir === resolve(deckRoot, name) ||
         outputDir.startsWith(resolve(deckRoot, name) + "/"),

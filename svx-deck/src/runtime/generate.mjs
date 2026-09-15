@@ -8,6 +8,8 @@ import {
 } from "../lib/deck/singleFile.mjs";
 import { writeIfChanged } from "./files.mjs";
 
+export const RUNTIME_DIRECTORY = ".svx-deck.nosync";
+
 export async function loadDeckConfig(deckRoot) {
   const path = resolve(deckRoot, "deck.config.ts");
   const loaded = existsSync(path)
@@ -30,7 +32,7 @@ export async function loadDeckConfig(deckRoot) {
 export async function ensureRuntimeApp(deckRoot, options = {}) {
   const { view = "deck", base = "", dev = false } = options;
   const mode = view === "embed" && dev ? "embed-dev" : view;
-  const appRoot = resolve(deckRoot, `.svx-deck/${mode}`);
+  const appRoot = resolve(deckRoot, RUNTIME_DIRECTORY, mode);
   const src = resolve(appRoot, "src");
   const routes = resolve(src, "routes");
   const configPath = resolve(src, "generated/deck-config.mjs");

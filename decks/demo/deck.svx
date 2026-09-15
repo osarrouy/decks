@@ -272,10 +272,10 @@ Une définition, toutefois, a marqué les esprits. Celle proposée en 1948 par C
 
 ---
 <script>
+  import ShannonCommunication from '$components/ShannonCommunication.svelte'
 </script>
 
-METTRE ICI SCHEME DE SHANNON AVEC EMETTEUR ET RECEPTEUR
-
+<ShannonCommunication />
 
 --- notes
 
@@ -297,6 +297,7 @@ La question peut paraître absurde. Comment pourrait-on mesurer une quantité d'
 
 > [!EXEMPLE]
 > Il fait beau aujourd'hui.
+
 > J'ai faim.
 
 Shannon apporte une réponse élégante à ce problème en partant de l'intuition suivante : une observation très attendue modifie peu notre incertitude et apporte donc peu d'information ; à l'inverse, une observation improbable réduit fortement notre incertitude et nous apporte donc plus d'information.
@@ -343,6 +344,7 @@ Un message peut être très improbable et donc apporter beaucoup d’information
 
 > [!EXEMPLE]
 > Balakoukamouki
+
 > Je t'aime
 
 Ce choix est volontaire. Il permet de traiter de manière analogue du texte, du son ou une suite d’états électriques. Le contenu peut ainsi être codé en symboles, transmis et reconstruit sans que l’ingénieur ait besoin d’interpréter sa signification.
@@ -370,11 +372,12 @@ Thermodynamique et cybernétique {.kicker}
 
 En physique l’entropie décrit la tendance spontanée d’un système isolé à disperser son énergie et à réduire les différences qui le structurent.
 
-[!EXEMPLES]
+:::example
 Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
 
-[!EXEMPLES]
+
 Une goutte d'encre dans un verre d'eau. L'encre se diffuse jusqu'à colorer tout le verre. Là encore ce processus spontané est difficilement réversible. Il est compliqué de re-concentrer le colorant dans l'eau.
+:::
 
 C’est ce que décrit l’entropie : une tendance spontanée à la dispersion de l'énergie. Ou, pour le dire autrement, une tendance spontanée des systèmes physiques à tendre vers leur état de désorganisation maximal.
 
@@ -384,22 +387,19 @@ Là où l'information tend à produire des différences identifiables et transmi
 
 Or cette opposition de l'information et de l'entropie peut être transposée à d'autres domaines.
 
-[!EXEMPLES]
+:::example
 Un organisme qui n'a plus accès à son environnement pour réguler sa température.
+
 Une équipe de foot qui ne peut ni se voir ni se parler.
+:::
 
 Wiener et d’autres cybernéticiens étendent donc l’usage de la notion d’information : non plus une mesure formelle de l'incertitude mais une forme générale et structurante de *néguentropie*.
 
 Les boucles de rétroaction sont pensées comme des mécanismes permettant d'opposer localement une résistance aux forces inexorables de l'entropie.
 
-Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Conçue comme néguentropie l'information peut-être identifié absolument partout. Cela peut parfois conduire à un tour de passe-passe épistémoligique. Oui, tout ou presque peut être codé comme information. Cela ne signifie toutefois pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
+Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Conçue comme néguentropie l'information peut-être identifié absolument partout. Cela peut parfois conduire à un tour de passe-passe épistémologique. Oui, tout ou presque peut être codé comme information. Cela ne signifie toutefois pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
 Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et de vérifications empiriques.
-
-Cette extension n'est pas entièrement 
-
-
-TRANSITION VERS LA NOTION DE SYSTEME = QUELLE EST DONC CETTE UNITE QUI MAINTIENT SON ORGANISATION ? OU EST LA FRONTIERE ? DONNER DES EXMPLES CONCRETS.
 
 [Sources]
 - Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, MIT Press, 1948, notamment le chapitre I.
@@ -437,8 +437,9 @@ La première théorie générale des système est proposée dans les années 195
 
 Cette définition peut toutefois être trompeuse parce qu'elle laisse passer que ce sont d'abord des qualités intrinsèque d'un objet qui font ou non de lui un système. Or la qualification de système relève plutôt _d'une manière d'approcher et d'analyser ce objet_.
 
-[EXEMPLE!]
+:::example
 La jalousie dans un couple. Une personne ment ou cache certaines choses. L'autre adopte un comportement jaloux et provoque des disputes à n'en plus finir. Une manière traditionnelle d'aborder ce problème consiste à expliquer ces comportements par la psychologie des protagonistes. De par leur histoire, l'un a adopté un comportement évitant, et l'autre un comportement jaloux. Une approche systèmique s'intéressera aux boucles de rétroaction auto-entretenue par la relation plutôt qu'a la psychologie de ses protagonistes.Une personne devient jalouse ; pour éviter les disputes, son partenaire lui cache certaines choses ou lui ment. Ce mensonge est alors interprété comme une confirmation des soupçons initiaux, ce qui renforce la jalousie. Pour éviter de nouvelles tensions, le partenaire ment à nouveau, alimentant ainsi davantage la méfiance.
+:::
 
 Cet exemple permet de comprendre que le réel n'est pas intrinsèquement systémique ou non-systémique. Mais qu'il est possible d'analyser tout phénomène depuis une approche systémique en le l'analysant comme _l'effet d'une certaine configuration relationnelle_.
 
@@ -454,8 +455,9 @@ Frontières {.kicker}
 
 Cette approche soulève la question des limites que l'on fixe à la définition d'un système. Car, en réalité, tout est relié à tout.
 
-[EXEMPLE!]
+:::example
 Votre organisme peut être pensé comme un système mais il est évidemment en lien avec son environnement : il doit réguler sa température, son taux d'oxygène, ingèrer des aliments et de l'eau et évacuer ce qui doit l'être ... Or ces éléments sont eux-même dépendants de systèmes complexes : la température de l'air dépend - entre autres - de choix de politiques énergétiques américains, qui dépendent eux-mêmes de l'élection présidentielle, qui dépend elle-même du cours du maïs ou de la diffusion du fentanyl.
+:::
 
 Comment tracer alors la frontière entre le dedans et le dehors d'un système ? La définition de ces frontières appartient moins au réel décrit qu'elle ne _relève d'un choix analytique et méthodologique_ : quel problème souhaite-t-on poser et comment souhaitons-nous l'approcher ?
 
@@ -469,23 +471,53 @@ La définition d'un système et de ses frontières dépend donc de la question q
 
 --- 
 ### ~~Dedans~~ / dehors 
+Frontières {.kicker}
+
+--- notes
 
 Le choix de ces frontières est notamment important parce qu'il détermine ce à quoi on s'intéresse et ce que l'on choisit d'ignorer.
 
 Or l'ignorance est un élément constitutif de l'approche cybernétique. L'idée des cybernéticiens est la suivante : le réel est parfois trop complexe pour être analysé ou modélisé car, en dernière analyse, le modéliser impliquerait de le reconstituer en entier.
 
-[EXEMPLE!]
+:::example
 La météo. En théorie, prédire avec précision la météo d'un point donné 24h à l'avance impliquerait de connaître et de modéliser l’ensemble des états pertinents du système atmosphérique : la température, la pression et l’humidité de chaque point de l’atmosphère, les mouvements de l’air, les échanges avec les océans et les sols, le rayonnement solaire, etc. Une description exhaustive du réelle impliquerait de reconstituer l’atmosphère tout entière — jusque dans ses innombrables interactions microscopiques. La tâche est évidemment insurmontable. Mais peu importe. Il est, en pratique, possible de produire des prévisions assez précises en ne retenant que certaines variables, à une certaine échelle, et en corrigeant régulièrement le modèle à partir de nouvelles observations. L’ignorance n’est donc pas ici un simple défaut que l’on devrait progressivement combler. Elle est _constitutive de l’approche_ : le modèle fonctionne précisément parce qu’il ne cherche pas à reproduire le réel dans son intégralité mais qu'il sélectionne quelques relations pertinentes pour répondre à une question donnée : *la température va-t-elle augementer ou baisser demain ?*
+:::
 
 La méconnaissance n'est donc pas nécessairement un _bug_. C'est parfois une _feature_ : une sorte d'ignorance organisée. C'est parce qu'on choisit de laisser activement dans l'ombre certains phénomènes qu'il devient possible de rendre d'autres relations observables, opératoires et prévibles. 
 
+Cela est aussi vrai en dehors la cybernétique ...
+
+---
+
+> Les modes par lesquels nous ignorons une chose sont aussi importants sinon plus que les modes par lesquels nous la connaissons. Il y a des modes du non-savoir - étourderies, inattentions, oublis - qui provoquent maladresse et laideur ; mais il en est d'autres - la distraction enjouée du jeunot de Kleist, la nonchalance enchantée d'un enfant - dont nous ne cessons d'admirer la perfection. La psychanalyse appelle refoulement un mode d'ignorance qui produit souvent des effets néfastes sur la vie de celui qui ignore. Au contraire, nous qualifions de belle une femme dont l'esprit semble ignorer avec bonheur un secret dont son corps est parfaitement au courant. Il y a donc des modes réussis de l'ignorance de soi et la beauté en fait partie. Mieux, il est possible que ce soit justement le mode par lequel nous réussissons à ignorer qui définit le rang de ce que nous réussissons à connaître et que l'articulation d'une zone de connaissance soit la condition - et, en même temps, la pierre de touche - de tout notre savoir. Si cela est vrai, un catalogue raisonné des modes et des espèces de l'ignorance serait tout aussi utile que la classification systématique des sciences sur laquelle se fonde la transmission du savoir. Cependant, tandis que les hommes réfléchissent depuis des siècles sur la manière dont ils peuvent conserver, améliorer et rendre leurs connaissances plus certaines, il manque jusqu'au principe d'un art de l'ignorance. Epistémologie et science de la méthode cherchent et fixent les conditions, les paradigmes et les statuts du savoir, mais sur la manière dont on pourrait articuler une zone de non-connaissance, il n'y a pas de recettes. En effet, articuler une zone de non-savoir, cela ne veut pas dire tout simplement ne pas savoir; il ne s'agit pas seulement d'un manque ou d'un défaut. Cela signifie, au contraire, se tenir dans une relation juste avec une ignorance, permettre qu'une inconnaissance guide et accompagne nos gestes, qu'un mutisme réponde limpidement pour nos propres paroles. Ou, pour recourir à un vocabulaire désuet, que ce qui est pour nous le plus intime et le plus nourrissant, n'ait pas la forme de la science et du dogme, mais de la grâce et du témoignage. L'art de vivre, est, en ce sens, la capacité de se tenir dans une relation harmonique avec ce qui nous échappe.
+
+--- notes
+
+Pourquoi je t'aime ?
+
+Le fait de danser et de suivre un rythme sans savoir pourquoi / sans que la conscience n'intervienne.
+
+La poésie d'un geste ou d'une caresse avec quelqu'un qu'on ne connait encore pas trop.
+
+Une vraie caresse ne dit pas : je sais ce que tu es, ce que tu veux aussi bien que je sais ce que je veux de toi.
+Elle dit : je te touche là où je ne sais pas entièrement ce que tu es.
+Et, plus étrangement encore : je te touche depuis là où je ne sais pas non plus ce que je suis. Depuis là où je ne sais pas vraiment ce que je veux ou ce que je désire.
+
+Dans un monde où il nous sommes enjoints de tout expliciter de ce que nous sommes et voulons - ou de ce que nous croyons être et croyons vouloir - refuser de répondre, refuser de parler, et laisser la question de ce que nous sommes au silence est parfois la seule manière de préserver la poésie du monde.
+
+--- 
+### ~~Dedans~~ / dehors 
+Frontières {.kicker}
+
+--- notes
+
 Car en réalité, choisir d'ignorer le détail de certains éléments n'implique pas nécessairement de ne pouvoir rien en dire. En 1943, Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie ainsi un article intitulé _Behavior, Purpose and Teleology_, dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de leur mode de fonctionnement interne.
 
-[EXEMPLE!]
+:::example
 La visée anti-aérienne. On peut tout à fait décrire le fonctionnement du système en étudiant l'adaptation du mécanisme de visée aux positions successives de l’avion sans nécessairement s'intéresser à la psychologie du pilote ou au fonctionnement mécanique de l'avion. L’avion n’est pas totalement ignoré : il est _réduit à ce qui importe pour le comportement étudié_.
 
-[EXEMPLE!]
 L'impact d'une crise agricole sur le prix des légumes ou des céréales. On peut décrire le système à partir d’une relation relativement simple : une diminution de la récolte réduit l’offre disponible ; cette modification de l’offre produit une variation des prix. Il n'est pas forcément nécessaire, pour prévoir l'impact de cette crise sur les prix, de s'intéresser à la psychologie des agriculteurs, aux anticipations des traders, aux stratégies des distributeurs ou aux causes précises de la mauvaise récolte. Tous ces éléments peuvent être pertinents pour aborder d’autres questions, mais peuvent complexifier inutilement la prédiction de l'impact de la crise sur les prix.
+:::
 
 On parle alors d'une approche par _boite noire_, en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
@@ -501,8 +533,9 @@ Considérer un système comme une boîte noire ne signifie pas que son fonctionn
 
 L'approche par boite noire n'implique d'ailleurs pas de se désinteresser définitivement de l'intérieur d'un système. Lorsque cela est pertinent, on peut décider d'ouvrir la boite noire et d'analyser les éléments qui la composent. Ces éléments deviennent alors, eux-mêmes, des boites noire de niveau inférieur. L'approche par boite noire est donc récursive.
 
-[EXEMPLE!]
+:::example
 Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteur de témpérature ou si le chauffage repose sur une chaudière au gaz ou une chaudière au fioul. Il lui importe seulement de savoir comment ces éléments sont réliés entre eux et de déterminer comment ces relations peuvent être organisées pour assurer la régulation de la température. En revanche, s'il souhaite optimiser la consommation énergétique, il lui faudra sans doute entrer de le détail de ces éléments pour analyser les différences de dynamiques thermiques entre un chauffage éléctrique, une chauidère au gaz ou une chaudière au fioul.
+:::
 
 [Sources]
 - Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », *Philosophy of Science*, 10(1), 1943, p. 18–24, https://doi.org/10.1086/286788.
@@ -511,6 +544,8 @@ Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteu
 
 ---
 ### Une finalité sans intention
+
+--- notes 
 
 Dès lors que l’on décrit un système à partir de son comportement, un phénomène nouveau apparaît : certains comportements semblent orientés vers une fin, alors même qu’aucune intention consciente ne les commande.
 
@@ -569,7 +604,7 @@ Socialisme ou barbarie {.kicker}
 
 --- notes
 
-La question de l'auto-organisation est la suivante : par quel prmécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
+La question de l'auto-organisation est la suivante : par quel mécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
 
 L'important ici est de comprendre que l'absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir.
 
@@ -587,7 +622,11 @@ L’auto-organisation est souvent présentée comme l’opposé du commandement 
 
 Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut pourtant exercer un pouvoir considérable en déterminant les possibilités d’action, les informations disponibles et les résultats qui seront valorisés.
 
-EXAMPLE ?
+:::example
+**Les Community Notes de Meta.** Depuis avril 2025, aux États-Unis, Meta confie à des contributeurs la rédaction et l’évaluation de notes ajoutées aux publications de Facebook, Instagram et Threads. Une note n’apparaît que si le système détecte un accord entre des personnes qui ont habituellement des points de vue divergents. Aucun modérateur central ne rédige donc le verdict dans chaque cas.
+
+Le jugement est distribué, mais le cadre ne l’est pas : Meta décide qui peut contribuer, quels contenus peuvent recevoir une note, comment l’algorithme reconnaît un accord et quels effets la note produit. La plateforme ne commande pas directement le résultat de chaque évaluation ; elle gouverne l’environnement technique dans lequel ce résultat collectif peut apparaître.
+:::
 
 L’auto-organisation invite ainsi à déplacer l’analyse de l’ordre collectif. Celui-ci ne se trouve pas toujours dans les intentions explicites des acteurs, mais dans la manière dont leurs actions s’agrègent et produisent des effets qui leur échappent souvent. ENVIRONNEMENT / INFRASTRUCTURE Des décisions individuelles peuvent donc contribuer à une dynamique collective que personne n’a directement voulue ni planifiée.
 
@@ -598,6 +637,7 @@ Or cela peut  être particulièrement pertinent pour repenser politiquement un c
 [Sources]
 - W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
 - Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
+- Meta, « Testing Begins for Community Notes on Facebook, Instagram and Threads », 13 mars 2025, mise à jour le 7 avril 2025, https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/.
 [/Sources]
 
 ---
@@ -628,7 +668,7 @@ Ce modèle est dramatiquement réducteur. Le problème de la ségrégation racia
 
 **Les agents sont symétriques, les gens non.** Les enquêtes (Farley, Krysan) montrent que les répondants noirs préfèrent largement les quartiers mixtes, les blancs ont un seuil de tolérance beaucoup plus bas. Le modèle homogénéise ce qui est justement asymétrique.
 
-**Empiriquement, la ségrégation américaine n'est pas émergente.** Elle a été produite institutionnellement : redlining (classement discriminatoire de certains quartiers comme « à risque », entraînant notamment le refus de prêts immobilier), covenants raciaux (clauses raciales restrictives interdisant la vente ou la location d’un logement à des personnes de certains groupes raciaux), blockbusting (pratique consistant à provoquer une panique raciale pour inciter des propriétaires blancs à vendre à bas prix, puis revendre les logements plus cher), refus de prêts, urban renewal (rénovation urbaine — souvent, historiquement, la démolition de quartiers populaires et le déplacement de leurs habitants), zonage exclusif (règles d’urbanisme qui limitent certains types de logements ou d’habitants et excluent indirectement les ménages modestes ou certains groupes sociaux), etc.  L'explcation de Schelling efface un siècle de politique publique délibérée.
+**Empiriquement, la ségrégation américaine n'est pas émergente.** Elle a été produite institutionnellement : redlining (classement discriminatoire de certains quartiers comme « à risque », entraînant notamment le refus de prêts immobilier), covenants raciaux (clauses raciales restrictives interdisant la vente ou la location d’un logement à des personnes de certains groupes raciaux), blockbusting (pratique consistant à provoquer une panique raciale pour inciter des propriétaires blancs à vendre à bas prix, puis revendre les logements plus cher), refus de prêts, urban renewal (rénovation urbaine — souvent, historiquement, la démolition de quartiers populaires et le déplacement de leurs habitants), zonage exclusif (règles d’urbanisme qui limitent certains types de logements ou d’habitants et excluent indirectement les ménages modestes ou certains groupes sociaux), etc.  L'explication de Schelling efface un siècle de politique publique délibérée.
 :::
 
 Il ne faut donc pas tenir le modèle de Schelling pour une explication convaincante de la ségrégation raciale. Il n'est reste pas moins que ce modèle un phénomène politiquement intéressant : une préférence locale relativement faible peut produire un effet collectif beaucoup plus radical. Il ne suffit donc pas d’examiner les intentions individuelles pour comprendre la configuration globale : il faut aussi observer les interactions entre les choix, les places disponibles et la dynamique des déplacements.

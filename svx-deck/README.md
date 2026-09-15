@@ -71,7 +71,7 @@ export default {
 } satisfies DeckConfig;
 ```
 
-Defaults need not be repeated. A configuration file is useful for custom separators or a different source file. Generated files live in `.svx-deck/` and are never edited by hand.
+Defaults need not be repeated. A configuration file is useful for custom separators or a different source file. Generated files live in `.svx-deck.nosync/` and are never edited by hand. The `.nosync` suffix prevents cloud synchronization from duplicating volatile runtime files.
 
 ## Slide syntax
 

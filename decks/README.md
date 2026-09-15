@@ -1,6 +1,6 @@
 # Deck authoring
 
-Each subdirectory is a standalone deck, with `deck.svx`, an optional `deck.config.ts`, `static/` media and optional `components/`. The framework generates its application under `.svx-deck/`; no hand-maintained SvelteKit app is required.
+Each subdirectory is a standalone deck, with `deck.svx`, an optional `deck.config.ts`, `static/` media and optional `components/`. The framework generates its application under `.svx-deck.nosync/`; no hand-maintained SvelteKit app is required.
 
 ```sh
 pnpm deck dev decks/history-1
