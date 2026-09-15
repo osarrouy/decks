@@ -27,6 +27,7 @@ The root `package.json` selects the local `@dg/ui` checkout through `pnpm.overri
 Start an existing deck directly from the workspace root:
 
 ```sh
+pnpm dev:blockchain
 pnpm dev:demo
 pnpm dev:economics
 pnpm dev:history-1

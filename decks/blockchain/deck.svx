@@ -1,0 +1,2184 @@
+---
+title: Blockchain 101
+theme: gallery
+---
+
+<!-- slide: id="blockchain-001-blockchain-101" title="blockchain 101" layout="cover" -->
+# blockchain 101
+olivier.sarrouy@univ-rennes2.fr {.kicker}
+
+--- notes
+
+↦ Pas de réseaux sociaux.
+
+---
+<!-- slide: id="blockchain-002-https-etudiants-univ-rennes2-fr-vie-etudiante-signalem" title="https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences" layout="center" -->
+###### https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences
+##### vss-sse@univ-rennes.fr
+
+---
+<!-- slide: id="blockchain-003-wtf" title="WTF" layout="center" -->
+## WTF
+
+--- notes
+
+↦ Non pas spéculer sur la valeur des crypto-monnaies, non pas fournir des conseils d'investissements, etc ... mais :
+
+1. Essayer de vous expliquer - au moins superficiellement - ce qu'est une blockchain, comment cela fonctionne, etc.
+
+2. Essayer de penser les rationalités politiques qui se cachent derrière les blockchains.
+
+↦ Les ingénieurs - en particulier dans le champ des cryptos - ne sont pas « bêtement » ingénieurs : ils ne se contentent pas de résoudre des problèmes techniques.
+
+↦ Leur activité d'ingénieur est le plus souvent motivée par une vision politique : parfois de manière très claire et explicite, parfois de façon plus implicite.
+
+↦ En particulier par une certaine idée de ce que pourrait être un art juste de gouverner, nourri par une franche méfiance des institutions et des états.
+
+↦ Le but de la plupart de ces ingénieurs est de décentraliser les institutions en les remplaçant par des dispositifs crypto-économiques.
+
+↦ En est même né un champ d’expertise nouveaux : le « mechanism design ».
+
+↦ Le principe du « mechanism design » est de « programmer » des comportements humains par la conception et l'implémentation de mécanismes d'incitation économique.
+
+↦ Ex. DAI : comment orienter les comportements d'émission d'une monnaie pour assurer la stabilité de sa valeur.
+
+↦ Ex. Comment concevoir un mécanisme de prise de décision collective qui soit simultanément juste et efficace ?
+
+↦ Ex. Comment rémunérer les utilisateurs d'un protocole d'une manière qui soit économiquement soutenable ?
+
+↦ L’objectif de ce cours va être de vous donner à éprouver ces questions et la manière dont l'écosystème blockchain les conçoit  - et nous verrons qu'il s'agit là d'une manière bien particulière de penser le politique et l'art de gouverner les foules.
+
+↦ Le cours alternera entre la présentation de cas d'usage concrets de la blockchain - les crypto-monnaies, évidemment, mais aussi les NFTs, les problématiques de gouvernance, etc. - et l'analyse des rationalités politiques qui les nourrissent.
+
+---
+<!-- slide: id="blockchain-004-plan" title="plan" -->
+## plan
+
+Histoire
+
+Money ?
+
+Technique
+
+Pratique
+
+Gouvernance
+
+NFT
+
+---
+<!-- slide: id="blockchain-005-examen" title="examen" -->
+## examen
+
+Assidus : QCM et mini-dissertation
+Dispensés : dossier
+
+---
+<!-- slide: id="blockchain-006-bitcoin" title="Bitcoin" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/7f09ac927b822cc89f9e4167c82290273f747a31.mp4" alt="Bitcoin" video={true} darken={true}>
+  <h2>Bitcoin</h2>
+</BackgroundMedia>
+
+---
+<!-- slide: id="blockchain-007-bitcoin-a-peer-to-peer-electronic-cash-system" title="Bitcoin: A Peer-to-Peer Electronic Cash System" layout="center" -->
+ > *Bitcoin: A Peer-to-Peer Electronic Cash System*
+┄
+Satoshi Nakamoto, 2008 {.kicker}
+
+--- notes
+
+En novembre 2008, un certain Satoshi Nakamoto partage un document technique intitulé *Bitcoin: A Peer-to-Peer Electronic Cash System* sur une liste de diffusion[^1].
+
+Ce document décrit le fonctionnement d'une **monnaie numérique pair-à-pair**: le Bitcoin.
+
+Nous allons revenir, d’ici peu, sur ce que cela signifie exactement. Mais d’abord, quelques éléments de contexte.
+
+[^1]: https://www.mail-archive.com/cryptography@metzdowd.com/msg09959.html
+
+---
+<!-- slide: id="blockchain-008-satoshi-nakamoto" title="Satoshi Nakamoto" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/photo-1662841256780-d2572552bbd5.jpg" alt="Satoshi Nakamoto" video={false} darken={true}>
+  <h2>Satoshi Nakamoto</h2>
+</BackgroundMedia>
+
+--- notes
+
+Photo by Lucas de Moura on [Unsplash](https://unsplash.com/photos/a-person-wearing-a-mask-KerlUtk582w)
+
+
+
+À ce jour personne ne connaît l'identité réelle de Satoshi Nakamoto : homme, femme, collectif, etc. ?
+
+Cette question suscite beaucoup de spéculations et de fantasmes (c.f. infra). Toutefois, nous n'en discuterons pas.
+
+Pourquoi ? Parce que l'anonymat de Satoshi Nakamoto, ou l'énigme en quoi consiste son identité, ont moins d'intérêt que l'intention qui anime ce choix de l'anonymat.
+
+Pourquoi Satoshi a fait le choix de rester anonyme ? Et pourquoi celui-ci - ou celle-ci - a-t-elle cessé de donner signe de vie peu après la naissance du Bitcoin - bien avant, en tout cas que le Bitcoin vaille ce qu'il vaut aujourd'hui ?
+
+Il n'est pas improbable que cette disparition soit intentionnelle et vise à rendre le projet à une forme d'appropriation collective affranchie de l'autorité de son créateur.
+
+Le code source du Bitcoin est aujourd'hui maintenu par un collectif plus ou moins informel de développeurs - si bien que le Bitcoin, comme technologie, n'appartient plus à personne.
+
+Nous respecterons donc la probable volonté de Satoshi et laisserons la question de son identité au silence.
+
+---
+<!-- slide: id="blockchain-009-cypherpunk" title="cypherpunk" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/172f941a3892b7ac602bd77b7f411a15035ceb49.mp4" alt="cypherpunk" video={true} darken={false}>
+  <h2>cypherpunk</h2>
+</BackgroundMedia>
+
+--- notes
+
+La liste de diffusion à laquelle est adressé ce mail est proche du mouvement *cypherpunk*.
+
+cypher : chiffrement | punk : weirdo.
+
+Le nom cypherpunk est aussi une référence au courant littéraire *cyberpunk* : William Gibson, Bruce Sterling, etc. Qui, dans la lignée d’auteurs comme Philip K. Dick, imagine des sociétés dominées par la technologie et les réseaux, traversées par des forces de résistance souterraines.
+
+Le mouvement cypherpunk naît au début des années 1990 autour d’une liste de diffusion électronique, fondée par Timothy C. May, Eric Hughes et John Gilmore, également cofondateur de l’*Electronic Frontier Foundation*.
+
+Il s’agit alors d’un espace de discussion où circulent des milliers de messages techniques, politiques et philosophiques.
+
+L’un des textes fondateurs est le *Crypto Anarchist Manifesto* (1988) de Timothy May, suivi en 1993 par A Cypherpunk’s Manifesto d’Eric Hughes, qui affirme :
+
+> « Privacy is necessary for an open society in the electronic age. »
+
+Le mouvement cypherpunk est un mouvement à la fois philosophique et technique, d’inspiration libertaire et / ou libertarienne, qui :
+
+1.	manifestent une défiance envers l’État et, plus généralement, envers toute forme d’organisation trop centralisée ;
+
+2.	défendent la protection de la vie privée par le recours à la cryptographie ;
+
+3.	développent des alternatives technologiques : logiciels de chiffrement des communications (ex. PGP), réseaux pair-à-pair, remailers anonymes, prémices des darknets, etc.
+
+Il ne s’agit pas seulement de théoriser, mais de produire des outils concrets capables de mettre en pratique ces idéaux. Leur mot d’ordre est clair : « Cypherpunks write code. »
+
+Dès les années 1990, les cypherpunks affrontent les gouvernements dans ce qu’on a appelé les Crypto Wars : les États-Unis tentaient alors de limiter, voire d’interdire, l’usage civil de la cryptographie forte, considérée comme une arme stratégique.
+
+c.f. le t-shirt avec le code de PGP, considéré comme une arme
+
+Les cypherpunks militent au contraire pour en faire un bien public, accessible à tous. Cette bataille culturelle et juridique aboutit progressivement à la légalisation et à la diffusion du chiffrement dans les usages quotidiens d’Internet - paradoxalement avec le soutien des premières plateforme d’e-commerce, pour défendre le commerce en ligne.
+
+Ainsi, les cypherpunks prolongent une partie des utopies initiales d’Internet, issues de la contre-culture hippie et hacker des années 1970. Tandis qu’une fraction de cette culture est devenue mainstream (startups, plateformes, capitalisme numérique), une autre s’est radicalisée dans la voie cypherpunk, plaçant la cryptographie et la décentralisation au cœur de son projet politique.
+
+L’héritage cypherpunk se retrouve plus tard dans des projets comme Wikileaks (Julian Assange a lui-même fréquenté ce milieu), dans l’usage de réseaux anonymes comme Tor, ou encore dans les crypto-monnaies. Le Bitcoin, lancé en 2008 par Satoshi Nakamoto, s’inscrit explicitement dans cette filiation : celle d’une technologie destinée à court-circuiter les institutions centralisées et à redonner du pouvoir aux individus.
+
+---
+<!-- slide: id="blockchain-010-video-histoire-des-cypherpunks" title="Vidéo : histoire des cypherpunks" layout="center" -->
+https://www.youtube.com/watch?v=9vM0oIEhMag&list=PLDftu3L1GcexhTUBL434mDuZcoVvVEUlH&index=2
+
+---
+<!-- slide: id="blockchain-012-la-crise-des-subprimes" title="La crise des subprimes" layout="center" -->
+## La crise des subprimes
+2007 - 2008 {.kicker}
+
+--- notes
+
+Re-ecrire lintro a partir de cet article
+
+https://shs.cairn.info/hayek--9782841869060-page-19?lang=fr
+
+
+Crise financière qui a touché le secteur des prêts hypothécaires à risque.
+
+Les subprimes constituent des crédits immobiliers - souvent à taux variables - accordés, un peu trop facilement, à des particuliers peu solvables dans un contexte de bulle immobilières.
+
+Ces crédits immobiliers sont le plus souvent couverts par des produits financiers appelés *Credit Default Swap* ou CDS.
+
+Un CDS constituent une sorte de contrat de protection financière : si un ménage fait défaut sur son crédit, la banque peut se tourner vers l'institution auprès de laquelle elle a acquis un CDS pour couvrir ses pertes.
+
+Le CDS constitue un produit financier. L'institution l'ayant émis peut le revendre à d'autres institutions - comme on échangerait des actions.
+
+Souvent, ces CDS sont inclus dans d'autres produits financiers dérivés, si bien que plus personne ne sait plus exactement où se trouve le risque de crédit - c'est-à-dire qui serait supposé payer en cas d'effondrement du marché du crédit immobilier.
+
+Nombre d'institutions finissent même par posséder simultanément des crédits immobiliers et des CDS.
+
+Or la plupart des ménages auxquels sont accordés des crédits immobiliers à cette époque sont insolvables. Pourtant les CDS - Credit Default Swap - continuent d’être notés comme des actifs AAA.
+
+En 2007 la bulle immobilière s'effondre : le marché s'écrase et les défauts de crédit se multiplient.
+
+De nombreuses institutions financières se retrouvent en faillite.
+
+c.f. Inside Job (2010) et The Big Short (2015).
+
+Le problème est que si les institutions financières - et en particulier les banques - font faillite, tout le monde fait faillite.
+
+L’État vole donc au secours des banques et fait tourner la planche à billet ...
+
+... au risque de l’inflation.
+
+---
+<!-- slide: id="blockchain-013-l-inflation" title="L&#x27;inflation" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/photo-1651259129029-6d1b57cf0f0a.jpg" alt="L&#x27;inflation" video={false} darken={true}>
+  <h2>L&#x27;inflation</h2>
+</BackgroundMedia>
+
+--- notes
+
+↦ L'inflation traduit baisse de la « valeur » d’une monnaie - ou, ce qui constitue une manière inversée de décrire le même problème - une augmentation générale des prix.
+
+↦ Ex. République de Weimar : inflation liée au remboursement de la dette actée par le traité de Versailles.
+
+↦ Ex. Argentine. Entre 50 et 100% d’inflation annuelle depuis plusieurs années - la valeur de la monnaie est divisée par deux chaque année.
+
+↦ Ex. Inflation actuelle.
+
+↦ Il existe plusieurs causes à l’inflation :
+
+- Évènements extérieurs : énergie, agriculture, etc.
+
+- Cycles internes liés à une augmentation artificielle de la masse monétaire : s’il y a « trop » de monnaie en circulation, la monnaie perd de sa valeur.
+
+↦ Pour comprendre d’où provient l’inflation il faut donc comprendre d’où vient la monnaie : comment celle-ci est mise en circulation ?
+
+---
+<!-- slide: id="blockchain-014-la-creation-monetaire" title="La création monétaire" layout="center" -->
+## La création monétaire
+
+--- notes
+
+↦ C'est ce qu'on appelle le problème de la création monétaire.
+
+↦ Comment l'argent est créé ?
+
+↦ En schématisant les choses, l'argent est créé par une institution particulière appelée une banque centrale : il en existe une pour la zone Euro (BCE), une pour les US (Fed), une pour le Yen, etc.
+
+↦ Cette institution crée de la monnaie - imprimer des billets et frapper des pièces - et la prête aux banques à des taux évolutifs appelés *taux directeurs* - version simplifiée, en réalité, ces opérations passent effectivement par les systèmes de paiement interbancaires (ex. TARGET2 en zone euro) et les chambres de compensation. En gros, les taux directeurs fixent les conditions dans lesquelles les banques équilibrent leurs comptes en fin de journée.
+
+↦ C'est par ce mécanisme que la monnaie est originellement mise en circulation.
+
+↦ Mais ce n'est là que la partie immergée de la création monétaire. Pourquoi ?
+
+↦ Car l'argent ainsi emprunté à la banque centrale va à son tour pouvoir être prêté par la banque à l'un de ses clients.
+
+↦ Notez que par le miracle du crédit, la banque possède toujours l'argent qu'elle a prêté sous la forme d'une créance - qu'elle peut revendre, échanger, etc.
+
+↦ Or, que va faire le client ? Placer son argent à la banque.
+
+↦ Autrement dit, par le mécanisme du crédit, les banques ont les moyens de dédoubler - en quelque sorte - l'argent.
+
+↦ L'argent qu'elles prêtent, elles détiennent en effet simultanément sous la forme d'un crédit et sous la forme d'un dépôt.
+
+↦ Le dépôt ainsi replacé à la banque va pouvoir être re-prêté à un autre client, qui va le re-placer à la banque, etc.
+
+↦ Évidemment, ce cycle du crédit est encadré. La banque ne peut pas prêter l'ensemble des dépôts qu'elle détient. Elle doit conserver une réserve minimum, et elle peut se refinancer auprès de la banque centrale pour le faire, etc.
+
+↦ Ce qui importe ici est de comprendre le principe de ce cycle de la création monétaire - pas d'en connaître le détail.
+
+↦ En comprenant comment fonctionne ce cycle on peut aussi comprendre comment le contrôler.
+
+↦ Le principal mécanisme pour agir sur les dynamiques de ce cycle du crédit est l'ajustement, par la banque centrale, des taux directeurs.
+
+↦ Plus les taux directeurs sont faibles, plus le crédit est encouragé, et plus l’inflation est grande - et inversement.
+
+↦ Pourquoi, alors, ne pas imposer en permanence des taux très élevés ? Parce qu'il importe parfois de maintenir des taux bas pour favoriser le crédit, et donc l’investissement, et ainsi « relancer » l'économie.
+
+↦ Tout le travail d’une banque centrale est donc de trouver un équilibre entre ces deux « missions » parfois « contradictoires ».
+
+↦ Le piège, c’est que le lien entre les deux est très distendu.
+
+↦ Montrer qu'en réalité une montagne de valeur est dérivée de ce processus initial : https://www.visualcapitalist.com/all-of-the-worlds-money-and-markets-in-one-visualization-2020/
+
+Les agrégats monétaires (M1, M2, M3…) sont des indicateurs utilisés par les banques centrales pour mesurer la quantité de monnaie en circulation, selon leur degré de liquidité (facilité avec laquelle elles peuvent être utilisées comme moyen de paiement).
+
+
+🔹 M1 : la monnaie la plus liquide
+
+M0 (ou “base monétaire”) : monnaie émise directement par la banque centrale (billets + réserves des banques auprès de la banque centrale).
+
+M1 regroupe :
+les billets et pièces en circulation (M0)
+les dépôts à vue (comptes courants immédiatement utilisables).
+
+👉 Autrement dit : c’est la monnaie directement disponible pour effectuer des paiements immédiatement
+
+M2 : M1 + placements à court terme
+
+M2 inclut :
+M1,
+les dépôts à terme d’une durée ≤ 2 ans (ex. comptes à terme),
+les dépôts remboursables avec préavis ≤ 3 mois (ex. certains livrets).
+
+Ce sont des formes de monnaie un peu moins liquides que M1 (tu ne paies pas ton café avec ton compte à terme), mais qui peuvent rapidement être transformées en moyens de paiement.
+
+M3 = M2 + instruments encore moins liquides : pensions livrées (repo), parts de fonds monétaires, titres de créance ≤ 2 ans, etc.
+
+↦ Or Satoshi Nakamoto - et les cypherpunk de manière générale - n’ont pas confiance en la capacité des banques centrales - et en particulier de la Fed - à assurer cette mission.
+
+↦ Ils considèrent que les multiples plans de relance mis en oeuvre vouent les principales monnaies fiduciaires à une inflation destructrice (ce sentiment est d'ailleurs toujours très présent dans la communauté Bitcoin et crypto).
+
+---
+<!-- slide: id="blockchain-015-leur-volonte-est-de-proposer-une-monnaie-deflationnist" title="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" layout="center" -->
+<img src="/assets/Clipboard 1.png" alt="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire une monnaie dont la quantité mise en circulation augmente moins vite que l’usage.
+
+↦ C'est la raison pour laquelle la politique d'émission du bitcoin est minutieusement contrôlée.
+
+↦ Le nombre de bitcoins en circulation augmente lentement block après block, transaction après transaction (nous verrons plus tard comment et pourquoi ces bitcoins sont émis).
+
+↦ Ce nombre atteindra un maximum de 21 millions de Bitcoins mis en circulation vers 2140. Après cette date, plus aucun bitcoin ne sera émis.
+
+↦ Cette mise en circulation est décroissante : c’est le halving.
+
+↦ Tous les 4 ans, la quantité de bitcoin lors du minage de chaque bloc est divisée par deux.
+
+---
+<!-- slide: id="blockchain-016-la-politique-de-nakamoto" title="La politique de Nakamoto" layout="center" -->
+## La politique de Nakamoto
+La politique sans politique {.kicker}
+
+--- notes
+
+La proposition de Satoshi Nakamoto constitue un geste éminemment politique. Mais un geste qui, paradoxalement, tient sa puissance politique de se déployer en dehors du théâtre politique.
+
+L’entreprise est pourtant ambitieuse. Ce qui est visé ici n’est pas le simple aménagement des règles de gouvernement, ni même la conquête d’un pouvoir reconnu. Le geste de Nakamoto est simultanément plus discret et plus radical. Il s’attaque au socle silencieux sur lequel repose tout exercice de gouvernement moderne : la monnaie et les infrastructures qui en garantissent la circulation.
+
+La méthode peut surprendre. Elle ne s’inscrit pas, en effet, dans les procédures traditionnelles de légitimation : ni élection, ni nomination, ni même confrontation parlementaire. Là où l’action politique classique revendique sa visibilité, Nakamoto agit par soustraction. Il ne demande pas la reconnaissance du pouvoir : il fabrique une autre scène, une autre matérialité, où ce pouvoir est rendu superflu.
+
+C’est ici une politique par l’infrastructure qui se dessine. Une politique qui ne procède pas de conflits discursifs mais de choix architecturaux. Une politique dont la grâce tient à ce qu’elle n’institue rien – mais, au contraire, destitue tout : non pas corriger l’État, mais le contourner ; non pas restaurer la confiance, mais éluder sa nécessité. La proposition de Nakamoto dessine ainsi un pouvoir sans souverain, une souveraineté sans parole, une parole sans intentionnalité.
+
+Ce geste n’est pas sans mémoire. Il prolonge une tradition souterraine, forgée dans les années 1990 : celle des cypherpunks, pour qui le politique ne s’arrache pas dans la rue mais s’écrit dans le code. Cypherpunks write code : telle est la maxime. Non pas attendre que l’État protège la vie privée, mais coder les outils qui la rendent inviolable ; non pas réclamer une monnaie juste, mais concevoir une architecture qui se substitue au crédit souverain. Ici se révèle la stratégie libertarienne : déplacer le champ du politique hors de ses institutions, du parlement au protocole, de la loi au code.
+
+Une telle orientation, bien sûr, implique d’anticiper les réactions de l’État, toujours capable de réprimer, de censurer, d’enfermer. D’où la nécessité d’une structure radicalement décentralisée : un réseau sans tête, sans centre, sans architecte identifiable, donc sans cible assignable.
+
+
+METTTRE UN SCREENSHOT DU PREMIER BLOC AVEC LE TITRE DU JOURNAL SUR LE BAILOUT DES BANQUES
+
+---
+<!-- slide: id="blockchain-017-monnaie" title="monnaie" layout="center" -->
+### monnaie
+### numérique
+### pair-à-pair
+
+--- notes
+
+Revenons à notre objet. Qu’est-ce que le Bitcoin, et comment fonctionne-t-il ?
+
+Le Bitcoin une monnaie numérique, pair-à-pair - c’est-à-dire décentralisée.
+
+**Monnaie.** C’est là, sans doute, le problème le plus délicat et le plus métaphysique. Qu’est-ce qui caractérise une monnaie ? Pourquoi lui attribuons-nous une valeur et nous en servons comme moyen d’échange ? Nous aborderons ces problèmes plus tard.
+
+**Numérique.** L’ensemble des transactions en bitcoin est conduit à travers un réseau de dispositifs informatiques.
+
+**Pair-à-pair.** L’ensemble des transactions en bitcoin est diffusé et validé de manière horizontale, sans intervention d'aucune autorité centralisée. Tous les nœuds du réseau y ont le même poids.
+
+---
+<!-- slide: id="blockchain-018-le-bitcoin-repose-sur-un-reseau-de-nuds" title="Le Bitcoin repose sur un réseau de nœuds" layout="center" -->
+<img src="/assets/5dbba16ef3ba5ec99f83d4de00c95cb557ec940d.png" alt="Le Bitcoin repose sur un réseau de nœuds" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Le Bitcoin repose sur un réseau de **nœuds**.
+
+Chaque nœud exécute un programme spécifique lui permettant de communiquer avec tous les autres nœuds pour maintenir ensemble un historique complet de toutes les transactions réalisées en bitcoin depuis l’origine du réseau.
+
+Chacun est libre d’installer ce programme sur la machine de son choix et d’intégrer ainsi le réseau. Ce caractère ouvert et décentralisé garantit la robustesse du système. Cette architecture ne requiert aucun centre de contrôle, ni aucune autorité particulière.
+
+Le Bitcoin peut ainsi être rapproché des protocoles de partage de fichier en P2P. Comme dans le cas du protocole BitTorrent, chaque participant est à la fois consommateur et contributeur.
+
+La différence tient essentiellement au fait que, en lieu et place de films ou d’album de musique, les nœuds Bitcoin partagent une base de données constituée de l’ensemble des transactions exécutées sur le réseau, que cette base de données est susceptible d’intégrer à chaque instant de nouvelles transactions, et que ces celles-ci doivent être collectivement authentifiées et validées.
+
+---
+<!-- slide: id="blockchain-019-registre-des-transactions" title="Registre des transactions" -->
+| Emetteur | Destinataire | Valeur |
+| :------- | :----------- | :----- |
+| Alice    | Bob          | 2 ₿    |
+| Bob      | Charlie      | 1.5 ₿  |
+| Bob      | Damian       | 0.4 ₿  |
+
+--- notes
+
+La base de données partagée et validée par les nœuds du réseau y ressemble essentiellement au tableau ci-dessus - même si nous verrons plus loin que les données y sont en fait structurées très différemment.
+
+Un tel principe pourrait paraître bien simpliste pour un réseau sécurisant plus de $2T. Comme nous l’avons vu précédemment lorsque nous avons évoqué la monnaie scripturale, le système bancaire traditionnel fonctionne pourtant  de manière analogue.
+
+Notons que Satoshi Nakamoto n’est pas le premier à s’être efforcé de concevoir une monnaie numérique pair-à-pair sur un tel principe.
+
+---
+<!-- slide: id="blockchain-020-b-money" title="b-money" layout="center" -->
+### b-money
+Wei Dai, 1998 {.kicker}
+
+--- notes
+
+La première tentative reconnue est attribuée à Wei Dai en 1998.
+
+---
+<!-- slide: id="blockchain-021-bitgold" title="bitgold" layout="center" -->
+### bitgold
+Nick Szabo, 2005 {.kicker}
+
+--- notes
+
+La seconde à Nick Szabo, avec son projet Bit Gold. L’idée apparaît dès 1998, mais Szabo n’en publie une description plus complète qu’en 2005 sur son blog *Unenumerated*.
+
+Ces deux propositions échouent toutefois à développer des solutions robustes aux problèmes techniques soulevés par la mise en oeuvre d’un tel dispositif. Elle ne seront donc jamais implémentées.
+
+Elles dessinent néanmoins des pistes dont certaines se retrouveront presque à l’identique dans Bitcoin. On comprend alors pourquoi tant soupçonnent que Nakamoto puisse être Dai, ou Szabo lui-même. La filiation est trop nette, la continuité trop marquée.
+
+Bitcoin n’apparaît pas, en ce sens, comme une rupture absolue, mais comme l’aboutissement d’un long travail d’élaboration d’un champ de questions et de problèmes que Satoshi Nakomoto
+
+La contribution de Satoshi Nakamoto consistera principalement à composer divers propositions pour répondre, enfin, à un problème décisif : dans un espace totalement distribué, sans centre de décision, comment produire du consensus ? comment établir une vérité commune, stable et partagée, sans autorité instituée ?
+
+C’est ce qu’on appelle le problème du consensus distribué.
+
+---
+<!-- slide: id="blockchain-022-consensus" title="Consensus" layout="center" -->
+## Consensus
+
+--- notes
+
+La question du consensus est au centre du tout système monétaire pair-à-pair. Comment obtenir un accord sur le contenu de la base de données - c’est-à-dire un accord sur le solde de chacun.
+
+Dans un système centralisé, ce consensus est garanti par une autorité de confiance. C’est la banque, par exemple, qui tient les comptes et dont la parole fait foi : si elle affirme que vous disposez de telle somme, cela est tenu pour vrai. On parle alors de **tiers de confiance**.
+
+Mais dans un réseau sans tiers de confiance, les difficultés se multiplient. Les données peuvent se perdre en chemin. Elles peuvent arriver dans un ordre différent selon les nœuds. Certains participants peuvent même chercher à tromper le système pour s’enrichir artificiellement.
+
+Comment, dès lors, parvenir à un consensus distribué – c’est-à-dire à un accord collectif – sans s’appuyer sur aucune autorité centrale ?
+
+Bien avant Nakamoto, de nombreuses recherches avaient tenté de résoudre cette énigme – la littérature sur le sujet a d’ailleurs été largement revisitée depuis l’essor des crypto-monnaies. Mais aucune des solutions proposées jusque-là n’avait réussi à s’imposer comme robuste ou pleinement satisfaisante.
+
+C’est précisément à ce problème que répond l’invention de Satoshi Nakamoto. La technologie dite de la **blockchain** propose un mécanisme inédit pour instaurer, dans un réseau distribué, une vérité commune sur l’état des comptes.
+
+---
+<!-- slide: id="blockchain-023-blockchain" title="Blockchain" layout="center" -->
+## Blockchain
+chaîne de blocs {.kicker}
+
+--- notes
+
+↦ Une solution pour établir un consensus dans un système distribué est de laisser un ou plusieurs nœuds proposer une solution à ce consensus - *i.e.* proposer une version de l’historique des transactions à un instant t - et laisser les autres nœuds décider à quelle solutions ils choisissent de se raccrocher.
+
+↦ Comment ça fonctionne concrètement ?
+
+↦ Les utilisateurs diffusent les transactions qu'ils veulent exécuter au réseau. Par exemple : moi, Alice, souhaite envoyer 1 bitcoin à Bob.
+
+↦ Le réseau se charge de diffuser, de proche en proche, cette information à l'ensemble de ses nœuds.
+
+↦ Certains nœuds particuliers, appelés *mineurs*, assemblent ces transactions dans des blocs, pour des raisons d’efficacité - à hauteur d’un bloc toutes les dix minutes environ.
+
+↦ Les mineurs s'efforcent alors de résoudre une sorte de petit puzzle mathématique propre à chaque bloc.
+
+↦ On parle du **minage** d’un bloc.
+
+↦ Le premier mineur à avoir trouvé la solution à ce puzzle diffuse le bloc ainsi validé à l'ensemble du réseau.
+
+↦ Les autres nœuds du réseau peuvent alors juger de la validité de ce bloc au regard des informations en leur possession.
+
+↦  Si le bloc proposé leur semble valide, ils l’intègrent à leur propre historique. Autrement, ils l'excluent comme s’il n’avait jamais existé.
+
+↦ Le nœud ayant miné le bloc se voit par ailleurs récompensé par des bitcoins fraichement émis.
+
+↦ C'est de cette manière que la création du Bitcoin est mise en oeuvre (c.f. supra).
+
+---
+<!-- slide: id="blockchain-024-que-se-passe-t-il-si-differents-nuds-proposent-des-blo" title="Que se passe-t-il si différents nœuds proposent des blocs différents - t" layout="center" -->
+<img src="/assets/d2cbce006ce6b09885fb2df2bea407ec3cb37cd0.png" alt="Que se passe-t-il si différents nœuds proposent des blocs différents - t" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+
+
+
+--- notes
+
+↦ Que se passe-t-il si différents nœuds proposent des blocs différents - trient les transactions dans des ordres différents et incompatibles entre eux ?
+
+↦ On considère simplement que la chaîne la plus longue fait autorité.
+
+↦ Qu'est-ce qui empêche, alors, un attaquant de proposer simplement un nouvelle historique de bloc plus long, réécrivant l'histoire pour, par exemple, s'attribuer frauduleusement des bitcoins ?
+
+↦ Ou encore, qu’est-ce qui empêche un esprit mal attentionné de faire tourner 100000 noeuds pour pouvoir décider seul de la chaine la plus longue, qui, pour lui, fait donc autorité.
+
+↦ Tout repose sur le petit puzzle mathématique dont je vous ai parlé.
+
+↦ Ce petit puzzle consiste en un algorithme qu'on appelle la **proof-of-work** - ou preuve de travail.
+
+---
+<!-- slide: id="blockchain-025-proof-of-work" title="Proof-of-work" layout="center" -->
+## Proof-of-work
+Preuve de travail {.kicker}
+
+--- notes
+
+↦ La résolution de ce puzzle mathématique est conçue de telle sorte à réclamer beaucoup de puissance de calcul et donc à être **chronophage** et **énergivore** - et donc couteuse ! - mais extrêmement facile à vérifier une fois la solution trouvée.
+
+↦ Expliciter l'usage de carte graphique dédiée.
+
+↦ La difficulté de ce puzzle est ainsi ajustée automatiquement aux capacités de calcul du réseau pour que sa résolution réclame toujours plus ou moins la même durée - 10 minutes - quelles que soient les ressources engagées.
+
+↦ C'est d'ailleurs là l'un principaux reproche adressé au Bitcoin. Son fonctionnement est très énergivore.
+
+↦ En 2022 la consommation du Bitcoin a été d'environ 112 TWh, soit 0,56% de la consommation énergétique mondiale.
+
+↦ Nous verrons plus loin qu'il existe des alternatives moins energivores à la PoW.
+
+↦ Les mineurs sont aujourd'hui constitués de gigantesques fermes de calculs. Cela pose également un problème politique de centralisation.
+
+↦ Toujours est-il que le minage d'un bloc n'est donc pas gratuit : il réclame de la puissance de calcul, beaucoup d'énergie, et donc de l'argent.
+
+↦ A quoi ça sert, et en quoi ca sécurise le réseau ?
+
+↦ Pour le comprends, il nous faut rentrer un peu dans le détails technique et Par ailleurs l'historique des blocs n'est pas construit n'importe comment.
+
+---
+<!-- slide: id="blockchain-026-il-y-a-quelques-elements-supplementaires-importants-a-" title="Il y a quelques éléments supplémentaires importants à mentionner ici" layout="center" -->
+<img src="/assets/ffc143a788c24955f37b5927edc4a75166934886.png" alt="Il y a quelques éléments supplémentaires importants à mentionner ici" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Il y a quelques éléments supplémentaires importants à mentionner ici.
+
+↦ Expliciter la présence du hash du block précédent dans le bloc suivant.
+
+---
+
+
+
+---
+
+↦ Un hash constitue une sorte de résumé, de taille fixe, d'une information de taille arbitraire.
+
+↦ La moindre modification de l'information originelle modifie en profondeur le hash.
+
+↦ Il est très facile de calculer le hash d'une information mais il est impossible de retrouver l'information originale à partir du hash.
+
+↦ Faire une démo `shasum sample.text`
+
+↦ Chaque block intègre ainsi un instantané des nouvelles transactions, mais aussi, de hash en hash, un résumé de tout l’historique des transactions, jusqu’au bloc de genèse.
+
+---
+
+
+
+<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" layout="center" -->
+<img src="/assets/7684203927048a343556a60c0b1c3e1fadf69852.png" alt="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Ainsi, plus une transaction est ancienne, plus il devient difficile de la falsifier.
+
+↦ Falsifier un bloc implique en effet de falsifier également l'ensemble des blocs postérieur.
+
+↦ Cela nécessiterait de résoudre de nombreux puzzles mathématiques très rapidement - un pour chaque bloc de la nouvelle chaine.
+
+↦ Un tel effort réclamerait une capacité de calcul - et une consommation électrique - rapidement in-atteignable (ou couterait plus cher que l’argent qu’elle permettrait de gagner en falsifiant la transaction).
+
+C’est ce mécanisme qui rend une attaque contre Bitcoin extrêmement coûteuse. Pour réécrire l’histoire du réseau, un attaquant devrait reconstruire une chaîne plus longue que la chaîne légitime : c’est ce qu’on appelle une attaque des 51 % parce qu’elle réclamerait, pour être effective, que l’attaquant contrôle à lui seul 51% de la puissance de calcul totale engagée sur le réseaux.
+
+↦ C’est pour cette raison qu’on suggère usuellement, comme une bonne pratique, de ne considérer une transaction valide après qu’au moins 10 blocs aient été validée après elle : on parle de 10 **confirmations**.
+
+↦ Le point important ici, est que la sécurité de la blockchain ne repose pas sur un élément preuve de formel : il est, en théorie, possible de falsifier une blockchain si l’on a accès a des moyens suffisants.
+
+↦ C’est ici que ce joue la principale originalité de la blockchain - et ce qui la démarque des solutions précédemment avancées au problème du consensus distribué.
+
+↦ La sécurité de la blockchain repose sur un mécanisme simultanément statistique et économique : passé un certain nombre de blocs, il est statistiquement improbable que quiconque ait les ressources nécessaires pour falsifier son historique - ou que parvenir à le faire soit économiquement profitable.
+
+↦ Le coup de génie de Satoshi Nakamoto est d’avoir inventé ce que l’on appelle aujourd’hui la cryptonomics ou le mechanism design, c’est-à-dire l’intégration de considérations économiques comme principes de fonctionnement d’un système technique.
+
+↦ Les ressources engagées pour falsifier une blockchain dépendent elles-mêmes de la valeur de sa crypto-monnaie qui est elle-même sécurisée par le niveau de ressources nécessaires au minage, qui dépend elle-même de la valeur de cette crypto-monnaie.
+
+↦ Si le bitcoin ne vaut rien, peu importe qu’on l’attaque. La puissance de calcul mobilisée pour sécuriser le réseau sera faible, mais les enjeux économiques aussi et cela aura donc peut d'importance.
+
+A l’inverse :
+
+•	plus le bitcoin a de valeur, plus il attire de mineurs ;
+•	plus il attire de mineurs, plus la preuve de travail devient coûteuse ;
+•	plus la preuve de travail est coûteuse, plus il est difficile d’attaquer le réseau ;
+•	plus le réseau est sécurisé, plus le bitcoin inspire confiance… et plus sa valeur croît.
+
+↦ D’une certaine façon, le bitcoin - et donc sa valeur - est donc sécurisé par l’appétit des mineurs, lui-même suscité par ... la valeur du bitcoin.
+
+↦ Il vous reste à apprécier le coup de génie ...
+
+---
+<!-- slide: id="blockchain-028-money-money-money" title="money, money, money" layout="center" -->
+## money, money, money
+
+--- notes
+
+Reste néanmoins une question : d’où le bitcoin tire-t-il sa valeur ? Qu’est-ce qui en fait une monnaie ou du moins un actif financier ?
+
+
+
+↦ À vrai dire on est en droit de se poser la question pour toutes les autres monnaies et notamment pour les monnaies dites « fiduciaires » - les billets de banque.
+
+↦ Expliciter le terme de monnaie fiduciaire : du latin *fidus*, la confiance.
+
+↦ Il peut être utile, pour situer la reste du cours, de revenir brièvement sur les fonctions et l’histoire de la monnaie.
+
+↦ On identifie usuellement trois fonctions fondamentales de la monnaie.
+
+---
+<!-- slide: id="blockchain-029-unite-de-compte" title="Unité de compte" layout="center" -->
+## Unité de compte
+## Instrument d’échange
+## Réserve de valeur
+
+--- notes
+
+La monnaie sert d’abord à compter. Elle fournit l’étalon commun qui permet de mesurer, comparer et exprimer la valeur des biens, des services et des dettes.
+
+Sans elle, chaque échange exigerait une évaluation directe : combien de poulets pour une vache ? combien de sacs de blé pour une paire de chaussures ? La monnaie met fin à ce désordre en imposant un langage unique de la valeur.
+
+Cette simplification est décisive. Sans unité de compte, aucune économie complexe ne peut fonctionner. Mais elle n’est pas neutre. Elle opère un effacement : derrière le chiffre monétaire disparaissent les conditions de production, les rapports sociaux et les inégalités qui déterminent réellement la valeur.
+
+C’est ce que Marx nomme le fétichisme de la marchandise. La monnaie fait croire que la valeur est contenue dans les choses elles-mêmes, comme une propriété naturelle, alors qu’elle n’est que le produit de rapports sociaux organisés par le marché et l’industrie.
+
+Quand je dis qu’une table « vaut 200 euros », je ne vois plus le travail des ouvriers, les flux logistiques, les rapports de force entre capital et travail. Tout se réduit à un chiffre, apparemment objectif, qui semble sortir de l’objet lui-même.
+
+Cette illusion est d’autant plus puissante qu’elle paraît aller de soi. La monnaie transforme des rapports de pouvoir en rapports de choses. Elle naturalise le prix. Elle fait oublier que la valeur n’a rien à voir avec l’utilité. L’air et l’eau sont plus essentiels que des voitures de luxe, mais l’air est gratuit – pour l’instant –, tandis qu’une Lamborghini coûte plusieurs décennies de salaire moyen.
+
+Mais l’unité de compte n’est pas seulement une simplification et une illusion : elle est aussi une incitation. En réduisant toute réalité à un chiffre, elle invite à comparer, arbitrer, calculer. Elle rend possibles les bilans comptables, les prix de revient, les calculs de marge, la maximisation du profit. Elle ne se contente pas d’offrir une mesure : elle façonne un type de rationalité économique, fondée sur la mise en équivalence et l’optimisation.
+
+// C’est précisément cette rationalité qu’analyse Foucault : la monnaie comme unité de compte ouvre la voie à une forme de gouvernementalité « par les nombres ». Elle rend possible la comptabilité d’entreprise, les statistiques d’État, la gestion budgétaire des ménages. Elle équipe les institutions pour gouverner les populations en chiffrant leurs besoins, leurs ressources, leurs comportements. En donnant à l’économie un langage numérique, elle transforme aussi la politique : gouverner, c’est alors gérer des équilibres comptables, arbitrer des budgets, administrer des flux mesurés dans une unité commune.
+
+L’unité de compte accomplit ainsi une double opération : elle rend le monde des échanges intelligible en le ramenant à une mesure commune, mais elle efface en même temps la réalité sociale de cette mesure. Elle est à la fois condition de possibilité et instrument d’occultation.
+
+
+
+**Instrument d’échange** (ou intermédiaire des échanges)
+
+Il existe, chez les économistes, une fable. Cette fable raconte l’histoire d’une économie pré-monétaire dont les échanges étaient réglés par le troc. Le troc, nous raconte cette fable, y présentait un inconvénient majeur : réclamer une certaine coïncidence des besoins.
+
+Imaginons que je dispose de pain et que je cherche à en échanger tout ou partie contre des oeufs. Il me faut alors trouver, dans le petit entre-soi de mon village, une personne possédant des oeufs qui soit simultanément disposée à les échanger contre du pain. Or cette coïncidence est rare - presqu’impossible.
+
+C’est en réponse ce délicat problème, nous racontent les économistes, que serait née la monnaie. Qu’importe, dès lors, que celui qui dispose des oeufs que je convoite, désire en retour le pain que je possède. L’échange se soldera en monnaie, et de cette monnaie, il fera bien ce qu’il souhaite : acheter du pain ou une vache ou du bois ; ou ne rien acheter et épargner cet argent pour, peut-être un jour, n’avoir plus à se soucier de ses poules.
+
+Cette fable est évidemment un mythe. Nous verrons plus loin que le troc n’a jamais constitué un instrument économique déterminant. Nous verrons aussi que, si la diffusion à grande-échelle de la monnaie répond bien à un problème pratique, ce n’est pas à celui de la coïncidence des besoins, mais à la défiance des populations soumises aux premiers grands empires et à la volonté de ces empires de s’approprier, malgré tout, leurs ressources.
+
+Le problème de la coïncidence des besoin constitue donc moins un problème pratique qu’un argument politique. Il permet de naturaliser ou d’universaliser ce qui constitue avant tout une contingence historique : le déploiement de la monnaie comme équivalent général, comme mesure commune, comme secret universel de ce qui vaut.
+
+L’énigme de l’économie, comme mode d’organisation sociale, ne tient pas toute entière, en effet, dans l’existence d’un instrument d’échange universel. L’existence d’un équivalent général ne constitue que l’origine analytique d’un monde dont l’ensemble des rapports sociaux est soumis à l’ordre économique.
+
+Comment séparer, par exemple, ce qui s’échange et ce qui ne s’échange pas, ce qui vaut et ce qui ne vaut pas, ce qui compte et ce qui ne compte pas. Ou encore, comment dissocier ce qui relève de l’économie et ce qui doit s’y soustraire : l’amour, la sexualité, le beau, etc. Comment, enfin, hiérarchiser les Hommes et les choses dès lors qu’existe un équivalent général dont l’hégémonie réclame, pour s’en préserver, que certains domaines du réel y échappent ?
+
+Il serait hors de notre propos que développer ici ces questions. Gardez en tête, toutefois, que les premiers Hommes qui, il y a presque 5000 ans, ont eu l’étrange idée, en Chine, d’utiliser des coquillages comme instrument d’échange d’économique, n’avaient pas la moindre idée du cauchemar dans lequel ils précipitaient l’humanité.
+
+**Réserve de valeur**
+La monnaie constitue, en quelque sorte, un procédé de suspension du temps - et par là, un procédé d’accumulation de la richesse.
+
+Le pouvoir économique de la monnaie, en effet, ne s’évanouit pas dans le présent. L’argent n’a pas à être dépensé immédiatement. Il peut être stocké - et donc accumulé - pour un usage futur.
+
+Il importe, pour y parvenir, que la valeur d’une monnaie soit relativement stable dans le temps - et que l’inflation en soit donc controlée. Il importe également que la confiance dans cette monnaie soit elle aussi stable dans le temps - ce qui réclame, au passage, une forme de stabilité politique minimale.
+
+Ex. L’effondrement de l’Empire romain d’Occident a conduit, pendant plusieurs siècles, à une fragmentation des espaces politiques et monétaires européens, affectant durablement leur économie. En l’absence d’une autorité centralisée, il n’existait plus en Occident de monnaie universellement reconnue et adossée à une structure politique stable, contrairement à l’époque impériale où le *denier* puis le *solidus* avaient servi de référence commune. Ce hiatus historique a favorisé le développement d’instruments de crédit et de créances de dette, souvent garantis par le réseau transnational de l’Église et des grandes foires marchandes, prélude lointain à l’invention du papier-monnaie moderne.
+
+
+Cette capacité de la monnaie à fonctionner comme une réserve valeur peut paraitre évidente, mais elle ne se vérifie en fait que pour peu de biens.
+
+Lorsque la richesse étaient « stockée » sous la forme de biens de consommation - et notamment de denrées alimentaires, etc. - celle-ci ne pouvait être conservée trop longtemps sans risque de se détériorer. Une telle situation présentait évidemment des écueils : l’incapacité de la richesse à être « stockée » interdisait à quiconque de se reposer sur son épargne. Mais elle constituait aussi une garantie d’égalité : à quoi bon conserver par devant soi 1000 tonnes de viandes qui seront perdues dans une semaine - autant les partager. En matière de politique, les nécessités du monde sont souvent plus fiables que la vertu des Hommes.
+
+Il n’est pas un hasard, de ce point de vue, que la naissance des premiers États s’articule étroitement à l’extension de l’agriculture céréalière. Les céréales, contrairement à la viande ou aux fruits, se conservent sur une longue durée, se stockent facilement et se divisent aisément en unités mesurables. Le grain ne pourrit pas en quelques jours, il ne s’enfuit pas comme le bétail, il ne se mange pas d’un coup comme un fruit mûr. Il peut être conservé dans des silos, transporté en sacs, comptabilisé en rations.
+
+Cette stabilité matérielle a rendu possible une stabilité politique. Car les céréales sont non seulement stockables, mais aussi taxables. On peut prélever une part du grain produit, l’entasser dans les greniers de l’État, l’utiliser pour nourrir une armée ou financer des travaux collectifs. Mais surtout, les céréales génèrent un surplus. Une fois les besoins immédiats de subsistance couverts, il reste une part excédentaire de production qui peut être captée par une élite.
+
+C’est ce surplus qui change tout. Dans une économie de chasse ou de cueillette, l’absence de stockage limitait l’accumulation : chacun devait consommer ou partager rapidement. Mais le grain permet qu’une partie de la population cesse de produire directement pour sa subsistance. Certains peuvent « ne rien faire » au sens productif immédiat : administrer, surveiller, lever l’impôt, tenir des registres, organiser le travail des autres. Le surplus agricole rend possible l’apparition d’une classe administrative et militaire qui vit du prélèvement sur le travail paysan.
+
+L’agriculture céréalière n’a donc pas seulement nourri les populations, elle a donné à l’État la matière même de son pouvoir : une ressource durable, accumulable et mesurable, qui peut être saisie et centralisée. Le blé ou l’orge, transformés en unités comptables, deviennent le socle sur lequel reposent à la fois l’impôt, la dette et, bientôt, la monnaie. Là où la chasse, la cueillette ou l’élevage dispersaient la richesse, le grain la concentre, la rend visible, mesurable et donc gouvernable.
+
+De ce point de vue, la monnaie n’est qu’une abstraction supplémentaire : elle détache la valeur de la matière et la fait circuler au-delà des greniers. Mais le principe reste le même : organiser la richesse en surplus, la rendre mesurable, l’extraire et la redistribuer. C’est cette logique qui fonde la possibilité d’une hiérarchie durable, d’un appareil administratif, et d’un pouvoir étatique appuyé sur la dette et l’impôt.
+
+⸻
+
+
+Un met un point sur la liquidité ?
+
+liquidité désigne la capacité d’un bien à être transformé rapidement en moyen de paiement / instrument d’échange (généralement en monnaie) sans perte significative de valeur.
+
+Exemple d’un tableau qui vaut de la valeur : oui mais il faut trouver quelqu’un prêt à l’acheter. Bonne réserve de valeur, mais illiquide.
+
+Revenons maintenant, pour le comprends, sur l’histoire de la monnaie.
+
+
+L’histoire de la monnaie est souvent présentée par les économistes comme un fable. Un récit mythique assez éloigné de la réalité et ayant pour fonction principale de rationaliser *a posteriori* la nécessité historique de la monnaie.
+
+↦ La plupart des échanges économiques ont historiquement reposés sur la pratique d’une sorte de crédit informel.
+
+↦ Il ne s'agissait pas exactement de troc - comme on l'imagine souvent - car ces échanges ne reposait pas exactement sur une certaine coïncidence des besoins.
+
+↦ Ex. Aujourd'hui Alice a besoin d'une poule et Bob la dépanne. Plus tard Bob dépannera Alice de ce dont elle aura besoin : du pain, un poisson, etc.
+
+↦ Les seuls échanges impliquant quelque chose comme une « monnaie » avaient en fait lieu avec des entre des peuples se considérant comme ennemis - et ne se faisant donc pas confiance.
+
+↦ Notez, toute fois, que cette « monnaie » pouvait prendre, selon les zones culturelles, des formes tout à fait diverses : métaux rares, coquillages, sel, etc.
+
+↦ Seul importait que cette « monnaie » se conserve dans le temps et que sa quantité soit aisément mesurable.
+
+↦ La monnaie se généralisa à diverses époques et en différents lieux sous un principe toutefois commun : la naissance des empires.
+
+↦ La généralisation de la monnaie est souvent motivée, en effet, par la nécessité de fluidifier la logistique militaire.
+
+↦ Comment nourrir une armée de dizaine de milliers d'hommes en campagne ? Impossible de tout transporter, impossible d'avoir recourt au crédit informel pour acquérir le nécessaire, etc.
+
+↦ Impossible aussi de simplement voler les populations sans risquer une révolte.
+
+↦ Il devient urgent de pouvoir simplement « acheter » les ressources nécessaires aux peuples locaux.
+
+↦ Les peuples conquis sont donc « encouragés » à accepter une monnaie. Et pour les y forcer on les contraint à payer l’impôt avec cette monnaie.
+
+↦ Les premières monnaies impériales sont constituées de métaux précieux supposés garantir leur valeur.
+
+↦ Plus tard se développera le papier monnaie : d’abord en Chine à partir du 11ème siècle, puis en Europe - de manière indépendante - au 17ème et 18ème siècle.
+
+↦ Le papier monnaie s'avère plus pratique et offre aux états la capacité d’émettre de la monnaie sans forcément la consolider sur un stock de métal réel - le plus souvent pour financer des campagnes militaires.
+
+Il généralise les créances de dettes, reposant sur la confiance interpersonnelle, puis sur les églises lorsque l’état était fragmenté.
+
+↦ Aujourd’hui les principales monnaies - le Yen, le dollar, l’euro, etc. - ne sont plus indexées sur rien.
+
+↦ Elles ne tirent leur valeur que de la croyance que chacun porte en la croyance des autres dans cette valeur.
+
+↦ Je crois que les autres croiront que mon billet de 5 euros vaut .... 5 euros.
+
+↦ C'est ce qu'on appelle le **point de Schelling** ou **point focal**.
+
+↦ Ces autres n'ont, certes, pas tous le même poids. Lorsque l'« autre » est un État levant l'impôt dans une monnaie, cela lui confère un certain poids.
+
+↦ Mais on peut aussi bien se passer de ce grand autre.
+
+---
+<!-- slide: id="blockchain-030-it-might-make-sense-just-to-get-some-in-case-it-catche" title="It might make sense just to get some in case it catches on" layout="center" -->
+> It might make sense just to get some in case it catches on. If enough people think the same way, that becomes a self fulfilling prophecy. (Nakamoto, 2009)
+
+--- notes
+
+↦ Premier cas d’usage réel : achat d’une pizza pour 10.000 bitcoins en 2010.
+
+↦  Plus tard, les usages du bitcoin - et des autres crypto-monnaies - seront popularisés par des dark markets comme the Silk Road.
+
+↦  Faire un point sur le cote traçable de la chose - c’est pas du tout anonyme
+
+↦ Aujourd’hui, principalement utilisé comme une réserve de valeur. Mais les choses changent : stablecoin, Visa, etc.
+
+Faire un point sur la stratégie de Donald Trump : 300 milliards de dette de Stablecoin.
+
+Rapport à la chine, principal créancier de l’Amérique.
+
+---
+<!-- slide: id="blockchain-031-conclusion" title="Conclusion" layout="center" -->
+## Conclusion
+temporaire ... {.kicker}
+
+--- notes
+
+↦ Revenir sur la nature du geste politique de Satoshi Nakamoto : la politique sans politique.
+
+↦ Revenir sur le coup de force de Satoshi Nakamoto : remplacer un problème formel - le problème du consensus distribué - en un problème économique.
+
+↦ La manière de faire de Satoshi Nakamoto est typiquement libertarienne : elle consiste à contrôler - ou à façonner - des comportement par des inventives - des incitations - économiques.
+
+↦ Vous pouvez bien essayer de corrompre la blockchain du Bitcoin mais cela vous coutera une fortune - à ce point que ce sera en pratique impossible.
+
+↦ On peut ainsi parler d'ingénierie sociale.
+
+↦ Ce type de rationalité est omniprésent dans l'écosystème crypto.
+
+↦ Les libertariens ne renoncent pas à toute velléité de gouvernement.
+
+↦ Mais ils déléguent l'exercice du gouvernement à des mécanismes de marché et convertissent l'art de gouverner en un art de concevoir des marchés.
+
+↦ Comment organiser les marchés de telle sorte que chacun, en poursuivant son intérêt économique, assure, sans nécessairement le vouloir, le bon fonctionnement des mécanismes de gouvernement.
+
+---
+<!-- slide: id="blockchain-032-beyond-bitcoin" title="Beyond Bitcoin" layout="center" -->
+## Beyond Bitcoin
+
+--- notes
+
+↦ Rappel. La blockchain constitue une réponse technique au problème du consensus distribué. Cette réponse technique a été imaginée pour le Bitcoin.
+
+↦ Mais il est possible de concevoir des blockchains pour d'autres applications que le Bitcoin.
+
+↦ La technologie blockchain a été, ces 15 dernières années, étendue et perfectionnée, pour gérer des données plus complexes.
+
+---
+<!-- slide: id="blockchain-033-monero" title="Monero" layout="center" -->
+## Monero
+2014 {.kicker}
+
+--- notes
+
+↦ Crypto-monnaie centrée sur la privacy.
+
+↦ Comment rendre privée et / ou anonymes des données enregistrées sur une base de données publiques ?
+
+---
+<!-- slide: id="blockchain-034-ethereum" title="Ethereum" layout="center" -->
+## Ethereum
+Vitalik Buterin {.kicker}
+
+--- notes
+
+↦ Blockchain d'un nouveau type proposée en 2013 par Vitalik Buterin (19 ans à l'époque).
+
+↦ Vitalik Buterin est un russe ayant émigré très jeune au Canada avec ses parents.
+
+↦ Très tôt, alors qu'il n'est encore qu'adolescent, Buterin s'intéresse au Bitcoin. Il devient notamment un contributeur régulier du Bitcoin Magazine.
+
+↦ En 2013, Vitalik Buterin rédige le whitepaper d'une blockchain nouvelle et novatrice appelée Ethereum.
+
+↦ En quoi cette blockchain est-elle nouvelle ?
+
+↦ Parce qu'elle est conçue non pas uniquement pour enregistrer et valider des transactions financières, mais pour héberger des applications décentralisés de tout type.
+
+---
+<!-- slide: id="blockchain-035-transactions-ethereum" title="Transactions Ethereum" -->
+| Emetteur | Destinataire | Valeur |
+| :------- | :----------- | :----- |
+| Alice    | Bob          | 2 ₿    |
+| Bob      | Charlie      | 1.5 ₿  |
+| Bob      | Damian       | 0.4 ₿  |
+
+--- notes
+
+↦ Rappel. La « base de données » enregistrée sur la blockchain du Bitcoin. Rappelons que cette base de données est en réalité structurée en blocs.
+
+---
+<!-- slide: id="blockchain-036-donnees-et-instructions" title="Données et instructions" layout="center" -->
+| Donnée    | Type        |
+| :-------- | :---------- |
+| 0x24..f6  | data        |
+| 0xd7..80  | data        |
+| 0x7a...9a | instruction |
+
+--- notes
+
+↦ Au lieu de stocker des données formatées pour décrire des transactions financières, la base de données d'Ethereum est conçue pour pouvoir stocker des données de nature arbitraire et des instructions décrivant comment manipuler ces données - c'est-à-dire des applications.
+
+↦ Cette base de données simule ainsi la mémoire d’une ordinateur - mais de manière publique et décentralisée.
+
+↦ Rappel sur la machine de Turing. Un ordinateur est une machine à états.
+
+↦ Ethereum a ainsi vocation a devenir un ordinateur mondial offrant à chacun la possibilité de déployer des programmes publics, décentralisés et infalsifiables appelés des **smart-contacts**.
+
+↦  Buterin va rapidement être rejoint par divers développeurs et investisseurs.
+
+↦ La première version d'Ethereum est finalisée en 2015.
+
+↦ Une autre ambition de la blockchain Ethereum, qui interviendra plus tardivement, a été de remplacer l'algorithme de Proof-of-Work par un autre algorithme de consensus, moins énergivore, appelé la **Proof-of-Stake**.
+
+---
+<!-- slide: id="blockchain-037-proof-of-stake" title="Proof-of-Stake" layout="center" -->
+## Proof-of-Stake
+PoS {.kicker}
+
+--- notes
+
+↦ La PoS consiste à remplacer l'investissement énergétique propre à la Proof-of-Work en un investissement purement financier.
+
+↦ De la même manière que la blockchain du Bitcoin dispose d'une monnaie native - le bitcoin - la blockchain Ethereum dispose d'une monnaie native appelée l'**Ether**.
+
+↦ La PoS consiste à réclamer des validateurs une mise en gage d'une certaine quantité d'Ethers pour valider les blocs de transactions - en lieu et place d'un investissement énergétique.
+
+↦ Le passage à la PoS a été réalisée avec succès sur la blockchain Ethereum en septembre 2022.
+
+---
+<!-- slide: id="blockchain-038-dapps" title="dApps" layout="center" -->
+## dApps
+Decentralized Applications {.kicker}
+
+--- notes
+
+↦ L'intention des dApps est de supprimer les tiers de confiance dans l'économie de plateforme - comme on a supprimé la banque de la monnaie.
+
+↦ Exemple. Mécanismes financiers. Expliquer la différence entre un DEX et un CEX.
+
+-stablecoin
+
+-farcaster (twitter décentralisé)
+
+↦  Ex. Uber, Deliveroo, etc.
+
+-> ENS
+
+-> Polymarket
+
+-> NFT
+
+↦ Exemple. Gouvernance.
+
+---
+<!-- slide: id="blockchain-039-wallets" title="Wallets" layout="center" -->
+## Wallets
+WTF {.kicker}
+
+--- notes
+
+↦ Entrons dans des considérations pratiques. Comment recevoir et dépenser de l'argent sur une blockchain, comment interagir avec une blockchain, etc. ?
+
+↦ Focus sur la blockchain Ethereum :
+- Seconde blockchain la plus importante - après le Bitcoin - en terme de capitalisation.
+- Blockchain qui offre le plus d'applications.
+- Riche d'un important écosystème.
+
+↦ Ce qui vaut pour la blockchain Ethereum vaut pour la plupart des autres blockchains.
+
+↦ Le point de départ pour interagir avec un blockchain est de contrôler un wallet - i.e. un portefeuille.
+
+↦ Un wallet a plusieurs fonctions
+
+1. Identification
+↦ Le wallet constitue votre identité sur la blockchain.
+↦ Ex. : recevoir de l'argent.
+↦ RIB vs addresse de votre wallet.
+
+2. Authentification
+↦ Le wallet permet de vous authentifier sur la blockchain.
+↦ Ex. : contrôle vos fonds (votre argent).
+
+↦ Autrement dit votre wallet constitue à la fois votre identité et le mode de passe protégeant cette identité sur la blockchain.
+
+---
+<!-- slide: id="blockchain-040-cryptographie-asymetrique" title="Cryptographie asymétrique" layout="center" -->
+## Cryptographie asymétrique
+
+--- notes
+
+↦ Le fonctionnement d'un wallet repose sur un ensemble de fonctions mathématiques disposant de certaines propriétés cryptographiques.
+
+↦ Nous n'allons pas entrer dans le détail de ces propriétés et de leur soubassement mathématique mais simplement essayer d'expliciter les grands principes sur lesquels reposent ces fonctions cryptographiques.
+
+↦ Le fonctionnement d'un wallet repose sur la cryptographie asymétrique.
+
+↦ Pourquoi asymétrique ?
+
+↦ Parce qu'elle s'appuie sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+
+↦ Qu'est-ce qu'une clé cryptographique (ou clé de chiffrement) ?
+
+↦ Une suite de chiffre et de lettres qu'un algorithme peut utiliser pour chiffrer ou déchiffrer des données.
+
+↦ Or la cryptographie asymétrique repose sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+
+↦ Ces clés sont très différentes l'une de l'autre et il est impossible de déduire l'une de la connaissance de l'autre.
+
+↦ En revanche ces deux clés ne sont pas totalement indépendantes : l'une permet de déchiffrer ce que l'autre a chiffré.
+
+↦ Autrement dit il possible de déchiffrer avec la clé privée les messages codés avec la clé publique et vice-versa.
+
+↦ Comment on se sert de ces clés ?
+
+↦ La clé publique, comme son nom l'indique, est publique. Elle peut-être partagée avec tout un chacun et constitue en quelque sorte votre identifiant cryptographique - un peu comme votre IBAN.
+
+↦ On trouve ainsi, chez les cypherpunk, des annuaires de clé publique.
+
+↦ La clé privée, en revanche, doit être soigneusement protégée - celle-ci est souvent stockée dans une enclave sécurisée de votre téléphone, et protégée par un code PIN et / ou un dispositif biométrique.
+
+↦ Quiconque veut vous adresser un message confidentiel peut ainsi le chiffrer avec votre clé publique. En revanche, vous seul qui détenez votre clé privée pourra en déchiffrer le contenu.
+
+↦ Vous comprendrez donc l'intérêt de conserver votre clé privée ... privée.
+
+↦ Mais on peut aussi faire un usage différent de la cryptographie asymétrique, non plus pour s'adresser des messages confidentiels, mais pour s'authentifier mutuellement.
+
+↦ On peut, pour cela, demander à quelqu'un de chiffrer avec sa clé privée un message particulier - par exemple : nous sommes le 26 septembre et je certifie être Olivier.
+
+↦ Si, en déchiffrant le message ainsi chiffré avec la clé publique, je retombe bien sur le message originel, alors, j'ai la certitude que la personne à qui je m'adresse est bien la personne qu'elle prétend être.
+
+↦ On parle alors de **signature cryptographique**.
+
+↦ Vérifier que tout le monde a bien compris.
+
+↦ Faire une démonstration avec GPG Suite.
+
+↦ Expliquer de quelle manière un wallet repose sur de la cryptographie asymétrique.
+
+↦ En pratique, il existe différent types de wallet :
+- Extension de navigateur
+- Applications mobiles
+- Multisig - utiles si vous souhaitez sécuriser de plus grosses sommes d’argent.
+- Vous allez utiliser un wallet mobile.
+
+↦ Vérifier que tout le monde a un smartphone.
+
+---
+<!-- slide: id="blockchain-041-installer-metamask" title="Installer MetaMask" layout="center" -->
+https://metamask.io/download/ {.kicker}
+
+---
+<!-- slide: id="blockchain-042-installer-metamask" title="Installer MetaMask" layout="center" -->
+<img src="/assets/7C81C687-253F-4863-BF88-9A47E12CD6F7_1_105_c.jpeg" alt="Installer MetaMask" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Plusieurs options : Google, Apple ou email
+
+---
+<!-- slide: id="blockchain-043-creer-un-wallet" title="Créer un wallet" layout="center" -->
+<img src="/assets/35FA5FBD-F276-473E-B758-685B07782440_1_105_c.jpeg" alt="Créer un wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Entrer votre mot de passe
+
+---
+<!-- slide: id="blockchain-044-proteger-la-phrase-de-recuperation" title="Protéger la phrase de récupération" layout="center" -->
+<img src="/assets/E8E27682-9297-4E9A-997E-2418054D3327_1_105_c.jpeg" alt="Protéger la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Terminer
+
+---
+<!-- slide: id="blockchain-045-phrase-de-recuperation" title="Phrase de récupération" layout="center" -->
+<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Aller dans les parametres
+
+---
+<!-- slide: id="blockchain-046-confirmer-la-phrase-de-recuperation" title="Confirmer la phrase de récupération" layout="center" -->
+<img src="/assets/CFAA85CC-B6B1-4AEC-BE8A-962FB9C1624D_1_105_c.jpeg" alt="Confirmer la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Sécurité et confidentialité
+
+---
+<!-- slide: id="blockchain-047-wallet-cree" title="Wallet créé" layout="center" -->
+<img src="/assets/2D7197F1-B4C4-4CC6-8CA6-88B759D69DA1_1_105_c.jpeg" alt="Wallet créé" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-048-obtenir-des-eth-de-test" title="Obtenir des ETH de test" layout="center" -->
+<img src="/assets/ECCF666F-DC21-4D17-9BB0-D106538E682B_1_105_c.jpeg" alt="Obtenir des ETH de test" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Expliquer ce qu’est la phrase secrète de récupération - comment ça génère les clés.
+
+---
+<!-- slide: id="blockchain-049-sepolia-faucet" title="Sepolia Faucet" layout="center" -->
+<img src="/assets/1D5BE008-92A2-4B3B-9F55-56ADC35BAF90_1_105_c.jpeg" alt="Sepolia Faucet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-050-connecter-le-wallet" title="Connecter le wallet" layout="center" -->
+<img src="/assets/E4866D14-4026-4D49-8041-81F4CF080AE1_1_105_c.jpeg" alt="Connecter le wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-051-autoriser-la-connexion" title="Autoriser la connexion" layout="center" -->
+<img src="/assets/12E110AA-64EB-40CC-8BA2-80408F8FC5D4_1_105_c.jpeg" alt="Autoriser la connexion" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-052-wallet-connecte" title="Wallet connecté" layout="center" -->
+<img src="/assets/BB237F9E-411B-479D-9417-980EF4E47690_1_105_c.jpeg" alt="Wallet connecté" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-053-envoyer-une-transaction" title="Envoyer une transaction" layout="center" -->
+<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Envoyer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Expliquer ce qu'est l'ETH : cryptomonnaie native d' Ethereum servant, notamment, à payer les frais de gas.
+
+↦ Expliciter que chaque transaction dépend de son coût computationnel [pour éviter le spam] et le prix du gas [pour inciter les validateurs à inclure votre transaction dans un bloc].
+
+↦ Expliquer ce qu'est un testnet [un réseau pour faire des tests sans dépenser du vrai argent en frais de gaz]
+
+---
+<!-- slide: id="blockchain-054-confirmer-une-transaction" title="Confirmer une transaction" layout="center" -->
+<img src="/assets/D9111E75-2D40-4E0D-9402-EA390F77F6D7_1_105_c.jpeg" alt="Confirmer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-055-application-decentralisee-du-cours" title="Application décentralisée du cours" layout="center" -->
+https://infocom-dapp.vercel.app/ {.kicker}
+
+---
+<!-- slide: id="blockchain-056-mechanism-design" title="Mechanism design" layout="cover" -->
+# Mechanism design
+Liberalism on steroid {.kicker}
+
+--- notes
+
+↦ On a compris comment ça fonctionnait techniquement et pratiquement.
+
+↦ Maintenant on va essayer de comprendre ce qu’on peut faire de tout ça et quels sont les rationalités politiques qui se cachent derrière ces blockchains.
+
+↦ Revenir sur l’idée de Satoshi Nakamoto : substituer à un mécanisme de sécurité formel un mécanisme de sécurité économique.
+
+↦ Les mineurs sécurisent le réseau non par bonté d’âme mais par intérêt personnel.
+
+↦ Ils cherchent à miner avant les autres, donc s’équipent en cartes graphiques, ce qui contribuent à augmenter la puissance de calcul totale du réseau et donc à rendre plus complexe une attaque à 51%.
+
+↦ L’enjeu d’aujourd’hui c’est de voir comment cette rationalité peut se déployer dès lors qu’il est possible, avec une blockchain comme celle d’Ethereum, de programmer des mécanismes économiques, et donc des mécanismes de marché.
+
+↦ Introduction d’un exemple qui va servir de fil conducteur.
+
+---
+<!-- slide: id="blockchain-057-protocole-de-creation-dun-stablecoin-indexe-sur-le-dol" title="Protocole de création d’un stablecoin indexé sur le dollar US" layout="center" -->
+<img src="/assets/sky_money.png" alt="Protocole de création d’un stablecoin indexé sur le dollar US" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Protocole de création d’un stablecoin indexé sur le dollar US.
+
+↦ Revenir sur les trois principales manières de créer un stablecoin :
+
+1. Par collatéralisation auprès d’une banque : USDC, USDT, Trump (achat de dette américaine) : leur parler de l’or, il est probablement déjà trop tard, puisque les détails comment à acheter de l’or.
+2. Par collatéralisation de cryptos au cours variable - mais ça pose le problème de leurs fluctuations.
+3. Par ajustement de la masse monétaire en circulation.
+
+---
+<!-- slide: id="blockchain-058-probleme-comment-ajuster-en-temps-reel-loffre-de-jeton" title="Problème : comment ajuster en temps réel l’offre de jetons en circulatio" layout="center" -->
+<img src="/assets/Clipboard 4.png" alt="Problème : comment ajuster en temps réel l’offre de jetons en circulatio" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Problème : comment ajuster en temps réel l’offre de jetons en circulation pour s’ajuster à la demande de telle sorte que le prix reste stable ?
+
+On peut le faire de manière centralisée : une instance - personne, groupe, etc. - en décide mais c’est compliqué à déterminer, et surtout, comment récupérer la quantité de monnaie en circulation pour la faire diminuer ?
+
+On peut le faire de manière décentralisée.
+
+---
+<!-- slide: id="blockchain-059-imaginons-que-vous-possediez-1-eth-valant-a-ce-moment-" title="Imaginons que vous possédiez 1 ETH valant à ce moment $2000" layout="center" -->
+<img src="/assets/Slice 2 1.svg" alt="Imaginons que vous possédiez 1 ETH valant à ce moment $2000" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Imaginons que vous possédiez 1 ETH valant à ce moment $2000.
+
+Imaginons que vous pensez que la valeur de l’ETH va monter. Vous aimeriez bien en posséder plus mais vous n’avez plus d’argent de côté.
+
+Vous souhaitez donc augmenter votre exposition à l’ETH sans pouvoir en racheter.
+
+---
+<!-- slide: id="blockchain-060-je-peux-deposer-mon-eth-comme-collateral-pour-fabrique" title="Je peux déposer mon ETH comme collatéral pour « fabriquer » de l&#x27;USDS" layout="center" -->
+<img src="/assets/Slice 2 2.svg" alt="Je peux déposer mon ETH comme collatéral pour « fabriquer » de l&#x27;USDS" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Je peux déposer mon ETH comme collatéral pour « fabriquer » de l'USDS.
+
+J’opère ainsi comme une sorte de mini banque centrale en émettant de la monnaie ainsi mise en circulation.
+
+Je peux alors utilisé cet USDS pour, par exemple, racheter 1/2 ETH et ainsi augmenter mon exposition a ses variations de prix.
+
+Pour récupérer mon ETH originel je dois en revanche rembourser mon crédit en USDS, qui est alors retiré de la circulation et détruit.
+
+Si la valeur de l’ETH a grimpé entre temps, je suis gagnant. Sinon, je suis perdant.
+
+Comment alors m’assurer que l’USDS que je fabrique soit bien collatéralisé - c’est-à-dire que sa valeur soit garantie par quelque chose.
+
+Cette valeur est ici garantie par l’ETH que j’ai déposé en collatéral.
+
+Vous remarquerez une chose. J’ai déposé plus de collatéral que je n’ai fabriqué d’USDS. On parle de sur-collatéralisation.
+
+Cette sur-collatéralisation garantie que, même si la valeur de l’ETH baisse un peu, la valeur de l’USDS sera tout de même collatéralisée.
+
+Mais que se passe-t-il si la valeur de l’ETH baisse beaucoup ?
+
+---
+<!-- slide: id="blockchain-061-on-fixe-un-seuil-de-surcollateralisation-minimal" title="On fixe un seuil de surcollatéralisation minimal" layout="center" -->
+<img src="/assets/Slice 2 3.svg" alt="On fixe un seuil de surcollatéralisation minimal" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+On fixe un seuil de surcollatéralisation minimal.
+
+Si ce seuil est franchi, mon ETH est revendu. On parle de liquidation de ma position.
+
+Je perds donc ma mise de départ et cet argent est placé dans un fond permettant de garantir la valeur de l’USDS en circulation.
+
+Pour éviter de perdre cet argent, je vais donc avoir intérêt à rembourser au plus vite mon prêt en USDS afin de récupérer mon ETH avant qu’il ne soit liquidé.
+
+En procédant de la sorte, je vais retirer et USDS de la circulation et donc réduire sa masse monétaire.
+
+Notez déjà plusieurs choses.
+
+1. La régulation de la masse monétaire n’est pas confiée à une instance centrale mais décentralisée - il revient à chaque trader d’augmenter ou de diminuer la masse monétaire.
+
+2. Les motifs pour lesquels les traders augmentent ou resserrent la masse monétaire n’a rien à voir avec la stabilité du système global. Ils agissent uniquement dans leur intérêt propre.
+
+3. Le système est conçu pour que ces intérêts individuels convergent avec la finalité du système : aboutir à une stabilité économique. En poursuivant leur petit intérêt étroit, les traders contribuent en fait, malgré eux, à stabiliser la valeur de l’USDS.
+
+
+Un exemple de tweet parlant venu d’un projet qui s’appelle de refléter finance et qui essaye de créer une monnaie stable non pas par rapport au dollar mais au « cours de la vie ».
+
+Le principe de la crypto c’est de n’être plus soumis à la dévaluation des monnaies fiduciaires.
+
+C’est pas chouette, du coup, de tout indexer sur le dollar.
+
+Je ne rentre pas dans le détail mais le principe est assez proche  de celui de Sky Money.
+
+
+https://x.com/reflexerfinance/status/1662482431151341568
+
+Dans ce tweet, les fondateurs de Reflexer Finance nous disent que les banques centrales en sont aujourd’hui rendues au meme stade que la machine à vapeur avant l’invention du régulateur centrifuge - centrifuge governor - inventé par James Watt au XVIIIè siècle.
+
+---
+<!-- slide: id="blockchain-062-ce-dispositif-mecanique-stabilisait-la-vitesse-des-mac" title="Ce dispositif mécanique stabilisait la vitesse des machines à vapeur en " layout="center" -->
+<video src="/assets/FxJQ5FwaMAAoXYM.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+Ce dispositif mécanique stabilisait la vitesse des machines à vapeur en régulant automatiquement l'apport de carburant, évitant les surchauffe et explosions.
+
+Avant cela, les moteurs étaient complexes à gérer et risqués ; après, ils se sont démocratisés, favorisant la révolution industrielle (utilisation dans les trains, etc.). L'impact fut immense : influence sur la biologie, la théorie du contrôle (papier de Maxwell), etc.
+
+L'analogie avec la banque centrale actuelle est claire : elle repose sur des "sorciers" (banquiers centraux) qui ajustent manuellement la monnaie pour maintenir la "stabilité", mais qui mentent et volent via l'inflation et l'impression monétaire.
+
+Selon l'auteur, les systèmes de contrôle dynamiques onchain (basés sur la blockchain) changeront cela, permettant à quiconque de créer sa propre "banque centrale" décentralisée et automatisée.
+
+Ca explique que le système de Reflexer comme celui de Sky est un dispositif de contrôle cybernétique.
+
+J’emploie ici le terme cybernétique à dessein : feedback, boucle de rétroaction, etc.
+
+Le papier de Maxwell sur ce dispositif est souvent considéré comme le premier travail de théorisation des systèmes de contrôle.
+
+Il s’agit d’une référence historique de la cybernétique - y compris chez Wiener.
+
+Il s’agit donc de soustraire la gestion de la masse monétaire aux mains d’une entité consciente - les dirigeants d’une banque centrale - pour la confier à un dispositif d’automatisation cybernétique de la gestion de la masse monétaire.
+
+Quel lien entre cette question, la cybernétique, et les mécanismes de marché ?
+
+Les liens à vrai dire, sont nombreux, à tel point que Frank Rosenblatt (psychologue)  proche du cercle des conférences Macy, 1958, perceptron, cite Hayek, lui même proche des réseaux cybernétiques.
+
+---
+<!-- slide: id="blockchain-063-friedrich-hayek" title="Friedrich Hayek" layout="two-columns" -->
+<div>
+
+## Friedrich Hayek
+1899 – 1992 {.kicker}
+
+</div>
+<img src="/assets/hayek.png" alt="Friedrich Hayek" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Economiste Austro-britannique.
+
+Prix de la Banque de Suède - dit prix Nobel d’économie - en 1974.
+
+Père et principal théoricien des théories néo-libérales. Enorme influence sur Margaret Tatcher, Ronald Reagan, etc.
+
+On ne va pas parler directement de cette position politique - en résumé ça marche mal en partie parce que ça crée des situations de monopole, en partie parce que le marché est très mauvais à prendre en considération ses externaltiés.
+
+Dans son essai majeur de 1945, « The Use of Knowledge in Society », l’économiste autrichien reformule la question centrale de l’économie : le vrai défi n’est pas de savoir comment distribuer des ressources rares, mais comment coordonner une information rare.
+
+Or, à l’intérieur d’un monde de division du travail, chacun est spécialisé dans un seul type de production. L’acquisition de ces indispensables biens et ressources externes passe donc par l’échange avec d’autres individus, ce qui implique une connaissance préalable de leurs besoins.
+
+Mais un individu ne peut pas accéder a priori aux préférences, représentations et valeurs des autres acteurs de la vie sociale, puisqu’elles sont subjectives.
+
+Hayek pense que l’économie moderne est trop complexe que l’ensemble des facteurs qui en régule l’ordre puisse être saisi par un esprit humain.
+
+Ex d’un producteur de t-shirt : comment les tendances vont évoluer, et l’industrie du coton, et les champs qui ont brulé en asie, etc.
+
+Aucun esprit, aucune institution, aucun gouvernement ne peut détenir à lui seul l’ensemble des connaissances nécessaires à une prise de décision efficace.
+
+L’information existe sous forme de fragments dispersés parmi des millions d’individus : un agriculteur observant les changements de météo, un commerçant remarquant l’évolution des habitudes, un mineur percevant une pénurie avant les autres.
+
+Les marchés, comprend alors Hayek, sont le mécanisme qui relie ces fragments entre eux. Les prix ne sont pas de simples chiffres : ce sont des signaux qui transmettent la connaissance plus rapidement que ne le pourrait aucun planificateur ou comité.
+
+Le marché fonctionne avant tout, pour Hayek, comme un dispositif d’agrégation de l'information.
+
+
+
+Hayek imagine qu’une pénurie de cuivre survient quelque part dans le monde — par exemple parce qu’une mine a fermé ou qu’un nouveau besoin industriel est apparu.
+
+Cette information locale ne peut-être connue que de quelques acteurs bien qu’elle en concerne un très grand nombre : de l’industrie électronique à la SNCF en passant le secteur automobile - et évidemment l’ensemble des consommateurs.
+
+Tous ne peuvent pas suivre l’actualité du cuivre - en même temps que celle du fer, de l’aluminium, de l’or, du marché de change, etc.
+
+Or cela n’est justement pas nécessaire. La fermeture de la mine va se traduire immédiatement par une hausse du prix du cuivre sur le marché mondial.
+
+Ce signal de prix, sans que personne ait à comprendre pourquoi le cuivre est plus rare, informe tous les producteurs et consommateurs.
+
+Les fabricants de biens contenant du cuivre chercheront à en économiser ou à lui trouver des substituts.
+
+Les producteurs de cuivre seront incités à augmenter leur production ou à exploiter de nouveaux gisements.
+
+Ainsi, le marché transforme une information locale et dispersée (la rareté du cuivre dans un endroit précis) en un signal global (le prix) qui oriente les comportements de millions d’acteurs — sans qu’aucune autorité centrale n’ait à collecter ou traiter cette information.
+
+Le mécanisme de formation et de propagation du prix fonctionne ainsi, pour Hayek, comme un dispositif d’agrégation et de de dissémination d’une connaissance tacite et dispersée.
+
+Pour Hayek, toute tentative de parvenir au même résultat par une instance de décision centralisée est destinée à échouer - et à produire du totalitarisme.
+
+---
+<!-- slide: id="blockchain-064-en-faisant-confiance-aux-forces-ordonnatrices-spontane" title="« En faisant confiance aux forces ordonnatrices spontanées, nous pouvons" -->
+> « En faisant confiance aux forces ordonnatrices spontanées, nous pouvons étendre le champ et la portée de l'ordre que nous sommes capables de faire se former [...] parce que cet ordre mettra en œuvre les connaissances distinctes de ses nombreux membres, sans que ce savoir total soit jamais concentré dans un unique esprit. »
+
+--- notes
+
+Faire le lien avec la question de la sagesse des foules évoquée l’année dernière.
+
+Le marché peut ainsi être compris comme un cas particulier de régulation d’un ordre spontané.
+
+---
+<!-- slide: id="blockchain-065-ordre-spontane" title="Ordre spontané" layout="center" -->
+## Ordre spontané
+ ordre émergent {.kicker}
+
+--- notes
+
+Le terme spontané, du latin *sponte sua*, signifie littéralement «  qui suit sa propre dynamique ».
+
+Cet idée d’ordre spontané est intimement liée, chez les cybernéticiens comme chez Hayek, à l’idée d’ordre émergent.
+
+Un ordre émergent désigne la formation spontanée d’une organisation globale au sein d’un ensemble d’éléments en interaction, sans qu’aucune instance centrale ne la conçoive ni ne la dirige.
+
+Cet ordre résulte de la répétition locale de règles simples ou de comportements élémentaires, dont la combinaison engendre, à une échelle supérieure, des structures, des régularités ou des formes de cohérence inédites.
+
+L’ordre émergent est l’expression d’une cohérence qui naît de l’intérieur d’un système — une forme que le collectif produit sans que quiconque ne la projette ou la vise.
+
+---
+<!-- slide: id="blockchain-066-exemple-des-murmuration-detourneaux" title="Exemple des murmuration d’étourneaux" layout="center" -->
+<video src="/assets/murmuration.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+Exemple des murmuration d’étourneaux.
+
+Comment les étourneaux peuvent produire des formes si régulière, et à quelle logique lobéit l’évolution de ces formes ?
+
+🧠 1. Pas de chef, mais des interactions locales
+
+Chaque étourneau n’obéit pas à un chef ni à un signal central.
+Il ajuste simplement son mouvement en fonction de quelques voisins immédiats (en général 6 à 7), qu’il garde dans son champ de vision.
+Ce principe est analogue à ce qu’on observe dans les bancs de poissons ou les essaims d’insectes.
+
+➡️ Règle simple :
+
+-Maintenir une distance constante avec ses voisins (ni trop proche, ni trop loin).
+
+-S’aligner sur leur direction et leur vitesse.
+
+-Réagir rapidement aux changements brusques (prédateurs, obstacles, etc.).
+
+De ces règles locales naît une organisation globale spontanée — un phénomène d’auto-organisation, étudié en physique des systèmes complexes.
+
+C’est simplement l’interactions de rationalités situées respectant des règles très simples qui permet de se dégage de tel patterns, de telle régularités, autrement dit un ordre émergent.
+
+Ici des règles locales simples permettent de créer un ordre global heureux pour celui qui les observe - mais aussi pour les oiseaux qui le composent parce que cela leur permet de garder un cohésion d’ensemble horizontale et sans chef.
+
+
+↦ Ce phénomène a fasciné très tôt les cybernéticiens et notamment le mathématicien John Von Neumann.
+
+↦ L’un des mathématiciens et de physiciens les plus importants du 20ème siècle : théorie des jeux, projet Manhattan, architecture de von Neumann, etc.
+
+↦ Il est l’un des principaux inspirateurs du mouvement cybernétique - même s’il n’a pas participé directement aux colloques de Macy.
+
+↦ Dans les années 1940 et 1950 von Neumann va établir une théorie des automates visant à décrire le mouvement d’auto-reproduction de la vie comme propriété émergente d’une machine a été suivant des règles simples.
+
+↦ Nous n’allons pas présenter ici ces recherches - qui sont assez complexes - mais allons nous intéresser au *Jeu de la vie* introduit quelque années plus tard, dans les années 1970, par le mathématicien John Conway.
+
+---
+<!-- slide: id="blockchain-067-le-jeu-de-la-vie-repose-sur-une-grille-potentiellement" title="Le jeu de la vie repose sur une grille - potentiellement infinie - dont " layout="center" -->
+<img src="/assets/game-of-life-loop-cropped.gif" alt="Le jeu de la vie repose sur une grille - potentiellement infinie - dont " style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Le jeu de la vie repose sur une grille - potentiellement infinie - dont chaque cellule peut être dans un de deux états vivante (1), représentée souvent par un carré noir ou morte (0), représentée par un carré blanc.
+
+Le temps est discret : à chaque “tour” (ou génération), toutes les cellules changent d’état simultanément, selon des règles locales basées sur leurs 8 voisines (les cellules autour d’elle — haut, bas, gauche, droite et diagonales).
+
+⸻
+
+🧠 Les 4 règles de Conway
+1.	Naissance
+→ Une cellule morte devient vivante si elle a exactement 3 voisines vivantes.
+(on peut imaginer qu’elle “naît” par reproduction locale)
+2.	Survie
+→ Une cellule vivante reste vivante si elle a 2 ou 3 voisines vivantes.
+(elle a assez d’“interaction” pour survivre)
+3.	Solitude (mort par isolement)
+→ Une cellule vivante meurt si elle a moins de 2 voisines vivantes.
+(trop isolée pour subsister)
+4.	Surpopulation (mort par excès)
+→ Une cellule vivante meurt si elle a plus de 3 voisines vivantes.
+(trop de compétition, elle s’éteint)
+
+De là, on peut voir, selon les configurations initiales, voir émerger des patterns stables.
+
+
+Mais parfois, l’interaction de ces règles locales simples va produire des ordre globaux qui peuvent aller à l’opposer des rationalités des acteurs.
+
+---
+<!-- slide: id="blockchain-068-thomas-c-schelling" title="Thomas C. Schelling" layout="two-columns" -->
+<div>
+
+## Thomas C. Schelling
+1921 – 2016 {.kicker}
+
+</div>
+<img src="/assets/schelling.png" alt="Thomas C. Schelling" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Economiste américain
+
+L’expérience de ségrégation de Thomas Schelling, présentée dans Micromotives and Macrobehavior (1978), cherche à comprendre comment des préférences individuelles apparemment modérées peuvent produire une ségrégation collective forte. Schelling construit un modèle très simple : il imagine une grille (comme un damier) sur laquelle sont disposés des pions de deux couleurs représentant deux groupes sociaux (par exemple, des ménages blancs et noirs).
+
+Chaque pion a une préférence locale : il n’a rien contre la mixité, mais souhaite qu’au moins une certaine proportion de ses voisins soient de la même couleur que lui. Par exemple, un pion “rouge” peut vouloir qu’au moins 30 % de ses voisins soient rouges. Tant que cette condition est remplie, il reste à sa place ; sinon, il “déménage” vers un autre emplacement où cette préférence est satisfaite.
+
+
+Ce qui est remarquable, c’est que même avec des seuils très tolérants, le système finit par produire une ségrégation spatiale nette. Aucun pion n’a voulu explicitement vivre dans un quartier homogène, mais les ajustements locaux — chacun ne voulant pas être trop isolé — conduisent à des motifs globaux de séparation.
+
+Autrement dit, des comportements individuels non racistes et même relativement ouverts peuvent générer des structures collectives ségréguées. Le modèle montre ainsi comment les micro-motifs (les motivations locales) peuvent engendrer des macro-comportements (les régularités sociales) qui échappent aux intentions de chacun.
+
+⸻
+
+Schelling illustre par là un principe fondamental des sciences sociales : les phénomènes macroscopiques (comme la ségrégation urbaine) ne sont pas toujours le résultat de volontés explicites, mais peuvent émerger de la combinaison de décisions locales et décentralisées.
+
+C’est un peu le pendant sociologique de la logique hayékienne du marché : un ordre global (ici, un désordre social) peut se former sans plan, sans coordination consciente, sans autorité centrale.
+
+Cette écart ou cette séparation entre les ordre locaux - ou les rationalités locales - et l’ordre global qui surgit de leurs interactions est centrale dans la cybernétique et le mechanism design.
+
+L’ordre n’est plus conçu comme ce qu’un sujet impose, mais comme ce qui se forme par les interactions locales, sans projet, sans centre, sans conscience.
+
+Est-ce que cela signifie qu’on doit absolument renoncer à orienter, à piloter, à gouverner, d’une quelconque façon le monde social pour l’orienter dans une direction considérée comme plus souhaitable que d’autres.
+
+Pas tout à fait.
+
+Mais cela modifie profondément la manière dont on pense l’intervention sur le monde social.
+
+---
+<!-- slide: id="blockchain-069-change-the-rules-not-the-player" title="Change the rules, not the player" layout="center" -->
+## Change the rules, not the player
+
+--- notes
+
+L’enjeu du mechanism design, dès lors, n’est plus, pour essayer d’aboutir à un ordre global particulier, d’agir sur les ordres locaux, c’est-à-dire sur les rationalités des acteurs, mais de modifier leur environnement de telle sorte que leur rationalités spontanées contribuent malgré elles à favoriser l’apparition d’un ordre global.
+
+Ex. Les traders qui parient sur l’augmentation du prix de l’ETH se moquent de la stabilité de l’USDS. Ils ne suivent que leur intérêt économique personnel.
+
+En revanche, le système est conçu de telle sorte que la poursuite de leurs intérêts personnels concoure malgré eux à la stabilisation de l’USDS.
+
+Revenons à Hayek.
+
+Le mécanisme de formation des prix y opère en effet comme un dispositif de coordination ou d’agrégation des connaissances que chaque acteur peut s’approprier pour s’orienter individuellement dans un ordre global autrement trop complexe pour être saisi.
+
+Nous voyons alors que l’ordre de ce système y dépend beaucoup de la manière dont ces prix sont construits et donc du design des marchés où ils se forment.
+
+Le principe du mechanism design est qu’il n’existe pas quelque chose comme LE marché.
+
+Il existe DES marchés imposant des mécanismes de formation des prix distincts et qu’il est donc possible de concevoir de diverses manières en fonction des objectifs qui sont les nôtres.
+
+---
+<!-- slide: id="blockchain-070-eric-a" title="Eric A" layout="center" -->
+<img src="/assets/radical_markets.png" alt="Eric A" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Eric A. Posner - juriste américain - & E. Glen Weyl - économiste et chercheur à Microsoft.
+Parution : 2018 (Princeton University Press)
+
+Nos marchés, nos démocraties et notre système de propriété sont devenus inefficaces, injustes et bloqués — non pas parce qu’ils sont “trop capitalistes”, mais parce qu’ils ne sont pas assez ouverts.
+
+Posner (juriste) et Weyl (économiste et chercheur en algorithmique) proposent de “radicaliser” les marchés pour les rendre plus équitables et dynamiques.
+
+Les auteurs reprochent au libéralisme classique de confondre liberté économique et accumulation privée.
+Selon eux, ce qui bloque nos sociétés, ce sont les monopoles de propriété :
+•	sur les biens matériels (logement, terre, capital),
+•	sur les biens immatériels (données, brevets, attention),
+•	et même sur le pouvoir politique.
+
+Leur proposition : transformer ces monopoles en systèmes ouverts de valorisation collective.
+
+---
+<!-- slide: id="blockchain-071-harberger-tax" title="Harberger tax" layout="center" -->
+## Harberger tax
+
+--- notes
+
+La taxe Harberger cherche à répondre à un problème fondamental de la propriété privée :
+👉 le fait qu’elle crée à la fois de la valeur et de l’inefficacité.
+
+⸻
+
+1. 🔒 Le problème : la “mauvaise allocation” des ressources
+
+Quand un bien est détenu en propriété exclusive, il peut être sous-utilisé ou mal alloué, sans que personne puisse y faire grand-chose.
+
+Exemples :
+
+Un terrain vide au centre d’une ville, conservé par un propriétaire en attente de spéculation → inefficacité urbaine.
+
+Une licence logicielle ou un brevet non exploité, simplement pour bloquer la concurrence.
+
+Une œuvre d’art enfermée dans un coffre au lieu d’être exposée.
+
+Ces situations sont ce qu’on appelle des « trappes de propriété » : un bien utile est immobilisé par son propriétaire, au détriment du collectif.
+
+Comment résoudre ces problèmes ?
+
+Une première solution, bien sûr, passe par la régulation : interdire de conserver un terrain inutilisé, ou bien de déposer un brevet non exploité, etc.
+
+Mais là encore, la rationalité limitée des acteurs risque de rendre la tâche compliquée. Comment différencier un terrain inutilisé parce que sa construction ne serait simplement pas rentable d’un terrain acquis à des fins explicitement spéculatives ? Et comment différencier un brevet dont il n’est fait aucun usage parce que sa mise en oeuvre serait trop couteuse d’un brevet utilisé pour bloquer la concurrence ? Imaginez un peu le nombre d’expert qu’il faudrait en chaque domaine pour répondre à ces questions ?
+
+Harberger a proposé de résoudre ces problèmes par la mise en oeuvre de mécanisme de marché explicitement destiné à recadrer les rationalités individuelles de telle sorte que leur agrégation réduise ces trappes de propriété.
+
+Chaque propriétaire doit déclarer la valeur de son bien (terrain, logement, entreprise, œuvre d’art, etc.), payer un impôt proportionnel à cette valeur,
+et accepter de vendre ce bien à n’importe qui au prix qu’il a lui-même déclaré.
+
+maginons que tu possèdes un appartement :
+•	Tu estimes qu’il vaut 200 000 €.
+•	La commune applique une taxe de 2 % par an → tu paies 4 000 € par an.
+•	Mais à tout moment, une autre personne peut venir te dire :
+“Je veux acheter ton bien à 200 000 €.”
+Et tu dois accepter de lui vendre à ce prix.
+
+Résultat : tu es incité à déclarer une valeur réaliste, ni trop haute (sinon tu paies trop d’impôt), ni trop basse (sinon tu risques de te faire racheter ton bien à bas prix).
+
+Objectifs
+1.	Lutter contre la spéculation : personne n’a intérêt à garder un bien inutilement ou à gonfler artificiellement sa valeur.
+2.	Encourager l’usage efficace des ressources : les biens vont à ceux qui en ont le meilleur usage.
+3.	Simplifier la fiscalité : la même logique pourrait remplacer ou compléter des impôts comme la taxe foncière ou la taxe sur le capital.
+
+⸻
+
+⚖️ Limites et critiques
+•	Difficile à appliquer dans la vraie vie (imagine devoir vendre ta maison du jour au lendemain).
+•	Problèmes émotionnels et sociaux (attachement personnel aux biens).
+•	Complexité pour évaluer certains biens uniques (entreprises, œuvres d’art…).
+
+---
+<!-- slide: id="blockchain-072-taxe-harberger" title="Taxe Harberger" layout="center" -->
+<img src="/assets/Capture d’écran 2025-11-01 à 11.37.04.png" alt="Taxe Harberger" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-073-gouvernance" title="Gouvernance" layout="cover" -->
+III {.kicker}
+# Gouvernance
+
+--- notes
+
+Question de l’examen : sondage à main levée : QCM ou QCM + questions ouvertes ?
+
+↦ L'intention du web3 est de supprimer les tiers de confiance et, ainsi, de replacer le pouvoir entre les mains de ses « utilisateurs ».
+
+↦ Il s'agit ainsi de « décentraliser » la gouvernance des dApps.
+
+↦ Ce exigence est simultanément politique, juridique et technique.
+
+↦ 1. Politique : échos libertarien, horizontalisme, croyance en la capacité des marchés à coordonner spontanément les individualités, etc.
+
+↦ 3. Technique : le code déployé sur une blockchain est publique et donc facilement duplicable, si bien qu'il est aisé pour les utilisateurs de « forker » une plateforme si ses dispositions leur disconviennent.
+
+↦ 3. Juridique : la plupart des juridictions nationales voient d'un mauvais oeil l'économie du web3 : mécanismes de levée de fond sauvage, mauvaise traçabilité des transactions, etc. Une solution pour se couvrir juridiquement est de confier la gestion du projet à une communauté plus ou moins distribuée et anonyme.
+
+
+↦ En pratique cela n’est pas si évident. Il faut composer avec les effets de réseau. Mais cela fonctionne parfois. Ex. : SushiSwap.
+
+↦ Comment, donc, organiser un projet sans recourir à un tiers de confiance ?
+
+↦ Rappels sur la problématique des coûts de transaction : Ronald Coase, 1937.
+
+↦ Le recours au marché implique des coûts de transaction importants : recherche de partenaire, contractualisation de ces partenariat, mise en paiement, etc.
+
+↦ La coordination hiérarchique et managériale implique elle aussi des coûts de transaction importants : mise en oeuvre de procédures bureaucratiques, coûts des équipes managériales, etc.
+
+↦ De surcroit la coordination hiérarchique et managériale rencontre rapidement certaines limites de taille dues à la bureaucratisation.
+
+↦ Plus une entreprise grandit et moins elle est efficace : décisions prises loin du terrain, bureaucratisation des activités ordinaires, etc.
+
+↦ Le numérique a ouvert une troisième voie en réduisant radicalement les couts de transaction.
+
+↦ Ex. : Uber, Deliveroo, Blablacar, leboncoin, etc.
+
+↦ La plupart de ces plateformes bénéficient d'une rente de situation qui les conduit à des pratiques prédatrices.
+
+↦ Comment reconduire la philosophie de l'économie de plateforme en la rendant plus inclusive, plus transparente, etc.
+
+↦ 1. Problème de coordination des agents : développeurs, designers, community manager, etc.
+
+↦ 2. Problème de la prise de décision collective.
+
+↦ Comment cela fonctionne concrètement de « décentraliser » une plateforme ?
+
+---
+<!-- slide: id="blockchain-074-dao" title="DAO" layout="cover" -->
+III.1 {.kicker}
+# DAO
+##### Decentralized Autonomous Organization
+
+--- notes
+
+↦ Décentralisation - conjointement technique et politique.
+
+↦ a. L’infrastructure technique est déployée sur une infrastructure décentralisée et non-censurable controlée par la DAO. Si « l’entreprise » disparait, le protocole et la DAO restent.
+
+↦ b. La DAO est controlée par ses utilisateurs selon diverses modalités de prise de décision.
+
+↦ Transparence. L’usage des fonds d’une DAO et l’ordre de ses questions stratégiques sont publics et accessible à tous les utilisateurs.
+
+↦ Ex. Aragon Transparency Report trimestriel.
+
+↦ Autonomie. La DAO constitue elle-même un morceau de code définissant ses règles de fonctionnement [un smart contract], règles elles-mêmes soumises à la délibération de ses utilisateurs.
+
+↦ On trouve de telles DAO dans de multiples secteurs : Finance, art, jeux videos, politique, etc.
+
+↦ ConstitutionDAO pour racheter l’original de la constitution américaine, une autre DAO pour tenter de libérer Julian Assange, une DAO de collectionneurs de NFTs, etc. etc.
+
+↦ Comment cela fonctionne-t-il concrètement ?
+
+↦ Forum de discussion.
+
+---
+<!-- slide: id="blockchain-075-dao-discussion-sur-discord" title="DAO : discussion sur Discord" layout="center" -->
+<img src="/assets/Capture d’écran 2024-10-02 à 17.02.54.png" alt="DAO : discussion sur Discord" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Chat sur Discord.
+
+↦ Mécanismes de prises de décision collective - mécanismes de vote.
+
+---
+<!-- slide: id="blockchain-076-dao-proposition" title="DAO : proposition" layout="center" -->
+<img src="/assets/Capture d’écran 2024-10-02 à 17.04.09.png" alt="DAO : proposition" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-077-la-sagesse-des-foules" title="La sagesse des foules" layout="cover" -->
+III.2 {.kicker}
+# La sagesse des foules
+###### Comment fabriquer une volonté collective ?
+
+--- notes
+
+↦ Une telle volonté de décentralisation des prises de décision pose au moins deux problèmes.
+
+↦ 1. Comment « fabriquer » une volonté collective ?
+
+↦ C’est là le problème de la *souveraineté* : la mise en œuvre d’une volonté collective lorsqu’il n’existe que des volontés individuelles.
+
+↦ Les volontés collectives sont « fabriquées » par divers processus d'agrégation.
+
+↦ 2. Est-ce une bonne idée de mettre des millions, voire des milliards de dollars, dans les mains d’anonymes dont on peut douter qu’ils soient tous compétents pour décider de l’avenir d’une plateforme ?
+
+↦ C’est là le problème de la *sagesse des foules*.
+
+↦ La sagesse d’une foule est moins fonction de la sagesse des individus qui la composent que de la pertinence des dispositifs d’expression et d’agrégation de leurs préférences individuelles.
+
+↦ La sage des foule est donc fabriquée en tant qu'elle dépend des mécanismes de construction et d'agrégation des opinions.
+
+↦ Il s’agit ainsi d’un problème d’**ingénierie sociale** : quels mécanismes d’expression et d’agrégation des préférences individuelles mettre en oeuvre pour aboutir à des décisions pertinentes ? Et qu’est-ce, alors, que la pertinence d’une décision ?
+
+↦ Revenir sur ce que nous avions dit au début du cours : il s’agit de programmer des comportements [ici des comportement collectifs pour l'orientation et l'agrégation de comportements individuels]
+
+↦ Nous allons analyser quelques exemples de telles tentatives d'ingénierie sociale - de programmation comportementale.
+
+---
+<!-- slide: id="blockchain-078-token-weighted-voting" title="Token-Weighted Voting" layout="center" -->
+III.2.a {.kicker}
+### Token-Weighted Voting
+#### 1T1V
+
+--- notes
+
+↦ Le poids décisionnel de chacun est fonction du nombre de tokens - jetons - déterminés qu’il possède.
+
+↦ Expliquer les mécanismes d’ICO et de token-sale originaux - et l’incentive, donc, pour les early-investors d’investir ...
+
+↦ Fonctionnement très proche de l’actionnariat traditionnel : un jeton peut être vu comme une action offrant un pouvoir décisionnel.
+
+↦ Problème : le pouvoir décisionnel devient un bien marchand si bien que les plus riches peuvent imposer leur volonté à tous.
+
+↦ Revenir sur le problème de la concentration de l’argent - et donc la concentration du pouvoir décisionnel.
+
+↦ Cela peut paraître exagéré mais n’est pas si éloigné des modalités de distribution de la richesse mondiale.
+
+↦ On retrouve, ici encore, une power law, mais particulièrement accentuée.
+
+↦ Cela signifie que la voix des « petits » token holders est négligeable.
+
+↦ Une des conséquences en est que ces petits « token-holders »  finissent souvent par ne plus voter du tout.
+
+↦ Le Token-Weighted Voting tend le plus souvent vers une forme d’oligarchie.
+
+↦ Un second problème est que les décisions des plus riches token-holders sont le plus souvent orientées vers le profit à court terme - et pas nécessairement vers les intérêts à long-terme du projet.
+
+---
+<!-- slide: id="blockchain-079-one-person-one-vote" title="One Person One Vote" layout="center" -->
+III.2.b {.kicker}
+### One Person One Vote
+#### 1P1V
+
+--- notes
+
+↦ Mécanisme traditionnel des démocraties parlementaires.
+
+↦ Chaque citoyen dispose - formellement - du même point décisionnel quels que soient son origine, son sexe, son genre, sa fortune, etc.
+
+↦ Problème 1. Les sybil attacks. Nécessite une forme quelconque de preuve d’humanité et d’unicité.
+
+↦ Solutions. Identification par un réseau social avec un minimum de followers. Proof-of-humanity par analyse du graphe social [maintien l'anonymat].
+
+↦ Problème 2. Pertinence de l’équivalence des voix.
+
+↦ Quelqu’un qui travaille dans le département marketing doit-il avoir droit au chapitre sur les questions de R&D ?
+
+↦ Des gens qui habitent à 200 km d’un aéroport ou d’une centrale d’enfouissement des déchets ont-il leur mot à dire sur la question ?
+
+↦ Des gens qui ne font aucun usage d’un espace public ont-il leur mot à dire sur sa gestion ?
+
+↦ Que faire des trolls et des crétins [c.f. les votes électoraux] : beaucoup de gens votent de fait contre leur intérêt.
+
+↦ Problème 3. Incentive.
+
+↦ Si tout le monde a le même pouvoir décisionnel quel que soit son investissement autour d’une problème donné alors qu’est-ce qui motive à s’investir dans ce problème ?
+
+↦ Si tout le monde a le même pouvoir décisionnel quel que soit son investissement financier qu’est-ce qui va pousser des gens à investir financièrement ?
+
+↦ Introduire ici le problème du skin in the game. Les décisions sont d'autant plus investies, réfléchies et informées que les acteurs ont quelque-chose [économique] en jeu dans ces questions.
+
+---
+<!-- slide: id="blockchain-080-reputation-weighted-voting" title="Reputation-Weighted Voting" layout="center" -->
+III.2.c {.kicker}
+### Reputation-Weighted Voting
+
+--- notes
+
+↦ Le poids de chacun dans une prise de décision est fonction d’une métrique - la réputation - acquise par la réalisation de tâches.
+
+↦ Les réputations peuvent être décroissantes avec le temps pour éviter des situations de rentes historiques : quelqu’un qui méritait de l’influence il y a dix ans n’en mérite plus nécessairement aujourd’hui.
+
+↦ c.f. Colony.
+
+↦ Coordination de contributeurs distribués en domaines : développeurs, communication, etc.
+
+↦ Les contributeurs acquièrent de la réputation en fonction des tâches réalisées et des paiements obtenus à la faveur de ces tâches.
+
+↦ La réputation est décroissante.
+
+↦ Certains seuils de réputation permettent de prendre des décisions sans en passer par un vote.
+
+↦ On fait fasse ici à un autre problème : la lourdeur du vote pour chaque chose. Problème de participation et de bureaucratisation.
+
+↦ Problème de l’évaluation fasciste de chaque être.
+
+---
+<!-- slide: id="blockchain-081-token-locking-voting" title="Token-Locking Voting" layout="center" -->
+III.2.d {.kicker}
+### Token-Locking Voting
+
+--- notes
+
+↦ Le Token-Locking Voting repose sur la mise en dépôt de tokens.
+
+↦ Les tokens ainsi mis en dépôt sont « immobilisés » pour une période donnée : leur propriétaire ne peut ni les transférer ni les revendre jusqu'à ce que ceux-ci soient libérés.
+
+↦ Dans le Token-Locking Voting les tokens utilisés pour un vote sont simultanément mis en dépôt.
+
+↦ Le poids de chaque vote est proportionnel au nombre de token ainsi mis en dépôt x la durée pendant laquelle ces tokens seront immobilisés.
+
+↦ On peut obtenir le même poids décisionnel avec beaucoup de tokens mis en dépôt pour une courte période ou avec peu de tokens mis en dépôts pour une longue période.
+
+↦ Le Token-Locking Voting a plusieurs intérêts :
+
+1. Il incite à des prises de décisions tournées vers le long terme - car si la valeur du token s’effondre à court terme, les votants ne pourront pas les revendre à temps.
+
+2. Il équilibre - partiellement - les écarts de richesse en permettant à des petits token holders d'accroitre leur pouvoir décisionnel en immobilisant leurs tokens sur le long terme.
+
+---
+<!-- slide: id="blockchain-082-quadatric-voting" title="Quadatric voting" layout="center" -->
+III.2.e {.kicker}
+### Quadatric voting
+
+--- notes
+
+↦ Le votre quadratique est une sorte d'entre-deux entre le 1T1V et le 1P1V.
+
+↦ Le but en est de permettre à un acteur de moduler le poids de son vote avec des tokens, tout en évitant les effets de monopolisation de la décision.
+
+↦ Le coût du n+1 poids décisionnel est plus important que le le coût du n poids.
+
+---
+<!-- slide: id="blockchain-083-vote-quadratique" title="Vote quadratique" layout="center" -->
+<img src="/assets/qv-diagram.png" alt="Vote quadratique" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Par exemple, un vote va couter 1 token, 2 votes vont couter 4 tokens, 3 votes vont couter 9 tokens, etc.
+
+---
+<!-- slide: id="blockchain-084-cout-quadratique-du-vote" title="Coût quadratique du vote" layout="center" -->
+<img src="/assets/1*Qh6Yd1iPpoFdZtjzuZBROw.png" alt="Coût quadratique du vote" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Autrement dit le poids d'un vote n'est égal qu'à la racine carré du nombre de tokens engagés.
+
+↦ Le principal problème du vote quadratique est qu'il réclame lui-aussi une forme d'identification des votants.
+
+↦ Sinon, il serait facile de voter 9 fois avec 1 token, plutôt que de dépenser 9 tokens sur vote [ce qui aurait moins de poids].
+
+---
+<!-- slide: id="blockchain-085-futarchy" title="Futarchy" layout="center" -->
+III.2.f {.kicker}
+### Futarchy
+###### > *Vote for values, bet on beliefs.*
+###### - Robin Hanson (2000)
+
+--- notes
+
+↦ Revenir sur la distinction entre valeur et moyen à mettre en oeuvre pour y parvenir.
+
+↦ Ex. Maximiser le bonheur. Minimiser les inégalités.
+
+↦ Certes, mais comment y parvenir ? Pour Hansen, la plupart de ces questions relève de croyances.
+
+↦ Il convient donc de séparer les processus de choix des valeurs partagées, des processus de choix des moyens à mettre en oeuvre pour les concrétiser.
+
+↦ Pour le premier problème, il est pertinent, d’après Hanson, de recourir au vote traditionnel.
+
+↦ Pour le second problème, Hanson préconise le recours aux marchés prédictifs.
+
+
+↦ Un marché prédictif est un marché dont les acteurs peuvent acheter des actifs attachés à des événements du futur.
+
+↦ Ex. : Qui va gagner la coupe du monde ? Qui va remporter l'élection présidentielle ?
+
+↦ L'expérience montre que les marchés prédictifs sont relativement pertinents pour anticiper sur la vérité d'événements à venir.
+
+↦ Revenir sur la sagesse des foule et la question du marché comme dispositif d'agrégation de l'information.
+
+↦ La futarchy vise à appliquer ce principe à la prise de décision concernant le choix des moyens politique à mettre en pauvre pour appliquer une décision.
+
+↦ Exemple : « augmenter le PIB d’ici 2034 ».
+
+↦ Cet objectif est fixé par les dirigeants du pays, de manière traditionnelle et démocratique.
+
+↦ Les marchés prédictif prennent ensuite le relais pour déterminer les politiques à mettre en oeuvre pour l’atteindre.
+
+↦ Diverses propositions de politiques publiques sont avancées. Par exemple : sauver les banques en faillite.
+
+↦ Deux actifs sont créés - un « oui » et un « non » - chacun promettant de payer $1 par trillion de PIB après 10 ans.
+
+↦ Après deux semaines d’existence des marchés l’actif du « oui » vaut $24.94 (ce qui signifie que le marché pense que le PIB en 2030 sera de $24.94 trillion) and l’actif du « non » vaut $26.20. Le non l’emporte, et les banques ne sont donc pas sauvées.
+
+
+↦ Tous les échanges sur le marché du « oui » sont annulés tandis que dans 10 ans, tout ceux détenant un actif « non » sont payés en fonction du PIB effectif à cette date.
+
+↦ Pourquoi le recours aux marchés prédictifs ?
+
+↦ Parce qu’ils sont presque à chaque fois plus efficaces que les experts ou que les sondages - y compris pour devinez les votes finaux des sondés.
+
+↦ Il s’agit d’un exemple typique d’agrégation d’information et de mise en oeuvre de la sagesse des foules.
+
+↦ Comme il y a un enjeux économiques, les investisseurs prennent le temps de collecter de l’information pertinentes avant de faire leurs jeux ...
+
+↦ Déjà mis en oeuvre ponctuellement dans certaines grandes entreprises: HP, Google, Yahoo, Microsoft, etc.
+
+» c.f. Gnosis.
+
+---
+<!-- slide: id="blockchain-086-conclusion" title="Conclusion" layout="cover" -->
+III.3 {.kicker}
+# Conclusion
+
+--- notes
+
+↦ Revenir sur la figure de l'homo-oeconomicus.
+
+↦ Non pas une hypothèse anthropologique, mais une hypothèse gouvernementale.
+
+↦ Il suffit souvent, pour gouverner, de faire l’hypothèse que les acteurs tenteront de maximiser leurs gains et de minimiser leurs pertes.
+
+↦ Dès lors il devient possible de gouverner - de conduire les conduites - en jouant sur l’environnement économique à l’intérieur duquel se déploie la figure de l’homo-oeconomicus.
+
+↦ En façonnant l’environnement dans lequel prend place le jeu économique, il est possible 1. de façonner l’ordre du rapport de force politique entre les plus riches et les plus pauvres - 1T1V vs 1P1V vs quadratic voting - et 2. d’influencer radicalement les rationalités mises en oeuvre dans la prise de décision - mise en dépôt des tokens, marché prédictif, etc.
+
+↦ Il est donc possible d’influencer les comportements et les rapports politiques en designant de manière réfléchie les mécanismes numériques d’expression et d’agrégation des préférences individuelles.
+
+↦ Reparler ici de la question du skin in the game ?
+
+On en profites après pour parler du mécanism design avec la question du DAI ?
+
+---
+<!-- slide: id="blockchain-087-marche-predictif" title="Marché prédictif" layout="center" -->
+<img src="/assets/Capture d’écran 2025-11-06 à 09.33.09.png" alt="Marché prédictif" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-088-nft" title="NFT" layout="center" -->
+## NFT
+### Non-Fongible Token
+
+--- notes
+
+↦ Token = jeton
+
+↦ Fongible : un bien sans identité propre, absolument équivalent à tout autre du même genre.
+
+↦ Ex. Pièce de monnaie.
+
+↦ Non-fongible : opposé.
+
+↦ Un token non-fongible est un token doté d’une identité propre - et donc non-immédiatement équivalent à tout autre.
+
+↦ En pratique, un NFT constitue une sorte preuve d’authenticité de quelque chose : droit de propriété, oeuvre d'art, preuve de présence, etc.
+
+↦ L'idée des NFT a émergé de ce que l'on appelle les Colored Coins, initialement émis sur la blockchain Bitcoin à partir de 2012 / 2013.
+
+↦ Les Colored Coins sont des jetons qui représentent des actifs du monde réel sur la blockchain et peuvent être utilisées pour prouver la propriété de n'importe quel actif, des métaux précieux aux voitures en passant par l'immobilier.
+
+↦ La blockchain du Bitcoin n'étant pas initialement prévue pour ce type de cas d'usage, les créateurs des Colored Coins ont trouvé une manière d'associer des metadata à des Bitcoins pour les rendre reconnaissables et uniques.
+
+↦ Analogie avec billet de banque avec, inscrit dessus, les droits de propriétés d'une voiture.
+
+↦ Le secteur des NFTs va surtout se démocratiser avec l'apparition des blockchains programmables, et notamment d'Ethereum.
+
+↦ Premières expériences en 2017.
+
+↦ DistributedGallery et ReadyMade-Token.
+
+↦ CryptoPunks
+
+---
+<!-- slide: id="blockchain-089-cryptopunks" title="CryptoPunks" layout="center" -->
+<img src="/assets/Clipboard_3.png" alt="CryptoPunks" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Matt Hall et John Watkinson (LarvaLabs).
+
+↦ Série de 10000 personnages uniques, possédant chacun des traits particuliers.
+
+↦ Certains traits sont assez communs, d'autres plus rares.
+
+↦  La distribution de ces traits est générée alogrithmiquement. On parle d'art génératif, un champ très actif dans le secteur des NFTs - même s'il lui préexiste.
+
+↦ Le succès des CryptoPunks tient au fait d'avoir fusionné les logiques de l'art génératif et les mécanismes de création de rareté offerts par la blockchain.
+
+---
+<!-- slide: id="blockchain-090-cryptokitties" title="CryptoKitties" layout="center" -->
+<img src="/assets/Clipboard_4.png" alt="CryptoKitties" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Les NFTs sont formalisés fin 2017 / début 2018 avec l’apparition des CryptoKitties.
+
+↦ Expliciter la notion de trait, de rareté, de croisement génétique, etc.
+
+↦ Expliciter comment ça a rendu la blockchain inutilisable pendant quelques temps.
+
+---
+<!-- slide: id="blockchain-091-metadonnees-dun-nft" title="Métadonnées d’un NFT" layout="center" -->
+<img src="/assets/Capture d’écran 2023-10-09 à 13.55.34.png.public.png" alt="Métadonnées d’un NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Comment ça fonctionne en pratique.
+
+↦ Chaque collection de NFT - par exemple les CryptoKitties - sont gérés par un smart contract.
+
+↦ Ce smart contrat contrôle la génération des NFT - qui peut les créer, sous quelles conditions, etc - gère leur transfert et les associe à des metadata : nom, description, image, attributs, etc.
+
+---
+<!-- slide: id="blockchain-092-metadonnees-dun-nft" title="Métadonnées d’un NFT" layout="center" -->
+```
+{
+"name":"Satire in Shared Spaces",
+"created_by":"Botto",
+"external_url":"https://botto.com",
+"description":"Absurdism Period. 2023 October #003.",
+"attributes":[
+{"trait_type":"Artist","value":"Botto"},
+{"trait_type":"Period","value":"Absurdism"}
+{"trait_type":"Round","value":"3"},
+],
+"image_details" {
+"width":4096,
+"height":4096
+},
+"image":"ipfs://QwaL...."
+}
+```
+
+---
+<!-- slide: id="blockchain-093-stockage-dun-nft" title="Stockage d’un NFT" layout="center" -->
+<img src="/assets/Clipboard_1.png" alt="Stockage d’un NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Expliquer comment est usuellement stocké le contenu d’un NFT : serveur ou IPFS.
+
+---
+<!-- slide: id="blockchain-094-remuneration-du-createur" title="Rémunération du créateur" layout="center" -->
+<img src="/assets/Capture d’écran 2023-10-09 à 13.55.34.png.public.png" alt="Rémunération du créateur" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ En profiter pour faire un point sur la question du creator's  earning - et la manière dont ça fonctionne usuellement dans les mondes de l'art.
+
+---
+<!-- slide: id="blockchain-095-places-de-marche-nft" title="Places de marché NFT" layout="center" -->
+<img src="/assets/Clipboard_7.png" alt="Places de marché NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Ces NFTs sont échangés sur des places de marché : OpenSea, Rarible, SuperRare, Versus, Zora, etc.
+
+↦ Explicitez les spécificités de chacune de ces places de marché.
+
+↦ Que vend-on sur ces places de marché ?
+
+---
+<!-- slide: id="blockchain-096-beeple" title="Beeple" layout="center" -->
+<img src="/assets/Clipboard_5.png" alt="Beeple" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Beeple.
+
+↦ Un des artistes les plus cher.
+
+↦ A vendu un NFT aux enchères chez Christies pour 69 millions.
+
+---
+<!-- slide: id="blockchain-097-bored-ape-yacht-club" title="Bored Ape Yacht Club" layout="center" -->
+<img src="/assets/Clipboard_6.png" alt="Bored Ape Yacht Club" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Bored Ape Yacht Club
+
+↦ Basé sur l’exclusivité de certains accès - le NFT fonctionne comme carte de membre d’un club : nouvelles ouvres, accès à certaines soirées, etc.
+
+↦ Il existe aussi des initiatives plus intéressantes qui vont s'efforcer d'envisager des formes d'expression artistiques plus étroitement liée à leur médium : la blockchain.
+
+↦ Revenir sur la question du lien entre l'art et son médium.
+
+↦ Lorsqu'un nouveau médium apparait, ses expressions artistiques empreinte le plus souvent ses formes à des médiums hérités.
+
+↦ La photo s'est d'abord inspiré de la peinture, avec un souci nouveau du réalisme. On s'est ensuite aperçu que la photo pouvait être autre chose : un travail sur la lumière, le contraste, le flou et la netteté, la capture sur le vif de moments singuliers, etc.
+
+↦ De la même manière, le cinéma s'est d'abord inspiré du théâtre : unité de lieu et de temps, plans séquence, etc.
+
+↦ Il faudra attendre quelques années pour le cinéma découvre le montage comme principe de son langage : opposition des scènes et des points de vue, accélérations et décélération rythmiques, etc.
+
+↦ Le même procédé expérimental est en cours pour ce qui concerne les oeuvres liées à la blockchain.
+
+---
+<!-- slide: id="blockchain-098-art-generatif-on-chain" title="Art génératif on-chain" layout="center" -->
+<video src="/assets/audiovisual.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+↦ Deadbeef
+
+↦ Le code de l’oeuvre est stocké on-chain.
+
+↦ Contrainte matérielle de minimalisme qui se lie à une esthétique low-tech
+
+---
+<!-- slide: id="blockchain-099-plantoid" title="Plantoid" layout="center" -->
+<img src="/assets/Clipboard.png" alt="Plantoid" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Plantoid.
+
+↦ Primavera de Filippi.
+
+↦ Les fleurs mécaniques sont initialement repliées.
+
+↦ Des micro-paiements en crypto permettent de nourrir la plante qui s'ouvre progressivement.
+
+↦ Une fois qu'une certaine somme d'argent a été récolté, la plante peut se reproduire.
+
+↦ Les fonds sont automatiquement envoyés sur le wallet d'une équipe d'artistes et d'ingénieurs chargés de produire un nouvel exemplaire.
+
+↦ Le seuil à atteindre pour enclencher cette reproduction varie d'un Plantoid à l'autre.
+
+---
+<!-- slide: id="blockchain-100-two-degrees" title="Two Degrees" layout="center" -->
+<img src="/assets/1*pYg6uq7XCJb8MTw7pviAkg.webp" alt="Two Degrees" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Two Degrees, terra0.
+
+↦ Capteur de température placés dans une forêt allemande.
+
+↦ Expliciter ce qu'est un oracle.
+
+---
+<!-- slide: id="blockchain-101-crypto-confessionnal" title="Crypto-confessionnal" layout="center" -->
+<img src="/assets/Clipboard_2.png" alt="Crypto-confessionnal" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Présenter le crypto-confessionnal.
+
+↦ Revenir sur la question du commerce des indulgences et son histoire : l'invention du purgatoire, le marché secondaire du pardon, etc.
+
+↦ Comment décentraliser le pardon et dissoudre le tiers de confiance que constitue l'église - et par là-même sa position de rente économique.
+
+---
+<!-- slide: id="blockchain-102-la-question-de-laura" title="La question de l’aura" layout="center" -->
+## La question de l’aura
+### Walter Benjamin
+
+--- notes
+
+↦ Il n'est reste pas moins que l'essentiel des oeuvres sont aujourd'hui constituées de JPEGs
+
+↦ Pourquoi s’arracher des JPEGs aussi chers ?
+
+
+↦ c.f. reprint.eth
+
+↦ La question de l’aura chez Walter Benjamin.
+
+↦ L’oeuvre d’art à l’heure de sa reproductibilité technique (1936)
+
+↦ Revenir sur la question de l’aura.
+
+↦ Expérience religieuse : l’apparition d’un lointain, quelque proche que puisse être ce qui l’évoque.
+
+↦ L’expérience d’une présence, en tant qu’elle nous échappe.
+
+↦ L’aura est une expérience mélancolique.
+
+↦ 19ème et 20ème : baisse de l’expérience religieuse, déplacée vers l’expérience artistique.
+
+↦ L’aura d’une oeuvre c’est son hic et nunc, le ici et maintenant qui en fait un objet unique et irremplaçable.
+
+↦ Tout ce qui exprime son inscription originaire dans un lieu, un temps, une durée, une tradition.
+
+↦ La présence de Michel-Ange dans la statut du David, la présence de Goya dans le Sabbat des sorcières, etc.
+
+↦ Tout cela va disparaître avec l’industrialisation de la culture.
+
+↦ Revenir sur la question des industries culturelles : l’oeuvre d’art est reproductible à une échelle industrielle : photographie, disque, etc.
+
+↦ Elle ne porte plus la marque de la présence de l'artiste, la trace de sa main, etc.
+
+↦ Avec l'arrivée des dispositifs de reproduction l'art va se répandre dans le monde social / cinéma, vinyle, photographie / et va petit à petit quitter son statut d'oeuvre unique et original pour se répandre sous la forme de séries, de reproductions, consommable par tous et identique pour tous.
+
+↦ L'art telle que le cinéma ou la musique sur vinyle deviennent alors immédiatement des expériences collective de masse : je regarde le film avec une centaine d'autres personnes, j'écoute ce vinyle en même temps que plusieurs centaine millier d'autres personnes, je regarde cette photographie tiré en plusieurs milliers d'exemplaire.
+
+↦ Ex. Série Netflix.
+
+↦ Il fait partie intégrante d'une expérience culturelle de masse qu'elle soit partagée par plein de gens à la fois.
+
+↦ Ex. Coupe du monde.
+
+
+↦ La reproductibilité va donc écraser l'unicité et par ce mouvement détruire ce que Benjamin appelle "L'aura" de l'oeuvre.
+
+↦ Cette dynamique a été radicalisée par le numérique où tout contenu est reproductible infiniment et à coup nul.
+
+↦ c.f. La différence de fétichisme de l’objet entre les collectionneurs de vinyles et les gens qui écoutent des MP3s.
+
+↦ Quel rapport avec les NFTs ?
+
+↦ Les NFT viennent d'une certaine manière résoudre ce "problème" de la disparition de l'aura en recréant de manière artificielle le sentiment d'authenticité via l'authentification de l'oeuvre sur une blockchain, qui fixe a chaque image une place précise sur la flèche du temps, reconstruisant ainsi artificiellement l'idée d'un "ici et maintenant, hic et nunc" de l'oeuvre d'art.

@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "pnpm --filter site dev",
+    "dev:blockchain": "svx-deck dev decks/blockchain",
     "dev:demo": "svx-deck dev decks/demo",
     "dev:economics": "svx-deck dev decks/economics",
     "dev:history-1": "svx-deck dev decks/history-1",
