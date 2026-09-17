@@ -19,8 +19,9 @@ for (const id of await embeddedDecks(
     throw new Error(`Deployment requires a note-free embedded export: ${id}`);
 }
 
-// An isolated upload contains only the public build and its server configuration.
+// The local/CI test container contains only the public build and server config.
 const output = await mkdtemp(join(tmpdir(), "university-deploy-"));
-await cp(new URL("../deploy/", import.meta.url), output, { recursive: true });
+for (const name of ["Dockerfile", "Caddyfile"])
+  await cp(new URL(`../deploy/${name}`, import.meta.url), join(output, name));
 await cp(build, join(output, "public"), { recursive: true });
 console.log(output);
