@@ -58,7 +58,7 @@ jobs:
           echo "DEPLOYMENT_DIR=$deployment_dir" >> "$GITHUB_ENV"
           docker build -t university-site "$deployment_dir"
           docker run -d --name university-site -p 127.0.0.1:8080:8080 university-site
-          curl --retry 15 --retry-connrefused --retry-delay 1 --fail http://127.0.0.1:8080/ --output /dev/null
+          curl --retry 15 --retry-all-errors --retry-delay 1 --max-time 5 --fail http://127.0.0.1:8080/ --output /dev/null
 
       - run: node site/scripts/check-deploy.mjs http://127.0.0.1:8080
       - run: pnpm test:ui
