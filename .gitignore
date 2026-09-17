@@ -10,6 +10,7 @@ decks/*/src/generated/deck
 !.env.example
 
 # Portal build staging and browser reports
+.ci/
 site/.decks/
 test-results/
 playwright-report/

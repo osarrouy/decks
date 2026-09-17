@@ -123,22 +123,26 @@ The [Caddy configuration](deploy/Caddyfile) serves the generated error document 
 
 ## Railway deployment
 
-The [Site workflow](../.github/workflows/site.yml) runs on pushes and pull requests targeting `main`, and can be started manually. It runs diagnostics, unit tests, the complete portal/deck build, HTTP checks and browser tests against a Caddy container. Successful runs on `main` upload that same public export to Railway, then compare the served pages against the build. Pull requests never deploy.
+The [Site workflow](../.github/workflows/site.yml) runs on pushes and pull requests targeting `main`, and can be started manually. It runs diagnostics, unit tests, the complete portal/deck build, HTTP checks and browser tests against a Caddy container. It does not upload artifacts or trigger deployments. Railway watches `main` with **Wait for CI** enabled: after GitHub Actions succeeds, Railway retrieves that commit, builds the site and deploys it. Pull requests never deploy.
 
-GitHub performs the build because `@dg/ui` currently lives in a separate private repository. CI checks out the revision pinned by `DG_UI_REF`; a [CI-only helper](../tooling/ci-ui.mjs) adjusts the local dependency links in the disposable checkout without changing dependency versions. Local development retains its existing UI link. Uncommitted UI changes are not included in CI; update the pinned revision after publishing changes to that repository.
+GitHub Actions and Railway use the same [private UI checkout script](../tooling/fetch-ci-ui.mjs), which pins a commit from `distributedgallery/interfaces`, verifies GitHub's SSH host key and deletes temporary credentials even when checkout fails. A [build-only helper](../tooling/ci-ui.mjs) adjusts dependency links in the disposable checkout without changing locked versions. Local development retains its existing UI link. Uncommitted UI changes are not included; update the pinned commit after pushing UI changes to its repository.
 
-Configure these GitHub repository settings before enabling the workflow:
+Configure these settings:
 
 | Setting | Purpose |
 | --- | --- |
-| Secret `DG_UI_DEPLOY_KEY` | Private SSH key for a read-only deploy key on `distributedgallery/interfaces` |
-| Secret `RAILWAY_TOKEN` | Railway project token scoped to the target `production` environment |
-| Variable `RAILWAY_SERVICE_ID` | ID of the Railway service receiving the export |
-| Variable `SITE_URL` | Public HTTPS origin used for post-deployment checks |
+| GitHub Actions secret `DG_UI_DEPLOY_KEY` | Read-only deploy key on `distributedgallery/interfaces` for CI |
+| Railway variable `DG_UI_DEPLOY_KEY` | Separate read-only deploy key on the same private repository for builds |
+| Railway variable `RAILPACK_CONFIG_FILE` | `site/deploy/railpack.json` |
+| Railway source | `osarrouy/decks`, branch `main`, repository root `/` |
+| Railway build settings | Railpack builder; health check `/`, timeout 60 seconds; restart on failure, maximum 3 retries |
+| Railway **Wait for CI** | Enabled; failed checks block automatic deployment |
 
-Create an empty Railway service with a generated domain targeting port 8080. Leave its source disconnected from GitHub: this workflow deploys the tested export through the CLI, so a second GitHub autodeploy is unnecessary. The upload includes its own `railway.json`, Dockerfile and Caddyfile. The root-page health check gates promotion, HTML and mutable media revalidate, and fingerprinted assets use long-lived caching. Fork pull requests cannot access the private UI key and require a trusted branch with access to run the full build.
+The Railway GitHub integration needs access to the course repository. The [Railpack configuration](deploy/railpack.json) installs Node 22 and the workspace's pnpm version, retrieves the private UI dependency, and runs `pnpm build`. Build credentials are supplied through secret mounts, removed from package-install/build child environments, and excluded from the final image. Only `site/build/` and the shared [Caddy configuration](deploy/Caddyfile) are copied into the runtime image. The public domain targets port 8080; the root-page health check gates promotion. HTML and mutable media revalidate; fingerprinted assets use long-lived caching.
 
-For a first deployment from this workspace, after `pnpm check` and `pnpm build`:
+GitHub Actions needs only repository read access; `RAILWAY_TOKEN`, `RAILWAY_SERVICE_ID` and `SITE_URL` are no longer used by the workflow. Do not add a deployment-waiting job to this workflow: Railway is itself waiting for the workflow to finish. Fork pull requests cannot access the private UI key and require a trusted branch with access to run the full build.
+
+To verify the public server locally, after `pnpm check` and `pnpm build`:
 
 ```sh
 deployment_dir=$(node site/scripts/prepare-deploy.mjs)
@@ -147,9 +151,8 @@ docker run --rm -p 127.0.0.1:8080:8080 university-site
 # In another terminal:
 node site/scripts/check-deploy.mjs http://127.0.0.1:8080
 COURSE_TEST_ORIGIN=http://127.0.0.1:8080 pnpm test:ui
-# With Railway linked to the intended project/environment:
-railway up "$deployment_dir" --path-as-root --no-gitignore --service <service-id> --ci
+# After Railway deploys the same source and UI commits:
 node site/scripts/check-deploy.mjs https://<public-domain>
 ```
 
-The preparation command creates an isolated temporary upload directory and prints its path. It copies only `site/build/` and the server configuration, verifies that embedded manifests exclude notes, and leaves authored course files intact. `--no-gitignore` applies only to this prepared directory. Railway CLI CI mode returns after the container build; the HTTP check verifies that the public deployment actually serves the expected export.
+The preparation command creates an isolated temporary directory for local/CI Docker checks and prints its path. It copies only `site/build/`, the Dockerfile and Caddyfile, verifies that embedded manifests exclude notes, and leaves authored course files intact. Production builds happen directly on Railway; there is no CLI export upload or generated publication branch. The HTTP check compares served pages against the local build, so run it against matching source and UI commits.

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "node",
+  "packages": { "node": "22", "pnpm": "9.14.4" },
+  "buildAptPackages": ["...", "git", "openssh-client"],
+  "secrets": ["DG_UI_DEPLOY_KEY"],
+  "steps": {
+    "install": {
+      "inputs": [{ "step": "packages:mise" }, { "local": true }],
+      "commands": [
+        "node tooling/fetch-ci-ui.mjs",
+        "env -u DG_UI_DEPLOY_KEY pnpm install --frozen-lockfile"
+      ],
+      "secrets": ["DG_UI_DEPLOY_KEY"]
+    },
+    "build": {
+      "inputs": [{ "step": "install" }],
+      "commands": ["env -u DG_UI_DEPLOY_KEY pnpm build"],
+      "secrets": []
+    }
+  },
+  "deploy": {
+    "aptPackages": [],
+    "base": { "image": "caddy:2.11.4-alpine" },
+    "inputs": [
+      { "step": "build", "include": ["site/build", "site/deploy/Caddyfile"] }
+    ],
+    "variables": { "SITE_ROOT": "/app/site/build" },
+    "startCommand": "caddy run --config /app/site/deploy/Caddyfile --adapter caddyfile"
+  }
+}

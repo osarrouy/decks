@@ -19,20 +19,9 @@ jobs:
   site:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      DG_UI_REF: 2147a1267357f228286158680ee887c791d7e4b2
     steps:
       - uses: actions/checkout@v7
         with:
-          persist-credentials: false
-
-      - name: Check out the pinned private UI package
-        uses: actions/checkout@v7
-        with:
-          repository: distributedgallery/interfaces
-          ref: ${{ env.DG_UI_REF }}
-          path: .ci/interfaces
-          ssh-key: ${{ secrets.DG_UI_DEPLOY_KEY }}
           persist-credentials: false
 
       - uses: pnpm/action-setup@v4
@@ -43,9 +32,14 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      - run: node --test tooling/fetch-ci-ui.test.mjs
+
       - name: Resolve the CI checkout and install locked dependencies
+        env:
+          DG_UI_DEPLOY_KEY: ${{ secrets.DG_UI_DEPLOY_KEY }}
         run: |
-          node tooling/ci-ui.mjs
+          node tooling/fetch-ci-ui.mjs
+          unset DG_UI_DEPLOY_KEY
           pnpm install --frozen-lockfile
 
       - run: pnpm check
@@ -55,7 +49,6 @@ jobs:
       - name: Package and serve the public export
         run: |
           deployment_dir=$(node site/scripts/prepare-deploy.mjs)
-          echo "DEPLOYMENT_DIR=$deployment_dir" >> "$GITHUB_ENV"
           docker build -t university-site "$deployment_dir"
           docker run -d --name university-site -p 127.0.0.1:8080:8080 university-site
           curl --retry 15 --retry-all-errors --retry-delay 1 --max-time 5 --fail http://127.0.0.1:8080/ --output /dev/null
@@ -64,29 +57,6 @@ jobs:
       - run: pnpm test:ui
         env:
           COURSE_TEST_ORIGIN: http://127.0.0.1:8080
-
-      - name: Install the deployment CLI
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: npm install --global @railway/cli@5.49.6
-
-      - name: Deploy the tested export to Railway
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          RAILWAY_SERVICE_ID: ${{ vars.RAILWAY_SERVICE_ID }}
-          SITE_URL: ${{ vars.SITE_URL }}
-        run: |
-          test -n "$RAILWAY_TOKEN" && test -n "$RAILWAY_SERVICE_ID" && test -n "$SITE_URL"
-          railway up "$DEPLOYMENT_DIR" --path-as-root --no-gitignore --service "$RAILWAY_SERVICE_ID" --environment production --ci
-          for attempt in $(seq 1 60); do
-            if node site/scripts/check-deploy.mjs "$SITE_URL" > "$RUNNER_TEMP/site-check.log" 2>&1; then
-              cat "$RUNNER_TEMP/site-check.log"
-              exit 0
-            fi
-            sleep 5
-          done
-          cat "$RUNNER_TEMP/site-check.log"
-          exit 1
 
       - name: Server logs
         if: failure()
