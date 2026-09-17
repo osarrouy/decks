@@ -5,6 +5,11 @@
   "buildAptPackages": ["...", "git", "openssh-client"],
   "secrets": ["DG_UI_DEPLOY_KEY"],
   "steps": {
+    "runtime": {
+      "inputs": [{ "image": "caddy:2.11.4-alpine" }],
+      "commands": ["apk add --no-cache bash"],
+      "secrets": []
+    },
     "install": {
       "inputs": [
         { "step": "packages:mise" },
@@ -24,7 +29,7 @@
   },
   "deploy": {
     "aptPackages": [],
-    "base": { "image": "caddy:2.11.4-alpine" },
+    "base": { "step": "runtime" },
     "inputs": [
       { "step": "build", "include": ["site/build", "site/deploy/Caddyfile"] }
     ],
