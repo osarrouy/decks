@@ -6,7 +6,10 @@
   "secrets": ["DG_UI_DEPLOY_KEY"],
   "steps": {
     "install": {
-      "inputs": [{ "step": "packages:mise" }, { "local": true }],
+      "inputs": [
+        { "step": "packages:mise" },
+        { "local": true, "include": ["."] }
+      ],
       "commands": [
         "node tooling/fetch-ci-ui.mjs",
         "env -u DG_UI_DEPLOY_KEY pnpm install --frozen-lockfile"
