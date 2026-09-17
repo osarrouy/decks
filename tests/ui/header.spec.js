@@ -13,7 +13,10 @@ for (const theme of ["light", "dark"]) {
         theme,
       );
       const header = page.locator("header").first();
-      const identity = header.locator(".identity a");
+      const identity = header.getByRole("link", {
+        name: `${example.identity} >_`,
+        exact: true,
+      });
       await expect(identity).toHaveText(`${example.identity} >_`);
       await expect(identity).toHaveAttribute("href", example.href);
       const colors = await header.evaluate((element) => {
@@ -33,7 +36,7 @@ for (const theme of ["light", "dark"]) {
         "color",
         colors[example.app ? "text-muted" : "text-prominent"],
       );
-      const app = header.locator(".identity > span:not(.cursor)");
+      const app = header.getByRole("link", { name: example.app, exact: true });
       if (example.app) {
         await expect(app).toHaveText(example.app);
         await expect(app).toHaveCSS("color", colors["text-prominent"]);

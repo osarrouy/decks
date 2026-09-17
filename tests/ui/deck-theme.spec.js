@@ -1,4 +1,13 @@
 import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
+import { parseSingleFileDeck } from "@svx-deck/core/deck/singleFile";
+
+const { slides } = parseSingleFileDeck(
+  readFileSync(
+    new URL("../../decks/history-1/deck.svx", import.meta.url),
+    "utf8",
+  ),
+);
 
 const course =
   "/introduction-aux-cultures-numeriques/?vue=chapitres&section=histoire-du-numerique&onglet=slides";
@@ -18,7 +27,7 @@ for (const width of [1280, 390]) {
     await expect(surface).toBeVisible();
     await expect(
       reader.getByLabel("Choisir une slide").locator("option"),
-    ).toHaveCount(58);
+    ).toHaveCount(slides.length);
     const toggle = page.getByRole("switch", { name: "Dark mode" });
     for (const dark of [false, true]) {
       if ((await toggle.getAttribute("aria-checked")) !== String(dark))

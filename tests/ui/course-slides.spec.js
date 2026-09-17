@@ -1,4 +1,13 @@
 import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
+import { parseSingleFileDeck } from "@svx-deck/core/deck/singleFile";
+
+const { slides } = parseSingleFileDeck(
+  readFileSync(
+    new URL("../../decks/history-1/deck.svx", import.meta.url),
+    "utf8",
+  ),
+);
 
 const course =
   "/introduction-aux-cultures-numeriques/?vue=chapitres&section=histoire-du-numerique&onglet=slides";
@@ -21,7 +30,7 @@ test("History deck loads its slides and assets, preserves steps, and supports fu
     'iframe[title="Slides : Histoire du numérique"]',
   );
   const select = reader.getByLabel("Choisir une slide");
-  await expect(select.locator("option")).toHaveCount(58);
+  await expect(select.locator("option")).toHaveCount(slides.length);
   // Live decks compile on demand; wait for their client runtime before clicking.
   const frame = page
     .frames()
@@ -50,8 +59,8 @@ test("History deck loads its slides and assets, preserves steps, and supports fu
   await next.click();
   await expect(select).toHaveValue("17");
   await expect(reader.locator(".step")).toContainText("Étape 1/");
-  // Exercise every slide, including local components and both videos.
-  for (let index = 0; index < 58; index++) {
+  // Exercise every authored slide, including local components and videos.
+  for (let index = 0; index < slides.length; index++) {
     await select.selectOption(String(index));
     await expect(select).toHaveValue(String(index));
     await expect
