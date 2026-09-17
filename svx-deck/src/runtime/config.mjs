@@ -5,6 +5,7 @@ import { sveltekit } from "@sveltejs/kit/vite";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
 import { searchForWorkspaceRoot } from "vite";
+import { uiPostcss } from "../../../tooling/postcss.js";
 import {
   svxDeckMarkdownPreprocess,
   svxDeckMdsvexOptions,
@@ -45,6 +46,11 @@ export function viteConfig({
 }) {
   return {
     root: appRoot,
+    css: {
+      postcss: uiPostcss(
+        fileURLToPath(import.meta.resolve("@dg/ui/breakpoints.css")),
+      ),
+    },
     plugins: [
       svxDeckSingleFileDeck({
         ...template,

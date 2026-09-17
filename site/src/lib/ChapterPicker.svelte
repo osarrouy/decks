@@ -3,7 +3,7 @@
 
   /**
    * @typedef {Object} Props
-   * @property {{value: string, label: string, href: string}[]} [items]
+   * @property {{value: string, label: string, part?: string, subtitle?: string, href: string}[]} [items]
    * @property {string} [value]
    */
 
@@ -71,9 +71,19 @@
     <span class="label">Chapitre en cours</span>
     <span class="field">
       {#if selected}
-        <span class="number">{String(selectedIndex + 1).padStart(2, "0")}</span>
+        <span class="number">
+          {String(selectedIndex + 1).padStart(2, "0")}
+        </span>
       {/if}
-      <span class="title">{selected?.label || "Choisir un chapitre"}</span>
+      <span class="title">
+        <span class="title-line">
+          <span>{selected?.label || "Choisir un chapitre"}</span>
+          {#if selected?.part}<span class="part">{selected.part}</span>{/if}
+        </span>
+        {#if selected?.subtitle}
+          <span class="metadata">{selected.subtitle}</span>
+        {/if}
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
         <path d="m2 4 4 4 4-4" />
       </svg>
@@ -98,8 +108,18 @@
             close();
         }}
       >
-        <span class="number">{String(index + 1).padStart(2, "0")}</span>
-        <span class="title">{item.label}</span>
+        <span class="number">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <span class="title">
+          <span class="title-line">
+            <span>{item.label}</span>
+            {#if item.part}<span class="part">{item.part}</span>{/if}
+          </span>
+          {#if item.subtitle}
+            <span class="metadata">{item.subtitle}</span>
+          {/if}
+        </span>
         <span class="indicator" aria-hidden="true"
           >{item.value === value ? "✓" : "↗"}</span
         >
@@ -149,11 +169,28 @@
     min-width: 0;
     overflow-wrap: anywhere;
   }
+  .title-line {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
   .number,
   .indicator,
   svg {
     flex: none;
     color: var(--text-muted);
+  }
+  .metadata {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--accent);
+  }
+  .part {
+    flex: none;
+    color: var(--accent);
+    font-size: var(--metadata-font-size);
+    line-height: 1;
+    white-space: nowrap;
   }
   svg {
     fill: none;

@@ -29,16 +29,16 @@
       lower.includes("lecture") || lower.includes("bibliograph")
         ? `Voici les références proposées pour ce chapitre ou cet enseignement : ${(chapter.bibliography.length ? chapter.bibliography : course.bibliography).map((entry) => excerpt(entry.reference)).join(" ; ")}`
         : lower.includes("révis")
-          ? `Pour réviser « ${chapter.title} », commencez par expliquer les notions suivantes avec vos propres mots : ${chapter.items.join(" ; ")}. Puis cherchez un exemple pour chacune.`
+          ? `Pour réviser « ${chapter.label} », commencez par expliquer les notions suivantes avec vos propres mots : ${chapter.items.join(" ; ")}. Puis cherchez un exemple pour chacune.`
           : lower.includes("chapitre") || lower.includes("résum")
-            ? `Le chapitre « ${chapter.title} » propose de travailler sur les points suivants : ${chapter.items.join(" ; ")}. ${chapter.summary}`
+            ? `Le chapitre « ${chapter.label} » propose de travailler sur les points suivants : ${chapter.items.join(" ; ")}. ${chapter.summary}`
             : lower.includes("plan")
-              ? `Le parcours s’organise en ${course.sections.length} chapitres : ${course.sections.map((section) => section.title).join(" ; ")}.`
+              ? `Le parcours s’organise en ${course.sections.length} chapitres : ${course.sections.map((section) => section.label).join(" ; ")}.`
               : "Cette interface est une démonstration : je ne peux pas encore analyser votre question. Essayez une suggestion pour découvrir une réponse prédéfinie liée au chapitre en cours.";
     messages = [
       ...messages,
-      { role: "user", text: value, chapter: chapter.title },
-      { role: "assistant", text: answer, chapter: chapter.title },
+      { role: "user", text: value, chapter: chapter.label },
+      { role: "assistant", text: answer, chapter: chapter.label },
     ];
     question = "";
     await tick();
@@ -50,7 +50,7 @@
 <ChatPanel>
   <ChatContext
     label="Chapitre en cours"
-    title={chapter.title}
+    title={chapter.label}
     canClear={Boolean(messages.length)}
     onclick={() => (messages = [])}
   />

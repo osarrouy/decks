@@ -2,6 +2,7 @@
   import CourseHeading from "$lib/CourseHeading.svelte";
   import MarkdownContent from "./MarkdownContent.svelte";
   import Bibliography from "./Bibliography.svelte";
+
   /**
    * @typedef {Object} Props
    * @property {any} course
@@ -32,14 +33,18 @@
         {#each course.sections as section, index (section)}
           <a
             class="chapter"
-            href={chapterHref(section, "slides")}
+            href={chapterHref(section, "resume")}
             data-sveltekit-noscroll
           >
             <span class="number">{String(index + 1).padStart(2, "0")}</span>
             <span
-              ><span class="title">{section.title}</span><span class="summary"
-                >{section.summary}</span
-              ></span
+              ><span class="title"
+                ><span>{section.title}</span>{#if section.part}<span
+                    class="part">{section.part}</span
+                  >{/if}</span
+              >{#if section.subtitle}<span class="subtitle"
+                  >{section.subtitle}</span
+                >{/if}<span class="summary">{section.summary}</span></span
             >
             <span class="arrow" aria-hidden="true">↗</span>
           </a>
@@ -129,7 +134,9 @@
   }
 
   .title {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
     font-family: var(--font-serif);
     font-size: 26px;
     font-weight: 400;
@@ -137,6 +144,29 @@
     color: var(--text-prominent);
     text-transform: none;
     letter-spacing: 0;
+  }
+
+  .part {
+    flex: none;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--ui-weight);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--ui-weight);
+    letter-spacing: 0.05em;
+    line-height: 1.45;
+    text-transform: uppercase;
   }
 
   .summary {

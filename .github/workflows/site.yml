@@ -1,0 +1,63 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Finish an active release before starting another one.
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.14.4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: node --test tooling/fetch-ci-ui.test.mjs
+
+      - name: Resolve the CI checkout and install locked dependencies
+        env:
+          DG_UI_DEPLOY_KEY: ${{ secrets.DG_UI_DEPLOY_KEY }}
+        run: |
+          node tooling/fetch-ci-ui.mjs
+          unset DG_UI_DEPLOY_KEY
+          pnpm install --frozen-lockfile
+
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+
+      - name: Package and serve the public export
+        run: |
+          deployment_dir=$(node site/scripts/prepare-deploy.mjs)
+          docker build -t university-site "$deployment_dir"
+          docker run -d --name university-site -p 127.0.0.1:8080:8080 university-site
+          curl --retry 15 --retry-all-errors --retry-delay 1 --max-time 5 --fail http://127.0.0.1:8080/ --output /dev/null
+
+      - run: node site/scripts/check-deploy.mjs http://127.0.0.1:8080
+      - run: pnpm test:ui
+        env:
+          COURSE_TEST_ORIGIN: http://127.0.0.1:8080
+
+      - name: Server logs
+        if: failure()
+        run: docker logs university-site || true

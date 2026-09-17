@@ -1,10 +1,10 @@
 <script>
-  import { Tabs } from "@dg/ui";
+  import { Heading, Tabs } from "@dg/ui";
   import CourseHeading from "$lib/CourseHeading.svelte";
   import { browser } from "$app/environment";
   import ChapterPicker from "$lib/ChapterPicker.svelte";
   import { page } from "$app/state";
-  import FloatingAssistant from "$lib/FloatingAssistant.svelte";
+  import { selectChapter } from "$lib/course-content.js";
   import CourseOverview from "$lib/CourseOverview.svelte";
   import MarkdownContent from "$lib/MarkdownContent.svelte";
   import Bibliography from "$lib/Bibliography.svelte";
@@ -14,7 +14,10 @@
 
   function courseHref(slug, destination, section, resource) {
     // eslint-disable-next-line svelte/prefer-svelte-reactivity -- Serialized immediately, not retained as reactive state.
-    const query = new URLSearchParams({ vue: destination, onglet: resource });
+    const query = new URLSearchParams({
+      vue: destination,
+      onglet: resource,
+    });
     if (section) query.set("section", section);
     return `/${slug}/?${query}`;
   }
@@ -23,16 +26,11 @@
     browser ? page.url.searchParams : new URLSearchParams(),
   );
   let tab = $derived(
-    params.get("onglet") === "bibliographie" ? "bibliographie" : "slides",
+    ["resume", "slides", "bibliographie"].includes(params.get("onglet"))
+      ? params.get("onglet")
+      : "resume",
   );
-  let legacyIndex = $derived(
-    /^section-(\d+)$/.exec(params.get("section") || ""),
-  );
-  let selected = $derived(
-    course.sections.find((section) => section.id === params.get("section")) ||
-      (legacyIndex ? course.sections[Number(legacyIndex[1]) - 1] : undefined) ||
-      course.sections[0],
-  );
+  let selected = $derived(selectChapter(course, params.get("section")));
   let chapterIndex = $derived(course.sections.indexOf(selected));
   let requestedView = $derived(params.get("vue"));
   // Open the overview by default; existing chapter links still open their resource.
@@ -56,11 +54,9 @@
 
 <svelte:head><title>{course.title} — Olivier Sarrouy</title></svelte:head>
 
-<header class="heading framed crossed">
-  <h1>{course.title}</h1>
-</header>
+<Heading title={course.title} crosses="both" />
 
-<div class="workspace framed crossed page-fill">
+<div class="workspace framed crossed">
   <aside class="sidebar" aria-label="Chapitres du cours">
     <div class="sidebar-inner">
       <a
@@ -91,8 +87,18 @@
               : undefined}
             data-sveltekit-noscroll
           >
-            <span class="number">{String(index + 1).padStart(2, "0")}</span>
-            <span class="name">{section.title}</span>
+            <span class="number">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span class="name">
+              <span class="title-line">
+                <span>{section.title}</span>
+                {#if section.part}<span class="part">{section.part}</span>{/if}
+              </span>
+              {#if section.subtitle}
+                <span class="metadata">{section.subtitle}</span>
+              {/if}
+            </span>
             <span class="indicator" aria-hidden="true">↗</span>
           </a>
         {/each}
@@ -103,6 +109,8 @@
           items={course.sections.map((section) => ({
             value: section.id,
             label: section.title,
+            part: section.part,
+            subtitle: section.subtitle,
             href: resourceHref(section, tab),
           }))}
         />
@@ -136,20 +144,25 @@
         value={tab}
         items={[
           {
+            value: "resume",
+            label: "Résumé",
+            href: resourceHref(selected, "resume"),
+          },
+          {
             value: "slides",
             label: "Slides",
             href: resourceHref(selected, "slides"),
           },
           {
             value: "bibliographie",
-            label: "Lectures du chapitre",
+            label: "Bibliographie",
             href: resourceHref(selected, "bibliographie"),
           },
         ]}
         data-sveltekit-noscroll
       />
 
-      {#if tab === "slides"}
+      {#if tab !== "bibliographie"}
         <section class="content" aria-labelledby="chapter-title">
           <CourseHeading
             id="chapter-title"
@@ -158,8 +171,12 @@
               '0',
             )} / {String(course.sections.length).padStart(2, '0')}"
             title={selected.title}
+            subtitle={selected.subtitle}
+            part={selected.part}
           />
-          {#if selected.slides.length}
+          {#if tab === "resume"}
+            <MarkdownContent text={selected.description} />
+          {:else if selected.slides.length}
             {#each selected.slides as support (support.url)}
               {#if support.integration === "iframe"}
                 <SlideDeck title={support.title} url={support.url} />
@@ -187,17 +204,13 @@
               <span class="slide-footer">{course.level} · Olivier Sarrouy</span>
             </div>
           {/if}
-          <div class="outline">
-            <span class="eyebrow">Dans ce chapitre</span>
-            <MarkdownContent text={selected.description} />
-          </div>
           <nav class="pagination" aria-label="Parcourir les chapitres">
             {#if chapterIndex > 0}<a
-                href={resourceHref(course.sections[chapterIndex - 1], "slides")}
+                href={resourceHref(course.sections[chapterIndex - 1], tab)}
                 data-sveltekit-noscroll>← Chapitre précédent</a
               >{:else}<span>Début du cours</span>{/if}
             {#if chapterIndex < course.sections.length - 1}<a
-                href={resourceHref(course.sections[chapterIndex + 1], "slides")}
+                href={resourceHref(course.sections[chapterIndex + 1], tab)}
                 data-sveltekit-noscroll>Chapitre suivant →</a
               >{:else}<span>Fin du cours</span>{/if}
           </nav>
@@ -207,9 +220,17 @@
           <CourseHeading
             id="chapter-reading-title"
             label="Chapitre {String(chapterIndex + 1).padStart(2, '0')}"
-            title="Lectures du chapitre"
+            title="Bibliographie"
           />
-          <p class="reading-name">{selected.title}</p>
+          <p class="reading-name">
+            <span class="title-line">
+              <span>{selected.title}</span>
+              {#if selected.part}<span class="part">{selected.part}</span>{/if}
+            </span>
+            {#if selected.subtitle}
+              <span class="reading-subtitle">{selected.subtitle}</span>
+            {/if}
+          </p>
           {#if selected.bibliography?.length}
             <Bibliography references={selected.bibliography} />
           {:else}
@@ -235,11 +256,6 @@
     {/if}
   </div>
 </div>
-
-{#if selected}{#key course.slug}<FloatingAssistant
-      {course}
-      chapter={selected}
-    />{/key}{/if}
 
 <style>
   .eyebrow,
@@ -286,21 +302,6 @@
     line-height: 1.7;
     max-width: 620px;
     margin-bottom: 28px;
-  }
-
-  .heading {
-    padding: 38px var(--space-6);
-  }
-
-  .heading h1 {
-    font-family: var(--font-serif);
-    font-size: clamp(34px, 4.5vw, 62px);
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
-    color: var(--text-prominent);
-    max-width: 1050px;
   }
 
   .workspace {
@@ -437,11 +438,35 @@
     line-height: 1.2;
   }
 
+  .title-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .part {
+    flex: none;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--ui-weight);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
   .indicator {
     font-size: var(--font-size-sm);
     color: var(--accent);
     opacity: 0;
     padding-top: 5px;
+  }
+
+  .name .metadata {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--accent);
+    overflow-wrap: anywhere;
   }
 
   .chapters a[aria-current] .indicator {
@@ -521,14 +546,6 @@
     font-size: var(--font-size-xs);
   }
 
-  .outline {
-    margin: 26px 0;
-  }
-
-  .outline > .eyebrow {
-    display: block;
-    margin-bottom: 14px;
-  }
   .supports {
     list-style: none;
     padding: 22px;
@@ -538,6 +555,7 @@
   }
 
   .pagination {
+    margin-top: 26px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -555,6 +573,15 @@
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
+  }
+
+  .reading-subtitle {
+    display: block;
+    margin-top: 9px;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-lg);
+    line-height: 1.5;
   }
 
   .reading-empty {
@@ -590,14 +617,6 @@
   }
 
   @media (max-width: 700px) {
-    .heading {
-      padding: 28px 20px;
-    }
-
-    .heading h1 {
-      font-size: 38px;
-    }
-
     .workspace {
       display: block;
       min-height: 0;

@@ -1,10 +1,14 @@
 <script>
-  let { id, label, title } = $props();
+  let { id, label, title, subtitle = "", part = "" } = $props();
 </script>
 
 <div class="heading">
   <span class="label">{label}</span>
-  <h2 {id}>{title}</h2>
+  <h2 {id}>
+    <span class="title">{title}</span>
+    {#if part}<span class="part">{part}</span>{/if}
+  </h2>
+  {#if subtitle}<p class="subtitle">{subtitle}</p>{/if}
 </div>
 
 <style>
@@ -13,6 +17,9 @@
   }
 
   h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
     font-family: var(--font-serif);
     font-size: 30px;
     font-weight: 400;
@@ -30,5 +37,28 @@
     color: var(--text-primary);
     font-family: var(--font-mono);
     font-weight: var(--ui-weight);
+  }
+
+  .part {
+    flex: none;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--ui-weight);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    max-width: 760px;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-lg);
+    font-weight: var(--body-weight);
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    text-transform: none;
   }
 </style>

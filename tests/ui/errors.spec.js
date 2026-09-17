@@ -35,7 +35,11 @@ for (const app of apps) {
           "content",
           "noindex",
         );
-        const toggle = page.getByRole("switch", { name: "Dark mode" });
+        // The inline toggle remains in the DOM when the mobile menu takes over.
+        const toggle = page.getByRole("switch", {
+          name: "Dark mode",
+          includeHidden: true,
+        });
         await expect(toggle).toHaveAttribute(
           "aria-checked",
           String(theme === "dark"),

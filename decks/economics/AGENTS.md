@@ -92,7 +92,7 @@ Il doit rester lisible en projection. Les détails historiques, les références
 ## Contraintes techniques du projet
 
 - Le deck se trouve dans `decks/economics/`.
-- La démo existante dans `decks/demo/` est une référence de système et de syntaxe, **pas un fichier à modifier**.
+- The existing deck in `decks/cybernetics/` is a reference for the system and syntax, **not a file to modify**.
 - Le projet utilise le moteur `svx-deck`, son format `deck.svx`, son `deck.config.ts`, ses assets et ses notes speaker.
 - Le lancement attendu est `pnpm deck dev decks/economics`.
 - Utiliser la commande générique `pnpm deck` ; aucun script racine propre à ce cours n’est nécessaire.

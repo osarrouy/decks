@@ -20,8 +20,10 @@ bibliographie:
 chapitres:
   - id: "histoire-du-numerique"
     titre: "Histoire du numérique"
+    partie: "1/3"
+    sous-titre: "Des machines à calculer à la théorie du calcul"
     slides:
-      - titre: "Histoire du numérique"
+      - titre: "Histoire du numérique · 1/3"
         url: "/slides/history-1/index.html"
         integration: "iframe"
 
@@ -250,10 +252,198 @@ chapitres:
       - reference: "Yates, J. (1993). Co-evolution of information-processing technology and use: Interaction between the life insurance and tabulating industries. *Business History Review, 67*(1), 1–51. [https://doi.org/10.2307/3117467](https://doi.org/10.2307/3117467)"
         url: "https://doi.org/10.2307/3117467"
 
+  - id: "cybernetics"
+    titre: "Histoire du numérique"
+    partie: "2/3"
+    sous-titre: "Cybernetics"
+    slides:
+      - titre: "Histoire du numérique · 2/3 — Cybernetics"
+        url: "/slides/cybernetics/index.html"
+        integration: "iframe"
+
+    resume: |
+      Un canon antiaérien ne peut pas viser seulement la position observée
+      d’un avion : il doit anticiper son déplacement et corriger sa visée
+      à mesure que de nouvelles informations lui parviennent. Ce problème
+      ouvre une autre histoire du numérique, dans laquelle calculer sert
+      à orienter une action malgré l’incertitude.
+
+      Ce chapitre suit la formation du langage cybernétique autour de
+      Norbert Wiener et des conférences Macy, puis ses déplacements vers
+      le vivant, les relations sociales et le gouvernement. Il examine
+      enfin comment la formalisation de l’activité neuronale conduit
+      des réseaux logiques de McCulloch et Pitts au perceptron de Rosenblatt.
+      Un même problème traverse ce parcours : que faut-il retenir du réel,
+      et que faut-il laisser de côté, pour le rendre calculable ?
+
+      ## Piloter dans l’incertitude : la rétroaction
+
+      La cybernétique rapproche l’étude des machines et celle des organismes
+      en s’intéressant à leurs mécanismes de communication et de régulation.
+      Les conférences Macy, entre 1946 et 1953, réunissent des chercheurs
+      de plusieurs disciplines autour de ces questions. Leurs échanges
+      ne constituent pas pour autant une doctrine homogène.
+
+      Une boucle de rétroaction réintroduit les effets d’une action dans
+      les conditions de l’action suivante. Le thermostat permet de suivre
+      ce mécanisme : mesurer une température, la comparer à une consigne,
+      agir sur le chauffage et mesurer à nouveau. Une rétroaction négative
+      tend à réduire un écart ; une rétroaction positive amplifie une
+      variation. Ces termes décrivent le fonctionnement de la boucle,
+      sans jugement sur ses conséquences.
+
+      ### À retenir
+
+      - Reconnaître une boucle de rétroaction et distinguer ses deux signes.
+      - Distinguer la régulation d’un système de la fixation de ses objectifs.
+      - Comprendre comment une correction continue permet d’agir sans tout prévoir.
+
+      ## Information, bruit et entropie
+
+      Shannon aborde l’information depuis un problème de transmission :
+      représenter des messages et les communiquer à travers un canal
+      soumis au bruit. La quantité d’information associée à un événement
+      dépend de sa probabilité : un événement peu probable apporte
+      davantage d’information au sens de cette mesure.
+
+      Cette définition ne mesure ni la vérité, ni la signification,
+      ni l’importance sociale d’un message. Le chapitre distingue
+      également l’entropie informationnelle, l’entropie thermodynamique
+      et les usages cybernétiques de la notion de néguentropie.
+      Passer d’un domaine à l’autre exige de préciser les hypothèses
+      du modèle : un vocabulaire commun ne suffit pas à tout expliquer.
+
+      ### À retenir
+
+      - Identifier la source, l’émetteur, le canal, le bruit et le récepteur.
+      - Distinguer quantité d’information et signification d’un message.
+      - Ne pas confondre les différents usages de l’entropie.
+
+      ## Penser en systèmes : relations, frontières et modèles
+
+      Une approche systémique analyse les relations par lesquelles
+      des éléments produisent ensemble un comportement. Une dynamique
+      de jalousie, par exemple, peut être étudiée comme une boucle
+      entretenue par les réactions réciproques des partenaires.
+
+      Les frontières du système dépendent de la question posée.
+      Modéliser implique de sélectionner des variables et d’ignorer
+      certains détails. Cette ignorance organisée peut rendre une
+      relation observable et une action possible, mais elle délimite
+      aussi ce que le modèle permet de comprendre. Un comportement
+      orienté vers un but n’implique pas nécessairement une intention
+      consciente : une boucle peut maintenir une grandeur sans la vouloir.
+
+      ### À retenir
+
+      - Décrire un phénomène à partir de relations, et pas seulement d’éléments isolés.
+      - Expliquer pourquoi les frontières d’un système sont un choix d’analyse.
+      - Distinguer une finalité observable d’une intention attribuée au système.
+
+      ## Émergence et auto-organisation
+
+      Les mouvements collectifs d’oiseaux illustrent la manière dont
+      des interactions locales peuvent produire une organisation globale.
+      Le modèle de Schelling propose une autre expérience : sur un damier,
+      des préférences individuelles limitées et des déplacements successifs
+      peuvent aboutir à une séparation collective beaucoup plus marquée.
+
+      Ce résultat permet d’étudier un mécanisme d’émergence. Il ne suffit
+      pas à expliquer la ségrégation réelle, dont l’histoire engage aussi
+      des institutions, des politiques publiques et des rapports de pouvoir.
+      L’auto-organisation ne garantit ni l’harmonie ni la justice du résultat.
+
+      ### À retenir
+
+      - Distinguer intentions individuelles et effets collectifs.
+      - Expliquer comment des règles locales peuvent produire une structure globale.
+      - Séparer la démonstration d’un mécanisme dans un modèle de son explication historique.
+
+      ## Du pilotage au gouvernement
+
+      Les boucles de mesure et de correction peuvent soutenir une autonomie
+      locale tout en soumettant les acteurs à des objectifs qu’ils n’ont
+      pas choisis. Le pouvoir se joue alors dans la définition des variables,
+      des indicateurs et des écarts acceptables, autant que dans les ordres.
+
+      Le projet Cybersyn, développé au Chili sous Allende, permet d’examiner
+      la tension entre coordination économique, circulation de l’information
+      et décision distribuée. La critique de Tiqqun propose, de son côté,
+      de lire la cybernétique comme une logique de gouvernement par les flux.
+      Cette lecture polémique éclaire certains dispositifs de contrôle,
+      sans résumer toute l’histoire ni tous les usages de la cybernétique.
+
+      ### À retenir
+
+      - Demander qui fixe les objectifs, dispose des données et peut contester la norme.
+      - Comprendre que décentralisation et contrôle peuvent coexister.
+      - Situer Cybersyn et la critique de Tiqqun comme deux approches politiques distinctes.
+
+      ## Du neurone biologique au perceptron
+
+      Le neurone biologique reçoit des signaux, les combine et transmet
+      une impulsion lorsque certaines conditions sont réunies. Les activités
+      complexes du cerveau reposent sur des réseaux et sur la plasticité
+      de leurs connexions, plutôt que sur un neurone isolé.
+
+      En 1943, McCulloch et Pitts retiennent quelques propriétés de cette
+      activité pour construire un modèle logique : entrées binaires,
+      seuil et inhibition. Le modèle permet de réaliser des opérations
+      formelles ; il ne reproduit pas toute la biologie du neurone et
+      ne démontre pas que toute la pensée se réduit à ces opérations.
+
+      Avec le perceptron, présenté par Rosenblatt à la fin des années 1950,
+      les poids deviennent ajustables à partir d’exemples et d’erreurs.
+      Cette procédure introduit un apprentissage, tout en restant limitée
+      aux problèmes de séparation linéaire dans le modèle simple étudié.
+
+      ### À retenir
+
+      - Distinguer cellule biologique, modèle logique et dispositif d’apprentissage.
+      - Expliquer le rôle des entrées, des poids, du seuil et de la correction d’erreur.
+      - Identifier ce que la formalisation rend possible et ce qu’elle laisse hors du modèle.
+
+    bibliographie:
+      - reference: "Ashby, W. R. (1956). *An introduction to cybernetics*. Chapman & Hall. [https://ashby.info/Ashby-Introduction-to-Cybernetics.pdf](https://ashby.info/Ashby-Introduction-to-Cybernetics.pdf)"
+        url: "https://ashby.info/Ashby-Introduction-to-Cybernetics.pdf"
+        note: "Approfondissement : systèmes, boîte noire et régulation."
+      - reference: "Bertalanffy, L. von. (1950). An outline of general system theory. *The British Journal for the Philosophy of Science, 1*(2), 134–165. [https://doi.org/10.1093/bjps/I.2.134](https://doi.org/10.1093/bjps/I.2.134)"
+        url: "https://doi.org/10.1093/bjps/I.2.134"
+        note: "Revenir sur la notion de système et sur le rôle des relations entre ses éléments."
+      - reference: "McCulloch, W. S., & Pitts, W. (1943). A logical calculus of the ideas immanent in nervous activity. *The Bulletin of Mathematical Biophysics, 5*, 115–133. [https://doi.org/10.1007/BF02478259](https://doi.org/10.1007/BF02478259)"
+        url: "https://doi.org/10.1007/BF02478259"
+        note: "Lecture ciblée : les hypothèses du neurone idéal et la distinction entre calcul formel et explication biologique."
+      - reference: "Medina, E. (2011). *Cybernetic revolutionaries: Technology and politics in Allende’s Chile*. MIT Press."
+        note: "Étude historique de Cybersyn : coordination, autonomie locale et participation."
+      - reference: "Rosenblatt, F. (1958). The perceptron: A probabilistic model for information storage and organization in the brain. *Psychological Review, 65*(6), 386–408. [https://doi.org/10.1037/h0042519](https://doi.org/10.1037/h0042519)"
+        url: "https://doi.org/10.1037/h0042519"
+        note: "Repérer ce que l’apprentissage à partir d’exemples ajoute au neurone à seuil."
+      - reference: "Rosenblueth, A., Wiener, N., & Bigelow, J. (1943). Behavior, purpose and teleology. *Philosophy of Science, 10*(1), 18–24. [https://doi.org/10.1086/286788](https://doi.org/10.1086/286788)"
+        url: "https://doi.org/10.1086/286788"
+        note: "Lecture centrale : comportement finalisé, rétroaction et distinction entre but et intention."
+      - reference: "Schelling, T. C. (1971). Dynamic models of segregation. *The Journal of Mathematical Sociology, 1*(2), 143–186. [https://doi.org/10.1080/0022250X.1971.9989794](https://doi.org/10.1080/0022250X.1971.9989794)"
+        url: "https://doi.org/10.1080/0022250X.1971.9989794"
+        note: "Comparer les règles du modèle et son résultat collectif ; discuter ce qu’il laisse hors de l’analyse de la ségrégation."
+      - reference: "Shannon, C. E. (1948a). A mathematical theory of communication. *Bell System Technical Journal, 27*(3), 379–423. [https://doi.org/10.1002/j.1538-7305.1948.tb01338.x](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x)"
+        url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
+        note: "Lecture centrale : introduction, schéma de communication et mesure probabiliste de l’information."
+      - reference: "Shannon, C. E. (1948b). A mathematical theory of communication. *Bell System Technical Journal, 27*(4), 623–656. [https://doi.org/10.1002/j.1538-7305.1948.tb00917.x](https://doi.org/10.1002/j.1538-7305.1948.tb00917.x)"
+        url: "https://doi.org/10.1002/j.1538-7305.1948.tb00917.x"
+        note: "Approfondissement mathématique : seconde partie de l’article."
+      - reference: "Shannon, C. E. (1956). The bandwagon. *IRE Transactions on Information Theory, 2*(1), 3. [https://doi.org/10.1109/TIT.1956.1056774](https://doi.org/10.1109/TIT.1956.1056774)"
+        url: "https://doi.org/10.1109/TIT.1956.1056774"
+        note: "Texte bref pour discuter les transpositions du vocabulaire de l’information à d’autres domaines."
+      - reference: "Tiqqun. (2001). L’hypothèse cybernétique. *Tiqqun, 2*, 40–83."
+        note: "Lecture critique : identifier la thèse politique du texte et discuter les limites de sa généralisation."
+      - reference: "Wiener, N. (2019). *Cybernetics or control and communication in the animal and the machine*. MIT Press. (Ouvrage original publié en 1948) [https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/](https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/)"
+        url: "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/"
+        note: "Texte fondateur : communication, contrôle et rétroaction chez l’animal et dans la machine."
+
   # Chapitres suivants : propositions provisoires à retravailler.
 
   - id: "information-et-communication"
     titre: "Information et communication"
+    sous-titre: "Du codage à la construction du sens"
 
     resume: |
       Ce chapitre examine ce qui se transforme lorsqu’un message, une image
@@ -276,6 +466,7 @@ chapitres:
 
   - id: "pratiques-et-cultures-en-reseau"
     titre: "Pratiques et cultures en réseau"
+    sous-titre: "Partager, créer, participer"
 
     resume: |
       Ce chapitre explore les manières de se rencontrer, de créer et de
@@ -298,6 +489,7 @@ chapitres:
 
   - id: "plateformes-et-vie-quotidienne"
     titre: "Plateformes et vie quotidienne"
+    sous-titre: "Données, attention et usages"
 
     resume: |
       Ce chapitre propose une lecture critique des services numériques

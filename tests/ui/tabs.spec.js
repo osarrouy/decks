@@ -31,15 +31,15 @@ test("Both course tab groups preserve views, chapter and scroll position", async
     name: "Ressources du cours",
   });
   await expect(
-    resources.getByRole("link", { name: "Slides", exact: true }),
+    resources.getByRole("link", { name: "Résumé", exact: true }),
   ).toHaveAttribute("aria-current", "page");
   const chapter = new URL(page.url()).searchParams.get("section");
   expect(chapter).toBeTruthy();
   await resources
-    .getByRole("link", { name: "Lectures du chapitre", exact: true })
+    .getByRole("link", { name: "Bibliographie", exact: true })
     .click();
   await expect(
-    resources.getByRole("link", { name: "Lectures du chapitre", exact: true }),
+    resources.getByRole("link", { name: "Bibliographie", exact: true }),
   ).toHaveAttribute("aria-current", "page");
   const url = new URL(page.url());
   expect(url.searchParams.get("section")).toBe(chapter);
@@ -47,6 +47,85 @@ test("Both course tab groups preserve views, chapter and scroll position", async
   expect(url.searchParams.get("onglet")).toBe("bibliographie");
   await page.goBack();
   await expect(
-    resources.getByRole("link", { name: "Slides", exact: true }),
+    resources.getByRole("link", { name: "Résumé", exact: true }),
   ).toHaveAttribute("aria-current", "page");
 });
+
+for (const width of [1280, 390]) {
+  for (const theme of ["light", "dark"]) {
+    test(`Chapter resources stay separate at ${width}px in ${theme}`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.addInitScript(
+        (value) => localStorage.setItem("dg-theme", value),
+        theme,
+      );
+      await page.emulateMedia({ reducedMotion: "reduce" });
+      await page.goto("/l1/?vue=chapitres&section=cybernetics");
+      const resources = page.getByRole("navigation", {
+        name: "Ressources du cours",
+      });
+      await expect(resources.getByRole("link")).toHaveText([
+        "Résumé",
+        "Slides",
+        "Bibliographie",
+      ]);
+      await expect(
+        resources.getByRole("link", { name: "Résumé", exact: true }),
+      ).toHaveAttribute("aria-current", "page");
+      const summary = page.getByRole("heading", {
+        name: "Piloter dans l’incertitude : la rétroaction",
+      });
+      await expect(summary).toBeVisible();
+      await expect(page.locator("iframe")).toHaveCount(0);
+      await expect(page.locator(".picker")).toHaveCount(0);
+      await expect(page.locator("#chapter-title .part")).toHaveText("2/3");
+      await expect(page.locator("#chapter-title sup")).toHaveCount(0);
+      await expect(page.locator(".content .heading .subtitle")).toHaveText(
+        "Cybernetics",
+      );
+      const part =
+        width === 390
+          ? page.locator(".mobile-chapters summary .part")
+          : page.locator(".chapters a[aria-current] .part");
+      await expect(part).toHaveText("2/3");
+      await expect(part).toHaveCSS("position", "static");
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth),
+      ).toBeLessThanOrEqual(width);
+      await page.screenshot({
+        path: `/tmp/course-summary-${width}-${theme}.png`,
+      });
+      await resources
+        .getByRole("link", { name: "Slides", exact: true })
+        .click();
+      await expect(summary).toHaveCount(0);
+      await expect(page.locator("iframe")).toHaveAttribute(
+        "src",
+        "/slides/cybernetics/index.html",
+      );
+      await resources
+        .getByRole("link", { name: "Bibliographie", exact: true })
+        .click();
+      await expect(page.locator("iframe")).toHaveCount(0);
+      await expect(summary).toHaveCount(0);
+      await expect(
+        page.getByRole("heading", { name: "Bibliographie", exact: true }),
+      ).toBeVisible();
+      await page.reload();
+      await expect(
+        resources.getByRole("link", { name: "Bibliographie", exact: true }),
+      ).toHaveAttribute("aria-current", "page");
+      await resources
+        .getByRole("link", { name: "Résumé", exact: true })
+        .click();
+      await page.getByRole("link", { name: "← Chapitre précédent" }).click();
+      await expect(page).toHaveURL(/section=histoire-du-numerique/);
+      await expect(
+        resources.getByRole("link", { name: "Résumé", exact: true }),
+      ).toHaveAttribute("aria-current", "page");
+      await expect(page.locator("iframe")).toHaveCount(0);
+    });
+  }
+}

@@ -14,6 +14,15 @@ markdown.renderer.rules.heading_close = (tokens, index) =>
 
 export const renderMarkdown = (text) => markdown.render(text || "");
 export const renderReference = (text) => markdown.renderInline(text || "");
+export function selectChapter(course, id) {
+  const legacyIndex = /^section-(\d+)$/.exec(id || "");
+  return (
+    course.sections.find((section) => section.id === id) ||
+    (legacyIndex ? course.sections[Number(legacyIndex[1]) - 1] : undefined) ||
+    course.sections[0]
+  );
+}
+
 export function excerpt(text) {
   return text
     .trim()
@@ -88,9 +97,31 @@ export function parseYamlCourse(raw, slug) {
     const headings = [...description.matchAll(/^## (.+)$/gm)].map(
       (match) => match[1],
     );
+    const title = string(chapter.titre, `${name}.titre`, true);
+    const part =
+      chapter.partie === undefined
+        ? ""
+        : string(chapter.partie, `${name}.partie`).trim();
+    if (part) {
+      const [current, total] = part.split("/").map(Number);
+      if (
+        !/^[1-9]\d*\/[1-9]\d*$/.test(part) ||
+        !Number.isSafeInteger(current) ||
+        !Number.isSafeInteger(total) ||
+        current > total
+      )
+        fail(`${name}.partie must be N/M with positive integers and N <= M`);
+    }
     return {
       id,
-      title: string(chapter.titre, `${name}.titre`, true),
+      title,
+      part,
+      // Plain-text contexts such as headings and chat keep the complete label.
+      label: part ? `${title}\u00a0${part}` : title,
+      subtitle:
+        chapter["sous-titre"] === undefined
+          ? ""
+          : string(chapter["sous-titre"], `${name}.sous-titre`).trim(),
       description,
       summary: excerpt(description),
       items: headings.length
@@ -156,6 +187,9 @@ export function parseLegacyCourse(raw, slug) {
       sections.push({
         id: `section-${sections.length + 1}`,
         title,
+        label: title,
+        part: "",
+        subtitle: "",
         description,
         summary: excerpt(description),
         items,

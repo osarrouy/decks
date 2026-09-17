@@ -1,9 +1,11 @@
 <script>
   import "@dg/ui/styles.css";
-  import "$lib/course.css";
 
   import { page } from "$app/state";
-  import { Header, Footer, Page, SkipLink } from "@dg/ui";
+  import { browser } from "$app/environment";
+  import { Header, Footer, Main, Page, SkipLink } from "@dg/ui";
+  import FloatingAssistant from "$lib/FloatingAssistant.svelte";
+  import { selectChapter } from "$lib/course-content.js";
 
   import { courses, courseAliases } from "$lib/courses";
   /**
@@ -27,6 +29,14 @@
       ? `/${courseAliases[activeSlug]}/`
       : page.url.pathname,
   );
+  let course = $derived(page.status < 400 ? page.data.course : undefined);
+  let chapter = $derived(
+    course &&
+      selectChapter(
+        course,
+        browser ? page.url.searchParams.get("section") : null,
+      ),
+  );
 </script>
 
 <svelte:head>
@@ -37,33 +47,18 @@
 </svelte:head>
 <SkipLink />
 
-<Page
-  style="--section-name-color: var(--text-primary); --section-number-weight: var(--ui-weight)"
->
+<Page>
   <Header
     identity="olivier@sarrouy"
     identityUrl="/"
     app="university"
     {links}
-    pathname="{navigationPath}-"
+    path={navigationPath}
   />
-  <main id="main" class="sections">{@render children?.()}</main>
+  <Main>{@render children?.()}</Main>
   <Footer identity="olivier·sarrouy" clock />
 </Page>
 
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    min-width: 0;
-  }
-
-  main > :global(.framed) {
-    flex-shrink: 0;
-  }
-
-  main > :global(.page-fill) {
-    flex-grow: 1;
-  }
-</style>
+{#if course && chapter}
+  {#key course.slug}<FloatingAssistant {course} {chapter} />{/key}
+{/if}

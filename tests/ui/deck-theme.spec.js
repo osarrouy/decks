@@ -1,4 +1,13 @@
 import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
+import { parseSingleFileDeck } from "@svx-deck/core/deck/singleFile";
+
+const { slides } = parseSingleFileDeck(
+  readFileSync(
+    new URL("../../decks/history-1/deck.svx", import.meta.url),
+    "utf8",
+  ),
+);
 
 const course =
   "/introduction-aux-cultures-numeriques/?vue=chapitres&section=histoire-du-numerique&onglet=slides";
@@ -12,17 +21,27 @@ for (const width of [1280, 390]) {
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(course);
     const reader = page.frameLocator(
-      'iframe[title="Slides : Histoire du numérique"]',
+      'iframe[src="/slides/history-1/index.html"]',
     );
     const surface = reader.locator(".slide");
     await expect(surface).toBeVisible();
     await expect(
       reader.getByLabel("Choisir une slide").locator("option"),
-    ).toHaveCount(58);
-    const toggle = page.getByRole("switch", { name: "Dark mode" });
+    ).toHaveCount(slides.length);
+    const toggle = page
+      .getByRole("switch", { name: "Dark mode", includeHidden: true })
+      .first();
     for (const dark of [false, true]) {
-      if ((await toggle.getAttribute("aria-checked")) !== String(dark))
-        await toggle.click();
+      if ((await toggle.getAttribute("aria-checked")) !== String(dark)) {
+        if (width < 1100) {
+          await page.getByRole("button", { name: "Menu", exact: true }).click();
+          await page
+            .getByRole("dialog", { name: "Main navigation" })
+            .getByRole("switch", { name: "Dark mode" })
+            .click();
+          await page.keyboard.press("Escape");
+        } else await toggle.click();
+      }
       await expect(
         reader.getByRole("switch", { name: "Dark mode" }),
       ).toHaveAttribute("aria-checked", String(dark));

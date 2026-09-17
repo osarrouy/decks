@@ -1,6 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { sveltekit } from "@sveltejs/kit/vite";
+import { uiPostcss } from "../tooling/postcss.js";
 
 const workspace = fileURLToPath(new URL("../", import.meta.url));
 const uiRoot = resolve(
@@ -18,6 +19,11 @@ export default ({ isPreview }) =>
       }
     : {
         plugins: [sveltekit()],
+        css: {
+          postcss: uiPostcss(
+            fileURLToPath(import.meta.resolve("@dg/ui/breakpoints.css")),
+          ),
+        },
         resolve: { dedupe: ["svelte"] },
         optimizeDeps: { exclude: ["@dg/ui"] },
         ssr: { noExternal: ["@dg/ui"] },

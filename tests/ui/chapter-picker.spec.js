@@ -34,7 +34,7 @@ test("Mobile chapters support keyboard navigation, dismissal and course history"
   await page.keyboard.press("Enter");
   await expect(page).toHaveURL(destination.href);
   await expect(menu).toBeHidden();
-  await expect(trigger).toContainText("Information et communication");
+  await expect(trigger).toContainText("Cybernetics");
   expect(new URL(page.url()).searchParams.get("onglet")).toBe("bibliographie");
   expect(
     Math.abs((await page.evaluate(() => window.scrollY)) - scrollY),
@@ -56,7 +56,7 @@ for (const theme of ["light", "dark"]) {
     page,
   }) => {
     await page.setViewportSize({ width: 320, height: 700 });
-    await page.goto("/l1/?vue=chapitres&section=section-2");
+    await page.goto("/l1/?vue=chapitres&section=information-et-communication");
     await expect(page.locator(".mobile-chapters summary")).toContainText(
       "Information et communication",
     );

@@ -6,10 +6,22 @@ import {
   parseLegacyCourse,
   renderMarkdown,
   renderReference,
+  selectChapter,
 } from "../src/lib/course-content.js";
 
 const fixture = (extra = "") =>
   `titre: Exemple\nniveau: L1\ndescription: Présentation\nchapitres: []\n${extra}`;
+
+test("course content and assistant select the same chapter from current and legacy links", () => {
+  const course = { sections: [{ id: "history" }, { id: "networks" }] };
+  for (const id of ["networks", "section-2"]) {
+    assert.equal(selectChapter(course, id), course.sections[1]);
+  }
+  for (const id of [null, "missing", "section-0", "section-99"]) {
+    assert.equal(selectChapter(course, id), course.sections[0]);
+  }
+  assert.equal(selectChapter({ sections: [] }, null), undefined);
+});
 
 test("the actual course preserves its outline, seven parts and separate bibliographies", () => {
   const raw = readFileSync(
@@ -21,11 +33,20 @@ test("the actual course preserves its outline, seven parts and separate bibliogr
   );
   const course = parseYamlCourse(raw, "introduction-aux-cultures-numeriques");
   assert.equal(course.level, "L1");
-  assert.equal(course.sections.length, 4);
+  assert.equal(course.sections.length, 5);
   assert.equal(course.sections[0].id, "histoire-du-numerique");
   assert.equal(course.sections[0].items.length, 7);
   assert.equal(course.sections[0].bibliography.length, 13);
   assert.equal(course.bibliography.length, 3);
+  const cybernetics = course.sections[1];
+  assert.equal(cybernetics.id, "cybernetics");
+  assert.equal(cybernetics.part, "2/3");
+  assert.equal(cybernetics.subtitle, "Cybernetics");
+  assert.equal(cybernetics.items.length, 6);
+  assert.equal(cybernetics.bibliography.length, 12);
+  assert.equal(cybernetics.slides[0].url, "/slides/cybernetics/index.html");
+  assert.equal(cybernetics.slides[0].integration, "iframe");
+  assert.equal(course.sections[2].id, "information-et-communication");
   assert(course.sections[0].description.includes("La naissance du Web"));
   assert(!course.sections[0].summary.includes("La naissance du Web"));
   assert.equal(
@@ -94,6 +115,80 @@ test("the reader reports invalid fields and duplicate identifiers", () => {
     () => parseYamlCourse(fixture("titre: Autre"), "test"),
     /duplicated/,
   );
+});
+
+test("chapter subtitles are optional plain text and reject non-string values", () => {
+  const chapter = fixture().replace(
+    "chapitres: []",
+    "chapitres:\n  - id: exemple\n    titre: Exemple\n    resume: ''",
+  );
+  const parse = (field = "") =>
+    parseYamlCourse(`${chapter}${field}`, "test").sections[0];
+  assert.equal(parse().subtitle, "");
+  assert.equal(parse('    sous-titre: ""\n').subtitle, "");
+  assert.equal(parse('    sous-titre: "   "\n').subtitle, "");
+  assert.equal(
+    parse('    sous-titre: "  Du calcul au Web  "\n').subtitle,
+    "Du calcul au Web",
+  );
+  for (const value of ["null", "42", "false", "[]", "{}"])
+    assert.throws(
+      () => parse(`    sous-titre: ${value}\n`),
+      /chapitres\[0\]\.sous-titre must be a string/,
+    );
+});
+
+test("optional part numbering labels chapters without changing identifiers or subtitles", () => {
+  const chapter = fixture().replace(
+    "chapitres: []",
+    "chapitres:\n  - id: histoire\n    titre: Histoire du numérique\n    resume: ''",
+  );
+  const parse = (field = "") =>
+    parseYamlCourse(`${chapter}${field}`, "test").sections[0];
+  for (const field of ["", '    partie: ""\n', '    partie: "   "\n'])
+    assert.equal(parse(field).title, "Histoire du numérique");
+  for (const part of ["1/3", "2/3", "3/3", "1/1"])
+    assert.equal(
+      parse(`    partie: " ${part} "\n`).label,
+      `Histoire du numérique\u00a0${part}`,
+    );
+  const section = parse(
+    '    partie: "1/3"\n    sous-titre: "Du calcul au Web"\n',
+  );
+  assert.equal(section.id, "histoire");
+  assert.equal(section.subtitle, "Du calcul au Web");
+  const course = parseYamlCourse(
+    `${chapter}    partie: "1/3"\n  - id: histoire-suite\n    titre: Histoire du numérique\n    partie: "2/3"\n    resume: ''\n`,
+    "test",
+  );
+  assert.deepEqual(
+    course.sections.map(({ id, label }) => ({ id, label })),
+    [
+      { id: "histoire", label: "Histoire du numérique\u00a01/3" },
+      { id: "histoire-suite", label: "Histoire du numérique\u00a02/3" },
+    ],
+  );
+  for (const value of [
+    "null",
+    "42",
+    "false",
+    "[]",
+    "{}",
+    '"0/3"',
+    '"1/0"',
+    '"4/3"',
+    '"1.5/3"',
+    '"-1/3"',
+    '"01/3"',
+    '"1/03"',
+    '"1 / 3"',
+    '"1/3/4"',
+    '"1/9007199254740992"',
+  ])
+    assert.throws(
+      () => parse(`    partie: ${value}\n`),
+      /chapitres\[0\]\.partie/,
+    );
 });
 
 test("executable links and private paths are rejected as resources", () => {

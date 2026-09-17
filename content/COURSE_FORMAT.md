@@ -32,11 +32,19 @@ The entire document is YAML, rather than Markdown with YAML front matter. The fi
 | --------------- | ------------------ | -------- | ------------------------------------------------ |
 | `id`            | String             | Yes      | Stable identifier, unique within the course.     |
 | `titre`         | String             | Yes      | Chapter title in the table of contents.          |
+| `partie`        | String             | No       | Part number as `N/M`, displayed as a superscript without a separator. |
+| `sous-titre`    | String             | No       | Short subtitle below the chapter title in desktop and mobile navigation. |
 | `resume`        | String             | Yes      | Chapter summary, optionally spanning paragraphs. |
 | `slides`        | List of resources  | No       | Presentations associated with the chapter.       |
 | `bibliographie` | List of references | No       | Readings specific to this chapter.               |
 
 Use a descriptive lowercase identifier without accents and with hyphens: `histoire-du-numerique`. It is independent of the chapter number and does not change when reordering the course. Preserve existing identifiers when editing. The order of `chapitres` determines numbering; do not add an `ordre` or `numero` field.
+
+`sous-titre` is plain text, displayed with the shared `metadata` typography and accent color. Omit it or use `""` to show only the chapter title, without extra spacing. Whitespace-only subtitles are treated as empty; `null` and non-string values are rejected.
+
+Use `partie: "1/3"` for a chapter taught in several parts. Navigation, headings and the course overview display the part as a superscript without a middle dot. Plain-text contexts such as the assistant use `Histoire du numérique 1/3`. Keep `titre` free of the part number to avoid duplication. `partie` is independent of `sous-titre` and the chapter's position in the course; it does not create or reorder chapters. Each part remains a separate chapter entry with its own stable `id`, resources and summary. Only add entries for supplied course material.
+
+Omit `partie` or use `""` to leave the title unchanged. Whitespace-only values are treated as empty. Otherwise, use a quoted `N/M` string with positive integers, no leading zeros, and `N <= M`; invalid values, including `null`, are rejected.
 
 ## Slide resources
 
@@ -150,6 +158,8 @@ bibliographie:
 chapitres:
   - id: "histoire-du-numerique"
     titre: "A history of computing"
+    partie: "1/3"
+    sous-titre: "From calculating machines to the Web"
 
     resume: |
       This chapter traces the major stages in the development

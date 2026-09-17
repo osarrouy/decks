@@ -1,8 +1,8 @@
 import type { DeckConfig } from '@svx-slides/core/deck/types'
 
 const config = {
-  title: 'Introduction aux Cultures Numériques',
-  // description: 'Une présentation de démonstration pour tester le runtime maison.',
+  title: 'Histoire du numérique · 2/3 — Cybernetics',
+  description: 'Rétroaction, information, systèmes et premiers neurones artificiels.',
   theme: 'gallery',
   template: {
     source: 'deck.svx',

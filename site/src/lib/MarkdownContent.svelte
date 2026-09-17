@@ -54,8 +54,15 @@
     margin: 0.8em 0 1.2em;
     padding-left: 1.5em;
   }
+  .markdown :global(ul) {
+    list-style-type: "+  ";
+  }
   .markdown :global(li + li) {
     margin-top: 0.35em;
+  }
+  .markdown :global(ul > li::marker) {
+    font-family: var(--font-mono);
+    font-weight: 100;
   }
   .markdown :global(a) {
     text-decoration: underline;
