@@ -119,4 +119,37 @@ Output is written to `site/build/`, including slide assets. Serve this directory
 
 Configure the static host to serve `build/404.html` for missing pages **with HTTP status 404**, keeping the requested URL. Do not redirect missing URLs to `/404` or rewrite every request to `index.html` with status 200. The app’s SvelteKit configuration emits root-relative asset URLs so the error document works at nested paths. Existing pages must still resolve before the error document is used.
 
-No production host configuration is tracked in this app. The host's own 400/500/502/503 responses require its custom-error support; a Svelte component cannot handle a host outage. Verify the deployed site with a nested missing URL and check the status, styles and home link.
+The [Caddy configuration](deploy/Caddyfile) serves the generated error document with status 404. Railway's own gateway errors require platform support; a Svelte component cannot handle a host outage.
+
+## Railway deployment
+
+The [Site workflow](../.github/workflows/site.yml) runs on pushes and pull requests targeting `main`, and can be started manually. It runs diagnostics, unit tests, the complete portal/deck build, HTTP checks and browser tests against a Caddy container. Successful runs on `main` upload that same public export to Railway, then compare the served pages against the build. Pull requests never deploy.
+
+GitHub performs the build because `@dg/ui` currently lives in a separate private repository. CI checks out the revision pinned by `DG_UI_REF`; a [CI-only helper](../tooling/ci-ui.mjs) adjusts the local dependency links in the disposable checkout without changing dependency versions. Local development retains its existing UI link. Uncommitted UI changes are not included in CI; update the pinned revision after publishing changes to that repository.
+
+Configure these GitHub repository settings before enabling the workflow:
+
+| Setting | Purpose |
+| --- | --- |
+| Secret `DG_UI_DEPLOY_KEY` | Private SSH key for a read-only deploy key on `distributedgallery/interfaces` |
+| Secret `RAILWAY_TOKEN` | Railway project token scoped to the target `production` environment |
+| Variable `RAILWAY_SERVICE_ID` | ID of the Railway service receiving the export |
+| Variable `SITE_URL` | Public HTTPS origin used for post-deployment checks |
+
+Create an empty Railway service with a generated domain targeting port 8080. Leave its source disconnected from GitHub: this workflow deploys the tested export through the CLI, so a second GitHub autodeploy is unnecessary. The upload includes its own `railway.json`, Dockerfile and Caddyfile. The root-page health check gates promotion, HTML and mutable media revalidate, and fingerprinted assets use long-lived caching. Fork pull requests cannot access the private UI key and require a trusted branch with access to run the full build.
+
+For a first deployment from this workspace, after `pnpm check` and `pnpm build`:
+
+```sh
+deployment_dir=$(node site/scripts/prepare-deploy.mjs)
+docker build -t university-site "$deployment_dir"
+docker run --rm -p 127.0.0.1:8080:8080 university-site
+# In another terminal:
+node site/scripts/check-deploy.mjs http://127.0.0.1:8080
+COURSE_TEST_ORIGIN=http://127.0.0.1:8080 pnpm test:ui
+# With Railway linked to the intended project/environment:
+railway up "$deployment_dir" --path-as-root --no-gitignore --service <service-id> --ci
+node site/scripts/check-deploy.mjs https://<public-domain>
+```
+
+The preparation command creates an isolated temporary upload directory and prints its path. It copies only `site/build/` and the server configuration, verifies that embedded manifests exclude notes, and leaves authored course files intact. `--no-gitignore` applies only to this prepared directory. Railway CLI CI mode returns after the container build; the HTTP check verifies that the public deployment actually serves the expected export.
