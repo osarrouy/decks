@@ -45,7 +45,7 @@
     identityUrl="/"
     app="university"
     {links}
-    pathname="{navigationPath}-"
+    path={navigationPath}
   />
   <main id="main" class="sections">{@render children?.()}</main>
   <Footer identity="olivier·sarrouy" clock />
