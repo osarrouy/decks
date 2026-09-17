@@ -135,7 +135,7 @@ Configure these settings:
 | Railway variable `DG_UI_DEPLOY_KEY` | Separate read-only deploy key on the same private repository for builds |
 | Railway variable `RAILPACK_CONFIG_FILE` | `site/deploy/railpack.json` |
 | Railway source | `osarrouy/decks`, branch `main`, repository root `/` |
-| Railway config file | `/site/deploy/railway.json` |
+| Railway build settings | Railpack builder; health check `/`, timeout 60 seconds; restart on failure, maximum 3 retries |
 | Railway **Wait for CI** | Enabled; failed checks block automatic deployment |
 
 The Railway GitHub integration needs access to the course repository. The [Railpack configuration](deploy/railpack.json) installs Node 22 and the workspace's pnpm version, retrieves the private UI dependency, and runs `pnpm build`. Build credentials are supplied through secret mounts, removed from package-install/build child environments, and excluded from the final image. Only `site/build/` and the shared [Caddy configuration](deploy/Caddyfile) are copied into the runtime image. The public domain targets port 8080; the root-page health check gates promotion. HTML and mutable media revalidate; fingerprinted assets use long-lived caching.
