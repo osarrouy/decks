@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { embeddedDecks } from "../scripts/decks.mjs";
+import { deckProxyContext, embeddedDecks } from "../scripts/decks.mjs";
 
 const course = (urls) =>
   `titre: Test\nniveau: L1\ndescription: Test\nchapitres:\n  - id: chapter\n    titre: Chapter\n    resume: Test\n    slides:\n${urls.map((url) => `      - titre: Deck\n        url: "${url}"\n        integration: iframe`).join("\n")}\n`;
@@ -44,4 +44,12 @@ test("local decks are deduplicated while remote resources stay external", async 
   } finally {
     await rm(root, { recursive: true, force: true });
   }
+});
+
+test("deck proxies do not confuse identifiers that share a prefix", () => {
+  const context = new RegExp(deckProxyContext("/slides/social-networks"));
+
+  assert.match("/slides/social-networks/index.html", context);
+  assert.match("/slides/social-networks", context);
+  assert.doesNotMatch("/slides/social-networks-virality/index.html", context);
 });

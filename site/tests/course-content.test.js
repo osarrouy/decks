@@ -23,7 +23,7 @@ test("course content and assistant select the same chapter from current and lega
   assert.equal(selectChapter({ sections: [] }, null), undefined);
 });
 
-test("the actual course preserves its outline, seven parts and separate bibliographies", () => {
+test("the actual course preserves its shortened history outline and separate bibliographies", () => {
   const raw = readFileSync(
     new URL(
       "../../content/introduction-aux-cultures-numeriques.yaml",
@@ -33,9 +33,16 @@ test("the actual course preserves its outline, seven parts and separate bibliogr
   );
   const course = parseYamlCourse(raw, "introduction-aux-cultures-numeriques");
   assert.equal(course.level, "L1");
-  assert.equal(course.sections.length, 5);
+  assert.equal(course.sections.length, 9);
   assert.equal(course.sections[0].id, "histoire-du-numerique");
-  assert.equal(course.sections[0].items.length, 7);
+  assert.deepEqual(course.sections[0].items, [
+    "Mécaniser le calcul, programmer les opérations",
+    "La révolution du contrôle",
+    "La statistique et la mise en calcul du social",
+    "Formaliser la logique et le calcul",
+    "Numériser : construire une représentation calculable",
+    "La guerre et les premiers ordinateurs",
+  ]);
   assert.equal(course.sections[0].bibliography.length, 13);
   assert.equal(course.bibliography.length, 3);
   const cybernetics = course.sections[1];
@@ -46,13 +53,103 @@ test("the actual course preserves its outline, seven parts and separate bibliogr
   assert.equal(cybernetics.bibliography.length, 12);
   assert.equal(cybernetics.slides[0].url, "/slides/cybernetics/index.html");
   assert.equal(cybernetics.slides[0].integration, "iframe");
-  assert.equal(course.sections[2].id, "information-et-communication");
-  assert(course.sections[0].description.includes("La naissance du Web"));
-  assert(!course.sections[0].summary.includes("La naissance du Web"));
+  const internetAndPersonalComputing = course.sections[2];
+  assert.equal(internetAndPersonalComputing.id, "internet-et-ordinateur-personnel");
+  assert.equal(internetAndPersonalComputing.part, "3/3");
+  assert.equal(
+    internetAndPersonalComputing.subtitle,
+    "Internet et l’ordinateur personnel",
+  );
+  assert.deepEqual(internetAndPersonalComputing.items, [
+    "Distinguer Internet et le Web",
+    "Relier des réseaux : de la commutation par paquets à TCP/IP",
+    "Du microprocesseur à l’ordinateur personnel",
+    "La contre-culture californienne et l’informatique comme outil",
+    "D’ARPANET à Internet",
+    "Le Web, sa commercialisation et le tournant participatif",
+  ]);
+  assert.equal(internetAndPersonalComputing.bibliography.length, 10);
+  assert.equal(
+    internetAndPersonalComputing.slides[0].url,
+    "/slides/history-3/index.html",
+  );
+  assert.equal(
+    internetAndPersonalComputing.slides[0].integration,
+    "iframe",
+  );
+  const socialNetworks = course.sections.slice(-6, -1);
+  assert.deepEqual(
+    socialNetworks.map(({ id, part, title }) => ({ id, part, title })),
+    [
+      {
+        id: "reseaux-sociaux-numeriques",
+        part: "1/5",
+        title: "Réseaux sociaux numériques",
+      },
+      {
+        id: "structure-des-reseaux-sociaux",
+        part: "2/5",
+        title: "Réseaux sociaux numériques",
+      },
+      {
+        id: "gatekeeping-algorithmique",
+        part: "3/5",
+        title: "Réseaux sociaux numériques",
+      },
+      {
+        id: "viralite-cascades-amplification",
+        part: "4/5",
+        title: "Réseaux sociaux numériques",
+      },
+      {
+        id: "bulles-chambres-echo-polarisation",
+        part: "5/5",
+        title: "Réseaux sociaux numériques",
+      },
+    ],
+  );
+  assert.deepEqual(
+    socialNetworks.map((section) => section.items.length),
+    [4, 4, 4, 6, 5],
+  );
+  assert.deepEqual(
+    socialNetworks.map((section) => section.bibliography.length),
+    [5, 6, 4, 14, 14],
+  );
+  assert.deepEqual(
+    socialNetworks.map((section) => section.slides[0].url),
+    [
+      "/slides/social-networks/index.html",
+      "/slides/social-networks-structure/index.html",
+      "/slides/social-networks-gatekeepers/index.html",
+      "/slides/social-networks-virality/index.html",
+      "/slides/social-networks-polarization/index.html",
+    ],
+  );
+  assert(
+    socialNetworks.every(
+      (section) => section.slides[0].integration === "iframe",
+    ),
+  );
+  const interpassivity = course.sections.at(-1);
+  assert.equal(interpassivity.id, "interpassivite-des-foules");
+  assert.equal(interpassivity.items.length, 6);
+  assert.equal(interpassivity.bibliography.length, 9);
+  assert.equal(
+    interpassivity.slides[0].url,
+    "/slides/interpassivity/index.html",
+  );
+  assert.equal(interpassivity.slides[0].integration, "iframe");
+  assert(course.sections[0].description.includes("Hollerith"));
+  assert(course.sections[0].description.includes("UNIVAC"));
+  assert(!course.sections[0].description.includes("Web"));
+  assert(
+    course.sections[0].summary.includes("premiers ordinateurs électroniques"),
+  );
   assert.equal(
     (renderMarkdown(course.sections[0].description).match(/<h3>/g) || [])
       .length,
-    7,
+    6,
   );
 });
 

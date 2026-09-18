@@ -2,6 +2,10 @@ import { readdir, readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
 import { parseYamlCourse } from "../src/lib/course-content.js";
 
+export function deckProxyContext(base) {
+  return `^${base}(?:/|$)`;
+}
+
 // Only referenced local decks are built; remote links remain external resources.
 export async function embeddedDecks(contentRoot, decksRoot) {
   const ids = new Set();

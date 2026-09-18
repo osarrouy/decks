@@ -2,7 +2,7 @@
 
 This document describes the editorial format used to prepare courses and their resources. Use this structure when creating or updating a course file.
 
-**Status: supported by the site.** `site/src/lib/courses.js` loads `.yaml` files from `content/` and validates their fields. L2 and M2 courses remain readable in their legacy Markdown format; YAML with the same name takes precedence. Descriptions and summaries render as Markdown without executing supplied HTML.
+**Status: supported by the site.** `site/src/lib/courses.js` loads `.yaml` files from the root of `content/` and validates their fields. L2 remains readable in its legacy Markdown format; YAML with the same name takes precedence. Files under `content/drafts/` are not published. Descriptions and summaries render as Markdown without executing supplied HTML.
 
 ## General organization
 

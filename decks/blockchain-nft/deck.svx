@@ -1,0 +1,280 @@
+---
+title: Blockchain et crypto-monnaies — NFT
+theme: gallery
+---
+
+<!-- slide: id="blockchain-088-nft" title="NFT" layout="center" -->
+## NFT
+### Non-Fongible Token
+
+--- notes
+
+↦ Token = jeton
+
+↦ Fongible : un bien sans identité propre, absolument équivalent à tout autre du même genre.
+
+↦ Ex. Pièce de monnaie.
+
+↦ Non-fongible : opposé.
+
+↦ Un token non-fongible est un token doté d’une identité propre - et donc non-immédiatement équivalent à tout autre.
+
+↦ En pratique, un NFT constitue une sorte preuve d’authenticité de quelque chose : droit de propriété, oeuvre d'art, preuve de présence, etc.
+
+↦ L'idée des NFT a émergé de ce que l'on appelle les Colored Coins, initialement émis sur la blockchain Bitcoin à partir de 2012 / 2013.
+
+↦ Les Colored Coins sont des jetons qui représentent des actifs du monde réel sur la blockchain et peuvent être utilisées pour prouver la propriété de n'importe quel actif, des métaux précieux aux voitures en passant par l'immobilier.
+
+↦ La blockchain du Bitcoin n'étant pas initialement prévue pour ce type de cas d'usage, les créateurs des Colored Coins ont trouvé une manière d'associer des metadata à des Bitcoins pour les rendre reconnaissables et uniques.
+
+↦ Analogie avec billet de banque avec, inscrit dessus, les droits de propriétés d'une voiture.
+
+↦ Le secteur des NFTs va surtout se démocratiser avec l'apparition des blockchains programmables, et notamment d'Ethereum.
+
+↦ Premières expériences en 2017.
+
+↦ DistributedGallery et ReadyMade-Token.
+
+↦ CryptoPunks
+
+---
+<!-- slide: id="blockchain-089-cryptopunks" title="CryptoPunks" layout="center" -->
+<img src="/assets/Clipboard_3.png" alt="CryptoPunks" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Matt Hall et John Watkinson (LarvaLabs).
+
+↦ Série de 10000 personnages uniques, possédant chacun des traits particuliers.
+
+↦ Certains traits sont assez communs, d'autres plus rares.
+
+↦  La distribution de ces traits est générée alogrithmiquement. On parle d'art génératif, un champ très actif dans le secteur des NFTs - même s'il lui préexiste.
+
+↦ Le succès des CryptoPunks tient au fait d'avoir fusionné les logiques de l'art génératif et les mécanismes de création de rareté offerts par la blockchain.
+
+---
+<!-- slide: id="blockchain-090-cryptokitties" title="CryptoKitties" layout="center" -->
+<img src="/assets/Clipboard_4.png" alt="CryptoKitties" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Les NFTs sont formalisés fin 2017 / début 2018 avec l’apparition des CryptoKitties.
+
+↦ Expliciter la notion de trait, de rareté, de croisement génétique, etc.
+
+↦ Expliciter comment ça a rendu la blockchain inutilisable pendant quelques temps.
+
+---
+<!-- slide: id="blockchain-091-metadonnees-dun-nft" title="Métadonnées d’un NFT" layout="center" -->
+<img src="/assets/Capture d’écran 2023-10-09 à 13.55.34.png.public.png" alt="Métadonnées d’un NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Comment ça fonctionne en pratique.
+
+↦ Chaque collection de NFT - par exemple les CryptoKitties - sont gérés par un smart contract.
+
+↦ Ce smart contrat contrôle la génération des NFT - qui peut les créer, sous quelles conditions, etc - gère leur transfert et les associe à des metadata : nom, description, image, attributs, etc.
+
+---
+<!-- slide: id="blockchain-092-metadonnees-dun-nft" title="Métadonnées d’un NFT" layout="center" -->
+```
+{
+"name":"Satire in Shared Spaces",
+"created_by":"Botto",
+"external_url":"https://botto.com",
+"description":"Absurdism Period. 2023 October #003.",
+"attributes":[
+{"trait_type":"Artist","value":"Botto"},
+{"trait_type":"Period","value":"Absurdism"}
+{"trait_type":"Round","value":"3"},
+],
+"image_details" {
+"width":4096,
+"height":4096
+},
+"image":"ipfs://QwaL...."
+}
+```
+
+---
+<!-- slide: id="blockchain-093-stockage-dun-nft" title="Stockage d’un NFT" layout="center" -->
+<img src="/assets/Clipboard_1.png" alt="Stockage d’un NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Expliquer comment est usuellement stocké le contenu d’un NFT : serveur ou IPFS.
+
+---
+<!-- slide: id="blockchain-094-remuneration-du-createur" title="Rémunération du créateur" layout="center" -->
+<img src="/assets/Capture d’écran 2023-10-09 à 13.55.34.png.public.png" alt="Rémunération du créateur" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ En profiter pour faire un point sur la question du creator's  earning - et la manière dont ça fonctionne usuellement dans les mondes de l'art.
+
+---
+<!-- slide: id="blockchain-095-places-de-marche-nft" title="Places de marché NFT" layout="center" -->
+<img src="/assets/Clipboard_7.png" alt="Places de marché NFT" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Ces NFTs sont échangés sur des places de marché : OpenSea, Rarible, SuperRare, Versus, Zora, etc.
+
+↦ Explicitez les spécificités de chacune de ces places de marché.
+
+↦ Que vend-on sur ces places de marché ?
+
+---
+<!-- slide: id="blockchain-096-beeple" title="Beeple" layout="center" -->
+<img src="/assets/Clipboard_5.png" alt="Beeple" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Beeple.
+
+↦ Un des artistes les plus cher.
+
+↦ A vendu un NFT aux enchères chez Christies pour 69 millions.
+
+---
+<!-- slide: id="blockchain-097-bored-ape-yacht-club" title="Bored Ape Yacht Club" layout="center" -->
+<img src="/assets/Clipboard_6.png" alt="Bored Ape Yacht Club" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Bored Ape Yacht Club
+
+↦ Basé sur l’exclusivité de certains accès - le NFT fonctionne comme carte de membre d’un club : nouvelles ouvres, accès à certaines soirées, etc.
+
+↦ Il existe aussi des initiatives plus intéressantes qui vont s'efforcer d'envisager des formes d'expression artistiques plus étroitement liée à leur médium : la blockchain.
+
+↦ Revenir sur la question du lien entre l'art et son médium.
+
+↦ Lorsqu'un nouveau médium apparait, ses expressions artistiques empreinte le plus souvent ses formes à des médiums hérités.
+
+↦ La photo s'est d'abord inspiré de la peinture, avec un souci nouveau du réalisme. On s'est ensuite aperçu que la photo pouvait être autre chose : un travail sur la lumière, le contraste, le flou et la netteté, la capture sur le vif de moments singuliers, etc.
+
+↦ De la même manière, le cinéma s'est d'abord inspiré du théâtre : unité de lieu et de temps, plans séquence, etc.
+
+↦ Il faudra attendre quelques années pour le cinéma découvre le montage comme principe de son langage : opposition des scènes et des points de vue, accélérations et décélération rythmiques, etc.
+
+↦ Le même procédé expérimental est en cours pour ce qui concerne les oeuvres liées à la blockchain.
+
+---
+<!-- slide: id="blockchain-098-art-generatif-on-chain" title="Art génératif on-chain" layout="center" -->
+<video src="/assets/audiovisual.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+↦ Deadbeef
+
+↦ Le code de l’oeuvre est stocké on-chain.
+
+↦ Contrainte matérielle de minimalisme qui se lie à une esthétique low-tech
+
+---
+<!-- slide: id="blockchain-099-plantoid" title="Plantoid" layout="center" -->
+<img src="/assets/Clipboard.png" alt="Plantoid" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Plantoid.
+
+↦ Primavera de Filippi.
+
+↦ Les fleurs mécaniques sont initialement repliées.
+
+↦ Des micro-paiements en crypto permettent de nourrir la plante qui s'ouvre progressivement.
+
+↦ Une fois qu'une certaine somme d'argent a été récolté, la plante peut se reproduire.
+
+↦ Les fonds sont automatiquement envoyés sur le wallet d'une équipe d'artistes et d'ingénieurs chargés de produire un nouvel exemplaire.
+
+↦ Le seuil à atteindre pour enclencher cette reproduction varie d'un Plantoid à l'autre.
+
+---
+<!-- slide: id="blockchain-100-two-degrees" title="Two Degrees" layout="center" -->
+<img src="/assets/1*pYg6uq7XCJb8MTw7pviAkg.webp" alt="Two Degrees" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Two Degrees, terra0.
+
+↦ Capteur de température placés dans une forêt allemande.
+
+↦ Expliciter ce qu'est un oracle.
+
+---
+<!-- slide: id="blockchain-101-crypto-confessionnal" title="Crypto-confessionnal" layout="center" -->
+<img src="/assets/Clipboard_2.png" alt="Crypto-confessionnal" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Présenter le crypto-confessionnal.
+
+↦ Revenir sur la question du commerce des indulgences et son histoire : l'invention du purgatoire, le marché secondaire du pardon, etc.
+
+↦ Comment décentraliser le pardon et dissoudre le tiers de confiance que constitue l'église - et par là-même sa position de rente économique.
+
+---
+<!-- slide: id="blockchain-102-la-question-de-laura" title="La question de l’aura" layout="center" -->
+## La question de l’aura
+### Walter Benjamin
+
+--- notes
+
+↦ Il n'est reste pas moins que l'essentiel des oeuvres sont aujourd'hui constituées de JPEGs
+
+↦ Pourquoi s’arracher des JPEGs aussi chers ?
+
+
+↦ c.f. reprint.eth
+
+↦ La question de l’aura chez Walter Benjamin.
+
+↦ L’oeuvre d’art à l’heure de sa reproductibilité technique (1936)
+
+↦ Revenir sur la question de l’aura.
+
+↦ Expérience religieuse : l’apparition d’un lointain, quelque proche que puisse être ce qui l’évoque.
+
+↦ L’expérience d’une présence, en tant qu’elle nous échappe.
+
+↦ L’aura est une expérience mélancolique.
+
+↦ 19ème et 20ème : baisse de l’expérience religieuse, déplacée vers l’expérience artistique.
+
+↦ L’aura d’une oeuvre c’est son hic et nunc, le ici et maintenant qui en fait un objet unique et irremplaçable.
+
+↦ Tout ce qui exprime son inscription originaire dans un lieu, un temps, une durée, une tradition.
+
+↦ La présence de Michel-Ange dans la statut du David, la présence de Goya dans le Sabbat des sorcières, etc.
+
+↦ Tout cela va disparaître avec l’industrialisation de la culture.
+
+↦ Revenir sur la question des industries culturelles : l’oeuvre d’art est reproductible à une échelle industrielle : photographie, disque, etc.
+
+↦ Elle ne porte plus la marque de la présence de l'artiste, la trace de sa main, etc.
+
+↦ Avec l'arrivée des dispositifs de reproduction l'art va se répandre dans le monde social / cinéma, vinyle, photographie / et va petit à petit quitter son statut d'oeuvre unique et original pour se répandre sous la forme de séries, de reproductions, consommable par tous et identique pour tous.
+
+↦ L'art telle que le cinéma ou la musique sur vinyle deviennent alors immédiatement des expériences collective de masse : je regarde le film avec une centaine d'autres personnes, j'écoute ce vinyle en même temps que plusieurs centaine millier d'autres personnes, je regarde cette photographie tiré en plusieurs milliers d'exemplaire.
+
+↦ Ex. Série Netflix.
+
+↦ Il fait partie intégrante d'une expérience culturelle de masse qu'elle soit partagée par plein de gens à la fois.
+
+↦ Ex. Coupe du monde.
+
+
+↦ La reproductibilité va donc écraser l'unicité et par ce mouvement détruire ce que Benjamin appelle "L'aura" de l'oeuvre.
+
+↦ Cette dynamique a été radicalisée par le numérique où tout contenu est reproductible infiniment et à coup nul.
+
+↦ c.f. La différence de fétichisme de l’objet entre les collectionneurs de vinyles et les gens qui écoutent des MP3s.
+
+↦ Quel rapport avec les NFTs ?
+
+↦ Les NFT viennent d'une certaine manière résoudre ce "problème" de la disparition de l'aura en recréant de manière artificielle le sentiment d'authenticité via l'authentification de l'oeuvre sur une blockchain, qui fixe a chaque image une place précise sur la flèche du temps, reconstruisant ainsi artificiellement l'idée d'un "ici et maintenant, hic et nunc" de l'oeuvre d'art.

@@ -1,0 +1,245 @@
+---
+title: Blockchain et crypto-monnaies — Consensus
+theme: gallery
+---
+
+<!-- slide: id="blockchain-017-monnaie" title="monnaie" layout="center" -->
+### monnaie
+### numérique
+### pair-à-pair
+
+--- notes
+
+Revenons à notre objet. Qu’est-ce que le Bitcoin, et comment fonctionne-t-il ?
+
+Le Bitcoin une monnaie numérique, pair-à-pair - c’est-à-dire décentralisée.
+
+**Monnaie.** C’est là, sans doute, le problème le plus délicat et le plus métaphysique. Qu’est-ce qui caractérise une monnaie ? Pourquoi lui attribuons-nous une valeur et nous en servons comme moyen d’échange ? Nous aborderons ces problèmes plus tard.
+
+**Numérique.** L’ensemble des transactions en bitcoin est conduit à travers un réseau de dispositifs informatiques.
+
+**Pair-à-pair.** L’ensemble des transactions en bitcoin est diffusé et validé de manière horizontale, sans intervention d'aucune autorité centralisée. Tous les nœuds du réseau y ont le même poids.
+
+---
+<!-- slide: id="blockchain-018-le-bitcoin-repose-sur-un-reseau-de-nuds" title="Le Bitcoin repose sur un réseau de nœuds" layout="center" -->
+<img src="/assets/5dbba16ef3ba5ec99f83d4de00c95cb557ec940d.png" alt="Le Bitcoin repose sur un réseau de nœuds" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Le Bitcoin repose sur un réseau de **nœuds**.
+
+Chaque nœud exécute un programme spécifique lui permettant de communiquer avec tous les autres nœuds pour maintenir ensemble un historique complet de toutes les transactions réalisées en bitcoin depuis l’origine du réseau.
+
+Chacun est libre d’installer ce programme sur la machine de son choix et d’intégrer ainsi le réseau. Ce caractère ouvert et décentralisé garantit la robustesse du système. Cette architecture ne requiert aucun centre de contrôle, ni aucune autorité particulière.
+
+Le Bitcoin peut ainsi être rapproché des protocoles de partage de fichier en P2P. Comme dans le cas du protocole BitTorrent, chaque participant est à la fois consommateur et contributeur.
+
+La différence tient essentiellement au fait que, en lieu et place de films ou d’album de musique, les nœuds Bitcoin partagent une base de données constituée de l’ensemble des transactions exécutées sur le réseau, que cette base de données est susceptible d’intégrer à chaque instant de nouvelles transactions, et que ces celles-ci doivent être collectivement authentifiées et validées.
+
+---
+<!-- slide: id="blockchain-019-registre-des-transactions" title="Registre des transactions" -->
+| Emetteur | Destinataire | Valeur |
+| :------- | :----------- | :----- |
+| Alice    | Bob          | 2 ₿    |
+| Bob      | Charlie      | 1.5 ₿  |
+| Bob      | Damian       | 0.4 ₿  |
+
+--- notes
+
+La base de données partagée et validée par les nœuds du réseau y ressemble essentiellement au tableau ci-dessus - même si nous verrons plus loin que les données y sont en fait structurées très différemment.
+
+Un tel principe pourrait paraître bien simpliste pour un réseau sécurisant plus de $2T. Comme nous l’avons vu précédemment lorsque nous avons évoqué la monnaie scripturale, le système bancaire traditionnel fonctionne pourtant  de manière analogue.
+
+Notons que Satoshi Nakamoto n’est pas le premier à s’être efforcé de concevoir une monnaie numérique pair-à-pair sur un tel principe.
+
+---
+<!-- slide: id="blockchain-020-b-money" title="b-money" layout="center" -->
+### b-money
+Wei Dai, 1998 {.kicker}
+
+--- notes
+
+La première tentative reconnue est attribuée à Wei Dai en 1998.
+
+---
+<!-- slide: id="blockchain-021-bitgold" title="bitgold" layout="center" -->
+### bitgold
+Nick Szabo, 2005 {.kicker}
+
+--- notes
+
+La seconde à Nick Szabo, avec son projet Bit Gold. L’idée apparaît dès 1998, mais Szabo n’en publie une description plus complète qu’en 2005 sur son blog *Unenumerated*.
+
+Ces deux propositions échouent toutefois à développer des solutions robustes aux problèmes techniques soulevés par la mise en oeuvre d’un tel dispositif. Elle ne seront donc jamais implémentées.
+
+Elles dessinent néanmoins des pistes dont certaines se retrouveront presque à l’identique dans Bitcoin. On comprend alors pourquoi tant soupçonnent que Nakamoto puisse être Dai, ou Szabo lui-même. La filiation est trop nette, la continuité trop marquée.
+
+Bitcoin n’apparaît pas, en ce sens, comme une rupture absolue, mais comme l’aboutissement d’un long travail d’élaboration d’un champ de questions et de problèmes que Satoshi Nakomoto
+
+La contribution de Satoshi Nakamoto consistera principalement à composer divers propositions pour répondre, enfin, à un problème décisif : dans un espace totalement distribué, sans centre de décision, comment produire du consensus ? comment établir une vérité commune, stable et partagée, sans autorité instituée ?
+
+C’est ce qu’on appelle le problème du consensus distribué.
+
+---
+<!-- slide: id="blockchain-022-consensus" title="Consensus" layout="center" -->
+## Consensus
+
+--- notes
+
+La question du consensus est au centre du tout système monétaire pair-à-pair. Comment obtenir un accord sur le contenu de la base de données - c’est-à-dire un accord sur le solde de chacun.
+
+Dans un système centralisé, ce consensus est garanti par une autorité de confiance. C’est la banque, par exemple, qui tient les comptes et dont la parole fait foi : si elle affirme que vous disposez de telle somme, cela est tenu pour vrai. On parle alors de **tiers de confiance**.
+
+Mais dans un réseau sans tiers de confiance, les difficultés se multiplient. Les données peuvent se perdre en chemin. Elles peuvent arriver dans un ordre différent selon les nœuds. Certains participants peuvent même chercher à tromper le système pour s’enrichir artificiellement.
+
+Comment, dès lors, parvenir à un consensus distribué – c’est-à-dire à un accord collectif – sans s’appuyer sur aucune autorité centrale ?
+
+Bien avant Nakamoto, de nombreuses recherches avaient tenté de résoudre cette énigme – la littérature sur le sujet a d’ailleurs été largement revisitée depuis l’essor des crypto-monnaies. Mais aucune des solutions proposées jusque-là n’avait réussi à s’imposer comme robuste ou pleinement satisfaisante.
+
+C’est précisément à ce problème que répond l’invention de Satoshi Nakamoto. La technologie dite de la **blockchain** propose un mécanisme inédit pour instaurer, dans un réseau distribué, une vérité commune sur l’état des comptes.
+
+---
+<!-- slide: id="blockchain-023-blockchain" title="Blockchain" layout="center" -->
+## Blockchain
+chaîne de blocs {.kicker}
+
+--- notes
+
+↦ Une solution pour établir un consensus dans un système distribué est de laisser un ou plusieurs nœuds proposer une solution à ce consensus - *i.e.* proposer une version de l’historique des transactions à un instant t - et laisser les autres nœuds décider à quelle solutions ils choisissent de se raccrocher.
+
+↦ Comment ça fonctionne concrètement ?
+
+↦ Les utilisateurs diffusent les transactions qu'ils veulent exécuter au réseau. Par exemple : moi, Alice, souhaite envoyer 1 bitcoin à Bob.
+
+↦ Le réseau se charge de diffuser, de proche en proche, cette information à l'ensemble de ses nœuds.
+
+↦ Certains nœuds particuliers, appelés *mineurs*, assemblent ces transactions dans des blocs, pour des raisons d’efficacité - à hauteur d’un bloc toutes les dix minutes environ.
+
+↦ Les mineurs s'efforcent alors de résoudre une sorte de petit puzzle mathématique propre à chaque bloc.
+
+↦ On parle du **minage** d’un bloc.
+
+↦ Le premier mineur à avoir trouvé la solution à ce puzzle diffuse le bloc ainsi validé à l'ensemble du réseau.
+
+↦ Les autres nœuds du réseau peuvent alors juger de la validité de ce bloc au regard des informations en leur possession.
+
+↦  Si le bloc proposé leur semble valide, ils l’intègrent à leur propre historique. Autrement, ils l'excluent comme s’il n’avait jamais existé.
+
+↦ Le nœud ayant miné le bloc se voit par ailleurs récompensé par des bitcoins fraichement émis.
+
+↦ C'est de cette manière que la création du Bitcoin est mise en oeuvre (c.f. supra).
+
+---
+<!-- slide: id="blockchain-024-que-se-passe-t-il-si-differents-nuds-proposent-des-blo" title="Que se passe-t-il si différents nœuds proposent des blocs différents - t" layout="center" -->
+<img src="/assets/d2cbce006ce6b09885fb2df2bea407ec3cb37cd0.png" alt="Que se passe-t-il si différents nœuds proposent des blocs différents - t" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+
+
+
+--- notes
+
+↦ Que se passe-t-il si différents nœuds proposent des blocs différents - trient les transactions dans des ordres différents et incompatibles entre eux ?
+
+↦ On considère simplement que la chaîne la plus longue fait autorité.
+
+↦ Qu'est-ce qui empêche, alors, un attaquant de proposer simplement un nouvelle historique de bloc plus long, réécrivant l'histoire pour, par exemple, s'attribuer frauduleusement des bitcoins ?
+
+↦ Ou encore, qu’est-ce qui empêche un esprit mal attentionné de faire tourner 100000 noeuds pour pouvoir décider seul de la chaine la plus longue, qui, pour lui, fait donc autorité.
+
+↦ Tout repose sur le petit puzzle mathématique dont je vous ai parlé.
+
+↦ Ce petit puzzle consiste en un algorithme qu'on appelle la **proof-of-work** - ou preuve de travail.
+
+---
+<!-- slide: id="blockchain-025-proof-of-work" title="Proof-of-work" layout="center" -->
+## Proof-of-work
+Preuve de travail {.kicker}
+
+--- notes
+
+↦ La résolution de ce puzzle mathématique est conçue de telle sorte à réclamer beaucoup de puissance de calcul et donc à être **chronophage** et **énergivore** - et donc couteuse ! - mais extrêmement facile à vérifier une fois la solution trouvée.
+
+↦ Expliciter l'usage de carte graphique dédiée.
+
+↦ La difficulté de ce puzzle est ainsi ajustée automatiquement aux capacités de calcul du réseau pour que sa résolution réclame toujours plus ou moins la même durée - 10 minutes - quelles que soient les ressources engagées.
+
+↦ C'est d'ailleurs là l'un principaux reproche adressé au Bitcoin. Son fonctionnement est très énergivore.
+
+↦ En 2022 la consommation du Bitcoin a été d'environ 112 TWh, soit 0,56% de la consommation énergétique mondiale.
+
+↦ Nous verrons plus loin qu'il existe des alternatives moins energivores à la PoW.
+
+↦ Les mineurs sont aujourd'hui constitués de gigantesques fermes de calculs. Cela pose également un problème politique de centralisation.
+
+↦ Toujours est-il que le minage d'un bloc n'est donc pas gratuit : il réclame de la puissance de calcul, beaucoup d'énergie, et donc de l'argent.
+
+↦ A quoi ça sert, et en quoi ca sécurise le réseau ?
+
+↦ Pour le comprends, il nous faut rentrer un peu dans le détails technique et Par ailleurs l'historique des blocs n'est pas construit n'importe comment.
+
+---
+<!-- slide: id="blockchain-026-il-y-a-quelques-elements-supplementaires-importants-a-" title="Il y a quelques éléments supplémentaires importants à mentionner ici" layout="center" -->
+<img src="/assets/ffc143a788c24955f37b5927edc4a75166934886.png" alt="Il y a quelques éléments supplémentaires importants à mentionner ici" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Il y a quelques éléments supplémentaires importants à mentionner ici.
+
+↦ Expliciter la présence du hash du block précédent dans le bloc suivant.
+
+---
+
+
+
+---
+
+↦ Un hash constitue une sorte de résumé, de taille fixe, d'une information de taille arbitraire.
+
+↦ La moindre modification de l'information originelle modifie en profondeur le hash.
+
+↦ Il est très facile de calculer le hash d'une information mais il est impossible de retrouver l'information originale à partir du hash.
+
+↦ Faire une démo `shasum sample.text`
+
+↦ Chaque block intègre ainsi un instantané des nouvelles transactions, mais aussi, de hash en hash, un résumé de tout l’historique des transactions, jusqu’au bloc de genèse.
+
+---
+<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" layout="center" -->
+<img src="/assets/7684203927048a343556a60c0b1c3e1fadf69852.png" alt="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Ainsi, plus une transaction est ancienne, plus il devient difficile de la falsifier.
+
+↦ Falsifier un bloc implique en effet de falsifier également l'ensemble des blocs postérieur.
+
+↦ Cela nécessiterait de résoudre de nombreux puzzles mathématiques très rapidement - un pour chaque bloc de la nouvelle chaine.
+
+↦ Un tel effort réclamerait une capacité de calcul - et une consommation électrique - rapidement in-atteignable (ou couterait plus cher que l’argent qu’elle permettrait de gagner en falsifiant la transaction).
+
+C’est ce mécanisme qui rend une attaque contre Bitcoin extrêmement coûteuse. Pour réécrire l’histoire du réseau, un attaquant devrait reconstruire une chaîne plus longue que la chaîne légitime : c’est ce qu’on appelle une attaque des 51 % parce qu’elle réclamerait, pour être effective, que l’attaquant contrôle à lui seul 51% de la puissance de calcul totale engagée sur le réseaux.
+
+↦ C’est pour cette raison qu’on suggère usuellement, comme une bonne pratique, de ne considérer une transaction valide après qu’au moins 10 blocs aient été validée après elle : on parle de 10 **confirmations**.
+
+↦ Le point important ici, est que la sécurité de la blockchain ne repose pas sur un élément preuve de formel : il est, en théorie, possible de falsifier une blockchain si l’on a accès a des moyens suffisants.
+
+↦ C’est ici que ce joue la principale originalité de la blockchain - et ce qui la démarque des solutions précédemment avancées au problème du consensus distribué.
+
+↦ La sécurité de la blockchain repose sur un mécanisme simultanément statistique et économique : passé un certain nombre de blocs, il est statistiquement improbable que quiconque ait les ressources nécessaires pour falsifier son historique - ou que parvenir à le faire soit économiquement profitable.
+
+↦ Le coup de génie de Satoshi Nakamoto est d’avoir inventé ce que l’on appelle aujourd’hui la cryptonomics ou le mechanism design, c’est-à-dire l’intégration de considérations économiques comme principes de fonctionnement d’un système technique.
+
+↦ Les ressources engagées pour falsifier une blockchain dépendent elles-mêmes de la valeur de sa crypto-monnaie qui est elle-même sécurisée par le niveau de ressources nécessaires au minage, qui dépend elle-même de la valeur de cette crypto-monnaie.
+
+↦ Si le bitcoin ne vaut rien, peu importe qu’on l’attaque. La puissance de calcul mobilisée pour sécuriser le réseau sera faible, mais les enjeux économiques aussi et cela aura donc peut d'importance.
+
+A l’inverse :
+
+•	plus le bitcoin a de valeur, plus il attire de mineurs ;
+•	plus il attire de mineurs, plus la preuve de travail devient coûteuse ;
+•	plus la preuve de travail est coûteuse, plus il est difficile d’attaquer le réseau ;
+•	plus le réseau est sécurisé, plus le bitcoin inspire confiance… et plus sa valeur croît.
+
+↦ D’une certaine façon, le bitcoin - et donc sa valeur - est donc sécurisé par l’appétit des mineurs, lui-même suscité par ... la valeur du bitcoin.
+
+↦ Il vous reste à apprécier le coup de génie ...

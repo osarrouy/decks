@@ -185,6 +185,10 @@
     color: var(--accent);
   }
 
+  .chapter:hover .subtitle {
+    color: var(--text-primary);
+  }
+
   @media (max-width: 700px) {
     .overview {
       padding: var(--space-5) 20px;

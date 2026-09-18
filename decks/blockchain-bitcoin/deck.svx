@@ -1,0 +1,364 @@
+---
+title: Blockchain et crypto-monnaies — Bitcoin
+theme: gallery
+---
+
+<!-- slide: id="blockchain-001-blockchain-101" title="blockchain 101" layout="cover" -->
+# blockchain 101
+olivier.sarrouy@univ-rennes2.fr {.kicker}
+
+--- notes
+
+↦ Pas de réseaux sociaux.
+
+---
+<!-- slide: id="blockchain-002-https-etudiants-univ-rennes2-fr-vie-etudiante-signalem" title="https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences" layout="center" -->
+###### https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences
+##### vss-sse@univ-rennes.fr
+
+---
+<!-- slide: id="blockchain-003-wtf" title="WTF" layout="center" -->
+## WTF
+
+--- notes
+
+↦ Non pas spéculer sur la valeur des crypto-monnaies, non pas fournir des conseils d'investissements, etc ... mais :
+
+1. Essayer de vous expliquer - au moins superficiellement - ce qu'est une blockchain, comment cela fonctionne, etc.
+
+2. Essayer de penser les rationalités politiques qui se cachent derrière les blockchains.
+
+↦ Les ingénieurs - en particulier dans le champ des cryptos - ne sont pas « bêtement » ingénieurs : ils ne se contentent pas de résoudre des problèmes techniques.
+
+↦ Leur activité d'ingénieur est le plus souvent motivée par une vision politique : parfois de manière très claire et explicite, parfois de façon plus implicite.
+
+↦ En particulier par une certaine idée de ce que pourrait être un art juste de gouverner, nourri par une franche méfiance des institutions et des états.
+
+↦ Le but de la plupart de ces ingénieurs est de décentraliser les institutions en les remplaçant par des dispositifs crypto-économiques.
+
+↦ En est même né un champ d’expertise nouveaux : le « mechanism design ».
+
+↦ Le principe du « mechanism design » est de « programmer » des comportements humains par la conception et l'implémentation de mécanismes d'incitation économique.
+
+↦ Ex. DAI : comment orienter les comportements d'émission d'une monnaie pour assurer la stabilité de sa valeur.
+
+↦ Ex. Comment concevoir un mécanisme de prise de décision collective qui soit simultanément juste et efficace ?
+
+↦ Ex. Comment rémunérer les utilisateurs d'un protocole d'une manière qui soit économiquement soutenable ?
+
+↦ L’objectif de ce cours va être de vous donner à éprouver ces questions et la manière dont l'écosystème blockchain les conçoit  - et nous verrons qu'il s'agit là d'une manière bien particulière de penser le politique et l'art de gouverner les foules.
+
+↦ Le cours alternera entre la présentation de cas d'usage concrets de la blockchain - les crypto-monnaies, évidemment, mais aussi les NFTs, les problématiques de gouvernance, etc. - et l'analyse des rationalités politiques qui les nourrissent.
+
+---
+<!-- slide: id="blockchain-004-plan" title="plan" -->
+## plan
+
+Histoire
+
+Money ?
+
+Technique
+
+Pratique
+
+Gouvernance
+
+NFT
+
+---
+<!-- slide: id="blockchain-005-examen" title="examen" -->
+## examen
+
+Assidus : QCM et mini-dissertation
+Dispensés : dossier
+
+---
+<!-- slide: id="blockchain-006-bitcoin" title="Bitcoin" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/7f09ac927b822cc89f9e4167c82290273f747a31.mp4" alt="Bitcoin" video={true} darken={true}>
+  <h2>Bitcoin</h2>
+</BackgroundMedia>
+
+---
+<!-- slide: id="blockchain-007-bitcoin-a-peer-to-peer-electronic-cash-system" title="Bitcoin: A Peer-to-Peer Electronic Cash System" layout="center" -->
+ > *Bitcoin: A Peer-to-Peer Electronic Cash System*
+┄
+Satoshi Nakamoto, 2008 {.kicker}
+
+--- notes
+
+En novembre 2008, un certain Satoshi Nakamoto partage un document technique intitulé *Bitcoin: A Peer-to-Peer Electronic Cash System* sur une liste de diffusion[^1].
+
+Ce document décrit le fonctionnement d'une **monnaie numérique pair-à-pair**: le Bitcoin.
+
+Nous allons revenir, d’ici peu, sur ce que cela signifie exactement. Mais d’abord, quelques éléments de contexte.
+
+[^1]: https://www.mail-archive.com/cryptography@metzdowd.com/msg09959.html
+
+---
+<!-- slide: id="blockchain-008-satoshi-nakamoto" title="Satoshi Nakamoto" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/photo-1662841256780-d2572552bbd5.jpg" alt="Satoshi Nakamoto" video={false} darken={true}>
+  <h2>Satoshi Nakamoto</h2>
+</BackgroundMedia>
+
+--- notes
+
+Photo by Lucas de Moura on [Unsplash](https://unsplash.com/photos/a-person-wearing-a-mask-KerlUtk582w)
+
+
+
+À ce jour personne ne connaît l'identité réelle de Satoshi Nakamoto : homme, femme, collectif, etc. ?
+
+Cette question suscite beaucoup de spéculations et de fantasmes (c.f. infra). Toutefois, nous n'en discuterons pas.
+
+Pourquoi ? Parce que l'anonymat de Satoshi Nakamoto, ou l'énigme en quoi consiste son identité, ont moins d'intérêt que l'intention qui anime ce choix de l'anonymat.
+
+Pourquoi Satoshi a fait le choix de rester anonyme ? Et pourquoi celui-ci - ou celle-ci - a-t-elle cessé de donner signe de vie peu après la naissance du Bitcoin - bien avant, en tout cas que le Bitcoin vaille ce qu'il vaut aujourd'hui ?
+
+Il n'est pas improbable que cette disparition soit intentionnelle et vise à rendre le projet à une forme d'appropriation collective affranchie de l'autorité de son créateur.
+
+Le code source du Bitcoin est aujourd'hui maintenu par un collectif plus ou moins informel de développeurs - si bien que le Bitcoin, comme technologie, n'appartient plus à personne.
+
+Nous respecterons donc la probable volonté de Satoshi et laisserons la question de son identité au silence.
+
+---
+<!-- slide: id="blockchain-009-cypherpunk" title="cypherpunk" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/172f941a3892b7ac602bd77b7f411a15035ceb49.mp4" alt="cypherpunk" video={true} darken={false}>
+  <h2>cypherpunk</h2>
+</BackgroundMedia>
+
+--- notes
+
+La liste de diffusion à laquelle est adressé ce mail est proche du mouvement *cypherpunk*.
+
+cypher : chiffrement | punk : weirdo.
+
+Le nom cypherpunk est aussi une référence au courant littéraire *cyberpunk* : William Gibson, Bruce Sterling, etc. Qui, dans la lignée d’auteurs comme Philip K. Dick, imagine des sociétés dominées par la technologie et les réseaux, traversées par des forces de résistance souterraines.
+
+Le mouvement cypherpunk naît au début des années 1990 autour d’une liste de diffusion électronique, fondée par Timothy C. May, Eric Hughes et John Gilmore, également cofondateur de l’*Electronic Frontier Foundation*.
+
+Il s’agit alors d’un espace de discussion où circulent des milliers de messages techniques, politiques et philosophiques.
+
+L’un des textes fondateurs est le *Crypto Anarchist Manifesto* (1988) de Timothy May, suivi en 1993 par A Cypherpunk’s Manifesto d’Eric Hughes, qui affirme :
+
+> « Privacy is necessary for an open society in the electronic age. »
+
+Le mouvement cypherpunk est un mouvement à la fois philosophique et technique, d’inspiration libertaire et / ou libertarienne, qui :
+
+1.	manifestent une défiance envers l’État et, plus généralement, envers toute forme d’organisation trop centralisée ;
+
+2.	défendent la protection de la vie privée par le recours à la cryptographie ;
+
+3.	développent des alternatives technologiques : logiciels de chiffrement des communications (ex. PGP), réseaux pair-à-pair, remailers anonymes, prémices des darknets, etc.
+
+Il ne s’agit pas seulement de théoriser, mais de produire des outils concrets capables de mettre en pratique ces idéaux. Leur mot d’ordre est clair : « Cypherpunks write code. »
+
+Dès les années 1990, les cypherpunks affrontent les gouvernements dans ce qu’on a appelé les Crypto Wars : les États-Unis tentaient alors de limiter, voire d’interdire, l’usage civil de la cryptographie forte, considérée comme une arme stratégique.
+
+c.f. le t-shirt avec le code de PGP, considéré comme une arme
+
+Les cypherpunks militent au contraire pour en faire un bien public, accessible à tous. Cette bataille culturelle et juridique aboutit progressivement à la légalisation et à la diffusion du chiffrement dans les usages quotidiens d’Internet - paradoxalement avec le soutien des premières plateforme d’e-commerce, pour défendre le commerce en ligne.
+
+Ainsi, les cypherpunks prolongent une partie des utopies initiales d’Internet, issues de la contre-culture hippie et hacker des années 1970. Tandis qu’une fraction de cette culture est devenue mainstream (startups, plateformes, capitalisme numérique), une autre s’est radicalisée dans la voie cypherpunk, plaçant la cryptographie et la décentralisation au cœur de son projet politique.
+
+L’héritage cypherpunk se retrouve plus tard dans des projets comme Wikileaks (Julian Assange a lui-même fréquenté ce milieu), dans l’usage de réseaux anonymes comme Tor, ou encore dans les crypto-monnaies. Le Bitcoin, lancé en 2008 par Satoshi Nakamoto, s’inscrit explicitement dans cette filiation : celle d’une technologie destinée à court-circuiter les institutions centralisées et à redonner du pouvoir aux individus.
+
+---
+<!-- slide: id="blockchain-010-video-histoire-des-cypherpunks" title="Vidéo : histoire des cypherpunks" layout="center" -->
+https://www.youtube.com/watch?v=9vM0oIEhMag&list=PLDftu3L1GcexhTUBL434mDuZcoVvVEUlH&index=2
+
+---
+<!-- slide: id="blockchain-012-la-crise-des-subprimes" title="La crise des subprimes" layout="center" -->
+## La crise des subprimes
+2007 - 2008 {.kicker}
+
+--- notes
+
+Re-ecrire lintro a partir de cet article
+
+https://shs.cairn.info/hayek--9782841869060-page-19?lang=fr
+
+
+Crise financière qui a touché le secteur des prêts hypothécaires à risque.
+
+Les subprimes constituent des crédits immobiliers - souvent à taux variables - accordés, un peu trop facilement, à des particuliers peu solvables dans un contexte de bulle immobilières.
+
+Ces crédits immobiliers sont le plus souvent couverts par des produits financiers appelés *Credit Default Swap* ou CDS.
+
+Un CDS constituent une sorte de contrat de protection financière : si un ménage fait défaut sur son crédit, la banque peut se tourner vers l'institution auprès de laquelle elle a acquis un CDS pour couvrir ses pertes.
+
+Le CDS constitue un produit financier. L'institution l'ayant émis peut le revendre à d'autres institutions - comme on échangerait des actions.
+
+Souvent, ces CDS sont inclus dans d'autres produits financiers dérivés, si bien que plus personne ne sait plus exactement où se trouve le risque de crédit - c'est-à-dire qui serait supposé payer en cas d'effondrement du marché du crédit immobilier.
+
+Nombre d'institutions finissent même par posséder simultanément des crédits immobiliers et des CDS.
+
+Or la plupart des ménages auxquels sont accordés des crédits immobiliers à cette époque sont insolvables. Pourtant les CDS - Credit Default Swap - continuent d’être notés comme des actifs AAA.
+
+En 2007 la bulle immobilière s'effondre : le marché s'écrase et les défauts de crédit se multiplient.
+
+De nombreuses institutions financières se retrouvent en faillite.
+
+c.f. Inside Job (2010) et The Big Short (2015).
+
+Le problème est que si les institutions financières - et en particulier les banques - font faillite, tout le monde fait faillite.
+
+L’État vole donc au secours des banques et fait tourner la planche à billet ...
+
+... au risque de l’inflation.
+
+---
+<!-- slide: id="blockchain-013-l-inflation" title="L&#x27;inflation" -->
+<script>
+  import BackgroundMedia from '$components/BackgroundMedia.svelte'
+</script>
+
+<BackgroundMedia src="/assets/photo-1651259129029-6d1b57cf0f0a.jpg" alt="L&#x27;inflation" video={false} darken={true}>
+  <h2>L&#x27;inflation</h2>
+</BackgroundMedia>
+
+--- notes
+
+↦ L'inflation traduit baisse de la « valeur » d’une monnaie - ou, ce qui constitue une manière inversée de décrire le même problème - une augmentation générale des prix.
+
+↦ Ex. République de Weimar : inflation liée au remboursement de la dette actée par le traité de Versailles.
+
+↦ Ex. Argentine. Entre 50 et 100% d’inflation annuelle depuis plusieurs années - la valeur de la monnaie est divisée par deux chaque année.
+
+↦ Ex. Inflation actuelle.
+
+↦ Il existe plusieurs causes à l’inflation :
+
+- Évènements extérieurs : énergie, agriculture, etc.
+
+- Cycles internes liés à une augmentation artificielle de la masse monétaire : s’il y a « trop » de monnaie en circulation, la monnaie perd de sa valeur.
+
+↦ Pour comprendre d’où provient l’inflation il faut donc comprendre d’où vient la monnaie : comment celle-ci est mise en circulation ?
+
+---
+<!-- slide: id="blockchain-014-la-creation-monetaire" title="La création monétaire" layout="center" -->
+## La création monétaire
+
+--- notes
+
+↦ C'est ce qu'on appelle le problème de la création monétaire.
+
+↦ Comment l'argent est créé ?
+
+↦ En schématisant les choses, l'argent est créé par une institution particulière appelée une banque centrale : il en existe une pour la zone Euro (BCE), une pour les US (Fed), une pour le Yen, etc.
+
+↦ Cette institution crée de la monnaie - imprimer des billets et frapper des pièces - et la prête aux banques à des taux évolutifs appelés *taux directeurs* - version simplifiée, en réalité, ces opérations passent effectivement par les systèmes de paiement interbancaires (ex. TARGET2 en zone euro) et les chambres de compensation. En gros, les taux directeurs fixent les conditions dans lesquelles les banques équilibrent leurs comptes en fin de journée.
+
+↦ C'est par ce mécanisme que la monnaie est originellement mise en circulation.
+
+↦ Mais ce n'est là que la partie immergée de la création monétaire. Pourquoi ?
+
+↦ Car l'argent ainsi emprunté à la banque centrale va à son tour pouvoir être prêté par la banque à l'un de ses clients.
+
+↦ Notez que par le miracle du crédit, la banque possède toujours l'argent qu'elle a prêté sous la forme d'une créance - qu'elle peut revendre, échanger, etc.
+
+↦ Or, que va faire le client ? Placer son argent à la banque.
+
+↦ Autrement dit, par le mécanisme du crédit, les banques ont les moyens de dédoubler - en quelque sorte - l'argent.
+
+↦ L'argent qu'elles prêtent, elles détiennent en effet simultanément sous la forme d'un crédit et sous la forme d'un dépôt.
+
+↦ Le dépôt ainsi replacé à la banque va pouvoir être re-prêté à un autre client, qui va le re-placer à la banque, etc.
+
+↦ Évidemment, ce cycle du crédit est encadré. La banque ne peut pas prêter l'ensemble des dépôts qu'elle détient. Elle doit conserver une réserve minimum, et elle peut se refinancer auprès de la banque centrale pour le faire, etc.
+
+↦ Ce qui importe ici est de comprendre le principe de ce cycle de la création monétaire - pas d'en connaître le détail.
+
+↦ En comprenant comment fonctionne ce cycle on peut aussi comprendre comment le contrôler.
+
+↦ Le principal mécanisme pour agir sur les dynamiques de ce cycle du crédit est l'ajustement, par la banque centrale, des taux directeurs.
+
+↦ Plus les taux directeurs sont faibles, plus le crédit est encouragé, et plus l’inflation est grande - et inversement.
+
+↦ Pourquoi, alors, ne pas imposer en permanence des taux très élevés ? Parce qu'il importe parfois de maintenir des taux bas pour favoriser le crédit, et donc l’investissement, et ainsi « relancer » l'économie.
+
+↦ Tout le travail d’une banque centrale est donc de trouver un équilibre entre ces deux « missions » parfois « contradictoires ».
+
+↦ Le piège, c’est que le lien entre les deux est très distendu.
+
+↦ Montrer qu'en réalité une montagne de valeur est dérivée de ce processus initial : https://www.visualcapitalist.com/all-of-the-worlds-money-and-markets-in-one-visualization-2020/
+
+Les agrégats monétaires (M1, M2, M3…) sont des indicateurs utilisés par les banques centrales pour mesurer la quantité de monnaie en circulation, selon leur degré de liquidité (facilité avec laquelle elles peuvent être utilisées comme moyen de paiement).
+
+
+🔹 M1 : la monnaie la plus liquide
+
+M0 (ou “base monétaire”) : monnaie émise directement par la banque centrale (billets + réserves des banques auprès de la banque centrale).
+
+M1 regroupe :
+les billets et pièces en circulation (M0)
+les dépôts à vue (comptes courants immédiatement utilisables).
+
+👉 Autrement dit : c’est la monnaie directement disponible pour effectuer des paiements immédiatement
+
+M2 : M1 + placements à court terme
+
+M2 inclut :
+M1,
+les dépôts à terme d’une durée ≤ 2 ans (ex. comptes à terme),
+les dépôts remboursables avec préavis ≤ 3 mois (ex. certains livrets).
+
+Ce sont des formes de monnaie un peu moins liquides que M1 (tu ne paies pas ton café avec ton compte à terme), mais qui peuvent rapidement être transformées en moyens de paiement.
+
+M3 = M2 + instruments encore moins liquides : pensions livrées (repo), parts de fonds monétaires, titres de créance ≤ 2 ans, etc.
+
+↦ Or Satoshi Nakamoto - et les cypherpunk de manière générale - n’ont pas confiance en la capacité des banques centrales - et en particulier de la Fed - à assurer cette mission.
+
+↦ Ils considèrent que les multiples plans de relance mis en oeuvre vouent les principales monnaies fiduciaires à une inflation destructrice (ce sentiment est d'ailleurs toujours très présent dans la communauté Bitcoin et crypto).
+
+---
+<!-- slide: id="blockchain-015-leur-volonte-est-de-proposer-une-monnaie-deflationnist" title="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" layout="center" -->
+<img src="/assets/Clipboard 1.png" alt="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire une monnaie dont la quantité mise en circulation augmente moins vite que l’usage.
+
+↦ C'est la raison pour laquelle la politique d'émission du bitcoin est minutieusement contrôlée.
+
+↦ Le nombre de bitcoins en circulation augmente lentement block après block, transaction après transaction (nous verrons plus tard comment et pourquoi ces bitcoins sont émis).
+
+↦ Ce nombre atteindra un maximum de 21 millions de Bitcoins mis en circulation vers 2140. Après cette date, plus aucun bitcoin ne sera émis.
+
+↦ Cette mise en circulation est décroissante : c’est le halving.
+
+↦ Tous les 4 ans, la quantité de bitcoin lors du minage de chaque bloc est divisée par deux.
+
+---
+<!-- slide: id="blockchain-016-la-politique-de-nakamoto" title="La politique de Nakamoto" layout="center" -->
+## La politique de Nakamoto
+La politique sans politique {.kicker}
+
+--- notes
+
+La proposition de Satoshi Nakamoto constitue un geste éminemment politique. Mais un geste qui, paradoxalement, tient sa puissance politique de se déployer en dehors du théâtre politique.
+
+L’entreprise est pourtant ambitieuse. Ce qui est visé ici n’est pas le simple aménagement des règles de gouvernement, ni même la conquête d’un pouvoir reconnu. Le geste de Nakamoto est simultanément plus discret et plus radical. Il s’attaque au socle silencieux sur lequel repose tout exercice de gouvernement moderne : la monnaie et les infrastructures qui en garantissent la circulation.
+
+La méthode peut surprendre. Elle ne s’inscrit pas, en effet, dans les procédures traditionnelles de légitimation : ni élection, ni nomination, ni même confrontation parlementaire. Là où l’action politique classique revendique sa visibilité, Nakamoto agit par soustraction. Il ne demande pas la reconnaissance du pouvoir : il fabrique une autre scène, une autre matérialité, où ce pouvoir est rendu superflu.
+
+C’est ici une politique par l’infrastructure qui se dessine. Une politique qui ne procède pas de conflits discursifs mais de choix architecturaux. Une politique dont la grâce tient à ce qu’elle n’institue rien – mais, au contraire, destitue tout : non pas corriger l’État, mais le contourner ; non pas restaurer la confiance, mais éluder sa nécessité. La proposition de Nakamoto dessine ainsi un pouvoir sans souverain, une souveraineté sans parole, une parole sans intentionnalité.
+
+Ce geste n’est pas sans mémoire. Il prolonge une tradition souterraine, forgée dans les années 1990 : celle des cypherpunks, pour qui le politique ne s’arrache pas dans la rue mais s’écrit dans le code. Cypherpunks write code : telle est la maxime. Non pas attendre que l’État protège la vie privée, mais coder les outils qui la rendent inviolable ; non pas réclamer une monnaie juste, mais concevoir une architecture qui se substitue au crédit souverain. Ici se révèle la stratégie libertarienne : déplacer le champ du politique hors de ses institutions, du parlement au protocole, de la loi au code.
+
+Une telle orientation, bien sûr, implique d’anticiper les réactions de l’État, toujours capable de réprimer, de censurer, d’enfermer. D’où la nécessité d’une structure radicalement décentralisée : un réseau sans tête, sans centre, sans architecte identifiable, donc sans cible assignable.
+
+
+METTTRE UN SCREENSHOT DU PREMIER BLOC AVEC LE TITRE DU JOURNAL SUR LE BAILOUT DES BANQUES

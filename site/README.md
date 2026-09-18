@@ -38,7 +38,6 @@ One file in `../content/` describes one complete course. Its filename becomes it
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | [`introduction-aux-cultures-numeriques.yaml`](../content/introduction-aux-cultures-numeriques.yaml) | `/introduction-aux-cultures-numeriques/` (legacy `/l1/` alias) |
 | [`l2.md`](../content/l2.md)                                                                         | `/l2/`                                                         |
-| [`m2.md`](../content/m2.md)                                                                         | `/m2/`                                                         |
 
 YAML takes precedence over a Markdown file with the same basename. Legacy `section=section-N` links remain usable. The three chapters following the two history chapters in the introductory course are provisional proposals.
 
@@ -94,6 +93,7 @@ The assistant appears when the course has at least one chapter. A future live se
 | [`src/lib/course-content.js`](src/lib/course-content.js)               | Parsing, validation and safe Markdown rendering     |
 | [`src/routes/[course]/+page.svelte`](src/routes/[course]/+page.svelte) | Course views, chapter selection and resource tabs   |
 | [`src/lib/ChapterPicker.svelte`](src/lib/ChapterPicker.svelte)         | Mobile chapter navigation and viewport fitting      |
+| [`src/lib/ChapterNavigation.svelte`](src/lib/ChapterNavigation.svelte) | Responsive chapter sidebar, active selection and overview link |
 | [`src/lib/SlideDeck.svelte`](src/lib/SlideDeck.svelte)                 | Embedded presentation and fullscreen controls       |
 | [`src/lib/FloatingAssistant.svelte`](src/lib/FloatingAssistant.svelte) | Floating chat integration                           |
 | [`scripts/site.mjs`](scripts/site.mjs)                                 | Development servers and combined production build   |

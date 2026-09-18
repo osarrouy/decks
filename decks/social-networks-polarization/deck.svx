@@ -1,0 +1,415 @@
+---
+title: Réseaux sociaux numériques 5/5
+theme: gallery
+---
+
+# Bulles, chambres d’écho et polarisation
+Réseaux sociaux numériques · 5/5 {.kicker}
+
+--- notes
+
+Ce chapitre distingue des mécanismes souvent regroupés sous une même image :
+biais de confirmation, exposition sélective, homophilie, personnalisation et
+renforcement collectif. Il examine ensuite ce que les recherches permettent de
+dire de leurs effets sur la polarisation.
+
+La règle de méthode est de séparer la composition du fil, les comportements
+d’usage, les opinions et l’hostilité envers le camp adverse. Une variation de
+l’un de ces phénomènes ne prouve pas automatiquement une variation des autres.
+
+---
+<!-- slide: id="gatekeepers-013-bulles" title="Bulles de filtres : distinguer cinq mécanismes" steps=0 -->
+## Bulles de filtres
+Cinq mécanismes à ne pas confondre {.kicker}
+
+| Notion | Question |
+|---|---|
+| Biais de confirmation | Comment je traite l’information ? |
+| Exposition sélective | Qu’est-ce que je choisis de consulter ? |
+| Homophilie | Avec qui suis-je relié ? |
+| Bulle de filtres | Que personnalise le système ? |
+| Chambre d’écho | Comment le groupe renforce-t-il ses convictions ? |
+
+--- notes
+
+Le terme « bulle de filtres » est souvent utilisé pour désigner des phénomènes différents. Il faut distinguer au moins cinq mécanismes.
+
+Le biais de confirmation concerne la manière dont une personne recherche, interprète ou retient les informations. L’exposition sélective concerne le choix des sources consultées. L’homophilie concerne la ressemblance entre les personnes reliées.
+
+La bulle de filtres désigne plus précisément un rétrécissement attribué à la personnalisation automatique. La chambre d’écho désigne un environnement dans lequel des positions circulent et se renforcent principalement entre personnes qui les partagent.
+
+Ces mécanismes peuvent se combiner, mais ils ne forment pas une chaîne automatique.
+
+---
+<!-- slide: id="gatekeepers-014-biais-exposition-homophilie" title="Avant l’algorithme : nos choix et nos relations" steps=0 -->
+## Trois mécanismes en amont
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;width:100%;">
+<div><h3>Biais</h3><p>Retenir ce qui confirme une croyance.</p></div>
+<div><h3>Exposition</h3><p>Choisir des sources compatibles.</p></div>
+<div><h3>Homophilie</h3><p>Être relié à des personnes qui nous ressemblent.</p></div>
+</div>
+
+--- notes
+
+Le biais de confirmation peut intervenir devant une information commune : deux personnes lisent le même dossier mais ne donnent pas le même poids à ses éléments.
+
+L’exposition sélective intervient avant la lecture : une personne favorable à la piétonnisation peut s’abonner à une lettre consacrée aux mobilités douces, tandis qu’une autre consulte surtout un site défendant la place de la voiture.
+
+L’homophilie désigne la tendance des relations sociales à se nouer entre personnes qui se ressemblent sur certaines dimensions : milieu social, âge, formation, activités ou convictions.
+
+Un étudiant peut suivre surtout ses amis, ses camarades et des associations de son campus sans avoir explicitement décidé de bannir les opinions opposées. La composition du réseau intervient donc en amont du classement.
+
+---
+<!-- slide: id="gatekeepers-015-bulle-chambre" title="Personnalisation et renforcement collectif" steps=0 -->
+## Bulle de filtres et chambre d’écho
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
+<div style="border:1px solid var(--accent);padding:1rem;"><strong>Bulle de filtres</strong><br><span class="kicker">Une sélection personnalisée rétrécit les rencontres</span></div>
+<strong>+</strong>
+<div style="border:1px solid var(--fg);padding:1rem;"><strong>Chambre d’écho</strong><br><span class="kicker">Un groupe valide et neutralise les objections</span></div>
+</div>
+
+--- notes
+
+La bulle de filtres désigne l’hypothèse suivante : un comportement passé sert à prédire un intérêt ; le système recommande davantage de contenus proches ; ces recommandations produisent de nouveaux comportements qui confortent le profil initial.
+
+La chambre d’écho désigne un milieu dans lequel des positions circulent et se renforcent entre personnes qui les partagent. Dans les formes les plus fermées, les sources extérieures sont disqualifiées à l’avance.
+
+Un groupe spécialisé ou une communauté partageant une conviction ne constitue pas automatiquement une chambre d’écho. La notion porte sur les conditions de circulation et de confrontation des informations.
+
+Les définitions scientifiques ne sont pas entièrement stabilisées. Cette diversité explique une partie des résultats divergents dans les recherches.
+
+---
+<!-- slide: id="gatekeepers-016-enfermement" title="Les recherches montrent-elles un enfermement généralisé ?" steps=0 -->
+## Un enfermement généralisé ?
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;">
+<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Oui, parfois</h3><p>Des environnements très homogènes et des séparations idéologiques fortes existent.</p></div>
+<div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Mais pas partout</h3><p>Une plateforme ne résume pas toute la vie informationnelle.</p></div>
+</div>
+
+--- notes
+
+En 2015, Bakshy, Messing et Adamic étudient 10,1 millions d’utilisateurs américains de Facebook. Ils distinguent les contenus rendus disponibles par les amis, ceux montrés après classement et ceux qui suscitent un clic.
+
+Les choix individuels jouent globalement un rôle important, mais le poids relatif des clics et du classement varie selon les groupes politiques. L’utilisateur ne compte donc pas toujours davantage que l’algorithme.
+
+Flaxman, Goel et Rao observent que les moteurs de recherche et les réseaux sociaux sont associés à davantage de séparation idéologique entre publics, mais aussi à davantage de rencontres avec des sources du camp opposé, selon le point de comparaison choisi.
+
+Les deux résultats peuvent coexister : un environnement peut être globalement orienté tout en ménageant quelques ouvertures.
+
+---
+<!-- slide: id="gatekeepers-017-vie-informationnelle" title="Une plateforme ne résume pas toute notre vie informationnelle" steps=0 -->
+## Une plateforme ne résume pas un public
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center;font-family:var(--font-mono);font-size:clamp(0.7rem,1.2vw,1.1rem);">
+<div style="padding:1rem;border:1px solid var(--rule);">Fil social</div>
+<div style="padding:1rem;border:1px solid var(--rule);">Radio et presse</div>
+<div style="padding:1rem;border:1px solid var(--rule);">Relations sociales</div>
+</div>
+
+--- notes
+
+Dubois et Blank invitent à considérer l’ensemble du répertoire médiatique d’une personne. Une personne peut suivre des comptes très proches de ses opinions sur un réseau, tout en écoutant une radio généraliste, en lisant un journal local et en discutant avec des collègues en désaccord.
+
+Observer une seule plateforme peut donc conduire à surestimer l’isolement informationnel. Inversement, multiplier les applications ne garantit pas la diversité : les mêmes sources, vidéos et arguments peuvent circuler sur plusieurs services.
+
+Il ne faut toutefois pas utiliser cette nuance pour nier toute séparation. González-Bailón et ses collègues observent, pendant l’élection américaine de 2020, une ségrégation idéologique forte entre les informations potentiellement disponibles, celles effectivement montrées et celles suscitant une interaction.
+
+La bonne conclusion n’est ni que tout le monde vit dans une prison informationnelle, ni que les bulles sont imaginaires.
+
+---
+<!-- slide: id="gatekeepers-018-polarisation" title="Polarisation : les idées, les affects et les publics" steps=0 -->
+## Trois phénomènes distincts
+
+| Phénomène | Ce qui se transforme |
+|---|---|
+| Polarisation idéologique | La distance entre les positions |
+| Polarisation affective | Les sentiments envers le camp adverse |
+| Ségrégation des audiences | La séparation des publics et des sources |
+
+--- notes
+
+La polarisation idéologique désigne un éloignement des positions politiques.
+
+La polarisation affective concerne les sentiments envers le camp adverse : méfiance, mépris ou hostilité. Elle peut augmenter même si les positions sur les politiques publiques changent peu.
+
+La ségrégation des audiences concerne la séparation entre des médias, des comptes ou des communautés. Elle porte d’abord sur la circulation de l’information et ne prouve pas à elle seule que les positions se sont éloignées.
+
+Un déplacement général vers la droite ou la gauche n’est pas nécessairement une polarisation : si plusieurs groupes évoluent dans la même direction sans s’éloigner les uns des autres, il y a changement d’opinion, mais pas automatiquement augmentation de la distance.
+
+> Être exposé à un contenu partisan, changer d’avis et détester davantage un adversaire sont trois résultats différents.
+
+---
+<!-- slide: id="gatekeepers-019-hostilite" title="L’hostilité peut produire de l’engagement" steps=0 -->
+## L’hostilité attire l’attention
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
+<div style="border:1px solid var(--rule);padding:1rem;">Proposition pour les transports</div><strong>≠</strong><div style="border:1px solid var(--accent);padding:1rem;">Regardez ce que nos adversaires veulent vous imposer</div>
+</div>
+
+--- notes
+
+Rathje, Van Bavel et van der Linden analysent environ 2,7 millions de publications de médias et de membres du Congrès américain sur Facebook et Twitter. Les références au camp politique adverse sont fortement associées aux partages et sont partagées environ deux fois plus que les publications portant sur son propre camp.
+
+Il s’agit d’un résultat observationnel : il établit une association avec l’engagement dans ces données, mais ne prouve pas à lui seul la responsabilité causale d’un algorithme ni une transformation des opinions.
+
+Des réactions de sens politique opposés peuvent contribuer à la circulation du même contenu. Si un classement valorise ces interactions sans distinguer leur nature, il peut donner un avantage aux contenus qui déclenchent le conflit.
+
+Être captivé n’est pas être satisfait. Une personne peut passer vingt minutes à lire une dispute, y répondre et revenir voir les réactions, puis fermer l’application en regrettant ce temps. Le temps passé mesure une captation de l’attention, pas nécessairement une expérience appréciée.
+
+---
+<!-- slide: id="gatekeepers-020-adversaire" title="Voir l’adversaire peut aussi polariser" steps=0 -->
+## La contradiction ne modère pas automatiquement
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
+<div style="border:1px solid var(--accent);padding:1rem;">Rencontrer l’autre camp</div><strong>≠</strong><div style="border:1px solid var(--fg);padding:1rem;">Comprendre ses arguments</div>
+</div>
+
+--- notes
+
+L’image de la bulle suggère que le problème vient toujours de l’absence de contradiction. Or la manière dont nous rencontrons l’adversaire peut être aussi importante que la fréquence de cette rencontre.
+
+Une personne favorable à une mobilisation peut ne voir du camp opposé que des propos insultants. Une personne opposée peut ne voir des manifestants que des séquences de violence. Chacune rencontre l’autre camp, mais à travers des fragments qui font passer les membres les plus agressifs pour ses représentants ordinaires.
+
+Dans une expérience de Bail et ses collègues, des utilisateurs américains de Twitter suivent un compte automatisé relayant des messages du camp opposé. Les participants républicains deviennent en moyenne plus conservateurs ; le déplacement des démocrates n’est pas statistiquement significatif.
+
+Ce résultat ne signifie pas que toute contradiction radicalise. Il montre que l’exposition au camp opposé ne constitue pas automatiquement une modération.
+
+> Voir davantage l’adversaire ne signifie pas nécessairement mieux comprendre ses arguments.
+
+---
+<!-- slide: id="gatekeepers-021-causalite" title="Pourquoi une corrélation ne suffit pas" steps=0 -->
+## Corrélation et causalité
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;font-family:var(--font-mono);font-size:clamp(0.7rem,1.2vw,1.1rem);">
+<span>Consulter des contenus politiques</span><strong>↔ ?</strong><span>Être polarisé</span>
+</div>
+
+--- notes
+
+Si les utilisateurs qui consultent le plus de contenus politiques sont aussi les plus polarisés, plusieurs explications sont possibles : les contenus renforcent la polarisation ; les personnes déjà polarisées les recherchent davantage ; ou un autre facteur, comme l’engagement militant, favorise les deux phénomènes.
+
+Pour identifier plus solidement un effet causal, certaines recherches attribuent aléatoirement des fils différents à des participants comparables, puis observent si leurs usages ou leurs attitudes évoluent différemment.
+
+Même dans ce cas, la conclusion porte sur une intervention donnée, pendant une durée donnée, auprès d’une population donnée. Remplacer un fil personnalisé par un fil chronologique ne teste pas exactement la même chose que diminuer les contenus hostiles.
+
+Cette précision permet de lire ensemble des résultats qui paraissent contradictoires.
+
+---
+<!-- slide: id="gatekeepers-022-facebook-instagram" title="Changer le fil ne change pas nécessairement les attitudes" steps=0 -->
+## Facebook et Instagram
+Des effets sur l’usage, pas nécessairement sur les opinions {.kicker}
+
+--- notes
+
+Une expérience de Guess et ses collègues, publiée en 2023 pendant l’élection américaine de 2020, remplace pour certains participants le fil habituel de Facebook ou d’Instagram par un fil chronologique.
+
+Le changement modifie l’usage des plateformes et les contenus rencontrés, mais aucun effet significatif n’est détecté sur les principaux indicateurs politiques étudiés, notamment les polarisations idéologique et affective, pendant les trois mois de l’étude.
+
+Une autre expérience, menée par Nyhan et ses collègues, réduit d’environ un tiers l’exposition aux sources politiquement proches sur Facebook. Elle accroît l’exposition à des sources différentes et diminue notamment l’exposition aux propos incivils, sans effet mesurable sur les indicateurs d’attitudes politiques étudiés.
+
+Ces études limitent fortement le récit d’un effet immédiat et systématique du fil sur les opinions. Un effet non détecté dans ces conditions ne prouve toutefois pas l’absence de tout effet possible, à toute échéance et dans toute population.
+
+---
+<!-- slide: id="gatekeepers-023-x" title="Sur X, une intervention ciblée peut modifier l’hostilité" steps=0 -->
+## Sur X : agir sur les contenus hostiles
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;text-align:center;width:100%;">
+<div style="border:1px solid var(--accent);padding:1rem;">Moins d’animosité exposée</div><strong>→</strong><div style="border:1px solid var(--accent);padding:1rem;">Sentiments envers l’autre camp plus favorables</div>
+</div>
+
+--- notes
+
+Piccardi et ses collègues publient en 2025 une expérience menée sur X pendant la campagne américaine de 2024, avec 1 256 participants pendant dix jours.
+
+Les chercheurs augmentent ou diminuent l’exposition à des publications exprimant de l’animosité partisane et des attitudes antidémocratiques. La diminution rend les sentiments envers le camp adverse plus favorables ; l’augmentation les rend plus défavorables.
+
+Les déplacements sont de l’ordre de deux points sur une échelle de 0 à 100. Il s’agit d’un effet causal mesuré sur la polarisation affective, d’ampleur limitée et dans un contexte précis.
+
+Le résultat ne prouve pas que quelques publications bouleversent toutes les convictions. Il montre qu’une intervention ciblée sur les contenus hostiles peut produire un effet là où une modification générale du fil ne produit pas nécessairement d’effet mesurable.
+
+---
+<!-- slide: id="gatekeepers-024-effets-politiques" title="Un effet politique n’est pas toujours une polarisation affective" steps=0 -->
+## Un classement peut orienter certains jugements
+
+--- notes
+
+Gauthier et ses collègues publient en 2026 une expérience menée aux États-Unis sur X en 2023, pendant environ sept semaines. Le passage du fil chronologique au fil algorithmique déplace certaines attitudes vers des positions plus conservatrices, notamment à propos des enquêtes visant Donald Trump et de la guerre en Ukraine.
+
+Aucun effet significatif n’est détecté sur la polarisation affective ni sur l’identification partisane. Le passage inverse ne produit pas de mouvement comparable.
+
+Ce résultat rappelle que l’influence politique n’a pas une seule forme. Un algorithme peut orienter certains jugements sans augmenter l’hostilité envers l’autre camp.
+
+Les études ne testent ni les mêmes plateformes, ni les mêmes modifications, ni les mêmes moments politiques. Leur diversité oblige à formuler les conclusions avec précision.
+
+---
+<!-- slide: id="gatekeepers-025-conclusion-recherches" title="Ce que les recherches permettent d’affirmer" steps=0 -->
+## Des effets réels, mais ni uniformes ni automatiques
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;width:100%;text-align:center;">
+<div><h3>Composition</h3><p>Le classement peut favoriser certains contenus.</p></div>
+<div><h3>Exposition</h3><p>Modifier ce qui est montré peut modifier certaines rencontres.</p></div>
+<div><h3>Attitudes</h3><p>Les effets dépendent des conditions et ne sont pas toujours détectables.</p></div>
+</div>
+
+--- notes
+
+Certains classements favorisent des contenus conflictuels, et certaines interventions sur l’exposition modifient des attitudes politiques. Ces effets ne sont ni uniformes ni automatiques.
+
+Il faut distinguer les effets sur la composition du fil, sur les comportements d’usage, sur l’hostilité et sur les positions politiques. Une étude qui observe l’un de ces effets ne permet pas automatiquement de conclure sur les autres.
+
+La forte présence d’études américaines constitue une limite pour notre cours. Les résultats éclairent des mécanismes, mais leurs amplitudes et leurs asymétries ne se transposent pas directement à la France, à un système multipartite ou à toutes les plateformes.
+
+---
+<!-- slide: id="gatekeepers-026-ancien-nouveau" title="Ce qui est ancien, ce que les plateformes transforment" steps=0 -->
+## Ce qui est ancien, ce qui change
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
+<div style="border:1px solid var(--rule);padding:1rem;"><strong>Avant</strong><br>Choisir un journal<br>Fréquenter un milieu homogène</div>
+<strong>→</strong>
+<div style="border:1px solid var(--accent);padding:1rem;"><strong>Plateformes</strong><br>Traces détaillées<br>Sélection réajustée</div>
+</div>
+
+--- notes
+
+Le biais de confirmation, les affinités sociales, les médias partisans et les conflits politiques existaient avant les fils personnalisés. Les publics n’étaient pas autrefois parfaitement ouverts à toutes les informations.
+
+La nouveauté possible des plateformes tient à une sélection individualisée opérant à grande échelle, à partir de traces détaillées et réajustée au fil des interactions.
+
+À cette dynamique s’ajoute l’adaptation des producteurs. Si un format semble récompensé, ils peuvent le reproduire. Les comportements des publics alimentent le classement ; les attentes concernant le classement orientent la production ; les nouveaux contenus suscitent de nouvelles réactions.
+
+On peut parler d’industrialisation de certaines dynamiques de l’attention. Il ne s’agit pas d’affirmer que chaque utilisateur est enfermé ni que chaque réaction est entièrement calculable.
+
+---
+<!-- slide: id="gatekeepers-027-pouvoir-classer" title="Le pouvoir de définir ce qui mérite d’être vu" steps=0 -->
+## Le pouvoir est aussi dans les critères
+
+| Classement | Ce qu’il privilégie |
+|---|---|
+| Chronologique | La récence |
+| Par engagement | Les réactions prédites |
+| Par diversité | Des sources, thèmes ou positions variés |
+
+--- notes
+
+La question politique ne se réduit pas à choisir entre « un algorithme » et « pas d’algorithme ». Un fil chronologique sélectionne déjà : les comptes qui publient très souvent peuvent occuper beaucoup de place.
+
+Un classement par engagement privilégie certaines réactions. Un classement cherchant la diversité devrait définir ce que signifie cette diversité : diversité des sources, des thèmes, des positions ou des producteurs.
+
+Aucune option ne supprime toute sélection. Une diversité purement numérique peut juxtaposer plusieurs sources qui répètent la même information.
+
+Le pouvoir consiste donc aussi à définir les critères de distribution de l’attention, les acteurs capables de les modifier et les moyens de comprendre leurs effets.
+
+---
+<!-- slide: id="gatekeepers-028-conclusion" title="Des probabilités de rencontre, pas une toute-puissance" steps=0 -->
+## Conclusion
+
+> Les plateformes transforment les probabilités de rencontre.  
+> Leurs effets dépendent des publics, des usages et des situations.
+
+--- notes
+
+La personnalisation peut contribuer à rétrécir l’horizon informationnel. Mais
+cet horizon dépend aussi des relations, des sources choisies et de l’ensemble des
+usages médiatiques. Les cinq mécanismes étudiés sont liés, mais distincts.
+
+Certains classements peuvent contribuer à la polarisation. Il faut distinguer la
+séparation des publics, l’éloignement des opinions et l’hostilité envers
+l’adversaire.
+
+Les plateformes ne commandent pas mécaniquement ce que nous pensons. Elles interviennent cependant dans les conditions à partir desquelles nous pensons : les sujets rencontrés, les personnes suivies, les arguments qui reviennent et les figures de l’adversaire qui deviennent familières.
+
+Les plateformes organisent des probabilités de rencontre. Ce pouvoir est réel,
+mais ses effets ne sont ni identiques pour tous les publics ni indépendants des
+autres espaces dans lesquels chacun s’informe et discute.
+
+---
+<!-- slide: id="gatekeepers-029-aide-memoire" title="Aide-mémoire" steps=0 -->
+## Aide-mémoire
+
+| Question | Réponse à retenir |
+|---|---|
+| Bulle et chambre d’écho sont-elles identiques ? | Non : l’une renvoie à la personnalisation, l’autre au renforcement dans un groupe. |
+| Qui façonne notre environnement ? | Choix de sources, relations, plateformes et autres médias y contribuent. |
+| Les bulles sont-elles partout ? | Certains environnements sont homogènes, mais une plateforme ne résume pas toute une vie informationnelle. |
+| Voir l’autre camp modère-t-il ? | La qualité et le contexte de la rencontre comptent. |
+| Les algorithmes changent-ils les opinions ? | Des effets existent dans certaines conditions ; d’autres études n’en détectent pas. |
+
+--- notes
+
+Cette slide sert de synthèse finale. Insister sur les limites : l’homogénéité ne
+prouve pas que l’algorithme en est l’unique cause ; l’exposition contradictoire
+peut avoir des effets différents ; exposition, idéologie et hostilité doivent
+être mesurées séparément.
+
+:::comment
+Ne pas lire le tableau ligne par ligne si le temps manque. S’en servir plutôt pour vérifier que les cinq distinctions principales sont installées.
+:::
+
+---
+<!-- slide: id="gatekeepers-031-bibliographie-recommandation" title="Bibliographie : recommandation et bulles" steps=0 -->
+## Bibliographie de travail
+Sélection et chambres d’écho {.kicker}
+
+Dubois, E. et Blank, G. (2018). « The Echo Chamber Is Overstated: The Moderating Effect of Political Interest and Diverse Media ». *Information, Communication & Society*, 21(5), 729–745. {.citation}
+
+Pariser, E. (2011). *The Filter Bubble: What the Internet Is Hiding from You*. Penguin Press. {.citation}
+
+Nickerson, R. S. (1998). « Confirmation Bias: A Ubiquitous Phenomenon in Many Guises ». *Review of General Psychology*, 2(2), 175–220. {.citation}
+
+--- notes
+
+Ces références permettent de distinguer le concept public de « bulle de
+filtres », les mécanismes psychologiques et les résultats empiriques sur la
+diversité des régimes d’information.
+
+---
+<!-- slide: id="gatekeepers-031-bibliographie-recommandation-suite" title="Bibliographie : recommandation et bulles (suite)" steps=0 -->
+## Bibliographie de travail
+Recommandation, sélection et chambres d’écho — suite {.kicker}
+
+Hart, W. et al. (2009). « Feeling Validated Versus Being Correct: A Meta-Analysis of Selective Exposure to Information ». *Psychological Bulletin*, 135(4), 555–588. {.citation}
+
+Bakshy, E., Messing, S. et Adamic, L. A. (2015). « Exposure to ideologically diverse news and opinion on Facebook ». *Science*, 348(6239), 1130–1132. {.citation}
+
+Flaxman, S., Goel, S. et Rao, J. M. (2016). « Filter Bubbles, Echo Chambers, and Online News Consumption ». *Public Opinion Quarterly*, 80(S1), 298–320. {.citation}
+
+--- notes
+
+Cette slide complète les références sur l’exposition sélective, la diversité idéologique et les chambres d’écho.
+
+---
+<!-- slide: id="gatekeepers-032-bibliographie-polarisation" title="Bibliographie : engagement et effets politiques" steps=0 -->
+## Bibliographie de travail
+Engagement et effets politiques {.kicker}
+
+González-Bailón, S. et al. (2023). « Asymmetric ideological segregation in exposure to political news on Facebook ». *Science*, 381(6656), 392–398. {.citation}
+
+Bail, C. A. et al. (2018). « Exposure to opposing views on social media can increase political polarization ». *PNAS*, 115(37), 9216–9221. {.citation}
+
+Rathje, S., Van Bavel, J. J. et van der Linden, S. (2021). « Out-group animosity drives engagement on social media ». *PNAS*, 118(26), e2024292118. {.citation}
+
+Guess, A. M. et al. (2023). « How do social media feed algorithms affect attitudes and behavior in an election campaign? ». *Science*, 381(6656), 398–404. {.citation}
+
+--- notes
+
+Cette slide rassemble les premières références de la partie sur la polarisation et les effets politiques des fils. Les résultats doivent être présentés avec leur portée précise : plateforme, population, durée, intervention et indicateur mesuré.
+
+---
+<!-- slide: id="gatekeepers-033-bibliographie-polarisation-suite" title="Bibliographie : engagement et effets politiques (suite)" steps=0 -->
+## Bibliographie de travail
+Engagement et effets politiques — suite {.kicker}
+
+Nyhan, B. et al. (2023). « Like-minded sources on Facebook are prevalent but not polarizing ». *Nature*, 620, 137–144. {.citation}
+
+Milli, S. et al. (2025). « Engagement, user satisfaction, and the amplification of divisive content on social media ». *PNAS Nexus*, 4(3), pgaf062. {.citation}
+
+Piccardi, T. et al. (2025). « Reranking partisan animosity in algorithmic social media feeds alters affective polarization ». *Science*, 390(6776), eadu5584. {.citation}
+
+Gauthier, G. et al. (2026). « The political effects of X’s feed algorithm ». *Nature*, 652, 416–423. {.citation}
+
+--- notes
+
+Cette slide complète la bibliographie de la partie sur la polarisation. Ces recherches ne testent ni les mêmes plateformes, ni les mêmes populations, ni les mêmes interventions : leurs résultats ne doivent pas être généralisés au-delà de leurs conditions d’étude.

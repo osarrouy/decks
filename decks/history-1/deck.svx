@@ -565,32 +565,3 @@ Des versions sophistiquées de tabulatrices electro-mécaniques - notamment cell
 La véritable révolution aura lieu, prêt de 30 ans plus tard, avec l’invention de l’ordinateur personnel.
 
 Entre temps, les usages de l’informatique naissante seront circonscrits à la recherche militaire et à quelques initiatives cybernétiques.
-
----
-
-<!-- slide: id="history-063-bibliographie" title="Bibliographie" steps=0 -->
-## Bibliographie
-
----
-
-### Histoire de l'informatique
-Breton, P. (1990). *Une histoire de l’informatique*. Seuil.
-https://www.canal-u.tv/chaines/culturegnum/une-breve-histoire-de-l-informatique-de-1945-a-nos-jours
-Pasquinelli, M. (2023). *The Eye of the Master: A Social History of Artificial Intelligence*. Verso, chap. 2.
-Foucault, M. (1976). *Histoire de la sexualité I : La volonté de savoir*. Gallimard.
-Foucault, M. (2004). *Sécurité, territoire, population. Cours au Collège de France (1977–1978)*. Seuil/Gallimard.
-Beniger, J. R. (1986). *The Control Revolution: Technological and Economic Origins of the Information Society*. Harvard University Press.
-Science Museum Group. *Babbage’s Analytical Engine, 1834–1871 (Trial model)*.
-https://collection.sciencemuseumgroup.org.uk/objects/co62245/babbages-analytical-engine-1834-1871-trial-model
-The Franklin Institute. *Case Files: Herman Hollerith*.
-https://fi.edu/en/news/case-files-herman-hollerith
-Yates, J. (1993). “Co-evolution of Information-Processing Technology and Use: Interaction between the Life Insurance and Tabulating Industries.” *Business History Review*, 67(1), 1–51.
-https://doi.org/10.2307/3117467
-IBM. *The punched card tabulator*.
-https://www.ibm.com/history/punched-card-tabulator
-
----
-
-### Histoire d'Internet
-Abbate, J. (1999). *Inventing the internet*. MIT Press.
-Turner, F. (2012). *Aux sources de l’utopie numérique: De la contre-culture à la cyberculture, Stewart Brand un homme d’influence*. C&F Éditions.

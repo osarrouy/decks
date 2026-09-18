@@ -1,0 +1,306 @@
+---
+title: Blockchain et crypto-monnaies — Ethereum
+theme: gallery
+---
+
+<!-- slide: id="blockchain-032-beyond-bitcoin" title="Beyond Bitcoin" layout="center" -->
+## Beyond Bitcoin
+
+--- notes
+
+↦ Rappel. La blockchain constitue une réponse technique au problème du consensus distribué. Cette réponse technique a été imaginée pour le Bitcoin.
+
+↦ Mais il est possible de concevoir des blockchains pour d'autres applications que le Bitcoin.
+
+↦ La technologie blockchain a été, ces 15 dernières années, étendue et perfectionnée, pour gérer des données plus complexes.
+
+---
+<!-- slide: id="blockchain-033-monero" title="Monero" layout="center" -->
+## Monero
+2014 {.kicker}
+
+--- notes
+
+↦ Crypto-monnaie centrée sur la privacy.
+
+↦ Comment rendre privée et / ou anonymes des données enregistrées sur une base de données publiques ?
+
+---
+<!-- slide: id="blockchain-034-ethereum" title="Ethereum" layout="center" -->
+## Ethereum
+Vitalik Buterin {.kicker}
+
+--- notes
+
+↦ Blockchain d'un nouveau type proposée en 2013 par Vitalik Buterin (19 ans à l'époque).
+
+↦ Vitalik Buterin est un russe ayant émigré très jeune au Canada avec ses parents.
+
+↦ Très tôt, alors qu'il n'est encore qu'adolescent, Buterin s'intéresse au Bitcoin. Il devient notamment un contributeur régulier du Bitcoin Magazine.
+
+↦ En 2013, Vitalik Buterin rédige le whitepaper d'une blockchain nouvelle et novatrice appelée Ethereum.
+
+↦ En quoi cette blockchain est-elle nouvelle ?
+
+↦ Parce qu'elle est conçue non pas uniquement pour enregistrer et valider des transactions financières, mais pour héberger des applications décentralisés de tout type.
+
+---
+<!-- slide: id="blockchain-035-transactions-ethereum" title="Transactions Ethereum" -->
+| Emetteur | Destinataire | Valeur |
+| :------- | :----------- | :----- |
+| Alice    | Bob          | 2 ₿    |
+| Bob      | Charlie      | 1.5 ₿  |
+| Bob      | Damian       | 0.4 ₿  |
+
+--- notes
+
+↦ Rappel. La « base de données » enregistrée sur la blockchain du Bitcoin. Rappelons que cette base de données est en réalité structurée en blocs.
+
+---
+<!-- slide: id="blockchain-036-donnees-et-instructions" title="Données et instructions" layout="center" -->
+| Donnée    | Type        |
+| :-------- | :---------- |
+| 0x24..f6  | data        |
+| 0xd7..80  | data        |
+| 0x7a...9a | instruction |
+
+--- notes
+
+↦ Au lieu de stocker des données formatées pour décrire des transactions financières, la base de données d'Ethereum est conçue pour pouvoir stocker des données de nature arbitraire et des instructions décrivant comment manipuler ces données - c'est-à-dire des applications.
+
+↦ Cette base de données simule ainsi la mémoire d’une ordinateur - mais de manière publique et décentralisée.
+
+↦ Rappel sur la machine de Turing. Un ordinateur est une machine à états.
+
+↦ Ethereum a ainsi vocation a devenir un ordinateur mondial offrant à chacun la possibilité de déployer des programmes publics, décentralisés et infalsifiables appelés des **smart-contacts**.
+
+↦  Buterin va rapidement être rejoint par divers développeurs et investisseurs.
+
+↦ La première version d'Ethereum est finalisée en 2015.
+
+↦ Une autre ambition de la blockchain Ethereum, qui interviendra plus tardivement, a été de remplacer l'algorithme de Proof-of-Work par un autre algorithme de consensus, moins énergivore, appelé la **Proof-of-Stake**.
+
+---
+<!-- slide: id="blockchain-037-proof-of-stake" title="Proof-of-Stake" layout="center" -->
+## Proof-of-Stake
+PoS {.kicker}
+
+--- notes
+
+↦ La PoS consiste à remplacer l'investissement énergétique propre à la Proof-of-Work en un investissement purement financier.
+
+↦ De la même manière que la blockchain du Bitcoin dispose d'une monnaie native - le bitcoin - la blockchain Ethereum dispose d'une monnaie native appelée l'**Ether**.
+
+↦ La PoS consiste à réclamer des validateurs une mise en gage d'une certaine quantité d'Ethers pour valider les blocs de transactions - en lieu et place d'un investissement énergétique.
+
+↦ Le passage à la PoS a été réalisée avec succès sur la blockchain Ethereum en septembre 2022.
+
+---
+<!-- slide: id="blockchain-038-dapps" title="dApps" layout="center" -->
+## dApps
+Decentralized Applications {.kicker}
+
+--- notes
+
+↦ L'intention des dApps est de supprimer les tiers de confiance dans l'économie de plateforme - comme on a supprimé la banque de la monnaie.
+
+↦ Exemple. Mécanismes financiers. Expliquer la différence entre un DEX et un CEX.
+
+-stablecoin
+
+-farcaster (twitter décentralisé)
+
+↦  Ex. Uber, Deliveroo, etc.
+
+-> ENS
+
+-> Polymarket
+
+-> NFT
+
+↦ Exemple. Gouvernance.
+
+---
+<!-- slide: id="blockchain-039-wallets" title="Wallets" layout="center" -->
+## Wallets
+WTF {.kicker}
+
+--- notes
+
+↦ Entrons dans des considérations pratiques. Comment recevoir et dépenser de l'argent sur une blockchain, comment interagir avec une blockchain, etc. ?
+
+↦ Focus sur la blockchain Ethereum :
+- Seconde blockchain la plus importante - après le Bitcoin - en terme de capitalisation.
+- Blockchain qui offre le plus d'applications.
+- Riche d'un important écosystème.
+
+↦ Ce qui vaut pour la blockchain Ethereum vaut pour la plupart des autres blockchains.
+
+↦ Le point de départ pour interagir avec un blockchain est de contrôler un wallet - i.e. un portefeuille.
+
+↦ Un wallet a plusieurs fonctions
+
+1. Identification
+↦ Le wallet constitue votre identité sur la blockchain.
+↦ Ex. : recevoir de l'argent.
+↦ RIB vs addresse de votre wallet.
+
+2. Authentification
+↦ Le wallet permet de vous authentifier sur la blockchain.
+↦ Ex. : contrôle vos fonds (votre argent).
+
+↦ Autrement dit votre wallet constitue à la fois votre identité et le mode de passe protégeant cette identité sur la blockchain.
+
+---
+<!-- slide: id="blockchain-040-cryptographie-asymetrique" title="Cryptographie asymétrique" layout="center" -->
+## Cryptographie asymétrique
+
+--- notes
+
+↦ Le fonctionnement d'un wallet repose sur un ensemble de fonctions mathématiques disposant de certaines propriétés cryptographiques.
+
+↦ Nous n'allons pas entrer dans le détail de ces propriétés et de leur soubassement mathématique mais simplement essayer d'expliciter les grands principes sur lesquels reposent ces fonctions cryptographiques.
+
+↦ Le fonctionnement d'un wallet repose sur la cryptographie asymétrique.
+
+↦ Pourquoi asymétrique ?
+
+↦ Parce qu'elle s'appuie sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+
+↦ Qu'est-ce qu'une clé cryptographique (ou clé de chiffrement) ?
+
+↦ Une suite de chiffre et de lettres qu'un algorithme peut utiliser pour chiffrer ou déchiffrer des données.
+
+↦ Or la cryptographie asymétrique repose sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+
+↦ Ces clés sont très différentes l'une de l'autre et il est impossible de déduire l'une de la connaissance de l'autre.
+
+↦ En revanche ces deux clés ne sont pas totalement indépendantes : l'une permet de déchiffrer ce que l'autre a chiffré.
+
+↦ Autrement dit il possible de déchiffrer avec la clé privée les messages codés avec la clé publique et vice-versa.
+
+↦ Comment on se sert de ces clés ?
+
+↦ La clé publique, comme son nom l'indique, est publique. Elle peut-être partagée avec tout un chacun et constitue en quelque sorte votre identifiant cryptographique - un peu comme votre IBAN.
+
+↦ On trouve ainsi, chez les cypherpunk, des annuaires de clé publique.
+
+↦ La clé privée, en revanche, doit être soigneusement protégée - celle-ci est souvent stockée dans une enclave sécurisée de votre téléphone, et protégée par un code PIN et / ou un dispositif biométrique.
+
+↦ Quiconque veut vous adresser un message confidentiel peut ainsi le chiffrer avec votre clé publique. En revanche, vous seul qui détenez votre clé privée pourra en déchiffrer le contenu.
+
+↦ Vous comprendrez donc l'intérêt de conserver votre clé privée ... privée.
+
+↦ Mais on peut aussi faire un usage différent de la cryptographie asymétrique, non plus pour s'adresser des messages confidentiels, mais pour s'authentifier mutuellement.
+
+↦ On peut, pour cela, demander à quelqu'un de chiffrer avec sa clé privée un message particulier - par exemple : nous sommes le 26 septembre et je certifie être Olivier.
+
+↦ Si, en déchiffrant le message ainsi chiffré avec la clé publique, je retombe bien sur le message originel, alors, j'ai la certitude que la personne à qui je m'adresse est bien la personne qu'elle prétend être.
+
+↦ On parle alors de **signature cryptographique**.
+
+↦ Vérifier que tout le monde a bien compris.
+
+↦ Faire une démonstration avec GPG Suite.
+
+↦ Expliquer de quelle manière un wallet repose sur de la cryptographie asymétrique.
+
+↦ En pratique, il existe différent types de wallet :
+- Extension de navigateur
+- Applications mobiles
+- Multisig - utiles si vous souhaitez sécuriser de plus grosses sommes d’argent.
+- Vous allez utiliser un wallet mobile.
+
+↦ Vérifier que tout le monde a un smartphone.
+
+---
+<!-- slide: id="blockchain-041-installer-metamask" title="Installer MetaMask" layout="center" -->
+https://metamask.io/download/ {.kicker}
+
+---
+<!-- slide: id="blockchain-042-installer-metamask" title="Installer MetaMask" layout="center" -->
+<img src="/assets/7C81C687-253F-4863-BF88-9A47E12CD6F7_1_105_c.jpeg" alt="Installer MetaMask" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Plusieurs options : Google, Apple ou email
+
+---
+<!-- slide: id="blockchain-043-creer-un-wallet" title="Créer un wallet" layout="center" -->
+<img src="/assets/35FA5FBD-F276-473E-B758-685B07782440_1_105_c.jpeg" alt="Créer un wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Entrer votre mot de passe
+
+---
+<!-- slide: id="blockchain-044-proteger-la-phrase-de-recuperation" title="Protéger la phrase de récupération" layout="center" -->
+<img src="/assets/E8E27682-9297-4E9A-997E-2418054D3327_1_105_c.jpeg" alt="Protéger la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Terminer
+
+---
+<!-- slide: id="blockchain-045-phrase-de-recuperation" title="Phrase de récupération" layout="center" -->
+<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Aller dans les parametres
+
+---
+<!-- slide: id="blockchain-046-confirmer-la-phrase-de-recuperation" title="Confirmer la phrase de récupération" layout="center" -->
+<img src="/assets/CFAA85CC-B6B1-4AEC-BE8A-962FB9C1624D_1_105_c.jpeg" alt="Confirmer la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Sécurité et confidentialité
+
+---
+<!-- slide: id="blockchain-047-wallet-cree" title="Wallet créé" layout="center" -->
+<img src="/assets/2D7197F1-B4C4-4CC6-8CA6-88B759D69DA1_1_105_c.jpeg" alt="Wallet créé" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-048-obtenir-des-eth-de-test" title="Obtenir des ETH de test" layout="center" -->
+<img src="/assets/ECCF666F-DC21-4D17-9BB0-D106538E682B_1_105_c.jpeg" alt="Obtenir des ETH de test" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Expliquer ce qu’est la phrase secrète de récupération - comment ça génère les clés.
+
+---
+<!-- slide: id="blockchain-049-sepolia-faucet" title="Sepolia Faucet" layout="center" -->
+<img src="/assets/1D5BE008-92A2-4B3B-9F55-56ADC35BAF90_1_105_c.jpeg" alt="Sepolia Faucet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-050-connecter-le-wallet" title="Connecter le wallet" layout="center" -->
+<img src="/assets/E4866D14-4026-4D49-8041-81F4CF080AE1_1_105_c.jpeg" alt="Connecter le wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-051-autoriser-la-connexion" title="Autoriser la connexion" layout="center" -->
+<img src="/assets/12E110AA-64EB-40CC-8BA2-80408F8FC5D4_1_105_c.jpeg" alt="Autoriser la connexion" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-052-wallet-connecte" title="Wallet connecté" layout="center" -->
+<img src="/assets/BB237F9E-411B-479D-9417-980EF4E47690_1_105_c.jpeg" alt="Wallet connecté" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-053-envoyer-une-transaction" title="Envoyer une transaction" layout="center" -->
+<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Envoyer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Expliquer ce qu'est l'ETH : cryptomonnaie native d' Ethereum servant, notamment, à payer les frais de gas.
+
+↦ Expliciter que chaque transaction dépend de son coût computationnel [pour éviter le spam] et le prix du gas [pour inciter les validateurs à inclure votre transaction dans un bloc].
+
+↦ Expliquer ce qu'est un testnet [un réseau pour faire des tests sans dépenser du vrai argent en frais de gaz]
+
+---
+<!-- slide: id="blockchain-054-confirmer-une-transaction" title="Confirmer une transaction" layout="center" -->
+<img src="/assets/D9111E75-2D40-4E0D-9402-EA390F77F6D7_1_105_c.jpeg" alt="Confirmer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-055-application-decentralisee-du-cours" title="Application décentralisée du cours" layout="center" -->
+https://infocom-dapp.vercel.app/ {.kicker}

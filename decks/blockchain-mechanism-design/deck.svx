@@ -1,0 +1,456 @@
+---
+title: Blockchain et crypto-monnaies — Mechanism design
+theme: gallery
+---
+
+<!-- slide: id="blockchain-056-mechanism-design" title="Mechanism design" layout="cover" -->
+# Mechanism design
+Liberalism on steroid {.kicker}
+
+--- notes
+
+↦ On a compris comment ça fonctionnait techniquement et pratiquement.
+
+↦ Maintenant on va essayer de comprendre ce qu’on peut faire de tout ça et quels sont les rationalités politiques qui se cachent derrière ces blockchains.
+
+↦ Revenir sur l’idée de Satoshi Nakamoto : substituer à un mécanisme de sécurité formel un mécanisme de sécurité économique.
+
+↦ Les mineurs sécurisent le réseau non par bonté d’âme mais par intérêt personnel.
+
+↦ Ils cherchent à miner avant les autres, donc s’équipent en cartes graphiques, ce qui contribuent à augmenter la puissance de calcul totale du réseau et donc à rendre plus complexe une attaque à 51%.
+
+↦ L’enjeu d’aujourd’hui c’est de voir comment cette rationalité peut se déployer dès lors qu’il est possible, avec une blockchain comme celle d’Ethereum, de programmer des mécanismes économiques, et donc des mécanismes de marché.
+
+↦ Introduction d’un exemple qui va servir de fil conducteur.
+
+---
+<!-- slide: id="blockchain-057-protocole-de-creation-dun-stablecoin-indexe-sur-le-dol" title="Protocole de création d’un stablecoin indexé sur le dollar US" layout="center" -->
+<img src="/assets/sky_money.png" alt="Protocole de création d’un stablecoin indexé sur le dollar US" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Protocole de création d’un stablecoin indexé sur le dollar US.
+
+↦ Revenir sur les trois principales manières de créer un stablecoin :
+
+1. Par collatéralisation auprès d’une banque : USDC, USDT, Trump (achat de dette américaine) : leur parler de l’or, il est probablement déjà trop tard, puisque les détails comment à acheter de l’or.
+2. Par collatéralisation de cryptos au cours variable - mais ça pose le problème de leurs fluctuations.
+3. Par ajustement de la masse monétaire en circulation.
+
+---
+<!-- slide: id="blockchain-058-probleme-comment-ajuster-en-temps-reel-loffre-de-jeton" title="Problème : comment ajuster en temps réel l’offre de jetons en circulatio" layout="center" -->
+<img src="/assets/Clipboard 4.png" alt="Problème : comment ajuster en temps réel l’offre de jetons en circulatio" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Problème : comment ajuster en temps réel l’offre de jetons en circulation pour s’ajuster à la demande de telle sorte que le prix reste stable ?
+
+On peut le faire de manière centralisée : une instance - personne, groupe, etc. - en décide mais c’est compliqué à déterminer, et surtout, comment récupérer la quantité de monnaie en circulation pour la faire diminuer ?
+
+On peut le faire de manière décentralisée.
+
+---
+<!-- slide: id="blockchain-059-imaginons-que-vous-possediez-1-eth-valant-a-ce-moment-" title="Imaginons que vous possédiez 1 ETH valant à ce moment $2000" layout="center" -->
+<img src="/assets/Slice 2 1.svg" alt="Imaginons que vous possédiez 1 ETH valant à ce moment $2000" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Imaginons que vous possédiez 1 ETH valant à ce moment $2000.
+
+Imaginons que vous pensez que la valeur de l’ETH va monter. Vous aimeriez bien en posséder plus mais vous n’avez plus d’argent de côté.
+
+Vous souhaitez donc augmenter votre exposition à l’ETH sans pouvoir en racheter.
+
+---
+<!-- slide: id="blockchain-060-je-peux-deposer-mon-eth-comme-collateral-pour-fabrique" title="Je peux déposer mon ETH comme collatéral pour « fabriquer » de l&#x27;USDS" layout="center" -->
+<img src="/assets/Slice 2 2.svg" alt="Je peux déposer mon ETH comme collatéral pour « fabriquer » de l&#x27;USDS" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Je peux déposer mon ETH comme collatéral pour « fabriquer » de l'USDS.
+
+J’opère ainsi comme une sorte de mini banque centrale en émettant de la monnaie ainsi mise en circulation.
+
+Je peux alors utilisé cet USDS pour, par exemple, racheter 1/2 ETH et ainsi augmenter mon exposition a ses variations de prix.
+
+Pour récupérer mon ETH originel je dois en revanche rembourser mon crédit en USDS, qui est alors retiré de la circulation et détruit.
+
+Si la valeur de l’ETH a grimpé entre temps, je suis gagnant. Sinon, je suis perdant.
+
+Comment alors m’assurer que l’USDS que je fabrique soit bien collatéralisé - c’est-à-dire que sa valeur soit garantie par quelque chose.
+
+Cette valeur est ici garantie par l’ETH que j’ai déposé en collatéral.
+
+Vous remarquerez une chose. J’ai déposé plus de collatéral que je n’ai fabriqué d’USDS. On parle de sur-collatéralisation.
+
+Cette sur-collatéralisation garantie que, même si la valeur de l’ETH baisse un peu, la valeur de l’USDS sera tout de même collatéralisée.
+
+Mais que se passe-t-il si la valeur de l’ETH baisse beaucoup ?
+
+---
+<!-- slide: id="blockchain-061-on-fixe-un-seuil-de-surcollateralisation-minimal" title="On fixe un seuil de surcollatéralisation minimal" layout="center" -->
+<img src="/assets/Slice 2 3.svg" alt="On fixe un seuil de surcollatéralisation minimal" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+On fixe un seuil de surcollatéralisation minimal.
+
+Si ce seuil est franchi, mon ETH est revendu. On parle de liquidation de ma position.
+
+Je perds donc ma mise de départ et cet argent est placé dans un fond permettant de garantir la valeur de l’USDS en circulation.
+
+Pour éviter de perdre cet argent, je vais donc avoir intérêt à rembourser au plus vite mon prêt en USDS afin de récupérer mon ETH avant qu’il ne soit liquidé.
+
+En procédant de la sorte, je vais retirer et USDS de la circulation et donc réduire sa masse monétaire.
+
+Notez déjà plusieurs choses.
+
+1. La régulation de la masse monétaire n’est pas confiée à une instance centrale mais décentralisée - il revient à chaque trader d’augmenter ou de diminuer la masse monétaire.
+
+2. Les motifs pour lesquels les traders augmentent ou resserrent la masse monétaire n’a rien à voir avec la stabilité du système global. Ils agissent uniquement dans leur intérêt propre.
+
+3. Le système est conçu pour que ces intérêts individuels convergent avec la finalité du système : aboutir à une stabilité économique. En poursuivant leur petit intérêt étroit, les traders contribuent en fait, malgré eux, à stabiliser la valeur de l’USDS.
+
+
+Un exemple de tweet parlant venu d’un projet qui s’appelle de refléter finance et qui essaye de créer une monnaie stable non pas par rapport au dollar mais au « cours de la vie ».
+
+Le principe de la crypto c’est de n’être plus soumis à la dévaluation des monnaies fiduciaires.
+
+C’est pas chouette, du coup, de tout indexer sur le dollar.
+
+Je ne rentre pas dans le détail mais le principe est assez proche  de celui de Sky Money.
+
+
+https://x.com/reflexerfinance/status/1662482431151341568
+
+Dans ce tweet, les fondateurs de Reflexer Finance nous disent que les banques centrales en sont aujourd’hui rendues au meme stade que la machine à vapeur avant l’invention du régulateur centrifuge - centrifuge governor - inventé par James Watt au XVIIIè siècle.
+
+---
+<!-- slide: id="blockchain-062-ce-dispositif-mecanique-stabilisait-la-vitesse-des-mac" title="Ce dispositif mécanique stabilisait la vitesse des machines à vapeur en " layout="center" -->
+<video src="/assets/FxJQ5FwaMAAoXYM.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+Ce dispositif mécanique stabilisait la vitesse des machines à vapeur en régulant automatiquement l'apport de carburant, évitant les surchauffe et explosions.
+
+Avant cela, les moteurs étaient complexes à gérer et risqués ; après, ils se sont démocratisés, favorisant la révolution industrielle (utilisation dans les trains, etc.). L'impact fut immense : influence sur la biologie, la théorie du contrôle (papier de Maxwell), etc.
+
+L'analogie avec la banque centrale actuelle est claire : elle repose sur des "sorciers" (banquiers centraux) qui ajustent manuellement la monnaie pour maintenir la "stabilité", mais qui mentent et volent via l'inflation et l'impression monétaire.
+
+Selon l'auteur, les systèmes de contrôle dynamiques onchain (basés sur la blockchain) changeront cela, permettant à quiconque de créer sa propre "banque centrale" décentralisée et automatisée.
+
+Ca explique que le système de Reflexer comme celui de Sky est un dispositif de contrôle cybernétique.
+
+J’emploie ici le terme cybernétique à dessein : feedback, boucle de rétroaction, etc.
+
+Le papier de Maxwell sur ce dispositif est souvent considéré comme le premier travail de théorisation des systèmes de contrôle.
+
+Il s’agit d’une référence historique de la cybernétique - y compris chez Wiener.
+
+Il s’agit donc de soustraire la gestion de la masse monétaire aux mains d’une entité consciente - les dirigeants d’une banque centrale - pour la confier à un dispositif d’automatisation cybernétique de la gestion de la masse monétaire.
+
+Quel lien entre cette question, la cybernétique, et les mécanismes de marché ?
+
+Les liens à vrai dire, sont nombreux, à tel point que Frank Rosenblatt (psychologue)  proche du cercle des conférences Macy, 1958, perceptron, cite Hayek, lui même proche des réseaux cybernétiques.
+
+---
+<!-- slide: id="blockchain-063-friedrich-hayek" title="Friedrich Hayek" layout="two-columns" -->
+<div>
+
+## Friedrich Hayek
+1899 – 1992 {.kicker}
+
+</div>
+<img src="/assets/hayek.png" alt="Friedrich Hayek" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Economiste Austro-britannique.
+
+Prix de la Banque de Suède - dit prix Nobel d’économie - en 1974.
+
+Père et principal théoricien des théories néo-libérales. Enorme influence sur Margaret Tatcher, Ronald Reagan, etc.
+
+On ne va pas parler directement de cette position politique - en résumé ça marche mal en partie parce que ça crée des situations de monopole, en partie parce que le marché est très mauvais à prendre en considération ses externaltiés.
+
+Dans son essai majeur de 1945, « The Use of Knowledge in Society », l’économiste autrichien reformule la question centrale de l’économie : le vrai défi n’est pas de savoir comment distribuer des ressources rares, mais comment coordonner une information rare.
+
+Or, à l’intérieur d’un monde de division du travail, chacun est spécialisé dans un seul type de production. L’acquisition de ces indispensables biens et ressources externes passe donc par l’échange avec d’autres individus, ce qui implique une connaissance préalable de leurs besoins.
+
+Mais un individu ne peut pas accéder a priori aux préférences, représentations et valeurs des autres acteurs de la vie sociale, puisqu’elles sont subjectives.
+
+Hayek pense que l’économie moderne est trop complexe que l’ensemble des facteurs qui en régule l’ordre puisse être saisi par un esprit humain.
+
+Ex d’un producteur de t-shirt : comment les tendances vont évoluer, et l’industrie du coton, et les champs qui ont brulé en asie, etc.
+
+Aucun esprit, aucune institution, aucun gouvernement ne peut détenir à lui seul l’ensemble des connaissances nécessaires à une prise de décision efficace.
+
+L’information existe sous forme de fragments dispersés parmi des millions d’individus : un agriculteur observant les changements de météo, un commerçant remarquant l’évolution des habitudes, un mineur percevant une pénurie avant les autres.
+
+Les marchés, comprend alors Hayek, sont le mécanisme qui relie ces fragments entre eux. Les prix ne sont pas de simples chiffres : ce sont des signaux qui transmettent la connaissance plus rapidement que ne le pourrait aucun planificateur ou comité.
+
+Le marché fonctionne avant tout, pour Hayek, comme un dispositif d’agrégation de l'information.
+
+
+
+Hayek imagine qu’une pénurie de cuivre survient quelque part dans le monde — par exemple parce qu’une mine a fermé ou qu’un nouveau besoin industriel est apparu.
+
+Cette information locale ne peut-être connue que de quelques acteurs bien qu’elle en concerne un très grand nombre : de l’industrie électronique à la SNCF en passant le secteur automobile - et évidemment l’ensemble des consommateurs.
+
+Tous ne peuvent pas suivre l’actualité du cuivre - en même temps que celle du fer, de l’aluminium, de l’or, du marché de change, etc.
+
+Or cela n’est justement pas nécessaire. La fermeture de la mine va se traduire immédiatement par une hausse du prix du cuivre sur le marché mondial.
+
+Ce signal de prix, sans que personne ait à comprendre pourquoi le cuivre est plus rare, informe tous les producteurs et consommateurs.
+
+Les fabricants de biens contenant du cuivre chercheront à en économiser ou à lui trouver des substituts.
+
+Les producteurs de cuivre seront incités à augmenter leur production ou à exploiter de nouveaux gisements.
+
+Ainsi, le marché transforme une information locale et dispersée (la rareté du cuivre dans un endroit précis) en un signal global (le prix) qui oriente les comportements de millions d’acteurs — sans qu’aucune autorité centrale n’ait à collecter ou traiter cette information.
+
+Le mécanisme de formation et de propagation du prix fonctionne ainsi, pour Hayek, comme un dispositif d’agrégation et de de dissémination d’une connaissance tacite et dispersée.
+
+Pour Hayek, toute tentative de parvenir au même résultat par une instance de décision centralisée est destinée à échouer - et à produire du totalitarisme.
+
+---
+<!-- slide: id="blockchain-064-en-faisant-confiance-aux-forces-ordonnatrices-spontane" title="« En faisant confiance aux forces ordonnatrices spontanées, nous pouvons" -->
+> « En faisant confiance aux forces ordonnatrices spontanées, nous pouvons étendre le champ et la portée de l'ordre que nous sommes capables de faire se former [...] parce que cet ordre mettra en œuvre les connaissances distinctes de ses nombreux membres, sans que ce savoir total soit jamais concentré dans un unique esprit. »
+
+--- notes
+
+Faire le lien avec la question de la sagesse des foules évoquée l’année dernière.
+
+Le marché peut ainsi être compris comme un cas particulier de régulation d’un ordre spontané.
+
+---
+<!-- slide: id="blockchain-065-ordre-spontane" title="Ordre spontané" layout="center" -->
+## Ordre spontané
+ ordre émergent {.kicker}
+
+--- notes
+
+Le terme spontané, du latin *sponte sua*, signifie littéralement «  qui suit sa propre dynamique ».
+
+Cet idée d’ordre spontané est intimement liée, chez les cybernéticiens comme chez Hayek, à l’idée d’ordre émergent.
+
+Un ordre émergent désigne la formation spontanée d’une organisation globale au sein d’un ensemble d’éléments en interaction, sans qu’aucune instance centrale ne la conçoive ni ne la dirige.
+
+Cet ordre résulte de la répétition locale de règles simples ou de comportements élémentaires, dont la combinaison engendre, à une échelle supérieure, des structures, des régularités ou des formes de cohérence inédites.
+
+L’ordre émergent est l’expression d’une cohérence qui naît de l’intérieur d’un système — une forme que le collectif produit sans que quiconque ne la projette ou la vise.
+
+---
+<!-- slide: id="blockchain-066-exemple-des-murmuration-detourneaux" title="Exemple des murmuration d’étourneaux" layout="center" -->
+<video src="/assets/murmuration.mp4" controls autoplay muted loop playsinline style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+
+Exemple des murmuration d’étourneaux.
+
+Comment les étourneaux peuvent produire des formes si régulière, et à quelle logique lobéit l’évolution de ces formes ?
+
+🧠 1. Pas de chef, mais des interactions locales
+
+Chaque étourneau n’obéit pas à un chef ni à un signal central.
+Il ajuste simplement son mouvement en fonction de quelques voisins immédiats (en général 6 à 7), qu’il garde dans son champ de vision.
+Ce principe est analogue à ce qu’on observe dans les bancs de poissons ou les essaims d’insectes.
+
+➡️ Règle simple :
+
+-Maintenir une distance constante avec ses voisins (ni trop proche, ni trop loin).
+
+-S’aligner sur leur direction et leur vitesse.
+
+-Réagir rapidement aux changements brusques (prédateurs, obstacles, etc.).
+
+De ces règles locales naît une organisation globale spontanée — un phénomène d’auto-organisation, étudié en physique des systèmes complexes.
+
+C’est simplement l’interactions de rationalités situées respectant des règles très simples qui permet de se dégage de tel patterns, de telle régularités, autrement dit un ordre émergent.
+
+Ici des règles locales simples permettent de créer un ordre global heureux pour celui qui les observe - mais aussi pour les oiseaux qui le composent parce que cela leur permet de garder un cohésion d’ensemble horizontale et sans chef.
+
+
+↦ Ce phénomène a fasciné très tôt les cybernéticiens et notamment le mathématicien John Von Neumann.
+
+↦ L’un des mathématiciens et de physiciens les plus importants du 20ème siècle : théorie des jeux, projet Manhattan, architecture de von Neumann, etc.
+
+↦ Il est l’un des principaux inspirateurs du mouvement cybernétique - même s’il n’a pas participé directement aux colloques de Macy.
+
+↦ Dans les années 1940 et 1950 von Neumann va établir une théorie des automates visant à décrire le mouvement d’auto-reproduction de la vie comme propriété émergente d’une machine a été suivant des règles simples.
+
+↦ Nous n’allons pas présenter ici ces recherches - qui sont assez complexes - mais allons nous intéresser au *Jeu de la vie* introduit quelque années plus tard, dans les années 1970, par le mathématicien John Conway.
+
+---
+<!-- slide: id="blockchain-067-le-jeu-de-la-vie-repose-sur-une-grille-potentiellement" title="Le jeu de la vie repose sur une grille - potentiellement infinie - dont " layout="center" -->
+<img src="/assets/game-of-life-loop-cropped.gif" alt="Le jeu de la vie repose sur une grille - potentiellement infinie - dont " style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Le jeu de la vie repose sur une grille - potentiellement infinie - dont chaque cellule peut être dans un de deux états vivante (1), représentée souvent par un carré noir ou morte (0), représentée par un carré blanc.
+
+Le temps est discret : à chaque “tour” (ou génération), toutes les cellules changent d’état simultanément, selon des règles locales basées sur leurs 8 voisines (les cellules autour d’elle — haut, bas, gauche, droite et diagonales).
+
+⸻
+
+🧠 Les 4 règles de Conway
+1.	Naissance
+→ Une cellule morte devient vivante si elle a exactement 3 voisines vivantes.
+(on peut imaginer qu’elle “naît” par reproduction locale)
+2.	Survie
+→ Une cellule vivante reste vivante si elle a 2 ou 3 voisines vivantes.
+(elle a assez d’“interaction” pour survivre)
+3.	Solitude (mort par isolement)
+→ Une cellule vivante meurt si elle a moins de 2 voisines vivantes.
+(trop isolée pour subsister)
+4.	Surpopulation (mort par excès)
+→ Une cellule vivante meurt si elle a plus de 3 voisines vivantes.
+(trop de compétition, elle s’éteint)
+
+De là, on peut voir, selon les configurations initiales, voir émerger des patterns stables.
+
+
+Mais parfois, l’interaction de ces règles locales simples va produire des ordre globaux qui peuvent aller à l’opposer des rationalités des acteurs.
+
+---
+<!-- slide: id="blockchain-068-thomas-c-schelling" title="Thomas C. Schelling" layout="two-columns" -->
+<div>
+
+## Thomas C. Schelling
+1921 – 2016 {.kicker}
+
+</div>
+<img src="/assets/schelling.png" alt="Thomas C. Schelling" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Economiste américain
+
+L’expérience de ségrégation de Thomas Schelling, présentée dans Micromotives and Macrobehavior (1978), cherche à comprendre comment des préférences individuelles apparemment modérées peuvent produire une ségrégation collective forte. Schelling construit un modèle très simple : il imagine une grille (comme un damier) sur laquelle sont disposés des pions de deux couleurs représentant deux groupes sociaux (par exemple, des ménages blancs et noirs).
+
+Chaque pion a une préférence locale : il n’a rien contre la mixité, mais souhaite qu’au moins une certaine proportion de ses voisins soient de la même couleur que lui. Par exemple, un pion “rouge” peut vouloir qu’au moins 30 % de ses voisins soient rouges. Tant que cette condition est remplie, il reste à sa place ; sinon, il “déménage” vers un autre emplacement où cette préférence est satisfaite.
+
+
+Ce qui est remarquable, c’est que même avec des seuils très tolérants, le système finit par produire une ségrégation spatiale nette. Aucun pion n’a voulu explicitement vivre dans un quartier homogène, mais les ajustements locaux — chacun ne voulant pas être trop isolé — conduisent à des motifs globaux de séparation.
+
+Autrement dit, des comportements individuels non racistes et même relativement ouverts peuvent générer des structures collectives ségréguées. Le modèle montre ainsi comment les micro-motifs (les motivations locales) peuvent engendrer des macro-comportements (les régularités sociales) qui échappent aux intentions de chacun.
+
+⸻
+
+Schelling illustre par là un principe fondamental des sciences sociales : les phénomènes macroscopiques (comme la ségrégation urbaine) ne sont pas toujours le résultat de volontés explicites, mais peuvent émerger de la combinaison de décisions locales et décentralisées.
+
+C’est un peu le pendant sociologique de la logique hayékienne du marché : un ordre global (ici, un désordre social) peut se former sans plan, sans coordination consciente, sans autorité centrale.
+
+Cette écart ou cette séparation entre les ordre locaux - ou les rationalités locales - et l’ordre global qui surgit de leurs interactions est centrale dans la cybernétique et le mechanism design.
+
+L’ordre n’est plus conçu comme ce qu’un sujet impose, mais comme ce qui se forme par les interactions locales, sans projet, sans centre, sans conscience.
+
+Est-ce que cela signifie qu’on doit absolument renoncer à orienter, à piloter, à gouverner, d’une quelconque façon le monde social pour l’orienter dans une direction considérée comme plus souhaitable que d’autres.
+
+Pas tout à fait.
+
+Mais cela modifie profondément la manière dont on pense l’intervention sur le monde social.
+
+---
+<!-- slide: id="blockchain-069-change-the-rules-not-the-player" title="Change the rules, not the player" layout="center" -->
+## Change the rules, not the player
+
+--- notes
+
+L’enjeu du mechanism design, dès lors, n’est plus, pour essayer d’aboutir à un ordre global particulier, d’agir sur les ordres locaux, c’est-à-dire sur les rationalités des acteurs, mais de modifier leur environnement de telle sorte que leur rationalités spontanées contribuent malgré elles à favoriser l’apparition d’un ordre global.
+
+Ex. Les traders qui parient sur l’augmentation du prix de l’ETH se moquent de la stabilité de l’USDS. Ils ne suivent que leur intérêt économique personnel.
+
+En revanche, le système est conçu de telle sorte que la poursuite de leurs intérêts personnels concoure malgré eux à la stabilisation de l’USDS.
+
+Revenons à Hayek.
+
+Le mécanisme de formation des prix y opère en effet comme un dispositif de coordination ou d’agrégation des connaissances que chaque acteur peut s’approprier pour s’orienter individuellement dans un ordre global autrement trop complexe pour être saisi.
+
+Nous voyons alors que l’ordre de ce système y dépend beaucoup de la manière dont ces prix sont construits et donc du design des marchés où ils se forment.
+
+Le principe du mechanism design est qu’il n’existe pas quelque chose comme LE marché.
+
+Il existe DES marchés imposant des mécanismes de formation des prix distincts et qu’il est donc possible de concevoir de diverses manières en fonction des objectifs qui sont les nôtres.
+
+---
+<!-- slide: id="blockchain-070-eric-a" title="Eric A" layout="center" -->
+<img src="/assets/radical_markets.png" alt="Eric A" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+Eric A. Posner - juriste américain - & E. Glen Weyl - économiste et chercheur à Microsoft.
+Parution : 2018 (Princeton University Press)
+
+Nos marchés, nos démocraties et notre système de propriété sont devenus inefficaces, injustes et bloqués — non pas parce qu’ils sont “trop capitalistes”, mais parce qu’ils ne sont pas assez ouverts.
+
+Posner (juriste) et Weyl (économiste et chercheur en algorithmique) proposent de “radicaliser” les marchés pour les rendre plus équitables et dynamiques.
+
+Les auteurs reprochent au libéralisme classique de confondre liberté économique et accumulation privée.
+Selon eux, ce qui bloque nos sociétés, ce sont les monopoles de propriété :
+•	sur les biens matériels (logement, terre, capital),
+•	sur les biens immatériels (données, brevets, attention),
+•	et même sur le pouvoir politique.
+
+Leur proposition : transformer ces monopoles en systèmes ouverts de valorisation collective.
+
+---
+<!-- slide: id="blockchain-071-harberger-tax" title="Harberger tax" layout="center" -->
+## Harberger tax
+
+--- notes
+
+La taxe Harberger cherche à répondre à un problème fondamental de la propriété privée :
+👉 le fait qu’elle crée à la fois de la valeur et de l’inefficacité.
+
+⸻
+
+1. 🔒 Le problème : la “mauvaise allocation” des ressources
+
+Quand un bien est détenu en propriété exclusive, il peut être sous-utilisé ou mal alloué, sans que personne puisse y faire grand-chose.
+
+Exemples :
+
+Un terrain vide au centre d’une ville, conservé par un propriétaire en attente de spéculation → inefficacité urbaine.
+
+Une licence logicielle ou un brevet non exploité, simplement pour bloquer la concurrence.
+
+Une œuvre d’art enfermée dans un coffre au lieu d’être exposée.
+
+Ces situations sont ce qu’on appelle des « trappes de propriété » : un bien utile est immobilisé par son propriétaire, au détriment du collectif.
+
+Comment résoudre ces problèmes ?
+
+Une première solution, bien sûr, passe par la régulation : interdire de conserver un terrain inutilisé, ou bien de déposer un brevet non exploité, etc.
+
+Mais là encore, la rationalité limitée des acteurs risque de rendre la tâche compliquée. Comment différencier un terrain inutilisé parce que sa construction ne serait simplement pas rentable d’un terrain acquis à des fins explicitement spéculatives ? Et comment différencier un brevet dont il n’est fait aucun usage parce que sa mise en oeuvre serait trop couteuse d’un brevet utilisé pour bloquer la concurrence ? Imaginez un peu le nombre d’expert qu’il faudrait en chaque domaine pour répondre à ces questions ?
+
+Harberger a proposé de résoudre ces problèmes par la mise en oeuvre de mécanisme de marché explicitement destiné à recadrer les rationalités individuelles de telle sorte que leur agrégation réduise ces trappes de propriété.
+
+Chaque propriétaire doit déclarer la valeur de son bien (terrain, logement, entreprise, œuvre d’art, etc.), payer un impôt proportionnel à cette valeur,
+et accepter de vendre ce bien à n’importe qui au prix qu’il a lui-même déclaré.
+
+maginons que tu possèdes un appartement :
+•	Tu estimes qu’il vaut 200 000 €.
+•	La commune applique une taxe de 2 % par an → tu paies 4 000 € par an.
+•	Mais à tout moment, une autre personne peut venir te dire :
+“Je veux acheter ton bien à 200 000 €.”
+Et tu dois accepter de lui vendre à ce prix.
+
+Résultat : tu es incité à déclarer une valeur réaliste, ni trop haute (sinon tu paies trop d’impôt), ni trop basse (sinon tu risques de te faire racheter ton bien à bas prix).
+
+Objectifs
+1.	Lutter contre la spéculation : personne n’a intérêt à garder un bien inutilement ou à gonfler artificiellement sa valeur.
+2.	Encourager l’usage efficace des ressources : les biens vont à ceux qui en ont le meilleur usage.
+3.	Simplifier la fiscalité : la même logique pourrait remplacer ou compléter des impôts comme la taxe foncière ou la taxe sur le capital.
+
+⸻
+
+⚖️ Limites et critiques
+•	Difficile à appliquer dans la vraie vie (imagine devoir vendre ta maison du jour au lendemain).
+•	Problèmes émotionnels et sociaux (attachement personnel aux biens).
+•	Complexité pour évaluer certains biens uniques (entreprises, œuvres d’art…).
+
+---
+<!-- slide: id="blockchain-072-taxe-harberger" title="Taxe Harberger" layout="center" -->
+<img src="/assets/Capture d’écran 2025-11-01 à 11.37.04.png" alt="Taxe Harberger" style="max-width:100%;max-height:68vh;object-fit:contain;" />

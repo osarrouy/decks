@@ -1,0 +1,356 @@
+---
+title: Blockchain et crypto-monnaies — Gouvernance décentralisée
+theme: gallery
+---
+
+<!-- slide: id="blockchain-073-gouvernance" title="Gouvernance" layout="cover" -->
+III {.kicker}
+# Gouvernance
+
+--- notes
+
+Question de l’examen : sondage à main levée : QCM ou QCM + questions ouvertes ?
+
+↦ L'intention du web3 est de supprimer les tiers de confiance et, ainsi, de replacer le pouvoir entre les mains de ses « utilisateurs ».
+
+↦ Il s'agit ainsi de « décentraliser » la gouvernance des dApps.
+
+↦ Ce exigence est simultanément politique, juridique et technique.
+
+↦ 1. Politique : échos libertarien, horizontalisme, croyance en la capacité des marchés à coordonner spontanément les individualités, etc.
+
+↦ 3. Technique : le code déployé sur une blockchain est publique et donc facilement duplicable, si bien qu'il est aisé pour les utilisateurs de « forker » une plateforme si ses dispositions leur disconviennent.
+
+↦ 3. Juridique : la plupart des juridictions nationales voient d'un mauvais oeil l'économie du web3 : mécanismes de levée de fond sauvage, mauvaise traçabilité des transactions, etc. Une solution pour se couvrir juridiquement est de confier la gestion du projet à une communauté plus ou moins distribuée et anonyme.
+
+
+↦ En pratique cela n’est pas si évident. Il faut composer avec les effets de réseau. Mais cela fonctionne parfois. Ex. : SushiSwap.
+
+↦ Comment, donc, organiser un projet sans recourir à un tiers de confiance ?
+
+↦ Rappels sur la problématique des coûts de transaction : Ronald Coase, 1937.
+
+↦ Le recours au marché implique des coûts de transaction importants : recherche de partenaire, contractualisation de ces partenariat, mise en paiement, etc.
+
+↦ La coordination hiérarchique et managériale implique elle aussi des coûts de transaction importants : mise en oeuvre de procédures bureaucratiques, coûts des équipes managériales, etc.
+
+↦ De surcroit la coordination hiérarchique et managériale rencontre rapidement certaines limites de taille dues à la bureaucratisation.
+
+↦ Plus une entreprise grandit et moins elle est efficace : décisions prises loin du terrain, bureaucratisation des activités ordinaires, etc.
+
+↦ Le numérique a ouvert une troisième voie en réduisant radicalement les couts de transaction.
+
+↦ Ex. : Uber, Deliveroo, Blablacar, leboncoin, etc.
+
+↦ La plupart de ces plateformes bénéficient d'une rente de situation qui les conduit à des pratiques prédatrices.
+
+↦ Comment reconduire la philosophie de l'économie de plateforme en la rendant plus inclusive, plus transparente, etc.
+
+↦ 1. Problème de coordination des agents : développeurs, designers, community manager, etc.
+
+↦ 2. Problème de la prise de décision collective.
+
+↦ Comment cela fonctionne concrètement de « décentraliser » une plateforme ?
+
+---
+<!-- slide: id="blockchain-074-dao" title="DAO" layout="cover" -->
+III.1 {.kicker}
+# DAO
+##### Decentralized Autonomous Organization
+
+--- notes
+
+↦ Décentralisation - conjointement technique et politique.
+
+↦ a. L’infrastructure technique est déployée sur une infrastructure décentralisée et non-censurable controlée par la DAO. Si « l’entreprise » disparait, le protocole et la DAO restent.
+
+↦ b. La DAO est controlée par ses utilisateurs selon diverses modalités de prise de décision.
+
+↦ Transparence. L’usage des fonds d’une DAO et l’ordre de ses questions stratégiques sont publics et accessible à tous les utilisateurs.
+
+↦ Ex. Aragon Transparency Report trimestriel.
+
+↦ Autonomie. La DAO constitue elle-même un morceau de code définissant ses règles de fonctionnement [un smart contract], règles elles-mêmes soumises à la délibération de ses utilisateurs.
+
+↦ On trouve de telles DAO dans de multiples secteurs : Finance, art, jeux videos, politique, etc.
+
+↦ ConstitutionDAO pour racheter l’original de la constitution américaine, une autre DAO pour tenter de libérer Julian Assange, une DAO de collectionneurs de NFTs, etc. etc.
+
+↦ Comment cela fonctionne-t-il concrètement ?
+
+↦ Forum de discussion.
+
+---
+<!-- slide: id="blockchain-075-dao-discussion-sur-discord" title="DAO : discussion sur Discord" layout="center" -->
+<img src="/assets/Capture d’écran 2024-10-02 à 17.02.54.png" alt="DAO : discussion sur Discord" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Chat sur Discord.
+
+↦ Mécanismes de prises de décision collective - mécanismes de vote.
+
+---
+<!-- slide: id="blockchain-076-dao-proposition" title="DAO : proposition" layout="center" -->
+<img src="/assets/Capture d’écran 2024-10-02 à 17.04.09.png" alt="DAO : proposition" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+---
+<!-- slide: id="blockchain-077-la-sagesse-des-foules" title="La sagesse des foules" layout="cover" -->
+III.2 {.kicker}
+# La sagesse des foules
+###### Comment fabriquer une volonté collective ?
+
+--- notes
+
+↦ Une telle volonté de décentralisation des prises de décision pose au moins deux problèmes.
+
+↦ 1. Comment « fabriquer » une volonté collective ?
+
+↦ C’est là le problème de la *souveraineté* : la mise en œuvre d’une volonté collective lorsqu’il n’existe que des volontés individuelles.
+
+↦ Les volontés collectives sont « fabriquées » par divers processus d'agrégation.
+
+↦ 2. Est-ce une bonne idée de mettre des millions, voire des milliards de dollars, dans les mains d’anonymes dont on peut douter qu’ils soient tous compétents pour décider de l’avenir d’une plateforme ?
+
+↦ C’est là le problème de la *sagesse des foules*.
+
+↦ La sagesse d’une foule est moins fonction de la sagesse des individus qui la composent que de la pertinence des dispositifs d’expression et d’agrégation de leurs préférences individuelles.
+
+↦ La sage des foule est donc fabriquée en tant qu'elle dépend des mécanismes de construction et d'agrégation des opinions.
+
+↦ Il s’agit ainsi d’un problème d’**ingénierie sociale** : quels mécanismes d’expression et d’agrégation des préférences individuelles mettre en oeuvre pour aboutir à des décisions pertinentes ? Et qu’est-ce, alors, que la pertinence d’une décision ?
+
+↦ Revenir sur ce que nous avions dit au début du cours : il s’agit de programmer des comportements [ici des comportement collectifs pour l'orientation et l'agrégation de comportements individuels]
+
+↦ Nous allons analyser quelques exemples de telles tentatives d'ingénierie sociale - de programmation comportementale.
+
+---
+<!-- slide: id="blockchain-078-token-weighted-voting" title="Token-Weighted Voting" layout="center" -->
+III.2.a {.kicker}
+### Token-Weighted Voting
+#### 1T1V
+
+--- notes
+
+↦ Le poids décisionnel de chacun est fonction du nombre de tokens - jetons - déterminés qu’il possède.
+
+↦ Expliquer les mécanismes d’ICO et de token-sale originaux - et l’incentive, donc, pour les early-investors d’investir ...
+
+↦ Fonctionnement très proche de l’actionnariat traditionnel : un jeton peut être vu comme une action offrant un pouvoir décisionnel.
+
+↦ Problème : le pouvoir décisionnel devient un bien marchand si bien que les plus riches peuvent imposer leur volonté à tous.
+
+↦ Revenir sur le problème de la concentration de l’argent - et donc la concentration du pouvoir décisionnel.
+
+↦ Cela peut paraître exagéré mais n’est pas si éloigné des modalités de distribution de la richesse mondiale.
+
+↦ On retrouve, ici encore, une power law, mais particulièrement accentuée.
+
+↦ Cela signifie que la voix des « petits » token holders est négligeable.
+
+↦ Une des conséquences en est que ces petits « token-holders »  finissent souvent par ne plus voter du tout.
+
+↦ Le Token-Weighted Voting tend le plus souvent vers une forme d’oligarchie.
+
+↦ Un second problème est que les décisions des plus riches token-holders sont le plus souvent orientées vers le profit à court terme - et pas nécessairement vers les intérêts à long-terme du projet.
+
+---
+<!-- slide: id="blockchain-079-one-person-one-vote" title="One Person One Vote" layout="center" -->
+III.2.b {.kicker}
+### One Person One Vote
+#### 1P1V
+
+--- notes
+
+↦ Mécanisme traditionnel des démocraties parlementaires.
+
+↦ Chaque citoyen dispose - formellement - du même point décisionnel quels que soient son origine, son sexe, son genre, sa fortune, etc.
+
+↦ Problème 1. Les sybil attacks. Nécessite une forme quelconque de preuve d’humanité et d’unicité.
+
+↦ Solutions. Identification par un réseau social avec un minimum de followers. Proof-of-humanity par analyse du graphe social [maintien l'anonymat].
+
+↦ Problème 2. Pertinence de l’équivalence des voix.
+
+↦ Quelqu’un qui travaille dans le département marketing doit-il avoir droit au chapitre sur les questions de R&D ?
+
+↦ Des gens qui habitent à 200 km d’un aéroport ou d’une centrale d’enfouissement des déchets ont-il leur mot à dire sur la question ?
+
+↦ Des gens qui ne font aucun usage d’un espace public ont-il leur mot à dire sur sa gestion ?
+
+↦ Que faire des trolls et des crétins [c.f. les votes électoraux] : beaucoup de gens votent de fait contre leur intérêt.
+
+↦ Problème 3. Incentive.
+
+↦ Si tout le monde a le même pouvoir décisionnel quel que soit son investissement autour d’une problème donné alors qu’est-ce qui motive à s’investir dans ce problème ?
+
+↦ Si tout le monde a le même pouvoir décisionnel quel que soit son investissement financier qu’est-ce qui va pousser des gens à investir financièrement ?
+
+↦ Introduire ici le problème du skin in the game. Les décisions sont d'autant plus investies, réfléchies et informées que les acteurs ont quelque-chose [économique] en jeu dans ces questions.
+
+---
+<!-- slide: id="blockchain-080-reputation-weighted-voting" title="Reputation-Weighted Voting" layout="center" -->
+III.2.c {.kicker}
+### Reputation-Weighted Voting
+
+--- notes
+
+↦ Le poids de chacun dans une prise de décision est fonction d’une métrique - la réputation - acquise par la réalisation de tâches.
+
+↦ Les réputations peuvent être décroissantes avec le temps pour éviter des situations de rentes historiques : quelqu’un qui méritait de l’influence il y a dix ans n’en mérite plus nécessairement aujourd’hui.
+
+↦ c.f. Colony.
+
+↦ Coordination de contributeurs distribués en domaines : développeurs, communication, etc.
+
+↦ Les contributeurs acquièrent de la réputation en fonction des tâches réalisées et des paiements obtenus à la faveur de ces tâches.
+
+↦ La réputation est décroissante.
+
+↦ Certains seuils de réputation permettent de prendre des décisions sans en passer par un vote.
+
+↦ On fait fasse ici à un autre problème : la lourdeur du vote pour chaque chose. Problème de participation et de bureaucratisation.
+
+↦ Problème de l’évaluation fasciste de chaque être.
+
+---
+<!-- slide: id="blockchain-081-token-locking-voting" title="Token-Locking Voting" layout="center" -->
+III.2.d {.kicker}
+### Token-Locking Voting
+
+--- notes
+
+↦ Le Token-Locking Voting repose sur la mise en dépôt de tokens.
+
+↦ Les tokens ainsi mis en dépôt sont « immobilisés » pour une période donnée : leur propriétaire ne peut ni les transférer ni les revendre jusqu'à ce que ceux-ci soient libérés.
+
+↦ Dans le Token-Locking Voting les tokens utilisés pour un vote sont simultanément mis en dépôt.
+
+↦ Le poids de chaque vote est proportionnel au nombre de token ainsi mis en dépôt x la durée pendant laquelle ces tokens seront immobilisés.
+
+↦ On peut obtenir le même poids décisionnel avec beaucoup de tokens mis en dépôt pour une courte période ou avec peu de tokens mis en dépôts pour une longue période.
+
+↦ Le Token-Locking Voting a plusieurs intérêts :
+
+1. Il incite à des prises de décisions tournées vers le long terme - car si la valeur du token s’effondre à court terme, les votants ne pourront pas les revendre à temps.
+
+2. Il équilibre - partiellement - les écarts de richesse en permettant à des petits token holders d'accroitre leur pouvoir décisionnel en immobilisant leurs tokens sur le long terme.
+
+---
+<!-- slide: id="blockchain-082-quadatric-voting" title="Quadatric voting" layout="center" -->
+III.2.e {.kicker}
+### Quadatric voting
+
+--- notes
+
+↦ Le votre quadratique est une sorte d'entre-deux entre le 1T1V et le 1P1V.
+
+↦ Le but en est de permettre à un acteur de moduler le poids de son vote avec des tokens, tout en évitant les effets de monopolisation de la décision.
+
+↦ Le coût du n+1 poids décisionnel est plus important que le le coût du n poids.
+
+---
+<!-- slide: id="blockchain-083-vote-quadratique" title="Vote quadratique" layout="center" -->
+<img src="/assets/qv-diagram.png" alt="Vote quadratique" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Par exemple, un vote va couter 1 token, 2 votes vont couter 4 tokens, 3 votes vont couter 9 tokens, etc.
+
+---
+<!-- slide: id="blockchain-084-cout-quadratique-du-vote" title="Coût quadratique du vote" layout="center" -->
+<img src="/assets/1*Qh6Yd1iPpoFdZtjzuZBROw.png" alt="Coût quadratique du vote" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+
+--- notes
+
+↦ Autrement dit le poids d'un vote n'est égal qu'à la racine carré du nombre de tokens engagés.
+
+↦ Le principal problème du vote quadratique est qu'il réclame lui-aussi une forme d'identification des votants.
+
+↦ Sinon, il serait facile de voter 9 fois avec 1 token, plutôt que de dépenser 9 tokens sur vote [ce qui aurait moins de poids].
+
+---
+<!-- slide: id="blockchain-085-futarchy" title="Futarchy" layout="center" -->
+III.2.f {.kicker}
+### Futarchy
+###### > *Vote for values, bet on beliefs.*
+###### - Robin Hanson (2000)
+
+--- notes
+
+↦ Revenir sur la distinction entre valeur et moyen à mettre en oeuvre pour y parvenir.
+
+↦ Ex. Maximiser le bonheur. Minimiser les inégalités.
+
+↦ Certes, mais comment y parvenir ? Pour Hansen, la plupart de ces questions relève de croyances.
+
+↦ Il convient donc de séparer les processus de choix des valeurs partagées, des processus de choix des moyens à mettre en oeuvre pour les concrétiser.
+
+↦ Pour le premier problème, il est pertinent, d’après Hanson, de recourir au vote traditionnel.
+
+↦ Pour le second problème, Hanson préconise le recours aux marchés prédictifs.
+
+
+↦ Un marché prédictif est un marché dont les acteurs peuvent acheter des actifs attachés à des événements du futur.
+
+↦ Ex. : Qui va gagner la coupe du monde ? Qui va remporter l'élection présidentielle ?
+
+↦ L'expérience montre que les marchés prédictifs sont relativement pertinents pour anticiper sur la vérité d'événements à venir.
+
+↦ Revenir sur la sagesse des foule et la question du marché comme dispositif d'agrégation de l'information.
+
+↦ La futarchy vise à appliquer ce principe à la prise de décision concernant le choix des moyens politique à mettre en pauvre pour appliquer une décision.
+
+↦ Exemple : « augmenter le PIB d’ici 2034 ».
+
+↦ Cet objectif est fixé par les dirigeants du pays, de manière traditionnelle et démocratique.
+
+↦ Les marchés prédictif prennent ensuite le relais pour déterminer les politiques à mettre en oeuvre pour l’atteindre.
+
+↦ Diverses propositions de politiques publiques sont avancées. Par exemple : sauver les banques en faillite.
+
+↦ Deux actifs sont créés - un « oui » et un « non » - chacun promettant de payer $1 par trillion de PIB après 10 ans.
+
+↦ Après deux semaines d’existence des marchés l’actif du « oui » vaut $24.94 (ce qui signifie que le marché pense que le PIB en 2030 sera de $24.94 trillion) and l’actif du « non » vaut $26.20. Le non l’emporte, et les banques ne sont donc pas sauvées.
+
+
+↦ Tous les échanges sur le marché du « oui » sont annulés tandis que dans 10 ans, tout ceux détenant un actif « non » sont payés en fonction du PIB effectif à cette date.
+
+↦ Pourquoi le recours aux marchés prédictifs ?
+
+↦ Parce qu’ils sont presque à chaque fois plus efficaces que les experts ou que les sondages - y compris pour devinez les votes finaux des sondés.
+
+↦ Il s’agit d’un exemple typique d’agrégation d’information et de mise en oeuvre de la sagesse des foules.
+
+↦ Comme il y a un enjeux économiques, les investisseurs prennent le temps de collecter de l’information pertinentes avant de faire leurs jeux ...
+
+↦ Déjà mis en oeuvre ponctuellement dans certaines grandes entreprises: HP, Google, Yahoo, Microsoft, etc.
+
+» c.f. Gnosis.
+
+---
+<!-- slide: id="blockchain-086-conclusion" title="Conclusion" layout="cover" -->
+III.3 {.kicker}
+# Conclusion
+
+--- notes
+
+↦ Revenir sur la figure de l'homo-oeconomicus.
+
+↦ Non pas une hypothèse anthropologique, mais une hypothèse gouvernementale.
+
+↦ Il suffit souvent, pour gouverner, de faire l’hypothèse que les acteurs tenteront de maximiser leurs gains et de minimiser leurs pertes.
+
+↦ Dès lors il devient possible de gouverner - de conduire les conduites - en jouant sur l’environnement économique à l’intérieur duquel se déploie la figure de l’homo-oeconomicus.
+
+↦ En façonnant l’environnement dans lequel prend place le jeu économique, il est possible 1. de façonner l’ordre du rapport de force politique entre les plus riches et les plus pauvres - 1T1V vs 1P1V vs quadratic voting - et 2. d’influencer radicalement les rationalités mises en oeuvre dans la prise de décision - mise en dépôt des tokens, marché prédictif, etc.
+
+↦ Il est donc possible d’influencer les comportements et les rapports politiques en designant de manière réfléchie les mécanismes numériques d’expression et d’agrégation des préférences individuelles.
+
+↦ Reparler ici de la question du skin in the game ?
+
+On en profites après pour parler du mécanism design avec la question du DAI ?
+
+---
+<!-- slide: id="blockchain-087-marche-predictif" title="Marché prédictif" layout="center" -->
+<img src="/assets/Capture d’écran 2025-11-06 à 09.33.09.png" alt="Marché prédictif" style="max-width:100%;max-height:68vh;object-fit:contain;" />

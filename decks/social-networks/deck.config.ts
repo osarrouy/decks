@@ -1,13 +1,13 @@
-import type { DeckConfig } from '@svx-slides/core/deck/types'
+import type { DeckConfig } from "@svx-slides/core/deck/types";
 
 const config = {
-  title: 'Introduction',
-  theme: 'gallery',
+  title: "Réseaux sociaux numériques 1/5",
+  theme: "gallery",
   template: {
-    source: 'deck.svx',
-    slideSeparator: '---',
-    notesSeparator: '--- notes'
-  }
-} satisfies DeckConfig
+    source: "deck.svx",
+    slideSeparator: "---",
+    notesSeparator: "--- notes",
+  },
+} satisfies DeckConfig;
 
-export default config
+export default config;

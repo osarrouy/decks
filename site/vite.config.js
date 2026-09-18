@@ -2,6 +2,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { uiPostcss } from "../tooling/postcss.js";
+import { deckProxyContext } from "./scripts/decks.mjs";
 
 const workspace = fileURLToPath(new URL("../", import.meta.url));
 const uiRoot = resolve(
@@ -31,7 +32,7 @@ export default ({ isPreview }) =>
           fs: { allow: [workspace, uiRoot] },
           proxy: Object.fromEntries(
             Object.entries(origins).map(([base, target]) => [
-              base,
+              deckProxyContext(base),
               {
                 target,
                 ws: true,

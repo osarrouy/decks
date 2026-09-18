@@ -1,9 +1,9 @@
 <script>
-  let { id, label, title, subtitle = "", part = "" } = $props();
+  let { id, label = "", title, subtitle = "", part = "" } = $props();
 </script>
 
 <div class="heading">
-  <span class="label">{label}</span>
+  {#if label}<span class="label">{label}</span>{/if}
   <h2 {id}>
     <span class="title">{title}</span>
     {#if part}<span class="part">{part}</span>{/if}
@@ -27,6 +27,10 @@
     letter-spacing: -0.01em;
     line-height: 1.2;
     color: var(--text-prominent);
+    margin-top: 0;
+  }
+
+  .label + h2 {
     margin-top: 10px;
   }
 

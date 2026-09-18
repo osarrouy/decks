@@ -31,9 +31,14 @@ pnpm dev:blockchain
 pnpm dev:cybernetics
 pnpm dev:economics
 pnpm dev:history-1
-pnpm dev:history-2
+pnpm dev:history-3
+pnpm dev:interpassivity
 pnpm dev:introduction
 pnpm dev:social-networks
+pnpm dev:social-networks-structure
+pnpm dev:social-networks-gatekeepers
+pnpm dev:social-networks-virality
+pnpm dev:social-networks-polarization
 ```
 
 Each shortcut starts only its deck, with projection and `/presenter` views. Additional CLI options can be appended, for example `pnpm dev:history-1 --port 5180` or `pnpm dev:history-1 --students`.

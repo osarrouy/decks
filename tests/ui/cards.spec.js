@@ -8,11 +8,11 @@ test("The catalog includes course files without publishing content documentation
     name: "Les enseignements",
     exact: true,
   });
-  await expect(cards.locator("[data-card]")).toHaveCount(3);
-  for (const slug of ["introduction-aux-cultures-numeriques", "l2", "m2"]) {
+  await expect(cards.locator("[data-card]")).toHaveCount(2);
+  for (const slug of ["introduction-aux-cultures-numeriques", "l2"]) {
     await expect(cards.locator(`[data-card][href="/${slug}/"]`)).toHaveCount(1);
   }
-  for (const slug of ["AGENTS", "COURSE_FORMAT"]) {
+  for (const slug of ["m2", "AGENTS", "COURSE_FORMAT"]) {
     const response = await page.request.get(`/${slug}/`);
     expect(response.status()).toBe(404);
   }

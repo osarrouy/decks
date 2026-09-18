@@ -28,207 +28,172 @@ chapitres:
         integration: "iframe"
 
     resume: |
-      Ce chapitre propose une histoire introductive des technologies numériques,
-      des premières machines à calculer jusqu’au Web 2.0.
+      Ce chapitre retrace l’histoire du calcul automatisé, des machines
+      mécaniques du XVIIe siècle aux premiers ordinateurs électroniques.
+      Il montre comment la formalisation du raisonnement rencontre les
+      besoins de l’État, de l’industrie et de la guerre.
 
-      Il suit la transformation progressive du calcul en une activité
-      mécanisable, programmable puis connectée. Cette histoire est abordée
-      avec ses dimensions techniques, scientifiques, économiques et politiques :
-      les machines servent à calculer, mais aussi à rendre les individus,
-      les populations, les échanges et les activités plus lisibles et
-      plus gouvernables.
+      Cette histoire n’est pas celle d’un progrès inévitable. Elle résulte
+      de projets parfois inachevés, de recherches théoriques et de demandes
+      pratiques : tenir des comptes, coordonner des flux, recenser des
+      populations ou traiter des informations militaires. Calculer devient
+      ainsi un moyen de produire des connaissances autant que d’organiser
+      le travail et d’exercer le pouvoir.
 
-      Le chapitre insiste également sur les bifurcations et les contingences
-      historiques. L’informatique et Internet ne sont pas le résultat
-      nécessaire d’une évolution linéaire : ils émergent de rencontres
-      entre recherches théoriques, besoins administratifs et militaires,
-      industries, communautés scientifiques et mouvements contre-culturels.
+      ## Mécaniser le calcul, programmer les opérations
 
-      ## Des machines à calculer aux machines programmables
+      La Pascaline de Blaise Pascal automatise des opérations arithmétiques
+      pour répondre notamment aux besoins de l’administration fiscale.
+      Leibniz prolonge cette ambition : au-delà du calcul des nombres,
+      il imagine un système de signes et de règles permettant de
+      mécaniser le raisonnement.
 
-      Cette partie introduit l’histoire du numérique à partir des premières
-      tentatives d’automatisation du calcul. La Pascaline de Blaise Pascal
-      répond à des besoins administratifs liés à la fiscalité, tandis que
-      Leibniz imagine un langage formel capable d’automatiser le raisonnement.
-
-      Au XIXe siècle, Charles Babbage cherche à mécaniser la production
-      des tables numériques. La Difference Engine reste spécialisée, mais
-      l’Analytical Engine annonce une machine générale et programmable,
-      dotée d’une mémoire, d’une unité de calcul et d’un système de contrôle.
-      Ada Lovelace comprend que de tels dispositifs pourraient manipuler
-      des symboles et pas seulement des nombres.
-
-      ### À retenir
-
-      - Le calcul devient progressivement une technique de gouvernement,
-        d’organisation du travail et de production de savoir.
-      - Il faut distinguer une machine spécialisée d’une machine programmable.
-      - Le programme peut être séparé du mécanisme matériel qui l’exécute.
-
-      ## Formaliser le calcul
-
-      Cette partie présente les avancées théoriques qui rendent pensable
-      l’automatisation du raisonnement et du calcul.
-
-      George Boole transforme les relations logiques en opérations
-      algébriques calculables. Alan Turing formalise ensuite la notion
-      de procédure mécanique avec sa machine abstraite : lire un symbole,
-      appliquer une règle, écrire, se déplacer et changer d’état.
-      La machine universelle montre qu’un même mécanisme peut simuler
-      d’autres machines lorsque leur description est fournie sous une
-      forme codée.
-
-      Claude Shannon établit enfin un lien entre l’algèbre de Boole
-      et les circuits de commutation. Les fonctions logiques peuvent
-      être réalisées matériellement avec des relais, ce qui prépare
-      le passage vers le traitement d’informations codées en binaire.
-      La numérisation est ensuite présentée comme la conversion d’une
-      information continue en une représentation discrète et calculable.
+      Au XIXe siècle, Charles Babbage cherche à accélérer et à fiabiliser
+      la production des tables numériques. Sa Difference Engine est
+      spécialisée dans une méthode de calcul. Son projet d’Analytical
+      Engine prévoit au contraire une mémoire, une unité de calcul et
+      des instructions sur cartes perforées : une même machine pourrait
+      exécuter différentes suites d’opérations. Ada Lovelace comprend
+      que ces opérations pourraient porter sur des symboles, et pas
+      seulement sur des quantités.
 
       ### À retenir
 
-      - Boole formalise la logique ; Turing formalise le calcul ; Shannon
-        montre comment réaliser certaines fonctions logiques matériellement.
-      - Une machine universelle interprète une description de programme
-        au lieu de posséder une seule procédure inscrite dans sa structure.
-      - Le codage binaire et la numérisation sont des étapes distinctes.
+      - L’automatisation du calcul répond à des enjeux intellectuels,
+        administratifs et industriels.
+      - Une machine spécialisée exécute une procédure déterminée ;
+        une machine programmable peut recevoir différentes instructions.
+      - Le calcul mécanique prolonge une organisation du travail humain,
+        dont l’histoire ne se réduit pas à celle des inventeurs.
+
+      ## La révolution du contrôle
+
+      L’industrialisation accélère la production, les transports et
+      les échanges. Cette accélération crée de nouveaux problèmes :
+      coordonner les trains, suivre les marchandises, organiser les
+      approvisionnements et administrer des ensembles toujours plus vastes.
+      James R. Beniger nomme « révolution du contrôle » le développement
+      des moyens d’information et de coordination qui répondent à ces besoins.
+
+      Les analyses de Michel Foucault éclairent un autre versant de cette
+      transformation. La discipline organise les gestes, les temps et
+      les espaces des individus ; la biopolitique prend pour objet les
+      processus collectifs de la population, comme la natalité, la mortalité
+      ou la santé. Ces mécanismes se superposent au pouvoir souverain
+      plutôt qu’ils ne le remplacent.
+
+      ### À retenir
+
+      - L’accélération des flux exige de nouveaux moyens de suivi
+        et de coordination.
+      - La discipline porte sur les corps individuels ; la biopolitique
+        porte sur la population.
+      - Les technologies de l’information participent à l’organisation
+        économique et politique des sociétés.
+
+      ## La statistique et la mise en calcul du social
+
+      La statistique rend visibles des régularités à l’échelle des
+      populations. Taux, moyennes et catégories permettent de décrire
+      des phénomènes collectifs et d’orienter des décisions publiques
+      ou économiques.
+
+      La tabulatrice d’Hollerith automatise le traitement de données
+      représentées sur des cartes perforées. Employée pour le recensement
+      américain de 1890, elle associe le codage des caractéristiques
+      individuelles à leur décompte électrique.
+
+      Les compagnies d’assurance contribuent également au développement
+      de ces techniques. En agrégeant des dossiers, elles estiment
+      des fréquences de sinistres, calculent des primes et répartissent
+      les risques. La statistique ne prédit pas chaque destin individuel :
+      elle transforme l’incertitude en grandeurs comparables à partir
+      desquelles il devient possible d’agir.
+
+      ### À retenir
+
+      - Les données individuelles peuvent être codées, classées et
+        agrégées pour produire un savoir sur une population.
+      - Le calcul statistique sert au recensement, à l’administration
+        et à la gestion des risques.
+      - Les catégories ne sont pas neutres dans leurs effets :
+        elles permettent de comparer, de tarifer, d’inclure ou d’exclure.
+
+      ## Formaliser la logique et le calcul
+
+      George Boole donne aux relations logiques une forme algébrique.
+      Des expressions composées avec ET, OU et NON peuvent être évaluées
+      selon des règles symboliques, indépendamment de leur contenu particulier.
+
+      Alan Turing précise ensuite ce qu’est une procédure mécanique
+      de calcul. Sa machine abstraite lit et écrit des symboles sur
+      un ruban, se déplace et change d’état selon des règles de transition.
+      Une machine universelle conserve ses propres règles mais interprète
+      la description codée d’une autre machine pour en simuler l’exécution :
+      le programme peut être traité comme une donnée.
+
+      Claude Shannon établit un lien entre l’algèbre de Boole et
+      les circuits de commutation. Des fonctions logiques peuvent être
+      réalisées par des connexions électriques, notamment à l’aide de relais.
+
+      ### À retenir
+
+      - Boole algébrise des relations logiques ; Turing propose un modèle
+        du calcul ; Shannon montre comment matérialiser des fonctions logiques.
+      - L’universalité ne signifie pas qu’une machine peut résoudre
+        tout problème : elle désigne ici sa capacité à simuler
+        d’autres machines de Turing.
+      - La machine de Turing est un modèle abstrait, distinct d’un
+        ordinateur matériel à mémoire finie.
+
+      ## Numériser : construire une représentation calculable
+
+      La numérisation transforme une grandeur continue en une représentation
+      discrète. Une image est découpée en pixels, dont la luminosité ou
+      la couleur reçoit des valeurs numériques. Un son est échantillonné
+      dans le temps, puis chaque mesure est quantifiée.
+
+      La précision de cette représentation dépend du nombre de mesures
+      et du nombre de valeurs disponibles pour les décrire. Le codage
+      binaire permet ensuite de représenter ces valeurs par des suites
+      de 0 et de 1.
+
+      ### À retenir
+
+      - Échantillonner consiste à sélectionner des mesures ; quantifier
+        consiste à leur attribuer des valeurs parmi un ensemble discret.
+      - Numériser et coder en binaire sont deux opérations distinctes.
+      - Une représentation numérique ne reproduit pas intégralement
+        le réel : elle le rend calculable à une certaine précision.
 
       ## La guerre et les premiers ordinateurs
 
-      À la fin des années 1930, les principes théoriques du calcul moderne
-      sont établis, mais leur réalisation matérielle reste coûteuse.
-      La Seconde Guerre mondiale transforme cette situation : cryptographie,
-      calcul balistique et recherche nucléaire font du calcul une priorité
-      militaire et scientifique.
+      La Seconde Guerre mondiale accélère le financement de machines
+      destinées à la cryptographie et aux calculs militaires. À Bletchley
+      Park, la bombe de Turing et de ses collaborateurs élimine des
+      configurations d’Enigma incompatibles avec les hypothèses des
+      cryptanalystes. C’est une machine spécialisée, dont l’efficacité
+      repose aussi sur le travail humain.
 
-      L’ENIAC, mis en service en 1945, repose sur des tubes à vide et doit
-      être reprogrammé par câblage. L’EDVAC introduit ensuite le principe
-      du programme enregistré : les instructions et les données sont
-      conservées dans la mémoire de la machine. Cette organisation rend
-      possible une machine électronique générale et programmable.
+      Avec l’ENIAC, le calcul s’appuie sur des composants électroniques,
+      mais la programmation passe encore par le câblage. Le travail
+      des programmeuses est essentiel à son fonctionnement, bien que
+      longtemps resté peu reconnu.
 
-      Cette partie aborde également le travail des premières programmeuses,
-      longtemps invisibilisé, ainsi que le passage progressif d’une
-      informatique militaire et scientifique à une informatique civile.
-
-      ### À retenir
-
-      - La guerre accélère le financement et la construction des premiers
-        ordinateurs électroniques.
-      - Le programme enregistré sépare les instructions du câblage matériel.
-      - L’ordinateur existe avant de trouver un usage courant et grand public.
-
-      ## Des réseaux distribués à Internet
-
-      Cette partie retrace les origines d’Internet dans le contexte de la
-      guerre froide et des recherches financées par l’ARPA. Joseph Licklider
-      imagine une relation étroite entre les humains et les ordinateurs,
-      tandis que Paul Baran, Donald Davies et Leonard Kleinrock développent
-      des conceptions de réseaux fondées sur la commutation par paquets.
-
-      Contrairement à un réseau téléphonique centralisé, un réseau distribué
-      découpe les informations en paquets qui peuvent emprunter des routes
-      différentes. Cette architecture favorise la résilience, l’interconnexion
-      de réseaux hétérogènes et l’apparition d’usages qui n’ont pas été
-      entièrement prévus par l’opérateur initial.
-
-      ARPANET s’étend à partir de 1969. Les protocoles TCP/IP, proposés par
-      Vint Cerf et Robert Kahn puis adoptés par ARPANET en 1983, fournissent
-      le socle technique d’Internet. Le Web, qui apparaîtra plus tard,
-      doit être distingué d’Internet lui-même.
+      L’EDVAC illustre le principe du programme enregistré : instructions
+      et données sont conservées en mémoire. Le matériel peut ainsi
+      exécuter différents programmes sans être recâblé pour chaque tâche.
+      L’UNIVAC marque ensuite une étape vers la commercialisation
+      civile de l’informatique, encore éloignée des usages personnels.
 
       ### À retenir
 
-      - Internet est un réseau et un ensemble de protocoles ; le Web est
-        une application qui s’appuie sur ce réseau.
-      - La commutation par paquets et l’architecture en couches facilitent
-        l’interconnexion et l’innovation par les usages.
-      - Le réseau a des origines militaires et scientifiques, mais son
-        développement dépend aussi de communautés civiles et techniques.
-
-      ## La micro-informatique et la contre-culture
-
-      Dans les années 1960, l’informatique repose encore sur de puissants
-      ordinateurs centraux réservés aux grandes institutions. La miniaturisation
-      des composants, le circuit intégré et l’apparition du microprocesseur
-      rendent progressivement possible une informatique plus accessible.
-
-      Cette transformation technique rencontre la contre-culture californienne.
-      Les communautés de la baie de San Francisco réinterprètent les ordinateurs
-      comme des instruments d’expérimentation, d’émancipation et d’organisation
-      collective, en lien avec l’imaginaire cybernétique.
-
-      La démonstration de Doug Engelbart en 1968, le Whole Earth Catalog,
-      Community Memory et les premiers collectifs d’amateurs contribuent
-      à faire circuler l’idée d’une informatique pour tous. Cette histoire
-      ne doit toutefois pas être réduite à un récit héroïque : elle mêle
-      des institutions de recherche, des financements militaires,
-      des entreprises et des communautés souvent inégalitaires.
-
-      ### À retenir
-
-      - La miniaturisation transforme les conditions matérielles d’accès
-        à l’informatique.
-      - La contre-culture ne rejette pas simplement la technique ; elle
-        cherche aussi à se la réapproprier.
-      - Les imaginaires de coopération et d’autonomie participent à la
-        formation de la culture informatique contemporaine.
-
-      ## L’ordinateur personnel et les communautés en ligne
-
-      L’Altair 8800, l’Apple I, l’Apple II, l’IBM PC et le Macintosh
-      marquent les principales étapes de la diffusion de l’ordinateur
-      personnel. L’informatique quitte progressivement les laboratoires,
-      les entreprises et les garages de passionnés pour entrer dans les
-      foyers et les bureaux.
-
-      Cette diffusion transforme aussi les modèles économiques et les usages.
-      L’ordinateur devient une machine prête à l’emploi, dotée d’un écran,
-      d’un clavier et d’une interface graphique. Le logiciel, notamment
-      avec le modèle de licence de Microsoft, devient un élément central
-      de la valeur industrielle.
-
-      En parallèle, les communautés issues de la contre-culture investissent
-      les premiers réseaux civils, les BBS et Usenet. The WELL prolonge
-      l’imaginaire du Whole Earth Catalog en faisant de la communication
-      en ligne une nouvelle forme de communauté.
-
-      ### À retenir
-
-      - La micro-informatique combine une rupture technique et une
-        transformation des publics de l’informatique.
-      - Le marché de l’ordinateur personnel se construit à travers des
-        standards matériels, des systèmes d’exploitation et des interfaces.
-      - Les communautés en ligne prolongent certains idéaux de coopération,
-        tout en les inscrivant dans des dispositifs techniques.
-
-      ## La naissance du Web et sa transformation
-
-      Tim Berners-Lee propose au CERN, en 1989, un système hypertexte
-      distribué permettant de relier et de consulter plus facilement
-      les documents produits par les chercheurs. Le Web s’appuie sur
-      trois technologies complémentaires : les URL pour adresser les
-      ressources, HTML pour décrire les pages et HTTP pour les échanger.
-
-      Le premier navigateur, WorldWideWeb, apparaît en 1990 et la première
-      page est mise en ligne en 1991. La diffusion de Mosaic, Netscape
-      Navigator et Internet Explorer transforme rapidement le Web en média
-      mondial.
-
-      Cette partie étudie ensuite la bulle des Dotcom, l’éclatement du NASDAQ
-      et l’apparition du Web 2.0. Le Web participatif fait des internautes
-      des producteurs de contenus et ouvre la voie aux blogs, aux wikis,
-      aux réseaux sociaux et au partage de vidéos. Cette démocratisation
-      s’accompagne toutefois d’une reprise en main progressive par les
-      États et les marchés.
-
-      ### À retenir
-
-      - Le Web est une technologie construite au-dessus d’Internet.
-      - La diffusion du Web dépend de standards techniques, de navigateurs
-        et de modèles économiques.
-      - Le Web 2.0 associe participation des utilisateurs, plateformes
-        commerciales et nouvelles formes de sociabilité en ligne.
+      - Les besoins militaires accélèrent la réalisation matérielle
+        des techniques de calcul.
+      - Une machine de cryptanalyse spécialisée n’est pas un ordinateur
+        général à programme enregistré.
+      - Le programme enregistré permet de changer les instructions
+        sans reconstruire le mécanisme qui les exécute.
 
     bibliographie:
       - reference: "Abbate, J. (1999). *Inventing the Internet*. MIT Press."
@@ -439,73 +404,758 @@ chapitres:
         url: "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/"
         note: "Texte fondateur : communication, contrôle et rétroaction chez l’animal et dans la machine."
 
-  # Chapitres suivants : propositions provisoires à retravailler.
-
-  - id: "information-et-communication"
-    titre: "Information et communication"
-    sous-titre: "Du codage à la construction du sens"
-
-    resume: |
-      Ce chapitre examine ce qui se transforme lorsqu’un message, une image
-      ou un son devient une donnée que l’on peut stocker, transmettre et
-      calculer. Il introduit les distinctions entre données, information et
-      sens, ainsi que les principales composantes d’une situation de communication.
-
-      À partir d’exemples de messages et de documents numériques, il propose
-      d’observer le rôle du codage, du support et du contexte d’interprétation.
-      La circulation d’une information est ainsi abordée à la fois comme
-      un processus technique et comme une relation entre des personnes.
-
-      ## À retenir
-
-      - Distinguer les données, l’information et le sens.
-      - Identifier le rôle du code, du canal et du contexte dans une communication.
-      - Interroger ce que la mise en données conserve, transforme ou laisse de côté.
-
-    bibliographie: []
-
-  - id: "pratiques-et-cultures-en-reseau"
-    titre: "Pratiques et cultures en réseau"
-    sous-titre: "Partager, créer, participer"
+  - id: "internet-et-ordinateur-personnel"
+    titre: "Histoire du numérique"
+    partie: "3/3"
+    sous-titre: "Internet et l’ordinateur personnel"
+    slides:
+      - titre: "Histoire du numérique · 3/3 — Internet et l’ordinateur personnel"
+        url: "/slides/history-3/index.html"
+        integration: "iframe"
 
     resume: |
-      Ce chapitre explore les manières de se rencontrer, de créer et de
-      participer en ligne. Il prend pour points de départ les communautés,
-      les pratiques de partage, le remix et les productions collectives.
+      Cette troisième partie suit deux transformations qui finissent par se
+      rejoindre : la mise en réseau d’ordinateurs éloignés et le passage de
+      l’informatique institutionnelle à l’ordinateur personnel. Elle montre
+      comment des choix techniques, des financements publics, des communautés
+      de recherche et des imaginaires contre-culturels contribuent ensemble à
+      former les cultures numériques contemporaines.
 
-      Il invite à analyser les règles et les habitudes qui organisent ces
-      espaces : qui peut participer, comment se construit une réputation,
-      quels contenus deviennent visibles et comment se négocient les désaccords.
-      Les identités numériques sont étudiées à travers la présentation de soi,
-      les traces laissées par les usages et les relations avec les autres.
+      Le parcours va des premières recherches sur les réseaux à commutation
+      de paquets au Web, en passant par ARPANET, TCP/IP, le microprocesseur,
+      l’Altair, Apple et l’IBM PC. Il se termine par la commercialisation du
+      Web, la bulle des entreprises « dotcom » et le tournant participatif
+      associé au Web 2.0.
 
-      ## À retenir
+      ## Distinguer Internet et le Web
 
-      - Décrire les formes de coopération et de création dans les communautés en ligne.
-      - Repérer les règles explicites et implicites qui organisent la participation.
-      - Relier la présentation de soi aux conditions de visibilité sur les réseaux.
+      Internet est une infrastructure de communication : un réseau de réseaux
+      qui fait circuler des paquets selon une famille de protocoles, notamment
+      TCP/IP. Le Web est l’un des services qui utilise cette infrastructure.
+      Il organise la consultation de ressources reliées par des hyperliens au
+      moyen d’URL, de HTTP et de HTML.
 
-    bibliographie: []
+      Cette distinction évite de confondre le support et l’un de ses usages.
+      Le courrier électronique et le transfert de fichiers précèdent le Web ;
+      d’autres applications peuvent apparaître sans modifier les principes
+      fondamentaux d’Internet.
 
-  - id: "plateformes-et-vie-quotidienne"
-    titre: "Plateformes et vie quotidienne"
-    sous-titre: "Données, attention et usages"
+      ### À retenir
+
+      - Internet relie des réseaux ; le Web relie des ressources consultables.
+      - TCP/IP appartient à l’infrastructure d’Internet ; URL, HTTP et HTML
+        structurent le Web.
+      - Une même infrastructure peut accueillir des usages qui n’avaient pas
+        été prévus lors de sa conception.
+
+      ## Relier des réseaux : de la commutation par paquets à TCP/IP
+
+      Le réseau téléphonique repose alors sur l’établissement d’un circuit
+      réservé pendant la communication. La commutation par paquets découpe au
+      contraire les données, permet à chaque paquet d’emprunter le réseau et
+      reconstitue le message à l’arrivée. Les travaux de Paul Baran, Donald
+      Davies et Leonard Kleinrock participent à cette transformation.
+
+      ARPANET met ces principes à l’épreuve à partir de la fin des années 1960.
+      Robert Kahn et Vint Cerf proposent ensuite une architecture capable de
+      faire communiquer des réseaux différents. La séparation progressive de
+      TCP et d’IP répartit les fonctions entre transport de bout en bout et
+      acheminement des paquets.
+
+      ### À retenir
+
+      - La commutation par paquets partage les capacités du réseau entre des
+        communications multiples.
+      - ARPANET constitue un terrain d’expérimentation, mais ne se confond pas
+        avec l’Internet mondial qui lui succède.
+      - TCP/IP rend possible l’interconnexion de réseaux hétérogènes sans leur
+        imposer une organisation interne unique.
+
+      ## Du microprocesseur à l’ordinateur personnel
+
+      La miniaturisation des composants déplace progressivement le calcul hors
+      des grands centres informatiques. Circuits intégrés puis microprocesseurs
+      rassemblent davantage de fonctions sur une puce, réduisant le coût et la
+      taille des machines.
+
+      L’Altair 8800 s’adresse d’abord aux amateurs capables d’assembler et de
+      programmer leur propre machine. L’Apple I puis l’Apple II transforment ce
+      bricolage en produit plus accessible. L’IBM PC contribue ensuite à fixer
+      une architecture largement imitée, tandis que le Macintosh popularise
+      une interface graphique commandée à la souris.
+
+      ### À retenir
+
+      - Le microprocesseur rend possible une nouvelle échelle de production et
+        d’usage des ordinateurs.
+      - Le passage du kit au produit grand public transforme les utilisateurs,
+        les logiciels et les marchés.
+      - L’ordinateur personnel résulte d’innovations techniques autant que de
+        choix de conception, de diffusion et de standardisation.
+
+      ## La contre-culture californienne et l’informatique comme outil
+
+      Dans la baie de San Francisco, laboratoires de recherche, communautés
+      hippies et clubs d’amateurs se côtoient sans former un milieu homogène.
+      Stewart Brand joue un rôle de passeur entre ces mondes. Le *Whole Earth
+      Catalog* rassemble des outils destinés à l’autonomie individuelle et
+      collective ; Community Memory expérimente un accès public à l’échange
+      informatisé ; le Homebrew Computer Club organise la circulation des
+      savoirs autour des micro-ordinateurs.
+
+      Cette histoire aide à comprendre comment l’ordinateur, auparavant perçu
+      comme un instrument militaire, administratif ou industriel, peut aussi
+      être présenté comme un outil personnel d’émancipation. Cette promesse ne
+      suffit toutefois pas à expliquer seule le développement de l’industrie
+      informatique californienne.
+
+      ### À retenir
+
+      - Les liens entre contre-culture et informatique passent par des lieux,
+        des publications et des intermédiaires précis.
+      - L’idée d’un « outil personnel » transforme l’imaginaire de l’ordinateur.
+      - Coopération communautaire et développement marchand coexistent dès les
+        débuts de la micro-informatique.
+
+      ## D’ARPANET à Internet
+
+      À mesure que les réseaux et leurs usages se multiplient, l’enjeu n’est
+      plus seulement de relier quelques machines expérimentales. L’adoption de
+      TCP/IP par ARPANET en 1983, la séparation des usages militaires et le
+      développement de réseaux académiques comme NSFNET contribuent à former
+      une infrastructure de plus grande échelle.
+
+      Des communautés en ligne comme le WELL prolongent parallèlement les
+      réseaux sociaux issus de la contre-culture. L’extension d’Internet repose
+      donc sur des protocoles, des institutions et des usages collectifs, avant
+      sa diffusion auprès du grand public.
+
+      ### À retenir
+
+      - Internet se construit comme une interconnexion de réseaux plutôt que
+        comme un réseau central unique.
+      - Les protocoles ouverts rendent compatibles des équipements et des
+        organisations hétérogènes.
+      - Son histoire engage des acteurs militaires, universitaires, publics,
+        associatifs et commerciaux.
+
+      ## Le Web, sa commercialisation et le tournant participatif
+
+      À la fin des années 1980, Tim Berners-Lee propose au CERN un système
+      hypertexte distribué pour relier des informations dispersées. Le Web
+      combine un système d’adresses, un protocole d’échange et un langage de
+      documents. Sa diffusion facilite l’accès à Internet sans abolir les
+      autres services du réseau.
+
+      L’ouverture du Web à des activités commerciales nourrit une croissance
+      rapide et une spéculation qui culmine avec la bulle des « dotcom ».
+      Après son éclatement, l’expression « Web 2.0 » désigne des services où
+      les internautes publient, commentent et organisent eux-mêmes une part
+      croissante des contenus. Cette participation alimente aussi de nouveaux
+      modèles économiques fondés sur l’audience et les données.
+
+      ### À retenir
+
+      - Le Web associe URL, HTTP et HTML sur l’infrastructure d’Internet.
+      - L’ouverture technique du Web ne détermine pas à elle seule ses modèles
+        économiques ni la répartition du pouvoir entre ses acteurs.
+      - Le Web 2.0 déplace une partie de la production éditoriale vers les
+        utilisateurs et prépare l’essor des plateformes sociales.
+
+    bibliographie:
+      - reference: "Abbate, J. (1999). *Inventing the Internet*. MIT Press. [https://mitpress.mit.edu/9780262511155/inventing-the-internet/](https://mitpress.mit.edu/9780262511155/inventing-the-internet/)"
+        url: "https://mitpress.mit.edu/9780262511155/inventing-the-internet/"
+        note: "Histoire de référence attentive aux choix techniques, aux institutions et aux usages qui ont façonné Internet."
+      - reference: "Berners-Lee, T. (1989/1990). *Information management: A proposal*. CERN. [https://www.w3.org/History/1989/proposal-msw.html](https://www.w3.org/History/1989/proposal-msw.html)"
+        url: "https://www.w3.org/History/1989/proposal-msw.html"
+        note: "Source primaire : la proposition d’un système hypertexte distribué qui deviendra le Web."
+      - reference: "Cerf, V. G., & Kahn, R. E. (1974). A protocol for packet network intercommunication. *IEEE Transactions on Communications, 22*(5), 637–648. [https://doi.org/10.1109/TCOM.1974.1092259](https://doi.org/10.1109/TCOM.1974.1092259)"
+        url: "https://doi.org/10.1109/TCOM.1974.1092259"
+        note: "Source primaire : principes d’interconnexion de réseaux à commutation par paquets."
+      - reference: "Computer History Museum. (s. d.). *The biography of a discovery* [Vidéo]. [https://computerhistory.org/stories/the-biography-of-a-discovery/](https://computerhistory.org/stories/the-biography-of-a-discovery/)"
+        url: "https://computerhistory.org/stories/the-biography-of-a-discovery/"
+        note: "Archive filmée de la démonstration de Douglas Engelbart en 1968, accompagnée de son contexte historique."
+      - reference: "Computer History Museum. (s. d.). *Computers: Timeline of computer history*. [https://www.computerhistory.org/timeline/computers/](https://www.computerhistory.org/timeline/computers/)"
+        url: "https://www.computerhistory.org/timeline/computers/"
+        note: "Repères illustrés sur l’Altair 8800, l’Apple I et II, l’IBM PC et le Macintosh."
+      - reference: "France Culture. (2022, 30 janvier). 1969 : on a parlé sur les réseaux. Dans *Une histoire de… l’Internet* (épisode 1/8) [Podcast, 14 min]. [https://www.radiofrance.fr/franceculture/podcasts/une-histoire-de/1969-on-a-parle-sur-les-reseaux-9357188](https://www.radiofrance.fr/franceculture/podcasts/une-histoire-de/1969-on-a-parle-sur-les-reseaux-9357188)"
+        url: "https://www.radiofrance.fr/franceculture/podcasts/une-histoire-de/1969-on-a-parle-sur-les-reseaux-9357188"
+        note: "Écoute courte avec Dominique Cardon et Valérie Schafer sur ARPANET et les imaginaires politiques des premiers réseaux."
+      - reference: "Inria. (2020, 9 novembre). *Création et développement d’Internet : une histoire en trois récits*. [https://www.inria.fr/fr/creation-developpement-internet-histoire](https://www.inria.fr/fr/creation-developpement-internet-histoire)"
+        url: "https://www.inria.fr/fr/creation-developpement-internet-histoire"
+        note: "Trois témoignages de pionniers qui replacent les contributions françaises et européennes dans l’histoire d’Internet."
+      - reference: "Leiner, B. M., et al. (1997). *Un bref historique de l’Internet*. Internet Society. [https://www.internetsociety.org/fr/internet/history-internet/brief-history-internet/](https://www.internetsociety.org/fr/internet/history-internet/brief-history-internet/)"
+        url: "https://www.internetsociety.org/fr/internet/history-internet/brief-history-internet/"
+        note: "Synthèse rédigée par plusieurs acteurs de la conception et du développement d’Internet."
+      - reference: "Licklider, J. C. R. (1960). Man-computer symbiosis. *IRE Transactions on Human Factors in Electronics, HFE-1*(1), 4–11. [https://doi.org/10.1109/THFE2.1960.4503259](https://doi.org/10.1109/THFE2.1960.4503259)"
+        url: "https://doi.org/10.1109/THFE2.1960.4503259"
+        note: "Texte fondateur sur l’interaction en temps réel entre humains et ordinateurs."
+      - reference: "Turner, F. (2012). *Aux sources de l’utopie numérique : De la contre-culture à la cyberculture, Stewart Brand, un homme d’influence* (L. Vannini, trad.). C&F Éditions. (Ouvrage original publié en 2006)"
+        note: "Lecture centrale pour comprendre les médiations entre contre-culture, informatique personnelle et imaginaire de la Silicon Valley."
+
+  - id: "reseaux-sociaux-numeriques"
+    titre: "Réseaux sociaux numériques"
+    partie: "1/5"
+    sous-titre: "Espace public, sphère privée et publication"
+    slides:
+      - titre: "Réseaux sociaux numériques — Espace public, sphère privée et publication"
+        url: "/slides/social-networks/index.html"
+        integration: "iframe"
 
     resume: |
-      Ce chapitre propose une lecture critique des services numériques
-      utilisés au quotidien : rechercher une information, regarder une vidéo,
-      acheter un produit ou échanger avec ses proches. Il introduit les notions
-      de plateforme, de modèle économique et d’économie de l’attention.
+      Ce chapitre définit les réseaux sociaux numériques à partir de leur
+      architecture : des profils publics ou semi-publics, des relations rendues
+      visibles et des contenus organisés autour de ceux qui les publient. Cette
+      organisation transforme les conditions de la prise de parole sans faire
+      disparaître les inégalités d’attention.
 
-      L’analyse porte sur les interfaces, la collecte de données et les systèmes
-      de recommandation, en examinant leur place dans l’organisation des usages.
-      Des situations concrètes permettent de discuter les possibilités de choix,
-      les dépendances et les moyens de prendre du recul sur ses pratiques.
+      ## Définir un réseau social numérique
 
-      ## À retenir
+      D’après danah boyd et Nicole Ellison, un site de réseau social permet de
+      construire un profil, de déclarer des liens et de parcourir ces connexions.
+      Sa particularité tient moins à la rencontre d’inconnus qu’à la mise en
+      visibilité de relations qui existaient souvent déjà hors ligne.
 
-      - Identifier les acteurs et les modèles économiques d’un service numérique.
-      - Examiner les liens entre données, recommandations et attention.
-      - Développer une lecture critique de ses usages et des interfaces qui les organisent.
+      ## Sphère publique et sphère privée
 
-    bibliographie: []
+      Le caractère public ou privé d’un fait ne constitue pas une propriété
+      fixe. Il dépend du cercle des personnes concernées, des règles sociales et
+      des dispositifs qui organisent sa circulation. À partir de Jürgen Habermas,
+      le chapitre distingue la simple visibilité d’une parole et sa formulation
+      comme question d’intérêt commun.
+
+      ## Un espace public élargi et clair-obscur
+
+      Le Web participatif abaisse les seuils de publication et permet à des
+      acteurs auparavant peu représentés de prendre part à la parole publique.
+      Il rend aussi consultables et mesurables des conversations ordinaires, des
+      expériences intimes et des contenus destinés à des publics restreints. La
+      frontière entre public et privé devient plus poreuse et négociable.
+
+      ## Publier d’abord, filtrer ensuite
+
+      Lorsque chacun peut mettre un contenu en ligne, le filtrage intervient
+      davantage après la publication. Liens, partages, moteurs de recherche,
+      métriques et recommandations concentrent alors l’attention sur un petit
+      nombre de contenus. La formule « publish, then filter » décrit ce
+      déplacement : l’ouverture de la publication n’égalise pas la visibilité.
+
+      ### À retenir
+
+      - Un réseau social numérique rend visibles des profils, des liens et des circulations.
+      - Publicité comme visibilité et publicité comme intérêt commun ne se confondent pas.
+      - Le Web participatif mêle parole publique, conversation et exposition de la vie privée.
+      - Publier devient plus facile, mais l’attention demeure rare et très concentrée.
+
+    bibliographie:
+      - reference: "boyd, d. m., & Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. *Journal of Computer-Mediated Communication, 13*(1), 210–230. [https://doi.org/10.1111/j.1083-6101.2007.00393.x](https://doi.org/10.1111/j.1083-6101.2007.00393.x)"
+        url: "https://doi.org/10.1111/j.1083-6101.2007.00393.x"
+        note: "Lecture centrale pour définir les sites de réseaux sociaux à partir des profils et des connexions visibles."
+      - reference: "Habermas, J. (1993). *L’espace public : Archéologie de la publicité comme dimension constitutive de la société bourgeoise* (M. B. de Launay, trad.). Payot."
+        url: "https://catalogue.bnf.fr/ark:/12148/cb37428283f"
+        note: "Repère théorique pour distinguer visibilité, discussion publique et médiations."
+      - reference: "Katz, E., & Lazarsfeld, P. F. (1955). *Personal influence: The part played by people in the flow of mass communications*. Free Press."
+        note: "Texte classique sur les leaders d’opinion et la circulation interpersonnelle de l’influence."
+      - reference: "Shirky, C. (2008). *Here comes everybody: The power of organizing without organizations*. Penguin Press."
+        note: "Pour le déplacement du filtrage avant publication vers le principe « publish, then filter »."
+      - reference: "Tarde, G. (1901). *L’opinion et la foule*. Félix Alcan."
+        url: "https://catalogue.bnf.fr/ark:/12148/cb181229642"
+        note: "Texte classique sur la conversation, le public et la formation de l’opinion."
+
+  - id: "structure-des-reseaux-sociaux"
+    titre: "Réseaux sociaux numériques"
+    partie: "2/5"
+    sous-titre: "Structure des réseaux et circulation"
+    slides:
+      - titre: "Réseaux sociaux numériques — Structure des réseaux et circulation"
+        url: "/slides/social-networks-structure/index.html"
+        integration: "iframe"
+
+    resume: |
+      Les messages ne circulent pas sur une surface homogène. Ils empruntent des
+      relations regroupées en communautés, traversent quelques ponts et peuvent
+      bénéficier de nœuds beaucoup plus connectés que les autres. Ce chapitre
+      introduit les outils nécessaires pour décrire cette structure.
+
+      ## Représenter un réseau
+
+      Un graphe représente des acteurs par des nœuds et leurs relations par des
+      liens. Le modèle aléatoire d’Erdős et Rényi sert de point de comparaison :
+      il fait apparaître des propriétés générales, mais ne reproduit pas les
+      déterminismes sociaux qui orientent les rencontres réelles.
+
+      ## Petits mondes et chemins courts
+
+      Les expériences de Stanley Milgram et le modèle de Watts et Strogatz
+      montrent que des réseaux fortement regroupés peuvent néanmoins être reliés
+      par des chemins très courts. Quelques ponts suffisent à rapprocher des
+      groupes qui resteraient autrement éloignés.
+
+      ## Hubs et attachement préférentiel
+
+      Barabási et Albert attirent l’attention sur des réseaux dans lesquels le
+      nombre de liens est très inégalement distribué. L’attachement préférentiel
+      explique comment un avantage initial peut se renforcer : les nœuds déjà
+      très connectés ont davantage de chances d’attirer de nouveaux liens.
+
+      ## Bonding et bridging
+
+      Robert Putnam distingue les liens qui renforcent la cohésion d’un groupe
+      homogène (*bonding*) de ceux qui relient des groupes différents
+      (*bridging*). Le nombre de connexions ne suffit donc pas : leur position,
+      leur intensité et leur fonction déterminent aussi ce qu’un réseau permet.
+
+      ### À retenir
+
+      - Les petits mondes combinent regroupements locaux et chemins courts.
+      - Les hubs concentrent une part importante des connexions et des relais possibles.
+      - L’attachement préférentiel peut transformer un avantage initial en forte concentration.
+      - Les liens internes et les ponts entre groupes remplissent des fonctions sociales différentes.
+
+    bibliographie:
+      - reference: "Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. *Science, 286*(5439), 509–512. [https://doi.org/10.1126/science.286.5439.509](https://doi.org/10.1126/science.286.5439.509)"
+        url: "https://doi.org/10.1126/science.286.5439.509"
+        note: "Texte fondateur sur les réseaux sans échelle, les hubs et l’attachement préférentiel."
+      - reference: "Erdős, P., & Rényi, A. (1959). On random graphs I. *Publicationes Mathematicae, 6*, 290–297. [https://doi.org/10.5486/PMD.1959.6.3-4.12](https://doi.org/10.5486/PMD.1959.6.3-4.12)"
+        url: "https://doi.org/10.5486/PMD.1959.6.3-4.12"
+        note: "Modèle de référence pour comprendre ce que produit une distribution aléatoire des liens."
+      - reference: "Granovetter, M. S. (1973). The strength of weak ties. *American Journal of Sociology, 78*(6), 1360–1380. [https://doi.org/10.1086/225469](https://doi.org/10.1086/225469)"
+        url: "https://doi.org/10.1086/225469"
+        note: "Pour comprendre le rôle des liens faibles dans la circulation entre groupes sociaux."
+      - reference: "Putnam, R. D. (2000). *Bowling alone: The collapse and revival of American community*. Simon & Schuster."
+        url: "https://www.simonandschuster.com/books/Bowling-Alone-Revised-and-Updated/Robert-D-Putnam/9780743219037"
+        note: "Pour distinguer les liens d’attachement des liens qui relient des groupes différents."
+      - reference: "Travers, J., & Milgram, S. (1969). An experimental study of the small world problem. *Sociometry, 32*(4), 425–443. [https://doi.org/10.2307/2786545](https://doi.org/10.2307/2786545)"
+        url: "https://doi.org/10.2307/2786545"
+        note: "Expérience classique sur les chaînes de connaissances et le phénomène des petits mondes."
+      - reference: "Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks. *Nature, 393*, 440–442. [https://doi.org/10.1038/30918](https://doi.org/10.1038/30918)"
+        url: "https://doi.org/10.1038/30918"
+        note: "Article fondateur sur les réseaux combinant fort regroupement local et chemins courts."
+
+  - id: "gatekeeping-algorithmique"
+    titre: "Réseaux sociaux numériques"
+    partie: "3/5"
+    sous-titre: "Visibilité et gatekeeping algorithmique"
+    slides:
+      - titre: "Réseaux sociaux numériques — Visibilité et gatekeeping algorithmique"
+        url: "/slides/social-networks-gatekeepers/index.html"
+        integration: "iframe"
+
+    resume: |
+      La possibilité technique de publier ne garantit pas d’être vu. Les
+      plateformes ordonnent des fils, recommandent des comptes et distribuent
+      des occasions de rencontre. Ce chapitre analyse ce déplacement du
+      gatekeeping vers la sélection algorithmique.
+
+      ## Publier, être distribué, être consulté
+
+      Une publication doit être distribuée, rencontrée puis consultée avant de
+      pouvoir produire un effet. Ces étapes empêchent de confondre liberté de
+      publication, visibilité, attention et adhésion.
+
+      ## Modération et recommandation
+
+      La modération décide principalement de ce qui peut rester accessible. La
+      recommandation hiérarchise les contenus disponibles et décide lesquels
+      apparaissent en premier, plus tard ou jamais. Ces deux seuils exercent des
+      pouvoirs distincts sur l’espace public.
+
+      ## Un score ne mesure pas la qualité
+
+      Un modèle de classement prédit un résultat à partir d’indicateurs : clic,
+      durée de consultation, commentaire ou partage. Ces signaux ne mesurent pas
+      directement la vérité, l’utilité ou la satisfaction. Leur choix traduit
+      des objectifs humains et organisationnels.
+
+      ## Un ensemble d’acteurs
+
+      Le gatekeeping algorithmique résulte des relations entre plateforme,
+      modèles, données, producteurs et utilisateurs. Les producteurs anticipent
+      les critères de visibilité et adaptent leurs pratiques ; les réactions du
+      public alimentent ensuite de nouveaux classements.
+
+      ### À retenir
+
+      - Publication, distribution, rencontre, consultation et adhésion sont des étapes distinctes.
+      - La modération fixe des limites ; la recommandation organise la visibilité.
+      - Un classement optimise des indicateurs choisis, pas une qualité universelle.
+      - Le pouvoir algorithmique appartient à un dispositif institutionnel et social.
+
+    bibliographie:
+      - reference: "Bucher, T. (2012). Want to be on the top? Algorithmic power and the threat of invisibility on Facebook. *New Media & Society, 14*(7), 1164–1180. [https://doi.org/10.1177/1461444812440159](https://doi.org/10.1177/1461444812440159)"
+        url: "https://doi.org/10.1177/1461444812440159"
+        note: "Analyse du pouvoir algorithmique à partir de la visibilité et du risque de disparaître des fils."
+      - reference: "Gillespie, T. (2014). The relevance of algorithms. Dans T. Gillespie, P. J. Boczkowski, & K. A. Foot (dir.), *Media technologies: Essays on communication, materiality, and society* (p. 167–194). MIT Press. [https://doi.org/10.7551/mitpress/9780262525374.003.0009](https://doi.org/10.7551/mitpress/9780262525374.003.0009)"
+        url: "https://doi.org/10.7551/mitpress/9780262525374.003.0009"
+        note: "Cadre sociologique pour replacer les algorithmes dans les institutions et les choix qui les produisent."
+      - reference: "Just, N., & Latzer, M. (2017). Governance by algorithms: Reality construction by algorithmic selection on the Internet. *Media, Culture & Society, 39*(2), 238–258. [https://doi.org/10.1177/0163443716643157](https://doi.org/10.1177/0163443716643157)"
+        url: "https://doi.org/10.1177/0163443716643157"
+        note: "Pour penser la sélection algorithmique comme une forme de gouvernement des environnements informationnels."
+      - reference: "Napoli, P. M. (2014). Automated media: An institutional theory perspective on algorithmic media production and consumption. *Communication Theory, 24*(3), 340–360. [https://doi.org/10.1111/comt.12039](https://doi.org/10.1111/comt.12039)"
+        url: "https://doi.org/10.1111/comt.12039"
+        note: "Approche institutionnelle de la production et de la consommation médiatiques automatisées."
+
+  - id: "viralite-cascades-amplification"
+    titre: "Réseaux sociaux numériques"
+    partie: "4/5"
+    sous-titre: "Viralité, cascades et amplification"
+    slides:
+      - titre: "Réseaux sociaux numériques — Viralité, cascades et amplification"
+        url: "/slides/social-networks-virality/index.html"
+        integration: "iframe"
+
+    resume: |
+      La métaphore du virus suggère qu’un contenu se transmet spontanément de
+      personne à personne. Les recherches sur les cascades montrent une réalité
+      plus composite : beaucoup de succès massifs combinent broadcast, positions
+      inégales, relais organisés, effets cumulatifs et sélection algorithmique.
+
+      ## Popularité et viralité structurelle
+
+      Le nombre total de vues ou de partages ne décrit pas la forme d’une
+      diffusion. Un message peut atteindre un public immense depuis une source
+      très visible sans progresser sur une longue chaîne. La viralité
+      structurelle distingue ainsi la taille d’une cascade de sa profondeur.
+
+      ## Cascades courtes et broadcasts
+
+      La plupart des cascades étudiées restent petites et s’arrêtent rapidement.
+      Les longues chaînes de transmission existent, mais elles sont rares. Même
+      parmi les grands succès, une part importante de l’audience peut provenir
+      de quelques épisodes de diffusion depuis des comptes très visibles.
+
+      ## Exposition, position et contenu
+
+      Certaines propriétés émotionnelles augmentent la propension au partage,
+      mais un contenu doit d’abord être rencontré. Audience préalable,
+      centralité, réputation et réseau de relais distribuent des points de
+      départ très inégaux. Un grand nombre d’abonnés ne suffit toutefois pas à
+      garantir une influence effective.
+
+      ## Preuve sociale et avantage cumulatif
+
+      Les compteurs et classements rendent les choix des autres visibles. Une
+      légère avance peut alors produire de nouvelles sélections, qui renforcent
+      à leur tour sa visibilité. L’expérience MusicLab montre que cette influence
+      sociale rend les succès à la fois plus inégaux et plus imprévisibles.
+
+      ## Amplification organisée et algorithmique
+
+      Bots, publicité, réseaux coordonnés et relais influents peuvent fabriquer
+      une première exposition ou l’apparence d’une mobilisation spontanée. Les
+      plateformes participent aussi à la diffusion : leurs classements testent,
+      amplifient ou réduisent la visibilité à partir des réactions observées.
+
+      ## Des chances inégales, un résultat contingent
+
+      Les dynamiques horizontales existent et une campagne préparée peut échouer.
+      La visibilité finale résulte d’une combinaison de ressources, d’exposition,
+      de structure réticulaire, d’organisation, de propriétés du contenu et de
+      contingence. L’imprévisibilité n’implique donc pas l’égalité des chances.
+
+      ### À retenir
+
+      - Une forte popularité ne prouve pas une longue transmission de proche en proche.
+      - La plupart des cascades sont courtes et les grands broadcasts jouent un rôle majeur.
+      - Une cascade observée ne suffit pas à distinguer influence et exposition commune.
+      - La visibilité peut être amplifiée par des relais organisés et par le classement.
+      - La viralité décrit un résultat dont il faut reconstruire les conditions sociales de production.
+
+    bibliographie:
+      - reference: "Bakshy, E., Hofman, J. M., Mason, W. A., & Watts, D. J. (2011). Everyone’s an influencer: Quantifying influence on Twitter. Dans *Proceedings of the Fourth ACM International Conference on Web Search and Data Mining* (p. 65–74). [https://doi.org/10.1145/1935826.1935845](https://doi.org/10.1145/1935826.1935845)"
+        url: "https://doi.org/10.1145/1935826.1935845"
+        note: "Pour relier audience préalable, grandes cascades et difficulté de prévoir les succès."
+      - reference: "Bakshy, E., Rosenn, I., Marlow, C., & Adamic, L. A. (2012). The role of social networks in information diffusion. Dans *Proceedings of the 21st International Conference on World Wide Web* (p. 519–528). [https://doi.org/10.1145/2187836.2187907](https://doi.org/10.1145/2187836.2187907)"
+        url: "https://doi.org/10.1145/2187836.2187907"
+        note: "Expérience causale distinguant influence interpersonnelle et exposition commune."
+      - reference: "Berger, J., & Milkman, K. L. (2012). What makes online content viral? *Journal of Marketing Research, 49*(2), 192–205. [https://doi.org/10.1509/jmr.10.0353](https://doi.org/10.1509/jmr.10.0353)"
+        url: "https://doi.org/10.1509/jmr.10.0353"
+        note: "Étude des propriétés du contenu associées à une plus forte propension au partage."
+      - reference: "Cha, M., Haddadi, H., Benevenuto, F., & Gummadi, K. P. (2010). Measuring user influence in Twitter: The million follower fallacy. *Proceedings of the International AAAI Conference on Web and Social Media, 4*(1), 10–17. [https://doi.org/10.1609/icwsm.v4i1.14033](https://doi.org/10.1609/icwsm.v4i1.14033)"
+        url: "https://doi.org/10.1609/icwsm.v4i1.14033"
+        note: "Pour distinguer popularité, retweets, mentions et capacité d’influence."
+      - reference: "Gauthier, G., Hodler, R., Widmer, P., & Zhuravskaya, E. (2026). The political effects of X’s feed algorithm. *Nature, 652*(8109), 416–423. [https://doi.org/10.1038/s41586-026-10098-2](https://doi.org/10.1038/s41586-026-10098-2)"
+        url: "https://doi.org/10.1038/s41586-026-10098-2"
+        note: "Expérience récente sur la composition du fil algorithmique de X et certains de ses effets politiques."
+      - reference: "Goel, S., Anderson, A., Hofman, J., & Watts, D. J. (2016). The structural virality of online diffusion. *Management Science, 62*(1), 180–196. [https://doi.org/10.1287/mnsc.2015.2158](https://doi.org/10.1287/mnsc.2015.2158)"
+        url: "https://doi.org/10.1287/mnsc.2015.2158"
+        note: "Texte central pour distinguer taille d’une cascade, broadcast et viralité structurelle."
+      - reference: "Goel, S., Watts, D. J., & Goldstein, D. G. (2012). The structure of online diffusion networks. Dans *Proceedings of the 13th ACM Conference on Electronic Commerce* (p. 623–638). [https://doi.org/10.1145/2229012.2229058](https://doi.org/10.1145/2229012.2229058)"
+        url: "https://doi.org/10.1145/2229012.2229058"
+        note: "Comparaison de plusieurs environnements montrant la rareté des longues chaînes de diffusion."
+      - reference: "Huszár, F., Ktena, S. I., O’Brien, C., Belli, L., Schlaikjer, A., & Hardt, M. (2022). Algorithmic amplification of politics on Twitter. *Proceedings of the National Academy of Sciences, 119*(1), e2025334119. [https://doi.org/10.1073/pnas.2025334119](https://doi.org/10.1073/pnas.2025334119)"
+        url: "https://doi.org/10.1073/pnas.2025334119"
+        note: "Audit à grande échelle de l’amplification politique produite par le fil algorithmique de Twitter."
+      - reference: "Keller, F. B., Schoch, D., Stier, S., & Yang, J. (2020). Political astroturfing on Twitter: How to coordinate a disinformation campaign. *Political Communication, 37*(2), 256–280. [https://doi.org/10.1080/10584609.2019.1661888](https://doi.org/10.1080/10584609.2019.1661888)"
+        url: "https://doi.org/10.1080/10584609.2019.1661888"
+        note: "Étude d’une campagne coordonnée fabriquant l’apparence d’une mobilisation spontanée."
+      - reference: "Leskovec, J., Adamic, L. A., & Huberman, B. A. (2007). The dynamics of viral marketing. *ACM Transactions on the Web, 1*(1), article 5. [https://doi.org/10.1145/1232722.1232727](https://doi.org/10.1145/1232722.1232727)"
+        url: "https://doi.org/10.1145/1232722.1232727"
+        note: "Travail pionnier sur les cascades de recommandations et leur faible profondeur moyenne."
+      - reference: "Salganik, M. J., Dodds, P. S., & Watts, D. J. (2006). Experimental study of inequality and unpredictability in an artificial cultural market. *Science, 311*(5762), 854–856. [https://doi.org/10.1126/science.1121066](https://doi.org/10.1126/science.1121066)"
+        url: "https://doi.org/10.1126/science.1121066"
+        note: "Expérience sur la preuve sociale, l’inégalité de popularité et l’imprévisibilité du succès."
+      - reference: "Shao, C., Ciampaglia, G. L., Varol, O., Yang, K.-C., Flammini, A., & Menczer, F. (2018). The spread of low-credibility content by social bots. *Nature Communications, 9*, article 4787. [https://doi.org/10.1038/s41467-018-06930-7](https://doi.org/10.1038/s41467-018-06930-7)"
+        url: "https://doi.org/10.1038/s41467-018-06930-7"
+        note: "Montre le rôle disproportionné des bots dans les premières phases d’amplification de sources peu fiables."
+      - reference: "Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. [https://doi.org/10.1126/science.aap9559](https://doi.org/10.1126/science.aap9559)"
+        url: "https://doi.org/10.1126/science.aap9559"
+        note: "Contrepoint important sur le rôle des comportements humains dans la diffusion des informations fausses."
+      - reference: "Wu, S., Hofman, J. M., Mason, W. A., & Watts, D. J. (2011). Who says what to whom on Twitter. Dans *Proceedings of the 20th International Conference on World Wide Web* (p. 705–714). [https://doi.org/10.1145/1963405.1963504](https://doi.org/10.1145/1963405.1963504)"
+        url: "https://doi.org/10.1145/1963405.1963504"
+        note: "Pour la concentration de la production et de la circulation autour d’utilisateurs très visibles."
+
+  - id: "bulles-chambres-echo-polarisation"
+    titre: "Réseaux sociaux numériques"
+    partie: "5/5"
+    sous-titre: "Bulles, chambres d’écho et polarisation"
+    slides:
+      - titre: "Réseaux sociaux numériques — Bulles, chambres d’écho et polarisation"
+        url: "/slides/social-networks-polarization/index.html"
+        integration: "iframe"
+
+    resume: |
+      L’image de la bulle rassemble plusieurs phénomènes qu’il faut distinguer.
+      Ce chapitre sépare les choix individuels, la structure des relations, la
+      personnalisation et le renforcement collectif, puis examine dans quelles
+      conditions ces mécanismes contribuent à la polarisation.
+
+      ## Cinq mécanismes distincts
+
+      Biais de confirmation, exposition sélective, homophilie, bulle de filtres
+      et chambre d’écho ne sont pas synonymes. Ils portent respectivement sur le
+      traitement de l’information, le choix des sources, les relations, la
+      personnalisation et le renforcement des convictions dans un groupe.
+
+      ## Une plateforme ne résume pas la vie informationnelle
+
+      Observer un fil homogène ne permet pas d’en identifier immédiatement la
+      cause. Les individus rencontrent aussi des informations par les médias,
+      les moteurs de recherche, les conversations et d’autres plateformes. Une
+      étude centrée sur un service n’observe qu’une partie de cet environnement.
+
+      ## Plusieurs formes de polarisation
+
+      La séparation des publics, l’éloignement idéologique et l’hostilité envers
+      l’autre camp constituent des phénomènes distincts. Des contenus opposés
+      peuvent capter l’attention et accroître le conflit sans déplacer de la même
+      manière les opinions politiques.
+
+      ## De la corrélation à la causalité
+
+      Les personnes déjà polarisées peuvent rechercher davantage de contenus
+      politiques. Pour isoler l’effet du classement, les expériences comparent
+      des groupes exposés à des fils différents. Leurs conclusions restent liées
+      à une intervention, une population, une durée et un indicateur précis.
+
+      ## Des effets réels et conditionnels
+
+      Certaines interventions modifient l’exposition ou l’hostilité ; d’autres
+      ne détectent pas de changement d’attitude. Voir le camp adverse ne modère
+      pas automatiquement : la forme et le contexte de la rencontre comptent.
+      Les algorithmes transforment des probabilités de rencontre sans exercer une
+      toute-puissance uniforme sur les opinions.
+
+      ### À retenir
+
+      - Un environnement homogène peut résulter de plusieurs mécanismes combinés.
+      - Bulle de filtres et chambre d’écho désignent des processus différents.
+      - Exposition, opinion et hostilité doivent être mesurées séparément.
+      - Une corrélation entre usages et polarisation ne suffit pas à établir un effet causal.
+      - Les effets observés varient selon les plateformes, les publics et les interventions.
+
+    bibliographie:
+      - reference: "Bail, C. A., et al. (2018). Exposure to opposing views on social media can increase political polarization. *Proceedings of the National Academy of Sciences, 115*(37), 9216–9221. [https://doi.org/10.1073/pnas.1804840115](https://doi.org/10.1073/pnas.1804840115)"
+        url: "https://doi.org/10.1073/pnas.1804840115"
+        note: "Expérience montrant que l’exposition au camp opposé ne produit pas automatiquement une modération."
+      - reference: "Bakshy, E., Messing, S., & Adamic, L. A. (2015). Exposure to ideologically diverse news and opinion on Facebook. *Science, 348*(6239), 1130–1132. [https://doi.org/10.1126/science.aaa1160](https://doi.org/10.1126/science.aaa1160)"
+        url: "https://doi.org/10.1126/science.aaa1160"
+        note: "Pour distinguer les effets des choix individuels et ceux du classement sur la diversité idéologique rencontrée."
+      - reference: "Dubois, E., & Blank, G. (2018). The echo chamber is overstated: The moderating effect of political interest and diverse media. *Information, Communication & Society, 21*(5), 729–745. [https://doi.org/10.1080/1369118X.2018.1428656](https://doi.org/10.1080/1369118X.2018.1428656)"
+        url: "https://doi.org/10.1080/1369118X.2018.1428656"
+        note: "Replace les chambres d’écho dans un environnement médiatique plus large que la seule plateforme."
+      - reference: "Flaxman, S., Goel, S., & Rao, J. M. (2016). Filter bubbles, echo chambers, and online news consumption. *Public Opinion Quarterly, 80*(S1), 298–320. [https://doi.org/10.1093/poq/nfw006](https://doi.org/10.1093/poq/nfw006)"
+        url: "https://doi.org/10.1093/poq/nfw006"
+        note: "Analyse de la consommation d’actualités et des effets différenciés des canaux d’accès."
+      - reference: "Gauthier, G., Hodler, R., Widmer, P., & Zhuravskaya, E. (2026). The political effects of X’s feed algorithm. *Nature, 652*(8109), 416–423. [https://doi.org/10.1038/s41586-026-10098-2](https://doi.org/10.1038/s41586-026-10098-2)"
+        url: "https://doi.org/10.1038/s41586-026-10098-2"
+        note: "Expérience comparant fil algorithmique et fil chronologique sur X."
+      - reference: "González-Bailón, S., et al. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. [https://doi.org/10.1126/science.ade7138](https://doi.org/10.1126/science.ade7138)"
+        url: "https://doi.org/10.1126/science.ade7138"
+        note: "Mesure la ségrégation idéologique à plusieurs étapes de l’exposition à l’information politique."
+      - reference: "Guess, A. M., et al. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. [https://doi.org/10.1126/science.abp9364](https://doi.org/10.1126/science.abp9364)"
+        url: "https://doi.org/10.1126/science.abp9364"
+        note: "Expérience sur les effets des fils Facebook et Instagram durant la campagne américaine de 2020."
+      - reference: "Hart, W., et al. (2009). Feeling validated versus being correct: A meta-analysis of selective exposure to information. *Psychological Bulletin, 135*(4), 555–588. [https://doi.org/10.1037/a0015701](https://doi.org/10.1037/a0015701)"
+        url: "https://doi.org/10.1037/a0015701"
+        note: "Méta-analyse sur l’exposition sélective aux informations compatibles avec ses positions."
+      - reference: "Milli, S., et al. (2025). Engagement, user satisfaction, and the amplification of divisive content on social media. *PNAS Nexus, 4*(3), pgaf062. [https://doi.org/10.1093/pnasnexus/pgaf062](https://doi.org/10.1093/pnasnexus/pgaf062)"
+        url: "https://doi.org/10.1093/pnasnexus/pgaf062"
+        note: "Distingue engagement observé, satisfaction déclarée et amplification des contenus clivants."
+      - reference: "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. *Review of General Psychology, 2*(2), 175–220. [https://doi.org/10.1037/1089-2680.2.2.175](https://doi.org/10.1037/1089-2680.2.2.175)"
+        url: "https://doi.org/10.1037/1089-2680.2.2.175"
+        note: "Texte de synthèse sur les différentes formes du biais de confirmation."
+      - reference: "Nyhan, B., et al. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*, 137–144. [https://doi.org/10.1038/s41586-023-06297-w](https://doi.org/10.1038/s41586-023-06297-w)"
+        url: "https://doi.org/10.1038/s41586-023-06297-w"
+        note: "Expérience réduisant l’exposition aux sources politiquement proches sans effet mesurable sur les attitudes étudiées."
+      - reference: "Pariser, E. (2011). *The filter bubble: What the Internet is hiding from you*. Penguin Press."
+        note: "Ouvrage qui a popularisé la notion de bulle de filtres ; à confronter aux travaux empiriques du chapitre."
+      - reference: "Piccardi, T., Saveski, M., Jia, C., Hancock, J. T., Tsai, J. L., & Bernstein, M. (2025). Reranking partisan animosity in algorithmic social media feeds alters affective polarization. *Science, 390*(6776), eadu5584. [https://doi.org/10.1126/science.adu5584](https://doi.org/10.1126/science.adu5584)"
+        url: "https://doi.org/10.1126/science.adu5584"
+        note: "Expérience sur le lien causal entre classement de contenus hostiles et polarisation affective."
+      - reference: "Rathje, S., Van Bavel, J. J., & van der Linden, S. (2021). Out-group animosity drives engagement on social media. *Proceedings of the National Academy of Sciences, 118*(26), e2024292118. [https://doi.org/10.1073/pnas.2024292118](https://doi.org/10.1073/pnas.2024292118)"
+        url: "https://doi.org/10.1073/pnas.2024292118"
+        note: "Étude observationnelle sur l’association entre hostilité envers l’autre camp et engagement."
+
+  - id: "interpassivite-des-foules"
+    titre: "L’interpassivité des foules"
+    sous-titre: "Réseaux sociaux, croyance déléguée et désubjectivation"
+
+    resume: |
+      Les réseaux sociaux donnent à voir un flot continu de textes, d’images
+      et de vidéos. Ce chapitre part de cette prolifération pour discuter
+      une hypothèse : nous ne fréquentons pas seulement ces contenus pour
+      nous exprimer ou découvrir ce que les autres ont à dire. Le flux peut
+      aussi nous soulager d’avoir à parler, à choisir et à prendre position
+      en notre nom propre. Le concept d’**interpassivité** permet d’analyser
+      cette délégation de la passivité, du plaisir et de la croyance.
+
+      ## De la promesse expressive à la parole normalisée
+
+      L’imaginaire des premiers réseaux numériques associe la publication
+      à l’expression de soi : chacun pourrait faire entendre une voix
+      singulière sans passer par les filtres des médias traditionnels.
+      Pourtant, l’activité et la visibilité restent très inégalement
+      réparties. Une minorité produit l’essentiel des contenus tandis que
+      la majorité observe, fait défiler, aime ou repartage.
+
+      Les contenus générés par intelligence artificielle rendent cette
+      contradiction particulièrement visible. Leur capacité à reproduire
+      des formes expressives familières invite à retourner la question :
+      si une machine peut imiter aussi facilement les publications humaines,
+      est-ce aussi parce que celles-ci obéissent déjà à des formats répétitifs,
+      prévisibles et statistiquement reconnaissables ?
+
+      ## Publics imaginés, context collapse et recommandation
+
+      Publier suppose d’anticiper un public. À la suite d’Erving Goffman,
+      la présentation de soi peut être comprise comme un ajustement aux
+      attentes d’une situation. Sur les réseaux sociaux, les amis, la famille,
+      les collègues, les inconnus ou de futurs employeurs se rencontrent
+      dans un même espace de visibilité. Ce **context collapse** fragilise
+      les codes propres à chaque relation et favorise des énoncés génériques,
+      capables de circuler entre des publics hétérogènes.
+
+      Les systèmes de recommandation ajoutent une seconde audience :
+      l’algorithme. Les utilisateurs apprennent les formats auxquels la
+      plateforme accorde de la visibilité, puis les reproduisent. Ces
+      ajustements peuvent former des boucles dans lesquelles les contenus
+      déjà dominants deviennent plus visibles et plus souvent imités.
+
+      ## L’interpassivité : déléguer la passivité et le plaisir
+
+      Robert Pfaller appelle interpassivité la situation dans laquelle
+      nous confions à un autre — personne, groupe, objet ou machine — le soin
+      de consommer, de croire, de rire ou de jouir à notre place. Le chœur
+      de la tragédie grecque éprouve les émotions du public ; les rires
+      enregistrés indiquent qu’une émission est drôle ; le magnétoscope
+      regarde symboliquement les films que son propriétaire n’aura peut-être
+      jamais le temps de voir ; le moulin à prières prie pour celui qui
+      l’actionne.
+
+      Le doom-scrolling peut être relu depuis cette idée. Les autres vivent,
+      parlent, s’indignent ou se divertissent devant nous. Leurs contenus
+      nous permettent de participer à ces expériences tout en restant dans
+      la position du spectateur. Le plaisir ne disparaît pas : il est pris
+      en charge ailleurs, et cette délégation peut elle-même procurer
+      une satisfaction.
+
+      ## Être sujet face au flux
+
+      Dans une perspective lacanienne, le sujet apparaît lorsque les mots,
+      les habitudes et les normes ne suffisent plus à dicter une réponse.
+      Parler à la première personne implique alors de choisir sans garantie,
+      d’accepter l’ambivalence et de risquer le malentendu. Cette position
+      est exigeante, d’autant que le surmoi contemporain ne commande pas
+      seulement de respecter des interdits : il exige aussi d’être soi-même,
+      de s’accomplir et d’afficher une vie singulière.
+
+      Le flux algorithmique atténue provisoirement cette difficulté. Il
+      remplit le silence par un prochain contenu, propose des affects et
+      des opinions déjà formulés, puis permet d’y adhérer par un geste
+      minimal. Un like, un partage, un emoji ou un slogan donnent l’apparence
+      d’une prise de position sans exiger le même travail de formulation
+      qu’une parole assumée.
+
+      ## L’observateur naïf et la croyance des autres
+
+      Pfaller nomme **observateur naïf** l’instance extérieure qui se satisfait
+      des apparences. Un rituel accompli, un signe partagé ou une réaction
+      visible peuvent attester que nous avons cru, agi ou pris position,
+      quelles que soient nos intentions. Cette mise en scène permet de
+      contourner momentanément le jugement plus exigeant du surmoi.
+
+      Personne n’est pourtant nécessairement dupe. La croyance peut être
+      déléguée à un « on » impersonnel : je fais comme si j’y croyais parce
+      que les autres semblent y croire, tandis qu’ils agissent peut-être
+      pour la même raison. Compteurs, tendances, commentaires et classements
+      donnent une forme visible à cette croyance supposée.
+
+      ## Observer la foule s’observer
+
+      Les plateformes ne montrent pas seulement des expériences ; elles
+      montrent aussi les réactions collectives à ces expériences. Chacun
+      observe la foule regarder, aimer, commenter et partager. La foule
+      numérique peut ainsi être comprise comme un ensemble d’individus qui
+      renoncent temporairement à parler en leur nom pour se loger dans une
+      parole déjà en circulation.
+
+      Cette hypothèse ne réduit pas tout usage des réseaux sociaux à la
+      passivité. Elle fournit un outil pour interroger le soulagement que
+      peut procurer la délégation : que gagnons-nous lorsque d’autres parlent,
+      croient ou éprouvent à notre place, et que perdons-nous lorsque le flux
+      occupe les espaces de silence où une parole singulière pourrait surgir ?
+
+      ### À retenir
+
+      - Distinguer expression de soi, présentation de soi et normalisation
+        des formes expressives.
+      - Définir l’interpassivité comme une délégation de la passivité,
+        du plaisir ou de la croyance.
+      - Relier le context collapse et les systèmes de recommandation à
+        l’homogénéisation possible des contenus.
+      - Comprendre comment le flux et les réactions préformatées peuvent
+        dispenser provisoirement de parler à la première personne.
+      - Analyser les métriques sociales comme une représentation de la foule
+        en train de s’observer et de valider ses propres signes.
+
+    slides:
+      - titre: "L’interpassivité des foules"
+        url: "/slides/interpassivity/index.html"
+        integration: "iframe"
+
+    bibliographie:
+      - reference: "Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (pp. 610–623). Association for Computing Machinery. [https://doi.org/10.1145/3442188.3445922](https://doi.org/10.1145/3442188.3445922)"
+        url: "https://doi.org/10.1145/3442188.3445922"
+        note: "Pour situer la métaphore du perroquet stochastique et les limites des grands modèles de langage."
+      - reference: "Chaney, A. J. B., Stewart, B. M., & Engelhardt, B. E. (2018). How algorithmic confounding in recommendation systems increases homogeneity and decreases utility. In *Proceedings of the 12th ACM Conference on Recommender Systems* (pp. 224–232). Association for Computing Machinery. [https://doi.org/10.1145/3240323.3240370](https://doi.org/10.1145/3240323.3240370)"
+        url: "https://doi.org/10.1145/3240323.3240370"
+        note: "Étude des boucles de rétroaction entre recommandations et comportements des utilisateurs."
+      - reference: "Foucault, M. (1971). *L’ordre du discours*. Gallimard."
+        note: "Pour interroger la place du sujet dans une parole qui le précède et l’excède."
+      - reference: "Goffman, E. (1973). *La mise en scène de la vie quotidienne. Tome 1 : La présentation de soi* (A. Accardo, trad.). Les Éditions de Minuit. (Ouvrage original publié en 1959)"
+        note: "Lecture de référence sur la présentation de soi et l’ajustement aux situations sociales."
+      - reference: "Lacan, J. (1986). *Le séminaire. Livre VII : L’éthique de la psychanalyse, 1959–1960* (J.-A. Miller, éd.). Éditions du Seuil."
+        note: "Pour approfondir les notions de sujet, de manque, de désir et de jouissance mobilisées dans le chapitre."
+      - reference: "Marwick, A. E., & boyd, d. (2011). I tweet honestly, I tweet passionately: Twitter users, context collapse, and the imagined audience. *New Media & Society, 13*(1), 114–133. [https://doi.org/10.1177/1461444810365313](https://doi.org/10.1177/1461444810365313)"
+        url: "https://doi.org/10.1177/1461444810365313"
+        note: "Article central sur les publics imaginés et l’effondrement des contextes sur Twitter."
+      - reference: "Nielsen, J. (2006, 8 octobre). *The 90–9–1 rule for participation inequality in social media and online communities*. Nielsen Norman Group. [https://www.nngroup.com/articles/participation-inequality/](https://www.nngroup.com/articles/participation-inequality/)"
+        url: "https://www.nngroup.com/articles/participation-inequality/"
+        note: "Point de départ à discuter pour étudier l’inégalité de participation dans les communautés en ligne."
+      - reference: "Pfaller, R. (2017). *Interpassivity: The aesthetics of delegated enjoyment*. Edinburgh University Press. [https://edinburghuniversitypress.com/book-interpassivity.html](https://edinburghuniversitypress.com/book-interpassivity.html)"
+        url: "https://edinburghuniversitypress.com/book-interpassivity.html"
+        note: "Lecture centrale : définition de l’interpassivité, délégation du plaisir, rituel et observateur naïf."
+      - reference: "Žižek, S. (2006). *How to read Lacan*. Granta Books. [https://granta.com/products/how-to-read-lacan/](https://granta.com/products/how-to-read-lacan/)"
+        url: "https://granta.com/products/how-to-read-lacan/"
+        note: "Lire en particulier le chapitre consacré au sujet interpassif et à la croyance déléguée."

@@ -2,7 +2,7 @@
   import { Heading, Tabs } from "@dg/ui";
   import CourseHeading from "$lib/CourseHeading.svelte";
   import { browser } from "$app/environment";
-  import ChapterPicker from "$lib/ChapterPicker.svelte";
+  import ChapterNavigation from "$lib/ChapterNavigation.svelte";
   import { page } from "$app/state";
   import { selectChapter } from "$lib/course-content.js";
   import CourseOverview from "$lib/CourseOverview.svelte";
@@ -54,69 +54,16 @@
 
 <svelte:head><title>{course.title} — Olivier Sarrouy</title></svelte:head>
 
-<Heading title={course.title} crosses="both" />
+<Heading title={course.title} metadata={course.level} crosses="both" />
 
 <div class="workspace framed crossed">
-  <aside class="sidebar" aria-label="Chapitres du cours">
-    <div class="sidebar-inner">
-      <a
-        class="overview-link"
-        href={presentationHref}
-        aria-current={view !== "chapitres" ? "page" : undefined}
-        data-sveltekit-noscroll
-      >
-        <span class="overview-symbol" aria-hidden="true">↗</span><span
-          >Vue d’ensemble<small>Présentation · Bibliographie générale</small
-          ></span
-        >
-      </a>
-      <div class="sidebar-heading">
-        <span>Chapitres</span><span
-          >{course.level} / {String(course.sections.length).padStart(
-            2,
-            "0",
-          )}</span
-        >
-      </div>
-      <nav class="chapters" aria-label="Choisir un chapitre">
-        {#each course.sections as section, index (section)}
-          <a
-            href={resourceHref(section, tab)}
-            aria-current={view === "chapitres" && selected?.id === section.id
-              ? "page"
-              : undefined}
-            data-sveltekit-noscroll
-          >
-            <span class="number">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <span class="name">
-              <span class="title-line">
-                <span>{section.title}</span>
-                {#if section.part}<span class="part">{section.part}</span>{/if}
-              </span>
-              {#if section.subtitle}
-                <span class="metadata">{section.subtitle}</span>
-              {/if}
-            </span>
-            <span class="indicator" aria-hidden="true">↗</span>
-          </a>
-        {/each}
-      </nav>
-      <div class="mobile-chapters">
-        <ChapterPicker
-          value={view === "chapitres" ? selected?.id : ""}
-          items={course.sections.map((section) => ({
-            value: section.id,
-            label: section.title,
-            part: section.part,
-            subtitle: section.subtitle,
-            href: resourceHref(section, tab),
-          }))}
-        />
-      </div>
-    </div>
-  </aside>
+  <ChapterNavigation
+    chapters={course.sections}
+    level={course.level}
+    value={view === "chapitres" ? selected?.id : ""}
+    overviewHref={presentationHref}
+    chapterHref={(section) => resourceHref(section, tab)}
+  />
 
   <div class="resources">
     {#if view !== "chapitres"}
@@ -171,7 +118,6 @@
               '0',
             )} / {String(course.sections.length).padStart(2, '0')}"
             title={selected.title}
-            subtitle={selected.subtitle}
             part={selected.part}
           />
           {#if tab === "resume"}
@@ -217,20 +163,7 @@
         </section>
       {:else}
         <section class="reading" aria-labelledby="chapter-reading-title">
-          <CourseHeading
-            id="chapter-reading-title"
-            label="Chapitre {String(chapterIndex + 1).padStart(2, '0')}"
-            title="Bibliographie"
-          />
-          <p class="reading-name">
-            <span class="title-line">
-              <span>{selected.title}</span>
-              {#if selected.part}<span class="part">{selected.part}</span>{/if}
-            </span>
-            {#if selected.subtitle}
-              <span class="reading-subtitle">{selected.subtitle}</span>
-            {/if}
-          </p>
+          <CourseHeading id="chapter-reading-title" title="Bibliographie" />
           {#if selected.bibliography?.length}
             <Bibliography references={selected.bibliography} />
           {:else}
@@ -260,10 +193,6 @@
 <style>
   .eyebrow,
   .badge,
-  .overview-link,
-  .sidebar-heading,
-  .number,
-  .indicator,
   .slide-number,
   .slide-icon,
   .slide-footer,
@@ -310,19 +239,6 @@
     min-height: 650px;
   }
 
-  .sidebar {
-    position: relative;
-    z-index: 4; /* Selection line above the frame, below the crosses (z-index: 5). */
-    border-right: 1px solid var(--border-prominent);
-    min-width: 0;
-  }
-
-  .sidebar-inner {
-    position: sticky;
-    top: 20px;
-    padding: var(--space-5) 0;
-  }
-
   .supports a {
     color: var(--text-prominent);
     text-decoration: underline;
@@ -334,151 +250,8 @@
     color: var(--text-prominent);
   }
 
-  .overview-link,
-  .chapters a {
-    position: relative;
-  }
-
-  .overview-link[aria-current]::before,
-  .chapters a[aria-current]::before {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: -4px; /* Offset by 2 px and compensate for the transparent border. */
-    width: 3px;
-    background: var(--accent);
-    pointer-events: none;
-  }
-
-  .overview-link {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    padding: 20px 22px;
-    margin: -24px 0 26px;
-    border-bottom: 1px solid var(--border-prominent);
-    border-left: 2px solid transparent;
-    font-size: var(--font-size-sm);
-  }
-
-  .overview-link[aria-current] {
-    background: var(--background-prominent);
-    color: var(--text-prominent);
-  }
-
-  .overview-link:hover {
-    background: var(--background-subtle);
-  }
-
-  .overview-symbol {
-    color: var(--accent);
-  }
-
-  .overview-link small {
-    display: block;
-    margin-top: 9px;
-    font-family: var(--font-sans);
-    font-weight: var(--body-weight);
-    font-size: 12px;
-    line-height: 1.5;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-
-  .sidebar-heading {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-3);
-    padding: 0 var(--space-5) 22px;
-    font-size: var(--font-size-xs);
-  }
-
   .pagination > span {
     color: var(--text-primary);
-  }
-
-  .sidebar-heading > span:last-child {
-    color: var(--accent);
-  }
-
-  .chapters a {
-    display: grid;
-    grid-template-columns: 20px minmax(0, 1fr) 10px;
-    gap: var(--space-3);
-    align-items: start;
-    padding: 21px 22px;
-    border-top: 1px solid var(--border);
-    border-left: 2px solid transparent;
-  }
-
-  .chapters a:last-child {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .chapters a:hover {
-    background: var(--background-subtle);
-  }
-
-  .chapters a[aria-current] {
-    background: var(--background-prominent);
-  }
-
-  .number {
-    font-size: var(--font-size-sm);
-    color: var(--text-primary);
-    padding-top: 5px;
-  }
-
-  .name {
-    font-family: var(--font-serif);
-    font-size: 22px;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: 0;
-    line-height: 1.2;
-  }
-
-  .title-line {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-
-  .part {
-    flex: none;
-    color: var(--accent);
-    font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
-    font-weight: var(--ui-weight);
-    letter-spacing: 0.04em;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .indicator {
-    font-size: var(--font-size-sm);
-    color: var(--accent);
-    opacity: 0;
-    padding-top: 5px;
-  }
-
-  .name .metadata {
-    display: block;
-    margin-top: var(--space-2);
-    color: var(--accent);
-    overflow-wrap: anywhere;
-  }
-
-  .chapters a[aria-current] .indicator {
-    opacity: 1;
-  }
-
-  .chapters a[aria-current] .number {
-    color: var(--accent);
-  }
-
-  .mobile-chapters {
-    display: none;
   }
 
   .resources {
@@ -565,25 +338,6 @@
     font-size: var(--font-size-sm);
   }
 
-  .reading-name {
-    margin-bottom: 28px;
-    font-family: var(--font-serif);
-    font-size: 26px;
-    line-height: 1.3;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-
-  .reading-subtitle {
-    display: block;
-    margin-top: 9px;
-    color: var(--text-primary);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    line-height: 1.5;
-  }
-
   .reading-empty {
     padding: 26px;
     border: 1px solid var(--border-prominent);
@@ -605,11 +359,6 @@
       grid-template-columns: 240px minmax(0, 1fr);
     }
 
-    .chapters a {
-      padding-inline: var(--space-4);
-      gap: var(--space-2);
-    }
-
     .content,
     .reading {
       padding: var(--space-5);
@@ -620,30 +369,6 @@
     .workspace {
       display: block;
       min-height: 0;
-    }
-
-    .sidebar {
-      border-right: 0;
-      border-bottom: 1px solid var(--border-prominent);
-    }
-
-    .sidebar-inner {
-      position: static;
-      padding: var(--space-4) 20px;
-    }
-
-    .overview-link {
-      margin: -16px -20px 18px;
-      padding: 20px;
-    }
-
-    .sidebar-heading,
-    .chapters {
-      display: none;
-    }
-
-    .mobile-chapters {
-      display: block;
     }
 
     .content,

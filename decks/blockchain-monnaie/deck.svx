@@ -1,0 +1,192 @@
+---
+title: Blockchain et crypto-monnaies — Monnaie
+theme: gallery
+---
+
+<!-- slide: id="blockchain-028-money-money-money" title="money, money, money" layout="center" -->
+## money, money, money
+
+--- notes
+
+Reste néanmoins une question : d’où le bitcoin tire-t-il sa valeur ? Qu’est-ce qui en fait une monnaie ou du moins un actif financier ?
+
+
+
+↦ À vrai dire on est en droit de se poser la question pour toutes les autres monnaies et notamment pour les monnaies dites « fiduciaires » - les billets de banque.
+
+↦ Expliciter le terme de monnaie fiduciaire : du latin *fidus*, la confiance.
+
+↦ Il peut être utile, pour situer la reste du cours, de revenir brièvement sur les fonctions et l’histoire de la monnaie.
+
+↦ On identifie usuellement trois fonctions fondamentales de la monnaie.
+
+---
+<!-- slide: id="blockchain-029-unite-de-compte" title="Unité de compte" layout="center" -->
+## Unité de compte
+## Instrument d’échange
+## Réserve de valeur
+
+--- notes
+
+La monnaie sert d’abord à compter. Elle fournit l’étalon commun qui permet de mesurer, comparer et exprimer la valeur des biens, des services et des dettes.
+
+Sans elle, chaque échange exigerait une évaluation directe : combien de poulets pour une vache ? combien de sacs de blé pour une paire de chaussures ? La monnaie met fin à ce désordre en imposant un langage unique de la valeur.
+
+Cette simplification est décisive. Sans unité de compte, aucune économie complexe ne peut fonctionner. Mais elle n’est pas neutre. Elle opère un effacement : derrière le chiffre monétaire disparaissent les conditions de production, les rapports sociaux et les inégalités qui déterminent réellement la valeur.
+
+C’est ce que Marx nomme le fétichisme de la marchandise. La monnaie fait croire que la valeur est contenue dans les choses elles-mêmes, comme une propriété naturelle, alors qu’elle n’est que le produit de rapports sociaux organisés par le marché et l’industrie.
+
+Quand je dis qu’une table « vaut 200 euros », je ne vois plus le travail des ouvriers, les flux logistiques, les rapports de force entre capital et travail. Tout se réduit à un chiffre, apparemment objectif, qui semble sortir de l’objet lui-même.
+
+Cette illusion est d’autant plus puissante qu’elle paraît aller de soi. La monnaie transforme des rapports de pouvoir en rapports de choses. Elle naturalise le prix. Elle fait oublier que la valeur n’a rien à voir avec l’utilité. L’air et l’eau sont plus essentiels que des voitures de luxe, mais l’air est gratuit – pour l’instant –, tandis qu’une Lamborghini coûte plusieurs décennies de salaire moyen.
+
+Mais l’unité de compte n’est pas seulement une simplification et une illusion : elle est aussi une incitation. En réduisant toute réalité à un chiffre, elle invite à comparer, arbitrer, calculer. Elle rend possibles les bilans comptables, les prix de revient, les calculs de marge, la maximisation du profit. Elle ne se contente pas d’offrir une mesure : elle façonne un type de rationalité économique, fondée sur la mise en équivalence et l’optimisation.
+
+// C’est précisément cette rationalité qu’analyse Foucault : la monnaie comme unité de compte ouvre la voie à une forme de gouvernementalité « par les nombres ». Elle rend possible la comptabilité d’entreprise, les statistiques d’État, la gestion budgétaire des ménages. Elle équipe les institutions pour gouverner les populations en chiffrant leurs besoins, leurs ressources, leurs comportements. En donnant à l’économie un langage numérique, elle transforme aussi la politique : gouverner, c’est alors gérer des équilibres comptables, arbitrer des budgets, administrer des flux mesurés dans une unité commune.
+
+L’unité de compte accomplit ainsi une double opération : elle rend le monde des échanges intelligible en le ramenant à une mesure commune, mais elle efface en même temps la réalité sociale de cette mesure. Elle est à la fois condition de possibilité et instrument d’occultation.
+
+
+
+**Instrument d’échange** (ou intermédiaire des échanges)
+
+Il existe, chez les économistes, une fable. Cette fable raconte l’histoire d’une économie pré-monétaire dont les échanges étaient réglés par le troc. Le troc, nous raconte cette fable, y présentait un inconvénient majeur : réclamer une certaine coïncidence des besoins.
+
+Imaginons que je dispose de pain et que je cherche à en échanger tout ou partie contre des oeufs. Il me faut alors trouver, dans le petit entre-soi de mon village, une personne possédant des oeufs qui soit simultanément disposée à les échanger contre du pain. Or cette coïncidence est rare - presqu’impossible.
+
+C’est en réponse ce délicat problème, nous racontent les économistes, que serait née la monnaie. Qu’importe, dès lors, que celui qui dispose des oeufs que je convoite, désire en retour le pain que je possède. L’échange se soldera en monnaie, et de cette monnaie, il fera bien ce qu’il souhaite : acheter du pain ou une vache ou du bois ; ou ne rien acheter et épargner cet argent pour, peut-être un jour, n’avoir plus à se soucier de ses poules.
+
+Cette fable est évidemment un mythe. Nous verrons plus loin que le troc n’a jamais constitué un instrument économique déterminant. Nous verrons aussi que, si la diffusion à grande-échelle de la monnaie répond bien à un problème pratique, ce n’est pas à celui de la coïncidence des besoins, mais à la défiance des populations soumises aux premiers grands empires et à la volonté de ces empires de s’approprier, malgré tout, leurs ressources.
+
+Le problème de la coïncidence des besoin constitue donc moins un problème pratique qu’un argument politique. Il permet de naturaliser ou d’universaliser ce qui constitue avant tout une contingence historique : le déploiement de la monnaie comme équivalent général, comme mesure commune, comme secret universel de ce qui vaut.
+
+L’énigme de l’économie, comme mode d’organisation sociale, ne tient pas toute entière, en effet, dans l’existence d’un instrument d’échange universel. L’existence d’un équivalent général ne constitue que l’origine analytique d’un monde dont l’ensemble des rapports sociaux est soumis à l’ordre économique.
+
+Comment séparer, par exemple, ce qui s’échange et ce qui ne s’échange pas, ce qui vaut et ce qui ne vaut pas, ce qui compte et ce qui ne compte pas. Ou encore, comment dissocier ce qui relève de l’économie et ce qui doit s’y soustraire : l’amour, la sexualité, le beau, etc. Comment, enfin, hiérarchiser les Hommes et les choses dès lors qu’existe un équivalent général dont l’hégémonie réclame, pour s’en préserver, que certains domaines du réel y échappent ?
+
+Il serait hors de notre propos que développer ici ces questions. Gardez en tête, toutefois, que les premiers Hommes qui, il y a presque 5000 ans, ont eu l’étrange idée, en Chine, d’utiliser des coquillages comme instrument d’échange d’économique, n’avaient pas la moindre idée du cauchemar dans lequel ils précipitaient l’humanité.
+
+**Réserve de valeur**
+La monnaie constitue, en quelque sorte, un procédé de suspension du temps - et par là, un procédé d’accumulation de la richesse.
+
+Le pouvoir économique de la monnaie, en effet, ne s’évanouit pas dans le présent. L’argent n’a pas à être dépensé immédiatement. Il peut être stocké - et donc accumulé - pour un usage futur.
+
+Il importe, pour y parvenir, que la valeur d’une monnaie soit relativement stable dans le temps - et que l’inflation en soit donc controlée. Il importe également que la confiance dans cette monnaie soit elle aussi stable dans le temps - ce qui réclame, au passage, une forme de stabilité politique minimale.
+
+Ex. L’effondrement de l’Empire romain d’Occident a conduit, pendant plusieurs siècles, à une fragmentation des espaces politiques et monétaires européens, affectant durablement leur économie. En l’absence d’une autorité centralisée, il n’existait plus en Occident de monnaie universellement reconnue et adossée à une structure politique stable, contrairement à l’époque impériale où le *denier* puis le *solidus* avaient servi de référence commune. Ce hiatus historique a favorisé le développement d’instruments de crédit et de créances de dette, souvent garantis par le réseau transnational de l’Église et des grandes foires marchandes, prélude lointain à l’invention du papier-monnaie moderne.
+
+
+Cette capacité de la monnaie à fonctionner comme une réserve valeur peut paraitre évidente, mais elle ne se vérifie en fait que pour peu de biens.
+
+Lorsque la richesse étaient « stockée » sous la forme de biens de consommation - et notamment de denrées alimentaires, etc. - celle-ci ne pouvait être conservée trop longtemps sans risque de se détériorer. Une telle situation présentait évidemment des écueils : l’incapacité de la richesse à être « stockée » interdisait à quiconque de se reposer sur son épargne. Mais elle constituait aussi une garantie d’égalité : à quoi bon conserver par devant soi 1000 tonnes de viandes qui seront perdues dans une semaine - autant les partager. En matière de politique, les nécessités du monde sont souvent plus fiables que la vertu des Hommes.
+
+Il n’est pas un hasard, de ce point de vue, que la naissance des premiers États s’articule étroitement à l’extension de l’agriculture céréalière. Les céréales, contrairement à la viande ou aux fruits, se conservent sur une longue durée, se stockent facilement et se divisent aisément en unités mesurables. Le grain ne pourrit pas en quelques jours, il ne s’enfuit pas comme le bétail, il ne se mange pas d’un coup comme un fruit mûr. Il peut être conservé dans des silos, transporté en sacs, comptabilisé en rations.
+
+Cette stabilité matérielle a rendu possible une stabilité politique. Car les céréales sont non seulement stockables, mais aussi taxables. On peut prélever une part du grain produit, l’entasser dans les greniers de l’État, l’utiliser pour nourrir une armée ou financer des travaux collectifs. Mais surtout, les céréales génèrent un surplus. Une fois les besoins immédiats de subsistance couverts, il reste une part excédentaire de production qui peut être captée par une élite.
+
+C’est ce surplus qui change tout. Dans une économie de chasse ou de cueillette, l’absence de stockage limitait l’accumulation : chacun devait consommer ou partager rapidement. Mais le grain permet qu’une partie de la population cesse de produire directement pour sa subsistance. Certains peuvent « ne rien faire » au sens productif immédiat : administrer, surveiller, lever l’impôt, tenir des registres, organiser le travail des autres. Le surplus agricole rend possible l’apparition d’une classe administrative et militaire qui vit du prélèvement sur le travail paysan.
+
+L’agriculture céréalière n’a donc pas seulement nourri les populations, elle a donné à l’État la matière même de son pouvoir : une ressource durable, accumulable et mesurable, qui peut être saisie et centralisée. Le blé ou l’orge, transformés en unités comptables, deviennent le socle sur lequel reposent à la fois l’impôt, la dette et, bientôt, la monnaie. Là où la chasse, la cueillette ou l’élevage dispersaient la richesse, le grain la concentre, la rend visible, mesurable et donc gouvernable.
+
+De ce point de vue, la monnaie n’est qu’une abstraction supplémentaire : elle détache la valeur de la matière et la fait circuler au-delà des greniers. Mais le principe reste le même : organiser la richesse en surplus, la rendre mesurable, l’extraire et la redistribuer. C’est cette logique qui fonde la possibilité d’une hiérarchie durable, d’un appareil administratif, et d’un pouvoir étatique appuyé sur la dette et l’impôt.
+
+⸻
+
+
+Un met un point sur la liquidité ?
+
+liquidité désigne la capacité d’un bien à être transformé rapidement en moyen de paiement / instrument d’échange (généralement en monnaie) sans perte significative de valeur.
+
+Exemple d’un tableau qui vaut de la valeur : oui mais il faut trouver quelqu’un prêt à l’acheter. Bonne réserve de valeur, mais illiquide.
+
+Revenons maintenant, pour le comprends, sur l’histoire de la monnaie.
+
+
+L’histoire de la monnaie est souvent présentée par les économistes comme un fable. Un récit mythique assez éloigné de la réalité et ayant pour fonction principale de rationaliser *a posteriori* la nécessité historique de la monnaie.
+
+↦ La plupart des échanges économiques ont historiquement reposés sur la pratique d’une sorte de crédit informel.
+
+↦ Il ne s'agissait pas exactement de troc - comme on l'imagine souvent - car ces échanges ne reposait pas exactement sur une certaine coïncidence des besoins.
+
+↦ Ex. Aujourd'hui Alice a besoin d'une poule et Bob la dépanne. Plus tard Bob dépannera Alice de ce dont elle aura besoin : du pain, un poisson, etc.
+
+↦ Les seuls échanges impliquant quelque chose comme une « monnaie » avaient en fait lieu avec des entre des peuples se considérant comme ennemis - et ne se faisant donc pas confiance.
+
+↦ Notez, toute fois, que cette « monnaie » pouvait prendre, selon les zones culturelles, des formes tout à fait diverses : métaux rares, coquillages, sel, etc.
+
+↦ Seul importait que cette « monnaie » se conserve dans le temps et que sa quantité soit aisément mesurable.
+
+↦ La monnaie se généralisa à diverses époques et en différents lieux sous un principe toutefois commun : la naissance des empires.
+
+↦ La généralisation de la monnaie est souvent motivée, en effet, par la nécessité de fluidifier la logistique militaire.
+
+↦ Comment nourrir une armée de dizaine de milliers d'hommes en campagne ? Impossible de tout transporter, impossible d'avoir recourt au crédit informel pour acquérir le nécessaire, etc.
+
+↦ Impossible aussi de simplement voler les populations sans risquer une révolte.
+
+↦ Il devient urgent de pouvoir simplement « acheter » les ressources nécessaires aux peuples locaux.
+
+↦ Les peuples conquis sont donc « encouragés » à accepter une monnaie. Et pour les y forcer on les contraint à payer l’impôt avec cette monnaie.
+
+↦ Les premières monnaies impériales sont constituées de métaux précieux supposés garantir leur valeur.
+
+↦ Plus tard se développera le papier monnaie : d’abord en Chine à partir du 11ème siècle, puis en Europe - de manière indépendante - au 17ème et 18ème siècle.
+
+↦ Le papier monnaie s'avère plus pratique et offre aux états la capacité d’émettre de la monnaie sans forcément la consolider sur un stock de métal réel - le plus souvent pour financer des campagnes militaires.
+
+Il généralise les créances de dettes, reposant sur la confiance interpersonnelle, puis sur les églises lorsque l’état était fragmenté.
+
+↦ Aujourd’hui les principales monnaies - le Yen, le dollar, l’euro, etc. - ne sont plus indexées sur rien.
+
+↦ Elles ne tirent leur valeur que de la croyance que chacun porte en la croyance des autres dans cette valeur.
+
+↦ Je crois que les autres croiront que mon billet de 5 euros vaut .... 5 euros.
+
+↦ C'est ce qu'on appelle le **point de Schelling** ou **point focal**.
+
+↦ Ces autres n'ont, certes, pas tous le même poids. Lorsque l'« autre » est un État levant l'impôt dans une monnaie, cela lui confère un certain poids.
+
+↦ Mais on peut aussi bien se passer de ce grand autre.
+
+---
+<!-- slide: id="blockchain-030-it-might-make-sense-just-to-get-some-in-case-it-catche" title="It might make sense just to get some in case it catches on" layout="center" -->
+> It might make sense just to get some in case it catches on. If enough people think the same way, that becomes a self fulfilling prophecy. (Nakamoto, 2009)
+
+--- notes
+
+↦ Premier cas d’usage réel : achat d’une pizza pour 10.000 bitcoins en 2010.
+
+↦  Plus tard, les usages du bitcoin - et des autres crypto-monnaies - seront popularisés par des dark markets comme the Silk Road.
+
+↦  Faire un point sur le cote traçable de la chose - c’est pas du tout anonyme
+
+↦ Aujourd’hui, principalement utilisé comme une réserve de valeur. Mais les choses changent : stablecoin, Visa, etc.
+
+Faire un point sur la stratégie de Donald Trump : 300 milliards de dette de Stablecoin.
+
+Rapport à la chine, principal créancier de l’Amérique.
+
+---
+<!-- slide: id="blockchain-031-conclusion" title="Conclusion" layout="center" -->
+## Conclusion
+temporaire ... {.kicker}
+
+--- notes
+
+↦ Revenir sur la nature du geste politique de Satoshi Nakamoto : la politique sans politique.
+
+↦ Revenir sur le coup de force de Satoshi Nakamoto : remplacer un problème formel - le problème du consensus distribué - en un problème économique.
+
+↦ La manière de faire de Satoshi Nakamoto est typiquement libertarienne : elle consiste à contrôler - ou à façonner - des comportement par des inventives - des incitations - économiques.
+
+↦ Vous pouvez bien essayer de corrompre la blockchain du Bitcoin mais cela vous coutera une fortune - à ce point que ce sera en pratique impossible.
+
+↦ On peut ainsi parler d'ingénierie sociale.
+
+↦ Ce type de rationalité est omniprésent dans l'écosystème crypto.
+
+↦ Les libertariens ne renoncent pas à toute velléité de gouvernement.
+
+↦ Mais ils déléguent l'exercice du gouvernement à des mécanismes de marché et convertissent l'art de gouverner en un art de concevoir des marchés.
+
+↦ Comment organiser les marchés de telle sorte que chacun, en poursuivant son intérêt économique, assure, sans nécessairement le vouloir, le bon fonctionnement des mécanismes de gouvernement.

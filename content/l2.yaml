@@ -1,0 +1,374 @@
+titre: "Blockchain et crypto-monnaies"
+niveau: "L2"
+
+description: |
+  Ce cours étudie la blockchain comme une tentative de produire de la
+  confiance sans la confier à une institution centrale. Il part de Bitcoin,
+  de son héritage cypherpunk et de sa critique des politiques monétaires,
+  puis examine les mécanismes techniques qui permettent à un réseau distribué
+  de tenir un registre commun.
+
+  Le parcours élargit ensuite la question. Avec Ethereum, la blockchain ne
+  sert plus seulement à enregistrer des transactions : elle devient une
+  infrastructure programmable capable d’exécuter des applications. Cette
+  possibilité conduit au *mechanism design*, à la conception de dispositifs
+  qui orientent les comportements par des règles et des incitations
+  économiques.
+
+  Les DAO, les systèmes de vote et les NFT permettent enfin d’interroger les
+  formes politiques et culturelles issues de cette logique. Le cours articule
+  ainsi compréhension technique, histoire de la monnaie et analyse critique
+  des promesses de décentralisation.
+
+bibliographie:
+  - reference: "Brunton, F. (2019). *Digital cash: The unknown history of the anarchists, utopians, and technologists who created cryptocurrency*. Princeton University Press. [https://www.jstor.org/stable/j.ctvc77f9r](https://www.jstor.org/stable/j.ctvc77f9r)"
+    url: "https://www.jstor.org/stable/j.ctvc77f9r"
+
+  - reference: "De Filippi, P., & Wright, A. (2018). *Blockchain and the law: The rule of code*. Harvard University Press."
+
+  - reference: "Graeber, D. (2011). *Debt: The first 5,000 years*. Melville House."
+
+  - reference: "Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)"
+    url: "https://bitcoin.org/bitcoin.pdf"
+
+  - reference: "Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. (2016). *Bitcoin and cryptocurrency technologies: A comprehensive introduction*. Princeton University Press. [https://bitcoinbook.cs.princeton.edu/](https://bitcoinbook.cs.princeton.edu/)"
+    url: "https://bitcoinbook.cs.princeton.edu/"
+
+chapitres:
+  - id: "bitcoin"
+    titre: "Bitcoin"
+    sous-titre: "Genèse d’un projet politique"
+    slides:
+      - titre: "Bitcoin — Genèse d’un projet politique"
+        url: "/slides/blockchain-bitcoin/index.html"
+        integration: "iframe"
+
+    resume: |
+      Bitcoin apparaît en 2008 au croisement d’une innovation technique et
+      d’un projet politique. Le chapitre replace le texte de Satoshi Nakamoto
+      dans l’histoire des cypherpunks, qui voient dans la cryptographie un
+      moyen de protéger la vie privée et de soustraire certaines activités au
+      contrôle des États et des grandes institutions.
+
+      La crise des subprimes, les politiques de création monétaire et la peur
+      de l’inflation donnent à cette proposition un contexte précis. Bitcoin
+      inscrit dans son protocole une émission limitée et décroissante de la
+      monnaie. Une décision traditionnellement confiée à une banque centrale
+      devient ainsi une règle automatique que personne ne peut modifier seul.
+
+      Le projet de Nakamoto relève en ce sens d’une « politique sans
+      politique » : il ne cherche pas à conquérir une institution, mais à
+      construire une infrastructure qui prétend pouvoir s’en passer.
+
+      ### À retenir
+
+      - Bitcoin hérite des cultures cypherpunk et crypto-anarchiste.
+      - Son protocole incorpore une politique monétaire déterminée à l’avance.
+      - Une architecture technique peut matérialiser une conception du pouvoir.
+
+    bibliographie:
+      - reference: "Brunton, F. (2019). *Digital cash: The unknown history of the anarchists, utopians, and technologists who created cryptocurrency*. Princeton University Press. [https://www.jstor.org/stable/j.ctvc77f9r](https://www.jstor.org/stable/j.ctvc77f9r)"
+        url: "https://www.jstor.org/stable/j.ctvc77f9r"
+        note: "Pour replacer Bitcoin dans l’histoire longue des monnaies numériques et des utopies cryptographiques."
+
+      - reference: "Golumbia, D. (2016). *The politics of Bitcoin: Software as right-wing extremism*. University of Minnesota Press. [https://www.upress.umn.edu/9781452953816/the-politics-of-bitcoin/](https://www.upress.umn.edu/9781452953816/the-politics-of-bitcoin/)"
+        url: "https://www.upress.umn.edu/9781452953816/the-politics-of-bitcoin/"
+        note: "Une lecture critique de l’arrière-plan libertarien de Bitcoin."
+
+      - reference: "Hughes, E. (1993, 9 mars). A cypherpunk’s manifesto. [https://cypherpunks.to/](https://cypherpunks.to/)"
+        url: "https://cypherpunks.to/"
+        note: "Texte bref à lire intégralement."
+
+      - reference: "Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)"
+        url: "https://bitcoin.org/bitcoin.pdf"
+        note: "Lire l’introduction et la conclusion avant d’aborder le détail du protocole."
+
+  - id: "consensus-sans-tiers-de-confiance"
+    titre: "Blockchain"
+    sous-titre: "Produire un consensus sans tiers de confiance"
+    slides:
+      - titre: "Blockchain — Registre, consensus et preuve de travail"
+        url: "/slides/blockchain-consensus/index.html"
+        integration: "iframe"
+
+    resume: |
+      Une monnaie pair-à-pair doit permettre à des participants qui ne se
+      connaissent pas de s’accorder sur un même historique des transactions.
+      Le chapitre présente ce problème de consensus distribué à partir du
+      registre, du réseau de nœuds et de projets antérieurs comme *b-money* et
+      *Bit Gold*.
+
+      Les mineurs regroupent les transactions dans des blocs et engagent de la
+      puissance de calcul pour produire une preuve de travail. Les autres
+      nœuds vérifient facilement cette preuve et retiennent la chaîne qui
+      représente le plus de travail accumulé. Les fonctions de hachage relient
+      chaque bloc au précédent : modifier une transaction ancienne impose de
+      recalculer toute la suite de la chaîne.
+
+      La sécurité obtenue n’est pas une impossibilité formelle. Elle repose sur
+      un calcul économique : une attaque doit devenir plus coûteuse que le gain
+      qu’elle permettrait d’obtenir.
+
+      ### À retenir
+
+      - Une blockchain est un registre distribué organisé en blocs liés.
+      - La preuve de travail transforme le consensus en compétition coûteuse.
+      - La sécurité de Bitcoin combine cryptographie, probabilité et incitations.
+
+    bibliographie:
+      - reference: "Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)"
+        url: "https://bitcoin.org/bitcoin.pdf"
+        note: "Se concentrer sur les sections 2 à 5 et 11."
+
+      - reference: "Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. (2016). *Bitcoin and cryptocurrency technologies: A comprehensive introduction*. Princeton University Press. [https://bitcoinbook.cs.princeton.edu/](https://bitcoinbook.cs.princeton.edu/)"
+        url: "https://bitcoinbook.cs.princeton.edu/"
+        note: "Les premiers chapitres fournissent une introduction progressive à la cryptographie et au consensus de Bitcoin."
+
+      - reference: "Sanderson, G. (2017, 7 juillet). *But how does bitcoin actually work?* [Vidéo]. 3Blue1Brown. [https://www.3blue1brown.com/lessons/bitcoin/](https://www.3blue1brown.com/lessons/bitcoin/)"
+        url: "https://www.3blue1brown.com/lessons/bitcoin/"
+        note: "Vidéo de 25 minutes sur signatures, hachage, preuve de travail et registre partagé."
+
+  - id: "monnaie-valeur-confiance"
+    titre: "Monnaie"
+    sous-titre: "Valeur, confiance et histoire des échanges"
+    slides:
+      - titre: "Monnaie — Valeur, confiance et histoire des échanges"
+        url: "/slides/blockchain-monnaie/index.html"
+        integration: "iframe"
+
+    resume: |
+      Pourquoi Bitcoin possède-t-il une valeur ? La question oblige à revenir
+      aux monnaies ordinaires. Une monnaie sert d’unité de compte,
+      d’instrument d’échange et de réserve de valeur. Ces fonctions facilitent
+      les échanges, mais elles rendent aussi les biens, les activités et les
+      rapports sociaux comparables à partir d’une même mesure.
+
+      Le chapitre critique le récit selon lequel la monnaie aurait simplement
+      remplacé le troc. Les systèmes de crédit et de dette précèdent souvent la
+      monnaie frappée. Sa généralisation accompagne aussi la fiscalité, les
+      armées et la formation des États, qui imposent une unité dans laquelle
+      les populations doivent payer l’impôt.
+
+      Une monnaie tient finalement à une confiance distribuée : chacun
+      l’accepte parce qu’il pense que les autres l’accepteront. Bitcoin tente
+      de produire cette croyance commune sans l’adosser directement à un État.
+
+      ### À retenir
+
+      - Les fonctions de la monnaie ne suffisent pas à expliquer son histoire.
+      - Monnaie, dette, impôt et pouvoir politique se développent ensemble.
+      - La valeur dépend d’institutions et d’anticipations partagées.
+
+    bibliographie:
+      - reference: "Graeber, D. (2011). *Debt: The first 5,000 years*. Melville House."
+        note: "Lire en priorité les chapitres consacrés au mythe du troc et aux premières économies de crédit."
+
+      - reference: "La vie manifeste. (2018, 20 décembre). *Dette, 5000 ans d’histoire, David Graeber* [Podcast]. Apple Podcasts. [https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135](https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135)"
+        url: "https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135"
+        note: "Entretien introductif sur la dette, le crédit et le mythe du troc."
+
+      - reference: "McLeay, M., Radia, A., & Thomas, R. (2014). Money creation in the modern economy. *Bank of England Quarterly Bulletin, 54*(1), 14–27. [https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy)"
+        url: "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        note: "La page comprend aussi une courte vidéo sur la création monétaire par le crédit bancaire."
+
+  - id: "ethereum"
+    titre: "Ethereum"
+    sous-titre: "De la transaction au programme"
+    slides:
+      - titre: "Ethereum — Smart contracts, dApps et wallets"
+        url: "/slides/blockchain-ethereum/index.html"
+        integration: "iframe"
+
+    resume: |
+      Ethereum étend le principe du registre distribué à l’exécution de
+      programmes. Une transaction peut appeler un *smart contract*, modifier
+      son état et déclencher automatiquement des opérations. La blockchain
+      devient alors une machine partagée sur laquelle des applications
+      décentralisées peuvent être déployées.
+
+      Le chapitre compare preuve de travail et preuve d’enjeu, puis présente
+      le rôle des wallets. Une adresse publique identifie un compte ; la clé
+      privée permet d’autoriser une opération. Contrôler un wallet signifie
+      donc contrôler à la fois une identité cryptographique et les actifs qui
+      lui sont associés.
+
+      Une séquence pratique conduit les étudiants de la création d’un wallet à
+      l’obtention d’ETH de test, puis à la connexion et à l’utilisation d’une
+      dApp. Elle rend visibles les choix, autorisations et responsabilités que
+      l’interface masque habituellement.
+
+      ### À retenir
+
+      - Ethereum ajoute des programmes au registre distribué.
+      - Les smart contracts exécutent des règles partagées par le réseau.
+      - Un wallet gère des clés et signe des opérations ; il ne contient pas matériellement les jetons.
+
+    bibliographie:
+      - reference: "Buterin, V. (2014). *A next-generation smart contract and decentralized application platform*. [https://ethereum.org/whitepaper/](https://ethereum.org/whitepaper/)"
+        url: "https://ethereum.org/whitepaper/"
+        note: "Texte historique : la documentation actuelle doit compléter les parties devenues obsolètes."
+
+      - reference: "Ethereum Foundation. (2020, 18 novembre). *Code is law? Smart contracts explained* [Vidéo]. [https://ethereum.org/videos/smart-contracts-code-is-law/](https://ethereum.org/videos/smart-contracts-code-is-law/)"
+        url: "https://ethereum.org/videos/smart-contracts-code-is-law/"
+        note: "Introduction courte au fonctionnement et aux limites des smart contracts."
+
+      - reference: "Ethereum Foundation. (s. d.). *Technical intro to Ethereum*. [https://ethereum.org/developers/docs/intro-to-ethereum/](https://ethereum.org/developers/docs/intro-to-ethereum/)"
+        url: "https://ethereum.org/developers/docs/intro-to-ethereum/"
+        note: "Présentation à jour de l’EVM, de l’ETH, des transactions et des smart contracts."
+
+      - reference: "MetaMask. (s. d.). *How to install MetaMask*. [https://support.metamask.io/start/getting-started-with-metamask](https://support.metamask.io/start/getting-started-with-metamask)"
+        url: "https://support.metamask.io/start/getting-started-with-metamask"
+        note: "Utiliser uniquement le site et les boutiques officielles pendant l’atelier."
+
+  - id: "mechanism-design"
+    titre: "Mechanism design"
+    sous-titre: "Gouverner par les incitations"
+    slides:
+      - titre: "Mechanism design — Gouverner par les incitations"
+        url: "/slides/blockchain-mechanism-design/index.html"
+        integration: "iframe"
+
+    resume: |
+      Le *mechanism design* part d’un problème inverse de celui de
+      l’observation économique : il ne demande pas seulement quelles règles
+      expliquent un comportement, mais quelles règles produire pour obtenir un
+      résultat déterminé. Les intérêts individuels deviennent alors les
+      composants d’un dispositif de coordination.
+
+      Le stablecoin sert de fil conducteur. La création et la destruction de
+      monnaie, la surcollatéralisation et la liquidation doivent inciter chaque
+      participant à agir dans son propre intérêt tout en contribuant à la
+      stabilité du système. Cette régulation automatisée rapproche la
+      blockchain des boucles de rétroaction étudiées par la cybernétique.
+
+      Hayek, l’ordre spontané, le jeu de la vie, Schelling et la taxe Harberger
+      permettent ensuite d’examiner la même hypothèse à différentes échelles :
+      un ordre collectif peut émerger de règles locales, mais son résultat
+      dépend entièrement de la manière dont ces règles ont été conçues.
+
+      ### À retenir
+
+      - Une incitation traduit une finalité politique en environnement de choix.
+      - L’ordre émergent n’est pas nécessairement juste ni souhaitable.
+      - Concevoir un marché revient aussi à distribuer du pouvoir.
+
+    bibliographie:
+      - reference: "Hayek, F. A. (1945). The use of knowledge in society. *The American Economic Review, 35*(4), 519–530. [https://www.econlib.org/library/Essays/hykKnw.html](https://www.econlib.org/library/Essays/hykKnw.html)"
+        url: "https://www.econlib.org/library/Essays/hykKnw.html"
+        note: "Texte central sur les prix comme mécanisme d’agrégation d’informations dispersées."
+
+      - reference: "Posner, E. A., & Weyl, E. G. (2018). *Radical markets: Uprooting capitalism and democracy for a just society*. Princeton University Press."
+        note: "Lire le chapitre consacré à la propriété commune et à la taxe Harberger."
+
+      - reference: "Roughgarden, T. (s. d.). *Incentives in computer science* [Cours vidéo]. [https://www.timroughgarden.algorithmsilluminated.org/videos.html](https://www.timroughgarden.algorithmsilluminated.org/videos.html)"
+        url: "https://www.timroughgarden.algorithmsilluminated.org/videos.html"
+        note: "Cours progressif sur les incitations, les marchés numériques et la théorie des jeux appliquée à Bitcoin."
+
+      - reference: "Roughgarden, T., Kominers, S. D., & Garimidi, P. (2024, 11 juillet). *Conversation on incentives* [Vidéo]. a16z crypto. [https://a16zcrypto.com/posts/videos/conversation-on-incentives/](https://a16zcrypto.com/posts/videos/conversation-on-incentives/)"
+        url: "https://a16zcrypto.com/posts/videos/conversation-on-incentives/"
+        note: "Discussion accessible sur les liens entre incitations, marchés et infrastructure blockchain."
+
+  - id: "gouvernance-decentralisee"
+    titre: "Gouvernance décentralisée"
+    sous-titre: "DAO et fabrication d’une volonté collective"
+    slides:
+      - titre: "Gouvernance décentralisée — DAO et systèmes de vote"
+        url: "/slides/blockchain-gouvernance/index.html"
+        integration: "iframe"
+
+    resume: |
+      Une DAO cherche à coordonner des participants, des ressources et des
+      décisions à partir de règles publiques exécutées sur une blockchain.
+      Cette ambition déplace le problème de la souveraineté : comment produire
+      une volonté collective lorsque l’organisation ne dispose ni d’une
+      direction centrale ni d’un corps politique clairement délimité ?
+
+      Le chapitre compare plusieurs réponses. Le vote pondéré par les tokens
+      transforme la richesse en pouvoir. Le vote par personne réclame une
+      preuve d’unicité. La réputation mesure les contributions passées. Le
+      verrouillage de tokens ajoute un engagement dans le temps, tandis que le
+      vote quadratique cherche à représenter l’intensité des préférences.
+
+      La futarchie pousse cette logique plus loin en confiant aux marchés
+      prédictifs le choix des moyens. Chaque mécanisme fabrique une certaine
+      foule, sélectionne les comportements qui comptent et produit ses propres
+      exclusions.
+
+      ### À retenir
+
+      - Une DAO combine infrastructure technique et règles d’organisation.
+      - Aucun système de vote ne résout simultanément identité, égalité, compétence et engagement.
+      - Les mécanismes d’agrégation construisent la volonté collective qu’ils prétendent mesurer.
+
+    bibliographie:
+      - reference: "Buterin, V. (2014, 6 mai). DAOs, DACs, DAs and more: An incomplete terminology guide. *Ethereum Foundation Blog*. [https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide)"
+        url: "https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide"
+        note: "Texte historique utile pour distinguer application, organisation et autonomie."
+
+      - reference: "Hanson, R. (2000). *Futarchy: Vote values, but bet beliefs*. [https://mason.gmu.edu/~rhanson/futarchy.html](https://mason.gmu.edu/~rhanson/futarchy.html)"
+        url: "https://mason.gmu.edu/~rhanson/futarchy.html"
+        note: "Manifeste court présentant le principe de la futarchie."
+
+      - reference: "Ostrom, E. (2009, 8 décembre). *Beyond markets and states: Polycentric governance of complex economic systems* [Conférence]. Nobel Prize. [https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/)"
+        url: "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
+        note: "Une alternative aux oppositions simples entre marché, État et auto-organisation."
+
+      - reference: "RadicalxChange. (s. d.). *Quadratic voting*. [https://www.radicalxchange.org/wiki/quadratic-voting/](https://www.radicalxchange.org/wiki/quadratic-voting/)"
+        url: "https://www.radicalxchange.org/wiki/quadratic-voting/"
+        note: "Explication concise, exemples d’usage et prolongements critiques."
+
+  - id: "nft"
+    titre: "NFT"
+    sous-titre: "Authenticité, propriété et aura"
+    slides:
+      - titre: "NFT — Authenticité, propriété et aura"
+        url: "/slides/blockchain-nft/index.html"
+        integration: "iframe"
+
+    resume: |
+      Un NFT est un jeton doté d’une identité propre. Un smart contract en
+      organise la création, la propriété et le transfert, tandis que des
+      métadonnées le relient à une image, un son, un objet ou un droit. Le
+      contenu lui-même peut rester stocké hors de la blockchain, ce qui oblige
+      à distinguer le jeton, le fichier et les droits effectivement acquis.
+
+      CryptoPunks, CryptoKitties et les places de marché montrent comment cette
+      infrastructure fabrique de la rareté et organise une économie de la
+      collection numérique. D’autres œuvres exploitent plus directement leur
+      médium : génération *on-chain*, financement automatisé, interaction avec
+      des capteurs ou redistribution programmée des fonds.
+
+      La question finale est esthétique autant qu’économique. Face à des
+      fichiers reproductibles sans perte, le NFT tente de reconstruire une
+      provenance et un « ici et maintenant ». Il permet ainsi de relire la
+      disparition de l’aura décrite par Walter Benjamin, tout en demandant si
+      l’authenticité peut réellement être produite par un registre.
+
+      ### À retenir
+
+      - Le NFT, le fichier associé et les droits juridiques sont trois objets distincts.
+      - La blockchain peut servir de marché, de certificat ou de matériau artistique.
+      - La rareté numérique déplace la question de l’original sans la résoudre définitivement.
+
+    bibliographie:
+      - reference: "Benjamin, W. (2000). L’œuvre d’art à l’époque de sa reproductibilité technique. Dans *Œuvres III* (M. de Gandillac, R. Rochlitz, & P. Rusch, trad.). Gallimard. (Texte original publié en 1936)"
+
+      - reference: "Distributed Gallery. (s. d.). *Distributed Gallery*. [https://www.distributedgallery.com/](https://www.distributedgallery.com/)"
+        url: "https://www.distributedgallery.com/"
+        note: "Explorer les œuvres qui emploient les règles techniques, économiques et sociales de la blockchain comme matériau."
+
+      - reference: "Ferree, J., & Garcia, T. (2021, 12 juillet). NFTs and the museum, part 1: NFTs 101. *Unframed*. [https://unframed.lacma.org/2021/07/12/nfts-and-museum-part-1-nfts-101](https://unframed.lacma.org/2021/07/12/nfts-and-museum-part-1-nfts-101)"
+        url: "https://unframed.lacma.org/2021/07/12/nfts-and-museum-part-1-nfts-101"
+        note: "Introduction courte depuis le point de vue d’un musée."
+
+      - reference: "Franceschet, M., Colavizza, G., Smith, T., Finucane, B., Ostachowski, M. L., Scalet, S., Perkins, J., Morgan, J., & Hernández, S. (2021). Crypto art: A decentralized view. *Leonardo, 54*(4), 402–405. [https://doi.org/10.1162/leon_a_02003](https://doi.org/10.1162/leon_a_02003)"
+        url: "https://doi.org/10.1162/leon_a_02003"
+        note: "Article bref donnant plusieurs points de vue sur la définition et les enjeux du crypto-art."
+
+      - reference: "The MoMA Magazine Podcast. (2023, 3 février). *Ten minutes with Tricia Wang: On Web3* [Podcast]. Apple Podcasts. [https://podcasts.apple.com/us/podcast/ten-minutes-with-tricia-wang-on-web3/id1511031061?i=1000597913955](https://podcasts.apple.com/us/podcast/ten-minutes-with-tricia-wang-on-web3/id1511031061?i=1000597913955)"
+        url: "https://podcasts.apple.com/us/podcast/ten-minutes-with-tricia-wang-on-web3/id1511031061?i=1000597913955"
+        note: "Podcast de 10 minutes sur blockchain, Web3 et pratiques culturelles."
+
+      - reference: "Whitaker, A. (2019). Art and blockchain: A primer, history, and taxonomy of blockchain use cases in the arts. *Artivate, 8*(2), 21–47. [https://doi.org/10.34053/artivate.8.2.2](https://doi.org/10.34053/artivate.8.2.2)"
+        url: "https://doi.org/10.34053/artivate.8.2.2"
+        note: "Pour distinguer provenance, rareté numérique, propriété fractionnée et nouveaux modèles de financement."

@@ -1,0 +1,14 @@
+{
+  "creatorIdentifier" : "net.ia.presenter",
+  "net.ia.presenter" : {
+    "bodyfont" : "PP Writer",
+    "localFileIdentifier" : "240E8AC8-20E6-40DF-836B-F800B65632EF",
+    "preset" : "Default",
+    "template" : "monospace",
+    "text-scale-intensity" : "1.3",
+    "titlefont" : "PP Writer"
+  },
+  "transient" : false,
+  "type" : "net.daringfireball.markdown",
+  "version" : 2
+}

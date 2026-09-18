@@ -82,15 +82,16 @@ for (const width of [1280, 390]) {
       await expect(page.locator(".picker")).toHaveCount(0);
       await expect(page.locator("#chapter-title .part")).toHaveText("2/3");
       await expect(page.locator("#chapter-title sup")).toHaveCount(0);
-      await expect(page.locator(".content .heading .subtitle")).toHaveText(
-        "Cybernetics",
-      );
+      await expect(page.locator(".content .heading .subtitle")).toHaveCount(0);
       const part =
         width === 390
           ? page.locator(".mobile-chapters summary .part")
           : page.locator(".chapters a[aria-current] .part");
       await expect(part).toHaveText("2/3");
-      await expect(part).toHaveCSS("position", "static");
+      await expect(part).toHaveCSS(
+        "position",
+        width === 390 ? "static" : "absolute",
+      );
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth),
       ).toBeLessThanOrEqual(width);

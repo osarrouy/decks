@@ -1,0 +1,477 @@
+---
+title: Réseaux sociaux numériques 4/5
+theme: gallery
+---
+
+# Viralité, cascades et amplification
+Réseaux sociaux numériques · 4/5 {.kicker}
+
+--- notes
+
+On qualifie de « viral » un contenu qui atteint rapidement un public massif.
+Cette expression décrit un résultat, mais elle suggère aussi une explication :
+une contagion spontanée de personne à personne. Le chapitre va confronter cette
+image aux formes réellement observées de la diffusion en ligne.
+
+La thèse proposée est que la visibilité massive combine des propriétés du
+contenu, des positions inégales, des relais, des mécanismes cumulatifs, des choix
+de plateforme et une part de contingence.
+
+---
+<!-- slide: id="virality-001-these" title="La viralité décrit-elle un mécanisme ?" steps=0 -->
+## La viralité décrit-elle un mécanisme ?
+
+> « Viral » nomme souvent le succès après coup,  
+> sans montrer comment sa visibilité a été produite.
+
+--- notes
+
+Le mot est utile pour désigner une forte circulation. Il devient trompeur s’il
+fait croire que tout succès massif suit une longue chaîne horizontale, comme si
+chaque personne en contaminait plusieurs autres.
+
+La question du chapitre n’est donc pas de nier les partages entre proches. Elle
+est de distinguer **popularité**, **cascade de diffusion**, **contagion sociale**
+et **amplification**.
+
+---
+<!-- slide: id="virality-002-broadcast-contagion" title="Deux formes de diffusion" steps=0 -->
+## Deux formes de diffusion
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;width:100%;text-align:center;font-family:var(--font-mono);">
+<div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Broadcast</h3><p>A → B<br>A → C<br>A → D<br>A → E</p></div>
+<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Chaîne virale</h3><p>A → B → C → D<br> ↘ E → F</p></div>
+</div>
+
+--- notes
+
+Dans un broadcast, une source déjà très visible atteint directement une grande
+audience. Dans une chaîne virale, la circulation progresse sur plusieurs
+générations de partages.
+
+Une même cascade peut combiner ces deux formes. La différence oblige cependant
+à ne pas déduire le mécanisme du seul nombre total de vues ou de partages.
+
+---
+<!-- slide: id="virality-003-petites-cascades" title="La plupart des cascades restent petites" steps=0 -->
+## La plupart des cascades restent petites
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
+<div style="border:1px solid var(--rule);padding:1rem;">Beaucoup de départs</div><strong>→</strong><div style="border:1px solid var(--accent);padding:1rem;">Très peu de longues chaînes</div>
+</div>
+
+--- notes
+
+Leskovec, Adamic et Huberman étudient des millions de recommandations de
+produits. Goel, Watts et Goldstein comparent ensuite sept environnements
+numériques. Dans les deux cas, les grandes cascades existent, mais l’immense
+majorité des chaînes s’arrête rapidement.
+
+Le modèle épidémique attire notre regard vers les rares succès. Il fait oublier
+la quantité beaucoup plus grande de contenus partagés une ou deux fois, puis
+abandonnés.
+
+---
+<!-- slide: id="virality-004-structural" title="Popularité et viralité structurelle" steps=0 -->
+## Popularité ≠ viralité structurelle
+
+| Mesure | Question |
+|---|---|
+| Taille | Combien de personnes ont relayé le contenu ? |
+| Profondeur | Combien de générations séparent la source du dernier relais ? |
+| Viralité structurelle | La cascade ressemble-t-elle plutôt à un broadcast ou à une chaîne ? |
+
+--- notes
+
+Goel, Anderson, Hofman et Watts analysent environ un milliard d’événements de
+diffusion sur Twitter. Leur mesure de viralité structurelle tient compte des
+distances entre les participants à une cascade.
+
+Ils montrent que la viralité structurelle est généralement faible, y compris
+parmi les contenus très populaires. La taille d’une cascade ne suffit donc pas à
+dire si elle a progressé de proche en proche : un grand broadcast peut produire
+des millions de vues avec très peu de profondeur.
+
+---
+<!-- slide: id="virality-005-contenu" title="Le contenu compte, mais après l’exposition" steps=0 -->
+## Le contenu compte
+Mais il faut d’abord être exposé {.kicker}
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0.7rem;align-items:center;text-align:center;width:100%;">
+<span>Propriétés du contenu</span><strong>×</strong><span>Exposition</span><strong>→</strong><span>Partage possible</span>
+</div>
+
+--- notes
+
+Berger et Milkman montrent que certaines propriétés sont associées à davantage
+de partage. Des émotions à forte activation, comme l’admiration, la colère ou
+l’anxiété, circulent mieux que des émotions à faible activation comme la
+tristesse, dans leur corpus d’articles du *New York Times*.
+
+Cette propension ne suffit pas. Deux contenus également partageables n’ont pas
+les mêmes chances si l’un est présenté à quinze personnes et l’autre à plusieurs
+millions. L’analyse du contenu doit donc être reliée à la distribution de
+l’exposition.
+
+---
+<!-- slide: id="virality-006-positions" title="Des points de départ inégaux" steps=0 -->
+## Des points de départ inégaux
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;text-align:center;width:100%;font-family:var(--font-mono);font-size:clamp(0.65rem,1.1vw,1rem);">
+<div style="border:1px solid var(--rule);padding:1rem;">Audience</div>
+<div style="border:1px solid var(--rule);padding:1rem;">Centralité</div>
+<div style="border:1px solid var(--rule);padding:1rem;">Relais</div>
+<div style="border:1px solid var(--rule);padding:1rem;">Réputation</div>
+</div>
+
+--- notes
+
+Wu et ses collègues montrent une forte concentration des URL consommées sur
+Twitter autour d’utilisateurs dits « d’élite ». Bakshy et ses collègues montrent
+que les grandes cascades ont davantage de chances d’être initiées par des comptes
+disposant déjà d’une forte audience et d’une histoire de diffusion importante.
+
+Le nombre d’abonnés ne mesure toutefois pas à lui seul l’influence. Cha et ses
+collègues distinguent popularité, retweets et mentions : une audience active
+compte davantage qu’un compteur élevé. La viralité travaille dans des hiérarchies
+préexistantes sans devenir parfaitement prévisible.
+
+---
+<!-- slide: id="gatekeepers-007-visibilite" title="Pourquoi la visibilité appelle la visibilité" steps=0 -->
+## Pourquoi la visibilité appelle la visibilité
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:0.5rem;align-items:center;text-align:center;font-family:var(--font-mono);font-size:clamp(0.7rem,1.2vw,1.1rem);">
+<span>Exposition</span><strong>→</strong><span>Interactions</span><strong>→</strong><span>Recommandation</span><strong>→</strong><span>Nouvelle exposition</span>
+</div>
+
+--- notes
+
+Un système de recommandation doit choisir parmi des contenus dont il ne connaît pas à l’avance la réception. Les interactions déjà enregistrées lui fournissent des indices.
+
+Un contenu beaucoup consulté produit beaucoup de données ; un contenu presque jamais montré en produit très peu. La recherche parle de biais de popularité lorsque les recommandations privilégient des objets déjà populaires, au risque de limiter la découverte d’autres contenus.
+
+Il ne faut pas imaginer que toutes les plateformes classent les contenus selon un simple compteur de likes. La popularité globale et la pertinence prédite pour une personne sont deux choses différentes.
+
+Le mécanisme important est une boucle possible : une première exposition produit des interactions ; ces interactions justifient une nouvelle diffusion ; cette diffusion produit davantage d’interactions qui semblent confirmer que le système avait raison.
+
+---
+<!-- slide: id="gatekeepers-008-exposition-preference" title="L’exposition n’est pas une préférence" steps=0 -->
+## L’exposition n’est pas une préférence
+
+| Vidéo | Personnes exposées | Clics | Taux de clic |
+|---|---:|---:|---:|
+| A | 10 000 | 500 | 5 % |
+| B | 100 | 5 | 5 % |
+
+--- notes
+
+Cet exemple est fictif et volontairement simplifié. Si l’on regarde seulement le nombre de clics, la vidéo A semble cent fois plus attractive que la vidéo B.
+
+Pourtant, les deux vidéos ont exactement le même taux de clic. La différence observée vient ici de la quantité d’exposition accordée au départ.
+
+Les systèmes réels tiennent compte de nombreux autres facteurs. L’exemple sert à isoler un problème : les réactions enregistrées dépendent de ce qui a été rendu visible. On ne peut pas cliquer sur une publication que l’on n’a pas rencontrée.
+
+Le succès peut donc devenir sa propre justification : « nous montrons ce contenu parce qu’il fonctionne », alors qu’il fonctionne aussi parce qu’il est montré.
+
+---
+<!-- slide: id="gatekeepers-009-compteurs" title="Les compteurs influencent aussi les personnes" steps=0 -->
+## Les compteurs comme preuve sociale
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;text-align:center;width:100%;">
+<div style="font-size:clamp(1.2rem,3vw,3rem);">1 000 000 vues</div><strong>vs.</strong><div style="font-size:clamp(1.2rem,3vw,3rem);">80 vues</div>
+</div>
+
+--- notes
+
+L’amplification ne vient pas uniquement de la machine. Les utilisateurs regardent eux aussi les traces laissées par les autres.
+
+Un compteur de vues peut fonctionner comme une recommandation collective. Dans une situation d’incertitude, nous utilisons les choix des autres comme indices : c’est la logique de la preuve sociale.
+
+En 2013, Muchnik, Aral et Taylor ont étudié ce phénomène sur un site d’actualités participatif. Un premier vote positif, attribué aléatoirement à certains commentaires, augmentait la probabilité de votes positifs ultérieurs et améliorait l’évaluation finale moyenne.
+
+Le premier jugement modifiait donc la suite de l’évaluation, sans que le commentaire lui-même ait changé.
+
+> Un compteur peut décrire un succès tout en contribuant à le produire.
+
+---
+<!-- slide: id="gatekeepers-010-musiclab" title="MusicLab : des chansons identiques, des succès différents" steps=0 -->
+## MusicLab
+Plus de 14 000 auditeurs · 2006 {.kicker}
+
+<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;text-align:center;width:100%;">
+<div style="border:1px solid var(--rule);padding:1rem;">Choix sans information sur les autres</div><strong>≠</strong><div style="border:1px solid var(--accent);padding:1rem;">Choix avec téléchargements visibles</div>
+</div>
+
+--- notes
+
+En 2006, Matthew Salganik, Peter Dodds et Duncan Watts créent un marché musical artificiel. Les participants peuvent écouter et télécharger des chansons peu connues.
+
+Certains choisissent sans information sur les choix précédents. D’autres voient les téléchargements réalisés par les autres et sont répartis dans plusieurs groupes indépendants, comparables à des mondes parallèles.
+
+Lorsque les choix des autres deviennent visibles, les succès deviennent plus inégaux et plus imprévisibles. Les mêmes chansons n’obtiennent pas nécessairement le même rang dans les différents mondes.
+
+Les préférences comptent toujours, mais elles ne suffisent pas à expliquer le succès. L’expérience porte sur l’influence sociale, pas sur un fil personnalisé contemporain. Elle montre néanmoins pourquoi un succès ne doit pas être interprété comme un classement naturel des qualités.
+
+---
+<!-- slide: id="gatekeepers-011-classement" title="Quand un objectif fabrique un classement" steps=0 -->
+## Un classement dépend de ce qu’il récompense
+
+| Publication fictive | Likes | Commentaires | Partages | Score pédagogique |
+|---|---:|---:|---:|---:|
+| A — Projet local | 80 | 5 | 4 | 115 |
+| B — Compte célèbre | 300 | 20 | 10 | 410 |
+| C — Vidéo polémique | 40 | 100 | 20 | 440 |
+
+--- notes
+
+Cette démonstration utilise un score pédagogique fictif : un point par like, trois par commentaire et cinq par partage. Il ne correspond à aucune plateforme réelle.
+
+Avec cette formule, la vidéo polémique arrive en tête. Cela ne signifie pas qu’elle est plus exacte ou plus utile : elle suscite davantage de comportements que notre formule récompense.
+
+Si l’association mobilise son réseau et obtient cent partages supplémentaires, son score passe de 115 à 615 et sa publication prend la première place.
+
+L’exemple montre deux choses : le choix des indicateurs et de leurs poids influe sur ce qui devient visible ; les acteurs capables de mobiliser rapidement une audience peuvent agir sur les signaux utilisés par le classement.
+
+:::comment
+Insister sur la nature pédagogique de la formule. Ne pas la présenter comme le fonctionnement réel d’une plateforme.
+:::
+
+---
+<!-- slide: id="gatekeepers-012-capitaux-exploration" title="Des inégalités, mais pas un verrou absolu" steps=0 -->
+## Des chances inégales, des émergences possibles
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;">
+<div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Avantages initiaux</h3><p>Audience · relais · budget · temps · compétences</p></div>
+<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Contrepoids</h3><p>Nouveauté · exploration · recommandations au-delà des abonnés</p></div>
+</div>
+
+--- notes
+
+Une entreprise peut acheter une exposition publicitaire ; une célébrité dispose d’une audience déjà constituée ; une association peut organiser des relais ; un producteur disposant de temps et de compétences peut tester plusieurs formats.
+
+Ces ressources peuvent être converties en occasions d’exposition, puis en interactions visibles. Le classement peut prolonger cet avantage, sans que tout succès soit nécessairement préparé ni que l’on puisse acheter à coup sûr une diffusion massive.
+
+Un système peut aussi chercher la nouveauté et tester des contenus peu connus. L’exploration constitue un contrepoids possible au biais de popularité.
+
+La popularité antérieure peut donc donner un avantage sans déterminer entièrement le résultat. L’inégalité des chances ne prend pas la forme d’un verrou absolu.
+
+---
+<!-- slide: id="virality-013-contagion" title="Une cascade ne prouve pas une contagion" steps=0 -->
+## Une cascade ne prouve pas une contagion
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;text-align:center;">
+<div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Influence</h3><p>B partage après avoir vu A partager.</p></div>
+<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Exposition commune</h3><p>A et B rencontrent la même source extérieure.</p></div>
+</div>
+
+--- notes
+
+Lorsque deux amis partagent la même publication, les traces visibles ne suffisent
+pas à savoir si l’un a influencé l’autre. Ils peuvent aussi avoir rencontré une
+même source : média, célébrité, tendance ou recommandation.
+
+Bakshy, Rosenn, Marlow et Adamic isolent causalement l’effet du signal social
+dans une expérience menée sur Facebook. Voir qu’un ami a partagé augmente bien
+la probabilité de partager, mais une grande partie de la circulation observée ne
+peut pas être attribuée automatiquement à une contagion interpersonnelle.
+
+---
+<!-- slide: id="virality-014-horizontal" title="Les dynamiques horizontales existent" steps=0 -->
+## Les dynamiques horizontales existent
+
+> Critiquer la métaphore du virus ne revient pas à nier  
+> les partages de proche en proche.
+
+--- notes
+
+L’étude de Vosoughi, Roy et Aral compare des rumeurs vraies et fausses sur
+Twitter. Dans leur corpus, les fausses informations circulent plus loin, plus
+vite, plus profondément et plus largement que les vraies. Les auteurs montrent
+que l’écart ne s’explique pas principalement par les bots : les comportements
+humains y jouent un rôle majeur.
+
+Ce résultat empêche de remplacer un récit simpliste par un autre. Toutes les
+diffusions massives ne sont pas fabriquées par une institution. La circulation
+horizontale existe ; elle s’inscrit dans des positions, des interfaces et des
+conditions d’exposition.
+
+---
+<!-- slide: id="virality-015-amplification-organisee" title="L’amplification peut être organisée" steps=0 -->
+## L’amplification peut être organisée
+
+| Ressource | Action possible |
+|---|---|
+| Bots | Publier et relayer très tôt |
+| Réseaux coordonnés | Donner l’apparence de soutiens indépendants |
+| Publicité | Acheter une première exposition |
+| Relais influents | Atteindre rapidement de grandes audiences |
+
+--- notes
+
+Shao et ses collègues observent un rôle disproportionné des bots dans les
+premiers moments de diffusion de sources de faible crédibilité. Les comptes
+automatisés ciblent aussi des utilisateurs disposant de fortes audiences.
+
+Keller et ses collègues étudient une opération d’astroturfing politique dans
+laquelle des comptes apparemment indépendants sont coordonnés. L’organisation
+laisse des traces temporelles et comportementales, mais elle ne garantit pas le
+succès : une campagne préparée peut rester peu influente.
+
+---
+<!-- slide: id="virality-016-recursivite" title="La plateforme participe à la diffusion" steps=0 -->
+## La plateforme participe à la diffusion
+
+<div style="font-family:var(--font-mono);font-size:clamp(0.7rem,1.15vw,1.05rem);text-align:center;line-height:2;">
+Source → classement → exposition → réactions<br>
+↑　　　　　　　　　　　　　　　　　↓<br>
+└──────── nouveau classement ────────┘
+</div>
+
+--- notes
+
+Le modèle d’une transmission entre individus oublie le rôle actif de la
+plateforme. Un système choisit quels contenus tester, auprès de quels publics,
+et comment interpréter les réactions obtenues.
+
+Huszár et ses collègues comparent sur Twitter le fil algorithmique et le fil
+chronologique. Ils observent une amplification politique différenciée selon les
+pays et les familles partisanes. Ce type d’étude ne dit pas qu’un algorithme
+contrôle toutes les opinions ; il montre que le mode de classement transforme la
+distribution de l’exposition.
+
+---
+<!-- slide: id="virality-017-capitaux" title="Des ressources convertibles en visibilité" steps=0 -->
+## Des ressources convertibles en visibilité
+
+| Ressource | Avantage possible |
+|---|---|
+| Audience et centralité | Exposition initiale |
+| Réseau de relations | Relais rapides |
+| Temps et compétences | Formats et essais multiples |
+| Budget | Travail, publicité et coordination |
+
+--- notes
+
+Cette lecture en termes de capitaux constitue une interprétation sociologique
+des résultats. La littérature mesure directement l’audience, la centralité ou la
+coordination plus souvent que les budgets des producteurs.
+
+Le capital ne commande pas un succès précis. Il permet d’acheter du travail, de
+multiplier les tentatives et d’obtenir davantage d’occasions d’exposition. On
+peut dire qu’il achète beaucoup de billets de loterie, sans choisir à l’avance le
+billet gagnant.
+
+---
+<!-- slide: id="virality-018-modele" title="Un modèle plus réaliste" steps=0 -->
+## Un modèle plus réaliste
+
+<div style="font-family:var(--font-mono);font-size:clamp(0.65rem,1.1vw,1rem);text-align:center;line-height:2;">
+ressources × exposition × position réticulaire<br>
+× organisation × classement × propension au partage<br>
+× contingence → visibilité finale
+</div>
+
+--- notes
+
+Cette formule n’est pas un modèle quantitatif. Elle sert à empêcher qu’une seule
+cause absorbe toutes les autres.
+
+Un contenu peut être très partageable et peu exposé. Une campagne très organisée
+peut échouer. Un compte peu connu peut bénéficier d’une exploration algorithmique
+et rencontrer un public. L’imprévisibilité du résultat coexiste donc avec une
+forte inégalité des chances.
+
+---
+<!-- slide: id="virality-019-conclusion" title="De la contagion à l’amplification" steps=0 -->
+## De la contagion à l’amplification
+
+> La visibilité massive est une production sociale  
+> dont le spectacle de la propagation masque souvent les conditions.
+
+--- notes
+
+La viralité n’est pas un mythe si le terme décrit une circulation rapide et
+massive. Elle devient un mauvais modèle lorsqu’elle attribue cette circulation à
+une pure chaîne horizontale ou aux seules qualités du contenu.
+
+Les véritables chaînes longues sont rares. Les broadcasts, les positions
+initiales, les effets cumulatifs, les relais organisés et le classement des
+plateformes jouent souvent un rôle décisif. La foule agit bien, mais dans un
+champ de forces déjà structuré.
+
+---
+<!-- slide: id="virality-020-aide-memoire" title="Aide-mémoire" steps=0 -->
+## Aide-mémoire
+
+| Question | Réponse à retenir |
+|---|---|
+| Populaire signifie-t-il viral ? | Non : un grand broadcast peut produire une audience massive. |
+| Le contenu suffit-il ? | Non : il doit d’abord être exposé. |
+| Une cascade prouve-t-elle l’influence ? | Non : il faut écarter l’exposition commune. |
+| L’amplification est-elle toujours spontanée ? | Non : elle peut être coordonnée, achetée ou algorithmique. |
+| Le succès est-il déterminé ? | Non : les chances sont inégales et le résultat reste contingent. |
+
+--- notes
+
+La distinction centrale est celle qui sépare le résultat observé de son
+mécanisme. Taille, profondeur, influence interpersonnelle, coordination et
+amplification algorithmique doivent être établies séparément.
+
+---
+<!-- slide: id="virality-021-bibliographie" title="Bibliographie : cascades et influence" steps=0 -->
+## Bibliographie de travail
+Cascades, influence et contenus {.kicker}
+
+Bakshy, E., Hofman, J. M., Mason, W. A. et Watts, D. J. (2011). « Everyone’s an Influencer: Quantifying Influence on Twitter ». *Proceedings of WSDM ’11*, 65–74. {.citation}
+
+Bakshy, E., Rosenn, I., Marlow, C. et Adamic, L. A. (2012). « The Role of Social Networks in Information Diffusion ». *Proceedings of WWW ’12*, 519–528. {.citation}
+
+Berger, J. et Milkman, K. L. (2012). « What Makes Online Content Viral? ». *Journal of Marketing Research*, 49(2), 192–205. {.citation}
+
+Cha, M., Haddadi, H., Benevenuto, F. et Gummadi, K. P. (2010). « Measuring User Influence in Twitter: The Million Follower Fallacy ». *Proceedings of ICWSM*, 4(1), 10–17. {.citation}
+
+Goel, S., Watts, D. J. et Goldstein, D. G. (2012). « The Structure of Online Diffusion Networks ». *Proceedings of EC ’12*, 623–638. {.citation}
+
+--- notes
+
+Ces textes distinguent audience, influence, exposition et forme de la cascade.
+
+---
+<!-- slide: id="virality-022-bibliographie" title="Bibliographie : diffusion et avantage cumulatif" steps=0 -->
+## Bibliographie de travail
+Diffusion, structure et avantage cumulatif {.kicker}
+
+Goel, S., Anderson, A., Hofman, J. et Watts, D. J. (2016). « The Structural Virality of Online Diffusion ». *Management Science*, 62(1), 180–196. {.citation}
+
+Leskovec, J., Adamic, L. A. et Huberman, B. A. (2007). « The Dynamics of Viral Marketing ». *ACM Transactions on the Web*, 1(1), article 5. {.citation}
+
+Salganik, M. J., Dodds, P. S. et Watts, D. J. (2006). « Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market ». *Science*, 311(5762), 854–856. {.citation}
+
+Vosoughi, S., Roy, D. et Aral, S. (2018). « The Spread of True and False News Online ». *Science*, 359(6380), 1146–1151. {.citation}
+
+Wu, S., Hofman, J. M., Mason, W. A. et Watts, D. J. (2011). « Who Says What to Whom on Twitter ». *Proceedings of WWW ’11*, 705–714. {.citation}
+
+--- notes
+
+Ces références portent sur la structure des cascades, l’inégalité du succès et
+la persistance de dynamiques humaines de partage.
+
+---
+<!-- slide: id="virality-023-bibliographie" title="Bibliographie : amplification organisée et algorithmique" steps=0 -->
+## Bibliographie de travail
+Amplification organisée et algorithmique {.kicker}
+
+Gauthier, G., Hodler, R., Widmer, P. et Zhuravskaya, E. (2026). « The Political Effects of X’s Feed Algorithm ». *Nature*, 652, 416–423. {.citation}
+
+Huszár, F. et al. (2022). « Algorithmic Amplification of Politics on Twitter ». *Proceedings of the National Academy of Sciences*, 119(1), e2025334119. {.citation}
+
+Keller, F. B., Schoch, D., Stier, S. et Yang, J. (2020). « Political Astroturfing on Twitter: How to Coordinate a Disinformation Campaign ». *Political Communication*, 37(2), 256–280. {.citation}
+
+Shao, C., Ciampaglia, G. L., Varol, O., Yang, K.-C., Flammini, A. et Menczer, F. (2018). « The Spread of Low-Credibility Content by Social Bots ». *Nature Communications*, 9, article 4787. {.citation}
+
+--- notes
+
+Ces textes documentent des relais coordonnés et le rôle propre des systèmes de
+classement. Ils ne permettent pas de conclure que toute grande diffusion est
+organisée, mais ils montrent pourquoi la métaphore d’une contagion purement
+spontanée est insuffisante.
