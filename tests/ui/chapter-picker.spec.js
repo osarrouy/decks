@@ -56,9 +56,9 @@ for (const theme of ["light", "dark"]) {
     page,
   }) => {
     await page.setViewportSize({ width: 320, height: 700 });
-    await page.goto("/l1/?vue=chapitres&section=information-et-communication");
+    await page.goto("/l1/?vue=chapitres&section=interpassivite-des-foules");
     await expect(page.locator(".mobile-chapters summary")).toContainText(
-      "Information et communication",
+      "L’interpassivité des foules",
     );
     await page.evaluate(
       (value) => (document.documentElement.dataset.theme = value),

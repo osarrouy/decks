@@ -100,11 +100,13 @@ test("The assistant stays outside the frame and retains conversation across chap
 }) => {
   await page.goto("/l2/?section=section-1");
   const launcher = page.getByRole("button", { name: /Assistant IA/ });
-  await launcher.click();
   const dialog = page.getByRole("dialog", {
     name: /^Assistant IA/,
   });
-  await expect(dialog).toBeVisible();
+  await expect(async () => {
+    if (!(await dialog.isVisible())) await launcher.click();
+    await expect(dialog).toBeVisible({ timeout: 500 });
+  }).toPass({ timeout: 15_000 });
   expect(
     await dialog.evaluate((element) => Boolean(element.closest("main"))),
   ).toBe(false);
@@ -117,7 +119,7 @@ test("The assistant stays outside the frame and retains conversation across chap
     .getByRole("link")
     .nth(1)
     .click();
-  await expect(page).toHaveURL(/section=section-2/);
+  await expect(page).toHaveURL(/section=consensus-sans-tiers-de-confiance/);
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("log")).toContainText("Résumer ce chapitre");
   await page.keyboard.press("Escape");

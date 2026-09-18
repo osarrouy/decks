@@ -94,7 +94,7 @@ test("History deck loads its slides and assets, preserves steps, and supports fu
   expect(missing).toEqual([]);
 });
 
-test("Embedded slides fit mobile and chapter changes unmount the deck", async ({
+test("Embedded slides fit mobile and chapter changes load the matching deck", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -124,6 +124,8 @@ test("Embedded slides fit mobile and chapter changes unmount the deck", async ({
     reader.getByRole("heading", { name: "Cybernetics", exact: true }),
   ).toBeVisible();
   await page.getByRole("link", { name: "Chapitre suivant →" }).click();
-  await expect(page.locator("iframe")).toHaveCount(0);
-  await expect(page.getByText("Les slides arrivent ici.")).toBeVisible();
+  await expect(page.locator("iframe")).toHaveAttribute(
+    "src",
+    "/slides/history-3/index.html",
+  );
 });

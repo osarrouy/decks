@@ -39,7 +39,7 @@ for (const width of [1280, 390]) {
             });
       const trigger = page.locator(".mobile-chapters summary");
       if (width === 390) await trigger.click();
-      await expect(navigation.getByRole("link")).toHaveCount(5);
+      await expect(navigation.getByRole("link")).toHaveCount(9);
       await expect(navigation.locator("[aria-current]")).toHaveCount(1);
       await expect(navigation.locator("[aria-current]")).toContainText(
         "Cybernetics",
