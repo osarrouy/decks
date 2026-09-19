@@ -3,10 +3,33 @@ title: Blockchain et crypto-monnaies — Consensus
 theme: gallery
 ---
 
-<!-- slide: id="blockchain-017-monnaie" title="monnaie" layout="center" -->
-### monnaie
-### numérique
-### pair-à-pair
+# Blockchain
+Distributed consensus {.kicker}
+
+---
+<!-- slide: steps=2 -->
+
+<script>
+  import Fragment from "@svx-deck/core/components/Fragment.svelte";
+</script>
+
+<Fragment at={0}>
+
+Monnaie {.kicker}
+
+</Fragment>
+
+<Fragment at={1}>
+
+numérique {.kicker}
+
+</Fragment>
+
+<Fragment at={2}>
+
+pair-à-pair {.kicker}
+
+</Fragment>
 
 --- notes
 
@@ -21,8 +44,12 @@ Le Bitcoin une monnaie numérique, pair-à-pair - c’est-à-dire décentralisé
 **Pair-à-pair.** L’ensemble des transactions en bitcoin est diffusé et validé de manière horizontale, sans intervention d'aucune autorité centralisée. Tous les nœuds du réseau y ont le même poids.
 
 ---
-<!-- slide: id="blockchain-018-le-bitcoin-repose-sur-un-reseau-de-nuds" title="Le Bitcoin repose sur un réseau de nœuds" layout="center" -->
-<img src="/assets/5dbba16ef3ba5ec99f83d4de00c95cb557ec940d.png" alt="Le Bitcoin repose sur un réseau de nœuds" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-018-le-bitcoin-repose-sur-un-reseau-de-nuds" title="Le Bitcoin repose sur un réseau de nœuds" layout="center" steps=1 -->
+<script>
+  import NetworkArchitecture from "$components/NetworkArchitecture.svelte";
+</script>
+
+<NetworkArchitecture />
 
 --- notes
 
@@ -34,7 +61,7 @@ Chacun est libre d’installer ce programme sur la machine de son choix et d’i
 
 Le Bitcoin peut ainsi être rapproché des protocoles de partage de fichier en P2P. Comme dans le cas du protocole BitTorrent, chaque participant est à la fois consommateur et contributeur.
 
-La différence tient essentiellement au fait que, en lieu et place de films ou d’album de musique, les nœuds Bitcoin partagent une base de données constituée de l’ensemble des transactions exécutées sur le réseau, que cette base de données est susceptible d’intégrer à chaque instant de nouvelles transactions, et que ces celles-ci doivent être collectivement authentifiées et validées.
+La différence tient essentiellement au fait que, en lieu et place de films ou d’album de musique, les nœuds Bitcoin partagent une base de données constituée de l’historique de toutes les transactions exécutées sur le réseau depuis son origine, que cette base de données est susceptible d’intégrer à chaque instant de nouvelles transactions, et que ces celles-ci doivent être collectivement authentifiées et validées.
 
 ---
 <!-- slide: id="blockchain-019-registre-des-transactions" title="Registre des transactions" -->
@@ -42,6 +69,9 @@ La différence tient essentiellement au fait que, en lieu et place de films ou d
 | :------- | :----------- | :----- |
 | Alice    | Bob          | 2 ₿    |
 | Bob      | Charlie      | 1.5 ₿  |
+| Bob      | Damian       | 0.4 ₿ |
+| ...      | ...          |  ...    |
+|  ...    |  ...    | ...   |
 | Bob      | Damian       | 0.4 ₿  |
 
 --- notes
@@ -53,53 +83,68 @@ Un tel principe pourrait paraître bien simpliste pour un réseau sécurisant pl
 Notons que Satoshi Nakamoto n’est pas le premier à s’être efforcé de concevoir une monnaie numérique pair-à-pair sur un tel principe.
 
 ---
-<!-- slide: id="blockchain-020-b-money" title="b-money" layout="center" -->
 ### b-money
 Wei Dai, 1998 {.kicker}
 
 --- notes
 
-La première tentative reconnue est attribuée à Wei Dai en 1998.
+En 1998, Wei Dai décrit avec b-money l’une des premières monnaies numériques pair-à-pair.
+
+Les participants sont identifiés par des pseudonymes cryptographiques et tiennent collectivement un registre des soldes. La monnaie est créée en apportant la preuve d’un travail de calcul.
+
+b-money ne sera toutefois jamais implémenté. La première version repose sur un canal de diffusion anonyme, synchrone et impossible à brouiller, qui n’existe pas techniquement. La seconde confie le registre à un groupe de serveurs auxquels il faut encore accorder une part de confiance : le projet ne résout donc pas complètement la manière dont un réseau distribué peut s’accorder sur un historique unique et empêcher la double dépense.
 
 ---
-<!-- slide: id="blockchain-021-bitgold" title="bitgold" layout="center" -->
 ### bitgold
 Nick Szabo, 2005 {.kicker}
 
 --- notes
 
-La seconde à Nick Szabo, avec son projet Bit Gold. L’idée apparaît dès 1998, mais Szabo n’en publie une description plus complète qu’en 2005 sur son blog *Unenumerated*.
+La seconde proposition est celle de Nick Szabo, avec son projet Bit Gold. L’idée apparaît dès 1998, mais Szabo n’en publie une description complète qu’en 2005 sur son blog *Unenumerated*.
 
-Ces deux propositions échouent toutefois à développer des solutions robustes aux problèmes techniques soulevés par la mise en oeuvre d’un tel dispositif. Elle ne seront donc jamais implémentées.
+Szabo part d’une analogie avec l’or. L’or est rare parce que son extraction exige un travail coûteux. Bit Gold cherche à produire la même rareté dans un environnement numérique, en créant des unités dont la fabrication demande un effort de calcul vérifiable.
 
-Elles dessinent néanmoins des pistes dont certaines se retrouveront presque à l’identique dans Bitcoin. On comprend alors pourquoi tant soupçonnent que Nakamoto puisse être Dai, ou Szabo lui-même. La filiation est trop nette, la continuité trop marquée.
+Cette analogie sera reprise par le bitcoin. Elle constitue aujourd'hui encore l'un de principes de sa valorisation.
 
-Bitcoin n’apparaît pas, en ce sens, comme une rupture absolue, mais comme l’aboutissement d’un long travail d’élaboration d’un champ de questions et de problèmes que Satoshi Nakomoto
+Bit Gold demeure toutefois une esquisse : l’intuition et les principes généraux de son fonctionnement sont posés mais plusieurs difficultés techniques décisives restent ouvertes qui ne seront jamais résolues.
 
-La contribution de Satoshi Nakamoto consistera principalement à composer divers propositions pour répondre, enfin, à un problème décisif : dans un espace totalement distribué, sans centre de décision, comment produire du consensus ? comment établir une vérité commune, stable et partagée, sans autorité instituée ?
+b-money et Bit Gold ne seront donc jamais déployés sous la forme décrite par leurs auteurs. Ils tracent néanmoins des pistes que Bitcoin reprendra presque à l’identique. Cette proximité a nourri l’hypothèse selon laquelle Wei Dai ou Nick Szabo pourrait être Satoshi Nakamoto, mais aucune preuve ne permet de l’établir.
 
-C’est ce qu’on appelle le problème du consensus distribué.
+Bitcoin apparaît ainsi comme l’aboutissement d’un long travail d’élaboration. La contribution de Satoshi Nakamoto tient à la manière dont il compose des idées déjà disponibles pour en faire un système cohérent et effectivement opérationnel. Il lui faut pour cela résoudre une difficulté décisive : comment des nœuds dispersés peuvent-ils s’accorder sur un même historique des transactions ?
+
+C’est ce qu'on appelle le problème du **consensus distribué**.
+
+[Sources]
+
+- [Nick Szabo — Bit Gold, 2005](https://unenumerated.blogspot.com/2005/12/bit-gold.html)
+- [Satoshi Nakamoto — Bitcoin: A Peer-to-Peer Electronic Cash System, 2008](https://bitcoin.org/bitcoin.pdf)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-022-consensus" title="Consensus" layout="center" -->
 ## Consensus
 
 --- notes
 
-La question du consensus est au centre du tout système monétaire pair-à-pair. Comment obtenir un accord sur le contenu de la base de données - c’est-à-dire un accord sur le solde de chacun.
+La question du consensus est au centre du tout système monétaire pair-à-pair. Comment obtenir un accord sur le contenu de la base de données - c’est-à-dire un accord sur le solde de chacun ?
 
 Dans un système centralisé, ce consensus est garanti par une autorité de confiance. C’est la banque, par exemple, qui tient les comptes et dont la parole fait foi : si elle affirme que vous disposez de telle somme, cela est tenu pour vrai. On parle alors de **tiers de confiance**.
 
-Mais dans un réseau sans tiers de confiance, les difficultés se multiplient. Les données peuvent se perdre en chemin. Elles peuvent arriver dans un ordre différent selon les nœuds. Certains participants peuvent même chercher à tromper le système pour s’enrichir artificiellement.
+Or dans un réseau sans tiers de confiance, les difficultés se multiplient. Deux transactions incompatibles peuvent par exemple circuler presque au même moment.
 
-Comment, dès lors, parvenir à un consensus distribué – c’est-à-dire à un accord collectif – sans s’appuyer sur aucune autorité centrale ?
+Alice peut tenter de dépenser les mêmes bitcoins auprès de Bob et de Charlie. Certains nœuds reçoivent d’abord la première transaction, tandis que d’autres reçoivent d’abord la seconde. Chacune peut alors leur paraître valide.
 
-Bien avant Nakamoto, de nombreuses recherches avaient tenté de résoudre cette énigme – la littérature sur le sujet a d’ailleurs été largement revisitée depuis l’essor des crypto-monnaies. Mais aucune des solutions proposées jusque-là n’avait réussi à s’imposer comme robuste ou pleinement satisfaisante.
+C’est le problème de la **double dépense**. Le réseau doit parvenir à ne retenir qu’une seule transaction et faire converger tous les nœuds vers un même historique.
 
-C’est précisément à ce problème que répond l’invention de Satoshi Nakamoto. La technologie dite de la **blockchain** propose un mécanisme inédit pour instaurer, dans un réseau distribué, une vérité commune sur l’état des comptes.
+Comment un réseau ouvert peut-il alors, malgré ces divergences, ne conserver qu’un seul historique des transactions sans qu’une autorité centrale le lui impose ?
+
+Cette difficulté ne naît pas avec Bitcoin. L’informatique distribuée étudie depuis longtemps la manière dont plusieurs machines peuvent s’accorder, même lorsqu’elles ne reçoivent pas les mêmes informations au même moment ou que certaines cherchent à les tromper.
+
+Bitcoin doit résoudre cette difficulté dans un réseau à la fois monétaire et ouvert. Le registre porte sur des unités de valeur : toute divergence peut donc être exploitée pour effectuer des dépenses incompatibles. Dans le même temps, chacun peut rejoindre le réseau sans identité vérifiée ni autorisation préalable. Il est donc impossible d’attribuer simplement une voix à chaque participant, puisqu’un même acteur pourrait multiplier les identités pour imposer sa version du registre.
+
+La réponse de Nakamoto consiste à donner aux nœuds une règle commune qui leur permet de départager les versions concurrentes du registre et de poursuivre ensemble le même historique. Celui-ci prend la forme d’une chaîne de blocs : la **blockchain**.
 
 ---
-<!-- slide: id="blockchain-023-blockchain" title="Blockchain" layout="center" -->
 ## Blockchain
 chaîne de blocs {.kicker}
 
@@ -121,19 +166,21 @@ chaîne de blocs {.kicker}
 
 ↦ Le premier mineur à avoir trouvé la solution à ce puzzle diffuse le bloc ainsi validé à l'ensemble du réseau.
 
+↦ Le nœud aproposant ce bloc est par ailleurs récompensé par des bitcoins fraichement émis. C'est de cette manière que la création du Bitcoin est mise en oeuvre (c.f. supra).
+
 ↦ Les autres nœuds du réseau peuvent alors juger de la validité de ce bloc au regard des informations en leur possession.
 
 ↦  Si le bloc proposé leur semble valide, ils l’intègrent à leur propre historique. Autrement, ils l'excluent comme s’il n’avait jamais existé.
 
-↦ Le nœud ayant miné le bloc se voit par ailleurs récompensé par des bitcoins fraichement émis.
 
-↦ C'est de cette manière que la création du Bitcoin est mise en oeuvre (c.f. supra).
 
 ---
-<!-- slide: id="blockchain-024-que-se-passe-t-il-si-differents-nuds-proposent-des-blo" title="Que se passe-t-il si différents nœuds proposent des blocs différents - t" layout="center" -->
-<img src="/assets/d2cbce006ce6b09885fb2df2bea407ec3cb37cd0.png" alt="Que se passe-t-il si différents nœuds proposent des blocs différents - t" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: layout="center" steps=3 -->
+<script>
+  import LongestChainFork from "$components/LongestChainFork.svelte";
+</script>
 
-
+<LongestChainFork />
 
 
 --- notes
@@ -151,7 +198,6 @@ chaîne de blocs {.kicker}
 ↦ Ce petit puzzle consiste en un algorithme qu'on appelle la **proof-of-work** - ou preuve de travail.
 
 ---
-<!-- slide: id="blockchain-025-proof-of-work" title="Proof-of-work" layout="center" -->
 ## Proof-of-work
 Preuve de travail {.kicker}
 
@@ -188,10 +234,14 @@ Preuve de travail {.kicker}
 ↦ Expliciter la présence du hash du block précédent dans le bloc suivant.
 
 ---
+<!-- slide: id="blockchain-026-hash-sha-256" title="Hash SHA-256" layout="center" steps=3 -->
+<script>
+  import HashDemo from "$components/HashDemo.svelte";
+</script>
 
+<HashDemo />
 
-
----
+--- notes
 
 ↦ Un hash constitue une sorte de résumé, de taille fixe, d'une information de taille arbitraire.
 
@@ -204,8 +254,12 @@ Preuve de travail {.kicker}
 ↦ Chaque block intègre ainsi un instantané des nouvelles transactions, mais aussi, de hash en hash, un résumé de tout l’historique des transactions, jusqu’au bloc de genèse.
 
 ---
-<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" layout="center" -->
-<img src="/assets/7684203927048a343556a60c0b1c3e1fadf69852.png" alt="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" layout="center" steps=6 -->
+<script>
+  import HashChain from "$components/HashChain.svelte";
+</script>
+
+<HashChain />
 
 --- notes
 
