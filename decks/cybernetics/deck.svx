@@ -1333,9 +1333,9 @@ Le perceptron n’est pas encore un réseau profond. Il reste limité aux sépar
 
   .cover-demo .caption {
     max-width: none;
-    color: var(--muted);
+    color: var(--text-muted);
     font-family: var(--font-mono);
-    font-size: var(--small-size);
+    font-size: var(--metadata-font-size);
     font-style: normal;
     letter-spacing: 0.18em;
     text-align: center;

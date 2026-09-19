@@ -38,9 +38,9 @@
     min-height: 9rem;
     place-items: center;
     padding: 1rem;
-    border: 1px solid color-mix(in srgb, var(--fg), transparent 82%);
+    border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 82%);
     border-radius: 1rem;
-    background: color-mix(in srgb, var(--bg), var(--fg) 4%);
+    background: color-mix(in srgb, var(--background), var(--text-prominent) 4%);
     opacity: 0.28;
     transform: translateY(0.5rem) scale(0.98);
     transition: 260ms ease;
@@ -49,7 +49,7 @@
 
   .node[data-active='true'] {
     border-color: var(--accent);
-    background: var(--accent-soft);
+    background: var(--accent-subtle);
     opacity: 1;
     transform: translateY(0) scale(1);
   }
@@ -60,7 +60,7 @@
   }
 
   span {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.9rem, 1.2vw, 1.15rem);
   }
 

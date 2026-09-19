@@ -47,7 +47,7 @@ Il faut également distinguer la visibilité, la consultation et l’adhésion :
 ## Du gardien de la porte à l’organisateur du fil
 
 <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:center;width:100%;text-align:center;">
-<div style="border:1px solid var(--rule);padding:1.2rem;"><strong>Médias</strong><br><span class="kicker">Sélectionner ce qui sera publié</span></div>
+<div style="border:1px solid var(--border-prominent);padding:1.2rem;"><strong>Médias</strong><br><span class="kicker">Sélectionner ce qui sera publié</span></div>
 <strong>→</strong>
 <div style="border:1px solid var(--accent);padding:1.2rem;"><strong>Plateformes</strong><br><span class="kicker">Organiser ce qui sera vu</span></div>
 </div>
@@ -69,7 +69,7 @@ Le même jour, un média local peut choisir de mettre en une le budget municipal
 ## Deux seuils différents
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;">
-<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Modération</h3><p>Ce qui peut rester en ligne.</p></div>
+<div style="border-top:4px solid var(--text-prominent);padding-top:1rem;"><h3>Modération</h3><p>Ce qui peut rester en ligne.</p></div>
 <div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Recommandation</h3><p>Ce qui est mis en avant.</p></div>
 </div>
 
@@ -112,10 +112,10 @@ Les objectifs, les indicateurs et leur importance relative sont des choix humain
 ## Un ensemble d’acteurs
 
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;text-align:center;font-family:var(--font-mono);font-size:clamp(0.65rem,1.1vw,1rem);">
-<div style="border:1px solid var(--rule);padding:1rem;">Plateforme</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Modèles de classement</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Utilisateurs</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Producteurs</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Plateforme</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Modèles de classement</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Utilisateurs</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Producteurs</div>
 </div>
 
 --- notes

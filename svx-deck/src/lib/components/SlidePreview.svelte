@@ -68,6 +68,7 @@
     background: var(--background);
   }
   .presenter-preview-canvas {
+    container-type: inline-size;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -999,13 +999,13 @@ Temps indicatif : 5 minutes.
   .arrow, .equation-arrow { color: var(--economics-accent); font-family: var(--font-mono); font-size: 1.5em; }
   .question { margin-top: 2rem; max-width: 34ch; font-size: clamp(1.15rem, 2.1vw, 2rem); }
   .statement { margin-top: 2rem; max-width: 38ch; font-size: clamp(1.15rem, 2vw, 1.85rem); }
-  .muted { color: var(--muted); }
+  .muted { color: var(--text-muted); }
   .center-text { text-align: center; max-width: none; }
   .accent-text, .highlighted, .accent-node { color: var(--economics-accent); }
   .card-grid, .four-cards, .concept-card, .comparison, .pattern-grid, .case-grid, .audit-grid, .domain-grid, .limits-grid, .ecosystem-grid, .references-grid, .final-grid { display: grid; gap: 1rem; }
   .card-grid { grid-template-columns: repeat(3, 1fr); margin-top: 2rem; }
   .four-cards { grid-template-columns: repeat(4, 1fr); }
-  .concept-card, .activity-card, .market-side, .social-layer, .metric, .formula-card, .privacy-note, .pattern-grid > div, .case-grid > div, .audit-grid > div, .domain-grid > div, .limits-grid > div, .ecosystem-grid > div, .references-grid > div, .final-grid > div, .compare-ai > div { padding: 1rem 1.1rem; border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); border-radius: 1rem; background: color-mix(in srgb, white 42%, transparent); }
+  .concept-card, .activity-card, .market-side, .social-layer, .metric, .formula-card, .privacy-note, .pattern-grid > div, .case-grid > div, .audit-grid > div, .domain-grid > div, .limits-grid > div, .ecosystem-grid > div, .references-grid > div, .final-grid > div, .compare-ai > div { padding: 1rem 1.1rem; border: 1px solid color-mix(in srgb, var(--text-prominent) 14%, transparent); border-radius: 1rem; background: color-mix(in srgb, white 42%, transparent); }
   .concept-card h3, .comparison h3, .compare-ai h3 { margin: .4rem 0; }
   .concept-card p, .comparison p, .compare-ai p, .concept-card span, .metric span, .metric small { display: block; }
   .card-index, .kicker, .caption, .metric b, .case-grid b, .audit-grid b, .final-grid b { font-family: var(--font-mono); }
@@ -1014,21 +1014,21 @@ Temps indicatif : 5 minutes.
   .flow-node { padding: 1.1rem 1.4rem; border: 1px solid var(--economics-accent); border-radius: .8rem; }
   .two-sided-market { display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; gap: 1rem; margin: 4rem 0 2rem; }
   .market-side { display: grid; gap: .4rem; text-align: center; }
-  .market-side span, .social-layer span, .rtb-column small, .references-grid span, .final-grid span { color: var(--muted); font-size: .9rem; }
+  .market-side span, .social-layer span, .rtb-column small, .references-grid span, .final-grid span { color: var(--text-muted); font-size: .9rem; }
   .platform-core { padding: 2rem 1rem; border-radius: 50%; aspect-ratio: 1; display: grid; place-content: center; text-align: center; color: white; background: var(--economics-accent); font-family: var(--font-mono); }
-  .platform-core small { font-family: var(--font-body); font-size: .7rem; }
+  .platform-core small { font-family: var(--font-sans); font-size: .7rem; }
   .attention-equation { display: flex; align-items: center; justify-content: center; gap: 2.5rem; margin: 3rem 0; }
   .attention-equation > div { display: grid; text-align: center; gap: .4rem; }
   .big-number { font-size: 7rem; line-height: .8; color: var(--economics-accent); font-family: var(--font-mono); }
   .big-number.limited { color: var(--economics-blue); }
   .image-card { display: grid; gap: .8rem; justify-items: center; }
   .image-card img { width: min(32vw, 28rem); max-height: 48vh; object-fit: contain; border-radius: .5rem; }
-  .caption { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+  .caption { color: var(--text-muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
   .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: 3rem; }
   .metric { display: grid; gap: .55rem; min-height: 9rem; align-content: center; }
   .metric b { color: var(--economics-accent); font-size: 1.6rem; }
   .metric span { font-size: 1rem; }
-  .metric small { color: var(--muted); }
+  .metric small { color: var(--text-muted); }
   .rank-diagram { justify-content: center; margin: 4rem 0 2rem; font-family: var(--font-mono); }
   .rank-node, .path-node, .loop-step, .slot { padding: 1rem 1.3rem; border: 1px solid currentColor; border-radius: .8rem; }
   .rank-node.highlighted, .path-node.highlighted, .loop-step.accent-node, .slot.highlighted { background: var(--economics-soft); }
@@ -1036,7 +1036,7 @@ Temps indicatif : 5 minutes.
   .auction-board > div { display: grid; gap: .5rem; text-align: center; }
   .bid { padding: 1rem; border: 1px solid var(--economics-accent); border-radius: .8rem; font-family: var(--font-mono); }
   .bids { font-family: var(--font-mono); }
-  .bids span { display: block; padding: .45rem; border-bottom: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); }
+  .bids span { display: block; padding: .45rem; border-bottom: 1px solid color-mix(in srgb, var(--text-prominent) 14%, transparent); }
   .winner { padding: 1.3rem; background: var(--economics-accent); color: white; border-radius: .8rem; }
   .winner small { font-family: var(--font-mono); }
   .timeline { display: grid; gap: 1rem; margin-top: 3rem; }
@@ -1044,15 +1044,15 @@ Temps indicatif : 5 minutes.
   .timeline > div { display: grid; gap: .65rem; }
   .timeline b { color: var(--economics-accent); font-family: var(--font-mono); }
   .timeline span { border-left: 2px solid var(--economics-accent); padding-left: .8rem; }
-  .timeline small { color: var(--muted); }
+  .timeline small { color: var(--text-muted); }
   .formula-card { margin: 3rem auto 1.5rem; max-width: 46rem; text-align: center; }
   .formula { font-family: var(--font-mono); font-size: clamp(1.2rem, 3vw, 2.5rem); color: var(--economics-accent); }
-  .formula-card p { color: var(--muted); }
+  .formula-card p { color: var(--text-muted); }
   .rank-list { display: grid; gap: .4rem; max-width: 38rem; margin: auto; font-family: var(--font-mono); }
-  .rank-list span { display: flex; justify-content: space-between; border-bottom: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); padding: .3rem; }
+  .rank-list span { display: flex; justify-content: space-between; border-bottom: 1px solid color-mix(in srgb, var(--text-prominent) 14%, transparent); padding: .3rem; }
   .trace-grid, .captology-grid, .domain-grid, .limits-grid, .ecosystem-grid, .references-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
   .trace-grid > div, .captology-grid > div { display: grid; gap: .5rem; padding: 1.2rem; border-top: 4px solid var(--economics-accent); background: color-mix(in srgb, white 36%, transparent); }
-  .trace-grid span, .captology-grid span { color: var(--muted); }
+  .trace-grid span, .captology-grid span { color: var(--text-muted); }
   .tracking-path, .loop-diagram, .social-loop, .files-flow { justify-content: center; margin: 4rem 0 2rem; font-family: var(--font-mono); }
   .privacy-note { margin: 2rem auto; max-width: 52rem; }
   .rtb-flow { justify-content: center; align-items: stretch; margin-top: 3rem; }
@@ -1063,21 +1063,21 @@ Temps indicatif : 5 minutes.
   .social-layer.highlighted { border-color: var(--economics-accent); background: var(--economics-soft); }
   .three-comparison { grid-template-columns: repeat(3, 1fr); margin-top: 3rem; }
   .comparison > div, .compare-ai > div { padding: 1.2rem; }
-  .comparison small, .compare-ai span { color: var(--muted); font-family: var(--font-mono); font-size: .75rem; }
+  .comparison small, .compare-ai span { color: var(--text-muted); font-family: var(--font-mono); font-size: .75rem; }
   .pattern-grid, .case-grid, .audit-grid, .final-grid { grid-template-columns: repeat(2, 1fr); margin-top: 3rem; }
   .pattern-grid > div, .case-grid > div, .audit-grid > div, .final-grid > div { display: flex; gap: 1rem; align-items: baseline; }
   .slot-loop { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 4rem 0 2rem; font-family: var(--font-mono); }
   .zuboff-chain { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: .7rem; align-items: center; margin-top: 3rem; }
-  .zuboff-chain > div { min-height: 8rem; padding: 1rem; display: grid; align-content: center; gap: .6rem; border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent); border-radius: .8rem; }
+  .zuboff-chain > div { min-height: 8rem; padding: 1rem; display: grid; align-content: center; gap: .6rem; border: 1px solid color-mix(in srgb, var(--text-prominent) 14%, transparent); border-radius: .8rem; }
   .zuboff-chain span { color: var(--economics-accent); font-family: var(--font-mono); }
-  .zuboff-chain div span { color: var(--muted); font-family: var(--font-body); font-size: .85rem; }
+  .zuboff-chain div span { color: var(--text-muted); font-family: var(--font-sans); font-size: .85rem; }
   .domain-grid { grid-template-columns: repeat(3, 1fr); }
   .domain-grid > div { text-align: center; font-size: 1.2rem; }
   .compare-ai { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; }
   .compare-ai > div:last-child { border-color: var(--economics-blue); }
   .ai-pipeline { justify-content: center; margin-top: 4rem; }
   .ai-pipeline > div { display: grid; gap: .4rem; padding: 1rem; border: 1px solid var(--economics-accent); border-radius: .8rem; }
-  .ai-pipeline small { color: var(--muted); }
+  .ai-pipeline small { color: var(--text-muted); }
   .activity-card { max-width: 48rem; padding: 2rem; border: 1px solid var(--economics-accent); border-radius: 1.2rem; }
   .wide-activity { max-width: 62rem; }
   .activity-card h1 { max-width: none; }

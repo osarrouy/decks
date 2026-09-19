@@ -88,7 +88,7 @@
   }
 
   .input-row {
-    --signal: color-mix(in srgb, var(--fg), transparent 82%);
+    --signal: color-mix(in srgb, var(--text-prominent), transparent 82%);
     display: grid;
     grid-template-columns: auto auto 1fr;
     gap: 0.75rem;
@@ -118,8 +118,8 @@
     align-items: baseline;
     min-width: 5.4rem;
     padding: 0.75rem 0.9rem;
-    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
-    background: var(--bg);
+    border: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 84%));
+    background: var(--background);
   }
 
   .input-label,
@@ -135,13 +135,13 @@
 
   .input-label,
   .output-chip span {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.56rem, 0.72vw, 0.8rem);
   }
 
   strong {
     color: var(--signal, var(--accent));
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-size: clamp(1.8rem, 3.2vw, 3.4rem);
     font-style: normal;
     font-weight: 300;
@@ -149,7 +149,7 @@
   }
 
   .weight {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.5rem, 0.66vw, 0.72rem);
     white-space: nowrap;
   }
@@ -172,9 +172,9 @@
     display: grid;
     place-items: center;
     aspect-ratio: 1;
-    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 82%));
+    border: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 82%));
     border-radius: 999px;
-    background: color-mix(in srgb, var(--bg), var(--fg) 3%);
+    background: color-mix(in srgb, var(--background), var(--text-prominent) 3%);
     transition:
       border-color 260ms ease,
       background 260ms ease,
@@ -186,15 +186,15 @@
   }
 
   .neuron[data-fires='true'] {
-    background: var(--accent-soft);
+    background: var(--accent-subtle);
     transform: scale(1.02);
   }
 
   .sum,
   .threshold {
     position: absolute;
-    color: var(--fg);
-    font-family: var(--font-heading);
+    color: var(--text-prominent);
+    font-family: var(--font-serif);
     font-size: clamp(1.6rem, 2.9vw, 3rem);
     font-style: italic;
     font-weight: 300;
@@ -210,7 +210,7 @@
 
   .threshold {
     bottom: 30%;
-    color: var(--muted);
+    color: var(--text-muted);
   }
 
   .sum[data-visible='true'],
@@ -241,7 +241,7 @@
   }
 
   .output[data-fires='false'] {
-    --signal: var(--muted);
+    --signal: var(--text-muted);
   }
 
   .formula {
@@ -250,7 +250,7 @@
     flex-wrap: wrap;
     gap: 0.65rem;
     align-items: center;
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.55rem, 0.75vw, 0.82rem);
     opacity: 0;
     transform: translateY(0.4rem);
@@ -263,7 +263,7 @@
   }
 
   .mono {
-    color: var(--fg);
+    color: var(--text-prominent);
   }
 
   @media (max-width: 900px) {

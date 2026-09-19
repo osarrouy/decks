@@ -40,7 +40,7 @@ et **amplification**.
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;width:100%;text-align:center;font-family:var(--font-mono);">
 <div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Broadcast</h3><p>A → B<br>A → C<br>A → D<br>A → E</p></div>
-<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Chaîne virale</h3><p>A → B → C → D<br> ↘ E → F</p></div>
+<div style="border-top:4px solid var(--text-prominent);padding-top:1rem;"><h3>Chaîne virale</h3><p>A → B → C → D<br> ↘ E → F</p></div>
 </div>
 
 --- notes
@@ -57,7 +57,7 @@ Une même cascade peut combiner ces deux formes. La différence oblige cependant
 ## La plupart des cascades restent petites
 
 <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;width:100%;text-align:center;">
-<div style="border:1px solid var(--rule);padding:1rem;">Beaucoup de départs</div><strong>→</strong><div style="border:1px solid var(--accent);padding:1rem;">Très peu de longues chaînes</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Beaucoup de départs</div><strong>→</strong><div style="border:1px solid var(--accent);padding:1rem;">Très peu de longues chaînes</div>
 </div>
 
 --- notes
@@ -118,10 +118,10 @@ l’exposition.
 ## Des points de départ inégaux
 
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;text-align:center;width:100%;font-family:var(--font-mono);font-size:clamp(0.65rem,1.1vw,1rem);">
-<div style="border:1px solid var(--rule);padding:1rem;">Audience</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Centralité</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Relais</div>
-<div style="border:1px solid var(--rule);padding:1rem;">Réputation</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Audience</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Centralité</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Relais</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Réputation</div>
 </div>
 
 --- notes
@@ -199,7 +199,7 @@ Le premier jugement modifiait donc la suite de l’évaluation, sans que le comm
 Plus de 14 000 auditeurs · 2006 {.kicker}
 
 <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;text-align:center;width:100%;">
-<div style="border:1px solid var(--rule);padding:1rem;">Choix sans information sur les autres</div><strong>≠</strong><div style="border:1px solid var(--accent);padding:1rem;">Choix avec téléchargements visibles</div>
+<div style="border:1px solid var(--border-prominent);padding:1rem;">Choix sans information sur les autres</div><strong>≠</strong><div style="border:1px solid var(--accent);padding:1rem;">Choix avec téléchargements visibles</div>
 </div>
 
 --- notes
@@ -242,7 +242,7 @@ Insister sur la nature pédagogique de la formule. Ne pas la présenter comme le
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;">
 <div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Avantages initiaux</h3><p>Audience · relais · budget · temps · compétences</p></div>
-<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Contrepoids</h3><p>Nouveauté · exploration · recommandations au-delà des abonnés</p></div>
+<div style="border-top:4px solid var(--text-prominent);padding-top:1rem;"><h3>Contrepoids</h3><p>Nouveauté · exploration · recommandations au-delà des abonnés</p></div>
 </div>
 
 --- notes
@@ -261,7 +261,7 @@ La popularité antérieure peut donc donner un avantage sans déterminer entièr
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;width:100%;text-align:center;">
 <div style="border-top:4px solid var(--accent);padding-top:1rem;"><h3>Influence</h3><p>B partage après avoir vu A partager.</p></div>
-<div style="border-top:4px solid var(--fg);padding-top:1rem;"><h3>Exposition commune</h3><p>A et B rencontrent la même source extérieure.</p></div>
+<div style="border-top:4px solid var(--text-prominent);padding-top:1rem;"><h3>Exposition commune</h3><p>A et B rencontrent la même source extérieure.</p></div>
 </div>
 
 --- notes

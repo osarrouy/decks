@@ -62,7 +62,7 @@
 
   .caption {
     margin: 0;
-    color: var(--muted);
+    color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: clamp(0.72rem, 0.82cqw, 0.98rem) !important;
     letter-spacing: 0.09em;
@@ -89,8 +89,8 @@
     min-width: 0;
     min-height: clamp(8.5rem, 21cqh, 12.5rem);
     padding: clamp(0.75rem, 1.2cqw, 1.35rem);
-    border: 1px solid color-mix(in srgb, var(--fg), transparent 78%);
-    background: color-mix(in srgb, var(--bg), var(--fg) 2%);
+    border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 78%);
+    background: color-mix(in srgb, var(--background), var(--text-prominent) 2%);
     text-align: center;
   }
 
@@ -121,14 +121,14 @@
   .channel,
   .receiver {
     border-color: color-mix(in srgb, var(--accent), transparent 42%);
-    background: color-mix(in srgb, var(--accent-soft), var(--bg) 34%);
+    background: color-mix(in srgb, var(--accent-subtle), var(--background) 34%);
   }
 
   .node > span,
   .node > small,
   .link span,
   .noise-link span {
-    color: var(--muted);
+    color: var(--text-muted);
     font-family: var(--font-mono);
   }
 
@@ -139,8 +139,8 @@
   }
 
   .node strong {
-    color: var(--fg);
-    font-family: var(--font-heading);
+    color: var(--text-prominent);
+    font-family: var(--font-serif);
     font-size: clamp(1.2rem, 1.6cqw, 1.95rem);
     font-weight: 400;
     line-height: 0.98;

@@ -186,9 +186,9 @@
         gap: 0.8rem;
         width: min(100%, 42rem);
         margin-inline: auto;
-        color: var(--fg);
+        color: var(--text-prominent);
         font-family: var(--font-mono);
-        font-size: var(--small-size);
+        font-size: var(--metadata-font-size);
     }
 
     .schelling-header,
@@ -197,7 +197,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 0.75rem;
-        color: var(--muted);
+        color: var(--text-muted);
         letter-spacing: 0.04em;
         text-transform: uppercase;
     }
@@ -208,11 +208,11 @@
         aspect-ratio: 1;
         gap: 1px;
         padding: 1px;
-        background: color-mix(in srgb, var(--fg), transparent 86%);
+        background: color-mix(in srgb, var(--text-prominent), transparent 86%);
     }
     .cell {
         min-width: 0;
-        background: var(--bg);
+        background: var(--background);
         transition: background-color 120ms ease;
     }
 
@@ -222,7 +222,7 @@
     }
 
     .cell.group-b {
-        background: color-mix(in srgb, var(--fg), var(--accent) 22%);
+        background: color-mix(in srgb, var(--text-prominent), var(--accent) 22%);
         box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.22);
     }
 
@@ -247,12 +247,12 @@
     }
 
     .legend-b {
-        background: color-mix(in srgb, var(--fg), var(--accent) 22%);
+        background: color-mix(in srgb, var(--text-prominent), var(--accent) 22%);
     }
 
     button {
         padding: 0.3rem 0.5rem;
-        border: 1px solid var(--rule);
+        border: 1px solid var(--border-prominent);
         background: transparent;
         color: inherit;
         font: inherit;

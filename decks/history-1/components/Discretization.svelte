@@ -17,7 +17,7 @@
         [255, 224, 255, 255, 255, 255, 255],
     ];
     const formatLevel = (level: number) => String(level);
-    const textColor = (level: number) => (level < 128 ? "#fff" : "var(--fg)");
+    const textColor = (level: number) => (level < 128 ? "#fff" : "var(--text-prominent)");
 </script>
 
 <div
@@ -152,8 +152,8 @@
         gap: 0.8rem;
         min-width: 0;
         padding: clamp(0.7rem, 1.25vw, 1.2rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 84%);
-        background: color-mix(in srgb, var(--bg), var(--fg) 3%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 84%);
+        background: color-mix(in srgb, var(--background), var(--text-prominent) 3%);
         opacity: 0.28;
         transform: translateY(0.45rem);
         transition:
@@ -171,7 +171,7 @@
     .stage[data-current="true"] {
         opacity: 1;
         border-color: var(--accent);
-        background: color-mix(in srgb, var(--accent), var(--bg) 94%);
+        background: color-mix(in srgb, var(--accent), var(--background) 94%);
         box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent), transparent 70%);
     }
 
@@ -203,8 +203,8 @@
     }
 
     strong {
-        color: var(--fg);
-        font-family: var(--font-heading);
+        color: var(--text-prominent);
+        font-family: var(--font-serif);
         font-size: clamp(1.25rem, 2vw, 2rem);
         font-style: italic;
         font-weight: 300;
@@ -213,7 +213,7 @@
     }
 
     small {
-        color: var(--muted);
+        color: var(--text-muted);
         font-size: clamp(0.48rem, 0.62vw, 0.68rem);
     }
 
@@ -226,13 +226,13 @@
 
     .frame {
         fill: none;
-        stroke: color-mix(in srgb, var(--fg), transparent 68%);
+        stroke: color-mix(in srgb, var(--text-prominent), transparent 68%);
         stroke-width: 1;
     }
 
     .curve {
         fill: none;
-        stroke: var(--fg);
+        stroke: var(--text-prominent);
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 24;
@@ -251,7 +251,7 @@
 
     .pixel {
         fill: rgb(var(--level) var(--level) var(--level));
-        stroke: color-mix(in srgb, var(--bg), var(--fg) 38%);
+        stroke: color-mix(in srgb, var(--background), var(--text-prominent) 38%);
         stroke-width: 1;
     }
 
@@ -263,7 +263,7 @@
 
     p {
         margin: 0;
-        color: var(--muted);
+        color: var(--text-muted);
         font-size: clamp(0.53rem, 0.72vw, 0.76rem);
         line-height: 1.4;
     }
@@ -293,7 +293,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 0.35rem 0.7rem;
-        color: var(--muted);
+        color: var(--text-muted);
         font-size: clamp(0.46rem, 0.6vw, 0.64rem);
     }
 

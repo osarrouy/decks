@@ -289,7 +289,7 @@ Cet exemple permet de préciser l’apport de Boole. La logique aristotélicienn
 <p style="font-size:clamp(1rem,1.45vw,1.55rem);">Une règle de décision devient une fonction que l’on peut évaluer.</p>
 <table style="border-collapse:collapse;margin-top:calc(var(--grid-unit) * 3);font-family:var(--font-mono);font-size:clamp(0.9rem,1.25vw,1.3rem);text-align:center;">
     <thead>
-    <tr><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">B</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">C</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--fg);">B ET C</th></tr>
+    <tr><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--text-prominent);">B</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--text-prominent);">C</th><th style="padding:0.45em 0.9em;border-bottom:1px solid var(--text-prominent);">B ET C</th></tr>
     </thead>
     <tbody>
     <tr><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">0</td><td style="padding:0.35em 0.9em;">0</td></tr>

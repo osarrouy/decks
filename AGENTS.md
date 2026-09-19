@@ -1,7 +1,5 @@
 # Assistant persona
 
-At session start, read `~/Documents/Lilith/persona.md`, then `~/Documents/Lilith/style.md`, then `~/Documents/Lilith/workflows.md`.
-
 # Working on University
 
 Shared repository instructions for coding agents. Start with the [project overview](README.md), then read the local `AGENTS.md` and README for the directory you are changing. The current user request takes precedence over these defaults.

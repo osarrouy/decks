@@ -140,9 +140,9 @@
         width: min(100%, 68rem);
         margin: 0 auto;
         padding: clamp(1rem, 2.5vw, 2rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 78%);
-        background: color-mix(in srgb, var(--bg), var(--fg) 3%);
-        box-shadow: 0 1rem 3rem color-mix(in srgb, var(--bg), transparent 35%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 78%);
+        background: color-mix(in srgb, var(--background), var(--text-prominent) 3%);
+        box-shadow: 0 1rem 3rem color-mix(in srgb, var(--background), transparent 35%);
     }
 
     .machine-heading,
@@ -156,7 +156,7 @@
 
     .machine-heading {
         align-items: end;
-        border-bottom: 1px solid color-mix(in srgb, var(--fg), transparent 86%);
+        border-bottom: 1px solid color-mix(in srgb, var(--text-prominent), transparent 86%);
         padding-bottom: 0.8rem;
     }
 
@@ -167,7 +167,7 @@
     .core-copy span,
     .simulation-state span,
     .progression-copy span {
-        color: var(--muted);
+        color: var(--text-muted);
         font-family: var(--font-mono);
         font-size: clamp(0.5rem, 0.7vw, 0.68rem);
         letter-spacing: 0.09em;
@@ -176,8 +176,8 @@
 
     h3 {
         margin: 0.3rem 0 0;
-        color: var(--fg);
-        font-family: var(--font-heading);
+        color: var(--text-prominent);
+        font-family: var(--font-serif);
         font-size: clamp(1.45rem, 3vw, 2.65rem);
         font-weight: 300;
         letter-spacing: -0.05em;
@@ -211,7 +211,7 @@
         gap: 0.85rem;
         min-width: 0;
         padding: clamp(0.75rem, 1.5vw, 1.1rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 84%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 84%);
     }
 
     .panel-label {
@@ -231,7 +231,7 @@
         display: grid;
         align-items: stretch;
         overflow: hidden;
-        background: color-mix(in srgb, var(--bg), var(--fg) 4%);
+        background: color-mix(in srgb, var(--background), var(--text-prominent) 4%);
     }
 
     .program-tape {
@@ -257,8 +257,8 @@
         display: grid;
         place-items: center;
         min-height: clamp(2.8rem, 6vh, 4.2rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 72%);
-        color: var(--fg);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 72%);
+        color: var(--text-prominent);
         font-family: var(--font-mono);
         font-size: clamp(0.75rem, 1.35vw, 1.3rem);
         transition:
@@ -274,19 +274,19 @@
 
     .cell.selected {
         border-color: var(--accent);
-        background: color-mix(in srgb, var(--accent), var(--bg) 88%);
+        background: color-mix(in srgb, var(--accent), var(--background) 88%);
         color: var(--accent);
         transform: translateY(-0.18rem);
     }
 
     .cell.interpreted {
         border-color: color-mix(in srgb, var(--accent), transparent 35%);
-        background: color-mix(in srgb, var(--accent), var(--bg) 92%);
+        background: color-mix(in srgb, var(--accent), var(--background) 92%);
     }
 
     .cell.active {
         border-color: var(--accent);
-        background: color-mix(in srgb, var(--accent), var(--bg) 82%);
+        background: color-mix(in srgb, var(--accent), var(--background) 82%);
         color: var(--accent);
         transform: scale(1.04);
     }
@@ -301,7 +301,7 @@
         gap: 0.9rem;
         padding: 0.8rem;
         border: 1px solid color-mix(in srgb, var(--accent), transparent 55%);
-        background: color-mix(in srgb, var(--accent), var(--bg) 93%);
+        background: color-mix(in srgb, var(--accent), var(--background) 93%);
     }
 
     .core-symbol {
@@ -317,7 +317,7 @@
     }
 
     .core-copy strong {
-        font-family: var(--font-heading);
+        font-family: var(--font-serif);
         font-size: clamp(1rem, 1.6vw, 1.35rem);
         font-weight: 400;
     }
@@ -330,7 +330,7 @@
     }
 
     .interpretation-arrow {
-        color: var(--muted);
+        color: var(--text-muted);
         font-family: var(--font-mono);
         font-size: 1.2rem;
         line-height: 0.7;
@@ -344,8 +344,8 @@
         gap: clamp(0.4rem, 0.9vw, 0.8rem);
         min-height: 3.4rem;
         padding: 0.6rem;
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 88%);
-        color: color-mix(in srgb, var(--muted), transparent 10%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 88%);
+        color: color-mix(in srgb, var(--text-muted), transparent 10%);
         font-family: var(--font-mono);
         font-size: clamp(0.75rem, 1.25vw, 1.2rem);
         opacity: 0.4;
@@ -357,7 +357,7 @@
 
     .decoded-rule[data-active="true"] {
         border-color: color-mix(in srgb, var(--accent), transparent 35%);
-        color: var(--fg);
+        color: var(--text-prominent);
         opacity: 1;
     }
 
@@ -388,7 +388,7 @@
     }
 
     .universality-note code {
-        color: var(--fg);
+        color: var(--text-prominent);
         font-family: var(--font-mono);
         font-size: clamp(0.58rem, 0.85vw, 0.82rem);
     }
@@ -409,7 +409,7 @@
         display: block;
         width: 0.48rem;
         height: 0.48rem;
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 55%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 55%);
         border-radius: 50%;
         transition:
             background 260ms ease,
@@ -434,8 +434,8 @@
     }
 
     .progression-copy strong {
-        color: var(--fg);
-        font-family: var(--font-heading);
+        color: var(--text-prominent);
+        font-family: var(--font-serif);
         font-size: clamp(0.95rem, 1.5vw, 1.3rem);
         font-weight: 400;
     }

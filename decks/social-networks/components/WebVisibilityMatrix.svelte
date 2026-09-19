@@ -93,7 +93,7 @@
     .web-visibility {
         width: min(100%, 64rem);
         margin: 1.5rem auto 0;
-        color: var(--foreground, var(--fg));
+        color: var(--text-prominent);
     }
 
     .matrix {
@@ -108,7 +108,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         /*border: 1px solid*/
         border: none;
-        /*color-mix(in srgb, var(--foreground, var(--fg)) 38%, transparent);*/
+        /*color-mix(in srgb, var(--text-prominent) 38%, transparent);*/
         /*background: color-mix(in srgb, white 35%, transparent);*/
     }
 
@@ -125,12 +125,12 @@
 
     /*.quadrant:nth-child(odd) {
         border-right: 1px solid
-            color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
+            color-mix(in srgb, var(--text-prominent) 24%, transparent);
     }*/
 
     /*.quadrant:nth-child(-n + 2) {
         border-bottom: 1px solid
-            color-mix(in srgb, var(--foreground, var(--fg)) 24%, transparent);
+            color-mix(in srgb, var(--text-prominent) 24%, transparent);
     }*/
 
     .quadrant h3 {
@@ -152,7 +152,7 @@
         padding: 0;
         font-weight: 300;
         /*padding-left: 1rem;*/
-        /*color: var(--muted);*/
+        /*color: var(--text-muted);*/
         list-style-type: none;
     }
 

@@ -240,7 +240,7 @@
   :global(.context-axon),
   :global(.context-soma),
   :global(.context-nucleus) {
-    stroke: color-mix(in srgb, var(--muted), transparent 24%);
+    stroke: color-mix(in srgb, var(--text-muted), transparent 24%);
   }
 
   .network-context .context-link {
@@ -257,12 +257,12 @@
   }
 
   :global(.context-soma) {
-    fill: var(--bg);
+    fill: var(--background);
     stroke-width: 1.8;
   }
 
   :global(.context-nucleus) {
-    fill: color-mix(in srgb, var(--bg), var(--fg) 7%);
+    fill: color-mix(in srgb, var(--background), var(--text-prominent) 7%);
     stroke-width: 1.2;
   }
 
@@ -270,7 +270,7 @@
   circle,
   ellipse {
     fill: none;
-    stroke: var(--muted);
+    stroke: var(--text-muted);
     stroke-width: 2.2;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -323,7 +323,7 @@
   }
 
   .synaptic-inputs .bouton {
-    fill: var(--accent-soft);
+    fill: var(--accent-subtle);
     stroke-width: 1.6;
   }
 
@@ -333,12 +333,12 @@
   }
 
   .synapse-callout path {
-    stroke: var(--muted);
+    stroke: var(--text-muted);
     stroke-width: 1;
   }
 
   .synapse-callout text {
-    fill: var(--muted);
+    fill: var(--text-muted);
     stroke: none;
     font-family: var(--font-mono);
     font-size: 8px;
@@ -381,14 +381,14 @@
   }
 
   .cell-body .soma {
-    fill: var(--bg);
-    stroke: color-mix(in srgb, var(--muted), transparent 62%);
+    fill: var(--background);
+    stroke: color-mix(in srgb, var(--text-muted), transparent 62%);
     stroke-width: 2.7;
   }
 
   .cell-body .nucleus {
-    fill: color-mix(in srgb, var(--bg), var(--fg) 9%);
-    stroke: color-mix(in srgb, var(--muted), transparent 28%);
+    fill: color-mix(in srgb, var(--background), var(--text-prominent) 9%);
+    stroke: color-mix(in srgb, var(--text-muted), transparent 28%);
     stroke-width: 1.8;
     transition:
       fill 240ms ease,
@@ -400,7 +400,7 @@
   }
 
   .cell-body[data-threshold='true'] .nucleus {
-    fill: var(--accent-soft);
+    fill: var(--accent-subtle);
     stroke: var(--accent);
   }
 
@@ -417,7 +417,7 @@
   }
 
   .terminals .bouton {
-    fill: var(--accent-soft);
+    fill: var(--accent-subtle);
     stroke-width: 1.6;
   }
 
@@ -460,7 +460,7 @@
     gap: 0.45rem;
     min-height: 7rem;
     padding: 0.8rem;
-    border-top: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
+    border-top: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 84%));
     opacity: 0.28;
     transform: translateY(0.35rem);
     transition: 240ms ease;
@@ -473,7 +473,7 @@
 
   .steps p {
     margin: 0;
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.75rem, 0.95vw, 1rem) !important;
     line-height: 1.35 !important;
   }

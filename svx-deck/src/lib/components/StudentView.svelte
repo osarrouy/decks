@@ -140,6 +140,7 @@
     overflow: hidden;
   }
   .student-slide-viewport {
+    container-type: inline-size;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;

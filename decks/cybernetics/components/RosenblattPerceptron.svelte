@@ -102,8 +102,8 @@
   .learning,
   .plane,
   .model {
-    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
-    background: color-mix(in srgb, var(--bg), var(--fg) 3%);
+    border: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 84%));
+    background: color-mix(in srgb, var(--background), var(--text-prominent) 3%);
   }
 
   .perceptron-card {
@@ -123,8 +123,8 @@
 
   .perceptron-card strong,
   .example strong {
-    color: var(--fg);
-    font-family: var(--font-heading);
+    color: var(--text-prominent);
+    font-family: var(--font-serif);
     font-size: clamp(1.7rem, 2.8vw, 3.2rem);
     font-style: italic;
     font-weight: 300;
@@ -136,7 +136,7 @@
   .example p,
   .update p {
     margin: 0;
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.78rem, 1.05vw, 1.04rem) !important;
     line-height: 1.45 !important;
   }
@@ -183,7 +183,7 @@
     gap: 0.2rem 0.65rem;
     align-items: baseline;
     padding: 0.72rem 0.8rem;
-    border-top: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
+    border-top: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 84%));
     opacity: 0;
     transform: translateX(-0.4rem);
     transition:
@@ -198,7 +198,7 @@
 
   .weighted-input span,
   .weighted-input em {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.5rem, 0.64vw, 0.72rem);
   }
 
@@ -206,7 +206,7 @@
   .unit strong,
   .prediction strong {
     color: var(--accent);
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-size: clamp(1.8rem, 3vw, 3.3rem);
     font-style: normal;
     font-weight: 300;
@@ -224,7 +224,7 @@
     place-items: center;
     gap: 0.4rem;
     aspect-ratio: 1;
-    border: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 82%));
+    border: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 82%));
     border-radius: 999px;
     opacity: 0.32;
     transition: 240ms ease;
@@ -232,14 +232,14 @@
 
   .unit[data-active='true'] {
     border-color: var(--accent);
-    background: var(--accent-soft);
+    background: var(--accent-subtle);
     opacity: 1;
   }
 
   .sum,
   .cut,
   .prediction em {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.48rem, 0.62vw, 0.7rem);
   }
 
@@ -248,7 +248,7 @@
     place-items: center;
     gap: 0.35rem;
     min-height: 8rem;
-    border-left: 1px solid var(--rule, color-mix(in srgb, var(--fg), transparent 84%));
+    border-left: 1px solid var(--border-prominent, color-mix(in srgb, var(--text-prominent), transparent 84%));
     opacity: 0;
     transform: translateX(0.4rem);
     transition: 240ms ease;
@@ -297,7 +297,7 @@
   }
 
   .mono {
-    color: var(--fg);
+    color: var(--text-prominent);
     font-size: clamp(0.7rem, 0.95vw, 1.05rem);
   }
 
@@ -322,8 +322,8 @@
     position: absolute;
     inset: 1rem;
     background:
-      linear-gradient(var(--rule, #e8e8e6) 1px, transparent 1px),
-      linear-gradient(90deg, var(--rule, #e8e8e6) 1px, transparent 1px);
+      linear-gradient(var(--border-prominent, #e8e8e6) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-prominent, #e8e8e6) 1px, transparent 1px);
     background-size: 25% 25%;
     opacity: 0.55;
   }
@@ -332,7 +332,7 @@
   .caption {
     position: absolute;
     z-index: 2;
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: clamp(0.48rem, 0.62vw, 0.7rem);
   }
 
@@ -353,7 +353,7 @@
     top: 50%;
     width: 92%;
     height: 2px;
-    background: var(--muted);
+    background: var(--text-muted);
     transform-origin: left center;
     transition:
       opacity 240ms ease,
@@ -386,7 +386,7 @@
     width: 2rem;
     aspect-ratio: 1;
     border-radius: 999px;
-    background: var(--bg);
+    background: var(--background);
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -406,7 +406,7 @@
   .point.negative {
     left: 26%;
     top: 63%;
-    color: var(--muted);
+    color: var(--text-muted);
   }
 
   .point.training {
@@ -423,7 +423,7 @@
 
   .point.training[data-corrected='true'] {
     transform: scale(1);
-    background: var(--bg);
+    background: var(--background);
     color: var(--accent);
   }
 

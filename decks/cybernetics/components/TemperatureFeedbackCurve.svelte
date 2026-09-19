@@ -201,7 +201,7 @@
     .legend span {
         position: relative;
         padding-left: 1.8rem;
-        color: var(--muted);
+        color: var(--text-muted);
         opacity: 0.28;
         transition: opacity 260ms ease;
     }
@@ -244,14 +244,14 @@
     }
 
     .grid line {
-        stroke: color-mix(in srgb, var(--fg), transparent 91%);
+        stroke: color-mix(in srgb, var(--text-prominent), transparent 91%);
         stroke-width: 1;
         vector-effect: non-scaling-stroke;
     }
 
     .grid line:first-child,
     .grid line:nth-child(2) {
-        stroke: color-mix(in srgb, var(--fg), transparent 68%);
+        stroke: color-mix(in srgb, var(--text-prominent), transparent 68%);
     }
 
     .axes text,
@@ -260,7 +260,7 @@
     .cooling-correction text,
     .stable-label text,
     .tuning-labels text {
-        fill: var(--muted);
+        fill: var(--text-muted);
         font-family: var(--font-mono);
         font-size: 14px;
         letter-spacing: 0.06em;
@@ -282,14 +282,14 @@
     }
 
     .setpoint-line {
-        stroke: color-mix(in srgb, var(--fg), transparent 45%);
+        stroke: color-mix(in srgb, var(--text-prominent), transparent 45%);
         stroke-dasharray: 7 8;
         stroke-width: 1.5;
         vector-effect: non-scaling-stroke;
     }
 
     .setpoint-label {
-        fill: var(--fg);
+        fill: var(--text-prominent);
     }
 
     .start-point {

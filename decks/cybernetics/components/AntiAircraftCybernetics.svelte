@@ -120,8 +120,8 @@
 <style>
     .anti-aircraft {
         --cycle: 9s;
-        --ink-soft: color-mix(in srgb, var(--fg), transparent 72%);
-        --ink-faint: color-mix(in srgb, var(--fg), transparent 88%);
+        --ink-soft: color-mix(in srgb, var(--text-prominent), transparent 72%);
+        --ink-faint: color-mix(in srgb, var(--text-prominent), transparent 88%);
 
         display: grid;
         gap: clamp(0.45rem, 0.9vw, 0.85rem);
@@ -151,7 +151,7 @@
 
     .moving-target {
         animation: target-visibility var(--cycle) linear infinite;
-        color: var(--fg);
+        color: var(--text-prominent);
     }
 
     .target-cross {
@@ -246,14 +246,14 @@
     }
 
     .correction-target circle {
-        fill: var(--bg);
-        stroke: var(--fg);
+        fill: var(--background);
+        stroke: var(--text-prominent);
         stroke-width: 1.5;
     }
 
     .correction-target path {
         fill: none;
-        stroke: var(--fg);
+        stroke: var(--text-prominent);
         stroke-dasharray: 2 5;
         stroke-width: 1;
     }
@@ -310,7 +310,7 @@
 
     .scene-label,
     .system-label {
-        fill: var(--muted);
+        fill: var(--text-muted);
         font-family: var(--font-mono);
         font-size: 13px;
         font-weight: 400;
@@ -332,14 +332,14 @@
     .system-node circle,
     .system-node path {
         fill: none;
-        stroke: var(--fg);
+        stroke: var(--text-prominent);
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 1.4;
     }
 
     .system-node > circle:first-child {
-        fill: var(--bg);
+        fill: var(--background);
     }
 
     .system-node .system-center {
@@ -352,7 +352,7 @@
         align-items: center;
         justify-content: center;
         gap: clamp(0.55rem, 1.4vw, 1.5rem);
-        color: var(--muted);
+        color: var(--text-muted);
         font-family: var(--font-mono);
         font-size: clamp(0.72rem, 0.95vw, 1rem);
         font-weight: 350;
@@ -367,7 +367,7 @@
 
     .cycle .arrow,
     .cycle .loop-arrow {
-        color: color-mix(in srgb, var(--muted), transparent 38%);
+        color: color-mix(in srgb, var(--text-muted), transparent 38%);
     }
 
     .observe {
@@ -609,7 +609,7 @@
         8%,
         32%,
         100% {
-            color: var(--muted);
+            color: var(--text-muted);
         }
         13%,
         27% {
@@ -622,7 +622,7 @@
         25%,
         54%,
         100% {
-            color: var(--muted);
+            color: var(--text-muted);
         }
         32%,
         49% {
@@ -635,7 +635,7 @@
         46%,
         69%,
         100% {
-            color: var(--muted);
+            color: var(--text-muted);
         }
         52%,
         64% {
@@ -648,7 +648,7 @@
         65%,
         92%,
         100% {
-            color: var(--muted);
+            color: var(--text-muted);
         }
         72%,
         87% {
@@ -661,7 +661,7 @@
         69%,
         92%,
         100% {
-            color: var(--muted);
+            color: var(--text-muted);
             transform: rotate(0);
         }
         76%,

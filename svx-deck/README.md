@@ -136,7 +136,9 @@ The default frame uses DG's one-pixel `--border` strokes and corner crosses. Its
 
 Imported CSS and component sources participate in normal Vite hot reload. There is no theme registry, theme package or per-deck theme selection.
 
-Existing teaching sources were moved without edits. Their historical `theme` fields are ignored; the runtime resolves their former package imports and supplies local CSS values derived from `@dg/ui`. These accommodations preserve authored material and do not introduce another theme. New code uses `@svx-deck/core` and the current design tokens directly.
+Slide surfaces use DG's `.typography` context and set only `--font-size-base` for their type scale. The surrounding view supplies a query container, so projection, presenter, student and embedded surfaces follow their own available width. The document root, notes and controls keep their normal scale. H1 uses DG's viewport-fluid formula where typed CSS division is supported, with DG's proportional fallback elsewhere.
+
+Teaching sources use current DG color and font-family tokens. Their historical `theme` fields are ignored and former package imports remain resolved by the runtime. Technical token migrations preserve prose, notes, metadata and assets. New code uses `@svx-deck/core` and the current design tokens directly.
 
 ## Verify
 

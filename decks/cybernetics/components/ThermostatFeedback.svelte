@@ -146,14 +146,14 @@
         width: 100%;
         min-height: min(56vh, 34rem);
         padding: clamp(1.1rem, 1.8vw, 1.6rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 86%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 86%);
         border-radius: 1.25rem;
         background: radial-gradient(
                 circle at 50% 0%,
                 color-mix(in srgb, var(--accent), transparent 92%),
                 transparent 46%
             ),
-            color-mix(in srgb, var(--bg), var(--fg) 2%);
+            color-mix(in srgb, var(--background), var(--text-prominent) 2%);
     }
 
     .setpoint {
@@ -168,7 +168,7 @@
         padding: 0.55rem 1rem;
         border: 1px solid color-mix(in srgb, var(--accent), transparent 58%);
         border-radius: 0.8rem;
-        background: var(--bg);
+        background: var(--background);
         opacity: 0.5;
         transform: translate(-50%, -50%);
         transition: opacity 240ms ease;
@@ -183,7 +183,7 @@
     section > small,
     .connector span,
     .screen span {
-        color: var(--muted);
+        color: var(--text-muted);
         font-family: var(--font-mono);
         font-size: clamp(0.58rem, 0.7vw, 0.74rem);
         letter-spacing: 0.09em;
@@ -198,7 +198,7 @@
 
     .setpoint small {
         grid-column: 1 / -1;
-        color: var(--muted);
+        color: var(--text-muted);
         font-family: var(--font-mono);
         font-size: clamp(0.52rem, 0.62vw, 0.66rem);
     }
@@ -225,9 +225,9 @@
 
     section {
         min-height: clamp(11.5rem, 24vh, 15rem);
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 84%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 84%);
         border-radius: 1rem;
-        background: color-mix(in srgb, var(--bg), var(--fg) 3%);
+        background: color-mix(in srgb, var(--background), var(--text-prominent) 3%);
         opacity: 0.32;
         transition: 280ms ease;
     }
@@ -271,8 +271,8 @@
     .room-scene {
         position: relative;
         min-height: 7rem;
-        border-right: 2px solid color-mix(in srgb, var(--fg), transparent 72%);
-        border-bottom: 2px solid color-mix(in srgb, var(--fg), transparent 72%);
+        border-right: 2px solid color-mix(in srgb, var(--text-prominent), transparent 72%);
+        border-bottom: 2px solid color-mix(in srgb, var(--text-prominent), transparent 72%);
     }
 
     .window {
@@ -283,11 +283,11 @@
         grid-template-columns: 1fr 1fr;
         width: 4.2rem;
         height: 3.5rem;
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 62%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 62%);
     }
 
     .window i + i {
-        border-left: 1px solid color-mix(in srgb, var(--fg), transparent 72%);
+        border-left: 1px solid color-mix(in srgb, var(--text-prominent), transparent 72%);
     }
 
     .thermometer {
@@ -297,9 +297,9 @@
         width: 0.7rem;
         height: 4.8rem;
         overflow: hidden;
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 42%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 42%);
         border-radius: 999px;
-        background: var(--bg);
+        background: var(--background);
     }
 
     .temperature-level {
@@ -328,8 +328,8 @@
         display: grid;
         gap: 0.4rem;
         padding: 0.8rem;
-        border: 1px solid color-mix(in srgb, var(--fg), transparent 72%);
-        background: color-mix(in srgb, var(--bg), black 12%);
+        border: 1px solid color-mix(in srgb, var(--text-prominent), transparent 72%);
+        background: color-mix(in srgb, var(--background), black 12%);
         text-align: center;
     }
 
@@ -343,7 +343,7 @@
         justify-self: center;
         padding: 0.35rem 0.65rem;
         border-radius: 999px;
-        background: var(--accent-soft);
+        background: var(--accent-subtle);
         color: var(--accent);
         font-family: var(--font-mono);
         font-size: clamp(0.62rem, 0.72vw, 0.78rem);
@@ -361,7 +361,7 @@
         display: grid;
         gap: 0.35rem;
         place-items: center;
-        color: var(--muted);
+        color: var(--text-muted);
         opacity: 0.16;
         transition: 260ms ease;
     }
@@ -405,14 +405,14 @@
         width: 6.6rem;
         height: 5.1rem;
         padding: 0.42rem;
-        border: 2px solid color-mix(in srgb, var(--fg), transparent 45%);
+        border: 2px solid color-mix(in srgb, var(--text-prominent), transparent 45%);
         border-radius: 0.55rem;
     }
 
     .radiator i {
         flex: 1;
         border-radius: 999px;
-        background: color-mix(in srgb, var(--fg), transparent 78%);
+        background: color-mix(in srgb, var(--text-prominent), transparent 78%);
         transition: background 260ms ease;
     }
 
@@ -460,7 +460,7 @@
     .physical-effect {
         position: relative;
         height: clamp(3.6rem, 6.5vh, 4.8rem);
-        color: var(--muted);
+        color: var(--text-muted);
         opacity: 0.14;
         transition: opacity 300ms ease;
     }
@@ -493,7 +493,7 @@
         width: max-content;
         max-width: 76%;
         padding: 0.15rem 0.55rem;
-        background: var(--bg);
+        background: var(--background);
         font-family: var(--font-mono);
         font-size: clamp(0.58rem, 0.68vw, 0.72rem);
         letter-spacing: 0.07em;
@@ -513,7 +513,7 @@
     .status {
         min-height: 1.4em;
         margin: 0;
-        color: var(--muted);
+        color: var(--text-muted);
         font-size: clamp(0.78rem, 0.92vw, 0.95rem);
         text-align: center;
     }

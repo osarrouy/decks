@@ -154,7 +154,7 @@
     .power-law {
         width: min(100%, 78rem);
         margin: 1rem auto 0;
-        color: var(--foreground, var(--fg));
+        color: var(--text-prominent);
     }
 
     .power-law svg {
@@ -204,7 +204,7 @@
     .tail-label,
     .axis-label,
     .curve-note {
-        fill: var(--foreground, var(--fg));
+        fill: var(--text-prominent);
         font-family: var(--font-mono);
         font-size: 18px;
         font-weight: 300;
@@ -218,17 +218,17 @@
     }
 
     .tail-label {
-        fill: var(--muted);
+        fill: var(--text-muted);
     }
 
     .axis-label {
-        fill: var(--muted);
+        fill: var(--text-muted);
         font-size: 15px;
         letter-spacing: 0.14em;
     }
 
     .curve-note {
-        fill: var(--muted);
+        fill: var(--text-muted);
         font-size: 16px;
         font-style: italic;
     }

@@ -71,6 +71,7 @@
     color: var(--text-prominent);
   }
   .viewport {
+    container-type: inline-size;
     min-height: 0;
     overflow: hidden;
   }

@@ -54,6 +54,34 @@ for (const width of [1280, 390]) {
         "font-family",
         /Instrument Serif/,
       );
+      const scale = await surface.evaluate((element) => {
+        const heading = element.querySelector("h1");
+        const control = document.querySelector("nav button");
+        const read = () => ({
+          base: parseFloat(
+            getComputedStyle(element).getPropertyValue("--font-size-base"),
+          ),
+          heading: parseFloat(getComputedStyle(heading).fontSize),
+          body: getComputedStyle(document.body).fontSize,
+          root: getComputedStyle(document.documentElement).fontSize,
+          control: getComputedStyle(control).fontSize,
+          width: element.getBoundingClientRect().width,
+        });
+        const before = read();
+        element.style.setProperty("--font-size-base", `${before.base * 2}px`);
+        const after = read();
+        element.style.removeProperty("--font-size-base");
+        return { before, after };
+      });
+      expect(scale.before.base).toBeCloseTo(
+        Math.max(12, Math.min(32, scale.before.width * 0.02)),
+        2,
+      );
+      expect(scale.after.heading).toBeCloseTo(scale.before.heading * 2, 2);
+      expect(scale.after.body).toBe(scale.before.body);
+      expect(scale.after.root).toBe(scale.before.root);
+      expect(scale.after.control).toBe(scale.before.control);
+      expect(scale.after.width).toBe(scale.before.width);
       const corners = surface.locator(":scope > .corners.crossed");
       await expect(corners).toHaveCount(1);
       await expect(corners).toHaveCSS("pointer-events", "none");
