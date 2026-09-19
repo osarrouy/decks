@@ -5,7 +5,7 @@
     "Un historique est partagé par tous les nœuds.",
     "Deux blocs valides arrivent presque simultanément : la chaîne diverge.",
     "Une branche reçoit un bloc supplémentaire.",
-    "Les nœuds adoptent la chaîne la plus longue ; l’autre bloc devient orphelin.",
+    "À difficulté égale, les nœuds suivent la plus longue chaîne valide.",
   ];
 
   const step = getStepContext();
@@ -14,7 +14,7 @@
 
 <figure
   data-phase={phase}
-  aria-label="Choix de la chaîne la plus longue après une bifurcation"
+  aria-label="Choix entre deux branches valides à difficulté de production égale"
 >
   <svg viewBox="0 0 760 390" role="img" aria-hidden="true">
     <defs>
@@ -71,7 +71,7 @@
       <path class="tick" d="m 681 112 7 7 13-16"></path>
 
       <text class="branch-label rejected" x="350" y="356"
-        >2 blocs · branche orpheline</text
+        >2 blocs · branche écartée</text
       >
       <circle class="status rejected" cx="690" cy="278" r="18"></circle>
       <path class="cross" d="m 682 270 16 16 m 0-16-16 16"></path>

@@ -41,13 +41,16 @@ Second slide.
 `;
 
 async function fixture(run) {
-  const root = await mkdtemp(resolve(tmpdir(), "svx-deck-test-"));
+  const temp = await mkdtemp(resolve(tmpdir(), "svx-deck-test-"));
+  const collection = resolve(temp, "decks");
+  const root = resolve(collection, "fixture");
   try {
+    await mkdir(root, { recursive: true });
     await writeFile(resolve(root, "deck.svx"), source);
-    await run(root);
+    await run(root, collection);
     assert.equal(await readFile(resolve(root, "deck.svx"), "utf8"), source);
   } finally {
-    await rm(root, { recursive: true, force: true });
+    await rm(temp, { recursive: true, force: true });
   }
 }
 
@@ -65,6 +68,27 @@ test("the shared parser preserves order, steps and notes with repeated titles", 
   assert.match(
     renderGeneratedSlide(deck.slides[0]),
     /@svx-deck\/core\/components\/Persona.svelte/,
+  );
+  assert.match(
+    renderGeneratedSlide(deck.slides[0]),
+    /@svx-deck\/core\/components\/FramedImage.svelte/,
+  );
+});
+
+test("shared component imports replace matching manual imports", () => {
+  const rendered = renderGeneratedSlide({
+    metadata: {},
+    content: `<script>
+  import FramedImage from '@svx-deck/core/components/FramedImage.svelte'
+</script>
+<FramedImage src="/example.jpg" alt="Example" />`,
+  });
+
+  assert.equal(
+    rendered.match(
+      /import FramedImage from '@svx-deck\/core\/components\/FramedImage\.svelte'/g,
+    )?.length,
+    1,
   );
 });
 
@@ -96,18 +120,58 @@ test("generation filters student notes and removes stale output without editing 
     assert.doesNotMatch(notes, /Private presentation direction|:::comment/);
   }));
 
-test("frontmatter config works without a config file and custom themes are ignored", async () =>
-  fixture(async (root) => {
+test("shared YAML, frontmatter and local YAML follow the documented precedence", async () =>
+  fixture(async (root, collection) => {
     assert.equal((await loadDeckConfig(root)).title, "Fixture");
-    const custom =
-      "export default { title: 'Configured', theme: '@missing/theme' }\n";
-    await writeFile(resolve(root, "deck.config.ts"), custom);
+    await writeFile(
+      resolve(collection, "deck.config.yaml"),
+      [
+        "title: Shared fallback",
+        "description: Shared description",
+        "template:",
+        "  source: deck.svx",
+        '  notesSeparator: "--- shared notes"',
+        "",
+      ].join("\n"),
+    );
+    const inherited = await loadDeckConfig(root);
+    assert.equal(inherited.title, "Fixture");
+    assert.equal(inherited.description, "Shared description");
+    assert.equal(inherited.template.source, "deck.svx");
+    assert.equal(inherited.template.slideSeparator, "---");
+    assert.equal(inherited.template.notesSeparator, "--- shared notes");
+
+    const custom = [
+      "title: Configured",
+      "template:",
+      '  notesSeparator: "--- notes"',
+      "",
+    ].join("\n");
+    await writeFile(resolve(root, "deck.config.yaml"), custom);
     const config = await loadDeckConfig(root);
     assert.equal(config.title, "Configured");
-    assert.equal(Object.hasOwn(config, "theme"), false);
+    assert.equal(config.description, "Shared description");
+    assert.equal(config.template.source, "deck.svx");
+    assert.equal(config.template.notesSeparator, "--- notes");
     assert.equal(
-      await readFile(resolve(root, "deck.config.ts"), "utf8"),
+      await readFile(resolve(root, "deck.config.yaml"), "utf8"),
       custom,
+    );
+  }));
+
+test("YAML configuration rejects unsupported keys and legacy TypeScript", async () =>
+  fixture(async (root) => {
+    await writeFile(resolve(root, "deck.config.yaml"), "theme: gallery\n");
+    await assert.rejects(
+      loadDeckConfig(root),
+      /unknown configuration key "theme"/,
+    );
+
+    await rm(resolve(root, "deck.config.yaml"));
+    await writeFile(resolve(root, "deck.config.ts"), "export default {}\n");
+    await assert.rejects(
+      loadDeckConfig(root),
+      /use deck\.config\.yaml instead/,
     );
   }));
 

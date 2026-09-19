@@ -3,90 +3,11 @@ title: Blockchain et crypto-monnaies — Bitcoin
 theme: gallery
 ---
 
-<!-- slide: id="blockchain-001-blockchain-101" title="blockchain 101" layout="cover" -->
-# blockchain 101
-olivier.sarrouy@univ-rennes2.fr {.kicker}
-
---- notes
-
-↦ Pas de réseaux sociaux.
+# Bitcoin
+A Peer-to-Peer Electronic Cash System {.kicker}
 
 ---
-<!-- slide: id="blockchain-002-https-etudiants-univ-rennes2-fr-vie-etudiante-signalem" title="https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences" layout="center" -->
-###### https://etudiants.univ-rennes2.fr/vie-etudiante/signalement-violences
-##### vss-sse@univ-rennes.fr
-
----
-<!-- slide: id="blockchain-003-wtf" title="WTF" layout="center" -->
-## WTF
-
---- notes
-
-↦ Non pas spéculer sur la valeur des crypto-monnaies, non pas fournir des conseils d'investissements, etc ... mais :
-
-1. Essayer de vous expliquer - au moins superficiellement - ce qu'est une blockchain, comment cela fonctionne, etc.
-
-2. Essayer de penser les rationalités politiques qui se cachent derrière les blockchains.
-
-↦ Les ingénieurs - en particulier dans le champ des cryptos - ne sont pas « bêtement » ingénieurs : ils ne se contentent pas de résoudre des problèmes techniques.
-
-↦ Leur activité d'ingénieur est le plus souvent motivée par une vision politique : parfois de manière très claire et explicite, parfois de façon plus implicite.
-
-↦ En particulier par une certaine idée de ce que pourrait être un art juste de gouverner, nourri par une franche méfiance des institutions et des états.
-
-↦ Le but de la plupart de ces ingénieurs est de décentraliser les institutions en les remplaçant par des dispositifs crypto-économiques.
-
-↦ En est même né un champ d’expertise nouveaux : le « mechanism design ».
-
-↦ Le principe du « mechanism design » est de « programmer » des comportements humains par la conception et l'implémentation de mécanismes d'incitation économique.
-
-↦ Ex. DAI : comment orienter les comportements d'émission d'une monnaie pour assurer la stabilité de sa valeur.
-
-↦ Ex. Comment concevoir un mécanisme de prise de décision collective qui soit simultanément juste et efficace ?
-
-↦ Ex. Comment rémunérer les utilisateurs d'un protocole d'une manière qui soit économiquement soutenable ?
-
-↦ L’objectif de ce cours va être de vous donner à éprouver ces questions et la manière dont l'écosystème blockchain les conçoit  - et nous verrons qu'il s'agit là d'une manière bien particulière de penser le politique et l'art de gouverner les foules.
-
-↦ Le cours alternera entre la présentation de cas d'usage concrets de la blockchain - les crypto-monnaies, évidemment, mais aussi les NFTs, les problématiques de gouvernance, etc. - et l'analyse des rationalités politiques qui les nourrissent.
-
----
-<!-- slide: id="blockchain-004-plan" title="plan" -->
-## plan
-
-Histoire
-
-Money ?
-
-Technique
-
-Pratique
-
-Gouvernance
-
-NFT
-
----
-<!-- slide: id="blockchain-005-examen" title="examen" -->
-## examen
-
-Assidus : QCM et mini-dissertation
-Dispensés : dossier
-
----
-<!-- slide: id="blockchain-006-bitcoin" title="Bitcoin" -->
-<script>
-  import BackgroundMedia from '$components/BackgroundMedia.svelte'
-</script>
-
-<BackgroundMedia src="/assets/7f09ac927b822cc89f9e4167c82290273f747a31.mp4" alt="Bitcoin" video={true} darken={true}>
-  <h2>Bitcoin</h2>
-</BackgroundMedia>
-
----
-<!-- slide: id="blockchain-007-bitcoin-a-peer-to-peer-electronic-cash-system" title="Bitcoin: A Peer-to-Peer Electronic Cash System" layout="center" -->
  > *Bitcoin: A Peer-to-Peer Electronic Cash System*
-┄
 Satoshi Nakamoto, 2008 {.kicker}
 
 --- notes
@@ -100,14 +21,10 @@ Nous allons revenir, d’ici peu, sur ce que cela signifie exactement. Mais d’
 [^1]: https://www.mail-archive.com/cryptography@metzdowd.com/msg09959.html
 
 ---
-<!-- slide: id="blockchain-008-satoshi-nakamoto" title="Satoshi Nakamoto" -->
-<script>
-  import BackgroundMedia from '$components/BackgroundMedia.svelte'
-</script>
-
-<BackgroundMedia src="/assets/photo-1662841256780-d2572552bbd5.jpg" alt="Satoshi Nakamoto" video={false} darken={true}>
-  <h2>Satoshi Nakamoto</h2>
-</BackgroundMedia>
+<Persona
+  name="Satoshi Nakamoto"
+  picture="/assets/photo-1662841256780-d2572552bbd5.jpg"
+/>
 
 --- notes
 
@@ -253,98 +170,329 @@ L’État vole donc au secours des banques et fait tourner la planche à billet 
 
 --- notes
 
-↦ C'est ce qu'on appelle le problème de la création monétaire.
+Pour comprendre la création monétaire, il faut d’abord distinguer deux formes de monnaie. Les billets et les pièces constituent la **monnaie fiduciaire**. Les sommes inscrites sur nos comptes bancaires constituent la **monnaie scripturale**.
 
-↦ Comment l'argent est créé ?
+L’argent sur un compte est bien de la monnaie : nous pouvons l’utiliser pour payer. La carte bancaire, le chèque et le virement sont des moyens de faire circuler cette monnaie.
 
-↦ En schématisant les choses, l'argent est créé par une institution particulière appelée une banque centrale : il en existe une pour la zone Euro (BCE), une pour les US (Fed), une pour le Yen, etc.
+:::example
+Retirer 50 € au distributeur ne crée pas de monnaie supplémentaire. Nous avons simplement 50 € de moins sur notre compte et 50 € de plus en billets.
+:::
 
-↦ Cette institution crée de la monnaie - imprimer des billets et frapper des pièces - et la prête aux banques à des taux évolutifs appelés *taux directeurs* - version simplifiée, en réalité, ces opérations passent effectivement par les systèmes de paiement interbancaires (ex. TARGET2 en zone euro) et les chambres de compensation. En gros, les taux directeurs fixent les conditions dans lesquelles les banques équilibrent leurs comptes en fin de journée.
+L’essentiel de la monnaie utilisée existe sur les comptes bancaires. Pour comprendre sa création, il faut donc partir du crédit.
 
-↦ C'est par ce mécanisme que la monnaie est originellement mise en circulation.
+:::example
+Prenons une économie simplifiée dans laquelle les habitants détiennent au total **100 000 € en espèces et sur leurs comptes courants**. Nous suivrons un seul crédit, en supposant que rien d’autre ne change.
 
-↦ Mais ce n'est là que la partie immergée de la création monétaire. Pourquoi ?
+Alice emprunte 10 000 € à la banque A pour acheter une voiture. La banque inscrit cette somme sur son compte, **sans la retirer du compte d’un autre client**.
 
-↦ Car l'argent ainsi emprunté à la banque centrale va à son tour pouvoir être prêté par la banque à l'un de ses clients.
+Les autres habitants possèdent toujours leurs 100 000 €, et Alice dispose maintenant de 10 000 € supplémentaires. Le total passe donc à **110 000 €**.
+:::
 
-↦ Notez que par le miracle du crédit, la banque possède toujours l'argent qu'elle a prêté sous la forme d'une créance - qu'elle peut revendre, échanger, etc.
+C’est ce que signifie l’expression **« les crédits font les dépôts »** : en accordant un crédit, la banque crée un dépôt utilisable pour payer.
 
-↦ Or, que va faire le client ? Placer son argent à la banque.
+Cette création s’accompagne d’engagements réciproques. Alice doit rembourser la banque. De son côté, la banque doit lui permettre d’utiliser l’argent inscrit sur son compte.
 
-↦ Autrement dit, par le mécanisme du crédit, les banques ont les moyens de dédoubler - en quelque sorte - l'argent.
+La banque possède donc une **créance** sur Alice, c’est-à-dire un droit au remboursement. Le dépôt d’Alice constitue, lui, une dette de la banque envers sa cliente.
 
-↦ L'argent qu'elles prêtent, elles détiennent en effet simultanément sous la forme d'un crédit et sous la forme d'un dépôt.
+:::warning
+Alice n’est pas devenue plus riche de 10 000 €, puisqu’elle a aussi une dette de 10 000 €. Mais la quantité de monnaie disponible a augmenté : pour compter la monnaie, on ne soustrait pas les dettes des emprunteurs.
+:::
 
-↦ Le dépôt ainsi replacé à la banque va pouvoir être re-prêté à un autre client, qui va le re-placer à la banque, etc.
+Lorsque Alice rembourse son crédit, le mécanisme s’inverse. Le remboursement de 1 000 € de capital réduit à la fois son dépôt et sa dette : ces 1 000 € de monnaie sont détruits. Il faut distinguer ce remboursement des intérêts, qui rémunèrent la banque.
 
-↦ Évidemment, ce cycle du crédit est encadré. La banque ne peut pas prêter l'ensemble des dépôts qu'elle détient. Elle doit conserver une réserve minimum, et elle peut se refinancer auprès de la banque centrale pour le faire, etc.
+Revenons à l’achat de la voiture. Le vendeur possède un compte dans une autre banque, la banque B. Lorsque Alice paie, son compte diminue de 10 000 € et celui du vendeur augmente d’autant. La monnaie change de détenteur ; le paiement n’en crée pas une deuxième fois.
 
-↦ Ce qui importe ici est de comprendre le principe de ce cycle de la création monétaire - pas d'en connaître le détail.
+Mais les deux banques doivent aussi régler ce paiement entre elles. C’est ici qu’intervient la **banque centrale**, auprès de laquelle les banques commerciales possèdent elles-mêmes des comptes. Dans la zone euro, ce rôle est assuré par la BCE et les banques centrales nationales, qui forment l’Eurosystème.
 
-↦ En comprenant comment fonctionne ce cycle on peut aussi comprendre comment le contrôler.
+Les sommes inscrites sur ces comptes s’appellent leurs **réserves**. Elles constituent, avec les billets, la monnaie centrale. Celle-ci ne se limite donc pas à la monnaie papier.
 
-↦ Le principal mécanisme pour agir sur les dynamiques de ce cycle du crédit est l'ajustement, par la banque centrale, des taux directeurs.
+:::example
+Pour régler le paiement d’Alice, 10 000 € passent du compte de réserves de la banque A à celui de la banque B. Nous isolons ici ce paiement des autres opérations entre les banques.
 
-↦ Plus les taux directeurs sont faibles, plus le crédit est encouragé, et plus l’inflation est grande - et inversement.
+Il faut distinguer l’argent sur le compte d’Alice et l’argent sur le compte de sa banque à la banque centrale. La banque A peut créer le premier lorsqu’elle accorde un crédit. Elle ne peut pas fabriquer elle-même les réserves nécessaires pour payer la banque B.
+:::
 
-↦ Pourquoi, alors, ne pas imposer en permanence des taux très élevés ? Parce qu'il importe parfois de maintenir des taux bas pour favoriser le crédit, et donc l’investissement, et ainsi « relancer » l'économie.
+Si elle manque de réserves, elle peut notamment en emprunter à d’autres banques ou à la banque centrale. **Elle emprunte alors pour pouvoir honorer ses paiements**, notamment les transferts demandés par ses clients.
 
-↦ Tout le travail d’une banque centrale est donc de trouver un équilibre entre ces deux « missions » parfois « contradictoires ».
+Lorsque la banque centrale lui prête, elle crédite son compte de réserves. La banque commerciale devra rembourser cet emprunt, payer des intérêts et fournir des actifs en garantie. Cela ne rajoute pas une deuxième fois de l’argent sur le compte d’Alice.
 
-↦ Le piège, c’est que le lien entre les deux est très distendu.
+En pratique, une banque reçoit aussi des paiements venant des autres banques. Elle utilise donc ses réserves disponibles et anticipe les entrées et les sorties avant de prêter. Elle n’a pas besoin d’emprunter à la banque centrale pour chaque crédit accordé.
 
-↦ Montrer qu'en réalité une montagne de valeur est dérivée de ce processus initial : https://www.visualcapitalist.com/all-of-the-worlds-money-and-markets-in-one-visualization-2020/
+La création monétaire reste ainsi encadrée. Les banques doivent pouvoir honorer les paiements, évaluer la capacité de remboursement de leurs clients et disposer de fonds propres suffisants pour absorber les pertes.
 
-Les agrégats monétaires (M1, M2, M3…) sont des indicateurs utilisés par les banques centrales pour mesurer la quantité de monnaie en circulation, selon leur degré de liquidité (facilité avec laquelle elles peuvent être utilisées comme moyen de paiement).
+La banque centrale peut influencer cette création monétaire en agissant sur les conditions du crédit. Son principal outil est la fixation des **taux directeurs**.
+
+Ces taux interviennent des deux côtés. Ils déterminent notamment ce que les banques paient lorsqu’elles empruntent auprès de la banque centrale, et ce qu’elles reçoivent lorsqu’elles placent leurs réserves dans sa facilité de dépôt.
+
+Le premier mécanisme est direct : si une banque doit emprunter plus cher pour assurer ses paiements, le financement de son activité de crédit devient plus coûteux.
+
+Le second passe par les possibilités de placement. Si une banque peut placer ses réserves auprès de la banque centrale à un certain taux, elle a peu d’intérêt à les prêter moins cher à une autre banque pour une durée comparable.
+
+Les taux directeurs influencent donc aussi les taux auxquels les banques se prêtent entre elles. Dans le fonctionnement actuel de la zone euro, le taux de la facilité de dépôt constitue le principal point de référence.
+
+Cette influence se diffuse aux autres sources de financement. Une banque peut, par exemple, devoir mieux rémunérer l’épargne pour conserver ses déposants lorsqu’ils trouvent ailleurs des placements plus rémunérateurs.
+
+Or, le taux d’un crédit doit tenir compte du coût de financement de la banque, du risque de non-remboursement, de ses frais et de sa marge. **Lorsque son financement devient plus cher, elle tend à augmenter les taux des nouveaux crédits.**
+
+:::warning
+Les taux des crédits suivent généralement les taux directeurs sans leur être identiques. La concurrence, la durée du prêt et le risque de l’emprunteur interviennent aussi. Pour les crédits longs, les anticipations sur les taux futurs comptent beaucoup.
+
+Cette transmission concerne surtout les nouveaux crédits et les crédits à taux variable. Elle ne modifie pas le taux fixe d’un prêt déjà signé.
+:::
+
+Cette action sur le crédit permet d’agir sur l’activité économique et l’inflation. Des taux plus bas rendent généralement les emprunts moins coûteux. Ils peuvent encourager l’achat d’un logement, la consommation ou l’investissement d’une entreprise.
+
+Mais si les dépenses augmentent plus vite que la capacité à produire, elles peuvent pousser les prix à la hausse. À l’inverse, des taux plus élevés tendent à freiner les dépenses et à réduire les pressions inflationnistes.
+
+Maintenir des taux très élevés peut donc aussi décourager l’investissement, ralentir l’activité et peser sur l’emploi. La difficulté consiste à freiner suffisamment l’inflation en tenant compte de ces effets.
+
+Pour la BCE, la priorité reste la **stabilité des prix**, définie par un objectif de **2 % d’inflation à moyen terme**. Elle soutient les politiques économiques générales de l’Union dans le respect de cette priorité. Il ne s’agit donc pas de deux missions placées exactement sur le même plan.
+
+:::warning
+Ces effets ne sont ni immédiats ni automatiques. Des taux faibles ne suffisent pas à faire emprunter des ménages ou des entreprises qui n’ont pas confiance dans l’avenir. L’inflation dépend aussi d’autres facteurs, comme les prix de l’énergie ou les difficultés de production.
+:::
 
 
-🔹 M1 : la monnaie la plus liquide
 
-M0 (ou “base monétaire”) : monnaie émise directement par la banque centrale (billets + réserves des banques auprès de la banque centrale).
+[Sources]
 
-M1 regroupe :
-les billets et pièces en circulation (M0)
-les dépôts à vue (comptes courants immédiatement utilisables).
+- [Banque de France — Comment est créée la monnaie ?](https://www.banque-france.fr/fr/publications-et-statistiques/publications/comment-est-creee-la-monnaie)
+- [Banque d’Angleterre — Money creation in the modern economy](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy)
+- [Banque d’Angleterre — The importance of central bank reserves](https://www.bankofengland.co.uk/speech/2024/may/andrew-bailey-lecture-london-school-of-economics-charles-goodhart)
+- [BCE — Taux directeurs](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)
+- [BCE — Transmission de la politique monétaire](https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html)
+- [BCE — Objectifs de la politique monétaire](https://www.ecb.europa.eu/mopo/intro/html/index.en.html)
 
-👉 Autrement dit : c’est la monnaie directement disponible pour effectuer des paiements immédiatement
-
-M2 : M1 + placements à court terme
-
-M2 inclut :
-M1,
-les dépôts à terme d’une durée ≤ 2 ans (ex. comptes à terme),
-les dépôts remboursables avec préavis ≤ 3 mois (ex. certains livrets).
-
-Ce sont des formes de monnaie un peu moins liquides que M1 (tu ne paies pas ton café avec ton compte à terme), mais qui peuvent rapidement être transformées en moyens de paiement.
-
-M3 = M2 + instruments encore moins liquides : pensions livrées (repo), parts de fonds monétaires, titres de créance ≤ 2 ans, etc.
-
-↦ Or Satoshi Nakamoto - et les cypherpunk de manière générale - n’ont pas confiance en la capacité des banques centrales - et en particulier de la Fed - à assurer cette mission.
-
-↦ Ils considèrent que les multiples plans de relance mis en oeuvre vouent les principales monnaies fiduciaires à une inflation destructrice (ce sentiment est d'ailleurs toujours très présent dans la communauté Bitcoin et crypto).
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-015-leur-volonte-est-de-proposer-une-monnaie-deflationnist" title="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" layout="center" -->
-<img src="/assets/Clipboard 1.png" alt="Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire u" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-014-m2-etats-unis" title="La masse monétaire américaine" layout="center" -->
+<script>
+  import UsMoneySupply from '$components/UsMoneySupply.svelte'
+</script>
+
+<UsMoneySupply />
 
 --- notes
 
-↦ Leur volonté est de proposer une monnaie déflationniste : c’est-à-dire une monnaie dont la quantité mise en circulation augmente moins vite que l’usage.
+Pour observer l’augmentation de la quantité de dollars disponibles, nous utilisons **M2**. Cet agrégat comprend les espèces et les dépôts immédiatement utilisables, auxquels s’ajoutent les petits dépôts à terme et les fonds monétaires de détail. Il correspond mieux à la monnaie mobilisable dans l’économie que le seul nombre de billets.
 
-↦ C'est la raison pour laquelle la politique d'émission du bitcoin est minutieusement contrôlée.
+M1 serait moins lisible sur cette période : sa définition change en mai 2020, lorsque les comptes d’épargne américains deviennent des comptes de transaction. Cette rupture augmente brutalement M1 d’environ 11 200 milliards de dollars, mais elle ne modifie pas M2.
 
-↦ Le nombre de bitcoins en circulation augmente lentement block après block, transaction après transaction (nous verrons plus tard comment et pourquoi ces bitcoins sont émis).
+M2 passe de **4 666 milliards de dollars en janvier 2000** à **23 218 milliards en juillet 2026**. La masse monétaire nominale a donc été multipliée par **4,98**, soit une augmentation d’environ **398 %**.
 
-↦ Ce nombre atteindra un maximum de 21 millions de Bitcoins mis en circulation vers 2140. Après cette date, plus aucun bitcoin ne sera émis.
+La courbe relie les observations de janvier de chaque année, complétées par quelques observations mensuelles autour de l’accélération de 2020 à 2023 et par la dernière valeur disponible.
 
-↦ Cette mise en circulation est décroissante : c’est le halving.
+La hausse accélère très fortement en 2020 et 2021. Mais la formule « planche à billets » peut induire en erreur. Lorsque la Réserve fédérale achète des titres, elle crédite les comptes de réserves des banques ; elle ne met pas directement autant de billets entre les mains du public. M2 dépend aussi des crédits accordés par les banques, des dépôts, des transferts publics et des choix d’épargne.
 
-↦ Tous les 4 ans, la quantité de bitcoin lors du minage de chaque bloc est divisée par deux.
+:::warning
+Cette courbe ne démontre pas, à elle seule, que la hausse de M2 cause mécaniquement l’inflation. Une augmentation de la monnaie peut alimenter les prix si les dépenses progressent plus vite que la production. Mais le résultat dépend aussi de la vitesse de circulation de la monnaie, du crédit, de la demande, des capacités de production et des chocs sur l’énergie ou les chaînes d’approvisionnement.
+
+Les montants sont exprimés en dollars courants. Ils ne sont corrigés ni de l’inflation, ni de la croissance de la population ou de l’économie.
+:::
+
+[Sources]
+
+- [Federal Reserve Bank of St. Louis — M2, série M2SL](https://fred.stlouisfed.org/series/M2SL)
+- [Federal Reserve — Money Stock Measures, publication H.6](https://www.federalreserve.gov/releases/h6/current/)
+- [Federal Reserve — Technical Q&As sur la définition des agrégats monétaires](https://www.federalreserve.gov/releases/h6/h6_technical_qa.htm)
+- [Federal Reserve — Is the Federal Reserve printing money in order to buy Treasury securities?](https://www.federalreserve.gov/faqs/money_12853.htm)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-016-la-politique-de-nakamoto" title="La politique de Nakamoto" layout="center" -->
+<!-- slide: id="blockchain-014-dette-federale-etats-unis" title="La dette fédérale américaine" layout="center" -->
+<script>
+  import UsFederalDebt from '$components/UsFederalDebt.svelte'
+</script>
+
+<UsFederalDebt />
+
+--- notes
+
+Cette courbe représente la **dette fédérale brute** des États-Unis, appelée *Total Public Debt Outstanding* par le Trésor. Elle additionne deux catégories : la dette détenue par le public et les créances détenues par des comptes de l’État fédéral.
+
+La dette détenue par le public appartient notamment à des particuliers, des entreprises, des banques, la Réserve fédérale et des investisseurs étrangers. Les créances internes correspondent principalement aux titres détenus par des fonds fédéraux, notamment certains fonds liés à la protection sociale.
+
+La dette fédérale brute passe de **5 752 milliards de dollars le 3 janvier 2000** à **40 093 milliards le 17 septembre 2026**. Elle a donc été multipliée par **6,97**, soit une augmentation d’environ **597 %**.
+
+La courbe relie la première observation disponible de chaque année, complétée par les valeurs relevées au moment de la crise financière de 2008, de la pandémie de 2020 et par la dernière observation disponible.
+
+Cette dette augmente lorsque les dépenses fédérales cumulées excèdent les recettes et que le Trésor finance ces déficits par l’émission de titres. Il faut distinguer ce mécanisme de la création monétaire. Le Trésor émet une dette ; la Réserve fédérale conduit la politique monétaire. Lorsque la Fed achète sur le marché des titres déjà émis, elle modifie leur détention et crée des réserves bancaires. Cette opération relie les deux grandeurs sans les rendre identiques.
+
+:::warning
+La dette fédérale brute n’inclut pas les dettes des ménages, des entreprises, des États fédérés ou des collectivités locales.
+
+Les montants sont exprimés en dollars courants. Pour évaluer le poids économique de la dette, il faut aussi la rapporter au PIB, aux recettes publiques et au coût des intérêts.
+:::
+
+[Sources]
+
+- [U.S. Treasury Fiscal Data — Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/)
+- [U.S. Treasury Fiscal Data — API Debt to the Penny](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-015-monnaie-actifs-engagements" title="Monnaie, actifs, engagements" layout="center" -->
+<script>
+  import VisualCapitalistFrame from '$components/VisualCapitalistFrame.svelte'
+</script>
+
+<VisualCapitalistFrame src="/assets/visual-capitalist-money-2020.html" />
+
+--- notes
+
+Il reste à distinguer **la quantité de monnaie disponible et la valeur des actifs et des engagements financiers**. Toutes ces grandeurs peuvent être exprimées en euros ou en dollars, mais elles ne mesurent pas la même chose.
+
+:::comment
+Faire défiler le visuel dans l’iframe. Commencer par les espèces et les agrégats monétaires, puis descendre vers les actions, les dettes, l’immobilier et enfin les produits dérivés.
+
+Chaque carré représente 100 milliards de dollars. Les chiffres sont historiques et les sources ne portent pas toutes sur la même année. Utiliser le graphique pour comparer les grandeurs, pas comme une photographie actuelle.
+:::
+
+Pour lire ce graphique, il faut d’abord préciser ce que l’on compte comme monnaie. Les **agrégats monétaires** distinguent plusieurs périmètres selon la facilité avec laquelle les sommes peuvent être utilisées pour payer.
+
+La **base monétaire, souvent appelée M0**, regroupe les espèces en circulation et les réserves des banques auprès de la banque centrale. Elle comprend donc aussi de la monnaie inscrite sur des comptes.
+
+**M1** regroupe les espèces détenues par le public et les dépôts à vue, comme les comptes courants. C’est la monnaie immédiatement disponible pour payer. Notre exemple des 100 000 €, puis des 110 000 €, correspond à ce périmètre.
+
+**M2** comprend M1 et certains dépôts d’épargne : les dépôts à terme jusqu’à deux ans et les dépôts remboursables avec un préavis jusqu’à trois mois. On ne paie pas son café avec un compte à terme, mais cet argent pourra redevenir disponible.
+
+**M3** comprend M2 et certains placements proches de la monnaie : les parts de fonds monétaires, les pensions livrées et les titres de dette jusqu’à deux ans émis par les institutions financières monétaires.
+
+:::warning
+Dans la zone euro, M1 est inclus dans M2, lui-même inclus dans M3. On élargit progressivement le périmètre : **on n’additionne pas ces trois montants**. Les réserves bancaires de M0, en revanche, ne sont pas incluses dans M1.
+
+Ces définitions sont celles de la zone euro. Les catégories mondiales « narrow money » et « broad money » du graphique donnent des ordres de grandeur, sans reprendre exactement un agrégat européen unique.
+:::
+
+Le graphique présente ensuite d’autres grandeurs : la valeur des actions, le montant des dettes ou encore la valeur de l’immobilier. **Il s’agit de biens, de titres et d’engagements évalués en monnaie, pas d’autant de monnaie disponible sur des comptes.**
+
+:::example
+L’infographie de 2020 estime la monnaie au sens large à environ **96 000 milliards de dollars**, contre environ **253 000 milliards pour les dettes mondiales**. La dette mesure ici des sommes dues, pas une réserve d’argent déjà mise de côté pour les rembourser.
+
+Le capital d’une entreprise est divisé en 1 000 actions valorisées à 100 € chacune : sa capitalisation boursière est de 100 000 €. Si le cours passe à 120 €, elle atteint 120 000 €. **Cette hausse de valeur ne crée pas 20 000 € sur un compte bancaire.**
+
+Lorsqu’une action est achetée avec de l’argent déjà disponible, cet argent passe du compte de l’acheteur à celui du vendeur. La valeur de l’ensemble des actions n’est donc pas une somme immobilisée quelque part « dans la Bourse ».
+:::
+
+Les valeurs des actifs et les engagements financiers peuvent ainsi dépasser largement la masse monétaire. Les mêmes euros peuvent servir successivement à plusieurs échanges. Tous les actifs ne sont pas vendus en même temps, et rien ne garantit qu’ils pourraient tous l’être aux cours affichés.
+
+:::warning
+Les montants les plus spectaculaires du graphique concernent les produits dérivés. Leur **montant notionnel** est le montant de référence utilisé pour calculer les paiements prévus par les contrats. Ce n’est ni leur prix de marché, ni une somme d’argent nécessairement échangée ou immobilisée.
+
+La BRI distingue ainsi, à la fin de 2019, environ **559 000 milliards de dollars de montants notionnels** et **11 600 milliards de valeur de marché brute** pour les dérivés de gré à gré. Même cette valeur de marché ne représente pas une quantité de monnaie.
+
+Les catégories du graphique se recoupent : on ne peut pas les additionner pour obtenir « tout l’argent du monde ». Le graphique montre des différences d’échelle entre monnaie, patrimoines et engagements ; il ne montre pas une montagne de monnaie cachée ou créée par simple multiplication des dépôts.
+:::
+
+C’est la dépendance envers les institutions monétaires que critique Satoshi Nakamoto. Il conteste la confiance nécessaire dans les banques centrales pour préserver la valeur de la monnaie, et dans les banques commerciales pour conserver et transférer les dépôts.
+
+Cette critique prépare le projet de Bitcoin : rendre l’émission monétaire prévisible et limitée par les règles du protocole.
+
+:::warning
+Présenter cette critique comme la position de Nakamoto, sans l’attribuer indistinctement à tous les cypherpunks. Une émission limitée ne garantit pas un pouvoir d’achat stable du bitcoin.
+:::
+
+[Sources]
+
+- [Visual Capitalist — All of the World’s Money and Markets in One Visualization, édition 2020](https://www.visualcapitalist.com/all-of-the-worlds-money-and-markets-in-one-visualization-2020/)
+- [BCE — Base monétaire](https://www.ecb.europa.eu/services/glossary/html/act6b.en.html)
+- [BCE — Agrégats monétaires](https://data.ecb.europa.eu/methodology/what-are-monetary-aggregates)
+- [BRI — Dérivés de gré à gré à la fin de 2019](https://www.bis.org/publications/202005-commentary-otc-derivatives)
+- [Satoshi Nakamoto — Bitcoin open source implementation of P2P currency, février 2009](https://satoshi.nakamotoinstitute.org/posts/p2pfoundation/1/)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-015-leur-volonte-est-de-proposer-une-monnaie-deflationnist" title="Le message du bloc Genesis" layout="center" -->
+<FramedImage
+  src="/assets/bitcoin_first_block.png"
+  alt="Données du bloc Genesis de Bitcoin, avec le titre du Times inscrit par Satoshi Nakamoto."
+/>
+
+--- notes
+
+Le 3 janvier 2009, Satoshi Nakamoto crée le premier bloc de Bitcoin, appelé **bloc Genesis**. Ce bloc constitue le point de départ de l'infrastructure sur laquelle fonctionne le bitcoin et dont nous parlerons plus tard.
+
+Dans ses données, Nakamoto inscrit cette phrase : *« The Times 03/Jan/2009 Chancellor on brink of second bailout for banks »*.
+
+Il reprend le titre publié ce jour-là par le quotidien britannique **The Times** : le chancelier de l’Échiquier Alistair Darling envisage un second plan de sauvetage des banques britanniques, après celui d’octobre 2008.
+
+Cette référence remplit d’abord une fonction de datation. Elle prouve que le bloc n’a pas pu être créé avant la parution du journal.
+
+Mais elle peut aussi être comprise comme un commentaire politique sur la crise financière et le sauvetage des banques - même si Nakamoto n’en a pas donné lui-même une explication univoque.
+
+:::warning
+Le texte est inscrit dans la transaction spéciale qui crée la récompense du bloc. Il ne s’agit pas d’une transaction ordinaire envoyée par un utilisateur.
+:::
+
+[Sources]
+
+- [Bitcoin Core — construction du bloc Genesis](https://github.com/bitcoin/bitcoin/blob/master/src/kernel/chainparams.cpp)
+- [Bank of England — Innovations in payment technologies and the emergence of digital currencies](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q3/innovations-in-payment-technologies-and-the-emergence-of-digital-currencies)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-016-emission-programmee" title="Une émission programmée" steps=3 -->
+<script>
+  import BitcoinIssuance from '$components/BitcoinIssuance.svelte'
+</script>
+
+<BitcoinIssuance />
+
+--- notes
+
+La politique d'émission du Bitcoin est d'ailleurs minutieusement conçue pour tenter de contenir l'inflation.
+
+Mais dans le cas de Bitcoin, ce choix politique est aussi, immédiatement, un choix infrastructurel et technique.
+
+Les bitcoins sont créés comme récompense attribuée au mineur qui produit un bloc valide. Retenez pour le moment que les bitcoins sont émis pour récompenser certains des nœuds du réseau qui participent à son fonctionnement.
+
+Cette récompense est programmée pour se réduire progressivement.
+
+Plus précisément, les bitcoins nouvellement créés constituent la **subvention de bloc**. Le mineur reçoit aussi les frais associés aux transactions du bloc, mais ces frais ne créent pas de nouveaux bitcoins : ils transfèrent des bitcoins déjà en circulation.
+
+L'émission dépend donc du nombre de blocs produits, pas du nombre de transactions qu'ils contiennent. Au lancement du réseau, la subvention était de **50 BTC par bloc**. Tous les **210 000 blocs**, le protocole la divise par deux : c'est le *halving*. Elle est ainsi passée à 25 BTC en 2012, à 12,5 BTC en 2016, à 6,25 BTC en 2020, puis à 3,125 BTC en 2024.
+
+Le halving n'est pas déclenché par une date. Il dépend de la hauteur de la chaîne. Comme le protocole vise un bloc toutes les dix minutes en moyenne, 210 000 blocs correspondent approximativement à quatre ans.
+
+:::comment
+Faire avancer les trois étapes. La première montre le halving de 2012 ; la deuxième fait apparaître les halvings suivants ; la troisième révèle l’asymptote et la fin de l’émission.
+:::
+
+:::example
+Pendant la première période, 210 000 blocs rémunérés à 50 BTC permettent de créer environ **10,5 millions de bitcoins**. Pendant la période suivante, 210 000 blocs à 25 BTC n’en ajoutent plus que **5,25 millions**. Chaque nouvelle période ajoute donc deux fois moins de bitcoins que la précédente.
+:::
+
+La quantité cumulée continue ainsi d’augmenter, mais de plus en plus lentement. La courbe se rapproche d’une asymptote : le plafond couramment arrondi à **21 millions de bitcoins**.
+
+À cause du découpage en satoshis et des arrondis du protocole, le total théorique reste très légèrement inférieur à 21 millions. La dernière fraction de bitcoin devrait être émise vers **2140**, si le rythme moyen des blocs reste proche de dix minutes.
+
+À partir de ce moment, la subvention de bloc sera nulle. Les mineurs pourront encore recevoir les frais associés aux transactions.
+
+Cette trajectoire cherche à contenir une forme précise d'inflation : l'augmentation de la quantité de bitcoins en circulation. À chaque halving, le flux de nouveaux bitcoins est divisé par deux. Personne ne peut donc décider seul d'accélérer leur création en réponse à une crise ou à un besoin de financement. Pour modifier cette trajectoire, il faudrait faire accepter une modification des règles du protocole par le réseau.
+
+C'est en ce sens que Bitcoin est pensé contre la « planche à billets » attribuée à la Réserve fédérale. Une banque centrale peut assouplir sa politique monétaire, créer des réserves et acheter des actifs pour soutenir le crédit et l'activité. Bitcoin remplace cette capacité d'intervention par une règle annoncée à l'avance, indépendante de la conjoncture et progressivement plus restrictive.
+
+:::warning
+La « planche à billets » est ici une formule polémique : lorsque la Fed achète des actifs, elle ne fait pas littéralement imprimer des billets, mais crée des réserves bancaires. Surtout, Bitcoin ne garantit ni la stabilité de son prix ni celle du niveau général des prix. Son protocole rend prévisible le rythme d'émission des BTC ; l'inflation des prix dépend aussi de la demande, du crédit, de la production et de la circulation de la monnaie.
+:::
+
+[Sources]
+
+- [Bitcoin Core — intervalle de 210 000 blocs](https://github.com/bitcoin/bitcoin/blob/master/src/kernel/chainparams.cpp)
+- [Bitcoin.org — création et quantité maximale de bitcoins](https://bitcoin.org/en/faq#how-are-bitcoins-created)
+- [Mastering Bitcoin — Bitcoin Economics and Currency Creation](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc)
+- [Federal Reserve — Is the Federal Reserve printing money in order to buy Treasury securities?](https://www.federalreserve.gov/faqs/money_12853.htm)
+
+[/Sources]
+
+---
 ## La politique de Nakamoto
-La politique sans politique {.kicker}
+Une politique sans politique {.kicker}
 
 --- notes
 
@@ -359,6 +507,3 @@ C’est ici une politique par l’infrastructure qui se dessine. Une politique q
 Ce geste n’est pas sans mémoire. Il prolonge une tradition souterraine, forgée dans les années 1990 : celle des cypherpunks, pour qui le politique ne s’arrache pas dans la rue mais s’écrit dans le code. Cypherpunks write code : telle est la maxime. Non pas attendre que l’État protège la vie privée, mais coder les outils qui la rendent inviolable ; non pas réclamer une monnaie juste, mais concevoir une architecture qui se substitue au crédit souverain. Ici se révèle la stratégie libertarienne : déplacer le champ du politique hors de ses institutions, du parlement au protocole, de la loi au code.
 
 Une telle orientation, bien sûr, implique d’anticiper les réactions de l’État, toujours capable de réprimer, de censurer, d’enfermer. D’où la nécessité d’une structure radicalement décentralisée : un réseau sans tête, sans centre, sans architecte identifiable, donc sans cible assignable.
-
-
-METTTRE UN SCREENSHOT DU PREMIER BLOC AVEC LE TITRE DU JOURNAL SUR LE BAILOUT DES BANQUES

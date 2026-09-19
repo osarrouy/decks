@@ -1,37 +1,42 @@
 <script lang="ts">
   import { getStepContext } from "@svx-deck/core/deck/stepContext";
 
+  let { overview = false }: { overview?: boolean } = $props();
+
   const messages = [
     "Le hash d’un bloc dépend de son contenu, du hash précédent et d’un nonce.",
     "Le bloc 43 reprend le hash du bloc 42 comme hash précédent.",
     "Le bloc 44 reprend à son tour le hash du bloc 43 : la chaîne se prolonge.",
     "Modifier une transaction ancienne produit immédiatement un nouveau hash.",
     "Le bloc suivant pointe encore vers l’ancien hash : le lien est rompu.",
-    "La rupture se propage : tous les blocs postérieurs deviennent invalides.",
-    "Il faut retrouver un nonce valide pour chaque bloc, dans l’ordre, avant que la chaîne légitime n’avance.",
+    "Corriger le lien change l’empreinte du bloc 43 : le lien avec le bloc 44 se rompt.",
+    "Il faut refaire les preuves de travail et dépasser la chaîne qui continue de grandir.",
   ];
 
   const step = getStepContext();
-  let phase = $derived(Math.max(0, Math.min($step, messages.length - 1)));
+  let phase = $derived(
+    overview ? 2 : Math.max(0, Math.min($step, messages.length - 1)),
+  );
 
   let blocks = $derived([
     {
       number: "42",
-      data: phase >= 3 ? "Alice → Ève" : "Alice → Bob",
+      data: phase >= 3 ? "Alice → Charlie" : "Alice → Bob",
       previous: "0000…",
       nonce: phase === 6 ? "à retrouver" : "71 042",
       hash: phase === 6 ? "à recalculer" : phase >= 3 ? "8f2c…" : "00a4…",
     },
     {
       number: "43",
-      data: "Bob → Chloé",
-      previous: phase === 6 ? "nouveau hash 42" : "00a4…",
+      data: "Chloé → Dan",
+      previous:
+        phase === 6 ? "nouveau hash 42" : phase === 5 ? "8f2c…" : "00a4…",
       nonce: phase === 6 ? "à retrouver" : "18 593",
-      hash: phase === 6 ? "à recalculer" : "007b…",
+      hash: phase === 6 ? "à recalculer" : phase === 5 ? "9b1d…" : "007b…",
     },
     {
       number: "44",
-      data: "Chloé → Dan",
+      data: "Ève → Farid",
       previous: phase === 6 ? "nouveau hash 43" : "007b…",
       nonce: phase === 6 ? "à retrouver" : "92 771",
       hash: phase === 6 ? "à recalculer" : "003e…",
@@ -42,10 +47,17 @@
 </script>
 
 <figure
+  class:overview
   data-phase={phase}
-  aria-label="Chaînage des blocs par les hashes et recalcul des preuves de travail"
+  aria-label={overview
+    ? "Chaque bloc reprend l’empreinte du bloc précédent"
+    : "Chaînage des blocs par les hashes et recalcul des preuves de travail"}
 >
-  <svg viewBox="0 0 1000 500" role="img" aria-hidden="true">
+  <svg
+    viewBox={overview ? "0 50 1000 350" : "0 0 1000 500"}
+    role="img"
+    aria-hidden="true"
+  >
     <defs>
       <marker
         id="hash-link-arrow-muted"
@@ -100,11 +112,11 @@
 
     <path
       class="chain-link first"
-      class:active={phase === 1}
-      class:broken={phase >= 4 && phase < 6}
+      class:active={overview || phase === 1 || phase === 5}
+      class:broken={phase === 4}
       class:work={phase === 6}
       d="M 290 250 H 365"
-      marker-end={phase === 1 || phase >= 4
+      marker-end={overview || phase === 1 || phase >= 4
         ? "url(#hash-link-arrow-accent)"
         : "url(#hash-link-arrow-muted)"}
     ></path>
@@ -130,7 +142,8 @@
         class:recalculating={phase === 6}
         transform={`translate(${x} 100)`}
       >
-        <rect class="card" width="250" height="300" rx="14"></rect>
+        <rect class="card" width="250" height={overview ? 252 : 300} rx="14"
+        ></rect>
         <path
           class="header"
           d="M 14 0 H 236 A 14 14 0 0 1 250 14 V 54 H 0 V 14 A 14 14 0 0 1 14 0"
@@ -144,46 +157,50 @@
         <text class="label" x="20" y="153">Hash précédent</text>
         <text
           class="value previous"
-          class:matching={(phase === 1 && index === 1) ||
+          class:matching={(overview && index > 0) ||
+            (phase === 1 && index === 1) ||
             (phase === 2 && index === 2)}
           x="20"
           y="178">{block.previous}</text
         >
 
-        <rect
-          class="nonce-background"
-          x="12"
-          y="194"
-          width="226"
-          height="40"
-          rx="6"
-        ></rect>
-        <text class="label inline" x="20" y="220">Nonce</text>
-        <text class="value nonce" x="230" y="220" text-anchor="end"
-          >{block.nonce}</text
-        >
+        {#if !overview}
+          <rect
+            class="nonce-background"
+            x="12"
+            y="194"
+            width="226"
+            height="40"
+            rx="6"
+          ></rect>
+          <text class="label inline" x="20" y="220">Nonce</text>
+          <text class="value nonce" x="230" y="220" text-anchor="end"
+            >{block.nonce}</text
+          >
+        {/if}
 
         <rect
           class="hash-background"
           x="12"
-          y="242"
+          y={overview ? 194 : 242}
           width="226"
           height="44"
           rx="6"
         ></rect>
-        <text class="label inline" x="20" y="270">Hash</text>
+        <text class="label inline" x="20" y={overview ? 222 : 270}>Hash</text>
         <text
           class="value hash"
-          class:matching={(phase === 1 && index === 0) ||
+          class:matching={(overview && index < 2) ||
+            (phase === 1 && index === 0) ||
             (phase === 2 && index === 1)}
           x="230"
-          y="270"
+          y={overview ? 222 : 270}
           text-anchor="end">{block.hash}</text
         >
       </g>
     {/each}
 
-    <g class:visible={phase >= 4 && phase < 6} class="break first">
+    <g class:visible={phase === 4} class="break first">
       <circle cx="330" cy="250" r="17"></circle>
       <path d="m 322 242 16 16 m 0-16-16 16"></path>
     </g>
@@ -193,7 +210,9 @@
     </g>
   </svg>
 
-  <figcaption>{messages[phase]}</figcaption>
+  {#if !overview}
+    <figcaption>{messages[phase]}</figcaption>
+  {/if}
 </figure>
 
 <style>
@@ -202,6 +221,11 @@
     width: 100%;
     margin: 0;
     gap: var(--space-4);
+  }
+
+  figure.overview * {
+    transition: none;
+    animation: none;
   }
 
   svg {

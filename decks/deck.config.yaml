@@ -1,0 +1,4 @@
+template:
+  source: deck.svx
+  slideSeparator: "---"
+  notesSeparator: "--- notes"

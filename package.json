@@ -10,6 +10,13 @@
   "scripts": {
     "dev": "pnpm --filter site dev",
     "dev:blockchain": "svx-deck dev decks/blockchain",
+    "dev:blockchain-bitcoin": "svx-deck dev decks/blockchain-bitcoin",
+    "dev:blockchain-consensus": "svx-deck dev decks/blockchain-consensus",
+    "dev:blockchain-ethereum": "svx-deck dev decks/blockchain-ethereum",
+    "dev:blockchain-gouvernance": "svx-deck dev decks/blockchain-gouvernance",
+    "dev:blockchain-mechanism-design": "svx-deck dev decks/blockchain-mechanism-design",
+    "dev:blockchain-monnaie": "svx-deck dev decks/blockchain-monnaie",
+    "dev:blockchain-nft": "svx-deck dev decks/blockchain-nft",
     "dev:cybernetics": "svx-deck dev decks/cybernetics",
     "dev:economics": "svx-deck dev decks/economics",
     "dev:history-1": "svx-deck dev decks/history-1",

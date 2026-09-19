@@ -20,7 +20,7 @@ export type Slide = {
 
 export type DeckConfig = {
   id?: string;
-  title: string;
+  title?: string;
   description?: string;
   template?: {
     source?: string;

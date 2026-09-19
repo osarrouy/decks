@@ -54,6 +54,41 @@ for (const width of [1280, 390]) {
         "font-family",
         /Instrument Serif/,
       );
+      const corners = surface.locator(":scope > .corners.crossed");
+      await expect(corners).toHaveCount(1);
+      await expect(corners).toHaveCSS("pointer-events", "none");
+      const decoration = await corners.evaluate((element) => {
+        const style = getComputedStyle(element);
+        const strokes = getComputedStyle(element, "::after");
+        const frame = getComputedStyle(element, "::before");
+        const cross = style.getPropertyValue("--cross").trim();
+        const border = style.getPropertyValue("--border-width").trim();
+        return {
+          actual: strokes.backgroundSize,
+          expected: Array(4)
+            .fill(`${cross} ${border}, ${border} ${cross}`)
+            .join(", "),
+          oldCrosses: getComputedStyle(element.parentElement, "::before")
+            .content,
+          frameVisible: frame.display !== "none",
+          frameWidth: style.borderTopWidth,
+          borderWidth: border,
+          extensions: [...element.querySelectorAll(".extension")].map(
+            (extension) => {
+              const line = getComputedStyle(extension);
+              return (
+                line.display === "block" &&
+                line.backgroundColor === frame.borderTopColor
+              );
+            },
+          ),
+        };
+      });
+      expect(decoration.actual).toBe(decoration.expected);
+      expect(decoration.oldCrosses).toBe("none");
+      expect(decoration.frameVisible).toBe(true);
+      expect(decoration.frameWidth).toBe(decoration.borderWidth);
+      expect(decoration.extensions).toEqual(Array(8).fill(true));
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth,

@@ -93,7 +93,7 @@ Il doit rester lisible en projection. Les détails historiques, les références
 
 - Le deck se trouve dans `decks/economics/`.
 - The existing deck in `decks/cybernetics/` is a reference for the system and syntax, **not a file to modify**.
-- Le projet utilise le moteur `svx-deck`, son format `deck.svx`, son `deck.config.ts`, ses assets et ses notes speaker.
+- Le projet utilise le moteur `svx-deck`, son format `deck.svx`, son `deck.config.yaml`, ses assets et ses notes speaker.
 - Le lancement attendu est `pnpm deck dev decks/economics`.
 - Utiliser la commande générique `pnpm deck` ; aucun script racine propre à ce cours n’est nécessaire.
 - Les vérifications doivent inclure le lancement du serveur, l’ouverture de la projection et de la vue présentateur, ainsi qu’un build public et un build avec notes si le temps le permet.

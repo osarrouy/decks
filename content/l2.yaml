@@ -92,41 +92,136 @@ chapitres:
         integration: "iframe"
 
     resume: |
-      Une monnaie pair-à-pair doit permettre à des participants qui ne se
-      connaissent pas de s’accorder sur un même historique des transactions.
-      Le chapitre présente ce problème de consensus distribué à partir du
-      registre, du réseau de nœuds et de projets antérieurs comme *b-money* et
-      *Bit Gold*.
+      Comment tenir un registre commun sans confier sa gestion à une autorité
+      centrale ? À partir de Bitcoin, ce chapitre suit la construction d’un
+      consensus entre des participants qui ne se connaissent pas et peuvent
+      chercher à se tromper. Il articule réseau pair à pair, preuve de travail
+      et chaînage cryptographique, puis examine les conditions matérielles,
+      probabilistes et économiques de cette sécurité.
 
-      Les mineurs regroupent les transactions dans des blocs et engagent de la
-      puissance de calcul pour produire une preuve de travail. Les autres
-      nœuds vérifient facilement cette preuve et retiennent la chaîne qui
-      représente le plus de travail accumulé. Les fonctions de hachage relient
-      chaque bloc au précédent : modifier une transaction ancienne impose de
-      recalculer toute la suite de la chaîne.
+      ## Du client–serveur au réseau pair à pair
 
-      La sécurité obtenue n’est pas une impossibilité formelle. Elle repose sur
-      un calcul économique : une attaque doit devenir plus coûteuse que le gain
-      qu’elle permettrait d’obtenir.
+      Dans le modèle client–serveur présenté, les clients consultent un
+      registre tenu par un serveur central. Dans Bitcoin, les nœuds échangent
+      les informations de proche en proche et vérifient les données reçues.
+      Comme avec BitTorrent, les participants peuvent recevoir et transmettre
+      des données. Mais partager un registre monétaire exige aussi de
+      s’accorder sur les transactions à y inscrire.
+
+      ## Des premières monnaies numériques à la double dépense
+
+      *b-money*, proposé par Wei Dai en 1998, et *Bit Gold*, décrit par Nick
+      Szabo en 2005, explorent déjà la tenue d’un registre distribué et la
+      création d’unités par le calcul. Bitcoin assemble ces pistes autour
+      d’un problème décisif : empêcher qu’Alice dépense les mêmes bitcoins
+      auprès de Bob et de Charlie. Comme les nœuds ne reçoivent pas tous les
+      messages dans le même ordre, ils doivent disposer d’une règle commune
+      pour départager les historiques concurrents.
+
+      ## Blocs, branches concurrentes et preuve de travail
+
+      Les mineurs regroupent des transactions dans des blocs. Les nœuds
+      vérifient leur conformité aux règles du protocole et rejettent les blocs
+      invalides. Deux blocs valides peuvent toutefois apparaître presque
+      simultanément et former deux branches : le réseau poursuit alors la
+      chaîne valide qui cumule le plus de travail.
+
+      La preuve de travail rend la production des blocs coûteuse, tandis que
+      sa vérification reste rapide. Elle empêche de gagner de l’influence
+      simplement en multipliant les identités, comme dans une attaque Sybil :
+      les chances de produire un bloc dépendent de la puissance de calcul
+      mobilisée. La difficulté est réajustée tous les 2 016 blocs pour viser
+      un bloc toutes les dix minutes en moyenne sur l’ensemble du réseau.
+
+      ## Empreintes, réécriture et confirmations
+
+      Chaque bloc contient l’empreinte numérique, ou *hash*, du précédent.
+      Une modification change cette empreinte et rompt le lien avec la suite.
+      Réécrire l’historique exige donc de refaire les preuves de travail des
+      blocs concernés, puis de dépasser le travail de la chaîne que les autres
+      mineurs continuent de prolonger.
+
+      Les confirmations comptent le bloc qui contient une transaction, puis
+      ceux qui le suivent. Tant que l’attaquant dispose d’une puissance
+      minoritaire et que les communications fonctionnent normalement, leur
+      accumulation réduit ses chances de rattraper la chaîne. Une attaque dite
+      « des 51 % » désigne le contrôle de la majorité de la puissance de
+      calcul. La validité d’un paiement et sa stabilité dans l’historique sont
+      ainsi deux questions distinctes.
+
+      ## Le coût matériel et politique du minage
+
+      Cette protection consomme de l’électricité et mobilise des machines
+      spécialisées, les ASIC. Le rapport de Cambridge publié en 2025 permet
+      d’en examiner l’empreinte énergétique. Le coût du matériel et l’accès à
+      une électricité bon marché favorisent de grandes installations ; les
+      *pools* regroupent des mineurs pour partager les revenus. L’ouverture du
+      réseau coexiste donc avec une concentration des moyens de produire les
+      blocs.
+
+      ## Des incitations économiques à la sécurité du registre
+
+      Les bitcoins nouvellement émis et les frais de transaction rémunèrent
+      le producteur d’un bloc conservé dans l’historique. Le protocole cherche
+      ainsi à rendre la participation au réseau plus profitable qu’une
+      attaque. Il intègre une logique de *mechanism design* : organiser les
+      règles et les gains pour que des intérêts individuels contribuent à un
+      résultat collectif.
+
+      La valeur du bitcoin, les revenus du minage, la puissance de calcul
+      engagée et la confiance dans le registre s’influencent mutuellement.
+      Cette articulation produit une sécurité pratique, fondée sur des
+      probabilités et des incitations. Elle ne rend pas toute attaque
+      impossible et ne garantit pas qu’attaquer serait toujours non rentable.
 
       ### À retenir
 
-      - Une blockchain est un registre distribué organisé en blocs liés.
-      - La preuve de travail transforme le consensus en compétition coûteuse.
-      - La sécurité de Bitcoin combine cryptographie, probabilité et incitations.
+      - Le consensus permet de départager des historiques concurrents et d’éviter la double dépense.
+      - Les mineurs proposent des blocs ; les nœuds vérifient qu’ils respectent les règles.
+      - Bitcoin retient la chaîne valide qui cumule le plus de travail, pas celle soutenue par le plus d’identités.
+      - Le chaînage et la preuve de travail rendent la réécriture coûteuse ; les confirmations en réduisent le risque sous certaines conditions.
+      - Cette sécurité combine cryptographie, probabilités et incitations, avec un coût énergétique et des risques de concentration.
 
     bibliographie:
-      - reference: "Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)"
+      - reference: "Bitcoin Project. (s. d.-a). *Block chain*. Bitcoin Developer Guide. [https://developer.bitcoin.org/devguide/block_chain.html](https://developer.bitcoin.org/devguide/block_chain.html)"
+        url: "https://developer.bitcoin.org/devguide/block_chain.html"
+        note: "Documentation technique : structure des blocs, preuve de travail et branches concurrentes. À consulter pour préciser les mécanismes illustrés dans le chapitre."
+
+      - reference: "Bitcoin Project. (s. d.-b). *Mining*. Bitcoin Developer Guide. [https://developer.bitcoin.org/devguide/mining.html](https://developer.bitcoin.org/devguide/mining.html)"
+        url: "https://developer.bitcoin.org/devguide/mining.html"
+        note: "Pour approfondir la construction des blocs, le matériel de minage et le fonctionnement des pools."
+
+      - reference: "Dai, W. (1998, novembre). *b-money*. [https://nakamotoinstitute.org/library/b-money/](https://nakamotoinstitute.org/library/b-money/)"
+        url: "https://nakamotoinstitute.org/library/b-money/"
+        note: "Texte original conservé par le Satoshi Nakamoto Institute. Comparer les deux propositions et les hypothèses nécessaires à leur fonctionnement."
+
+      - reference: "Garay, J., Kiayias, A., & Leonardos, N. (2014). *The Bitcoin backbone protocol: Analysis and applications* (Rapport 2014/765). Cryptology ePrint Archive. [https://eprint.iacr.org/2014/765](https://eprint.iacr.org/2014/765)"
+        url: "https://eprint.iacr.org/2014/765"
+        note: "Lecture avancée et facultative. Le rapport, révisé depuis sa première diffusion, formalise les garanties du protocole sous des hypothèses sur la puissance adverse et les communications."
+
+      - reference: "Nakamoto, S. (2008). *Bitcoin: A peer-to-peer electronic cash system*. [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)"
         url: "https://bitcoin.org/bitcoin.pdf"
-        note: "Se concentrer sur les sections 2 à 5 et 11."
+        note: "Lecture centrale : sections 2 à 6 sur la double dépense, le chaînage, la preuve de travail et les incitations ; section 11 pour le raisonnement probabiliste sur les attaques."
 
       - reference: "Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. (2016). *Bitcoin and cryptocurrency technologies: A comprehensive introduction*. Princeton University Press. [https://bitcoinbook.cs.princeton.edu/](https://bitcoinbook.cs.princeton.edu/)"
         url: "https://bitcoinbook.cs.princeton.edu/"
         note: "Les premiers chapitres fournissent une introduction progressive à la cryptographie et au consensus de Bitcoin."
 
+      - reference: "Neumueller, A., Pieters, G. C., Mohaddes, K., Rousseau, V., & Zhang, B. Z. (2025). *Cambridge digital mining industry report: Global operations, sentiment, and energy use*. Cambridge Centre for Alternative Finance. [https://www.jbs.cam.ac.uk/wp-content/uploads/2025/04/2025-04-cambridge-digital-mining-industry-report.pdf](https://www.jbs.cam.ac.uk/wp-content/uploads/2025/04/2025-04-cambridge-digital-mining-industry-report.pdf)"
+        url: "https://www.jbs.cam.ac.uk/wp-content/uploads/2025/04/2025-04-cambridge-digital-mining-industry-report.pdf"
+        note: "Pour documenter la consommation électrique et l’organisation industrielle du minage. Distinguer l’année de publication, la période observée et les estimations annualisées."
+
+      - reference: "Royal Swedish Academy of Sciences. (2007). *Asymmetric information and economic institutions* [Présentation du prix en sciences économiques]. NobelPrize.org. [https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2007.pdf](https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2007.pdf)"
+        url: "https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2007.pdf"
+        note: "Introduction au mechanism design, antérieur à Bitcoin : comprendre comment les règles d’une institution orientent les décisions d’acteurs poursuivant leurs propres intérêts."
+
       - reference: "Sanderson, G. (2017, 7 juillet). *But how does bitcoin actually work?* [Vidéo]. 3Blue1Brown. [https://www.3blue1brown.com/lessons/bitcoin/](https://www.3blue1brown.com/lessons/bitcoin/)"
         url: "https://www.3blue1brown.com/lessons/bitcoin/"
         note: "Vidéo de 25 minutes sur signatures, hachage, preuve de travail et registre partagé."
+
+      - reference: "Szabo, N. (2005, 29 décembre). *Bit gold*. Unenumerated. [https://unenumerated.blogspot.com/2005/12/bit-gold.html](https://unenumerated.blogspot.com/2005/12/bit-gold.html)"
+        url: "https://unenumerated.blogspot.com/2005/12/bit-gold.html"
+        note: "Pour comprendre l’analogie avec l’or et la production d’une rareté par le calcul. Comparer le registre proposé avec la solution de consensus de Bitcoin."
 
   - id: "monnaie-valeur-confiance"
     titre: "Monnaie"

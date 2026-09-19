@@ -27,11 +27,13 @@ Arrow keys and Space advance slides and steps. Hash URLs retain the current slid
 ## Deck sources
 
 ```text
-decks/example/
-  deck.svx
-  deck.config.ts      Optional technical configuration
-  static/             Public media
-  components/         Local Svelte components
+decks/
+  deck.config.yaml          Optional configuration shared by child decks
+  example/
+    deck.svx
+    deck.config.yaml        Optional local overrides
+    static/                 Public media
+    components/             Local Svelte components
 ```
 
 A minimal `deck.svx`:
@@ -56,20 +58,24 @@ Speaker notes.
 # Second slide
 ```
 
-The frontmatter supplies `id`, `title` and `description`. Optional `deck.config.ts` fields take precedence:
+The frontmatter supplies `id`, `title` and `description`. Technical defaults can be declared once in `deck.config.yaml` beside the deck directories:
 
-```ts
-import type { DeckConfig } from "@svx-deck/core/deck/types";
-
-export default {
-  title: "Example presentation",
-  template: {
-    source: "deck.svx",
-    slideSeparator: "---",
-    notesSeparator: "--- notes",
-  },
-} satisfies DeckConfig;
+```yaml
+template:
+  source: deck.svx
+  slideSeparator: "---"
+  notesSeparator: "--- notes"
 ```
+
+A deck can override the shared values with its own `deck.config.yaml`:
+
+```yaml
+title: Example presentation
+template:
+  notesSeparator: "--- speaker notes"
+```
+
+Configuration is resolved in this order: framework defaults, the shared parent YAML, deck frontmatter for `id`, `title` and `description`, then the local YAML. The `template` mapping is merged so a local field does not erase the other shared fields. Unknown keys and invalid value types stop the command with a configuration error.
 
 Defaults need not be repeated. A configuration file is useful for custom separators or a different source file. Generated files live in `.svx-deck.nosync/` and are never edited by hand. The `.nosync` suffix prevents cloud synchronization from duplicating volatile runtime files.
 
@@ -98,7 +104,14 @@ Local components import through `$components`. Progressive content uses `Fragmen
 <Fragment at={1}><Diagram /></Fragment>
 ```
 
-`Persona` is available in deck markup without an import. It displays `name`, `dates` and `picture`. Other reusable components and controller helpers are exported through the package. Domain-specific teaching simulations remain with their decks.
+`Persona` and `FramedImage` are available in deck markup without imports. `Persona` displays `name`, `dates` and `picture`; `FramedImage` displays an image inside the shared frame and extends its lines to the slide edges. Other reusable components and controller helpers are exported through the package. Domain-specific teaching simulations remain with their decks.
+
+`Persona` uses standard frame borders without corner crosses or glow. Both components accept `glow`, a boolean that defaults to `false`; `glow={true}` adds a light color-derived halo. Direct `FramedImage` usage retains corner crosses by default; pass `crosses={false}` to hide them.
+
+```svelte
+<Persona name="Ada Lovelace" dates="1815–1852" picture="/lovelace.jpg" />
+<Persona name="Ada Lovelace" picture="/lovelace.jpg" glow={true} />
+```
 
 Images with `data-glow`, `data-glow="soft"` or `data-glow="strong"` receive a color-derived halo. If browser pixel access is unavailable, the accent supplies a fallback.
 
@@ -117,7 +130,11 @@ Serve the complete output under `/slides/history-1/` and embed `/slides/history-
 
 ## Design and source preservation
 
-`@dg/ui` owns shared colors, fonts, typography roles and controls. The framework owns slide geometry, projection sizes, layouts, notes and previews in their Svelte components. Imported CSS and component sources participate in normal Vite hot reload. There is no theme registry, theme package or per-deck theme selection.
+`@dg/ui` owns shared colors, fonts, typography roles, spacing, crosses and controls. The deck's visual styles live in [`theme/default.css`](theme/default.css), automatically imported by `SlideSurface.svelte` in projection, presenter, student and embedded views. Edit this file to change slide typography, layouts, media and decoration. Its selectors are contained by the slide surface; projection sizes remain fluid, while shared values and the `.crossed` decoration come from DG. Other components keep their own geometry and styles.
+
+The default frame uses DG's one-pixel `--border` strokes and corner crosses. Its lines extend to the slide edges, with the same clearance around every cross as DG frames.
+
+Imported CSS and component sources participate in normal Vite hot reload. There is no theme registry, theme package or per-deck theme selection.
 
 Existing teaching sources were moved without edits. Their historical `theme` fields are ignored; the runtime resolves their former package imports and supplies local CSS values derived from `@dg/ui`. These accommodations preserve authored material and do not introduce another theme. New code uses `@svx-deck/core` and the current design tokens directly.
 

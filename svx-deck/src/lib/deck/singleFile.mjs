@@ -176,8 +176,13 @@ function serializeFrontmatter(metadata) {
     .join("\n")}\n---\n\n`;
 }
 
-const sharedComponentImport =
-  "import Persona from '@svx-deck/core/components/Persona.svelte'";
+const sharedComponents = ["Persona", "FramedImage"];
+const sharedComponentImports = sharedComponents
+  .map(
+    (component) =>
+      `import ${component} from '@svx-deck/core/components/${component}.svelte'`,
+  )
+  .join("\n  ");
 
 function maskFencedCode(content) {
   return content.replace(
@@ -188,8 +193,11 @@ function maskFencedCode(content) {
 
 function removeManualSharedImports(content) {
   const masked = maskFencedCode(content);
-  const importPattern =
-    /^[ \t]*import\s+(?:\{\s*Persona\s*\}|Persona)\s+from\s+['"]@svx-(?:slides|deck)\/(?:components|core\/components)(?:\/Persona\.svelte)?['"];?[ \t]*(?:\r?\n|$)/gm;
+  const componentNames = sharedComponents.join("|");
+  const importPattern = new RegExp(
+    `^[ \\t]*import\\s+(?:\\{\\s*(?:${componentNames})\\s*\\}|(?:${componentNames}))\\s+from\\s+['"]@svx-(?:slides|deck)\\/(?:components|core\\/components)(?:\\/(?:${componentNames})\\.svelte)?['"];?[ \\t]*(?:\\r?\\n|$)`,
+    "gm",
+  );
   const matches = [...masked.matchAll(importPattern)];
   let result = content;
 
@@ -212,11 +220,11 @@ function injectSharedComponentImports(content) {
   );
 
   if (!script || script.index === undefined) {
-    return `<script>\n  ${sharedComponentImport}\n</script>\n\n${withoutManualImport.trim()}`;
+    return `<script>\n  ${sharedComponentImports}\n</script>\n\n${withoutManualImport.trim()}`;
   }
 
   const insertion = script.index + script[0].length;
-  return `${withoutManualImport.slice(0, insertion)}\n  ${sharedComponentImport}${withoutManualImport.slice(insertion)}`;
+  return `${withoutManualImport.slice(0, insertion)}\n  ${sharedComponentImports}${withoutManualImport.slice(insertion)}`;
 }
 function normalizeStaticAssetUrls(content, deckRoot) {
   if (!deckRoot) return content;

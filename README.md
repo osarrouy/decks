@@ -28,6 +28,13 @@ Start an existing deck directly from the workspace root:
 
 ```sh
 pnpm dev:blockchain
+pnpm dev:blockchain-bitcoin
+pnpm dev:blockchain-consensus
+pnpm dev:blockchain-ethereum
+pnpm dev:blockchain-gouvernance
+pnpm dev:blockchain-mechanism-design
+pnpm dev:blockchain-monnaie
+pnpm dev:blockchain-nft
 pnpm dev:cybernetics
 pnpm dev:economics
 pnpm dev:history-1

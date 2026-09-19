@@ -53,18 +53,25 @@ Le Bitcoin une monnaie numérique, pair-à-pair - c’est-à-dire décentralisé
 
 --- notes
 
-Le Bitcoin repose sur un réseau de **nœuds**.
+Pour comprendre ce que signifie « pair-à-pair », partons d’une architecture plus familière : le modèle **client–serveur**.
 
-Chaque nœud exécute un programme spécifique lui permettant de communiquer avec tous les autres nœuds pour maintenir ensemble un historique complet de toutes les transactions réalisées en bitcoin depuis l’origine du réseau.
+Dans ce modèle, les rôles sont séparés. Les clients demandent des informations ou un service ; le serveur traite leurs demandes et leur répond. Sur le schéma, le serveur central conserve le registre et les clients s’adressent à lui pour y accéder. Si ce serveur devient indisponible, ils perdent l’accès au registre.
 
-Chacun est libre d’installer ce programme sur la machine de son choix et d’intégrer ainsi le réseau. Ce caractère ouvert et décentralisé garantit la robustesse du système. Cette architecture ne requiert aucun centre de contrôle, ni aucune autorité particulière.
+:::comment
+Passer du schéma client–serveur au réseau pair à pair.
+:::
 
-Le Bitcoin peut ainsi être rapproché des protocoles de partage de fichier en P2P. Comme dans le cas du protocole BitTorrent, chaque participant est à la fois consommateur et contributeur.
+Dans une architecture **pair à pair**, ou **P2P**, les machines échangent directement entre elles. Chacune peut recevoir des données et en fournir aux autres. Le fonctionnement du réseau repose ainsi sur leur coopération, sans serveur central qui concentre tous les échanges.
 
-La différence tient essentiellement au fait que, en lieu et place de films ou d’album de musique, les nœuds Bitcoin partagent une base de données constituée de l’historique de toutes les transactions exécutées sur le réseau depuis son origine, que cette base de données est susceptible d’intégrer à chaque instant de nouvelles transactions, et que ces celles-ci doivent être collectivement authentifiées et validées.
+C’est sur ce principe que fonctionne Bitcoin. Son réseau est constitué de **nœuds** : des machines qui exécutent un programme leur permettant d’échanger des transactions et des blocs. Chaque nœud communique avec plusieurs autres ; les informations circulent de proche en proche pour maintenir un historique commun des transactions.
+
+Chacun est libre d’installer ce programme et de rejoindre le réseau. Cette architecture ouverte et décentralisée contribue à sa robustesse : le départ d’un nœud n’interrompt pas à lui seul le fonctionnement de l’ensemble. Aucun serveur central ne tient le registre pour tous les autres.
+
+On retrouve cette logique dans les protocoles de partage de fichiers comme BitTorrent : chaque participant peut être à la fois consommateur et contributeur. Dans Bitcoin, les nœuds partagent toutefois un registre de transactions plutôt que des films ou des albums de musique.
+
+Ce registre doit aussi accueillir de nouvelles transactions. Il ne suffit donc pas de transmettre des données : les nœuds doivent vérifier leur validité et s’accorder sur l’historique à conserver. C’est cette exigence qui pose le problème du **consensus**.
 
 ---
-<!-- slide: id="blockchain-019-registre-des-transactions" title="Registre des transactions" -->
 | Emetteur | Destinataire | Valeur |
 | :------- | :----------- | :----- |
 | Alice    | Bob          | 2 ₿    |
@@ -123,6 +130,7 @@ C’est ce qu'on appelle le problème du **consensus distribué**.
 
 ---
 ## Consensus
+Le problème de la double dépense {.kicker}
 
 --- notes
 
@@ -150,29 +158,25 @@ chaîne de blocs {.kicker}
 
 --- notes
 
-↦ Une solution pour établir un consensus dans un système distribué est de laisser un ou plusieurs nœuds proposer une solution à ce consensus - *i.e.* proposer une version de l’historique des transactions à un instant t - et laisser les autres nœuds décider à quelle solutions ils choisissent de se raccrocher.
+Comment construire cet historique commun ?
 
-↦ Comment ça fonctionne concrètement ?
+Reprenons notre exemple : Alice souhaite envoyer un bitcoin à Bob. Elle diffuse sa transaction au réseau. Les nœuds la relaient de proche en proche.
 
-↦ Les utilisateurs diffusent les transactions qu'ils veulent exécuter au réseau. Par exemple : moi, Alice, souhaite envoyer 1 bitcoin à Bob.
+Cette transaction attend encore, avec d'autres, son inscription dans le registre. Des participants appelés **mineurs** sélectionnent certaines de ces transactions et les regroupent dans un **bloc**. Un bloc est donc un lot de nouvelles transactions, proposé pour prolonger l’historique.
 
-↦ Le réseau se charge de diffuser, de proche en proche, cette information à l'ensemble de ses nœuds.
+On peut comparer le registre à un cahier et les blocs à ses pages successives. Le regroupement permet de faire avancer le registre par lots de transactions.
 
-↦ Certains nœuds particuliers, appelés *mineurs*, assemblent ces transactions dans des blocs, pour des raisons d’efficacité - à hauteur d’un bloc toutes les dix minutes environ.
+Chaque bloc propose ainsi une nouvelle page du registre, à la suite des précédentes. Cette succession de blocs forme l’historique des transactions : c’est la **chaîne de blocs**, ou _blockchain_.
 
-↦ Les mineurs s'efforcent alors de résoudre une sorte de petit puzzle mathématique propre à chaque bloc.
+Les blocs proposés par les mineurs peuvent toutefois être refusés par les autres noeuds. Chaque nœud vérifie en effet que ces blocs respectent les règles du protocole. Il contrôle notamment que les paiements sont autorisés et que les mêmes bitcoins ne sont pas dépensés deux fois dans cet historique. Un bloc qui ne respecte pas ces règles est rejeté.
 
-↦ On parle du **minage** d’un bloc.
+Mais cela laisse une difficulté : deux blocs différents peuvent respecter ces règles et proposer deux suites concurrentes du registre. Comment choisir celle que le réseau poursuivra ?
 
-↦ Le premier mineur à avoir trouvé la solution à ce puzzle diffuse le bloc ainsi validé à l'ensemble du réseau.
+[Sources]
 
-↦ Le nœud aproposant ce bloc est par ailleurs récompensé par des bitcoins fraichement émis. C'est de cette manière que la création du Bitcoin est mise en oeuvre (c.f. supra).
+- [Bitcoin — Structure de la chaîne de blocs](https://developer.bitcoin.org/devguide/block_chain.html)
 
-↦ Les autres nœuds du réseau peuvent alors juger de la validité de ce bloc au regard des informations en leur possession.
-
-↦  Si le bloc proposé leur semble valide, ils l’intègrent à leur propre historique. Autrement, ils l'excluent comme s’il n’avait jamais existé.
-
-
+[/Sources]
 
 ---
 <!-- slide: layout="center" steps=3 -->
@@ -185,17 +189,35 @@ chaîne de blocs {.kicker}
 
 --- notes
 
-↦ Que se passe-t-il si différents nœuds proposent des blocs différents - trient les transactions dans des ordres différents et incompatibles entre eux ?
+Des mineurs différents peuvent en effet proposer presque simultanément des blocs différents. Certains nœuds reçoivent l’un en premier, les autres reçoivent l’autre. Deux branches peuvent donc se former même sans tentative de fraude.
 
-↦ On considère simplement que la chaîne la plus longue fait autorité.
+:::comment
+Faire apparaître les deux branches.
+:::
 
-↦ Qu'est-ce qui empêche, alors, un attaquant de proposer simplement un nouvelle historique de bloc plus long, réécrivant l'histoire pour, par exemple, s'attribuer frauduleusement des bitcoins ?
+La règle commune est alors de suivre la chaîne valide la plus longue.
 
-↦ Ou encore, qu’est-ce qui empêche un esprit mal attentionné de faire tourner 100000 noeuds pour pouvoir décider seul de la chaine la plus longue, qui, pour lui, fait donc autorité.
+:::comment
+Faire apparaître le prolongement de la première branche.
+:::
 
-↦ Tout repose sur le petit puzzle mathématique dont je vous ai parlé.
+ Lorsqu’une branche prend de l’avance, les nœuds qui suivaient l’autre la rejoignent.
 
-↦ Ce petit puzzle consiste en un algorithme qu'on appelle la **proof-of-work** - ou preuve de travail.
+:::comment
+Faire apparaître le rejet de la seconde branche.
+:::
+
+Les blocs écartés n’appartiennent plus à l’historique retenu. Leurs transactions peuvent être proposées à nouveau si elles restent valides dans ce nouvel historique.
+
+Mais pourquoi un attaquant ne fabriquerait-il pas très rapidement des milliers de blocs pour imposer sa propre version du registre ? Pourquoi ne créerait-il pas cent mille nœuds pour l’appuyer ?
+
+La réponse tient au travail nécessaire pour produire chaque bloc.
+
+[Sources]
+
+- [Bitcoin — Branches concurrentes](https://developer.bitcoin.org/devguide/block_chain.html#block-height-and-forking)
+
+[/Sources]
 
 ---
 ## Proof-of-work
@@ -203,35 +225,56 @@ Preuve de travail {.kicker}
 
 --- notes
 
-↦ La résolution de ce puzzle mathématique est conçue de telle sorte à réclamer beaucoup de puissance de calcul et donc à être **chronophage** et **énergivore** - et donc couteuse ! - mais extrêmement facile à vérifier une fois la solution trouvée.
+Pour qu’un bloc puisse être accepté, son producteur doit résoudre une sorte de puzzle calculatoire propre à ce bloc. Ce puzzle est conçu pour être complexe et réclamer de nombreux essais avant qu'une solution ne soit trouvée.
 
-↦ Expliciter l'usage de carte graphique dédiée.
+La résolution de ce puzzle consomme donc du temps de calcul et de l’électricité. En revnache, sa vérification est très rapide.
 
-↦ La difficulté de ce puzzle est ainsi ajustée automatiquement aux capacités de calcul du réseau pour que sa résolution réclame toujours plus ou moins la même durée - 10 minutes - quelles que soient les ressources engagées.
+C’est la **preuve de travail**, ou *proof-of-work*. La recherche de cette preuve constitue le **minage**. Lorsqu’un mineur trouve une solution, il diffuse son bloc accompagné de cette preuve.
 
-↦ C'est d'ailleurs là l'un principaux reproche adressé au Bitcoin. Son fonctionnement est très énergivore.
+Chaque nœud vérifie la preuve et les transactions. Une preuve correcte ne permet pas de faire accepter un paiement interdit par les règles du protocole. Si un paiement est considére comme illicite le bloc sera rejeté par les autres noeuds.
 
-↦ En 2022 la consommation du Bitcoin a été d'environ 112 TWh, soit 0,56% de la consommation énergétique mondiale.
+Ce mécanisme protège le choix de l’historique contre les attaques Sybil. Une telle attaque consiste, pour un même acteur, à se présenter sous de nombreuses identités afin de multiplier son influence. Si chaque nœud disposait d’une voix, créer cent mille nœuds permettrait de fabriquer une majorité artificielle.
 
-↦ Nous verrons plus loin qu'il existe des alternatives moins energivores à la PoW.
+Avec la preuve de travail, multiplier les identités ne suffit pas. Les chances de produire un bloc dépendent de la puissance de calcul mobilisée. Répartir cette même puissance entre cent mille identités ne l’augmente pas.
 
-↦ Les mineurs sont aujourd'hui constitués de gigantesques fermes de calculs. Cela pose également un problème politique de centralisation.
+La difficulté du puzzle est réajustée tous les 2 016 blocs. Le protocole vise ainsi **un bloc toutes les dix minutes en moyenne pour l’ensemble du réseau**. Un bloc particulier peut arriver beaucoup plus vite ou beaucoup plus lentement.
 
-↦ Toujours est-il que le minage d'un bloc n'est donc pas gratuit : il réclame de la puissance de calcul, beaucoup d'énergie, et donc de l'argent.
+On peut maintenant préciser la règle de la diapositive précédente : les nœuds ne retiennent pas vraiment la chaine la plus longue, mais la chaîne valide qui cumule le plus de travail. À difficulté égale, c’est effectivement la plus longue. Mais la longueur ne suffit donc si les difficultés diffèrent.
 
-↦ A quoi ça sert, et en quoi ca sécurise le réseau ?
+Quel intérêt ont alors les mineurs à mobiliser de la puissance de calcul, et donc à dépenser de l’énergie et de l’argent, pour sécuriser le réseau ?
 
-↦ Pour le comprends, il nous faut rentrer un peu dans le détails technique et Par ailleurs l'historique des blocs n'est pas construit n'importe comment.
+Pour les y inciter, le protocole prévoit une récompense pour le producteur de chaque bloc : des bitcoins nouvellement émis et les frais des transactions incluses. Le mineur ne peut conserver cette récompense que si le bloc reste dans l’historique retenu. C’est ainsi que de nouveaux bitcoins entrent en circulation.
+
+La preuve de travail rend donc coûteuse la production de nouveaux blocs. Mais comment protège-t-elle les transactions déjà inscrites dans le registre ? Qu’est-ce qui empêche un attaquant de réécrire l’historique pour revenir sur un paiement et dépenser à nouveau les mêmes bitcoins ?
+
+Pour le comprendre il faut maintenant regarder comment les blocs sont reliés les uns aux autres.
+
+[Sources]
+
+- [Satoshi Nakamoto — Bitcoin, sections 4 à 6](https://bitcoin.org/bitcoin.pdf)
+- [Bitcoin — Minage](https://developer.bitcoin.org/devguide/mining.html)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-026-il-y-a-quelques-elements-supplementaires-importants-a-" title="Il y a quelques éléments supplémentaires importants à mentionner ici" layout="center" -->
-<img src="/assets/ffc143a788c24955f37b5927edc4a75166934886.png" alt="Il y a quelques éléments supplémentaires importants à mentionner ici" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-empreinte-du-passe" title="Une empreinte du passé" layout="center" -->
+<script>
+  import HashChain from "$components/HashChain.svelte";
+</script>
+
+<HashChain overview />
 
 --- notes
 
-↦ Il y a quelques éléments supplémentaires importants à mentionner ici.
+Les blocs sont reliés par une petite donnée : chacun contient une **empreinte numérique du bloc précédent**, appelée **hash**.
 
-↦ Expliciter la présence du hash du block précédent dans le bloc suivant.
+:::comment
+Montrer les valeurs identiques dans les champs « Hash » et « Hash précédent ». Les empreintes sont raccourcies et fictives.
+:::
+
+Dans le schéma, le bloc 43 reprend l’empreinte du bloc 42. Le bloc 44 reprend à son tour celle du bloc 43. On retrouve les mêmes valeurs d’un bloc au suivant.
+
+Qu'est ce que cette empreinte et à quoi elle sert ?
 
 ---
 <!-- slide: id="blockchain-026-hash-sha-256" title="Hash SHA-256" layout="center" steps=3 -->
@@ -243,18 +286,33 @@ Preuve de travail {.kicker}
 
 --- notes
 
-↦ Un hash constitue une sorte de résumé, de taille fixe, d'une information de taille arbitraire.
+Ce hash permet en quelque sorte de résumer ou d'identifier le contenu d'un bloc.
 
-↦ La moindre modification de l'information originelle modifie en profondeur le hash.
+Un algorithme de hash possède en effet plusieurs propriétés :
 
-↦ Il est très facile de calculer le hash d'une information mais il est impossible de retrouver l'information originale à partir du hash.
+- **Une longueur fixe.** Avec un même algorithme, une simple phrase et un document entier produisent des empreintes de même longueur.
+- **Un résultat reproductible.** Un même contenu traité avec le même algorithme donne toujours la même empreinte.
+- **Un calcul rapide.** Un ordinateur peut calculer cette empreinte en peu de temps.
+- **Une sensibilité aux modifications.** Il suffit de modifier un seul caractère du texte pour obtenir une empreinte très différente.
 
-↦ Faire une démo `shasum sample.text`
+:::comment
+Afficher le texte et son empreinte. Faire ensuite apparaître la modification de « destin » en « dessin », puis comparer les deux empreintes.
+:::
 
-↦ Chaque block intègre ainsi un instantané des nouvelles transactions, mais aussi, de hash en hash, un résumé de tout l’historique des transactions, jusqu’au bloc de genèse.
+L’empreinte ne permet pas de reconstruire le document - ou le bloc - d’origine. Elle permet en revanche de vérifier si ce bloc correspond à l’empreinte attendue, en refaisant le calcul.
+
+Le puzzle du minage utilise cette propriété. Le mineur fait varier un nombre dans son bloc, appelé **nonce**, pour chercher une empreinte qui respecte le seuil fixé par le protocole. Chaque essai donne un nouveau résultat, imprévisible à l’avance. Les autres nœuds peuvent vérifier le résultat en refaisant le calcul.
+
+Mais cette empreinte sert aussi à relier un bloc au suivant.
+
+[Sources]
+
+- [Bitcoin — Empreintes et preuve de travail](https://developer.bitcoin.org/devguide/block_chain.html#proof-of-work)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Ainsi, plus une transaction est ancienne, plus il devient difficile de l" layout="center" steps=6 -->
+<!-- slide: id="blockchain-027-ainsi-plus-une-transaction-est-ancienne-plus-il-devien" title="Réécrire l’historique" layout="center" steps=6 -->
 <script>
   import HashChain from "$components/HashChain.svelte";
 </script>
@@ -263,37 +321,105 @@ Preuve de travail {.kicker}
 
 --- notes
 
-↦ Ainsi, plus une transaction est ancienne, plus il devient difficile de la falsifier.
+:::comment
+Faire défiler les trois blocs et montrer les valeurs de hash identiques d’un bloc au suivant.
+:::
 
-↦ Falsifier un bloc implique en effet de falsifier également l'ensemble des blocs postérieur.
+Ici, le bloc 43 porte la référence au bloc 42, qui porte lui-même celle de son prédécesseur. De proche en proche, chaque nouveau bloc se rattache ainsi à un historique précis, jusqu’au premier bloc, appelé **bloc de genèse**.
 
-↦ Cela nécessiterait de résoudre de nombreux puzzles mathématiques très rapidement - un pour chaque bloc de la nouvelle chaine.
+On peut ainsi dire que chaque bloc porte une empreinte complete de son passé. Il ne recopie pas toutes les anciennes transactions : il contient une donnée qui permet de lier les nouvelles transactions à un historique précis.
 
-↦ Un tel effort réclamerait une capacité de calcul - et une consommation électrique - rapidement in-atteignable (ou couterait plus cher que l’argent qu’elle permettrait de gagner en falsifiant la transaction).
+C'est ce mécanisme qui permet de sécuriser l'historique complet de la chaine de bloc.
 
-C’est ce mécanisme qui rend une attaque contre Bitcoin extrêmement coûteuse. Pour réécrire l’histoire du réseau, un attaquant devrait reconstruire une chaîne plus longue que la chaîne légitime : c’est ce qu’on appelle une attaque des 51 % parce qu’elle réclamerait, pour être effective, que l’attaquant contrôle à lui seul 51% de la puissance de calcul totale engagée sur le réseaux.
+Que se passe-t-il en effet si l’on modifie une transaction dans un ancien bloc ?
 
-↦ C’est pour cette raison qu’on suggère usuellement, comme une bonne pratique, de ne considérer une transaction valide après qu’au moins 10 blocs aient été validée après elle : on parle de 10 **confirmations**.
+Reprenons Alice. Elle a payé Bob, mais veut faire retenir un autre historique dans lequel elle a envoyé les mêmes bitcoins à Charlie.
 
-↦ Le point important ici, est que la sécurité de la blockchain ne repose pas sur un élément preuve de formel : il est, en théorie, possible de falsifier une blockchain si l’on a accès a des moyens suffisants.
+:::comment
+Parcourir les étapes du schéma : repérer les liens, modifier la transaction, montrer la rupture puis la reconstruction. Les autres paiements représentés sont indépendants de celui d’Alice, pour isoler le mécanisme du chaînage.
+:::
 
-↦ C’est ici que ce joue la principale originalité de la blockchain - et ce qui la démarque des solutions précédemment avancées au problème du consensus distribué.
+Modifier cette transaction change l’empreinte du bloc. Le bloc suivant conserve l’ancienne empreinte : il ne se rattache plus au bloc modifié. Corriger cette référence change à son tour son empreinte, et ainsi de suite.
 
-↦ La sécurité de la blockchain repose sur un mécanisme simultanément statistique et économique : passé un certain nombre de blocs, il est statistiquement improbable que quiconque ait les ressources nécessaires pour falsifier son historique - ou que parvenir à le faire soit économiquement profitable.
+Recalculer de simples empreintes serait rapide. Mais les blocs modifiés doivent aussi satisfaire la preuve de travail. Il faut donc rechercher une nouvelle solution pour chaque bloc à reconstruire, en repartant du bloc modifié.
 
-↦ Le coup de génie de Satoshi Nakamoto est d’avoir inventé ce que l’on appelle aujourd’hui la cryptonomics ou le mechanism design, c’est-à-dire l’intégration de considérations économiques comme principes de fonctionnement d’un système technique.
+Pendant ce temps, les autres mineurs continuent de prolonger la chaîne existante. Pour imposer sa branche, l’attaquant doit rattraper puis dépasser son travail cumulé. Plus les blocs s’accumulent après le paiement, plus l’effort à refaire augmente.
 
-↦ Les ressources engagées pour falsifier une blockchain dépendent elles-mêmes de la valeur de sa crypto-monnaie qui est elle-même sécurisée par le niveau de ressources nécessaires au minage, qui dépend elle-même de la valeur de cette crypto-monnaie.
+On parle d’**attaque des 51 %** lorsqu’un acteur ou un groupe contrôle la majorité de la puissance de calcul. Il peut alors produire du travail plus vite que le reste du réseau, en moyenne. Avec une puissance minoritaire, une attaque reste possible, mais ses chances de rattraper un historique bien confirmé diminuent.
 
-↦ Si le bitcoin ne vaut rien, peu importe qu’on l’attaque. La puissance de calcul mobilisée pour sécuriser le réseau sera faible, mais les enjeux économiques aussi et cela aura donc peut d'importance.
+La sécurité dépend donc à la fois du coût du calcul et de la probabilité de rattraper les autres mineurs. Elle se renforce au fil des blocs, sans devenir une impossibilité absolue de réécriture.
 
-A l’inverse :
 
-•	plus le bitcoin a de valeur, plus il attire de mineurs ;
-•	plus il attire de mineurs, plus la preuve de travail devient coûteuse ;
-•	plus la preuve de travail est coûteuse, plus il est difficile d’attaquer le réseau ;
-•	plus le réseau est sécurisé, plus le bitcoin inspire confiance… et plus sa valeur croît.
+Lorsque le paiement d’Alice à Bob entre dans un bloc de la chaîne retenue, il reçoit **une confirmation**. Chaque bloc ajouté après lui apporte une confirmation supplémentaire.
 
-↦ D’une certaine façon, le bitcoin - et donc sa valeur - est donc sécurisé par l’appétit des mineurs, lui-même suscité par ... la valeur du bitcoin.
+Un bloc suivant donne donc deux confirmations. Cinq blocs suivants donnent six confirmations.
 
-↦ Il vous reste à apprécier le coup de génie ...
+:::warning
+La validité du paiement et sa stabilité dans l’historique sont deux questions différentes. Les nœuds vérifient d’abord qu’il respecte les règles. Les confirmations réduisent ensuite le risque qu’un historique concurrent le remplace.
+:::
+
+Le nombre de confirmations attendu dépend de l’enjeu du paiement et du risque accepté. Mais on considère souvent que dix confirmations qui rendrent toute réécriture hautement improbable.
+
+Cette protection repose sur une dépense réelle de ressources. Il reste à en examiner les conséquences et à comprendre ce qui incite les mineurs à l’assumer.
+
+---
+## Le coût du minage
+Notre maison brûle et nous regardons ailleurs {.kicker}
+
+--- notes
+
+La recherche des preuves de travail réclame du matériel et de l’électricité. Le minage de Bitcoin utilise des machines spécialisées, appelées **ASIC**, conçues pour effectuer ces calculs très rapidement.
+
+Cette consommation électrique constitue l’une des principales critiques adressées à Bitcoin. Dans un rapport publié en avril 2025, Cambridge estime qu’au rythme observé à la mi-2024, le minage représente environ **138 TWh d’électricité par an**, soit de l’ordre de **0,5 % de la consommation mondiale d’électricité**.
+
+:::warning
+Il s’agit d’une estimation annualisée : elle indique ce que représenterait une année de consommation au rythme estimé à la mi-2024. Elle ne constitue donc pas un bilan de l’année 2025. La part indiquée concerne l’électricité, pas l’ensemble de l’énergie consommée dans le monde. Les émissions de carbone dépendent aussi des sources d’électricité utilisées.
+:::
+
+Le coût du matériel et l’accès à une électricité bon marché favorisent de grandes installations. De nombreux mineurs mettent aussi leur puissance en commun dans des groupements, les *pools*, pour partager les revenus. Ces concentrations posent une question politique : qui dispose effectivement des moyens de participer à la production des blocs ?
+
+Nous verrons qu’il existe d’autres mécanismes de consensus moins énergivores. Pour Bitcoin, la question immédiate est économique : pourquoi engager autant de ressources ?
+
+[Sources]
+
+- [Cambridge — Cambridge Digital Mining Industry Report, avril 2025, p. 9](https://www.jbs.cam.ac.uk/wp-content/uploads/2025/04/2025-04-cambridge-digital-mining-industry-report.pdf)
+- [Bitcoin — Machines de minage et pools](https://developer.bitcoin.org/devguide/mining.html)
+
+[/Sources]
+
+---
+## Mechanism design
+Dance for me puppets {.kicker}
+
+--- notes
+
+Les mineurs ne soint pas altruistes. Ils engagent des ressources pour être en retour récompensés en bitcoins grâce au minage des blocs.
+
+C’est ici que se situe le coup de génie de Bitcoin : faire des intérêts économiques des participants une composante de la sécurité du réseau.
+
+La chaîne reste techniquement attaquable. Un acteur disposant de moyens suffisants peut tenter d’imposer un autre historique. Bitcoin organise donc une protection dans laquelle réécrire le passé exige des ressources considérables, avec un résultat incertain.
+
+Cette sécurité repose sur deux dimensions complémentaires :
+
+- **Une dimension statistique.** Tant que les mineurs qui suivent le protocole disposent de la majorité de la puissance de calcul et que les blocs circulent normalement, les chances d’un attaquant minoritaire de rattraper la chaîne diminuent à mesure que les confirmations s’accumulent.
+- **Une dimension économique.** L’attaquant doit payer le matériel et l’électricité nécessaires, au risque de perdre sa mise. La même puissance de calcul pourrait lui rapporter des récompenses en participant au fonctionnement du réseau. Le protocole cherche ainsi à rendre cette participation plus profitable qu’une attaque.
+
+Le problème du consensus prend alors une dimension économique : comment organiser les coûts et les gains pour que les participants aient intérêt à entretenir un historique commun ? Le déplacement consiste à viser une sécurité pratique : une réécriture reste possible, mais le protocole cherche à en rendre le coût dissuasif et les chances de réussite très faibles.
+
+C'est ce qu'on appelle le **mechanism design**, ou conception de mécanismes : définir des règles pour que des acteurs poursuivant leurs propres intérêts contribuent à un résultat collectif. Nakamoto n’invente pas ce domaine ; il en intègre la logique au fonctionnement d’une monnaie distribuée.
+
+La relation entre la valeur du bitcoin et sa sécurisation devient ainsi circulaire.
+
+Une hausse du prix du bitcoin augmente la valeur des récompenses et peut attirer davantage de puissance de calcul. Concurrencer le réseau exige alors plus de ressources. Cette résistance aux attaques peut soutenir la confiance dans Bitcoin et ainsi augmenter sa valeur.
+
+À l’inverse, une baisse durable des revenus du minage peut conduire certains mineurs à arrêter leurs machines. La valeur du bitcoin et les ressources mobilisées pour le sécuriser s’influencent donc mutuellement.
+
+L’intuition décisive consiste ainsi à faire de l’appétit des mineurs une ressource pour sécuriser le registre. **La confiance dans l’historique repose sur l’articulation du calcul, des probabilités et des intérêts économiques.**
+
+[Sources]
+
+- [Satoshi Nakamoto — Bitcoin, sections 6 et 11 sur les incitations et les probabilités d’attaque](https://bitcoin.org/bitcoin.pdf)
+- [Garay, Kiayias et Leonardos — The Bitcoin Backbone Protocol: Analysis and Applications](https://eprint.iacr.org/2014/765)
+- [Académie royale des sciences de Suède — Les fondements du mechanism design, prix 2007](https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2007.pdf)
+
+[/Sources]

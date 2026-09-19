@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { mkdir, readFile, rm } from "node:fs/promises";
 import { resolve } from "node:path";
-import { loadConfigFromFile } from "vite";
+import { JSON_SCHEMA, load } from "js-yaml";
 import {
   parseSingleFileDeck,
   resolveDeckTemplateConfig,
@@ -9,22 +9,82 @@ import {
 import { writeIfChanged } from "./files.mjs";
 
 export const RUNTIME_DIRECTORY = ".svx-deck.nosync";
+const CONFIG_FILE = "deck.config.yaml";
+const CONFIG_KEYS = new Set(["id", "title", "description", "template"]);
+const TEMPLATE_KEYS = new Set([
+  "source",
+  "outDir",
+  "slideSeparator",
+  "notesSeparator",
+]);
+
+function assertObject(value, path, field = "configuration") {
+  if (value === null || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(`${path}: ${field} must be a YAML mapping`);
+  }
+}
+
+function assertKeys(value, allowed, path, field = "configuration") {
+  for (const key of Object.keys(value)) {
+    if (!allowed.has(key)) {
+      throw new Error(`${path}: unknown ${field} key "${key}"`);
+    }
+  }
+}
+
+function assertOptionalStrings(value, keys, path, field = "configuration") {
+  for (const key of keys) {
+    if (value[key] !== undefined && typeof value[key] !== "string") {
+      throw new Error(`${path}: ${field}.${key} must be a string`);
+    }
+  }
+}
+
+async function readDeckConfig(path) {
+  if (!existsSync(path)) return {};
+
+  let config;
+  try {
+    config = load(await readFile(path, "utf8"), { schema: JSON_SCHEMA }) ?? {};
+  } catch (error) {
+    throw new Error(`${path}: invalid YAML: ${error.message}`, {
+      cause: error,
+    });
+  }
+
+  assertObject(config, path);
+  assertKeys(config, CONFIG_KEYS, path);
+  assertOptionalStrings(config, ["id", "title", "description"], path);
+
+  if (config.template !== undefined) {
+    assertObject(config.template, path, "template");
+    assertKeys(config.template, TEMPLATE_KEYS, path, "template");
+    assertOptionalStrings(config.template, TEMPLATE_KEYS, path, "template");
+  }
+
+  return config;
+}
 
 export async function loadDeckConfig(deckRoot) {
-  const path = resolve(deckRoot, "deck.config.ts");
-  const loaded = existsSync(path)
-    ? ((
-        await loadConfigFromFile({ command: "build", mode: "production" }, path)
-      )?.config ?? {})
-    : {};
-  const template = resolveDeckTemplateConfig(loaded.template);
+  const legacyPath = resolve(deckRoot, "deck.config.ts");
+  if (existsSync(legacyPath)) {
+    throw new Error(
+      `${legacyPath} is no longer supported; use ${CONFIG_FILE} instead`,
+    );
+  }
+
+  const shared = await readDeckConfig(resolve(deckRoot, "..", CONFIG_FILE));
+  const local = await readDeckConfig(resolve(deckRoot, CONFIG_FILE));
+  const template = resolveDeckTemplateConfig({
+    ...shared.template,
+    ...local.template,
+  });
   const source = await readFile(resolve(deckRoot, template.source), "utf8");
   const { config } = parseSingleFileDeck(source, template);
-  // Select supported fields: historical theme declarations do not configure rendering.
   return {
-    id: loaded.id ?? config.id ?? "deck",
-    title: loaded.title ?? config.title ?? "Slides",
-    description: loaded.description ?? config.description,
+    id: local.id ?? config.id ?? shared.id ?? "deck",
+    title: local.title ?? config.title ?? shared.title ?? "Slides",
+    description: local.description ?? config.description ?? shared.description,
     template,
   };
 }

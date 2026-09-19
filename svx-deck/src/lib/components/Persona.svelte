@@ -1,15 +1,33 @@
 <script lang="ts">
-  let { name = "", dates = "", picture = "" } = $props();
+  import FramedImage from "./FramedImage.svelte";
+
+  let {
+    name = "",
+    dates = "",
+    picture = "",
+    glow = false,
+  }: {
+    name?: string;
+    dates?: string;
+    picture?: string;
+    glow?: boolean;
+  } = $props();
 </script>
 
 <div class:with-picture={picture} class="persona">
   <div class="persona-details">
     <h2>{name}</h2>
-    <p class="kicker">{dates}</p>
+    {#if dates}<p class="kicker">{dates}</p>{/if}
   </div>
   {#if picture}
     <div class="persona-picture">
-      <img src={picture} alt={name} data-glow="strong" />
+      <FramedImage
+        src={picture}
+        alt={name}
+        maxHeight="68cqh"
+        crosses={false}
+        {glow}
+      />
     </div>
   {/if}
 </div>
@@ -24,20 +42,17 @@
     width: 100%;
   }
 
-  .persona-details {
+  .persona-details,
+  .persona-picture {
     min-width: 0;
   }
 
   .persona-picture {
     display: grid;
-    min-width: 0;
     place-items: center;
   }
 
-  .persona-picture :global(.image-glow-frame),
-  .persona-picture img {
+  .persona-picture :global(.framed-image) {
     max-width: 100%;
-    max-height: 68vh;
-    object-fit: contain;
   }
 </style>

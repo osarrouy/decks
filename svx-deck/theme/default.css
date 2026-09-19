@@ -1,0 +1,614 @@
+/* Default deck theme. All selectors are contained by SlideSurface. */
+
+.slide[data-slide-surface] {
+    /* Projection sizes stay fluid; shared spacing, type roles and colors come from DG. */
+    --_unit: clamp(var(--space-1), 0.64vw, var(--space-3));
+    --_text-size: clamp(10px, 1.75cqw, 34px);
+    --_small-size: clamp(7px, 0.82cqw, 15px);
+    --_heading-size: clamp(36px, 9.1cqw, 166px);
+    --_heading-2-size: clamp(30px, 5cqw, 83px);
+    --_line-body: var(--body-line-height);
+    --_line-heading: 0.95;
+    --_padding-horizontal: clamp(var(--space-5), 4.48vw, calc(var(--layout-padding-inline) * 2.5));
+    --_padding-vertical: clamp(var(--space-5), 4.48vw, calc(var(--layout-padding-block) * 2.5));
+    --_gap: clamp(var(--content-gap-inline), 2.56vw, var(--layout-gap-inline));
+    --_corner-mark-outset: clamp(var(--space-3), 1.92vw, var(--space-6));
+    --_corner-mark-offset-horizontal: calc(var(--_padding-horizontal) - var(--_corner-mark-outset));
+    --_corner-mark-offset-vertical: calc(var(--_padding-vertical) - var(--_corner-mark-outset));
+    --image-radius: 1.05rem;
+    --image-glow-color: var(--accent);
+
+    /* Existing course components are frozen; these values follow @dg/ui. */
+    --bg: var(--background);
+    --fg: var(--text-prominent);
+    --muted: var(--text-muted);
+    --rule: var(--border-prominent);
+    --font-body: var(--font-sans);
+    --font-heading: var(--font-serif);
+    --accent-soft: var(--accent-subtle);
+    --grid-unit: var(--_unit);
+    --gap: var(--_gap);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: var(--_padding-vertical) var(--_padding-horizontal);
+    background: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    overflow: hidden;
+    container-type: size;
+    font-weight: var(--body-weight);
+}
+
+.slide[data-slide-surface]:not([data-layout]) {
+    display: grid;
+    align-content: center;
+}
+
+/* Slide typography. */
+.slide[data-slide-surface] h1 {
+    margin-top: 0;
+    max-width: 20ch;
+    margin-bottom: var(--content-gap-block);
+    font-family: var(--font-serif);
+    font-size: var(--_heading-size);
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-letter-spacing);
+    line-height: var(--_line-heading);
+    font-style: normal;
+    overflow-wrap: anywhere;
+}
+
+.slide[data-slide-surface] h2,
+.slide[data-slide-surface] h3 {
+    margin-top: 0;
+    max-width: 18ch;
+    margin-bottom: var(--content-gap-block);
+    font-family: var(--font-serif);
+    font-size: var(--_heading-2-size);
+    line-height: 1;
+    font-style: normal;
+    font-weight: var(--heading-weight);
+    overflow-wrap: anywhere;
+}
+
+.slide[data-slide-surface] p {
+    margin-top: 0;
+    font-size: var(--_text-size);
+    line-height: var(--_line-body);
+}
+
+.slide[data-slide-surface] ul,
+.slide[data-slide-surface] ol {
+    margin-top: 0;
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-5);
+}
+
+.slide[data-slide-surface] blockquote {
+    margin-top: 0;
+}
+
+.slide[data-slide-surface] li {
+    font-size: var(--_text-size);
+    line-height: var(--_line-body);
+}
+
+.slide[data-slide-surface] p+p {
+    margin-top: var(--space-2);
+}
+
+.slide[data-slide-surface] strong {
+    color: var(--accent);
+    font-weight: var(--heading-weight);
+}
+
+.slide[data-slide-surface] code {
+    padding: 0.12em 0.28em;
+    border-radius: 0.3em;
+    background: var(--background-prominent);
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+}
+
+/* Media, including the runtime-generated image glow. */
+.slide[data-slide-surface] img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.slide[data-slide-surface] :where(img[data-glow], img[glow], img.glow, img.glowy) {
+    --image-glow-blur: min(3.4rem, 7cqmin);
+    border-radius: var(--image-radius);
+    box-shadow: 0 0 var(--image-glow-blur) -0.85rem color-mix(in srgb, var(--image-glow-color), transparent 56%);
+    transform: translateZ(0);
+}
+
+.slide[data-slide-surface] :where(img[data-glow="soft"], img[glow="soft"]) {
+    --image-glow-blur: min(2.4rem, 5cqmin);
+}
+
+.slide[data-slide-surface] :where(img[data-glow="strong"], img[glow="strong"]) {
+    --image-glow-blur: min(4.4rem, 9cqmin);
+}
+
+.slide[data-slide-surface] .image-glow-frame {
+    --image-glow-map: radial-gradient(circle, color-mix(in srgb, var(--image-glow-color), transparent 32%), transparent 68%);
+    --image-glow-opacity: 0.66;
+    --image-glow-scale: 1.16;
+    --image-glow-blur: min(3.4rem, 7cqmin);
+    position: relative;
+    display: inline-grid;
+    width: fit-content;
+    max-width: calc((100cqw - 2 * var(--_corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
+    isolation: isolate;
+    border-radius: var(--image-radius);
+    box-sizing: border-box;
+    max-height: calc((100cqh - 2 * var(--_corner-mark-offset-vertical) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
+}
+
+.slide[data-slide-surface] .image-glow-frame>img {
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 1;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    max-width: calc((100cqw - 2 * var(--_corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
+    max-height: calc((100cqh - 2 * var(--_corner-mark-offset-vertical) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
+    object-fit: contain;
+}
+
+.slide[data-slide-surface] .image-glow-aura {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    grid-area: 1 / 1;
+    border-radius: inherit;
+    background: var(--image-glow-map);
+    filter: blur(var(--image-glow-blur)) saturate(1.18);
+    opacity: var(--image-glow-opacity);
+    transform: scale(var(--image-glow-scale));
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.slide[data-slide-surface] .wiener-portrait {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+}
+
+.slide[data-slide-surface] .wiener-portrait>img,
+.slide[data-slide-surface] .wiener-portrait>.image-glow-frame,
+.slide[data-slide-surface] .wiener-portrait>.image-glow-frame>img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Editorial labels, equations and references. */
+.slide[data-slide-surface] .kicker {
+    margin-bottom: var(--content-gap-block);
+    color: var(--accent);
+    width: 100%;
+    font-family: var(--font-mono);
+    font-size: var(--_text-size);
+    letter-spacing: var(--metadata-letter-spacing);
+    text-transform: uppercase;
+    font-weight: var(--ui-weight);
+}
+
+.slide[data-slide-surface] .lead {
+    max-width: 29ch;
+    font-size: clamp(8px, 1.15cqw, 19px);
+    line-height: var(--metadata-line-height);
+    letter-spacing: var(--metadata-letter-spacing);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-weight: var(--ui-weight);
+    text-transform: uppercase;
+}
+
+.slide[data-slide-surface] .muted {
+    color: var(--text-muted);
+}
+
+.slide[data-slide-surface] .formula {
+    color: var(--text-prominent);
+    font-family: var(--font-mono);
+    font-weight: var(--ui-weight);
+}
+
+.slide[data-slide-surface] .math-display {
+    margin: var(--layout-gap-block) auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: clamp(1.5rem, 3vw, 3.8rem);
+    text-align: center;
+}
+
+.slide[data-slide-surface] .math-inline {
+    white-space: nowrap;
+}
+
+.slide[data-slide-surface] .citation {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--_small-size);
+    font-weight: var(--ui-weight);
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+.slide[data-slide-surface] .citation+.citation {
+    margin-top: calc(var(--space-2) * 0.5);
+}
+
+.slide[data-slide-surface] .footnote-ref {
+    margin-left: 0.12em;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.52em;
+    font-weight: var(--ui-weight);
+    line-height: 0;
+    vertical-align: super;
+}
+
+.slide[data-slide-surface]:has(.slide-footnotes) {
+    padding-bottom: calc(var(--_padding-vertical) + var(--layout-gap-block));
+}
+
+.slide[data-slide-surface][data-layout="center"]:has(.slide-footnotes) {
+    padding-bottom: var(--_padding-vertical);
+}
+
+.slide[data-slide-surface][data-layout="center"] .formula {
+    margin: 0;
+}
+
+.slide[data-slide-surface] .slide-footnotes {
+    position: absolute;
+    z-index: 2;
+    right: var(--_padding-horizontal);
+    bottom: var(--content-gap-block);
+    left: var(--_padding-horizontal);
+    padding-top: var(--space-2);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--_small-size);
+    font-weight: var(--ui-weight);
+    line-height: 1.25;
+    text-align: left;
+}
+
+.slide[data-slide-surface] .slide-footnotes::before {
+    position: absolute;
+    right: 0;
+    bottom: var(--content-gap-block);
+    left: 0;
+    height: var(--border-width);
+    background: var(--border-prominent);
+    content: "";
+}
+
+.slide[data-slide-surface] .slide-footnotes ol {
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+.slide[data-slide-surface] .slide-footnotes li {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Layout metadata and Markdown containers share the same compositions. */
+.slide[data-slide-surface][data-layout="two-columns"],
+.slide[data-slide-surface][data-layout="columns"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--_gap);
+    align-items: center;
+}
+
+.slide[data-slide-surface][data-layout="center"],
+.slide[data-slide-surface][data-layout="cover"] {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.slide[data-slide-surface][data-layout="cover"] h1 {
+    max-width: 11ch;
+    margin-inline: auto;
+}
+
+.slide[data-slide-surface][data-layout="stack"] {
+    display: grid;
+    align-content: center;
+    gap: var(--_gap);
+}
+
+.slide[data-slide-surface][data-align="start"] {
+    align-items: start;
+    text-align: start;
+}
+
+.slide[data-slide-surface][data-align="center"] {
+    align-items: center;
+    text-align: center;
+}
+
+.slide[data-slide-surface][data-align="end"] {
+    align-items: end;
+    text-align: end;
+}
+
+.slide[data-slide-surface] .layout.two-columns,
+.slide[data-slide-surface] .layout.columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--_gap);
+    align-items: center;
+    height: 100%;
+}
+
+.slide[data-slide-surface] .layout.center,
+.slide[data-slide-surface] .layout.cover {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.slide[data-slide-surface] .layout.stack {
+    display: grid;
+    align-content: center;
+    gap: var(--_gap);
+    height: 100%;
+}
+
+.slide[data-slide-surface] :where(.layout.center, .layout.cover)>* {
+    margin-inline: auto;
+}
+
+.slide[data-slide-surface] .column {
+    min-width: 0;
+}
+
+.slide[data-slide-surface] .timeline {
+    display: flex;
+    align-items: center;
+    gap: var(--content-gap-block);
+    margin-top: var(--layout-gap-block);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--_small-size);
+    letter-spacing: var(--ui-letter-spacing);
+    text-transform: uppercase;
+}
+
+.slide[data-slide-surface] .timeline span {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--content-gap-block);
+}
+
+.slide[data-slide-surface] .timeline span:not(:last-child)::after {
+    width: clamp(2rem, 6vw, 6rem);
+    height: var(--border-width);
+    background: var(--border-prominent);
+    content: "";
+}
+
+.slide[data-slide-surface] .sequence {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    max-width: 54rem;
+    margin: var(--space-5) 0 0;
+    font-family: var(--font-mono);
+    font-size: clamp(1.25rem, 2.1vw, 2.25rem);
+    line-height: 1.25;
+}
+
+.slide[data-slide-surface] .sequence .arrow {
+    color: var(--accent);
+}
+
+.slide[data-slide-surface] .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--content-gap-block);
+    margin-top: var(--space-5);
+}
+
+.slide[data-slide-surface] .concept-card {
+    min-height: 9rem;
+    padding: var(--content-gap-block);
+    border-top: var(--border-width) solid var(--border-prominent);
+}
+
+.slide[data-slide-surface] .concept-card h3 {
+    margin-bottom: var(--space-2);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--_small-size);
+    font-weight: var(--ui-weight);
+    letter-spacing: var(--ui-letter-spacing);
+    text-transform: uppercase;
+}
+
+.slide[data-slide-surface] .concept-card p {
+    font-size: clamp(1.25rem, 1.8vw, 2rem);
+    line-height: 1.2;
+}
+
+.slide[data-slide-surface] .statement {
+    max-width: 34ch;
+    margin-top: var(--space-5);
+    color: var(--text-muted);
+    font-size: clamp(1.45rem, 2.3vw, 2.65rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.slide[data-slide-surface] .statement strong,
+.slide[data-slide-surface] .statement.formula {
+    color: var(--text-prominent);
+}
+
+.slide[data-slide-surface] .comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--layout-gap-inline) * 2);
+    margin-top: var(--space-5);
+}
+
+.slide[data-slide-surface] .comparison>div {
+    padding-top: var(--content-gap-block);
+    border-top: var(--border-width) solid var(--border-prominent);
+}
+
+.slide[data-slide-surface] .comparison h2 {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--_small-size);
+    letter-spacing: var(--ui-letter-spacing);
+    text-transform: uppercase;
+}
+
+.slide[data-slide-surface] .comparison p,
+.slide[data-slide-surface] .comparison li {
+    font-size: clamp(1.15rem, 1.65vw, 1.75rem);
+}
+
+.slide[data-slide-surface] .question {
+    max-width: 42ch;
+    margin-top: var(--layout-gap-block);
+    padding-left: var(--content-gap-block);
+    border-left: var(--border-width) solid var(--accent);
+    color: var(--text-muted);
+    font-size: clamp(1.35rem, 2vw, 2.2rem);
+    font-style: italic;
+    line-height: 1.25;
+}
+
+.slide[data-slide-surface] .term-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    max-width: 54rem;
+    margin-top: var(--space-5);
+}
+
+.slide[data-slide-surface] .term-list span {
+    padding: 0.42em 0.7em;
+    border: var(--border-width) solid var(--border-prominent);
+    border-radius: 999px;
+    color: var(--text-prominent);
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 1.4vw, 1.45rem);
+}
+
+.slide[data-slide-surface]> :where(img[data-slide-image="fill"], img.slide-image-fill),
+.slide[data-slide-surface]>.image-glow-frame:has(> img[data-slide-image="fill"]),
+.slide[data-slide-surface]>.image-glow-frame:has(> img.slide-image-fill) {
+    width: fit-content;
+    max-width: calc(100cqw + 2 * var(--_corner-mark-outset));
+    height: fit-content;
+    max-height: calc(100cqh + 2 * var(--_corner-mark-outset));
+    place-self: center;
+    object-fit: contain;
+}
+
+.slide[data-slide-surface]>.image-glow-frame:has(> img[data-slide-image="fill"])>img,
+.slide[data-slide-surface]>.image-glow-frame:has(> img.slide-image-fill)>img,
+.slide[data-slide-surface]>img[data-slide-image="fill"],
+.slide[data-slide-surface]>img.slide-image-fill {
+    width: auto;
+    max-width: calc(100cqw + 2 * var(--_corner-mark-outset));
+    height: auto;
+    max-height: calc(100cqh + 2 * var(--_corner-mark-outset));
+    object-fit: contain;
+}
+
+.slide[data-slide-surface] h1 strong,
+.slide[data-slide-surface] h2 strong {
+    color: inherit;
+    font-weight: var(--heading-weight);
+}
+
+.slide[data-slide-surface] .kicker::before {
+    color: var(--accent);
+    content: ">_";
+    margin-right: var(--space-2);
+}
+
+/* DG paints the frame and crosses; this overlay positions them inside the slide. */
+.slide[data-slide-surface]>.corners {
+    position: absolute;
+    inset: var(--_corner-mark-offset-vertical) var(--_corner-mark-offset-horizontal);
+    pointer-events: none;
+}
+
+/* Continue the DG rails outside the frame, preserving its corner clearance. */
+.slide[data-slide-surface]>.corners>.extension {
+    position: absolute;
+    display: block;
+    background: var(--border);
+    pointer-events: none;
+    z-index: 4;
+}
+
+.slide[data-slide-surface]>.corners> :is(.top-left, .top-right, .bottom-left, .bottom-right) {
+    width: 100cqw;
+    height: var(--border-width);
+}
+
+.slide[data-slide-surface]>.corners> :is(.left-top, .left-bottom, .right-top, .right-bottom) {
+    width: var(--border-width);
+    height: 100cqh;
+}
+
+.slide[data-slide-surface]>.corners> :is(.top-left, .top-right) {
+    top: 0;
+}
+
+.slide[data-slide-surface]>.corners> :is(.bottom-left, .bottom-right) {
+    bottom: calc(-1 * var(--border-width));
+}
+
+.slide[data-slide-surface]>.corners> :is(.top-left, .bottom-left) {
+    right: calc(100% + var(--_corner-gap));
+}
+
+.slide[data-slide-surface]>.corners> :is(.top-right, .bottom-right) {
+    left: calc(100% + var(--_corner-gap));
+}
+
+.slide[data-slide-surface]>.corners> :is(.left-top, .left-bottom) {
+    left: calc(-1 * var(--border-width));
+}
+
+.slide[data-slide-surface]>.corners> :is(.right-top, .right-bottom) {
+    right: calc(-1 * var(--border-width));
+}
+
+.slide[data-slide-surface]>.corners> :is(.left-top, .right-top) {
+    bottom: calc(100% + var(--_corner-gap));
+}
+
+.slide[data-slide-surface]>.corners> :is(.left-bottom, .right-bottom) {
+    top: calc(100% + var(--_corner-gap));
+}

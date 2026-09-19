@@ -1,6 +1,6 @@
 # Deck authoring
 
-Each subdirectory is a standalone deck, with `deck.svx`, an optional `deck.config.ts`, `static/` media and optional `components/`. The framework generates its application under `.svx-deck.nosync/`; no hand-maintained SvelteKit app is required.
+Each subdirectory is a standalone deck, with `deck.svx`, an optional `deck.config.yaml`, `static/` media and optional `components/`. Shared technical defaults live in `decks/deck.config.yaml`; a deck's local configuration overrides them. The framework generates its application under `.svx-deck.nosync/`; no hand-maintained SvelteKit app is required.
 
 ```sh
 pnpm deck dev decks/history-1
@@ -12,7 +12,7 @@ See the [framework guide](../svx-deck/README.md) for syntax, the public API and 
 
 ## Indications dans les notes
 
-Dans une section `--- notes`, utiliser les directives conteneur `:::comment` et `:::example` pour annoter plusieurs paragraphes :
+Dans une section `--- notes`, les directives conteneur `:::comment`, `:::example` et `:::warning` permettent d’annoter plusieurs paragraphes :
 
 ```md
 :::comment
@@ -35,7 +35,16 @@ par la boucle de rétroaction.
 :::
 ```
 
-Ces deux directives peuvent contenir plusieurs paragraphes, listes et autres éléments Markdown. Elles restent réservées aux notes du speaker et n’apparaissent pas dans la projection.
+The `:::warning` container marks an important qualification or a likely misunderstanding. It is labelled **Attention** in the rendered notes:
+
+```md
+:::warning
+Une valeur exprimée en euros ne représente pas nécessairement une quantité
+de monnaie disponible pour payer.
+:::
+```
+
+Each container opens with three colons and its name on a separate line and closes with `:::`. These containers can contain several paragraphs, lists and other Markdown elements. They do not appear in the projected slide. Student exports preserve examples and warnings but omit `:::comment` presentation cues.
 
 L’ancien format en blockquote reste accepté :
 
@@ -47,12 +56,6 @@ L’ancien format en blockquote reste accepté :
 > Un exemple court.
 ```
 
-## Style des notes de cours
+## Editorial guidance
 
-Les notes du speaker doivent servir d’aide-mémoire, et non constituer un texte intégral à lire ou à rédiger mot à mot. Leur longueur est variable : les passages simples restent très courts ; les passages techniques, subtils ou pédagogiquement délicats peuvent être développés davantage.
-
-Privilégier des paragraphes de cours en phrases complètes plutôt qu’une liste de points. La priorité est de conserver l’ordre pédagogique du discours : idée directrice, définitions, enchaînement des mécanismes, exemples, dates et noms, précautions, conclusion et transition vers la slide suivante. La formulation doit rester condensée, mais suffisamment précise pour permettre de retrouver exactement comment articuler et expliquer le propos.
-
-Quand c’est utile, hiérarchiser explicitement ce qui est indispensable à retenir et ce qui relève d’un approfondissement. Signaler aussi les formulations à éviter lorsqu’une simplification risquerait de produire un contresens historique, technique ou conceptuel.
-
-Utiliser `:::example` pour les exemples ou développements à mobiliser oralement, et `:::comment` pour les indications de présentation, de mise en scène ou d’accentuation. Lorsqu’un résumé est demandé, proposer d’abord le texte sans modifier directement le deck ; une modification ne sera effectuée qu’après accord explicite.
+See [AGENTS.md](AGENTS.md) for the distinction between minimal projected slides and concise speaker notes written in complete sentences, and for the workflow governing editorial changes.
