@@ -21,21 +21,13 @@
 
   let current = $derived(deck.slides[$state.slide]);
   let maxStep = $derived(current?.metadata.steps ?? 0);
-  let progress = $derived(
-    deck.slides.length ? (($state.slide + 1) / deck.slides.length) * 100 : 0,
-  );
 </script>
 
 <svelte:head>
   <title>{deck.title} — révisions</title>
 </svelte:head>
 
-<main
-  id="main"
-  tabindex="-1"
-  class="student-root"
-  style={`--progress: ${progress}%`}
->
+<main id="main" tabindex="-1" class="student-root">
   <div class="student-shell">
     <header class="student-header">
       <div>

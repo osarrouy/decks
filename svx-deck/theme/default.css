@@ -11,7 +11,6 @@
   --_corner-mark-offset-horizontal: calc(var(--_padding-horizontal) - var(--_corner-mark-outset));
   --_corner-mark-offset-vertical: calc(var(--_padding-vertical) - var(--_corner-mark-outset));
   --image-radius: 1.05rem;
-  --image-glow-color: var(--accent);
 
   position: relative;
   width: 100%;
@@ -19,11 +18,8 @@
   min-height: 0;
   padding: var(--_padding-vertical) var(--_padding-horizontal);
   background: var(--background);
-  color: var(--text-primary);
-  font-family: var(--font-sans);
   overflow: hidden;
   container-type: size;
-  font-weight: var(--body-weight);
 }
 
 .slide[data-slide-surface]:not([data-layout]) {
@@ -31,62 +27,30 @@
   align-content: center;
 }
 
-/* Slide typography. */
+/* Projection-specific heading geometry; DG owns typography and prose defaults. */
+.slide[data-slide-surface] :is(h1, h2, h3) {
+  margin-bottom: var(--content-gap-block);
+}
+
+/* Explicit layouts and heading margins already supply their vertical rhythm. */
+.slide[data-slide-surface][data-layout] > *,
+.slide[data-slide-surface] :is(h1, h2, h3) + * {
+  margin-block-start: 0;
+}
+
 .slide[data-slide-surface] h1 {
-  margin-top: 0;
   max-width: 20ch;
-  margin-bottom: var(--content-gap-block);
-  font-family: var(--font-serif);
-  font-size: var(--heading-1-size);
-  font-weight: var(--heading-weight);
-  letter-spacing: var(--heading-letter-spacing);
   line-height: 0.95;
-  font-style: normal;
-  overflow-wrap: anywhere;
 }
 
-.slide[data-slide-surface] h2,
-.slide[data-slide-surface] h3 {
-  margin-top: 0;
+.slide[data-slide-surface] :is(h2, h3) {
   max-width: 18ch;
-  margin-bottom: var(--content-gap-block);
-  font-family: var(--font-serif);
-  font-size: var(--heading-2-size);
   line-height: 1;
-  font-style: normal;
-  font-weight: var(--heading-weight);
-  overflow-wrap: anywhere;
 }
 
-.slide[data-slide-surface] h3 {
-  font-size: var(--heading-3-size);
-}
-
-.slide[data-slide-surface] p {
-  margin-top: 0;
-  font-size: var(--body-font-size);
-  line-height: var(--body-line-height);
-}
-
-.slide[data-slide-surface] ul,
-.slide[data-slide-surface] ol {
-  margin-top: 0;
-  display: grid;
-  gap: var(--space-2);
-  padding-left: var(--space-5);
-}
-
-.slide[data-slide-surface] blockquote {
-  margin-top: 0;
-}
-
-.slide[data-slide-surface] li {
-  font-size: var(--body-font-size);
-  line-height: var(--body-line-height);
-}
-
-.slide[data-slide-surface] p + p {
-  margin-top: var(--space-2);
+/* Quotation defaults remain overridable by the owning component. */
+:where(.slide[data-slide-surface]) :where(blockquote, q) {
+  font-style: italic;
 }
 
 .slide[data-slide-surface] strong {
@@ -98,21 +62,18 @@
   padding: 0.12em 0.28em;
   border-radius: 0.3em;
   background: var(--background-prominent);
-  font-family: var(--font-mono);
   font-size: 0.8em;
 }
 
 /* Media, including the runtime-generated image glow. */
 .slide[data-slide-surface] img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .slide[data-slide-surface] :where(img[data-glow], img[glow], img.glow, img.glowy) {
   --image-glow-blur: min(3.4rem, 7cqmin);
   border-radius: var(--image-radius);
-  box-shadow: 0 0 var(--image-glow-blur) -0.85rem color-mix(in srgb, var(--image-glow-color), transparent 56%);
+  box-shadow: 0 0 var(--image-glow-blur) -0.85rem color-mix(in srgb, var(--accent), transparent 56%);
   transform: translateZ(0);
 }
 
@@ -125,18 +86,21 @@
 }
 
 .slide[data-slide-surface] .image-glow-frame {
-  --image-glow-map: radial-gradient(circle, color-mix(in srgb, var(--image-glow-color), transparent 32%), transparent 68%);
+  --image-glow-map: radial-gradient(circle, color-mix(in srgb, var(--accent), transparent 32%), transparent 68%);
   --image-glow-opacity: 0.66;
   --image-glow-scale: 1.16;
   --image-glow-blur: min(3.4rem, 7cqmin);
   position: relative;
   display: inline-grid;
   width: fit-content;
-  max-width: calc((100cqw - 2 * var(--_corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
   isolation: isolate;
   border-radius: var(--image-radius);
-  box-sizing: border-box;
-  max-height: calc((100cqh - 2 * var(--_corner-mark-offset-vertical) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
+}
+
+.slide[data-slide-surface] .image-glow-frame,
+.slide[data-slide-surface] .image-glow-frame > img {
+  max-width: calc((100cqw - 2 * var(--_corner-mark-offset-horizontal) - 2 * var(--image-glow-blur)) / 1.2);
+  max-height: calc((100cqh - 2 * var(--_corner-mark-offset-vertical) - 2 * var(--image-glow-blur)) / 1.2);
 }
 
 .slide[data-slide-surface] .image-glow-frame > img {
@@ -146,8 +110,6 @@
   box-shadow: none;
   width: auto;
   height: auto;
-  max-width: calc((100cqw - 2 * var(--_corner-mark-offset-horizontal) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
-  max-height: calc((100cqh - 2 * var(--_corner-mark-offset-vertical) - 2 * var(--image-glow-blur, min(4.4rem, 9cqmin))) / 1.2);
   object-fit: contain;
 }
 
@@ -165,32 +127,12 @@
   pointer-events: none;
 }
 
-.slide[data-slide-surface] .wiener-portrait {
-  display: grid;
-  place-items: center;
-  min-width: 0;
-  height: 100%;
-  min-height: 0;
-  margin: 0;
-}
-
-.slide[data-slide-surface] .wiener-portrait > img,
-.slide[data-slide-surface] .wiener-portrait > .image-glow-frame,
-.slide[data-slide-surface] .wiener-portrait > .image-glow-frame > img {
-  width: auto;
-  max-width: 100%;
-  height: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
 /* Editorial labels, equations and references. */
 .slide[data-slide-surface] .kicker {
   margin-bottom: var(--content-gap-block);
   color: var(--accent);
   width: 100%;
   font-family: var(--font-mono);
-  font-size: var(--body-font-size);
   letter-spacing: var(--metadata-letter-spacing);
   text-transform: uppercase;
   font-weight: var(--ui-weight);
@@ -236,7 +178,6 @@
   font-size: var(--metadata-font-size);
   font-weight: var(--ui-weight);
   line-height: 1.1;
-  margin-bottom: 0;
 }
 
 .slide[data-slide-surface] .citation + .citation {
@@ -291,18 +232,14 @@
 }
 
 .slide[data-slide-surface] .slide-footnotes ol {
-  margin: 0;
   padding-left: 1.5em;
-}
-
-.slide[data-slide-surface] .slide-footnotes li {
-  font-size: inherit;
-  line-height: inherit;
 }
 
 /* Layout metadata and Markdown containers share the same compositions. */
 .slide[data-slide-surface][data-layout="two-columns"],
-.slide[data-slide-surface][data-layout="columns"] {
+.slide[data-slide-surface][data-layout="columns"],
+.slide[data-slide-surface] .layout.two-columns,
+.slide[data-slide-surface] .layout.columns {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--_gap);
@@ -310,7 +247,9 @@
 }
 
 .slide[data-slide-surface][data-layout="center"],
-.slide[data-slide-surface][data-layout="cover"] {
+.slide[data-slide-surface][data-layout="cover"],
+.slide[data-slide-surface] .layout.center,
+.slide[data-slide-surface] .layout.cover {
   display: grid;
   place-items: center;
   text-align: center;
@@ -321,7 +260,8 @@
   margin-inline: auto;
 }
 
-.slide[data-slide-surface][data-layout="stack"] {
+.slide[data-slide-surface][data-layout="stack"],
+.slide[data-slide-surface] .layout.stack {
   display: grid;
   align-content: center;
   gap: var(--_gap);
@@ -342,27 +282,7 @@
   text-align: end;
 }
 
-.slide[data-slide-surface] .layout.two-columns,
-.slide[data-slide-surface] .layout.columns {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--_gap);
-  align-items: center;
-  height: 100%;
-}
-
-.slide[data-slide-surface] .layout.center,
-.slide[data-slide-surface] .layout.cover {
-  display: grid;
-  place-items: center;
-  height: 100%;
-  text-align: center;
-}
-
-.slide[data-slide-surface] .layout.stack {
-  display: grid;
-  align-content: center;
-  gap: var(--_gap);
+.slide[data-slide-surface] :is(.layout.two-columns, .layout.columns, .layout.center, .layout.cover, .layout.stack) {
   height: 100%;
 }
 
@@ -407,7 +327,6 @@
   max-width: 54rem;
   margin: var(--space-5) 0 0;
   font-family: var(--font-mono);
-  font-size: var(--body-font-size);
   line-height: 1.25;
 }
 
@@ -439,7 +358,6 @@
 }
 
 .slide[data-slide-surface] .concept-card p {
-  font-size: var(--body-font-size);
   line-height: 1.2;
 }
 
@@ -477,11 +395,6 @@
   text-transform: uppercase;
 }
 
-.slide[data-slide-surface] .comparison p,
-.slide[data-slide-surface] .comparison li {
-  font-size: var(--body-font-size);
-}
-
 .slide[data-slide-surface] .question {
   max-width: 42ch;
   margin-top: var(--layout-gap-block);
@@ -510,7 +423,6 @@
   font-size: var(--ui-font-size);
 }
 
-.slide[data-slide-surface] > :where(img[data-slide-image="fill"], img.slide-image-fill),
 .slide[data-slide-surface] > .image-glow-frame:has(> img[data-slide-image="fill"]),
 .slide[data-slide-surface] > .image-glow-frame:has(> img.slide-image-fill) {
   width: fit-content;
@@ -518,7 +430,6 @@
   height: fit-content;
   max-height: calc(100cqh + 2 * var(--_corner-mark-outset));
   place-self: center;
-  object-fit: contain;
 }
 
 .slide[data-slide-surface] > .image-glow-frame:has(> img[data-slide-image="fill"]) > img,
@@ -529,17 +440,16 @@
   max-width: calc(100cqw + 2 * var(--_corner-mark-outset));
   height: auto;
   max-height: calc(100cqh + 2 * var(--_corner-mark-outset));
+  place-self: center;
   object-fit: contain;
 }
 
 .slide[data-slide-surface] h1 strong,
 .slide[data-slide-surface] h2 strong {
   color: inherit;
-  font-weight: var(--heading-weight);
 }
 
 .slide[data-slide-surface] .kicker::before {
-  color: var(--accent);
   content: ">_";
   margin-right: var(--space-2);
 }
@@ -547,6 +457,7 @@
 /* DG paints the frame and crosses; this overlay positions them inside the slide. */
 .slide[data-slide-surface] > .corners {
   position: absolute;
+  margin: 0;
   inset: var(--_corner-mark-offset-vertical) var(--_corner-mark-offset-horizontal);
   pointer-events: none;
 }

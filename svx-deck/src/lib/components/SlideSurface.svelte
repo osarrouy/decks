@@ -30,6 +30,7 @@
     [
       "slide",
       "typography",
+      "prose",
       layout && `slide-layout-${layout}`,
       align && `slide-align-${align}`,
       tone && `slide-tone-${tone}`,

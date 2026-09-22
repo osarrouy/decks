@@ -373,15 +373,17 @@ Thermodynamique et cybernétique {.kicker}
 En physique l’entropie décrit la tendance spontanée d’un système isolé à disperser son énergie et à réduire les différences qui le structurent.
 
 :::example
-Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure. Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
+Une tasse de café chaud est posée sur une table. L’énergie est concentrée dans le café : le café est plus chaud que l’air qui l’entoure.
+
+Peu à peu, la chaleur se diffuse dans la pièce. Le café refroidit et l’air se réchauffe imperceptiblement : la différence de température disparaît. Ce processus est irréversible - ou plutôt difficilement réversible. Le chaleur se diffuse *spontanément* dans la pièce. Mais il est très difficile de faire re-rentrer la chaleur de la pièce dans le café.
 
 
 Une goutte d'encre dans un verre d'eau. L'encre se diffuse jusqu'à colorer tout le verre. Là encore ce processus spontané est difficilement réversible. Il est compliqué de re-concentrer le colorant dans l'eau.
 :::
 
-C’est ce que décrit l’entropie : une tendance spontanée à la dispersion de l'énergie. Ou, pour le dire autrement, une tendance spontanée des systèmes physiques à tendre vers leur état de désorganisation maximal.
+C’est ce que décrit l’entropie : une tendance spontanée à la dispersion de l'énergie. Ou, pour le dire autrement, **une tendance spontanée des systèmes physiques à tendre vers leur état de désorganisation maximal**.
 
-Pourquoi parler ici de désorganisation ? Parce que l’énergie ainsi dispersée devient moins disponible pour produire un travail organisé : les différences s’effacent, et le système dispose de moins de ressources pour maintenir sa structure ou orienter son action.
+Pourquoi parler ici de désorganisation ? Parce que les différences s’y effacent et que le système dispose ainsi de moins de ressources pour maintenir sa structure ou orienter son action.
 
 Là où l'information tend à produire des différences identifiables et transmissibles, l'entropie décrit une tendance spontanée de ces différences à se dissiper progressivement.
 
@@ -395,9 +397,9 @@ Une équipe de foot qui ne peut ni se voir ni se parler.
 
 Wiener et d’autres cybernéticiens étendent donc l’usage de la notion d’information : non plus une mesure formelle de l'incertitude mais une forme générale et structurante de *néguentropie*.
 
-Les boucles de rétroaction sont pensées comme des mécanismes permettant d'opposer localement une résistance aux forces inexorables de l'entropie.
+Les boucles de rétroaction sont alors pensées comme des mécanismes permettant d'opposer localement une résistance aux forces inexorables de l'entropie.
 
-Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Conçue comme néguentropie l'information peut-être identifié absolument partout. Cela peut parfois conduire à un tour de passe-passe épistémologique. Oui, tout ou presque peut être codé comme information. Cela ne signifie toutefois pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
+Cette extension est féconde mais participe aussi de la construction d'un mythe ou d'une idéologie. Conçue comme néguentropie, l'information peut-être identifié absolument partout. Cela peut parfois conduire à un tour de passe-passe épistémologique. Oui, tout ou presque peut être codé comme information. Cela ne signifie toutefois pas que tout n'est qu'information. Ni que l'information est la substance de la vie ou la mesure de tout ordre biologique, social et cosmique.
 
 Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitulé *The Bandwagon* publié en 1956. Il n'y rejette pas les déplacements de la notion d'information. Il rappelle en revanche qu’on ne peut pas simplement transposer quelques mots — « information », « entropie », « redondance » — pour tout expliquer sans étayer ces déplacements de nouvelles hypothèses et de vérifications empiriques.
 
@@ -409,9 +411,7 @@ Shannon mettra d'ailleurs en garde contre ce glissement dans un article intitul�
 
 ### De l’information au système
 
-Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire des effets. Une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations.
-
-L'information et les boucles de rétroaction ne sont donc opératoires qu'à l'intérieur d'un système donné. La question se déplace alors : de l’information elle-même vers l’ensemble organisé au sein duquel elle prend effet.
+Ces déplacements ont néanmoins un geste commun : ils décrivent les phénomènes à partir des relations qui rendent certaines différences détectables, transmissibles et susceptibles de produire des effets. Or une séquence génétique, un signal nerveux, un prix ou une communication sociale ne deviennent opératoires qu’au sein d’un ensemble organisé de relations. La question se déplace alors : de l’information elle-même vers l’ensemble organisé au sein duquel elle prend effet.
 
 
 
@@ -435,10 +435,16 @@ L'information et les boucles de rétroaction ne sont donc opératoires qu'à l'i
 
 La première théorie générale des système est proposée dans les années 1950, sous l'influence de la cybernétique, par Ludwig von Bertalanffy, à partir de réflexions issues de la biologie. Nous retiendrons dans ce cours une définition opératoire de la notion de système comme *un ensemble d’éléments dont les relations produisent un comportement qu'une analyse isolée de ces éléments ne suffit pas à expliquer*.
 
-Cette définition peut toutefois être trompeuse parce qu'elle laisse passer que ce sont d'abord des qualités intrinsèque d'un objet qui font ou non de lui un système. Or la qualification de système relève plutôt _d'une manière d'approcher et d'analyser ce objet_.
+:::warning
+Cette définition peut être trompeuse. Elle laisse penser que ce sont d'abord des qualités intrinsèque d'un objet qui font ou non de lui un système. Or la qualification de système relève plutôt _d'une manière d'approcher et d'analyser ce objet_.
+:::
 
 :::example
-La jalousie dans un couple. Une personne ment ou cache certaines choses. L'autre adopte un comportement jaloux et provoque des disputes à n'en plus finir. Une manière traditionnelle d'aborder ce problème consiste à expliquer ces comportements par la psychologie des protagonistes. De par leur histoire, l'un a adopté un comportement évitant, et l'autre un comportement jaloux. Une approche systèmique s'intéressera aux boucles de rétroaction auto-entretenue par la relation plutôt qu'a la psychologie de ses protagonistes.Une personne devient jalouse ; pour éviter les disputes, son partenaire lui cache certaines choses ou lui ment. Ce mensonge est alors interprété comme une confirmation des soupçons initiaux, ce qui renforce la jalousie. Pour éviter de nouvelles tensions, le partenaire ment à nouveau, alimentant ainsi davantage la méfiance.
+La jalousie dans un couple. Une personne ment ou cache certaines choses. L'autre adopte un comportement jaloux et provoque des disputes à n'en plus finir.
+
+Une manière traditionnelle d'aborder ce problème consiste à expliquer ces comportements par la psychologie des protagonistes. De par leurs histoires, l'un a adopté un comportement évitant, et l'autre un comportement jaloux.
+
+Une approche systèmique s'intéressera aux boucles de rétroaction auto-entretenue par la relation plutôt qu'a la psychologie de ses protagonistes. Une personne devient jalouse ; pour éviter les disputes, son partenaire lui cache certaines choses ou lui ment. Ce mensonge est alors interprété comme une confirmation des soupçons initiaux, ce qui renforce la jalousie. Pour éviter de nouvelles tensions, le partenaire ment à nouveau, alimentant ainsi davantage la méfiance.
 :::
 
 Cet exemple permet de comprendre que le réel n'est pas intrinsèquement systémique ou non-systémique. Mais qu'il est possible d'analyser tout phénomène depuis une approche systémique en le l'analysant comme _l'effet d'une certaine configuration relationnelle_.
@@ -480,7 +486,11 @@ Le choix de ces frontières est notamment important parce qu'il détermine ce à
 Or l'ignorance est un élément constitutif de l'approche cybernétique. L'idée des cybernéticiens est la suivante : le réel est parfois trop complexe pour être analysé ou modélisé car, en dernière analyse, le modéliser impliquerait de le reconstituer en entier.
 
 :::example
-La météo. En théorie, prédire avec précision la météo d'un point donné 24h à l'avance impliquerait de connaître et de modéliser l’ensemble des états pertinents du système atmosphérique : la température, la pression et l’humidité de chaque point de l’atmosphère, les mouvements de l’air, les échanges avec les océans et les sols, le rayonnement solaire, etc. Une description exhaustive du réelle impliquerait de reconstituer l’atmosphère tout entière — jusque dans ses innombrables interactions microscopiques. La tâche est évidemment insurmontable. Mais peu importe. Il est, en pratique, possible de produire des prévisions assez précises en ne retenant que certaines variables, à une certaine échelle, et en corrigeant régulièrement le modèle à partir de nouvelles observations. L’ignorance n’est donc pas ici un simple défaut que l’on devrait progressivement combler. Elle est _constitutive de l’approche_ : le modèle fonctionne précisément parce qu’il ne cherche pas à reproduire le réel dans son intégralité mais qu'il sélectionne quelques relations pertinentes pour répondre à une question donnée : *la température va-t-elle augementer ou baisser demain ?*
+La météo. En théorie, prédire avec précision la météo d'un point donné 24h à l'avance impliquerait de connaître et de modéliser l’ensemble des états pertinents du système atmosphérique : la température, la pression et l’humidité de chaque point de l’atmosphère, les mouvements de l’air, les échanges avec les océans et les sols, le rayonnement solaire, etc.
+
+Une description exhaustive du réelle impliquerait de reconstituer l’atmosphère tout entière — jusque dans ses innombrables interactions microscopiques. La tâche est évidemment insurmontable. Mais peu importe. Il est, en pratique, possible de produire des prévisions assez précises en ne retenant que certaines variables, à une certaine échelle, et en corrigeant régulièrement le modèle à partir de nouvelles observations.
+
+L’ignorance n’est donc pas ici un simple défaut que l’on devrait progressivement combler. Elle est _constitutive de l’approche_ : le modèle fonctionne précisément parce qu’il ne cherche pas à reproduire le réel dans son intégralité mais qu'il sélectionne quelques relations pertinentes pour répondre à une question donnée : _la température va-t-elle augmenter ou baisser demain ?_
 :::
 
 La méconnaissance n'est donc pas nécessairement un _bug_. C'est parfois une _feature_ : une sorte d'ignorance organisée. C'est parce qu'on choisit de laisser activement dans l'ombre certains phénomènes qu'il devient possible de rendre d'autres relations observables, opératoires et prévibles. 
@@ -491,19 +501,30 @@ Cela est aussi vrai en dehors la cybernétique ...
 
 > Les modes par lesquels nous ignorons une chose sont aussi importants sinon plus que les modes par lesquels nous la connaissons. Il y a des modes du non-savoir - étourderies, inattentions, oublis - qui provoquent maladresse et laideur ; mais il en est d'autres - la distraction enjouée du jeunot de Kleist, la nonchalance enchantée d'un enfant - dont nous ne cessons d'admirer la perfection. La psychanalyse appelle refoulement un mode d'ignorance qui produit souvent des effets néfastes sur la vie de celui qui ignore. Au contraire, nous qualifions de belle une femme dont l'esprit semble ignorer avec bonheur un secret dont son corps est parfaitement au courant. Il y a donc des modes réussis de l'ignorance de soi et la beauté en fait partie. Mieux, il est possible que ce soit justement le mode par lequel nous réussissons à ignorer qui définit le rang de ce que nous réussissons à connaître et que l'articulation d'une zone de connaissance soit la condition - et, en même temps, la pierre de touche - de tout notre savoir. Si cela est vrai, un catalogue raisonné des modes et des espèces de l'ignorance serait tout aussi utile que la classification systématique des sciences sur laquelle se fonde la transmission du savoir. Cependant, tandis que les hommes réfléchissent depuis des siècles sur la manière dont ils peuvent conserver, améliorer et rendre leurs connaissances plus certaines, il manque jusqu'au principe d'un art de l'ignorance. Epistémologie et science de la méthode cherchent et fixent les conditions, les paradigmes et les statuts du savoir, mais sur la manière dont on pourrait articuler une zone de non-connaissance, il n'y a pas de recettes. En effet, articuler une zone de non-savoir, cela ne veut pas dire tout simplement ne pas savoir; il ne s'agit pas seulement d'un manque ou d'un défaut. Cela signifie, au contraire, se tenir dans une relation juste avec une ignorance, permettre qu'une inconnaissance guide et accompagne nos gestes, qu'un mutisme réponde limpidement pour nos propres paroles. Ou, pour recourir à un vocabulaire désuet, que ce qui est pour nous le plus intime et le plus nourrissant, n'ait pas la forme de la science et du dogme, mais de la grâce et du témoignage. L'art de vivre, est, en ce sens, la capacité de se tenir dans une relation harmonique avec ce qui nous échappe.
 
+Giorgio Agamben {.kicker}
+
 --- notes
 
-Pourquoi je t'aime ?
 
-Le fait de danser et de suivre un rythme sans savoir pourquoi / sans que la conscience n'intervienne.
+:::example
+**Danser, puis se demander de quoi on a l’air.** Dans une soirée, quelqu’un danse avec plaisir. Puis il remarque qu’on le regarde : il commence à surveiller ses bras, ses pieds, son expression. Ses gestes deviennent embarrassés ; il cherche à retrouver un naturel que cet effort même rend difficile.
 
-La poésie d'un geste ou d'une caresse avec quelqu'un qu'on ne connait encore pas trop.
+Cet exemple fait sentir l’« ignorance de soi » dont parle Agamben : il arrive que notre geste soit plus juste lorsque nous ne sommes pas occupés à nous observer en train de l’accomplir. On peut avoir appris à danser ; cet apprentissage s’accomplit alors dans une certaine disponibilité à s’oublier.
+:::
 
-Une vraie caresse ne dit pas : je sais ce que tu es, ce que tu veux aussi bien que je sais ce que je veux de toi.
-Elle dit : je te touche là où je ne sais pas entièrement ce que tu es.
-Et, plus étrangement encore : je te touche depuis là où je ne sais pas non plus ce que je suis. Depuis là où je ne sais pas vraiment ce que je veux ou ce que je désire.
+:::example
+**Être auprès d’un ami qui va mal sans savoir quoi lui dire. Un ami traverse une rupture.** On ne sait pas exactement ce qu’il ressent, ni ce qui pourrait l’aider.
 
-Dans un monde où il nous sommes enjoints de tout expliciter de ce que nous sommes et voulons - ou de ce que nous croyons être et croyons vouloir - refuser de répondre, refuser de parler, et laisser la question de ce que nous sommes au silence est parfois la seule manière de préserver la poésie du monde.
+On peut chercher à combler immédiatement ce manque : « Je sais très bien ce que tu ressens », « Tu verras, c’est mieux comme ça ». Mais on peut aussi reconnaître son embarras, rester auprès de lui, écouter, accepter un silence.
+
+Le non-savoir prend ici la forme d’une attention. Il conduit à laisser à l’autre la possibilité de dire ce que nous ne pouvons pas deviner. La différence avec l’indifférence est décisive : dans les deux cas, je ne sais pas ce qu’il vit ; mais je peux soit m’en détourner, soit lui faire une place.
+:::
+
+:::example
+Pourquoi tu m'aimes ?
+:::
+
+Dans un monde où il nous sommes enjoints d'expliciter en permanence ce que nous sommes et voulons - ou plutôt, ce que nous croyons être et croyons vouloir - refuser de répondre, refuser de parler, et maintenir la question de ce que nous sommes sous le silence silence est parfois la seule manière de préserver la poésie du monde.
 
 --- 
 ### ~~Dedans~~ / dehors 
@@ -511,7 +532,7 @@ Frontières {.kicker}
 
 --- notes
 
-Car en réalité, choisir d'ignorer le détail de certains éléments n'implique pas nécessairement de ne pouvoir rien en dire. En 1943, Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie ainsi un article intitulé _Behavior, Purpose and Teleology_, dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de leur mode de fonctionnement interne.
+En réalité, choisir d'ignorer le détail de certains éléments n'implique pas nécessairement de ne pouvoir rien en dire. En 1943, Arturo Rosenblueth, Norbert Wiener et Julian Bigelow publie ainsi un article intitulé _Behavior, Purpose and Teleology_, dans lequel ils proposent d’étudier certains objets à partir de leur comportement observable plutôt que de leur mode de fonctionnement interne.
 
 :::example
 La visée anti-aérienne. On peut tout à fait décrire le fonctionnement du système en étudiant l'adaptation du mécanisme de visée aux positions successives de l’avion sans nécessairement s'intéresser à la psychologie du pilote ou au fonctionnement mécanique de l'avion. L’avion n’est pas totalement ignoré : il est _réduit à ce qui importe pour le comportement étudié_.
@@ -522,6 +543,20 @@ L'impact d'une crise agricole sur le prix des légumes ou des céréales. On peu
 On parle alors d'une approche par _boite noire_, en référence à une théorie proposée par W. Ross Ashby en 1956. Le terme vient de l’ingénierie électrique : face à un dispositif fermé, on agit sur ses entrées et l’on observe ses sorties afin d’inférer ce que l’on peut de son fonctionnement. Ashby étend cette méthode aux organismes, aux comportements et aux systèmes complexes.
 
 L'important, ici, est la conversion du regard à laquelle invite cette approche. On ne cherche plus à définir un système par sa substance intérieure, de son fonctionnement interne, ou de l'intention qui le guide. On l’appréhende depuis l’extérieur, à partir des informations qu’il reçoit, des transformations qu’il opère et des effets qu’il produit.
+
+:::example
+L'approche systémique de la jalousie. On observe la réaction des individus aux comportements de leurs partenaires sans chercher à entrer dans leur "psychologie".
+:::
+
+:::example
+Les algorithmes de recommandation des plateformes. Ils ne cherchent pas à comprendre _pourquoi_ tel contenu vous intéresse plus qu'un autre.
+
+Vos clics, vos pauses et votre temps de visionnage fournissent des traces qui, rapprochées de celles d’autres utilisateurs, permettent d’anticiper ce qui retiendra votre attention. Une vidéo peut vous captiver par plaisir, par colère ou par inquiétude : cette différence n’a pas nécessairement besoin d’être élucidée pour prolonger votre présence sur la plateforme.
+
+On peut y voir un exemple de ce qu’Antoinette Rouvroy, avec Thomas Berns, appelle la gouvernementalité algorithmique : une manière d’orienter les conduites à partir de corrélations statistiques, sans passer par la compréhension que les individus ont d’eux-mêmes. Le dispositif agit sur votre environnement : il sélectionne ce qui vous est présenté et rend ainsi certains comportements plus probables.
+
+Le lien avec la boîte noire est donc double : on peut prédire certains de vos comportements sans expliquer vos motivations, puis modifier les contenus proposés pour infléchir vos réactions. Vos nouvelles réactions alimentent ensuite les recommandations suivantes : une boucle de rétroaction se met en place.
+:::
 
 Ce déplacement constitue une rupture avec une pensée de la substance, pour laquelle chaque chose posséderait une nature ou une identité relativement stable qu’il faudrait découvrir. La question n’est plus alors : qu'est-ce que cette chose, mais comment se comporte-t-elle dans un environnement donné ?
 
@@ -544,6 +579,7 @@ Le thermostat. Un cybernéticien se moque de savoir comment fonctionne le capteu
 
 ---
 ### Une finalité sans intention
+Une téléologie spontanée {.kicker}
 
 --- notes 
 
@@ -604,7 +640,7 @@ Socialisme ou barbarie {.kicker}
 
 --- notes
 
-La question de l'auto-organisation est la suivante : par quel mécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
+La question de l'auto-organisation est la suivante : par quel mécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? Comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
 
 L'important ici est de comprendre que l'absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir.
 
@@ -618,7 +654,7 @@ Blockchain et bitoin ?
 
 Ces exemples sont importants. Ils permettent de comprendre que le problème de l'auto-organisation est souvent plus délicat que ce qu'il laisse entendre.
 
-L’auto-organisation est souvent présentée comme l’opposé du commandement central. Elle permettrait de coordonner les actions sans dépendre d’une hiérarchie capable de tout prévoir, tout en laissant une place importante aux initiatives locales. Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. La question n’est donc pas seulement de savoir s’il existe ou non un chef. Il faut aussi se demander : _quel environnement, quel cadre permettent à des actions locales de produire un ordre collectif, et qui définit ce cadre ?_
+L’auto-organisation est souvent présentée comme l’opposé du commandement central. Elle permettrait de coordonner les actions sans dépendre d’une hiérarchie capable de tout prévoir, tout en laissant une place importante aux initiatives locales. Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. La question n’est donc pas seulement de savoir s’il existe ou non un chef. Il faut surtout se demander : _quel environnement, quel cadre permettent à des actions locales de produire un ordre collectif, et qui définit ce cadre ?_
 
 Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut pourtant exercer un pouvoir considérable en déterminant les possibilités d’action, les informations disponibles et les résultats qui seront valorisés.
 
@@ -628,11 +664,10 @@ Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut
 Le jugement est distribué, mais le cadre ne l’est pas : Meta décide qui peut contribuer, quels contenus peuvent recevoir une note, comment l’algorithme reconnaît un accord et quels effets la note produit. La plateforme ne commande pas directement le résultat de chaque évaluation ; elle gouverne l’environnement technique dans lequel ce résultat collectif peut apparaître.
 :::
 
-L’auto-organisation invite ainsi à déplacer l’analyse de l’ordre collectif. Celui-ci ne se trouve pas toujours dans les intentions explicites des acteurs, mais dans la manière dont leurs actions s’agrègent et produisent des effets qui leur échappent souvent. ENVIRONNEMENT / INFRASTRUCTURE Des décisions individuelles peuvent donc contribuer à une dynamique collective que personne n’a directement voulue ni planifiée.
+L’auto-organisation invite ainsi à déplacer l’analyse de l’ordre collectif. Celui-ci ne résulte pas toujours des intentions explicites des acteurs. Il se forme aussi à travers l’environnement ou l’infrastructure qui organise leurs interactions et agrège leurs décisions. Des choix individuels peuvent alors alimenter une dynamique collective que personne n’a directement voulue ni planifiée.
 
-Cette perspective est particulièrement importante pour l’analyse politique. Elle permet de comprendre comment des formes d’inégalité, de séparation ou de domination peuvent se maintenir sans dépendre d’une volonté centrale clairement identifiable. Pour l’étudier, il faut alors examiner les règles locales, les préférences individuelles et les mécanismes d’agrégation qui transforment ces éléments en structures collectives.
+Cette perspective est particulièrement importante pour l’analyse politique. Elle permet de comprendre comment des formes d’inégalité, de séparation ou de domination peuvent se maintenir sans dépendre d’une volonté centrale clairement identifiable. Elle nous invite alors à analyser la manière dont les préférences individuelles, les règles locales et les mécanismes d’agrégation transforment ces éléments en structures collectives.
 
-Or cela peut  être particulièrement pertinent pour repenser politiquement un certain nombre de problèmes.
 
 [Sources]
 - W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
@@ -687,7 +722,9 @@ L’absence d’intention collective ne signifie pas l’absence de pouvoir ou d
 
 La compréhension de ces phénomènes déplace donc la question politique. Il ne s’agit pas seulement de convaincre les individus de changer d’avis ou de comportement. Il faut aussi examiner les environnements dans lesquels leurs actions se composent : les infrastructures, les règles, les prix, les incitations, les informations disponibles, les seuils et les possibilités de circulation.
 
+:::example
 Les nudges offrent une version minimale de cette logique. Un autocollant représentant une mouche au fond d’un urinoir peut orienter l’attention et réduire les projections, sans interdire aucun comportement.
+:::
 
 L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. La politique ne consiste donc pas seulement à transformer les consciences individuelles. Elle consiste aussi à agir sur les conditions qui permettent à ces comportements de se composer. Cette approche ne supprime ni le conflit ni la responsabilité : elle oblige à demander qui construit les règles, qui contrôle les infrastructures et qui bénéficie des effets collectifs produits.
 
@@ -875,514 +912,3 @@ Cette ambivalence clôt notre chapitre sur la cybernétique. Nous avons suivi la
 [Sources]
 - Tiqqun, *L’Hypothèse cybernétique*, 2001, notamment p. 230–243 et 254–267 dans l’édition *Tout a failli, vive le communisme !* ; exemplaire local : `/Users/osarrouy/Documents/Papers/Tiqqun - 2001 - Lhypothese cybernetique/document.pdf`.
 [/Sources]
----
-<!-- slide: id="004j1-ia-neuronale" title="Formaliser le cerveau" steps=0 -->
-
-<div class="layout center">
-
-<div>
-
-<p class="kicker">Nouvelle séquence · Intelligence artificielle</p>
-
-# Formaliser le cerveau
-
-<p class="lead muted">Du neurone biologique au perceptron</p>
-
-</div>
-
-</div>
-
---- notes
-
-Temps indicatif : **1 minute**.
-
-Nous ouvrons ici une nouvelle séquence. La cybernétique n’en constitue ni l’unique origine ni une cause linéaire, mais elle a rendu légitime une opération décisive : comparer le vivant et la machine à partir de relations formalisables.
-
-Nous allons suivre une trajectoire particulière. Elle commence par le neurone biologique, revient ensuite en 1943 au modèle logique de McCulloch et Pitts, puis conduit au perceptron de Rosenblatt et à l’introduction d’une règle d’apprentissage.
-
-Le retour à 1943 doit être explicite : McCulloch et Pitts précèdent les conférences Macy. Leur travail est à la fois l’une des conditions de cette effervescence intellectuelle et l’un des objets où sa future grammaire apparaît déjà.
----
-<!-- slide: id="004k-vers-le-neurone" title="Vers le neurone artificiel" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Un objet-pont · retour en 1943</p>
-
-# Et si le cerveau était aussi un système ?
-
-<Fragment at={1}>
-
-<div class="term-list" aria-label="Notions transférées au cerveau">
-  <span>signal</span>
-  <span>réseau</span>
-  <span>seuil</span>
-  <span>mémoire</span>
-  <span>apprentissage</span>
-</div>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<p class="statement">Le vivant devient <strong>formalisable</strong> en sélectionnant quelques relations.</p>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="question">Que faut-il retirer du vivant pour le rendre calculable ?</p>
-
-</Fragment>
-
---- notes
-
-Temps indicatif : **4 à 5 minutes**.
-
-Cette nouvelle séquence commence par un retour chronologique. McCulloch et Pitts publient leur neurone logique en 1943, avant la première conférence Macy. Leur modèle ne résulte donc pas d’une cybernétique déjà constituée ; il contribue au contraire à rendre possible le rapprochement entre cerveau, logique et machine.
-
-Pédagogiquement, nous l’étudions maintenant parce qu’il permet d’observer concrètement ce que la grammaire précédente rend pensable. La cybernétique prépare le terrain des réseaux de neurones de deux manières.
-
-### Premièrement : elle rend le déplacement légitime
-
-Si des organismes et des machines peuvent être comparés par leurs relations d’entrée, de sortie, de communication et de régulation, alors le système nerveux peut devenir une source de modèles techniques.
-
-Cette comparaison ne part pas de rien. La neurophysiologie étudie déjà les impulsions, les connexions, l’excitation et l’inhibition. Mais la cybernétique place ces observations dans un programme formel : représenter l’activité d’un réseau comme une transformation réglée de signaux.
-
-### Deuxièmement : elle valorise la simplification opératoire
-
-Un modèle n’a pas besoin de reproduire chaque détail de la cellule pour être utile. Il peut sélectionner quelques propriétés :
-
-- des éléments reçoivent des signaux ;
-- plusieurs signaux se combinent ;
-- un seuil conditionne une sortie ;
-- les sorties deviennent les entrées d’autres éléments ;
-- la structure du réseau peut conserver ou transformer un comportement.
-
-McCulloch et Pitts feront exactement ce geste en 1943 : ils construisent un neurone idéal, binaire et à seuil, afin d’étudier les relations logiques qu’un réseau peut réaliser.
-
-### Le prix de l’abstraction
-
-Ce modèle laisse de côté la forme réelle de la cellule, la chimie des synapses, les variations continues, une grande partie de la temporalité et de la plasticité. Ce ne sont pas de petits oublis accidentels : c’est ce retrait qui rend le calcul possible.
-
-La bonne question n’est donc pas « le neurone artificiel est-il vrai ou faux ? ». Il faut demander :
-
-- quelles propriétés conserve-t-il ?
-- quelles propriétés élimine-t-il ?
-- pour quelle question cette simplification est-elle féconde ?
-- à quel moment transforme-t-on abusivement un modèle partiel en explication totale ?
-
-La slide suivante revient d’abord au neurone biologique. Nous pourrons ensuite mesurer précisément ce que McCulloch et Pitts en retiennent et ce qu’ils en retranchent.
-
-### Formule de transition
-
-« La cybernétique nous a appris à chercher des signaux, des boucles et des règles dans des systèmes très différents. Regardons maintenant la cellule qui va fournir l’une de ses abstractions les plus fécondes — et les plus simplificatrices. »
-
-[Sources]
-- Warren S. McCulloch et Walter Pitts, « A Logical Calculus of the Ideas Immanent in Nervous Activity », *Bulletin of Mathematical Biophysics*, 5, 1943, p. 115–133, https://doi.org/10.1007/BF02478259.
-- Norbert Wiener, *Cybernetics, or Control and Communication in the Animal and the Machine*, 1948.
-[/Sources]
----
-<!-- slide: id="005-neurone-biologique" title="Neurone biologique" steps=6 -->
-
-<script>
-  import BiologicalNeuron from '$components/BiologicalNeuron.svelte'
-</script>
-
-
-
-<BiologicalNeuron />
-
-
-
-
-
---- notes
-
-Avant de passer au neurone artificiel, commençons par lire le dessin. Un **neurone est une cellule vivante**, spécialisée dans la réception et la transmission de signaux. Le schéma l’isole pour rendre le trajet lisible ; dans un cerveau, chaque neurone appartient à un réseau et peut être en relation avec un très grand nombre d’autres cellules.
-
-### Les parties du neurone représentées ici
-
-
-Un neurone est une cellule biologique unique, souvent très allongée et ramifiée, et composée de plusieurs parties spécialisées.
-
-- Les **dendrites** reçoivent une grande partie des signaux provenant d’autres neurones.
-- Le **corps cellulaire**, ou soma, contient le noyau et contribue à combiner les effets des signaux reçus.
-- Si cette combinaison provoque le déclenchement d’une impulsion, l’**axone** la conduit jusqu’aux terminaisons du neurone.
-- Les **synapses** sont les zones de communication entre ce neurone et d’autres cellules. Elles mettent en relation la terminaison d’un neurone avec la membrane d’une autre cellule
-
-
-- Au centre, le **corps cellulaire**, ou **soma**, est la partie principale de la cellule. Il contient notamment le noyau et assure l’entretien courant du neurone.
-- Le **noyau**, représenté par le petit ovale central, contient l’essentiel de l’information génétique de la cellule. Il participe à son fonctionnement et à son maintien, mais il ne « réfléchit » pas et ne décide pas du déclenchement d’un signal.
-- La **membrane** est la très fine enveloppe qui sépare l’intérieur de la cellule de son environnement. Elle entoure tout le neurone : le soma, les dendrites et l’axone. Elle contrôle notamment le passage d’ions, c’est-à-dire d’atomes ou de molécules portant une charge électrique.
-- Les **dendrites** sont les prolongements ramifiés visibles à gauche. Elles offrent au neurone une grande surface de réception : c’est sur elles qu’arrive une grande partie des signaux émis par d’autres neurones.
-- L’**axone** est le prolongement plus long qui part du soma vers la droite. Lorsqu’une impulsion est déclenchée, il la conduit vers les extrémités du neurone.
-- Les **terminaisons de l’axone** sont ses dernières ramifications. Elles permettent au neurone d’envoyer un signal à d’autres cellules.
-
-Le fil directeur de l’animation est donc le suivant : dans le cas représenté, le signal passe d’un neurone à l’autre sous une forme **chimique** ; il produit ensuite des effets **électriques** dans le neurone ; puis il redevient **chimique** à sa sortie.
-
-### Étape 1 — La synapse : faire passer un signal entre deux cellules
-
-Une **synapse** n’est pas seulement le petit cercle dessiné à l’extrémité d’une branche. C’est toute la zone de communication entre :
-
-1. la terminaison du neurone qui envoie le signal, appelée **bouton synaptique** ;
-2. le minuscule espace entre les deux cellules, appelé **fente synaptique** ;
-3. la membrane du neurone qui reçoit le signal.
-
-À gauche du schéma, les petits cercles représentent donc les boutons synaptiques de neurones précédents. Les petits points placés juste après représentent des **neurotransmetteurs** : des molécules libérées dans la fente synaptique. Les branches qui reprennent après cette fente appartiennent aux dendrites du neurone que nous observons.
-
-Les neurotransmetteurs se fixent sur des **récepteurs**, c’est-à-dire des protéines situées dans la membrane du neurone receveur. Cette fixation modifie le passage des ions à travers la membrane. Il ne faut donc pas imaginer, ici, un courant électrique qui saute directement d’un neurone à l’autre comme entre deux fils : la transmission entre les cellules est d’abord chimique.
-
-### Étape 2 — Les dendrites conduisent des effets électriques locaux
-
-Parce que les charges électriques ne sont pas réparties de la même manière à l’intérieur et à l’extérieur de la cellule, la membrane possède une différence de tension : le **potentiel de membrane**.
-
-Chaque signal reçu modifie localement et brièvement ce potentiel :
-
-- une entrée **excitatrice** rend le déclenchement d’une impulsion plus probable ;
-- une entrée **inhibitrice** le rend moins probable.
-
-Les points rose pâle qui se déplacent le long des dendrites servent à rendre cette propagation visible. Ils ne représentent pas de petites billes qui circuleraient réellement dans la dendrite : ils figurent les modifications électriques qui se diffusent le long de sa membrane jusqu’au soma.
-
-On peut comparer les entrées excitatrices à de petits « oui » et les entrées inhibitrices à de petits « non », mais cette image a ses limites. Ces effets n’ont pas tous la même intensité, ne durent pas aussi longtemps et n’arrivent pas au même moment. Le neurone biologique ne manipule donc pas simplement une suite de `0` et de `1`.
-
-### Étape 3 — Combiner les signaux reçus
-
-Le neurone reçoit de nombreux signaux en même temps. Leurs effets se rencontrent sur les dendrites et le soma : certains s’ajoutent, certains se compensent, d’autres arrivent trop tard pour encore agir ensemble. C’est ce que signifie ici **intégrer les entrées**.
-
-Le soma participe à cette intégration, mais il ne faut pas imaginer le noyau comme un processeur central. La zone décisive pour le déclenchement se situe au début de l’axone, tout près du soma.
-
-Si la modification électrique totale y atteint un certain **seuil**, le neurone produit une impulsion appelée **potentiel d’action**. Ce seuil n’est ni une décision consciente, ni une valeur absolument identique pour tous les neurones : il dépend du type de cellule et de son état.
-
-### Étape 4 — L’axone propage l’impulsion
-
-Le potentiel d’action est une brève variation électrique de la membrane. Une fois déclenché, il se régénère de proche en proche et parcourt l’axone jusqu’à ses terminaisons.
-
-Les points animés le long de l’axone sont, là encore, une convention graphique destinée à montrer le sens de propagation. Ils ne représentent pas des neurotransmetteurs circulant à l’intérieur de l’axone.
-
-À un endroit donné de l’axone, le potentiel d’action obéit à une logique de **tout ou rien** : soit il est déclenché, soit il ne l’est pas. Une stimulation plus forte ne produit donc pas simplement une impulsion plus grosse ; elle peut notamment modifier le nombre, la fréquence ou le rythme des impulsions.
-
-Cette impulsion n’est pas, à elle seule, une pensée ou une information complète. C’est un événement élémentaire dont l’effet dépend des cellules qu’il atteint et du réseau dans lequel il circule.
-
-### Étape 5 — Les terminaisons transmettent le signal
-
-Lorsque le potentiel d’action atteint les terminaisons de l’axone, il provoque la libération de neurotransmetteurs. À droite, les petits cercles représentent les boutons synaptiques de notre neurone ; les petits points figurent les neurotransmetteurs libérés ; les traits situés après la fente appartiennent aux cellules suivantes.
-
-Ces neurotransmetteurs pourront à leur tour produire un effet excitateur ou inhibiteur sur les neurones qui les reçoivent. Le trajet représenté peut donc se résumer ainsi :
-
-1. transmission **chimique** entre deux neurones au niveau d’une synapse ;
-2. modifications **électriques locales** le long des dendrites et du soma ;
-3. si le seuil est atteint, propagation d’une impulsion **électrique** le long de l’axone ;
-4. nouvelle transmission **chimique** vers les cellules suivantes.
-
-### Étape 6 — Changer d’échelle : du neurone au réseau
-
-Le recul final rappelle qu’un neurone ne fonctionne jamais seul. Chacune de ses dendrites peut recevoir des signaux provenant de nombreux neurones, tandis que les ramifications de son axone peuvent agir sur plusieurs cellules. Le dessin ne montre qu’une petite partie de ces connexions.
-
-Un signal n’a donc pas un sens fixe qui serait contenu dans un neurone isolé. Son effet dépend de la place de ce neurone dans le réseau, des cellules qu’il influence, des signaux reçus au même moment et de l’histoire de leurs connexions.
-
-Le neurone que nous venons de suivre reste coloré pour servir de point de repère. Les autres apparaissent en gris : ils ne sont pas un simple décor, mais les conditions mêmes de son activité. Recevoir, combiner et transmettre sont toujours des opérations distribuées dans un réseau.
-
-### Comment des éléments simples produisent-ils une activité complexe ?
-
-Un neurone isolé accomplit une opération relativement élémentaire. Cela ne signifie pas que le système composé de très nombreux neurones soit lui-même simple. La complexité vient moins de chaque élément pris séparément que de leur **organisation** et de leur **dynamique collective** :
-
-- un neurone reçoit simultanément des signaux provenant de nombreuses sources ;
-- les connexions forment des boucles : l’activité peut revenir, se maintenir, se corriger ou s’amplifier ;
-- différents groupes de neurones peuvent se spécialiser tout en coordonnant leur activité ;
-- l’état du réseau évolue continuellement selon les signaux présents et ceux qui l’ont précédé.
-
-La pensée complexe ne se trouve donc pas cachée dans un neurone particulier. Elle repose sur des **configurations d’activité distribuées** : des ensembles de neurones qui s’activent selon certaines relations et certaines temporalités. On peut faire une analogie avec le langage : aucun son ni aucun mot ne contient à lui seul un discours ; c’est leur organisation, réglée et toujours située, qui permet de produire du sens.
-
-On appelle souvent **émergence** le fait qu’un ensemble possède des capacités que ses éléments isolés ne possèdent pas. Ce mot nomme toutefois le problème plus qu’il ne le résout : les neurosciences cherchent encore à comprendre précisément comment l’activité collective du cerveau rend possibles la perception unifiée, le raisonnement ou la conscience.
-
-### Comment le réseau apprend-il ? Le rôle de la plasticité
-
-Un réseau apprend lorsqu’une expérience modifie durablement la manière dont son activité future va se dérouler. Cela devient possible parce que les synapses ne transmettent pas toujours les signaux avec la même efficacité : elles sont **plastiques**.
-
-La règle associée à **Donald Hebb** donne une intuition centrale : lorsque l’activité d’un neurone contribue régulièrement à l’activation d’un autre, leur connexion peut se renforcer. Le réseau devient alors plus susceptible de reproduire ou de reconnaître une configuration déjà rencontrée. C’est bien l’un des principes importants de l’apprentissage biologique.
-
-Mais l’apprentissage n’est pas réductible à « Hebb et rien d’autre ». Certaines connexions se renforcent, d’autres s’affaiblissent ; le moment précis où les neurones s’activent compte ; des substances modulatrices peuvent signaler la nouveauté, l’attention ou la récompense ; de nouvelles connexions peuvent apparaître et d’autres disparaître. Le cerveau doit aussi empêcher son activité de s’emballer et consolider certaines transformations dans la durée.
-
-Pour les étudiants, la formule la plus utile est donc : **l’expérience modifie les connexions ; les connexions modifiées changent la réponse future du réseau**. Hebb fournit une partie essentielle de cette explication, mais pas une théorie complète de l’apprentissage, de la mémoire ou de la conscience.
-
-### Et le symbolique ou la conscience ?
-
-Le même changement d’échelle est nécessaire. Un concept, un souvenir ou une règle symbolique ne correspond pas simplement à un neurone qui en serait le contenant. Ces activités mobilisent des réseaux distribués, les relations entre perception, mémoire, langage et action, ainsi que les interactions du cerveau avec un corps et un environnement.
-
-Le fonctionnement neuronal constitue donc une **condition biologique** de la pensée et de la conscience ; il ne suffit pas, à lui seul, à en épuiser l’explication. Le symbolique dépend aussi de langues, de pratiques et de relations sociales. Il faut tenir ensemble ces niveaux sans les confondre : comprendre la brique biologique éclaire ce qui rend la pensée possible, mais ne réduit pas la pensée à cette seule brique.
-
-### Ce qu’il faut retenir
-
-1. Les dendrites reçoivent de nombreux signaux au niveau des synapses.
-2. Ces signaux modifient l’état électrique de la membrane et rendent une impulsion plus ou moins probable.
-3. Leurs effets se combinent ; s’ils atteignent un seuil près du début de l’axone, un potentiel d’action est déclenché.
-4. L’axone conduit cette impulsion jusqu’à ses terminaisons.
-5. Les terminaisons libèrent des neurotransmetteurs vers d’autres cellules.
-6. Le réseau peut apprendre parce que l’expérience transforme durablement ses connexions.
-7. Les activités complexes émergent de l’organisation collective du réseau, sans être contenues dans un neurone isolé.
-
-McCulloch et Pitts vont conserver trois éléments de ce fonctionnement — des entrées, leur combinaison et un seuil — pour en faire un modèle mathématique. Il ne s’agit pas d’une copie du neurone biologique : la chimie, le temps, les formes de plasticité et une grande partie de la complexité du vivant disparaissent dans l’abstraction.
----
-<!-- slide: id="006-neurone-mcculloch-pitts" title="McCulloch & Pitts" steps=5 -->
-
-<script>
-  import McCullochPittsNeuron from '$components/McCullochPittsNeuron.svelte'
-</script>
-
-<div class="layout two-columns">
-
-<div>
-
-<p class="kicker">1943 · threshold logic</p>
-
-# Un neurone logique
-
-<p class="lead">McCulloch & Pitts</p>
-
-</div>
-
-<div>
-
-<McCullochPittsNeuron />
-
-</div>
-
-</div>
-
---- notes
-
-McCulloch et Pitts publient en 1943 « A Logical Calculus of the Ideas Immanent in Nervous Activity ».
-
-### Une transition importante : de la cellule vivante à l’objet logique
-
-Sur la slide précédente, nous avons insisté sur la complexité biologique du neurone : sa membrane, sa chimie, la temporalité des signaux et la plasticité de ses connexions. McCulloch et Pitts effectuent maintenant le mouvement inverse. Ils demandent : **que faut-il conserver au minimum pour décrire mathématiquement l’activité d’un réseau de neurones ?**
-
-Leur modèle est donc **plus qu’une simple métaphore**, car ils prétendent établir une correspondance formelle entre certaines activités neuronales et des opérations logiques. Mais il est aussi **beaucoup moins qu’une reproduction fidèle** du neurone biologique. Il extrait quelques propriétés jugées suffisantes pour construire un calcul.
-
-### Ce qu’ils retiennent du neurone biologique
-
-Ils partent de plusieurs observations neurophysiologiques disponibles à leur époque :
-
-- le neurone produit une impulsion selon une logique approximative de **tout ou rien** ;
-- plusieurs entrées excitatrices peuvent se combiner pour atteindre un **seuil** ;
-- certaines entrées ont un effet **inhibiteur** ;
-- les neurones sont connectés en réseaux et l’activité se transmet avec un certain délai.
-
-Ces éléments deviennent les règles de leur neurone idéal :
-
-- à un instant donné, chaque entrée vaut `0` ou `1` : inactive ou active ;
-- le neurone additionne les entrées excitatrices ;
-- il produit `1` si un seuil fixé est atteint ;
-- une entrée inhibitrice active peut empêcher la sortie.
-
-Tout le reste est mis entre parenthèses : la forme réelle du neurone, la chimie des neurotransmetteurs, les variations continues du potentiel de membrane, la diversité des cellules, une grande partie de la temporalité et, dans le modèle de base, la transformation des connexions par l’apprentissage.
-
-### Pourquoi simplifier aussi fortement ?
-
-La simplification est ici une **stratégie de modélisation**. McCulloch et Pitts ne cherchent pas d’abord à simuler fidèlement un neurone particulier. Ils veulent isoler des propriétés qui restent calculables même lorsque plusieurs hypothèses physiologiques diffèrent.
-
-Ils écrivent d’ailleurs qu’ils peuvent choisir les hypothèses physiques les plus commodes pour leur calcul, à condition que des réseaux différents produisent le même comportement formel. Ils précisent également que cette équivalence formelle ne constitue pas une explication factuelle des mécanismes biologiques.
-
-Autrement dit, leur question n’est pas : « À quoi ressemble exactement un neurone ? » Elle est plutôt : **« Quelles opérations un réseau composé d’éléments de ce type peut-il réaliser ? »**
-
-Le gain est considérable : le comportement du réseau peut être démontré avec les outils des mathématiques. Mais ce gain a un prix : tout ce qui n’entre pas dans les variables choisies disparaît du modèle.
-
-### Pourquoi la logique propositionnelle ?
-
-La logique propositionnelle étudie des énoncés qui peuvent prendre deux valeurs — vrai ou faux — et les relations formelles que l’on peut construire entre eux : **ET**, **OU**, **NON**, implication, etc.
-
-McCulloch et Pitts proposent de représenter l’activité d’un neurone à un instant donné comme une proposition :
-
-- le neurone s’active : la proposition vaut **vrai**, ou `1` ;
-- le neurone ne s’active pas : elle vaut **faux**, ou `0`.
-
-La configuration des connexions et la valeur du seuil permettent alors de construire des relations logiques :
-
-- si deux entrées sont nécessaires pour atteindre le seuil, le neurone se comporte comme un **ET** ;
-- si l’une ou l’autre suffit, il se comporte comme un **OU** ;
-- une entrée inhibitrice peut jouer le rôle d’un **NON** ou d’un veto.
-
-Il faut être précis : cela ne signifie pas qu’un neurone biologique « pense une phrase » ou manipule consciemment une proposition. La proposition est d’abord la **traduction formelle d’un événement** : « ce neurone est actif à cet instant ». C’est l’organisation du réseau qui fait correspondre les relations entre ces événements à des relations logiques.
-
-### Pensent-ils réellement que le cerveau est une machine logique ?
-
-La réponse courte est **oui, dans un sens précis du mot « calculer »**. Si calculer signifie transformer des états selon des règles formelles, alors leur réseau est bien une machine de calcul : l’état présent des neurones et la structure de leurs connexions déterminent l’état suivant, et certaines organisations du réseau réalisent des opérations logiques.
-
-Leur ambition va donc plus loin qu’une simple inspiration technique. Ils soutiennent que les relations entre les activités neuronales peuvent être décrites par la logique des propositions et que les dimensions formelles de l’activité mentale peuvent être expliquées à partir de l’organisation matérielle du réseau nerveux. À la fin du texte, ils qualifient l’activité neuronale de propositionnelle et les événements psychiques d’intentionnels ou de sémiotiques.
-
-Il serait trop faible de dire : « Ils empruntent seulement une image au cerveau pour construire une machine. » Ils proposent bien une **théorie computationnelle du cerveau et de l’esprit** : les idées, les perceptions et les comportements seraient réalisés par des configurations d’activité dans un réseau matériel dont les relations peuvent être traitées logiquement. Leur objectif est notamment de faire disparaître l’idée d’un esprit séparé du cerveau, d’un « fantôme » inexplicable ajouté à la matière.
-
-Mais « le cerveau est une machine à calculer » ne signifie pas ici que le cerveau effectuerait seulement des opérations arithmétiques, ni qu’il manipulerait explicitement des phrases comme un logicien. Leur thèse porte d’abord sur la **forme des relations** entre les événements neuronaux : activation ou non-activation, combinaison, inhibition, succession dans le temps.
-
-Il faut alors distinguer ce qu’ils démontrent de ce qu’ils en concluent :
-
-- ils **démontrent**, dans le cadre de leurs hypothèses idéalisées, que des réseaux peuvent réaliser certaines expressions logiques ;
-- ils **défendent** l’idée plus générale que les dimensions formelles de la pensée sont réalisées par l’activité du réseau nerveux ;
-- ils ne démontrent pas que la signification d’une idée, l’expérience consciente ou toute la richesse biologique du cerveau sont intégralement contenues dans ce modèle.
-
-Il faut également éviter l’équation trop rapide avec la machine de Turing. McCulloch et Pitts montrent qu’un réseau équipé d’une mémoire analogue à un ruban, de dispositifs de lecture et de sorties motrices peut atteindre la même classe de calculabilité. Ils ne démontrent pas que n’importe quel réseau neuronal ordinaire est spontanément une machine de Turing universelle ; les réseaux récurrents considérés seuls n’accomplissent qu’une partie de ces calculs.
-
-La formulation la plus juste pour le cours est donc : **McCulloch et Pitts pensent réellement que les dimensions formelles de la pensée peuvent être réalisées par un réseau matériel fonctionnant comme un système logique. Mais leur modèle montre surtout comment des activités neuronales peuvent effectuer certains calculs ; il ne démontre pas que toute la vie mentale est intégralement réductible à ces calculs.**
-
-La tension centrale apparaît ici : passer de « certaines opérations cérébrales sont formalisables » à « tout ce qui compte dans la pensée est du calcul » constitue une extrapolation. Leur article ouvre la voie à cette extrapolation et formule lui-même une théorie très ambitieuse, mais sa démonstration formelle ne suffit pas à l’établir entièrement.
-
-### Et l’apprentissage ?
-
-McCulloch et Pitts savent que le véritable système nerveux se transforme. Ils évoquent l’apprentissage comme une modification durable du réseau, par exemple la formation de nouvelles synapses ou l’abaissement local d’un seuil.
-
-Cependant, le modèle présenté ici ne possède pas encore une règle pratique lui permettant d’ajuster progressivement ses connexions à partir d’exemples. Pour les besoins du calcul, ils montrent surtout que certains changements peuvent être remplacés par un réseau fixe plus complexe produisant le même comportement. Ils avertissent que cette équivalence formelle n’explique pas le mécanisme biologique réel.
-
-C’est précisément ce qui permettra de comprendre la rupture introduite ensuite par Rosenblatt : le perceptron conserve le neurone à seuil, mais il ajoute une procédure qui **modifie les poids en fonction des erreurs**.
-
-### Lecture de l’animation
-
-- Étape 1 : les entrées sont binaires, elles valent 0 ou 1.
-- Étape 2 : les entrées excitatrices actives sont additionnées.
-- Étape 3 : la somme est comparée à un seuil θ.
-- Étape 4 : si la somme atteint le seuil, le neurone « tire » : sortie 1.
-- Étape 5 : une entrée inhibitrice active fonctionne comme un veto : même si le seuil est atteint, la sortie retombe à 0.
-
-Le neurone de McCulloch-Pitts peut donc être présenté comme un **opérateur logique inspiré de quelques propriétés du neurone biologique**. Ce n’est ni une cellule reproduite en miniature, ni une invention sans rapport avec la biologie. C’est une abstraction : elle rend certaines relations calculables en laissant de côté une grande partie du vivant.
-
-[Sources]
-- Warren S. McCulloch et Walter Pitts, « A Logical Calculus of the Ideas Immanent in Nervous Activity », *Bulletin of Mathematical Biophysics*, 5, 1943, p. 115–133, https://doi.org/10.1007/BF02478259.
-- Gualtiero Piccinini, « The First Computational Theory of Mind and Brain: A Close Look at McCulloch and Pitts’ “Logical Calculus of Ideas Immanent in Nervous Activity” », *Synthese*, 141, 2004, p. 175–215, https://doi.org/10.1023/B:SYNT.0000043018.52445.3E.
-[/Sources]
----
-<!-- slide: id="007-perceptron-rosenblatt" title="Perceptron" steps=5 -->
-
-<script>
-  import RosenblattPerceptron from '$components/RosenblattPerceptron.svelte'
-</script>
-
-<div class="layout two-columns">
-
-<div>
-
-<p class="kicker">1958 · learning rule</p>
-
-# Le perceptron apprend
-
-<p class="lead">Rosenblatt après McCulloch & Pitts</p>
-
-</div>
-
-<div>
-
-<RosenblattPerceptron />
-
-</div>
-
-</div>
-
---- notes
-
-Rosenblatt présente le perceptron à la fin des années 1950, avec un article important en 1958.
-
-- Étape 1 : la structure reste proche du neurone à seuil : des entrées, des poids, une somme, une décision binaire.
-- Étape 2 : la sortie est produite par une frontière de décision : d’un côté 0, de l’autre 1.
-- Étape 3 : différence décisive : un exemple supervisé apporte une cible `t`. Le système peut donc se tromper.
-- Étape 4 : l’erreur devient opératoire. La règle du perceptron ajuste les poids : `Δw = η(t − y)x`.
-- Étape 5 : ce qui change est donc le statut du poids : il n’est plus seulement fixé par le concepteur, il est modifié par l’expérience.
-
-Le perceptron n’est pas encore un réseau profond. Il reste limité aux séparations linéaires. Mais il introduit quelque chose que le neurone de McCulloch-Pitts n’avait pas : une procédure d’apprentissage.
----
-<!-- slide: id="008-image-glow" title="Image glowy" steps=0 layout="two-columns" -->
-
-<div>
-
-<p class="kicker">élément de style</p>
-
-# Images avec halo {.wide-heading}
-
-<p class="lead">Un simple attribut sur l’image.</p>
-
-<p class="usage"><code>![cover](/image.jpg)&lbrace;data-glow=&quot;strong&quot;&rbrace;</code></p>
-
-</div>
-
-::: cover-demo
-
-![Pochette abstraite de démonstration](/album-glow.svg){data-glow="strong"}
-
-<p class="caption">data-glow="strong" · Apple Music-ish</p>
-
-:::
-
-<style>
-  .wide-heading {
-    max-width: 14ch;
-  }
-
-  .usage {
-    margin-top: 2rem;
-    font-style: normal !important;
-  }
-
-  .cover-demo {
-    display: grid;
-    justify-items: center;
-    gap: 1.2rem;
-  }
-
-  .cover-demo img {
-    width: min(56vh, 32rem);
-  }
-
-  .cover-demo .caption {
-    max-width: none;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: var(--metadata-font-size);
-    font-style: normal;
-    letter-spacing: 0.18em;
-    text-align: center;
-    text-transform: uppercase;
-  }
-</style>
-
---- notes
-
-Cette slide sert à tester l’attribut `data-glow` sur une image.
-
-Usage minimal dans une slide `.svx` :
-
-`<img src="/mon-image.jpg" alt="Description" data-glow />`
-
-Variantes disponibles :
-
-- `data-glow="soft"` pour un halo discret ;
-- `data-glow="strong"` pour un effet plus proche des pochettes Apple Music.
-
-Le runtime analyse l’image côté navigateur avec un canvas réduit, échantillonne ses couleurs en grille, puis construit un halo symétrique autour de l’image avec des gradients radiaux : les couleurs du haut, du bas et des côtés restent donc alignées sur celles de l’image.
-
-Si le navigateur interdit la lecture des pixels — par exemple avec une image distante sans CORS — le moteur retombe sur un flou symétrique de l’image elle-même.
----
-<!-- slide: id="009-fin" title="Fin" steps=0 -->
-
-<div class="layout center">
-
-<div>
-
-<p class="kicker">À tester</p>
-
-# Un premier noyau utilisable
-
-<p class="lead muted">
-Reste à durcir : export PDF, thèmes multiples, overview, raccourcis, et composants de mise en page.
-</p>
-
-</div>
-
-</div>
-
---- notes
-
-Prochaines étapes possibles :
-
-- rendre le système de thèmes sélectionnable par deck ;
-- ajouter une vue overview ;
-- améliorer l’export PDF ;
-- ajouter des composants typographiques et des layouts réutilisables.

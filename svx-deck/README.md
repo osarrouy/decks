@@ -138,6 +138,8 @@ Imported CSS and component sources participate in normal Vite hot reload. There 
 
 Slide surfaces use DG's `.typography` context and set only `--font-size-base` for their type scale. The surrounding view supplies a query container, so projection, presenter, student and embedded surfaces follow their own available width. The document root, notes and controls keep their normal scale. H1 uses DG's viewport-fluid formula where typed CSS division is supported, with DG's proportional fallback elsewhere.
 
+DG's `.prose` class supplies list indentation, paragraph rhythm, links, quotations and code defaults. The theme adds projection geometry, editorial treatments and image effects; it does not restate native heading typography or force a body size onto paragraphs inside components.
+
 Teaching sources use current DG color and font-family tokens. Their historical `theme` fields are ignored and former package imports remain resolved by the runtime. Technical token migrations preserve prose, notes, metadata and assets. New code uses `@svx-deck/core` and the current design tokens directly.
 
 ## Verify

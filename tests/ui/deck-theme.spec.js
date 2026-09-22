@@ -25,6 +25,7 @@ for (const width of [1280, 390]) {
     );
     const surface = reader.locator(".slide");
     await expect(surface).toBeVisible();
+    await expect(surface).toHaveClass(/\bprose\b/);
     await expect(
       reader.getByLabel("Choisir une slide").locator("option"),
     ).toHaveCount(slides.length);

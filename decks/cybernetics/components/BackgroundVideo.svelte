@@ -20,7 +20,7 @@
         inset: 0;
         display: grid;
         align-items: end;
-        padding: var(--padding-vertical) var(--padding-horizontal);
+        padding: inherit;
         overflow: hidden;
         background: #000;
     }
