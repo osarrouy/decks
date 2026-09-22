@@ -621,58 +621,21 @@ La notion d’émergence désigne le fait qu’un système peut présenter, à l
 
 Le déplacement important consiste, dans chacun de ces cas, à passer du niveau local au niveau global ou systémique. Non plus en cherchant l’origine d’une propriété complexe dans un élément isolé ; mais en étudiant l’organisation de ses relations, leurs effets réciproques, leurs temporalités, etc.
 
-::warning
+:::warning
 La notion d'émergence ne suffit pas à expliquer comment des propriétés globales apparaissent : il nomme le problème qu’il faut encore analyser. Il reste encore, au cas par cas, à analyser les interactions entre les éléments, les boucles qui amplifient ou stabilisent certains états, les contraintes du milieu, les seuils à partir desquels un changement devient visible, les temporalités du phénomène, l’échelle à laquelle la propriété devient observable, etc.
 :::
 
 De ce point de vue, les exemples examinés ici n’ont pas tous le même statut. Certains décrivent une organisation relativement stable, comme la murmuration ; d’autres révèlent une instabilité ou produisent un dommage collectif, comme l’embouteillage, la bulle financière ou la bousculade.
 
-L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration. Elle peut aussi engendrer des dynamiques catastrophiques. Mais elle peut également favoriser l’instauration d’une certaine stabilité sans qu’une instance centrale de contrôle ait à en assurer la régulation. C’est ce que l’on appelle l’auto-organisation.
+L’émergence ne désigne donc pas nécessairement un ordre harmonieux, une intelligence supérieure ou une amélioration. Elle peut aussi engendrer des dynamiques catastrophique.
+
+ Ce qui importe ici est que la question de l'émergence ré-oriente l’analyse des ordres collectifs. Ceux-ci ne résultent pas toujours des intentions explicites des acteurs. Ils se forment aussi à travers l’environnement ou l’infrastructure qui organise leurs interactions et agrège leurs décisions. Des choix individuels peuvent alors alimenter une dynamique collective que personne n’a directement voulue ni planifiée.
+
+Cette perspective est particulièrement importante pour l’analyse politique. Elle permet de comprendre comment des formes d’inégalité, de séparation ou de domination peuvent se maintenir sans dépendre d’une volonté centrale clairement identifiable. Elle nous invite alors à analyser la manière dont les préférences individuelles, les règles locales et les mécanismes d’agrégation transforment ces éléments en structures collectives.
 
 [Sources]
 - Ludwig von Bertalanffy, « An Outline of General System Theory », *The British Journal for the Philosophy of Science*, 1(2), 1950, p. 134–165, https://doi.org/10.1093/bjps/I.2.134.
 - Philip W. Anderson, « More Is Different », *Science*, 177(4047), 1972, p. 393–396, https://doi.org/10.1126/science.177.4047.393.
-[/Sources]
-
----
-## Auto-organisation
-Socialisme ou barbarie {.kicker}
-
---- notes
-
-La question de l'auto-organisation est la suivante : par quel mécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? Comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
-
-L'important ici est de comprendre que l'absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir.
-
-:::example
-Les murmurations d'étourneaux apparaissent parce que chaque étourneau se tient à un système de règle très strict.
-
-Réseaux neuronaux. Les interactions entres les neurones de notre cerveau suivent elles-aussi une grammaire très stricte.
-
-Blockchain et bitoin ?
-:::
-
-Ces exemples sont importants. Ils permettent de comprendre que le problème de l'auto-organisation est souvent plus délicat que ce qu'il laisse entendre.
-
-L’auto-organisation est souvent présentée comme l’opposé du commandement central. Elle permettrait de coordonner les actions sans dépendre d’une hiérarchie capable de tout prévoir, tout en laissant une place importante aux initiatives locales. Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. La question n’est donc pas seulement de savoir s’il existe ou non un chef. Il faut surtout se demander : _quel environnement, quel cadre permettent à des actions locales de produire un ordre collectif, et qui définit ce cadre ?_
-
-Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut pourtant exercer un pouvoir considérable en déterminant les possibilités d’action, les informations disponibles et les résultats qui seront valorisés.
-
-:::example
-**Les Community Notes de Meta.** Depuis avril 2025, aux États-Unis, Meta confie à des contributeurs la rédaction et l’évaluation de notes ajoutées aux publications de Facebook, Instagram et Threads. Une note n’apparaît que si le système détecte un accord entre des personnes qui ont habituellement des points de vue divergents. Aucun modérateur central ne rédige donc le verdict dans chaque cas.
-
-Le jugement est distribué, mais le cadre ne l’est pas : Meta décide qui peut contribuer, quels contenus peuvent recevoir une note, comment l’algorithme reconnaît un accord et quels effets la note produit. La plateforme ne commande pas directement le résultat de chaque évaluation ; elle gouverne l’environnement technique dans lequel ce résultat collectif peut apparaître.
-:::
-
-L’auto-organisation invite ainsi à déplacer l’analyse de l’ordre collectif. Celui-ci ne résulte pas toujours des intentions explicites des acteurs. Il se forme aussi à travers l’environnement ou l’infrastructure qui organise leurs interactions et agrège leurs décisions. Des choix individuels peuvent alors alimenter une dynamique collective que personne n’a directement voulue ni planifiée.
-
-Cette perspective est particulièrement importante pour l’analyse politique. Elle permet de comprendre comment des formes d’inégalité, de séparation ou de domination peuvent se maintenir sans dépendre d’une volonté centrale clairement identifiable. Elle nous invite alors à analyser la manière dont les préférences individuelles, les règles locales et les mécanismes d’agrégation transforment ces éléments en structures collectives.
-
-
-[Sources]
-- W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
-- Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
-- Meta, « Testing Begins for Community Notes on Facebook, Instagram and Threads », 13 mars 2025, mise à jour le 7 avril 2025, https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/.
 [/Sources]
 
 ---
@@ -695,7 +658,6 @@ Thomas Schelling imagine une ville, représentée par un damier, sur lequel vive
 
 La règle individuelle paraît modérée : personne ne demande que tous ses voisins lui ressemblent, et personne ne formule nécessairement le projet d’une ville entièrement séparée. Pourtant, lorsque chaque habitant applique cette règle à son voisinage immédiat, les déplacements successifs produisent progressivement des zones de plus en plus homogènes. Une ségrégation marquée apparaît alors à l’échelle de la ville.
 
-
 :::warning
 Ce modèle est dramatiquement réducteur. Le problème de la ségrégation raciale n'a pas grand chose à voir avec l'expérience de Schelling.
 
@@ -713,202 +675,131 @@ L’absence d’intention collective ne signifie pas l’absence de pouvoir ou d
 :::
  
 :::example
-**Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés dans le but de capter l'attention et de sur-visibiliser les contenus déjà très visibiles. La viralité organique est loin. Les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
+**Propagations sur les plateformes**. Chaque usager aime, partage ou commente certains contenus. Le système de recommandation sélectionne ensuite ce qui sera davantage visible à partir de signaux comme l’engagement ou le temps de visionnage. Une dynamique de viralité, de polarisation ou de concentration de l’attention peut alors apparaître sans qu’un usager isolé ne l’ait planifiée. Elle n’est toutefois pas spontanée au sens strict : elle émerge dans une infrastructure conçue, réglée et exploitée par des acteurs déterminés dans le but de capter l'attention et de sur-visibiliser les contenus déjà très visibiles. Les effets collectifs produits sur une plateforme sont liés aux actions des usagers, mais aussi à l’architecture technique, aux métriques et aux objectifs économiques de l’entreprise.
 
-**Panique bancaire**. Chaque déposant peut retirer son argent parce qu’il craint que les autres le fassent avant lui. Si suffisamment de personnes agissent ainsi, la crainte individuelle peut contribuer à produire la crise collective qu’elle anticipait. L’assurance des dépôts, les règles de liquidité et l’intervention de la banque centrale modifient les conditions de cette dynamique. Une bulle financière se forme à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels.
-:::
+**Panique bancaire**. Chaque déposant peut retirer son argent parce qu’il craint que les autres le fassent avant lui. Or l’assurance des dépôts, les règles de liquidité et l’intervention de la banque centrale peuvent modifier les conditions de cette dynamique. Une bulle financière se forme certes à travers des décisions dispersées, mais elle dépend aussi de règles de crédit, d’infrastructures de marché et de choix institutionnels.
 
-### Des acteurs à l'environnement
+---
+### Le pouvoir de l'infrastructure
+Don't hate the player, hate the game {.kicker}
 
-La compréhension de ces phénomènes déplace donc la question politique. Il ne s’agit pas seulement de convaincre les individus de changer d’avis ou de comportement. Il faut aussi examiner les environnements dans lesquels leurs actions se composent : les infrastructures, les règles, les prix, les incitations, les informations disponibles, les seuils et les possibilités de circulation.
+--- notes
+
+On voit à travers ces exemples qu'une approche systémique des problèmes politiques déplace le point d'exercice du pouvoir ou du gouvernement, des individus - dont il s'agirait de rectifier les comportements - vers l'environnement à partir duquel ces comportements apparaissent et se composent.
+
+Si un effet collectif ne se laisse pas ramener aux intentions des individus pris séparément, il ne suffit donc pas de convaincre ou de contraindre chacun d’agir autrement. Il faut aussi examiner ce qui met les conduites en relation et les fait composer : les infrastructures, les règles, les prix, les informations disponibles, les seuils, les ressources et les possibilités de circulation.
+
+Agir sur un phénomène émergent peut alors consister à modifier ces conditions de composition : transformer une règle, construire une infrastructure, ouvrir ou fermer un canal, redistribuer des ressources ou changer les signaux auxquels les acteurs répondent.
+
+Il ne s’agit pas de prescrire chaque conduite ni de déterminer entièrement le résultat, mais d’intervenir sur le milieu à partir duquel certaines dynamiques deviennent possibles ou probables.
 
 :::example
-Les nudges offrent une version minimale de cette logique. Un autocollant représentant une mouche au fond d’un urinoir peut orienter l’attention et réduire les projections, sans interdire aucun comportement.
+**Modifier les algorithmes de recommandation.** Il existe de nombreux propositions visant à contraindre les plateformes à laisser chacun y brancher l'algorithme de recommandation de son choix.
+
+**Freiner la propagation des messages.** En avril 2020, WhatsApp limite le transfert des messages déjà très retransmis à une seule conversation à la fois. Pour les diffuser plus largement, il faut répéter l’opération. Cette mesure vise à ralentir les cascades de partage en modifiant une fonction de l’application. Elle ne suppose pas d’avoir convaincu chaque usager qu’une rumeur est fausse : elle agit sur la facilité avec laquelle les partages individuels s’enchaînent.
+
+**Rendre le vélo praticable.** Une collectivité relie des pistes cyclables jusque-là discontinues et sécurise leurs intersections. Des trajets quotidiens deviennent plus accessibles à vélo. Les habitants peuvent alors modifier leurs déplacements sans avoir préalablement changé de convictions écologiques. L’intervention transforme les possibilités matérielles de déplacement ; les choix individuels contribuent ensuite à recomposer les flux à l’échelle de la ville.
+
+
 :::
 
-L’émergence décrit surtout un résultat : une propriété globale apparaît à partir d’interactions locales. La politique ne consiste donc pas seulement à transformer les consciences individuelles. Elle consiste aussi à agir sur les conditions qui permettent à ces comportements de se composer. Cette approche ne supprime ni le conflit ni la responsabilité : elle oblige à demander qui construit les règles, qui contrôle les infrastructures et qui bénéficie des effets collectifs produits.
+Dans chacun de ces cas, on cherche bien à infléchir les comportements, mais en en transformant leurs conditions matérielles ou techniques plutôt qu'en cherchant à convaincre ou à transformer les acteurs. Ces interventions ne garantissent pas à elles seules le résultat collectif recherché.
 
-CA ON LE GARDE POUR HAYEK ?
+On retrouve ici l’approche par la boîte noire. On modifie les conditions auxquelles les acteurs sont confrontés, puis on observe leurs réponses, sans avoir à connaître en détail leurs motivations. Un changement de conduite ne signifie donc pas nécessairement que leurs convictions ou leur manière de raisonner ont été transformées.
 
-Cette idée permet de comprendre un aspect de l’analyse du néolibéralisme par Michel Foucault. Dans ses cours au Collège de France, Foucault décrit une forme de gouvernement qui ne cherche pas uniquement à imposer directement une conduite. Elle agit aussi sur le milieu dans lequel les individus prennent leurs décisions : concurrence, prix, circulation, risques et incitations. Il ne s’agit pas d’une théorie foucaldienne de l’émergence, mais d’un point de comparaison utile : gouverner peut consister à aménager les conditions dans lesquelles des comportements individuels produisent des effets collectifs.
+L’effet de cette intervention peut s’apprécier à l’échelle statistique. Rien ne garantit que chaque individu réagisse comme prévu. Mais certaines conduites peuvent devenir plus fréquentes, et d’autres plus rares, à l’échelle d’une population.
+
+Le pouvoir peut ainsi infléchir la distribution des comportements sans maîtriser chaque trajectoire individuelle. Il peut produire des effets collectifs sans obtenir l’adhésion de chacun ni transformer en profondeur ses raisons d’agir.
+
+
+[Sources]
+- Cerema, « Le schéma directeur des aménagements cyclables. Planifier un réseau cyclable complet, continu et attractif », 29 février 2024, https://www.cerema.fr/fr/actualites/editions-schema-directeur-amenagements-cyclables-planifier.
+- WhatsApp, « Keeping WhatsApp Personal and Private », 7 avril 2020, https://blog.whatsapp.com/Keeping-WhatsApp-Personal-and-Private.
+- Federal Highway Administration, « Roundabouts », https://highways.dot.gov/safety/proven-safety-countermeasures/roundabouts.
+[/Sources]
+
 
 ---
-# Du pilotage au gouvernement
-
-<p class="lead muted">Autonomie distribuée · mesure · contrôle</p>
-
+### Auto-organisation
+Socialisme ou barbarie {.kicker}
 
 --- notes
 
-Temps indicatif : **1 minute**.
+Or certaines infrastructures peuvent fournir aux acteurs les moyens de coordonner eux-mêmes leur activité. 
 
-La cybernétique ne fournit pas seulement des modèles pour décrire des machines ou des organismes. Dès que ses concepts sont appliqués aux organisations et aux sociétés, une question politique apparaît : qui définit l’objectif, sélectionne les informations pertinentes et décide de la correction ?
+:::example
+Wikipédia : une coopération organisée par des règles et des outils. Un article se construit à travers des ajouts, des corrections et des discussions, sans qu’un rédacteur en chef attribue chaque tâche. Une version peut se stabiliser à partir de ces interventions successives. Mais cette coopération suppose des règles de contribution, des pages de discussion et des procédures de résolution des conflits. Certains participants disposent aussi de droits techniques particuliers, comme protéger une page ou bloquer un compte. L’activité est distribuée, sans que tous disposent des mêmes pouvoirs. 
+:::
 
-La réponse n’est pas univoque. Les mêmes boucles peuvent soutenir une autonomie locale réelle ou déplacer le contrôle vers les indicateurs, les protocoles et les infrastructures. Ce dernier sous-chapitre conservera cette ambivalence avant d’examiner la critique plus radicale de Tiqqun.
+La question de l'auto-organisation est la suivante : par quel mécanismes un système fait-il apparaître ou maintient-il un ordre sans qu’un centre en ait décrit chaque détail ? Comment un ordre collectif se forme-t-il ou se maintient-il à partir d’interactions locales, sans qu’un centre attribue à chaque élément sa place définitive dans ce système ? 
+
+L'important ici est de comprendre que l'absence de centre ne signifie pourtant ni l’absence de règles, ni l’absence d’infrastructure, ni l’absence de pouvoir.
+
+:::example
+Les murmurations d'étourneaux apparaissent parce que chaque étourneau se tient à un système de règle très strict.
+
+Réseaux neuronaux. Les interactions entres les neurones de notre cerveau suivent elles-aussi une grammaire très stricte.
+
+**Les Community Notes de Meta.** Depuis avril 2025, aux États-Unis, Meta confie à des contributeurs la rédaction et l’évaluation de notes ajoutées aux publications de Facebook, Instagram et Threads. Une note n’apparaît que si le système détecte un accord entre des personnes qui ont habituellement des points de vue divergents. Aucun modérateur central ne rédige donc le verdict dans chaque cas.
+
+Le jugement est distribué, mais le cadre ne l’est pas : Meta décide qui peut contribuer, quels contenus peuvent recevoir une note, comment l’algorithme reconnaît un accord et quels effets la note produit. La plateforme ne commande pas directement le résultat de chaque évaluation ; elle gouverne l’environnement technique dans lequel ce résultat collectif peut apparaître.
+:::
+
+Ces exemples sont importants. Ils permettent de comprendre que le problème de l'auto-organisation est souvent plus délicat que ce qu'il laisse entendre.
+
+L’auto-organisation est souvent présentée comme l’opposé du commandement central. Elle permettrait de coordonner les actions sans dépendre d’une hiérarchie capable de tout prévoir, tout en laissant une place importante aux initiatives locales. Mais cette opposition est incomplète. Un système auto-organisé fonctionne toujours dans un cadre : des règles d’interaction, des canaux de communication, des ressources, des critères de stabilité. La question n’est donc pas seulement de savoir s’il existe ou non un chef. Il faut surtout se demander : _quel environnement, quel cadre permettent à des actions locales de produire un ordre collectif, et qui définit ce cadre ?_
+
+Celui qui fixe ce cadre ne donne pas nécessairement d’ordres directs. Il peut pourtant exercer un pouvoir considérable en déterminant les possibilités d’action, les informations disponibles et les résultats qui seront valorisés.
+
+Qui, alors, décide des règles de ce cadre ? Les participants sont-ils réduit à agir dans ce cadre, ou peuvent-ils aussi participer à sa définition, voir à sa suppression ?
+
+[Sources]
+- W. Ross Ashby, « Principles of the Self-Organizing Dynamic System », *The Journal of General Psychology*, 37(2), 1947, p. 125–128, https://doi.org/10.1080/00221309.1947.9918144.
+- Heinz von Foerster, « On Self-Organizing Systems and Their Environments », 1960, https://www.organism.earth/library/document/on-self-organizing-systems.
+- Meta, « Testing Begins for Community Notes on Facebook, Instagram and Threads », 13 mars 2025, mise à jour le 7 avril 2025, https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/.
+[/Sources]
+
+:::
+
 ---
-<!-- slide: id="004i-ambivalence-politique" title="Ambivalence politique" steps=2 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Deux potentialités d’une même boucle</p>
-
-# L’ambivalence politique
-
-<div class="comparison">
-
-<Fragment at={1}>
-<div>
-
-## Promesse
-
-- coordonner sans centre omniscient ;
-- apprendre des erreurs ;
-- préserver une autonomie locale ;
-- s’adapter à l’imprévu.
-
-</div>
-</Fragment>
-
-<Fragment at={2}>
-<div>
-
-## Risque
-
-- fixer les objectifs ;
-- sélectionner les variables ;
-- mesurer les écarts ;
-- corriger les conduites.
-
-</div>
-</Fragment>
-
-</div>
-
-<p class="statement">Le contrôle peut se déplacer du <strong>commandement</strong> vers le <strong>cadre</strong>.</p>
+### Cybersyn
+Le socialisme cybernétique {.kicker}
 
 --- notes
 
-Temps indicatif : **6 minutes**.
+Cybersyn permet de retrouver cette question au sein d’un projet socialiste. En 1971, sous le gouvernement de Salvador Allende, l’ingénieur chilien Fernando Flores fait appel au cybernéticien britannique Stafford Beer. Une équipe chilienne et internationale doit concevoir un dispositif de coordination des entreprises nationalisées.
 
-À ce stade, il faut éviter deux récits trop simples.
+### Une promesse d’auto-organisation
 
-Le premier ferait de la cybernétique une idéologie intrinsèquement totalitaire : tout feedback serait surveillance, toute régulation serait normalisation. Cela efface les usages où la boucle permet précisément à des unités locales de décider, d’apprendre et de limiter la dépendance à un centre.
+Beer cherche une voie entre la coordination marchande et la planification bureaucratique centralisée. Le projet doit préserver une autonomie locale et permettre à l’activité des entreprises de contribuer aux ajustements du plan. L’ambition est de faire remonter les informations du terrain pour que la coordination économique puisse apprendre de ce qui se passe effectivement.
 
-Le second ferait de l’auto-organisation une libération automatique : dès qu’il n’y a plus de hiérarchie visible, il n’y aurait plus de pouvoir. Cela efface le rôle des protocoles, des indicateurs, des objectifs et des infrastructures.
+Un réseau de télex permet aux usines de transmettre des données sur leur production, leurs approvisionnements ou l’absentéisme. Des outils statistiques repèrent les variations inhabituelles. Dans le modèle de Beer, chaque unité doit pouvoir traiter ses difficultés avant qu’une intervention soit déclenchée à un niveau supérieur. La rétroaction doit ainsi soutenir une capacité locale de correction.
 
-### Deux manières de rendre gouvernable
+### Un cadre défini d’en haut
 
-Une organisation peut être rendue gouvernable par la standardisation explicite : règles détaillées, catégories, procédures, ordres.
+Mais qui choisit les données pertinentes, construit les modèles et définit les écarts qui appellent une correction ? Ce travail est largement confié aux experts du projet et aux responsables de l’appareil économique gouvernemental. L’autonomie promise aux unités de production s’inscrit donc dans un cadre conçu pour elles par d’autres.
 
-Elle peut aussi être gouvernée en fixant un objectif et en organisant une boucle de mesure et de correction. On laisse alors les acteurs choisir localement leurs moyens, tant que les résultats restent dans une zone acceptable.
+Dans son entretien pour *lundimatin*, Ivan Bouchardeau insiste sur cette contradiction. Selon lui, le projet court-circuite les formes d’organisation syndicale et ouvrière. Les travailleurs sont sollicités pour alimenter en informations un dispositif dont ils ne maîtrisent ni le fonctionnement ni les critères. La promesse d’auto-organisation peut ainsi reconduire une direction technocratique de la production.
 
-Cette seconde forme peut accroître l’autonomie réelle. Elle peut également produire une discipline très forte : l’acteur intériorise l’indicateur, surveille ses propres écarts et ajuste son comportement.
+Eden Medina documente concrètement cet écart. Les ingénieurs avaient pour consigne d’associer les comités ouvriers à la construction des modèles des usines. Dans la pratique, ils travaillaient souvent directement avec les directions, en laissant les travailleurs à l’écart. La participation annoncée ne se traduisait donc pas nécessairement par un pouvoir sur les outils de gestion.
 
-### Un cas fécond : Cybersyn
+Fournir des données sur son activité ne signifie pas décider de la manière dont elle doit être organisée. De même, donner une autonomie à une usine peut renforcer la marge de décision de sa direction sans accroître celle des ouvriers. **L’autonomie d’une unité de production ne garantit pas l’autogouvernement de ses travailleurs.**
 
-Le projet Cybersyn, développé au Chili sous le gouvernement de Salvador Allende, permet de rendre cette ambivalence concrète. En 1971, l’ingénieur chilien Fernando Flores invite le cybernéticien britannique Stafford Beer à transposer à l’échelle de l’économie nationalisée ses recherches sur la régulation des organisations, notamment son *Viable System Model*. Le projet est ensuite conçu par une équipe internationale et multidisciplinaire : mieux vaut donc dire qu’il est développé **avec** Beer plutôt que lui en attribuer seul la conception.
+Cette tension traverse le projet lui-même : Beer en vient à défendre l’apprentissage de la construction des modèles par les travailleurs. La question devient alors celle de leur pouvoir sur le cadre de la coordination, au-delà de leur participation à son fonctionnement.
 
-Cybersyn utilisait un réseau de télex et des outils statistiques pour faire remonter rapidement des informations depuis les entreprises nationalisées. Le modèle de Beer cherchait à articuler plusieurs niveaux de régulation : chaque unité devait conserver une certaine autonomie, tandis que les niveaux supérieurs traitaient les problèmes qu’elle ne pouvait pas résoudre seule.
+:::warning
+Cybersyn reste inachevé lorsque le coup d’État de septembre 1973 interrompt le projet. Il faut distinguer les ambitions du modèle, les dispositifs effectivement déployés et les rapports de pouvoir observés pendant leur mise en place.
+:::
 
-On pourrait le raconter comme un rêve de pilotage central de l’économie. Ce serait incomplet : le projet cherchait aussi à coordonner l’ensemble sans supprimer l’autonomie des unités locales. Son intérêt historique tient précisément à cette tension entre information centralisée, décision distribuée et participation des travailleurs.
-
-Cybersyn montre ainsi qu’une même infrastructure de feedback peut soutenir des projets politiques différents selon la distribution des données, la capacité de décision locale et les institutions qui permettent de contester les objectifs.
-
-### Le point décisif
-
-La question n’est donc pas seulement : « Y a-t-il un chef ? » Elle devient :
-
-- qui choisit les objectifs ?
-- qui définit ce qui peut être mesuré ?
-- qui possède les données de retour ?
-- qui peut contester la norme ?
-- que devient ce qui n’apparaît pas dans le modèle ?
-
-Un exemple contemporain peut être pris dans l’université : laisser une composante choisir librement ses moyens tout en l’évaluant sur quelques indicateurs peut sembler décentralisé. Mais le centre conserve un pouvoir en définissant ce qui compte comme performance.
-
-On peut présenter ici la formule suivante : **l’auto-organisation n’est pas l’opposé simple du contrôle ; elle peut être une autre distribution du contrôle**. Cette distribution peut être plus démocratique ou plus opaque selon la manière dont le cadre est institué et révisé.
 
 [Sources]
 - Norbert Wiener, *The Human Use of Human Beings: Cybernetics and Society*, Houghton Mifflin, 1950.
 - W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall, 1956.
 - Stafford Beer, « The Viable System Model: Its Provenance, Development, Methodology and Pathology », *Journal of the Operational Research Society*, 35(1), 1984, p. 7–25, https://doi.org/10.1057/jors.1984.2.
+- Ivan Bouchardeau, « Cybernétique et techniques de gouvernement », entretien pour *lundisoir*, publié le 11 mars 2026, notamment la séquence 00:57:25–01:00:36 ; transcription locale : `lundimatin.md`, https://lundi.am/Cybernetique-et-techniques-de-gouvernement.
+- Eden Medina, « Designing Freedom, Regulating a Nation: Socialist Cybernetics in Allende’s Chile », *Journal of Latin American Studies*, 38(3), 2006, p. 571–606, notamment p. 602–603, https://doi.org/10.1017/S0022216X06001179.
 - Eden Medina, *Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile*, MIT Press, 2011, https://mitpress.mit.edu/9780262525961/cybernetic-revolutionaries/.
 - Eden Medina, « Project Cybersyn: Chile’s Radical Experiment in Cybernetic Socialism », *MIT Press Reader*, https://thereader.mitpress.mit.edu/project-cybersyn-chiles-radical-experiment-in-cybernetic-socialism/.
-[/Sources]
----
-<!-- slide: id="004j-tiqqun" title="La critique de Tiqqun" steps=3 -->
-
-<script>
-  import Fragment from '@svx-slides/core/components/Fragment.svelte'
-</script>
-
-<p class="kicker">Tiqqun · L’hypothèse cybernétique · 2001</p>
-
-# Contrôler en faisant circuler
-
-<Fragment at={1}>
-
-<div class="sequence">
-  <span>capter</span><span class="arrow">→</span>
-  <span>comparer</span><span class="arrow">→</span>
-  <span>corriger</span><span class="arrow">↺</span>
-</div>
-
-</Fragment>
-
-<Fragment at={2}>
-
-<p class="statement">Le pouvoir ne commande pas seulement : il <strong>entretient des boucles</strong>.</p>
-
-</Fragment>
-
-<Fragment at={3}>
-
-<p class="question">Une critique polémique à discuter — pas une histoire neutre à réciter.</p>
-
-</Fragment>
-
---- notes
-
-Temps indicatif : **6 à 7 minutes**.
-
-Tiqqun publie *L’Hypothèse cybernétique* en 2001. Le texte ne propose pas une histoire académique et équilibrée de la cybernétique. Il construit une hypothèse critique : la cybernétique serait devenue une forme générale de gouvernement des sociétés contemporaines.
-
-### Le cœur de la critique
-
-Dans le modèle classique de la souveraineté, le pouvoir est facilement imaginé comme un centre qui ordonne et interdit. Tiqqun attire l’attention sur une autre forme :
-
-1. des capteurs ou des dispositifs produisent continuellement des informations ;
-2. ces informations rendent les comportements comparables à une norme ou à un objectif ;
-3. les écarts déclenchent des ajustements ;
-4. les ajustements produisent de nouvelles conduites, elles-mêmes mesurées.
-
-Le contrôle passe alors par la circulation de l’information. Il ne cherche pas nécessairement à immobiliser chaque individu ; il cherche à rendre les flux observables, prévisibles et corrigibles.
-
-Cette lecture permet de regarder autrement des dispositifs familiers : tableaux de bord, évaluations continues, scores, recommandations, notifications, modulation des prix ou surveillance algorithmique. Ils ne disent pas toujours directement quoi faire. Ils construisent un environnement qui rend certains comportements plus probables et en enregistre les résultats.
-
-### Ce que Tiqqun force
-
-Le texte transforme souvent une famille de concepts et de techniques en une logique historique presque totale. Il tend à faire de toute communication une captation et de toute auto-organisation une ruse du contrôle. Cette généralisation est contestable.
-
-Historiquement, les cybernéticiens ne forment pas un bloc homogène. Wiener lui-même formule des critiques du pouvoir, de l’automatisation irresponsable et de la concentration des moyens de communication. Des projets cybernétiques ont cherché à distribuer l’information et l’initiative plutôt qu’à les centraliser.
-
-Il faut donc utiliser Tiqqun comme une **lentille** :
-
-- elle révèle que mesurer et faire circuler peuvent être des opérations politiques ;
-- elle oblige à chercher la norme cachée dans la boucle ;
-- elle ne suffit pas à démontrer que tout réseau ou toute régulation serait une domination.
-
-### Question aux étudiants
-
-« Quand une application vous recommande un contenu à partir de vos usages, vous donne-t-elle davantage d’autonomie, oriente-t-elle votre conduite, ou les deux à la fois ? »
-
-L’intérêt de la question est précisément qu’elle ne se résout pas par une opposition simple entre liberté et contrôle.
-
-Cette ambivalence clôt notre chapitre sur la cybernétique. Nous avons suivi la formation de ses concepts, leur composition en langue commune, puis leur extension politique. La séquence suivante change d’objet : elle revient sur une autre généalogie issue de la même effervescence, celle des premières machines qui prétendent formaliser certaines opérations du cerveau.
-
-[Sources]
-- Tiqqun, *L’Hypothèse cybernétique*, 2001, notamment p. 230–243 et 254–267 dans l’édition *Tout a failli, vive le communisme !* ; exemplaire local : `/Users/osarrouy/Documents/Papers/Tiqqun - 2001 - Lhypothese cybernetique/document.pdf`.
+- Michel Foucault, *Sécurité, territoire, population. Cours au Collège de France (1977–1978)*, Seuil/Gallimard, 2004, https://www.college-de-france.fr/fr/agenda/cours/securite-territoire-et-population.
+- Michel Foucault, *Naissance de la biopolitique. Cours au Collège de France (1978–1979)*, Seuil/Gallimard, 2004, https://www.college-de-france.fr/fr/agenda/cours/naissance-de-la-biopolitique.
 [/Sources]
