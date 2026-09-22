@@ -3,14 +3,17 @@ title: Naissance d'Internet et de la micro-informatique
 theme: gallery
 ---
 
-# Internet & l'ordinateur personnel
+# Histoire du numérique
+3/3 · Internet & l'ordinateur personnel {.kicker}
 
 --- notes
 
-Ce fantasme se réalisera par la conjonction de deux processus : la diffusion du réseau Internet et le développement de la micro-informatique.
+Le développement de l'informatique moderne et le fantasme cybernétique ne se concrétiseront pas immédiatement.
+
+Il faudra pour y parvenir la conjonction de deux processus : la diffusion du réseau Internet et le développement de la micro-informatique.
 
 ---
-## internet
+## Internet
 Les origines {.kicker}
 
 --- notes
@@ -18,8 +21,11 @@ Les origines {.kicker}
 Il importe, avant d’entamer ce chapitre, de préciser la différence qui existe en Internet et le web.
 
 ---
-![Tim Berners Lee and Vinton Cerf](/berners_lee_and_cerf.jpg){data-glow="strong" class="slide-image-fill"}
 
+<FramedImage
+  src="/berners_lee_and_cerf.jpg"
+  alt="Tim Berners Lee and Vinton Cerf"
+/>
 
 --- notes
 
@@ -49,7 +55,10 @@ Licklider a une idée en tête. Il imagine une véritable symbiose entre l’hom
 Licklider insiste alors sur la nécessité d’un réseau numérique et surtout décentralisé, à rebours du modèle dominant : le réseau téléphonique.
 
 ---
-![Centre de commutation téléphonique](/phone.webp){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/phone.webp"
+  alt="Centre de commutation téléphonique"
+/>
 
 --- notes
 
@@ -93,6 +102,7 @@ Les premières implémentations expérimentales de ces protocoles apparaissent e
 
 ---
 ## Naissance de la micro-informatique
+Hippies, hippies, hippies {.kicker}
 
 --- notes
 
@@ -107,7 +117,10 @@ Cette miniaturisation progresse sans cesse : aujourd’hui, on grave à l’éch
 Ces innovations ouvrent la voie à des mémoires plus étendues et des processeurs plus rapides, jusqu’à l’apparition, au début des années 1970, du microprocesseur : un processeur complet intégré sur une seule puce de silicium.
 
 ---
-![IBM 360](/ce7f7a11085b53c977b0ffd1c74469d3e03505b1.jpg){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/ce7f7a11085b53c977b0ffd1c74469d3e03505b1.jpg"
+  alt="IBM 360"
+/>
 
 --- notes
 
@@ -118,7 +131,8 @@ Leur importance est ailleurs : pour la première fois, une gamme entière d’or
 La naissance de l’informatique grand public devra, elle, attendre encore quelques années. Elle réclamera, nous allons le voir, un étrange détour contre-culturel.
 
 ---
-## La contre-culture californienne
+### La contre-culture californienne
+LSD, Révolution et informatique {.kicker}
 
 --- notes
 
@@ -158,6 +172,18 @@ Un des personnages centraux des romans de la *Beat-Generation*, est un certain N
 
 Or ce fameux Neal Cassady est un visiteur régulier du ranch de La Honda. Là-bas, il côtoie une nouvelle génération de déserteurs : des *Hells Angels*, mais aussi les *Grateful Dead* - avant garde de la musique psychédélique - et d’autres électrons libres qui se rassembleront pour constituer un groupe hétéroclite: les *Merry Pranksters*.
 
+---
+
+<FramedImage
+  src="/furthur-original-bus.jpg"
+  alt="Le bus Furthur des Merry Pranksters"
+/>
+
+<!-- Image: Rcarlberg, "Ken Kesey's original bus 'Further'", 1998, CC BY-SA 4.0, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Further_(original_bus).jpg -->
+
+--- notes
+
+
 Les *Pranksters* sillonnent la Californie et les États-Unis dans un bus scolaire appelé le *Furthur* pour organiser des *acid tests* : de gigantesques orgies de LSD qui donneront leur titre à un ouvrage de Tom Wolfe. Les *Grateful Dead* y assurent la bande son et les *Hells Angels* le service d’ordre.
 
 L’un de premiers a voir expérimenté l’acide - apparu sur la côte Est - est d’ailleurs Ken Kesey, qui a rejoint en tant que cobaye, au début des années 1960, une expérimentation organisée secrètement par la CIA pour tester les effets du LSD sur l’esprit humain - vraisemblablement pour essayer d’en extraire quelque chose comme un sérum de vérité.
@@ -196,9 +222,11 @@ Stewart Brand est un membre des Merry Pranksters. Mais il est aussi proche de no
 En 1968, un certain Doug Engelbart, qui travaille à l’*Augmentation Research Center* (ARC) du Stanford Research Institute (SRI), financé lui aussi par l’ARPA, va présenter en public un projet sur lequel son équipe travaille depuis longtemps : le NLS (oNLine System).
 
 ---
+<script>
+  import BackgroundVideo from '$components/BackgroundVideo.svelte'
+</script>
 
-<!-- slide: id="history-042-mother-of-all-demos" title="Mother Of All Demos" steps=0 -->
-<video class="history-asset" src="/assets/mother_of_all_demos.mp4" aria-label="mother of all demos" autoplay loop muted playsinline style="max-width:100%;max-height:68vh;object-fit:contain;"></video>
+<BackgroundVideo src="/assets/mother_of_all_demos.mp4" overlay={false} />
 
 --- notes
 
@@ -213,14 +241,20 @@ Ce n’est pas tout à fait un hasard : Steward Brand sera considéré, dans les
 Cette influence s’exercera notamment à travers la publication, entre 1968 et 1972, du *Whole Earth Catalog*.
 
 ---
-![Whole earth catalog](/whole_earth_catalog_1.jpg){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/whole_earth_catalog_1.jpg"
+  alt="Whole earth catalog"
+/>
 
 --- notes
 
 Le *Whole Earth Catalog* se présente comme une sorte d’encyclopédie pour communautés alternatives : recettes de cuisine, spiritualités orientales, bricolage, écologie… mais aussi présentation des technologies les plus récentes de l’époque.
 
 ---
-![Whole earth catalog](/whole_earth_catalog_2.jpg){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/whole_earth_catalog_2.jpg"
+  alt="Whole earth catalog"
+/>
 
 --- notes
 
@@ -237,7 +271,10 @@ Ces groupes contestataires posent les bases d’une informatique « pour tous »
 C’est pourtant dans ce contexte que va naître en 1973, à Berkeley, ce qu’on a l’habitude de considérer comme la première communauté virtuelle : *Community Memory*.
 
 ---
-![Community Memory](/community_memory.jpg){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/community_memory.jpg"
+  alt="Community Memory"
+/>
 
 --- notes
 
@@ -254,7 +291,10 @@ Ces premières expérimentations vont très vite s’accompagner d’une révolu
 Au milieu des années 1970, l’informatique connaît en effet un tournant décisif. Jusque-là réservée aux laboratoires, aux entreprises et aux universités, elle commence à entrer dans les garages et les salons. Ce basculement se fait par le biais d’une série de machines pionnières.
 
 ---
-![Altair 8800](/altair_8800.png){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/altair_8800.png"
+  alt="Altair 8800"
+/>
 
 --- notes
 
@@ -263,14 +303,20 @@ En 1975 apparaît l’Altair 8800, premier micro-ordinateur personnel à toucher
 Rudimentaire, mais équipé du processeur Intel 8080 – l’un des premiers relativement puissants et abordables –, l’Altair marque une rupture : pour la première fois, des amateurs peuvent s’approprier directement un ordinateur.
 
 ---
-![Apple I](/apple_I.webp){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/apple_I.webp"
+  alt="Apple I"
+/>
 
 --- notes
 
 L’année suivante, deux jeunes passionnés, Steve Jobs et Steve Wozniak, conçoivent dans le garage des parents de Jobs leur premier ordinateur : l’Apple I. Là encore, il s’agit d’une carte mère à compléter (boîtier, clavier, écran).
 
 ---
-![Apple II](/apple_II.png){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/apple_II.png"
+  alt="Apple II"
+/>
 
 --- notes
 
@@ -279,7 +325,10 @@ En 1977, avec l’Apple II, ils franchissent un cap : un ordinateur complet, pr�
 L’industrie comprend alors qu’il existe un marché pour l’informatique personnelle.
 
 ---
-![IBM PC](/ibm_pc.png){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/ibm_pc.png"
+  alt="IBM PC"
+/>
 
 --- notes
 
@@ -298,7 +347,10 @@ Mais en 1983, Apple lance le Lisa, premier ordinateur grand public doté d’une
 Pour l’anecdote, l’équipe qui travaillait au Xerox PARC sur cette interface comptait parmi ses membres un certain Alan Kay, dont la femme n’était autre que la scénariste de Tron ... le premier film à utiliser des images produites par ordinateur.
 
 ---
-![Apple Macintosh](/macintosh.webp){data-glow="strong" class="slide-image-fill"}
+<FramedImage
+  src="/macintosh.webp"
+  alt="Apple Macintosh"
+/>
 
 --- notes
 
