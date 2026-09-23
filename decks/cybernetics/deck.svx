@@ -791,7 +791,6 @@ Cette tension traverse le projet lui-même : Beer en vient à défendre l’appr
 Cybersyn reste inachevé lorsque le coup d’État de septembre 1973 interrompt le projet. Il faut distinguer les ambitions du modèle, les dispositifs effectivement déployés et les rapports de pouvoir observés pendant leur mise en place.
 :::
 
-
 [Sources]
 - Norbert Wiener, *The Human Use of Human Beings: Cybernetics and Society*, Houghton Mifflin, 1950.
 - W. Ross Ashby, *An Introduction to Cybernetics*, Chapman & Hall, 1956.

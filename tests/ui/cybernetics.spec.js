@@ -76,14 +76,18 @@ for (const width of [1280, 390]) {
               .poll(() => video.evaluate((element) => element.readyState))
               .toBeGreaterThan(0);
         }
-        const neuron = slides.findIndex(
-          (slide) => slide.id === "006-neurone-mcculloch-pitts",
+        const progressiveSlide = slides.findIndex(
+          (slide) => slide.metadata.steps > 0,
         );
-        await select.selectOption(String(neuron));
+        expect(
+          progressiveSlide,
+          "Cybernetics includes a slide with progressive steps",
+        ).toBeGreaterThanOrEqual(0);
+        await select.selectOption(String(progressiveSlide));
         await reader
           .getByRole("button", { name: "Slide ou étape suivante" })
           .click();
-        await expect(select).toHaveValue(String(neuron));
+        await expect(select).toHaveValue(String(progressiveSlide));
         await expect(reader.locator(".step")).toContainText("Étape 1/");
       }
       await page

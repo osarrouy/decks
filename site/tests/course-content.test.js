@@ -50,7 +50,7 @@ test("the actual course preserves its shortened history outline and separate bib
   assert.equal(cybernetics.part, "2/3");
   assert.equal(cybernetics.subtitle, "Cybernetics");
   assert.equal(cybernetics.items.length, 6);
-  assert.equal(cybernetics.bibliography.length, 12);
+  assert.equal(cybernetics.bibliography.length, 14);
   assert.equal(cybernetics.slides[0].url, "/slides/cybernetics/index.html");
   assert.equal(cybernetics.slides[0].integration, "iframe");
   const internetAndPersonalComputing = course.sections[2];

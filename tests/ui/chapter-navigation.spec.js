@@ -23,7 +23,7 @@ for (const width of [1280, 390]) {
       await expect(reading.getByRole("heading")).toHaveText(["Bibliographie"]);
       await expect(reading.locator(".heading")).toHaveText("Bibliographie");
       await expect(reading.locator(".reading-name")).toHaveCount(0);
-      await expect(reading.locator(".reading-list > li")).toHaveCount(12);
+      await expect(reading.locator(".reading-list > li")).toHaveCount(14);
       await page.screenshot({
         path: `/tmp/chapter-bibliography-${width}-${theme}.png`,
       });
