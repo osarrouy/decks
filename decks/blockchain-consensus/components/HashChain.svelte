@@ -54,6 +54,7 @@
     : "Chaînage des blocs par les hashes et recalcul des preuves de travail"}
 >
   <svg
+    class="typography"
     viewBox={overview ? "0 50 1000 350" : "0 0 1000 500"}
     role="img"
     aria-hidden="true"
@@ -229,6 +230,9 @@
   }
 
   svg {
+    /* The viewBox scales the diagram, including its local type scale. */
+    --font-size-base: 16px;
+
     display: block;
     width: 100%;
     max-height: 64cqh;

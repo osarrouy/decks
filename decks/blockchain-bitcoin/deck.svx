@@ -28,7 +28,6 @@ Nous allons revenir, d’ici peu, sur ce que cela signifie exactement. Mais d’
 
 --- notes
 
-Photo by Lucas de Moura on [Unsplash](https://unsplash.com/photos/a-person-wearing-a-mask-KerlUtk582w)
 
 
 
@@ -97,7 +96,6 @@ L’héritage cypherpunk se retrouve plus tard dans des projets comme Wikileaks 
 https://www.youtube.com/watch?v=9vM0oIEhMag&list=PLDftu3L1GcexhTUBL434mDuZcoVvVEUlH&index=2
 
 ---
-<!-- slide: id="blockchain-012-la-crise-des-subprimes" title="La crise des subprimes" layout="center" -->
 ## La crise des subprimes
 2007 - 2008 {.kicker}
 
@@ -165,7 +163,6 @@ L’État vole donc au secours des banques et fait tourner la planche à billet 
 ↦ Pour comprendre d’où provient l’inflation il faut donc comprendre d’où vient la monnaie : comment celle-ci est mise en circulation ?
 
 ---
-<!-- slide: id="blockchain-014-la-creation-monetaire" title="La création monétaire" layout="center" -->
 ## La création monétaire
 
 --- notes
