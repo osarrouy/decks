@@ -17,7 +17,8 @@
         bottom: 500,
     };
 
-    const pointCount = 96;
+    const pointCount = 192;
+    const samplingExponent = 2;
     const epsilon = 0.01;
     const exponents: Record<Concentration, number> = {
         low: 0.65,
@@ -28,11 +29,12 @@
         return exponents[value];
     }
 
-    function createPoints(exponent: number) {
+    function createPoints(exponent: number, endPosition = 1) {
         const maxValue = Math.pow(epsilon, -exponent);
 
         return Array.from({ length: pointCount }, (_, index) => {
-            const position = index / (pointCount - 1);
+            const progress = index / (pointCount - 1);
+            const position = Math.pow(progress, samplingExponent) * endPosition;
             const value = Math.pow(position + epsilon, -exponent) / maxValue;
             const x = chart.left + position * (chart.right - chart.left);
             const y = chart.top + (1 - value) * (chart.bottom - chart.top);
@@ -43,7 +45,7 @@
 
     function makePath(points: { x: number; y: number }[]) {
         return points
-            .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`)
+            .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`)
             .join(" ");
     }
 
@@ -104,10 +106,8 @@
     $: pointPath = makePath(points);
     $: areaPath = `${pointPath} L ${chart.right} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`;
 
-    const highPoints = createPoints(exponentFor("high"));
-    const paretoEndIndex = Math.round((pointCount - 1) * 0.2);
-    const paretoPoints = highPoints.slice(0, paretoEndIndex + 1);
-    const paretoPath = `${makePath(paretoPoints)} L ${paretoPoints[paretoPoints.length - 1].x.toFixed(1)} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`;
+    const paretoPoints = createPoints(exponentFor("high"), 0.2);
+    const paretoPath = `${makePath(paretoPoints)} L ${paretoPoints[paretoPoints.length - 1].x.toFixed(2)} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`;
     const paretoX = chart.left + 0.2 * (chart.right - chart.left);
 
     $: showPareto =
@@ -177,6 +177,9 @@
         fill: none;
         stroke: var(--accent);
         stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        shape-rendering: geometricPrecision;
         vector-effect: non-scaling-stroke;
     }
 

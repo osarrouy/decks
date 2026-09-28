@@ -16,9 +16,9 @@
             position: "top-left",
             title: "Sphère publique restreinte",
             examples: [
-                "tribune signée",
-                "expert·e reconnu·e",
-                "blog professionnel",
+                "éditorial politique",
+                "interview d’un ministre",
+                "analyse économique",
             ],
         },
         {
@@ -26,19 +26,19 @@
             position: "top-right",
             title: "Web participatif",
             examples: [
-                "blog personnel",
-                "vidéo amateur",
-                "contribution à Wikipédia",
+                "billet citoyen sur une loi",
+                "enquête associative",
+                "vidéo militante",
             ],
         },
         {
             number: 2,
             position: "bottom-left",
-            title: "Espace public",
+            title: "Vie ordinaire médiatisée",
             examples: [
-                "journal télévisé",
-                "site de presse",
-                "émission de radio",
+                "reportage sur un marché",
+                "portrait d’un habitant",
+                "chronique du quotidien",
             ],
         },
         {
@@ -46,9 +46,9 @@
             position: "bottom-right",
             title: "Web en clair-obscur",
             examples: [
-                "pseudonyme sur un forum",
-                "commentaire",
-                "groupe privé",
+                "photo de vacances",
+                "récit de journée",
+                "échange entre proches",
             ],
         },
     ];
@@ -58,19 +58,19 @@
     <div
         class="matrix"
         role="img"
-        aria-label="Matrice des publics du web : de professionnel à amateur, et de personnalité à quidam."
+        aria-label="Matrice des prises de parole : professionnels à gauche, amateurs à droite ; questions collectives en haut, expériences ordinaires en bas."
     >
         <div class="axis-line axis-line-x" aria-hidden="true"></div>
         <div class="axis-line axis-line-y" aria-hidden="true"></div>
-        <div class="axis-label axis-label-y-top">INTÉRÊT PUBLIC</div>
-        <div class="axis-label axis-label-y-bottom">INTÉRÊT PRIVE</div>
+        <div class="axis-label axis-label-y-top">QUESTIONS COLLECTIVES</div>
+        <div class="axis-label axis-label-y-bottom">EXPÉRIENCES ORDINAIRES</div>
         <div class="axis-label axis-label-x-left">PROFESSIONNEL</div>
         <div class="axis-label axis-label-x-right">AMATEUR</div>
 
         <div class="quadrant-grid">
             {#each quadrants as quadrant}
                 <section
-                    class={`quadrant ${quadrant.position} ${
+                    class={`metadata quadrant ${quadrant.position} ${
                         activeQuadrant !== null &&
                         quadrant.number !== activeQuadrant
                             ? "quadrant--muted"
@@ -150,14 +150,10 @@
         /*gap: 0.22rem;*/
         margin: 0.75rem 0 0;
         padding: 0;
-        font-weight: 300;
+        font-weight: 200;
         /*padding-left: 1rem;*/
         /*color: var(--text-muted);*/
         list-style-type: none;
-    }
-
-    .quadrant ul li {
-        font-size: 1.3rem; /*clamp(0.5rem, 0.5vw, 0.5rem);*/
     }
 
     .quadrant li::marker {
@@ -202,13 +198,13 @@
     .axis-label-y-top {
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-100%);
     }
 
     .axis-label-y-bottom {
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(100%);
     }
 
     .axis-label-x-left {

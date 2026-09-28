@@ -8,87 +8,214 @@ Espace public, sphère privée et publication · 1/5 {.kicker}
 
 --- notes
 
-Ce premier chapitre définit les réseaux sociaux numériques et replace leur
-apparition dans une histoire plus longue de l’espace public. Il suit la manière
-dont les frontières entre parole publique, conversation ordinaire et vie privée
-deviennent plus poreuses lorsque chacun peut publier.
+Les premiers réseaux sociaux numériques apparaissent à la fin des années 1990. Leur usage se généralise ensuite au cours des années 2000 et 2010.
 
-La question directrice est simple : que change l’ouverture technique de la
-publication si l’attention demeure rare et très inégalement distribuée ?
+:::comment
+- **1997 : SixDegrees**, premier site à réunir des profils, des listes d’amis et la possibilité de parcourir ces relations ;
+- **2002 : Friendster**, qui popularise les réseaux de connaissances ;
+- **2003 : LinkedIn et MySpace**, orientés respectivement vers les relations professionnelles et l’expression personnelle ;
+- **2004 : Facebook**, d’abord réservé aux étudiants de Harvard, puis ouvert à tous en 2006 ;
+- **2005 : YouTube**, qui place la vidéo produite par les utilisateurs au centre des échanges ;
+- **2006 : Twitter**, organisé autour de messages courts et de leur circulation publique ;
+- **2010 : Instagram**, centré sur la photographie et les usages mobiles ;
+- **2011 : Snapchat**, qui popularise les contenus éphémères ;
+- **2016-2017 : Douyin puis TikTok**, qui généralisent le fil de vidéos courtes piloté par la recommandation.
 
-On peut considérer que l’irruption des Réseaux Sociaux Numériques (RSN), au cours des années 2000 et 2010, a constitué un moment de rupture dans notre rapport aux technologies numériques et dans l’extension de leur hégémonie.
 
-Il est délicat de définir ce que constitue exactement un réseau social numérique. Il peut en être donnée une première définition technique ou architecturale.
+:::
 
-danah boyd et Nicole Ellison (2007) définissent ainsi, dans un article précurseur, les réseaux sociaux numériques à partir de deux caractéristiques :
+Ces plateformes ne fonctionnent pas toutes de la même façon : organisation des profils et des relations, type de contenus, fonctions de publication, personnalisation des fils de contenus personnalisés, etc. diffèrent.
 
-1. L’utilisateur y dispose d’une page personnelle.
-2. L’utilisateur peut s’y abonner à d’autres utilisateurs avec lesquels interagir.
-
-Cette définition retient donc le mode d’organisation et d’exploration des contenus comme critère de définition des RSN.
-
-Contrairement au site d’un journal dont le contenu est organisé chronologiquement, ou à Wikipedia dont le contenu est organisé thématiquement, les RSN placent les auteurs de ces contenus comme le principe de leur organisation et de leur exploration.
-
-Le propre d’un RSN est qu’il y est moins question des contenus qui y sont produits et partagés que de l’auteur.ice qui s’exprime et se dévoile à travers ces contenus.
-
-D’une certaine manière, les RSN marqueraient ainsi, techniquement, le grand retour de l’ego dans l’économie du discours - c’est-à-dire dans la manière dont ces discours sont produits, reçus et mis en circulation.
-
-Notons que cette particularité tend à s’effacer avec la marchandisation et le phénomène de l’AI slope. Mettons toutefois de côté cette question sur le moment, et revenons à la particularité originelle des réseaux sociaux numériques.
-
-Nous verrons, au cours des séances à venir, que cette particularité architecturale s’articule étroitement à d’autres spécificités.
-
-D’abord par la manière dont les RSN ont suscité une certaine démocratisation de la parole publique.
-
-Les RSN sont en effets organisés autour de partage de contenus dont le format est conçu pour réduire drastiquement les coûts cognitifs et les barrières d’entrée à l’expression publique.
-
-Il est plus simple de rédiger un tweet de 140 caractères que de rédiger un article de blog de trois pages, et il est encore plus simple de partager une photo prise avec son smartphone que de rédiger un tweet - de même qu’il est plus simple de liker une photo que de produire un cliché original.
-
-L’usage de formats d’expression accessibles a ainsi permis à une population jusqu’ici exclue de l’expression publique d’y faire irruption avec ses codes et ses modes d’expression propres.
-
-Ce bouleversement démographique s’est aussi accompagné d’une modification profonde de la parole publique elle-même - et des manières et de son contenu.
-
-Nous nous étions habitués à ce que l’expression publique - les discours qui se tiennent à la télé, à la radio, dans la presse - porte sur des thématiques d’intérêt public : la politique, l’économie, la culture, etc.
-
-Or, sur les réseaux sociaux, il est principalement question du quotidien, du soi et de ses errances.
-
-Cette irruption du privé et de l’intime dans l’espace public provoque une importante restructuration de notre économie discursive.
-
-Se côtoient désormais, sur Twitter ou Instagram, des discours de natures tout à fait distinctes : les déclarations du président de la République partagent ainsi notre feed avec les photos de vacances d’une inconnue, des organes de presse avec des comptes humoristiques, des institutions internationales avec les peines de coeur de notre voisin.
-
-Nous allons maintenant nous intéresser aux effets qu’exercent la démocratisation du Web et des réseaux sociaux numériques sur la structuration de la **sphère publique** et de la **sphère privée**.
+Et pourtant, on les classe toutes dans la catégorie des réseaux sociaux. Comment, alors, définir plus précisément ce qu'est un réseau social numérique ?
 
 ---
-## Sphère publique _vs_ sphère privée
+## Profils et relations
+Une nouvelle économie discursive {.kicker}
 
 --- notes
 
-La sphère publique désigne le champ social à travers lequel des individus et des groupes cherchent à faire reconnaître certains problèmes comme relevant de l’intérêt collectif, en discutent et forment à leur propos des opinions.
+Pour définir les réseaux sociaux numériques (RSN), partons de leur architecture. [danah boyd et Nicole Ellison (2007)](https://doi.org/10.1111/j.1083-6101.2007.00393.x) retiennent trois caractéristiques :
+
+1. L’utilisateur dispose d’un profil public ou semi-public au sein du service.
+2. Il affiche une liste de connexions avec d’autres utilisateurs.
+3. Il peut parcourir cette liste et celles d’autres utilisateurs.
+
+Cette architecture place les personnes et leurs relations au centre de l’exploration des contenus. 
 
 :::example
-La réforme des retraites, la fermeture d'un hopital de campagne ou la pollution d'une rivière constitue des problèmes d'intérêt public.
-
-À l'inverse, un dîner familial, une conversation entre amis ou une décision médicale personnelle relèvent de la sphère privée tant qu’ils n'ont pas été présentés comme des problèmes concernant un ensemble plus large de personnes.
-
-Ainsi, selon que votre maladie est dûe aux hasards de la vie ou à une pollution systémique de l'environnement, la question ne sera pas la même.
+Un journal organise ses articles par rubriques et par actualité ; Wikipédia, par sujets. Sur un RSN, on découvre aussi des contenus à partir des personnes auxquelles on est relié.
 :::
 
-Le caractère public ou privé d'un fait n'en constitue donc pas une propriété fixe. Il dépend de la manière dont une société détermine le cercle des personnes concernées par ce fait. Le regard peut se déplacer au cours de l’histoire : ce qui était considéré comme une affaire privée peut devenir un enjeu public, tandis que ce qui relevait auparavant du public peut être renvoyé à la vie privée.
+Or cette architecture modifie profondément l'économie discursive à laquelle nous étions habituée.
+
+Quand on parle d'économie, on a tendance à penser à l'économie au sens restreint : l'échange de marchandises contre de l'argent. En réalité le terme d'économie est beaucoup plus large que ça.
+
+Le mot « économie » vient du grec _oikonomia_, qui désigne l’administration de la maison. Il ne renvoie donc pas seulement à l’argent : il peut aussi désigner la manière dont un ensemble est organisé, dont ses ressources sont réparties et dont ses différentes parties fonctionnent ensemble.
+
+:::example
+Dans l’*Économique*, au IVe siècle avant notre ère, Xénophon décrit l’administration d’une maison et de son domaine agricole : organiser le travail, ranger les outils, conserver les récoltes et répartir les provisions.
+
+Il recommande notamment de séparer les réserves destinées au mois de celles qui doivent durer toute l’année, pour ne pas consommer trop vite les ressources disponibles. La « maison » est ici une unité de production qui comprend des terres, des biens et des personnes, dont des esclaves.
+
+L’économie désigne donc une organisation : qui fait quoi, avec quelles ressources, et comment répartir ce qui est produit.
+:::
+
+Parler d’économie discursive, c’est appliquer cette idée à la production, à la circulation et à la réception des discours. Qui peut prendre la parole ? Pour s’adresser à qui ? Par quels moyens un discours est-il diffusé, rendu visible et reconnu comme important ou légitime ? Il ne s’agit pas seulement d’étudier ce qui se dit, mais les conditions dans lesquelles certaines paroles peuvent être produites, circuler et être entendues.
+
+Les réseaux sociaux transforment cette organisation en faisant des personnes et de leurs relations des points d’entrée vers les discours. Une publication peut ainsi circuler parce qu’elle vient d’un ami ou qu’un proche la partage, et pas seulement parce qu’un média l’a sélectionnée. Cela modifie à la fois les personnes qui prennent la parole, les propos qui trouvent un public et les raisons pour lesquelles on leur prête attention.
+
+---
+## La parole comme relation
+Des contenus conversationnels {.kicker}
+
+--- notes
+
+Cette organisation par les profils et les relations ne change pas seulement la manière de découvrir des contenus. Elle change aussi les raisons de publier : on peut prendre la parole parce qu’on dispose déjà d’un entourage auquel s’adresser.
+
+:::example
+Une photographie prise à la sortie du lycée peut sembler banale à un inconnu. Pour les amis présents ce jour-là, elle rappelle un moment partagé, prolonge une plaisanterie ou permet de reprendre la conversation.
+:::
+
+Il n’est donc pas nécessaire que chaque publication intéresse des inconnus ou traite d’un sujet d’actualité. Elle peut avoir du sens pour les personnes qui connaissent son auteur et partagent une partie de son quotidien.
+
+Publier peut alors servir à donner des nouvelles, à susciter une réaction ou à entretenir une relation. La valeur de la publication tient alors autant au lien entre les personnes qu’à l’information qu’elle contient.
+
+On parle alors de **contenus conversationnels** : partager permet de donner des nouvelles, de susciter une réaction ou d’entretenir une relation.
+
+
+:::example
+**Snapchat.** Dans le dispositif initial de Snapchat, la photographie est conçue pour disparaître rapidement : elle n’a pas vocation à devenir une œuvre durable ou à laisser une trace autonome, mais à entretenir une relation et à participer à une interaction sociale.
+
+**Facebook et Instagram.** Le partage d’une photographie ou d’une vidéo vise souvent moins à produire un contenu autonome qu’à susciter des réactions — commentaires, mentions « j’aime » ou partages. C'est la continuation de la conversation qu'on a eu au lycée, ou la blague qui revient sur une soirée trop arrosée.
+:::
+
+:::warning
+Les réseaux sociaux n’inventent ni les échanges entre proches ni l’expression amateur en ligne. Ils leur donnent une place centrale dans leur organisation. Cela ne supprime pas les inégalités de participation.
+:::
+
+:::warning
+Cette fonction relationnelle peut coexister avec une valeur informative, esthétique ou politique.
+:::
+
+---
+## Une question de format
+Make it cheap {.kicker}
+
+---notes
+
+Les formats proposés — message court, photographie, réaction — facilitent ces contributions. Pour participer, on n’a pas nécessairement besoin de rédiger un texte long destiné à un public anonyme.
+
+Ces deux éléments se renforcent : l’entourage donne une raison de publier ; les formats rendent cette publication plus facile. Ils peuvent donc favoriser la participation de personnes qui ne se reconnaissent pas dans les formes plus élaborées de publication.
+
+:::example
+Un tweet de 140 caractères, au lancement de Twitter, demande moins de rédaction qu’un article de blog de trois pages. Une photo prise au smartphone permet de publier sans rédiger. Un like permet même de réagir sans produire de contenu original.
+
+Une photo sur Insta.
+:::
+
+
+Mais ces paroles adressées à un entourage ne circulent pas toujours dans un espace séparé. Elles peuvent emprunter les mêmes dispositifs de publication que les informations journalistiques ou les déclarations institutionnelles.
+
+---
+## Nouveaux publics, nouvelles façons de parler
+t ou ? jss dvt le lycée ya personne 😭 {.kicker}
+
+--- notes
+
+À partir de ces seuils d’entrée plus faibles, davantage de personnes peuvent publier dans des situations qui n’appellent pas toutes la même parole. Ce changement ne tient pas seulement aux sujets abordés ni au fait d’écrire avec plus ou moins de soin : il dépend aussi de ce que chacun cherche à faire en parlant et des attentes de ses destinataires.
+
+Nous appellerons ici régimes de discours les conventions et les attentes qui organisent une situation de parole : à quel titre on parle, à qui, dans quel but, et selon quelles exigences de formulation et de justification.
+
+:::example
+Le SMS affiché sur la diapositive cherche à retrouver des amis devant le lycée. Ses destinataires connaissent déjà les personnes et le lieu ; les abréviations suffisent à coordonner une rencontre. Le message n’a pas à exposer des faits à des inconnus.
+
+Un journaliste qui explique une mesure publique à ses lecteurs doit, lui, préciser ce qui s’est passé, identifier ses sources et distinguer les faits des interprétations. Une institution qui annonce officiellement cette mesure parle au nom de l’organisme : sa parole engage une autorité et doit pouvoir être attribuée à celle-ci.
+:::
+
+:::warning
+Il ne s’agit pas de répartir les personnes en catégories fixes ou de classer leur capacité à « bien parler ». La même personne peut écrire un SMS à ses amis, enquêter comme journaliste ou communiquer au nom d’une institution. Le régime ne se réduit ni au niveau de langue, ni au thème, ni au statut social de l’auteur.
+:::
+
+Dans un fil commun, ces paroles peuvent apparaître côte à côte. Les fonctions de partage et de citation les font aussi passer d’un circuit à l’autre : une déclaration officielle peut ainsi être reprise pour commenter, avec humour, une anecdote familiale. C’est cet entremêlement des régimes de discours qu’illustre la publication suivante.
+
+---
+
+<FramedImage
+  src="/white-house-quoted-parenting-2025.png"
+  alt="Joe Bernstein cite une publication du compte officiel de la Maison-Blanche dans une anecdote sur ses enfants."
+/>
+
+--- notes
+
+En avril 2025, Joe Bernstein reprend une publication du compte officiel de la Maison-Blanche sur les droits de douane et l’applique, sur le ton de la plaisanterie, à une dispute entre ses deux enfants. Une parole institutionnelle entre ainsi dans une scène familiale, sous le même format de publication.
+
+La capture montre une publication citée, pas deux messages indépendants qui se suivent dans un fil. Elle illustre la rencontre de registres d’expression différents.
+
+[Sources]
+
+- [Joe Bernstein — publication sur X, 9 avril 2025](https://x.com/Bernstein/status/1910062391012073642)
+- [La Maison-Blanche — publication citée sur X, 9 avril 2025](https://x.com/WhiteHouse/status/1910058352278708638)
+- [BuzzFeed — capture publiée le 10 avril 2025](https://www.buzzfeed.com/mjs538/retaliation-tweet)
+
+[/Sources]
+
+---
+<FramedImage
+  src="/social-networks-entangling.png"
+  alt="L'entremêlement des régimes de discours sur les réseaux sociaux"
+/>
+---
+## Sphère publique et sphère privée
+
+--- notes
+
+Les exemples précédents montrent que des paroles issues de situations différentes peuvent circuler dans un même espace. Une anecdote familiale peut côtoyer une déclaration politique, voire la reprendre pour plaisanter.
+
+Mais cette proximité ne donne pas automatiquement le même statut à ces paroles. Pour comprendre ce qui se transforme, il faut préciser ce que nous entendons par « public » et « privé ».
+
+Une première distinction concerne la visibilité : qui peut accéder au propos ? Un message peut rester dans un groupe fermé ou être accessible à tous. Ses lecteurs effectifs peuvent aussi dépasser le cercle auquel son auteur pensait s’adresser.
+
+:::example
+Une personne publie une photographie de vacances pour donner des nouvelles à ses proches. Si son compte est ouvert, des inconnus peuvent également la consulter. Le contenu est accessible publiquement, même si l’auteur s’adresse d’abord à son entourage.
+:::
+
+Une autre distinction concerne la portée du propos : présente-t-il une expérience comme une affaire personnelle ou comme une question qui concerne une collectivité ?
+
+La photographie de vacances ne devient pas un problème d’intérêt collectif du seul fait que tout le monde peut la voir. Inversement, une discussion dans un groupe fermé peut porter sur une question collective, comme la fermeture d’un hôpital.
+
+Nous distinguerons donc l’accès public à un contenu et sa participation à la discussion des affaires communes. C’est à cette seconde dimension que renvoie ici la notion de sphère publique.
+
+La sphère publique désigne l’espace social dans lequel des personnes et des groupes mettent en discussion des questions présentées comme communes, confrontent leurs positions et cherchent à peser sur les décisions collectives.
+
+:::example
+La réforme des retraites, la fermeture d’un hôpital de campagne ou la pollution d’une rivière constituent des problèmes d’intérêt public.
+:::
+
+La sphère privée renvoie, quant à elle, aux domaines de la vie personnelle et des relations intimes dont les individus peuvent légitimement vouloir réserver l’accès.
+
+:::example
+Un dîner familial, une conversation entre amis ou une décision médicale personnelle relèvent de la sphère privée tant qu’ils n'ont pas été présentés comme des problèmes concernant un ensemble plus large de personnes.
+:::
+
+Mais une expérience vécue dans ce cadre peut aussi soulever une question collective.
+
+:::example
+Selon que votre maladie est due aux hasards de la vie ou à une pollution systémique de l’environnement, la question ne sera pas la même.
+:::
+
+La frontière entre affaire personnelle et problème collectif fait donc elle-même l’objet de discussions et de conflits. Des personnes peuvent rapprocher leurs expériences, identifier des causes communes et demander une réponse collective. Il ne s’agit pas seulement, alors, de rendre une expérience personnelle visible, mais de transformer la manière dont elle est comprise.
 
 :::example
 Les violences faites aux femmes ont longtemps été considérées comme une question privée ne concernant que les couples impliqués. On pense aujourd'hui qu'elles ne constituent pas une succession de faits divers individuels mais relèvent d'une violence systémique dont la mise en discussion publique résulte de mobilisations sociales et politiques.
 :::
 
-La publicité d'un fait ou d'une question ne dépend donc pas uniquement de sa visibilité. Kant a sans doute été l'un des premiers à conceptualiser rigoureusement ce problème : rendre une question publique ne consiste pas seulement à la rendre visible, mais aussi à la formuler de telle sorte à ce qu'elle puisse être soumise à la discussion - études scientifiques, arguments généralisables, etc. - et permettre la formation d’un jugement collectif.
+La publicité d’un fait ou d’une question ne se réduit donc pas à sa visibilité.
 
-:::example
-Dire « je n'aime pas la viande et je n'aime pas qu'on fasse du mal à des animaux » n'est pas la même chose que de démontrer les liens entre élevage animal et réchauffement climatique, financer des études sur les conditions d'abattage, quantifier le nombre d'animaux abattus chaque année, etc.
-:::
-
-La sphère publique n'a pas toujours occupée une fonction sociale structurante. Elle n'apparait en Occident, dans sa forme actuelle en tout cas, qu'au XVIIIe siècle.
+Une question reste alors ouverte : dans quels lieux et par quels moyens ces expériences et ces prises de parole deviennent-elles une discussion collective susceptible de peser sur le pouvoir ? C’est cette organisation de la sphère publique que nous allons examiner avec Habermas.
 
 ---
-# Jurgen Habermas
-	Habermas, J. (1998). *L'Espace public*. Paris: Payot.
+# Jürgen Habermas
+Habermas, J. (1993). *L’Espace public*. Payot. {.kicker}
 
 --- notes
 
@@ -97,7 +224,7 @@ Jürgen Habermas est un philosophe et sociologue allemand, membre de la deuxièm
 Dans *L’Espace public*, il a étudié la naissance historique de la sphère publique moderne : la manière dont, à partir du XVIIIe siècle, se développent en Europe des lieux, des pratiques et des médias — salons, cafés, sociétés de lecture et titres de presse — à partir desquels une opinion publique peut progressivement se former et exercer une pression ou un contrepoids sur les décisions de l’État.
 
 :::warning
-Habermas utilise la notion allemande d’*Öffentlichkeit* souvent traduit en français par _espace public_. Dans ce cours nous utiliserons indistinctement les termes d'espace public et de sphère publique.
+Habermas utilise la notion allemande d’*Öffentlichkeit*, souvent traduite en français par _espace public_. Dans ce cours, nous utiliserons indistinctement les termes d’espace public et de sphère publique.
 :::
 
 L'espace public bourgeois crée un monde commun de discussion. La presse, les cafés, les salons et les sociétés de lecture donnent à des individus qui ne se connaissent pas directement des objets d’attention partagés — décisions politiques, événements économiques, questions morales ou faits sociaux. En discutant publiquement de ces sujets, ils peuvent transformer des expériences et des intérêts particuliers en problèmes présentés comme concernant la collectivité.
@@ -109,17 +236,18 @@ Cette conception est cependant normative et historiquement située. L’accès �
 :::
 
 :::example
-Que répondez-vous aux français qui pensent que ...
-Les sondages montrent que les français veulent que ...
+« Que répondez-vous aux Français qui pensent que… ? »
+
+« Les sondages montrent que les Français veulent que… »
 :::
 
-Il faut bien comprendre ce que Habermas cherche à historiciser. Il ne s’agit pas de dater l’apparition des discussions collectives — les sociétés ont toujours débattu de leurs affaires communes — mais d’identifier le moment où ces discussions commencent à s’organiser durablement dans des lieux, des pratiques et des médias spécifiques à partir desquels ces dicussions peuvent occuper une fonction politique structurelle.
+Habermas étudie les conditions dans lesquelles les discussions collectives s’organisent durablement dans des lieux, des pratiques et des médias spécifiques. Elles acquièrent ainsi une fonction politique structurelle. Cela ne signifie pas que les sociétés antérieures ne discutaient pas de leurs affaires communes.
 
 La question devient alors celle des conditions qui permettent à des individus dispersés de se constituer en public, de partager des objets d’attention et de former une opinion collective.
 
-Or l'espace public bourgeois n'est pas né d'une simple idée : il s’est appuyé sur des espaces concrets - d'abord la presse, puis la radio, puis la télévision -, des pratiques - les salons, les rassemblements, les manifestations, etc. - et des dispositifs matériels qui déterminent ce qui peut circuler et auprès de qui.
+L’espace public bourgeois s’est appuyé sur la presse, les salons et les cafés. La radio puis la télévision transformeront plus tard les conditions de la discussion publique. À chaque période, des dispositifs matériels déterminent ce qui peut circuler et auprès de qui.
 
-Jusqu’à une période récente, une séparation matérielle et technique relativement nette existait existait entre les échanges privés — le domicile, les lettres, le téléphone — et les espaces publics médiatiques — la presse, la radio et la télévision.
+Jusqu’à une période récente, une séparation matérielle et technique relativement nette existait entre les échanges privés — le domicile, les lettres, le téléphone — et les espaces publics médiatiques — la presse, la radio et la télévision.
 
 Cette séparation n’était jamais absolue : les lettres pouvaient être publiées, les conversations rapportées et la presse révéler des informations privées. Mais les moyens techniques de diffusion limitaient fortement la circulation immédiate d’une conversation ou d’une expérience personnelle. Ce qui se passait dans la sphère privée y restait donc plus facilement contenu.
 
@@ -138,11 +266,17 @@ Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé
 --- notes
 
 
-L'axe horizontal concerne le « qui parle » : des professionnels - journalistes, éditorialistes, intellectuels, personnalités politiques, etc. - à gauche ou des amateurs comme vous et moi à droite.
+Pour préciser ce que le Web transforme, distinguons les personnes qui prennent la parole et les sujets qu’elles abordent.
 
-L'axe vertical concerne lui le contenu du discours. Non plus « qui parle » mais « de quoi ça parle » : de sujets d'intérêt public en haut - les déplacements d'Emmanuel Macron, les orientations politiques de la BCE, les dingueries de Poutine, etc. - ou de situations de la vie ordinaire en bas - le marché de Douarnenez, mes peines de coeur, votre avis sur le dernier romain que vous avez lu, etc.
+L’axe horizontal concerne le « qui parle » : à gauche, des professionnels de la parole publique, comme les journalistes ou les responsables politiques ; à droite, des amateurs qui interviennent hors de ce cadre professionnel.
 
-Ces axes ne définissent pas des catégories étanches : un propos peut se déplacer de l’un à l’autre selon le contexte, le dispositif et le degré de visibilité qui lui est accordé. Les exemples sont donc indicatifs ; ils servent avant tout à faire comprendre le fonctionnement des deux axes.
+L’axe vertical concerne le « de quoi parle-t-on » : en haut, des questions formulées comme collectives, comme une réforme ou une politique économique ; en bas, des expériences ordinaires, comme une journée au lycée, le marché de Douarnenez ou une peine de cœur.
+
+:::warning
+Cet axe ne mesure ni la valeur des propos ni leur accessibilité. Une expérience intime peut être visible par tous ; elle peut aussi être reformulée comme une question collective. L’exemple des violences faites aux femmes montre ce déplacement.
+
+Ces quadrants sont des repères pour comparer des situations de parole. Ils ne classent pas définitivement les personnes, les sujets ou les plateformes.
+:::
 
 Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes distincts de prise de parole, de circulation de l’information et de visibilité.
 
@@ -159,13 +293,13 @@ Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes
 
 En haut à gauche, nous trouvons la **sphère publique restreinte** : des professionnels — journalistes, éditorialistes, intellectuels ou responsables politiques — y discutent de sujets explicitement considérés comme relevant de l’intérêt public.
 
-:::examples
+:::example
 Les propositions de loi, la géopolitique, la politique économique, etc.
 :::
 
 Ce quadrant renvoie aux formes de publicité politique et médiatique qui se développent progressivement entre le XVIIe et le XVIIIe siècle, avec la naissance de la presse d’opinion et la multiplication des lieux de discussion politique.
 
-Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité y est limitée à un petit nombre d’acteurs autorisés et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
+Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité y est limité à un petit nombre d’acteurs autorisés et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
 
 ---
 <script>
@@ -176,12 +310,12 @@ Cette sphère est dite « restreinte » parce que l’accès à la parole et à 
 
 --- notes
 
-### L’élargissement de la sphère publique
+### La vie ordinaire médiatisée
 
-En bas à gauche, nous trouvons encore des professionels de la parole publique, mais qui discutent cette fois des situations et des expériences de la vie quotidienne. Il ne s’agit plus seulement de suivre l’activité des institutions et des personnalités politiques : la presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
+En bas à gauche, nous trouvons encore des professionnels de la parole publique, qui traitent cette fois des situations et des expériences de la vie quotidienne. La presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
 
 :::example
-Le journal télévisé de 13 heures, le micro-trottoir, le marronier de la neige à Noël ou le reportage sur un marché.
+Un reportage du journal de 13 heures sur un marché, un micro-trottoir sur les vacances ou le marronnier de la neige à Noël.
 :::
 
 Cet élargissement se produit surtout au XIXe siècle avec l’essor de la presse de masse et les progrès de l’alphabétisation. Pour conquérir un lectorat plus large, les journaux diversifient leurs sujets et cherchent à intéresser des lecteurs dont les vies sont parfois très éloignées les unes des autres.
@@ -204,25 +338,23 @@ Leur fonctionnement repose en grande partie sur des **gatekeepers**, ou « porti
 
 Ils contribuent ainsi à façonner l’**agenda public**, c’est-à-dire l’ensemble des sujets dont une société parle à un moment donné.
 
-### Quand visibilité et intérêt public tendent à coïncider
+### Sélectionner ce qui mérite l’attention collective
 
-Ces gatekeepers articulent, traditionnellement, deux acceptions différente de la notion de publicité.
+Ces gatekeepers articulent deux acceptions différentes de la notion de publicité.
 
 Dans un premier sens, rendre une information publique signifie la rendre visible et accessible au plus grand nombre ; dans un second sens, cela signifie la présenter comme une question qui concerne la collectivité et qui mérite, à ce titre, d’être discutée publiquement.
 
 Ces deux dimensions peuvent coïncider, mais elles ne se confondent pas nécessairement. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
 
-Dans les médias traditionnels, ces deux acceptions de la notion de publicité tendent à se confondre. Les *gatekeepers* ne se contentent pas de rendre des informations visibles : ils sélectionnent celles qu’ils jugent suffisamment importantes pour être publiées.
+Dans les médias traditionnels, les gatekeepers disposent d’un pouvoir important pour rapprocher ces deux dimensions : ils sélectionnent les informations qu’ils jugent dignes d’être publiées. Cette sélection propose une définition de ce qui mérite l’attention collective.
 
-La fonction des gatekeepers est ainsi d'assurer, avec plus ou moins de succès, la coincidence ou l'équivalence entre les deux acceptions de la notion de publicité. Faire en sorte que soit rendu visible ce qui relève de l'intérêt public. Et à l'inverse, laisser dans l'obscurité ce qu'ils considèrent ne pas l'être. La tâche, d'ailleurs, n'était pas toujours simple.
+Il s’agit d’une fonction revendiquée et disputée, sans garantie d’équivalence entre visibilité et intérêt public. Les choix éditoriaux dépendent aussi des positions sociales, des orientations politiques et des contraintes commerciales. La frontière entre ce qui doit être montré et ce qui doit rester privé peut elle-même faire débat.
 
 :::example
 Le cas de Mazarine Pingeot pose une question délicate : fallait-il rendre publique l’existence de la fille cachée du président François Mitterrand ? Cette information relevait de sa vie privée, mais elle pouvait aussi être considérée comme un enjeu public dans la mesure où ce secret était susceptible d’être utilisé politiquement contre le président ou d’interroger les intérêts de l’État.
 :::
 
-La coincidence entre publicité comme visibilité et publicité comme intérêt ne fonctionnait que parce que les gatekeeper détenait une sorte de monopole sur les conditions d'accès à la visibilité. Or le web et le RSN ont ébranlé ce monopole.
-
- Le Web et les réseaux sociaux mettent ainsi à mal l’équivalence entre visibilité et intérêt public qui structurait largement les médias traditionnels.
+Le Web et les RSN ébranlent ce contrôle de l’accès à la publication. Des personnes peuvent désormais publier sans obtenir au préalable la sélection d’une rédaction. La définition de ce qui mérite d’être rendu visible devient elle aussi plus ouvertement contestable.
 
 Ils transforment l’espace public selon au moins deux dimensions : ils multiplient le nombre de personnes capables de prendre la parole publiquement et ils transforment la matière, les formats et les régimes de visibilité de cette parole.
 
@@ -237,7 +369,7 @@ Ils transforment l’espace public selon au moins deux dimensions : ils multipli
 
 ### Le web participatif
 
-Le cadran situé en haut à droite de notre schéma rassemble les individus « ordinaires » - *i.e.* n’appartenant pas au petit monde des gatekeepers - s’exprimant publiquement sur des thèmes explicitement présentés comme relevant de l’intérêt intérêt commun : politique, économie, écologie, etc.
+Le quadrant situé en haut à droite rassemble des individus intervenant hors du cadre professionnel des médias sur des thèmes explicitement présentés comme relevant de l’intérêt commun : politique, économie, écologie, etc.
 
 Cette forme d’expression s’est démocratisée à partir du début des années 2000, principalement avec la naissance des plateformes de blogging, puis de vlogging, mais aussi avec l’émergence - somme toute très relative - du journalisme participatif.
 
@@ -251,17 +383,19 @@ Ce sont, aujourd'hui, certains influenceurs politiques sur les réseaux sociaux.
 Greta Thunberg
 :::
 
-Ce régime d’expression a su profiter des opportunités offertes par l’abaissement drastique des coûts de publication et de diffusion offert par le web pour contourner le filtre politique qu’imposaient jusqu’ici les *gatekeepers.*
+La baisse des coûts de publication et de diffusion sur le Web permet à ces acteurs de contourner le filtre politique et éditorial des gatekeepers.
 
 La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
 
-L’espace public traditionnel a en effet ceci de particulier qu’il est, pour l’essentiel, dominé par une classe sociale relativement homogène. La plupart des journalistes, éditorialistes, experts, etc. ont des parcours sociaux et professionnels analogues. Ils partagent une même lecture du réel, parlent le même langage, sont préoccupés par les mêmes questions et tendent à défendre des intérêts particuliers.
+L’accès aux positions de journaliste, d’éditorialiste ou d’expert est socialement sélectif. Des parcours et des milieux proches peuvent favoriser des préoccupations et des codes communs, tout en laissant certaines expériences à l’écart. Cela n’implique pas que tous ces acteurs défendent les mêmes opinions.
 
-Le web, en abaissant les couts de publicisation et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans avoir à passer par le filtre des _gatekeepers_, pour le meilleur comme pour le pire (c.f. Soral, la sphère masculiniste, etc).
+Le Web, en abaissant les coûts de publication et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans passer par le filtre des gatekeepers. Cette ouverture ne garantit pas une orientation émancipatrice : Soral ou la sphère masculiniste en bénéficient également.
 
-Cela a pu mener à la naissance de ce que le philosophe allemand Oskar Negt appelle des espaces publics oppositionnels : un espace public alternatif où les groupes sociaux marginalisés ou dominés peuvent exprimer leurs expériences et intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
+Cette ouverture peut aussi soutenir ce qu’Oskar Negt appelle des espaces publics oppositionnels : des espaces où les groupes sociaux marginalisés ou dominés expriment leurs expériences et leurs intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
 
-Ce concept s’oppose à la vision consensuelle de l’espace public proposée par Jürgen Habermas, qui se concentre principalement sur la sphère publique bourgeoise et tend à ignorer les dynamiques conflictuelles inhérentes aux sociétés modernes.
+Cette perspective déplace l’attention vers les conflits et les expériences exclues de l’espace public dominant. Elle met en discussion la capacité de celui-ci à représenter un intérêt véritablement commun.
+
+L’ouverture ne concerne cependant pas seulement les interventions explicitement politiques. Elle donne aussi une visibilité nouvelle aux échanges de la vie ordinaire.
 
 ---
 <script>
@@ -274,41 +408,37 @@ Ce concept s’oppose à la vision consensuelle de l’espace public proposée p
 
 ### Web en clair-obscur
 
-Ce dernier quadrant est sans doute le plus significatif - à la fois par son extension, mais aussi par la manière dont il brouille les frontières autrefois établies entre sphère publique et sphère privée.
+Ce dernier quadrant permet de comprendre comment les RSN brouillent les frontières entre sphère publique et sphère privée.
 
-Il s’agit d’hommes et de femmes ordinaires qui parlent de choses ordinaires - parfois même très intimes - à d’autres hommes et femmes ordinaires, mais qui le font publiquement.
+Il s’agit de personnes qui parlent de choses ordinaires, parfois très intimes, à d’autres personnes, dans des espaces dont la visibilité peut dépasser le cercle auquel elles pensent s’adresser.
 
-Cette catégorie de prise de parole s’est surtout développée avec les réseaux sociaux numériques, qui ont rendu publiques et partageables des dimensions autrefois confinées aux échanges interpersonnels : les conversations, les relations sociales, les goûts, les passions et les choix individuels.
+Les RSN ont donné une extension nouvelle à cette prise de parole. Les conversations, les relations sociales, les goûts et les choix individuels deviennent plus facilement consultables et partageables. Leur accessibilité varie toutefois selon les services et les réglages.
 
-### Les contenus conversationnels
+Ces publications font l’objet de critiques récurrentes : pourquoi exposer sa vie, donner son avis sans compétence reconnue ou mêler l’intime à des questions politiques ? Parler de ses règles pour critiquer le patriarcat ou se filmer dans sa cuisine pour discuter la malbouffe peut ainsi être disqualifié comme un mélange des genres.
 
-L’essentiel des contenus partagés sur ces réseaux ne constitue pas, en effet, du contenu informationnel - *i.e.* du contenu présentant un intérêt intrinsèque - mais du **contenu conversationnel**.
+Mais pour apprécier la portée de ces échanges, il faut comprendre leur fonction. Quel rôle les conversations ordinaires jouent-elles dans la formation des opinions ?
 
-Ces contenus conversationnels ne constituent pas des contenus auto-référents, supposés trouver en eux-mêmes leur propre valeur, mais des contenus n’ayant d’autre fonction que de nourrir un processus de socialisation. Cette particularité est d'ailleurs inscrite dans l'architecture même des plateformes.
+---
+<!-- slide: id="conversations-et-opinion" title="Conversations et formation de l’opinion" steps=0 -->
+## Conversations et formation de l’opinion
 
-:::example
-**Snapchat.** Dans le dispositif initial de Snapchat, la photographie est conçue pour disparaître rapidement : elle n’a pas vocation à devenir une œuvre durable ou à laisser une trace autonome, mais à entretenir une relation et à participer à une interaction sociale.
+--- notes
 
-**Facebook et Instagram.** Le partage d’une photographie ou d’une vidéo vise souvent moins à produire un contenu autonome qu’à susciter des réactions — commentaires, mentions « j’aime » ou partages. Ces réactions sont ensuite prises en compte par les dispositifs de classement algorithmique, qui contribuent à déterminer la visibilité du contenu.
-:::
-
-C’est aussi à cette catégorie là de parole qu’est adressée le plus de critiques par de nombreux intellectuels et éditorialistes : qui sont donc tous ces gens qui donnent leur avis sur tout, tout le temps, sans n’être compétent en rien ; et n’ont-ils rien de mieux à faire qu’à étaler publiquement leur vie, leur intimité, leur quotidien, souvent en l’entremêlant de manière confuse avec des thématiques que l’on pourrait juger plus importantes : parler de ses règles pour critiquer le patriarcat, se mettre en scène dans sa cuisine pour critique la mal-bouffe, etc.
-
-Il importe pourtant de ne pas réduire la formation de l’opinion à la réception des médias. Les conversations ordinaires jouent depuis longtemps un rôle essentiel dans la sociabilité, mais aussi dans la manière dont les individus interprètent, discutent et adoptent — ou rejettent — les informations qui circulent publiquement.
+Les conversations ordinaires jouent depuis longtemps un rôle dans la manière dont les individus interprètent, discutent et adoptent ou rejettent les informations qui circulent publiquement. La réception des médias ne suffit donc pas à expliquer la formation des opinions.
 
 ### L’opinion et la foule
 
 Dans *L’Opinion et la foule* (1901), Gabriel Tarde permet de penser cette formation de l’opinion à partir de deux mouvements complémentaires.
 
-Le premier est **vertical** : les médias font circuler des informations, des récits et des thèmes vers un public dispersé. En lisant un journal, en regardant la télévision ou en écoutant un podcast, chacun prend connaissance d’événements et de problèmes qui deviennent alors susceptibles d’être partagés avec d’autres.
+Le premier est **vertical** : la presse fait circuler des informations, des récits et des thèmes vers un public dispersé. En lisant un journal, chacun prend connaissance d’événements et de problèmes qui deviennent susceptibles d’être discutés avec d’autres. On peut prolonger aujourd’hui cette analyse à la télévision ou aux podcasts.
 
 Le second est **horizontal** : ces informations sont reprises, discutées et réinterprétées dans les échanges ordinaires — en famille, entre amis, avec des collègues ou dans les conversations de café. Une actualité générale y est rapportée à des expériences concrètes : une crise économique devient la perte d’un emploi, une hausse du prix du pétrole devient une difficulté pour un agriculteur, et une controverse médiatique est confrontée aux opinions de l’entourage.
 
-L’opinion ne se forme donc pas seulement au moment où les individus lisent ou écoutent les médias. Elle se construit aussi, et souvent surtout, dans ces conversations qui donnent un sens situé à l’actualité, la rendent discutable et permettent de l’adopter, de la transformer ou de la contester.
+Ces conversations donnent un sens situé à l’actualité. Elles permettent de l’adopter, de la transformer ou de la contester en la confrontant aux expériences et aux opinions de l’entourage.
 
 ### Le two-step flow of communication
 
-Les analyses de Tarde trouvent un écho, plusieurs décennies plus tard, dans les recherches consacrées à l’essor des médias de masse. Dans les années 1940, la presse et la radio touchent un public de plus en plus large, avant la généralisation de la télévision, qui prolongera ensuite ce système de médias de masse. Les chercheurs s’interrogent alors sur la manière dont ces médias influencent réellement les opinions et les comportements : leurs messages atteignent-ils directement les individus, ou passent-ils par les relations sociales ordinaires ?
+Les analyses de Tarde trouvent un écho dans les recherches sur les médias de masse. Dans les années 1940, les chercheurs interrogent l’influence de la presse et de la radio : leurs messages agissent-ils directement sur les individus, ou leur influence passe-t-elle par les relations sociales ordinaires ?
 
 Une première réponse est formulée par Paul Lazarsfeld, Bernard Berelson et Hazel Gaudet dans *The People’s Choice* (1944), à partir d’une enquête sur l’élection présidentielle américaine de 1940. Elihu Katz et Paul Lazarsfeld prolongent ensuite cette recherche dans *Personal Influence* (1955), où ils formalisent le modèle du **two-step flow of communication**, ou « flux de communication en deux étapes ».
 
@@ -316,7 +446,19 @@ Selon ce modèle, l’influence des médias ne se déploie pas simplement du mé
 
 Les leaders d’opinion ne jouent donc pas le rôle de simples relais : ils sélectionnent, interprètent et mettent en contexte les informations reçues. Le modèle montre ainsi que l’influence des médias est inséparable de la communication interpersonnelle, qui peut parfois peser davantage sur les opinions et les comportements que l’exposition directe aux médias.
 
-L’appropriation interpersonnelle de l’actualité est donc un phénomène ancien. Ce qui change avec les réseaux sociaux numériques, c’est que les conversations qui se déroulaient autrefois dans l’intimité du face-à-face peuvent désormais avoir lieu publiquement.
+:::warning
+Le two-step flow est un modèle de l’influence interpersonnelle. Il ne signifie pas que chaque message traverse toujours exactement deux étapes, ni que les individus n’accèdent jamais directement aux médias.
+:::
+
+La conversation participait donc déjà à la formation des opinions avant les RSN. Il reste à comprendre ce que change sa mise en visibilité sur les plateformes.
+
+---
+<!-- slide: id="conversations-visibles" title="Des conversations rendues visibles" steps=0 -->
+## Des conversations rendues visibles
+
+--- notes
+
+Avec les RSN, des échanges auparavant limités au face-à-face peuvent devenir accessibles au-delà de leurs participants. La nouveauté concerne notamment les conditions de visibilité et de circulation de ces conversations.
 
 La conversation ordinaire, qui s’évanouissait autrefois dans le bavardage du café ou dans l’échange familial, laisse désormais des traces : elle peut être enregistrée, commentée, partagée et circuler au-delà du cercle dans lequel elle a pris naissance.
 
@@ -324,56 +466,60 @@ Nous avons toujours discuté des décisions des politiques, des idées des philo
 
 Ce n’est plus nécessairement le cas : la clameur des conversations ordinaires peut désormais parvenir directement aux responsables politiques, aux experts et aux médias. Elle peut même recouvrir les voix autorisées qui parlaient jusque-là depuis une tribune relativement inaccessible.
 
-Le point important est donc qu’il n’existe plus de séparation formelle et stable entre l’espace de diffusion de l’information et les dynamiques conversationnelles. Les mêmes plateformes permettent à la fois de recevoir une actualité, de la commenter, de la transformer et de la rendre visible à d’autres publics.
+L’espace de diffusion de l’information et les dynamiques conversationnelles se recoupent désormais sur les mêmes plateformes. On peut y recevoir une actualité, la commenter, la transformer et la rendre visible à d’autres publics.
 
-Cette ouverture dissocie la visibilité d'un contenu de son importance ou de son intérêt. Le fait qu’une information soit accessible au plus grand nombre ne signifie pas qu’elle présente un intérêt pour la discussion collective ou qu’elle concerne effectivement la collectivité.
+Cette ouverture rend plus manifeste la distinction entre visibilité et intérêt collectif. Un propos peut être accessible à beaucoup de monde tout en ayant principalement du sens pour quelques personnes. Inversement, le partage d’expériences personnelles peut contribuer à faire reconnaître un problème commun.
 
-Il est important d’insister sur cette nouveauté fondamentale : il existe, sur Internet, énormément d’informations publiques et accessibles (au sens de la première définition de l’espace public) qui n’ont aucune importance pour la discussion collective de l’intérêt général (au sens de la seconde définition).
+Ces prises de parole peuvent aussi contester l’autorité de ceux qui définissaient les sujets et les formes légitimes du débat. Leur disqualification comme « bavardage » engage donc également un conflit sur les personnes autorisées à parler et les manières recevables de le faire.
 
-C’est cette dissociation entre visibilité et importance qui horrifie le plus souvent les intellectuels autorisés qui y voient une contestation infondée de leur autorité.
-
-Car de fait, les conversations ordinaires sont rarement consacrées à des sujets d’intérêt général et, quand elles le sont, elles ne volent pas nécessairement haut : commentaires, anecdotes, insultes, plaisanteries, etc. Ce fait n'est pas nouveau. Ce qu'il l'est est que ces conversations ont dorénavant lieu sous le regard de tous.
+Les commentaires, anecdotes, insultes et plaisanteries existaient déjà dans les échanges ordinaires. Ils peuvent maintenant être observés hors de la situation qui leur donnait leur sens.
 
 Or ce basculement de la visibilité produit aussi une rupture de contexte. Nous jugeons souvent plus sévèrement les conversations des autres, que nous découvrons de l’extérieur, que les nôtres, dont nous comprenons les références, les intentions et le contexte. Ce qui nous paraît insignifiant ou outrancier chez autrui peut ainsi prendre un sens évident pour ceux qui participent à l’échange.
 
-Est-ce que tout cela signifie pour autant que la visibilité est maintenant distribuée de façon égalitaire et que chacun a un accès analogue à l'espace public ?
-
-Absolument pas. Il n'existe en fait rien de moins plat qu'un réseau.
+Pouvoir publier et pouvoir être entendu restent toutefois deux choses différentes. Comment l’attention se répartit-elle entre toutes ces publications ?
 
 ---
+## La loi de puissance
+Concentration · visibilité · longue traîne {.kicker}
 
+--- notes
+
+L’ouverture de la publication ne garantit pas une audience. La courbe suivante permet de représenter une situation dans laquelle une minorité de contenus concentre une grande partie de l’attention.
+
+---
 <!-- slide: id="power-law" title="Loi de puissance" steps=1 layout="center" -->
+
 <script>
   import PowerLaw from '$components/PowerLaw.svelte'
 </script>
-
-<p class="kicker">Concentration · visibilité · longue traîne</p>
-
-# La loi de puissance
 
 <PowerLaw concentration="low" concentrateAtStep={1} animateConcentration={true} />
 
 --- notes
 
-La visibilité sur le Web constitue un exemple particulièrement parlant de distribution en loi de puissance : quelques contenus ou quelques comptes concentrent une très grande part de l’attention, tandis qu’une immense quantité de contenus reste peu vue.
+La visibilité sur le Web est très inégalement distribuée : quelques contenus ou quelques comptes peuvent concentrer une grande part de l’attention, tandis qu’une multitude de publications reste peu vue. La courbe illustre une forme possible de cette concentration.
 
-Une loi de puissance est une relation mathématique dans laquelle une grandeur varie comme une puissance négative d’une autre : **y = C × x⁻ᵅ**. Elle se reconnaît à une forte concentration des valeurs élevées et à une longue traîne de valeurs faibles.
+Dans une relation décroissante en loi de puissance, une grandeur varie comme une puissance négative d’une autre : **y = C × x⁻ᵅ**, avec C et α positifs. Ici, on classe les objets ou les comptes du plus visible au moins visible. La courbe met en évidence une concentration en tête et une longue traîne de faibles audiences.
 
-Imaginez que la courbe affichée ici présente de manière grossière la distribution des vue sur l'ensemble des contenus publiés sur Instagram. Les contenus sur la gauche affichent beaucoup de vues. Les contenus sur la droite n'en affiche aucune.
+:::example
+Imaginons que les objets soient des publications sur Instagram. À gauche se trouvent les publications les plus vues ; à droite, celles qui reçoivent peu de vues. Le graphique est une illustration pédagogique, pas un relevé des audiences d’Instagram.
+:::
 
-Le propre d'une loi de puissance est qu'elle ne se concentre pas autour d’une valeur typique comme une loi normale mais qu'elle accorde davantage de poids aux valeurs extrêmes : elle traduit ainsi une distribution très inégalitaire - et nous verrons bientôt pourquoi.
+:::comment
+Avancer d’une étape pour accentuer la concentration et faire apparaître le repère 80/20. Cette animation compare deux degrés de concentration ; elle ne représente pas une évolution mesurée dans le temps.
+:::
 
-On retrouve des distributions de ce type dans des domaines très différents : en économie, avec la distribution des revenus et des patrimoines étudiée par Vilfredo Pareto ; en linguistique, avec la fréquence des mots ; dans les réseaux, avec la répartition du nombre de connexions entre les nœuds ; dans la recherche, avec la concentration des citations ; ou encore dans l’urbanisme, avec la taille des villes. Sur le Web, les audiences, les abonnements, les liens entrants et les vues suivent souvent des distributions très inégalitaires de ce type.
+Des modèles de ce type sont mobilisés pour étudier la concentration des patrimoines, la fréquence des mots, les connexions dans certains réseaux, les citations scientifiques ou la taille des villes. Leur pertinence et leur domaine de validité doivent être vérifiés dans chaque cas.
 
-On parle parfois de **loi des 80/20** ou de **principe de Pareto** pour désigner une forme particulière de cette concentration : environ 20 % des causes ou des objets produiraient environ 80 % des effets ou des résultats. L’expression renvoie à l’observation faite par Pareto, à la fin du XIXe siècle, selon laquelle une part réduite de la population italienne possédait une grande partie des terres. Le rapport 80/20 est toutefois un repère approximatif, et non la définition mathématique d’une loi de puissance : toutes les distributions de ce type ne suivent pas exactement cette proportion.
+Le **principe de Pareto**, souvent résumé par le rapport 80/20, donne un repère intuitif : une minorité d’objets concentre une majorité des effets. Sur ce graphique, les 20 % et 80 % sont des indications illustratives. Ce rapport n’est ni une proportion universelle ni la définition d’une loi de puissance.
 
-En réalité, plus les phénomènes étudiés concernent de larges ensembles, plus la distribution est inégalitaire. Sur le web, la visibilité s'approche ainsi plus d'une loi des 90 / 10 que d'une loi des 80 / 20.
+:::warning
+Une distribution très inégalitaire ne suffit pas à établir qu’elle suit une loi de puissance. De même, constater cette concentration n’en explique pas les causes.
+:::
 
-Il n'est donc pas vrai que, sur les RSN, tout le monde aurait accès égal à la visibilité - ou qu'il n'y aurait plus de gatekeeper.
+La possibilité de publier n’implique donc pas une égalité de visibilité. Reste à comprendre les opérations qui sélectionnent et font circuler les contenus après leur publication.
 
-La différence tient à ce que les modalités de distribution de cette visibilité sont très différentes de ce qu'elles étaients dans l'espace public traditionnel.
-
-Là où les contenus étaient filtrés avant même d'obtenir de la visibilité, aujourd'hui tout peut être publié, et la visbilité leur est octroyé a posteriori.
+Ce déplacement de la sélection est résumé par la formule « publish, then filter ».
 
 ---
 ### Publish, then filter
@@ -384,21 +530,27 @@ Clay Shirky décrit ce renversement par la formule **« publish, then filter »*
 
 Dans l’espace public traditionnel, le fonctionnement était plutôt celui du **filter, then publish** : avant qu’une information ou une parole puisse atteindre un large public, elle devait être sélectionnée, éditée et validée par un journal, une chaîne de radio ou de télévision, ou encore par une institution reconnue.
 
-Le Web inverse l’ordre de ces opérations. La baisse des coûts de publication permet à un très grand nombre d’acteurs de mettre en ligne des textes, des images et des vidéos sans obtenir au préalable l’autorisation d’un gatekeeper.
+Le Web permet à un très grand nombre d’acteurs de mettre en ligne des textes, des images et des vidéos sans obtenir au préalable la sélection d’une rédaction. Le coût de publication diminue, mais être publié ne signifie pas encore atteindre une large audience.
 
-La dynamique de distribution de la visibilité est ainsi inversée : dans l’espace public traditionnel, un petit nombre de gatekeepers déterminait d’abord ce qui pouvait atteindre le public ; sur le Web, un très grand nombre d’acteurs peut d’abord publier, avant que la visibilité ne se concentre à nouveau sur un nombre réduit de contenus et de comptes. 
+La sélection éditoriale en amont donnait accès à l’audience d’un média. Sur le Web, la mise en ligne peut précéder les opérations qui feront émerger une publication parmi beaucoup d’autres.
 
-Le filtrage intervient toujours, mais _a posteriori_ au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des systèmes de classement algorithmique. La plupart des contenus restent peu vus, mais ils peuvent théoriquement être publiés avant d’être sélectionnés par ces mécanismes de circulation et de visibilité.
+Le filtrage de l’attention intervient alors _a posteriori_ au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des classements algorithmiques. Les utilisateurs contribuent à la circulation ; les plateformes organisent les occasions de voir les contenus.
 
+:::warning
+La formule décrit un déplacement de la sélection de l’attention. Elle ne signifie pas que toute publication est autorisée : les règles des services, la modération et les restrictions d’accès continuent d’intervenir, parfois avant la mise en ligne.
+:::
 
-Example : Grumpy Cat. Charlie Bit my Finger
+:::example
+Grumpy Cat ou *Charlie Bit My Finger* permettent d’évoquer des contenus ordinaires ayant atteint une audience très large. Une publication peut ainsi circuler au-delà du public auquel elle était initialement destinée.
+:::
 
-Example aussi photo de Londres. La frontière entre les limites du quadrant est poreuse.
+:::comment
+Repère à compléter : « photo de Londres ». Identifier le cas et sa source avant de l’utiliser pour montrer un déplacement entre les quadrants de la matrice.
+:::
 
+Ces succès ne donnent cependant pas une image représentative de toutes les publications : beaucoup ne réunissent qu’une faible audience.
 
-Ces cas, néanmoins, restent exceptionnels. L'essentiel des contenus publiés sur les RSN n'aggrège que très peu de vue.
-
-L’inégalité de visibilité n’a donc pas disparu : elle se recompose autour de nouveaux gatekeepers. Aux journalistes et aux rédacteurs en chef s’ajoutent désormais les plateformes, les algorithmes, les métriques d’engagement, les réseaux d’abonnés et les influenceurs. Ces nouveaux intermédiaires ne sélectionnent pas nécessairement les contenus selon leur intérêt public ; ils privilégient souvent la popularité, la vitesse de circulation, la réactivité ou la capacité à retenir l’attention.
+L’inégalité de visibilité se recompose autour de nouveaux intermédiaires et mécanismes. Les plateformes et les comptes influents peuvent jouer un rôle de gatekeepers ; les classements et les métriques d’engagement sont des moyens de sélection. L’intérêt collectif n’est pas leur seul critère : la popularité ou la capacité à retenir l’attention peuvent aussi orienter la visibilité.
 
 Le chapitre suivant examinera la première condition de cette inégalité : la
 structure des réseaux eux-mêmes. Avant le classement algorithmique, les chemins,
@@ -412,16 +564,17 @@ de circulation.
 | Question | Réponse à retenir |
 |---|---|
 | Qu’est-ce qu’un RSN ? | Un service qui rend visibles des profils et les relations qui les relient. |
+| Pourquoi les façons de parler changent-elles ? | Une publication plus accessible attire des publics aux sujets et aux codes différents. |
 | Public signifie-t-il seulement visible ? | Non : une question publique est aussi formulée comme une affaire commune. |
-| Que transforme le Web participatif ? | Il abaisse les seuils de publication et rend publiques des conversations ordinaires. |
+| Que deviennent les conversations ordinaires ? | Elles laissent des traces et peuvent circuler au-delà de leurs destinataires. |
 | La publication égalise-t-elle l’attention ? | Non : la visibilité reste très concentrée. |
 | Que signifie « publish, then filter » ? | Le filtrage intervient après la mise en ligne, par la circulation et le classement. |
 
 --- notes
 
-Cette synthèse relie les trois déplacements du chapitre : la mise en visibilité
-des relations, la porosité du public et du privé, puis le déplacement du filtrage
-de l’autorisation de publier vers l’organisation de l’attention.
+Cette synthèse reprend le parcours du chapitre. L’organisation autour des profils et des relations, associée à des formats accessibles, facilite l’entrée de nouveaux publics dans la publication. Leurs sujets et leurs codes diversifient les régimes d’expression.
+
+La circulation de ces paroles rend plus poreuses les frontières entre conversation personnelle et discussion collective. Elle déplace aussi une partie du filtrage vers l’organisation de l’attention, sans égaliser la visibilité.
 
 ---
 <!-- slide: id="social-network-publication-bibliographie" title="Bibliographie" steps=0 -->

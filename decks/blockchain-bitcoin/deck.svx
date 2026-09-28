@@ -272,6 +272,22 @@ Ces effets ne sont ni immédiats ni automatiques. Des taux faibles ne suffisent 
 
 --- notes
 
+Pour lire ce graphique, il faut d’abord préciser ce que l’on compte comme monnaie. Les **agrégats monétaires** distinguent plusieurs périmètres selon la facilité avec laquelle les sommes peuvent être utilisées pour payer.
+
+La **base monétaire, souvent appelée M0**, regroupe les espèces en circulation et les réserves des banques auprès de la banque centrale. Elle comprend donc aussi de la monnaie inscrite sur des comptes.
+
+**M1** regroupe les espèces détenues par le public et les dépôts à vue, comme les comptes courants. C’est la monnaie immédiatement disponible pour payer. Notre exemple des 100 000 €, puis des 110 000 €, correspond à ce périmètre.
+
+**M2** comprend M1 et certains dépôts d’épargne : les dépôts à terme jusqu’à deux ans et les dépôts remboursables avec un préavis jusqu’à trois mois. On ne paie pas son café avec un compte à terme, mais cet argent pourra redevenir disponible.
+
+**M3** comprend M2 et certains placements proches de la monnaie : les parts de fonds monétaires, les pensions livrées et les titres de dette jusqu’à deux ans émis par les institutions financières monétaires.
+
+:::warning
+Dans la zone euro, M1 est inclus dans M2, lui-même inclus dans M3. On élargit progressivement le périmètre : **on n’additionne pas ces trois montants**. Les réserves bancaires de M0, en revanche, ne sont pas incluses dans M1.
+
+Ces définitions sont celles de la zone euro. Les catégories mondiales « narrow money » et « broad money » du graphique donnent des ordres de grandeur, sans reprendre exactement un agrégat européen unique.
+:::
+
 Pour observer l’augmentation de la quantité de dollars disponibles, nous utilisons **M2**. Cet agrégat comprend les espèces et les dépôts immédiatement utilisables, auxquels s’ajoutent les petits dépôts à terme et les fonds monétaires de détail. Il correspond mieux à la monnaie mobilisable dans l’économie que le seul nombre de billets.
 
 M1 serait moins lisible sur cette période : sa définition change en mai 2020, lorsque les comptes d’épargne américains deviennent des comptes de transaction. Cette rupture augmente brutalement M1 d’environ 11 200 milliards de dollars, mais elle ne modifie pas M2.
@@ -348,23 +364,7 @@ Faire défiler le visuel dans l’iframe. Commencer par les espèces et les agr�
 Chaque carré représente 100 milliards de dollars. Les chiffres sont historiques et les sources ne portent pas toutes sur la même année. Utiliser le graphique pour comparer les grandeurs, pas comme une photographie actuelle.
 :::
 
-Pour lire ce graphique, il faut d’abord préciser ce que l’on compte comme monnaie. Les **agrégats monétaires** distinguent plusieurs périmètres selon la facilité avec laquelle les sommes peuvent être utilisées pour payer.
-
-La **base monétaire, souvent appelée M0**, regroupe les espèces en circulation et les réserves des banques auprès de la banque centrale. Elle comprend donc aussi de la monnaie inscrite sur des comptes.
-
-**M1** regroupe les espèces détenues par le public et les dépôts à vue, comme les comptes courants. C’est la monnaie immédiatement disponible pour payer. Notre exemple des 100 000 €, puis des 110 000 €, correspond à ce périmètre.
-
-**M2** comprend M1 et certains dépôts d’épargne : les dépôts à terme jusqu’à deux ans et les dépôts remboursables avec un préavis jusqu’à trois mois. On ne paie pas son café avec un compte à terme, mais cet argent pourra redevenir disponible.
-
-**M3** comprend M2 et certains placements proches de la monnaie : les parts de fonds monétaires, les pensions livrées et les titres de dette jusqu’à deux ans émis par les institutions financières monétaires.
-
-:::warning
-Dans la zone euro, M1 est inclus dans M2, lui-même inclus dans M3. On élargit progressivement le périmètre : **on n’additionne pas ces trois montants**. Les réserves bancaires de M0, en revanche, ne sont pas incluses dans M1.
-
-Ces définitions sont celles de la zone euro. Les catégories mondiales « narrow money » et « broad money » du graphique donnent des ordres de grandeur, sans reprendre exactement un agrégat européen unique.
-:::
-
-Le graphique présente ensuite d’autres grandeurs : la valeur des actions, le montant des dettes ou encore la valeur de l’immobilier. **Il s’agit de biens, de titres et d’engagements évalués en monnaie, pas d’autant de monnaie disponible sur des comptes.**
+Ce graphique représente les différences de proportion entre la masse monétaire et d'autres classes d'actif : la valeur des actions, le montant des dettes ou encore la valeur de l’immobilier. **Il s’agit de biens, de titres et d’engagements évalués en monnaie, pas d’autant de monnaie disponible sur des comptes.**
 
 :::example
 L’infographie de 2020 estime la monnaie au sens large à environ **96 000 milliards de dollars**, contre environ **253 000 milliards pour les dettes mondiales**. La dette mesure ici des sommes dues, pas une réserve d’argent déjà mise de côté pour les rembourser.
