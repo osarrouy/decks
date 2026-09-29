@@ -70,7 +70,11 @@ Des contenus conversationnels {.kicker}
 
 --- notes
 
-Cette organisation par les profils et les relations ne change pas seulement la manière de découvrir des contenus. Elle change aussi les raisons de publier : on peut prendre la parole parce qu’on dispose déjà d’un entourage auquel s’adresser.
+Cette organisation par les profils et les relations ne change pas seulement la manière de découvrir des contenus. Elle change aussi les raisons de publier et les motivations derrière la publication.
+
+Si vous écrivez dans un journal, vous vous adressez généralement à des lecteurs qui ne vous connaissent pas personnellement. Pour les intéresser, vous devez leur montrer en quoi votre propos les concerne : raconter votre quotidien ne suffit pas nécessairement à susciter leur intérêt.
+
+Sur les réseaux sociaux, la situation peut être différente : vous disposez déjà d’un entourage auquel vous adresser. Votre quotidien peut alors intéresser vos lecteurs précisément parce qu’ils vous connaissent.
 
 :::example
 Une photographie prise à la sortie du lycée peut sembler banale à un inconnu. Pour les amis présents ce jour-là, elle rappelle un moment partagé, prolonge une plaisanterie ou permet de reprendre la conversation.
@@ -101,9 +105,9 @@ Cette fonction relationnelle peut coexister avec une valeur informative, esthét
 ## Une question de format
 Make it cheap {.kicker}
 
----notes
+--- notes
 
-Les formats proposés — message court, photographie, réaction — facilitent ces contributions. Pour participer, on n’a pas nécessairement besoin de rédiger un texte long destiné à un public anonyme.
+Savoir à qui s’adresser donne une raison de publier. Encore faut-il pouvoir le faire facilement. Les formats proposés par les plateformes — un message court, une photographie ou une simple réaction — permettent de participer sans devoir rédiger un texte long et élaboré.
 
 Ces deux éléments se renforcent : l’entourage donne une raison de publier ; les formats rendent cette publication plus facile. Ils peuvent donc favoriser la participation de personnes qui ne se reconnaissent pas dans les formes plus élaborées de publication.
 
@@ -113,8 +117,7 @@ Un tweet de 140 caractères, au lancement de Twitter, demande moins de rédactio
 Une photo sur Insta.
 :::
 
-
-Mais ces paroles adressées à un entourage ne circulent pas toujours dans un espace séparé. Elles peuvent emprunter les mêmes dispositifs de publication que les informations journalistiques ou les déclarations institutionnelles.
+En facilitant la participation, ces formats contribuent à élargir les publics qui prennent la parole en ligne. Avec eux, des façons de s’exprimer jusque-là davantage cantonnées aux échanges entre proches trouvent une place dans la publication : récits du quotidien, plaisanteries, allusions et références partagées. Ce ne sont donc pas seulement les personnes qui publient qui se diversifient, mais aussi les formes de discours qui deviennent visibles.
 
 ---
 ## Nouveaux publics, nouvelles façons de parler
@@ -122,9 +125,9 @@ t ou ? jss dvt le lycée ya personne 😭 {.kicker}
 
 --- notes
 
-À partir de ces seuils d’entrée plus faibles, davantage de personnes peuvent publier dans des situations qui n’appellent pas toutes la même parole. Ce changement ne tient pas seulement aux sujets abordés ni au fait d’écrire avec plus ou moins de soin : il dépend aussi de ce que chacun cherche à faire en parlant et des attentes de ses destinataires.
+Ce déplacement ne concerne donc pas seulement le nombre ou le profil des personnes qui publient. Il concerne aussi les situations de parole qui deviennent visibles : donner des nouvelles à ses amis, prolonger une plaisanterie ou raconter un moment de sa journée. Ces échanges ont leurs propres codes, qui supposent souvent une connaissance partagée des personnes et des événements.
 
-Nous appellerons ici régimes de discours les conventions et les attentes qui organisent une situation de parole : à quel titre on parle, à qui, dans quel but, et selon quelles exigences de formulation et de justification.
+Pour comprendre cette diversité, nous parlerons de régimes de discours : les conventions et les attentes qui organisent une situation de parole, selon les destinataires auxquels on s’adresse, ce qu’on cherche à faire et les formes d’expression jugées appropriées.
 
 :::example
 Le SMS affiché sur la diapositive cherche à retrouver des amis devant le lycée. Ses destinataires connaissent déjà les personnes et le lieu ; les abréviations suffisent à coordonner une rencontre. Le message n’a pas à exposer des faits à des inconnus.
@@ -231,14 +234,14 @@ L'espace public bourgeois crée un monde commun de discussion. La presse, les ca
 
 L’espace public joue également un rôle de médiation et de contrôle du pouvoir. Il constitue un espace intermédiaire entre la société civile et l’État, dans lequel les décisions et l’action des autorités peuvent être rendues visibles, discutées et critiquées. L’opinion publique peut ainsi fonctionner comme une forme de contre-pouvoir et comme une source de légitimation des décisions politiques : gouverner ne consiste plus seulement à exercer une autorité, mais aussi à pouvoir justifier son action devant un public.
 
-:::warning
-Cette conception est cependant normative et historiquement située. L’accès à ces espaces de discussion reste longtemps réservé à certains groupes sociaux, notamment aux hommes instruits et appartenant aux classes privilégiées. La sphère publique n’est donc jamais parfaitement ouverte, égalitaire ou démocratique.
-:::
-
 :::example
 « Que répondez-vous aux Français qui pensent que… ? »
 
 « Les sondages montrent que les Français veulent que… »
+:::
+
+:::warning
+Cette conception est cependant normative et historiquement située. L’accès à ces espaces de discussion reste longtemps réservé à certains groupes sociaux, notamment aux hommes instruits et appartenant aux classes privilégiées. La sphère publique n’est donc jamais parfaitement ouverte, égalitaire ou démocratique.
 :::
 
 Habermas étudie les conditions dans lesquelles les discussions collectives s’organisent durablement dans des lieux, des pratiques et des médias spécifiques. Elles acquièrent ainsi une fonction politique structurelle. Cela ne signifie pas que les sociétés antérieures ne discutaient pas de leurs affaires communes.
@@ -332,7 +335,11 @@ Les controverses que cette exposition suscite participent à la construction pro
 
 Ces deux premiers quadrants correspondent aux espaces publics médiatiques traditionnels : la presse, la radio et la télévision.
 
+---
 ### Gatekeepers
+> Ceux qui (croient) savoir ce qui est d'intérêt {.kicker}
+
+--- notes
 
 Leur fonctionnement repose en grande partie sur des **gatekeepers**, ou « portiers ». Les journalistes, les rédacteurs en chef et les éditorialistes sélectionnent, hiérarchisent et mettent en forme les informations : ils décident, selon des critères professionnels, politiques et économiques, de ce qui mérite d’être vu, entendu ou lu.
 
@@ -387,11 +394,18 @@ La baisse des coûts de publication et de diffusion sur le Web permet à ces act
 
 La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
 
-L’accès aux positions de journaliste, d’éditorialiste ou d’expert est socialement sélectif. Des parcours et des milieux proches peuvent favoriser des préoccupations et des codes communs, tout en laissant certaines expériences à l’écart. Cela n’implique pas que tous ces acteurs défendent les mêmes opinions.
+L’accès aux positions de journaliste, d’éditorialiste ou d’expert est socialement sélectif. Des parcours et des milieux proches peuvent favoriser des préoccupations et des codes communs, tout en laissant certaines expériences à l’écart.
 
 Le Web, en abaissant les coûts de publication et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans passer par le filtre des gatekeepers. Cette ouverture ne garantit pas une orientation émancipatrice : Soral ou la sphère masculiniste en bénéficient également.
 
 Cette ouverture peut aussi soutenir ce qu’Oskar Negt appelle des espaces publics oppositionnels : des espaces où les groupes sociaux marginalisés ou dominés expriment leurs expériences et leurs intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
+
+:::example
+Indymedia
+
+Le soulèvement zapatiste au Chiapas. Dès 1994, l’EZLN, l’Armée zapatiste de libération nationale, bénéficie d’une circulation internationale de ses communiqués grâce aux réseaux numériques. Des sympathisants et des associations relaient et traduisent ses textes, notamment par courrier électronique et sur des listes de diffusion. Il ne s’agit donc pas simplement de guérilleros connectés depuis la forêt : des relais articulent les communications du mouvement, le travail de journalistes et la diffusion sur Internet.
+Ces réseaux permettent de faire circuler les revendications des communautés autochtones au-delà du cadrage des grands médias, de documenter la répression et d’organiser des solidarités internationales. On peut y voir la construction d’un espace public oppositionnel : des groupes marginalisés trouvent des moyens de présenter leurs expériences et leurs revendications comme des questions politiques communes. Internet ne supprime pas les intermédiaires, mais permet de s’appuyer sur d’autres relais que les seules rédactions des médias dominants
+:::
 
 Cette perspective déplace l’attention vers les conflits et les expériences exclues de l’espace public dominant. Elle met en discussion la capacité de celui-ci à représenter un intérêt véritablement commun.
 
@@ -484,7 +498,11 @@ Concentration · visibilité · longue traîne {.kicker}
 
 --- notes
 
-L’ouverture de la publication ne garantit pas une audience. La courbe suivante permet de représenter une situation dans laquelle une minorité de contenus concentre une grande partie de l’attention.
+
+
+L’ouverture de la publication ne garantit pas une audience. Rien n'est moins plat ou égalitaire qu'un réseau.
+
+La courbe suivante permet de représenter une situation dans laquelle une minorité de contenus concentre une grande partie de l’attention.
 
 ---
 <!-- slide: id="power-law" title="Loi de puissance" steps=1 layout="center" -->
