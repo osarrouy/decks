@@ -5,10 +5,17 @@
 
     type Concentration = "low" | "high";
 
-    export let revealAt = 1;
-    export let concentration: Concentration = "high";
-    export let concentrateAtStep: number | null = null;
-    export let animateConcentration = false;
+    let {
+        revealAt = 1,
+        concentration = "high",
+        concentrateAtStep = null,
+        animateConcentration = false,
+    }: {
+        revealAt?: number | null;
+        concentration?: Concentration;
+        concentrateAtStep?: number | null;
+        animateConcentration?: boolean;
+    } = $props();
 
     const chart = {
         left: 88,
@@ -21,8 +28,9 @@
     const samplingExponent = 2;
     const epsilon = 0.01;
     const exponents: Record<Concentration, number> = {
-        low: 0.65,
-        high: 1.3,
+        // With this offset, 1.30277 puts 80% of the area in the first 20%.
+        low: 1.30277,
+        high: 1.7,
     };
 
     function exponentFor(value: Concentration) {
@@ -49,83 +57,77 @@
             .join(" ");
     }
 
-    let currentExponent = exponentFor(concentration);
-    let lastDesiredExponent = currentExponent;
-    let animationComplete = concentration === "high";
-    let animationToken = 0;
+    function visibilityShare(exponent: number, fraction: number) {
+        const power = 1 - exponent;
+        if (Math.abs(power) < 1e-8) {
+            return Math.log((fraction + epsilon) / epsilon) / Math.log((1 + epsilon) / epsilon);
+        }
+        return (Math.pow(fraction + epsilon, power) - Math.pow(epsilon, power)) /
+            (Math.pow(1 + epsilon, power) - Math.pow(epsilon, power));
+    }
 
-    function animateExponent(nextExponent: number) {
-        const token = ++animationToken;
-        const startExponent = currentExponent;
-        const duration = 900;
+    let targetConcentration = $derived(
+        concentrateAtStep !== null && $step >= concentrateAtStep
+            ? "high"
+            : concentration
+    );
+    let desiredExponent = $derived(exponentFor(targetConcentration));
+    // Start at the requested step when a slide opens directly on that step.
+    // svelte-ignore state_referenced_locally
+    let renderedExponent = exponentFor(targetConcentration);
+    let currentExponent = $state(renderedExponent);
+    let prefersReducedMotion = $state(false);
 
-        animationComplete = false;
+    $effect(() => {
+        const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const update = () => { prefersReducedMotion = media.matches; };
+        update();
+        media.addEventListener("change", update);
+        return () => media.removeEventListener("change", update);
+    });
 
-        if (typeof window === "undefined") {
+    $effect(() => {
+        const nextExponent = desiredExponent;
+        if (nextExponent === renderedExponent) return;
+
+        if (!animateConcentration || prefersReducedMotion) {
+            renderedExponent = nextExponent;
             currentExponent = nextExponent;
-            animationComplete = true;
             return;
         }
 
+        const startExponent = renderedExponent;
         const startedAt = performance.now();
+        let frame: number;
         const tick = (now: number) => {
-            if (token !== animationToken) return;
-
-            const progress = Math.min(1, (now - startedAt) / duration);
+            const progress = Math.min(1, (now - startedAt) / 900);
             const eased = 1 - Math.pow(1 - progress, 3);
-            currentExponent = startExponent + (nextExponent - startExponent) * eased;
-
-            if (progress < 1) {
-                requestAnimationFrame(tick);
-            } else {
-                animationComplete = true;
-            }
+            renderedExponent = startExponent + (nextExponent - startExponent) * eased;
+            currentExponent = renderedExponent;
+            if (progress < 1) frame = requestAnimationFrame(tick);
         };
+        frame = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(frame);
+    });
 
-        requestAnimationFrame(tick);
-    }
+    let pointPath = $derived(makePath(createPoints(currentExponent)));
+    let areaPath = $derived(`${pointPath} L ${chart.right} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`);
 
-    $: targetConcentration =
-        concentrateAtStep !== null && $step >= concentrateAtStep
-            ? "high"
-            : concentration;
-    $: desiredExponent = exponentFor(targetConcentration);
+    const paretoFraction = 0.2;
+    const paretoX = chart.left + paretoFraction * (chart.right - chart.left);
+    let paretoPoints = $derived(createPoints(currentExponent, paretoFraction));
+    let paretoPath = $derived(`${makePath(paretoPoints)} L ${paretoX.toFixed(2)} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`);
+    let paretoPercentage = $derived(Math.round(100 * visibilityShare(currentExponent, paretoFraction)));
 
-    $: if (desiredExponent !== lastDesiredExponent) {
-        lastDesiredExponent = desiredExponent;
-
-        if (animateConcentration) {
-            animateExponent(desiredExponent);
-        } else {
-            currentExponent = desiredExponent;
-            animationComplete = true;
-        }
-    }
-
-    $: points = createPoints(currentExponent);
-    $: pointPath = makePath(points);
-    $: areaPath = `${pointPath} L ${chart.right} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`;
-
-    const paretoPoints = createPoints(exponentFor("high"), 0.2);
-    const paretoPath = `${makePath(paretoPoints)} L ${paretoPoints[paretoPoints.length - 1].x.toFixed(2)} ${chart.bottom} L ${chart.left} ${chart.bottom} Z`;
-    const paretoX = chart.left + 0.2 * (chart.right - chart.left);
-
-    $: showPareto =
-        $step >= revealAt &&
-        targetConcentration === "high" &&
-        (!animateConcentration || animationComplete);
-    $: concentrationLabel =
-        currentExponent > (exponents.low + exponents.high) / 2
-            ? "forte concentration"
-            : "distribution plus diffuse";
+    let showPareto = $derived(revealAt !== null && $step >= revealAt);
 </script>
 
-<figure class="power-law" aria-label="Courbe rang-visibilité en loi de puissance, avec objets ou comptes classés par visibilité décroissante, et illustration du principe 80-20">
+<figure class="power-law" aria-label="Courbe rang-visibilité en loi de puissance, avec objets ou comptes classés par visibilité décroissante">
     <svg viewBox="0 0 1060 610" role="img">
         <title>Une minorité concentre une grande partie de la visibilité</title>
         <desc>
-            Une courbe rang-visibilité décroissante montre une forte concentration de la visibilité sur les objets ou comptes les mieux classés,
-            puis une longue traîne de comptes classés plus bas et faiblement visibles.
+            Une courbe rang-visibilité décroissante part des objets ou comptes les mieux classés,
+            puis se prolonge en une longue traîne de comptes classés plus bas et faiblement visibles.
         </desc>
 
         <g class="chart-axis" aria-hidden="true">
@@ -140,13 +142,12 @@
             <path class="pareto-area" d={paretoPath} />
             <line class="pareto-guide" x1={paretoX} y1={chart.top} x2={paretoX} y2={chart.bottom} />
             <text class="pareto-label pareto-label-top" x={chart.left + 22} y={chart.top + 38}>20 % des objets</text>
-            <text class="pareto-label pareto-label-bottom" x={paretoX + 18} y={chart.bottom - 18}>≈ 80 % de la visibilité</text>
+            <text class="pareto-label pareto-label-bottom" x={paretoX + 18} y={chart.bottom - 18}>≈ {paretoPercentage} % de la visibilité</text>
             <text class="tail-label" x={chart.right - 8} y={chart.bottom - 20} text-anchor="end">longue traîne</text>
         </g>
 
         <text class="axis-label axis-label-y" x={chart.left - 28} y={chart.top - 10} text-anchor="end">VISIBILITÉ</text>
         <text class="axis-label axis-label-x" x={chart.right} y={chart.bottom + 42} text-anchor="end">OBJETS / COMPTES · RANG DE VISIBILITÉ DÉCROISSANT</text>
-        <text class="curve-note" x={chart.left + 28} y={chart.top + 112}>{concentrationLabel}</text>
     </svg>
 </figure>
 
@@ -205,8 +206,7 @@
 
     .pareto-label,
     .tail-label,
-    .axis-label,
-    .curve-note {
+    .axis-label {
         fill: var(--text-prominent);
         font-family: var(--font-mono);
         font-size: 18px;
@@ -230,10 +230,10 @@
         letter-spacing: 0.14em;
     }
 
-    .curve-note {
-        fill: var(--text-muted);
-        font-size: 16px;
-        font-style: italic;
+    @media (prefers-reduced-motion: reduce) {
+        .pareto-layer {
+            transition: none;
+        }
     }
 
     @media (max-width: 700px) {
@@ -243,8 +243,7 @@
 
         .pareto-label,
         .tail-label,
-        .axis-label,
-        .curve-note {
+        .axis-label {
             font-size: 15px;
         }
     }

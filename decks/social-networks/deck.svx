@@ -505,13 +505,13 @@ L’ouverture de la publication ne garantit pas une audience. Rien n'est moins p
 La courbe suivante permet de représenter une situation dans laquelle une minorité de contenus concentre une grande partie de l’attention.
 
 ---
-<!-- slide: id="power-law" title="Loi de puissance" steps=1 layout="center" -->
+<!-- slide: id="power-law" title="Loi de puissance" steps=2 layout="center" -->
 
 <script>
   import PowerLaw from '$components/PowerLaw.svelte'
 </script>
 
-<PowerLaw concentration="low" concentrateAtStep={1} animateConcentration={true} />
+<PowerLaw concentration="low" revealAt={1} concentrateAtStep={2} animateConcentration={true} />
 
 --- notes
 
@@ -524,12 +524,12 @@ Imaginons que les objets soient des publications sur Instagram. À gauche se tro
 :::
 
 :::comment
-Avancer d’une étape pour accentuer la concentration et faire apparaître le repère 80/20. Cette animation compare deux degrés de concentration ; elle ne représente pas une évolution mesurée dans le temps.
+La première courbe représente déjà une répartition 80/20, sans l’indiquer à l’écran. Avancer d’une étape pour révéler ce repère, puis encore une fois pour montrer une distribution plus inégalitaire : les 20 % de publications les plus vues concentrent alors environ 92 % de la visibilité. Cette animation compare deux degrés de concentration ; elle ne représente pas une évolution mesurée dans le temps.
 :::
 
 Des modèles de ce type sont mobilisés pour étudier la concentration des patrimoines, la fréquence des mots, les connexions dans certains réseaux, les citations scientifiques ou la taille des villes. Leur pertinence et leur domaine de validité doivent être vérifiés dans chaque cas.
 
-Le **principe de Pareto**, souvent résumé par le rapport 80/20, donne un repère intuitif : une minorité d’objets concentre une majorité des effets. Sur ce graphique, les 20 % et 80 % sont des indications illustratives. Ce rapport n’est ni une proportion universelle ni la définition d’une loi de puissance.
+Le **principe de Pareto**, souvent résumé par le rapport 80/20, donne un repère intuitif : une minorité d’objets concentre une majorité des effets. Sur ce graphique illustratif, les 20 % les plus visibles concentrent 80 % de la visibilité dès la première courbe, puis environ 92 % après l’accentuation. Le rapport 80/20 n’est ni une proportion universelle ni la définition d’une loi de puissance.
 
 :::warning
 Une distribution très inégalitaire ne suffit pas à établir qu’elle suit une loi de puissance. De même, constater cette concentration n’en explique pas les causes.
