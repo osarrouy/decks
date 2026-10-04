@@ -27,6 +27,14 @@ The root `package.json` selects the local `@dg/ui` checkout through `pnpm.overri
 Start an existing deck directly from the workspace root:
 
 ```sh
+pnpm dev economics
+```
+
+`pnpm dev <name>` uses the corresponding `dev:<name>` shortcut below and forwards additional options, such as `pnpm dev economics --port 5180`. Without a name, `pnpm dev` starts the course portal.
+
+The existing shortcuts remain available:
+
+```sh
 pnpm dev:blockchain
 pnpm dev:blockchain-bitcoin
 pnpm dev:blockchain-consensus

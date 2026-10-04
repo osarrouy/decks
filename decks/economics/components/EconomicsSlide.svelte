@@ -215,4 +215,35 @@
     color: var(--accent);
     font-family: var(--font-mono);
   }
+
+  @container (aspect-ratio < 1) {
+    .page {
+      font-size: 4.8cqw;
+      gap: 3cqh;
+    }
+
+    .page :global(h1) {
+      font-size: 11cqw;
+    }
+
+    .page :global(h2) {
+      font-size: 8cqw;
+    }
+
+    .page :global(.columns),
+    .page :global(.columns.three) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3cqh;
+    }
+
+    .page :global(.columns > div) {
+      gap: 1cqh;
+    }
+
+    .page :global(th),
+    .page :global(td) {
+      padding: 1.5cqh 0.7cqw;
+      overflow-wrap: anywhere;
+    }
+  }
 </style>

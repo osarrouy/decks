@@ -10,7 +10,8 @@ description: Attention, publicité, plateformes et ouverture vers l’IA. Cours 
 </script>
 
 <Page>
-<h1>Économie des données</h1><p class="meta">Attention, publicité et plateformes</p>
+  <h1>Économie des données</h1>
+  <p class="meta">Attention, publicité et plateformes</p>
 </Page>
 
 --- notes
@@ -32,7 +33,12 @@ Prévoir quatre heures, dont dix minutes de pause. L’ouverture et la scène su
 </script>
 
 <Page>
-<h2>Camille prépare un trajet.</h2><div class="columns three"><div><p>Un article</p></div><div><p>Un casque</p></div><div><p>Une vidéo</p></div></div>
+  <h2>Camille prépare un trajet.</h2>
+  <div class="columns three">
+    <div><p>Un article</p></div>
+    <div><p>Un casque</p></div>
+    <div><p>Une vidéo</p></div>
+  </div>
 </Page>
 
 --- notes
@@ -60,7 +66,28 @@ Avant de suivre l’argent, il faut distinguer ce qui se passe de ce que le disp
 </script>
 
 <Page>
-<dl class="rows"><div><dt>Donnée</dt><dd>18 h 12</dd></div><div><dt>Trace</dt><dd>Une page ouverte</dd></div><div><dt>Information</dt><dd>Un article sur le vélo</dd></div><div><dt>Signal</dt><dd>Un intérêt supposé</dd></div><div><dt>Connaissance</dt><dd>Une interprétation justifiée</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>Donnée</dt>
+      <dd>18 h 12</dd>
+    </div>
+    <div>
+      <dt>Trace</dt>
+      <dd>Une page ouverte</dd>
+    </div>
+    <div>
+      <dt>Information</dt>
+      <dd>Un article sur le vélo</dd>
+    </div>
+    <div>
+      <dt>Signal</dt>
+      <dd>Un intérêt supposé</dd>
+    </div>
+    <div>
+      <dt>Connaissance</dt>
+      <dd>Une interprétation justifiée</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -90,7 +117,27 @@ Mesurer des publics et vendre un accès à eux précède les traces numériques.
 </script>
 
 <Page>
-<h2>L’audience marchandise</h2><p class="meta">Dallas Smythe, 1977</p><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="Un média propose du contenu à un public et reçoit un paiement d’un annonceur."><text x="60" y="155">Public</text><text x="420" y="155">Média</text><text x="785" y="155">Annonceur</text><path class="line" d="M390 145H200m0 0 12-6m-12 6 12 6M750 145H560m0 0 12-6m-12 6 12 6"/><text class="small" x="230" y="115">contenu</text><text class="small" x="600" y="115">paiement</text><text class="highlight" x="310" y="255">Un accès au public se commercialise.</text></svg>
+  <h2>L’audience marchandise</h2>
+  <p class="meta">Dallas Smythe, 1977</p>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="Un média propose du contenu à un public et reçoit un paiement d’un annonceur."
+    ><text x="60" y="155">Public</text><text x="420" y="155">Média</text><text
+      x="785"
+      y="155">Annonceur</text
+    ><path
+      class="line"
+      d="M390 145H200m0 0 12-6m-12 6 12 6M750 145H560m0 0 12-6m-12 6 12 6"
+    /><text class="small" x="230" y="115">contenu</text><text
+      class="small"
+      x="600"
+      y="115">paiement</text
+    ><text class="highlight" x="310" y="255"
+      >Un accès au public se commercialise.</text
+    ></svg
+  >
 </Page>
 
 --- notes
@@ -111,7 +158,7 @@ Prévoir sept minutes. Suivre séparément le contenu et le paiement dans le sch
 
 Réunir un public ne suffit pas. Il faut obtenir une part de son attention.
 
-**Sources.** [Dallas W. Smythe, 1977.](https://journals.uvic.ca/index.php/ctheory/article/view/13715/4463) ; [Patrick Le Lay, propos de 2004, source journalistique contemporaine.](https://www.lemonde.fr/archives/article/2004/09/01/p-les-auteurs-contre-les-propos-de-m-le-lay-p_4292024_1819218.html).
+**Sources.** [Dallas W. Smythe, 1977](https://journals.uvic.ca/index.php/ctheory/article/view/13715/4463) ; [Patrick Le Lay, propos de 2004, source journalistique contemporaine](https://www.lemonde.fr/archives/article/2004/09/01/p-les-auteurs-contre-les-propos-de-m-le-lay-p_4292024_1819218.html).
 
 ---
 
@@ -122,7 +169,11 @@ Réunir un public ne suffit pas. Il faut obtenir une part de son attention.
 </script>
 
 <Page>
-<div class="columns"><div><h2>Des contenus abondants</h2></div><div><h2 class="accent">Une attention limitée</h2></div></div><p class="meta">Herbert Simon, 1971 · Michael Goldhaber, 1997</p>
+  <div class="columns">
+    <div><h2>Des contenus abondants</h2></div>
+    <div><h2 class="accent">Une attention limitée</h2></div>
+  </div>
+  <p class="meta">Herbert Simon, 1971 · Michael Goldhaber, 1997</p>
 </Page>
 
 --- notes
@@ -143,7 +194,7 @@ Prévoir cinq minutes. Les deux propositions expriment une relation conceptuelle
 
 Compter des minutes suffit-il pour décrire une attention ?
 
-**Sources.** [Herbert A. Simon, 1971.](https://atelierdesfuturs.org/wp-content/uploads/2025/07/1971-simon.pdf) ; [Michael H. Goldhaber, 1997.](https://firstmonday.org/ojs/index.php/fm/article/download/519/440?inline=1).
+**Sources.** [Herbert A. Simon, 1971](https://atelierdesfuturs.org/wp-content/uploads/2025/07/1971-simon.pdf) ; [Michael H. Goldhaber, 1997](https://firstmonday.org/ojs/index.php/fm/article/download/519/440?inline=1).
 
 ---
 
@@ -154,7 +205,13 @@ Compter des minutes suffit-il pour décrire une attention ?
 </script>
 
 <Page>
-<h2>Une écologie de l’attention</h2><p class="meta">Yves Citton, 2014</p><div class="columns three"><p>Des rythmes</p><p>Des relations</p><p>Des milieux</p></div>
+  <h2>Une écologie de l’attention</h2>
+  <p class="meta">Yves Citton, 2014</p>
+  <div class="columns three">
+    <p>Des rythmes</p>
+    <p>Des relations</p>
+    <p>Des milieux</p>
+  </div>
 </Page>
 
 --- notes
@@ -177,7 +234,7 @@ Prévoir huit minutes. Demander comment une règle de notification ou un horaire
 
 Comment une attention située devient-elle une prestation commercialisable ?
 
-**Sources.** [Yves Citton, 2014.](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [Emmanuel Kessous, Kevin Mellet et Moustafa Zouinar, 2010.](https://www.sciencedirect.com/science/article/pii/S0038029610000622).
+**Sources.** [Yves Citton, 2014](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [Emmanuel Kessous, Kevin Mellet et Moustafa Zouinar, 2010](https://www.sciencedirect.com/science/article/pii/S0038029610000622).
 
 ---
 
@@ -188,7 +245,22 @@ Comment une attention située devient-elle une prestation commercialisable ?
 </script>
 
 <Page>
-<h2>Qui paie quoi ?</h2><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="Le public reçoit un service. L’annonceur paie la plateforme pour accéder à une audience."><text x="70" y="120">Public</text><text x="395" y="120">Plateforme</text><text x="795" y="120">Annonceur</text><path class="line" d="M365 110H190m0 0 12-6m-12 6 12 6M765 110H610m155 0-12-6m12 6-12 6M765 210H610m0 0 12-6m-12 6 12 6"/><text class="small" x="225" y="80">service</text><text class="small" x="617" y="80">accès au public</text><text class="small" x="645" y="245">paiement</text></svg>
+  <h2>Qui paie quoi ?</h2>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="Le public reçoit un service. L’annonceur paie la plateforme pour accéder à une audience."
+    ><text x="70" y="120">Public</text><text x="395" y="120">Plateforme</text
+    ><text x="795" y="120">Annonceur</text><path
+      class="line"
+      d="M365 110H190m0 0 12-6m-12 6 12 6M765 110H610m155 0-12-6m12 6-12 6M765 210H610m0 0 12-6m-12 6 12 6"
+    /><text class="small" x="225" y="80">service</text><text
+      class="small"
+      x="617"
+      y="80">accès au public</text
+    ><text class="small" x="645" y="245">paiement</text></svg
+  >
 </Page>
 
 --- notes
@@ -209,7 +281,7 @@ Prévoir six minutes. Demander quel effet aurait une augmentation du nombre d’
 
 L’histoire du web publicitaire permet maintenant de suivre la construction des prestations vendues.
 
-**Sources.** [Jean-Charles Rochet et Jean Tirole, 2003.](https://publications.ut-capitole.fr/id/eprint/1019/).
+**Sources.** [Jean-Charles Rochet et Jean Tirole, 2003](https://publications.ut-capitole.fr/id/eprint/1019/).
 
 ---
 
@@ -220,7 +292,12 @@ L’histoire du web publicitaire permet maintenant de suivre la construction des
 </script>
 
 <Page>
-<p class="meta">HotWired · 27 octobre 1994</p><img class="banner" src="/first_add.png" alt="Bannière AT&T : Have you ever clicked your mouse right HERE? YOU WILL." />
+  <p class="meta">HotWired · 27 octobre 1994</p>
+  <img
+    class="banner"
+    src="/first_add.png"
+    alt="Bannière AT&T : Have you ever clicked your mouse right HERE? YOU WILL."
+  />
 </Page>
 
 --- notes
@@ -241,7 +318,7 @@ Prévoir cinq minutes. L’image est l’archive déjà présente dans le dossie
 
 Quelle unité permet alors de facturer l’annonceur ?
 
-**Sources.** [Wired, histoire de HotWired, 2010.](https://www.wired.com/2010/10/1027hotwired-banner-ads/) ; [Joe McCambley, 2013.](https://www.theguardian.com/media-network/media-network-blog/2013/dec/12/first-ever-banner-ad-advertising).
+**Sources.** [Wired, histoire de HotWired, 2010](https://www.wired.com/2010/10/1027hotwired-banner-ads/) ; [Joe McCambley, 2013](https://www.theguardian.com/media-network/media-network-blog/2013/dec/12/first-ever-banner-ad-advertising).
 
 ---
 
@@ -252,7 +329,20 @@ Quelle unité permet alors de facturer l’annonceur ?
 </script>
 
 <Page>
-<dl class="rows"><div><dt>CPM</dt><dd>Mille impressions</dd></div><div><dt>CPC</dt><dd>Un clic</dd></div><div><dt>CPA</dt><dd>Une action définie</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>CPM</dt>
+      <dd>Mille impressions</dd>
+    </div>
+    <div>
+      <dt>CPC</dt>
+      <dd>Un clic</dd>
+    </div>
+    <div>
+      <dt>CPA</dt>
+      <dd>Une action définie</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -269,7 +359,7 @@ Chaque dénominateur répond à une question différente. L’impression indique
 Prévoir trois minutes, puis cinq minutes pour le calcul suivant.
 :::
 
-**Sources.** [Archives officielles Google, 2000 et 2002.](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, 24 septembre 2007.](https://adwords.googleblog.com/2007/09/new-cpa-bidding-product-available.html).
+**Sources.** [Archives officielles Google, 2000 et 2002](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, 24 septembre 2007](https://adwords.googleblog.com/2007/09/new-cpa-bidding-product-available.html).
 
 ---
 
@@ -281,7 +371,28 @@ Prévoir trois minutes, puis cinq minutes pour le calcul suivant.
 </script>
 
 <Page>
-<p class="meta">Exemple fictif · budget : 100 €</p><div class="columns three"><div><p class="large">10 000</p><p>impressions</p></div><div><p class="large">200</p><p>clics</p></div><div><p class="large">10</p><p>achats attribués</p></div></div><Fragment at={1}><div class="columns three"><p>CPM : 10 €</p><p>CPC : 0,50 €</p><p>CPA : 10 €</p></div></Fragment>
+  <p class="meta">Exemple fictif · budget : 100 €</p>
+  <div class="columns three">
+    <div>
+      <p class="large">10 000</p>
+      <p>impressions</p>
+    </div>
+    <div>
+      <p class="large">200</p>
+      <p>clics</p>
+    </div>
+    <div>
+      <p class="large">10</p>
+      <p>achats attribués</p>
+    </div>
+  </div>
+  <Fragment at={1}
+    ><div class="columns three">
+      <p>CPM : 10 €</p>
+      <p>CPC : 0,50 €</p>
+      <p>CPA : 10 €</p>
+    </div></Fragment
+  >
 </Page>
 
 --- notes
@@ -313,7 +424,23 @@ L’unité définie, il reste à décider quel annonceur obtient quelle place.
 </script>
 
 <Page>
-<p class="meta">GoTo · 1998</p><h2>« Casque vélo Rennes »</h2><div class="columns three"><div><p>Annonceur A</p><p class="large">3 €</p></div><div><p>Annonceur B</p><p class="large">2 €</p></div><div><p>Annonceur C</p><p class="large">1 €</p></div></div><p class="meta">Offres fictives par clic</p>
+  <p class="meta">GoTo · 1998</p>
+  <h2>« Casque vélo Rennes »</h2>
+  <div class="columns three">
+    <div>
+      <p>Annonceur A</p>
+      <p class="large">3 €</p>
+    </div>
+    <div>
+      <p>Annonceur B</p>
+      <p class="large">2 €</p>
+    </div>
+    <div>
+      <p>Annonceur C</p>
+      <p class="large">1 €</p>
+    </div>
+  </div>
+  <p class="meta">Offres fictives par clic</p>
 </Page>
 
 --- notes
@@ -336,7 +463,7 @@ Prévoir six minutes. Faire distinguer la valeur attendue par l’annonceur et l
 
 Google articulera ce marché à un service de recherche dont la confiance constitue elle-même une ressource.
 
-**Sources.** [GoTo, documentation journalistique contemporaine, 1998.](https://www.internetnews.com/marketing/and-now-a-pay-to-play-search-directory/).
+**Sources.** [GoTo, documentation journalistique contemporaine, 1998](https://www.internetnews.com/marketing/and-now-a-pay-to-play-search-directory/).
 
 ---
 
@@ -347,7 +474,20 @@ Google articulera ce marché à un service de recherche dont la confiance consti
 </script>
 
 <Page>
-<dl class="rows"><div><dt>1998</dt><dd>Un conflit d’intérêts identifié</dd></div><div><dt>2000</dt><dd>AdWords au CPM</dd></div><div><dt>2002</dt><dd>Select au CPC</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>1998</dt>
+      <dd>Un conflit d’intérêts identifié</dd>
+    </div>
+    <div>
+      <dt>2000</dt>
+      <dd>AdWords au CPM</dd>
+    </div>
+    <div>
+      <dt>2002</dt>
+      <dd>Select au CPC</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -368,7 +508,7 @@ Prévoir cinq minutes. La frise distingue des jalons, pas trois états successif
 
 Le prix payé dépend aussi de la règle d’enchère.
 
-**Sources.** [Sergey Brin et Lawrence Page, 1998.](https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/) ; [Archives officielles Google, 2000 et 2002.](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, 6 août 2001.](https://googlepress.blogspot.com/2001/08/google-names-dr-eric-schmidt-chief.html).
+**Sources.** [Sergey Brin et Lawrence Page, 1998](https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/) ; [Archives officielles Google, 2000 et 2002](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, 6 août 2001](https://googlepress.blogspot.com/2001/08/google-names-dr-eric-schmidt-chief.html).
 
 ---
 
@@ -380,7 +520,27 @@ Le prix payé dépend aussi de la règle d’enchère.
 </script>
 
 <Page>
-<h2>Offrir et payer</h2><table><thead><tr><th>Annonceur</th><th>Offre</th><th>Premier prix</th><th>Second prix généralisé</th></tr></thead><tbody><tr><td>A</td><td>3 €</td><td>3 €</td><td><Fragment at={1}>2 €</Fragment></td></tr><tr><td>B</td><td>2 €</td><td>2 €</td><td><Fragment at={1}>1 €</Fragment></td></tr><tr><td>C</td><td>1 €</td><td colspan="2">Pas de place</td></tr></tbody></table><p class="meta">Exemple fictif · deux places · qualité identique</p>
+  <h2>Offrir et payer</h2>
+  <table>
+    <thead
+      ><tr
+        ><th>Annonceur</th><th>Offre</th><th>Premier prix</th><th
+          >Second prix généralisé</th
+        ></tr
+      ></thead
+    ><tbody
+      ><tr
+        ><td>A</td><td>3 €</td><td>3 €</td><td
+          ><Fragment at={1}>2 €</Fragment></td
+        ></tr
+      ><tr
+        ><td>B</td><td>2 €</td><td>2 €</td><td
+          ><Fragment at={1}>1 €</Fragment></td
+        ></tr
+      ><tr><td>C</td><td>1 €</td><td colspan="2">Pas de place</td></tr></tbody
+    >
+  </table>
+  <p class="meta">Exemple fictif · deux places · qualité identique</p>
 </Page>
 
 --- notes
@@ -401,7 +561,7 @@ Le GSP à plusieurs positions ne possède pas les mêmes propriétés qu’une e
 
 Une autre question apparaît : que rapporte une offre élevée si personne ne clique ?
 
-**Sources.** [Benjamin Edelman, Michael Ostrovsky et Michael Schwarz, 2007.](https://www.aeaweb.org/articles?id=10.1257/aer.97.1.242).
+**Sources.** [Benjamin Edelman, Michael Ostrovsky et Michael Schwarz, 2007](https://www.aeaweb.org/articles?id=10.1257/aer.97.1.242).
 
 ---
 
@@ -413,7 +573,27 @@ Une autre question apparaît : que rapporte une offre élevée si personne ne cl
 </script>
 
 <Page>
-<h2>La réaction attendue</h2><table><thead><tr><th></th><th>Offre par clic</th><th>Probabilité de clic</th><th>Recette attendue par impression</th></tr></thead><tbody><tr><td>A</td><td>2 €</td><td>1 %</td><td><Fragment at={1}>0,02 €</Fragment></td></tr><tr><td>B</td><td>1 €</td><td>3 %</td><td><Fragment at={1}><strong>0,03 €</strong></Fragment></td></tr></tbody></table><p class="meta">Calcul pédagogique fictif</p>
+  <h2>La réaction attendue</h2>
+  <table>
+    <thead
+      ><tr
+        ><th></th><th>Offre par clic</th><th>Probabilité de clic</th><th
+          >Recette attendue par impression</th
+        ></tr
+      ></thead
+    ><tbody
+      ><tr
+        ><td>A</td><td>2 €</td><td>1 %</td><td
+          ><Fragment at={1}>0,02 €</Fragment></td
+        ></tr
+      ><tr
+        ><td>B</td><td>1 €</td><td>3 %</td><td
+          ><Fragment at={1}><strong>0,03 €</strong></Fragment></td
+        ></tr
+      ></tbody
+    >
+  </table>
+  <p class="meta">Calcul pédagogique fictif</p>
 </Page>
 
 --- notes
@@ -436,7 +616,7 @@ Google utilise déjà le taux de clic en 2002. Le nom Quality Score apparaît en
 
 Le commerçant peut cependant vouloir des achats plutôt que des clics.
 
-**Sources.** [Archives officielles Google, 2000 et 2002.](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, Quality Score historique et documentation actuelle.](https://adwords.googleblog.com/2005/07/).
+**Sources.** [Archives officielles Google, 2000 et 2002](https://googlepress.blogspot.com/2000/10/google-launches-self-service.html) ; [Google, Quality Score historique et documentation actuelle](https://adwords.googleblog.com/2005/07/).
 
 ---
 
@@ -447,7 +627,21 @@ Le commerçant peut cependant vouloir des achats plutôt que des clics.
 </script>
 
 <Page>
-<h2>Une conversion</h2><dl class="rows"><div><dt>Objectif</dt><dd>Vendre un casque</dd></div><div><dt>Mesure</dt><dd>Coût par achat attribué</dd></div><div><dt>Facturation</dt><dd>Selon le contrat</dd></div></dl>
+  <h2>Une conversion</h2>
+  <dl class="rows">
+    <div>
+      <dt>Objectif</dt>
+      <dd>Vendre un casque</dd>
+    </div>
+    <div>
+      <dt>Mesure</dt>
+      <dd>Coût par achat attribué</dd>
+    </div>
+    <div>
+      <dt>Facturation</dt>
+      <dd>Selon le contrat</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -468,7 +662,7 @@ Prévoir sept minutes. Faire distinguer objectif, mesure et paiement avec l’ex
 
 Rattacher une vente à une annonce prouve-t-il que l’annonce l’a provoquée ?
 
-**Sources.** [Google, 24 septembre 2007.](https://adwords.googleblog.com/2007/09/new-cpa-bidding-product-available.html).
+**Sources.** [Google, 24 septembre 2007](https://adwords.googleblog.com/2007/09/new-cpa-bidding-product-available.html).
 
 ---
 
@@ -479,7 +673,7 @@ Rattacher une vente à une annonce prouve-t-il que l’annonce l’a provoquée 
 </script>
 
 <Page>
-<h1>L’achat aurait-il eu lieu sans l’annonce ?</h1>
+  <h1>L’achat aurait-il eu lieu sans l’annonce ?</h1>
 </Page>
 
 --- notes
@@ -496,7 +690,7 @@ L’expérience menée chez eBay par Blake, Nosko et Tadelis montre que les effe
 Prévoir trois minutes, puis quatre pour la comparaison suivante.
 :::
 
-**Sources.** [Thomas Blake, Chris Nosko et Steven Tadelis, 2015.](https://faculty.haas.berkeley.edu/stadelis/Tadelis.pdf).
+**Sources.** [Thomas Blake, Chris Nosko et Steven Tadelis, 2015](https://faculty.haas.berkeley.edu/stadelis/Tadelis.pdf).
 
 ---
 
@@ -508,7 +702,20 @@ Prévoir trois minutes, puis quatre pour la comparaison suivante.
 </script>
 
 <Page>
-<p class="meta">Exemple fictif · répartition aléatoire</p><div class="columns"><div><p>Avec publicité</p><p class="large">120 / 1 000</p><p>achats</p></div><div><p>Sans publicité</p><p class="large">100 / 1 000</p><p>achats</p></div></div><Fragment at={1}><p class="formula">Écart observé : +2 points</p></Fragment>
+  <p class="meta">Exemple fictif · répartition aléatoire</p>
+  <div class="columns">
+    <div>
+      <p>Avec publicité</p>
+      <p class="large">120 / 1 000</p>
+      <p>achats</p>
+    </div>
+    <div>
+      <p>Sans publicité</p>
+      <p class="large">100 / 1 000</p>
+      <p>achats</p>
+    </div>
+  </div>
+  <Fragment at={1}><p class="formula">Écart observé : +2 points</p></Fragment>
 </Page>
 
 --- notes
@@ -538,7 +745,16 @@ Pour prévoir ou attribuer, les systèmes rapprochent des événements. Il faut 
 </script>
 
 <Page>
-<div class="columns"><div><h2>Cette page parle de vélo.</h2><p class="meta">Ciblage contextuel</p></div><div><h2>Ce navigateur a consulté des vélos.</h2><p class="meta">Ciblage comportemental</p></div></div>
+  <div class="columns">
+    <div>
+      <h2>Cette page parle de vélo.</h2>
+      <p class="meta">Ciblage contextuel</p>
+    </div>
+    <div>
+      <h2>Ce navigateur a consulté des vélos.</h2>
+      <p class="meta">Ciblage comportemental</p>
+    </div>
+  </div>
 </Page>
 
 --- notes
@@ -559,7 +775,7 @@ Prévoir six minutes. Faire distinguer page consultée, historique rapproché et
 
 Les événements ne se rapprochent pas tout seuls : une infrastructure doit les relier.
 
-**Sources.** [CNIL, publicité ciblée.](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls/publicite-ciblee-en-ligne-quels-enjeux-pour-la-protection-des-donnees-personnelles).
+**Sources.** [CNIL, publicité ciblée](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls/publicite-ciblee-en-ligne-quels-enjeux-pour-la-protection-des-donnees-personnelles).
 
 ---
 
@@ -570,7 +786,26 @@ Les événements ne se rapprochent pas tout seuls : une infrastructure doit les 
 </script>
 
 <Page>
-<h2>Relier des événements</h2><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="Une visite et un achat peuvent être rapprochés par un compte, un cookie ou une empreinte du navigateur."><text x="40" y="70">Une visite</text><text x="780" y="70">Un achat</text><path class="line" d="M200 60H740m0 0-12-6m12 6-12 6"/><text x="300" y="50" class="small">rapprochement</text><text x="55" y="200">Compte</text><text x="385" y="200">Cookie</text><text x="695" y="200">Empreinte</text><text class="small" x="55" y="245">identifiant</text><text class="small" x="385" y="245">navigateur</text><text class="small" x="695" y="245">estimation</text></svg>
+  <h2>Relier des événements</h2>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="Une visite et un achat peuvent être rapprochés par un compte, un cookie ou une empreinte du navigateur."
+    ><text x="40" y="70">Une visite</text><text x="780" y="70">Un achat</text
+    ><path class="line" d="M200 60H740m0 0-12-6m12 6-12 6" /><text
+      x="300"
+      y="50"
+      class="small">rapprochement</text
+    ><text x="55" y="200">Compte</text><text x="385" y="200">Cookie</text><text
+      x="695"
+      y="200">Empreinte</text
+    ><text class="small" x="55" y="245">identifiant</text><text
+      class="small"
+      x="385"
+      y="245">navigateur</text
+    ><text class="small" x="695" y="245">estimation</text></svg
+  >
 </Page>
 
 --- notes
@@ -591,7 +826,7 @@ Prévoir sept minutes. Le schéma présente plusieurs possibilités, pas une cha
 
 Ces informations peuvent entrer dans l’évaluation d’une occasion publicitaire.
 
-**Sources.** [Documentation des mécanismes de suivi.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) ; [Federal Trade Commission, 2024.](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services).
+**Sources.** [Documentation des mécanismes de suivi](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) ; [Federal Trade Commission, 2024](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services).
 
 ---
 
@@ -602,7 +837,31 @@ Ces informations peuvent entrer dans l’évaluation d’une occasion publicitai
 </script>
 
 <Page>
-<h2>Une occasion d’affichage aux enchères</h2><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="L’éditeur propose une occasion via une SSP et une place d’échange. La DSP soumet une offre pour l’annonceur."><text x="20" y="80">Éditeur</text><text x="255" y="80">SSP</text><text x="450" y="80">Échange</text><text x="700" y="80">DSP</text><text x="850" y="80">Annonceur</text><path class="line" d="M20 130H980"/><text class="small" x="210" y="185">proposer</text><text class="small" x="450" y="185">confronter</text><text class="small" x="680" y="185">évaluer</text><path class="line" d="M120 245H570m0 0-12-6m12 6-12 6M890 245H630m0 0 12-6m-12 6 12 6"/><text class="small" x="230" y="285">une occasion</text><text class="small" x="680" y="285">une offre</text></svg>
+  <h2>Une occasion d’affichage aux enchères</h2>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="L’éditeur propose une occasion via une SSP et une place d’échange. La DSP soumet une offre pour l’annonceur."
+    ><text x="20" y="80">Éditeur</text><text x="255" y="80">SSP</text><text
+      x="450"
+      y="80">Échange</text
+    ><text x="700" y="80">DSP</text><text x="850" y="80">Annonceur</text><path
+      class="line"
+      d="M20 130H980"
+    /><text class="small" x="210" y="185">proposer</text><text
+      class="small"
+      x="450"
+      y="185">confronter</text
+    ><text class="small" x="680" y="185">évaluer</text><path
+      class="line"
+      d="M120 245H570m0 0-12-6m12 6-12 6M890 245H630m0 0 12-6m-12 6 12 6"
+    /><text class="small" x="230" y="285">une occasion</text><text
+      class="small"
+      x="680"
+      y="285">une offre</text
+    ></svg
+  >
 </Page>
 
 --- notes
@@ -623,7 +882,7 @@ Prévoir huit minutes. Faire jouer les rôles à quelques étudiants. À chaque 
 
 L’automatisation garantit-elle la valeur promise ?
 
-**Sources.** [IAB Tech Lab, OpenRTB 2.6, 2022.](https://iabtechlab.com/openrtb-2-6-is-ready-for-implementation/).
+**Sources.** [IAB Tech Lab, OpenRTB 2.6, 2022](https://iabtechlab.com/openrtb-2-6-is-ready-for-implementation/).
 
 ---
 
@@ -634,7 +893,12 @@ L’automatisation garantit-elle la valeur promise ?
 </script>
 
 <Page>
-<h2>La valeur des promesses</h2><div class="columns"><p>Ce qui est compté</p><p class="accent">Ce qui est provoqué</p></div><p class="meta">Tim Hwang · 2020</p>
+  <h2>La valeur des promesses</h2>
+  <div class="columns">
+    <p>Ce qui est compté</p>
+    <p class="accent">Ce qui est provoqué</p>
+  </div>
+  <p class="meta">Tim Hwang · 2020</p>
 </Page>
 
 --- notes
@@ -655,7 +919,7 @@ Prévoir sept minutes. Revenir à l’écart entre les 120 achats observés et l
 
 Nous avons suivi la vente des occasions de contact. Après la pause, nous verrons comment les plateformes contribuent à les produire.
 
-**Sources.** [Tim Hwang, 2020 / 2022.](https://us.macmillan.com/books/9780374538651/subprimeattentioncrisis/) ; [Thomas Blake, Chris Nosko et Steven Tadelis, 2015.](https://faculty.haas.berkeley.edu/stadelis/Tadelis.pdf).
+**Sources.** [Tim Hwang, 2020 / 2022](https://us.macmillan.com/books/9780374538651/subprimeattentioncrisis/) ; [Thomas Blake, Chris Nosko et Steven Tadelis, 2015](https://faculty.haas.berkeley.edu/stadelis/Tadelis.pdf).
 
 ---
 
@@ -666,7 +930,8 @@ Nous avons suivi la vente des occasions de contact. Après la pause, nous verron
 </script>
 
 <Page>
-<h1>Pause</h1><p class="large">10 min</p>
+  <h1>Pause</h1>
+  <p class="large">10 min</p>
 </Page>
 
 --- notes
@@ -684,7 +949,28 @@ La première partie dure 1 h 55. Reprendre après dix minutes. La suite porte su
 </script>
 
 <Page>
-<h2>La place de la publicité</h2><div class="stack"><p class="bar-label"><span>Meta</span><strong>97,6 %</strong></p><div class="bar" role="img" aria-label="Meta : 97,6 % des revenus viennent de la publicité"><span style="width:97.6%"></span></div><p class="bar-label"><span>Alphabet</span><strong>73,2 %</strong></p><div class="bar" role="img" aria-label="Alphabet : 73,2 % des revenus viennent de la publicité"><span style="width:73.2%"></span></div></div><p class="meta">Part du chiffre d’affaires · exercice 2025 · rapports annuels</p>
+  <h2>La place de la publicité</h2>
+  <div class="stack">
+    <p class="bar-label"><span>Meta</span><strong>97,6 %</strong></p>
+    <div
+      class="bar"
+      role="img"
+      aria-label="Meta : 97,6 % des revenus viennent de la publicité"
+    >
+      <span style="width:97.6%"></span>
+    </div>
+    <p class="bar-label"><span>Alphabet</span><strong>73,2 %</strong></p>
+    <div
+      class="bar"
+      role="img"
+      aria-label="Alphabet : 73,2 % des revenus viennent de la publicité"
+    >
+      <span style="width:73.2%"></span>
+    </div>
+  </div>
+  <p class="meta">
+    Part du chiffre d’affaires · exercice 2025 · rapports annuels
+  </p>
 </Page>
 
 --- notes
@@ -705,7 +991,7 @@ Prévoir sept minutes. Les deux barres utilisent la même échelle, de 0 à 100 
 
 Comment cette dépendance financière rencontre-t-elle la conception du service ?
 
-**Sources.** [Meta, Form 10-K, exercice clos le 31 décembre 2025.](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm) ; [Alphabet, Form 10-K, exercice clos le 31 décembre 2025.](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm).
+**Sources.** [Meta, Form 10-K, exercice clos le 31 décembre 2025](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm) ; [Alphabet, Form 10-K, exercice clos le 31 décembre 2025](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm).
 
 ---
 
@@ -716,7 +1002,24 @@ Comment cette dépendance financière rencontre-t-elle la conception du service 
 </script>
 
 <Page>
-<svg class="chart" viewBox="0 0 1000 340" role="img" aria-label="L’activité produit des traces qui alimentent la sélection, puis de nouvelles activités. Elle produit aussi des occasions publicitaires."><text x="55" y="75">Activité</text><text x="415" y="75">Traces</text><text x="750" y="75">Sélection</text><path class="line" d="M200 65H375m0 0-12-6m12 6-12 6M540 65H705m0 0-12-6m12 6-12 6M820 105V170H120V105m0 0-6 12m6-12 6 12"/><text class="small" x="305" y="155">nouvelles occasions d’activité</text><path class="line" d="M120 190V290H365m0 0-12-6m12 6-12 6"/><text class="highlight" x="410" y="300">Occasions publicitaires</text><text class="small" x="145" y="270">affichages</text></svg>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 340"
+    role="img"
+    aria-label="L’activité produit des traces qui alimentent la sélection, puis de nouvelles activités. Elle produit aussi des occasions publicitaires."
+    ><text x="55" y="75">Activité</text><text x="415" y="75">Traces</text><text
+      x="750"
+      y="75">Sélection</text
+    ><path
+      class="line"
+      d="M200 65H375m0 0-12-6m12 6-12 6M540 65H705m0 0-12-6m12 6-12 6M820 105V170H120V105m0 0-6 12m6-12 6 12"
+    /><text class="small" x="305" y="155">nouvelles occasions d’activité</text
+    ><path class="line" d="M120 190V290H365m0 0-12-6m12 6-12 6" /><text
+      class="highlight"
+      x="410"
+      y="300">Occasions publicitaires</text
+    ><text class="small" x="145" y="270">affichages</text></svg
+  >
 </Page>
 
 --- notes
@@ -729,6 +1032,8 @@ Mais l’entreprise arbitre entre plusieurs objectifs : recettes, fidélité, s�
 
 Une réaction peut exprimer l’adhésion, l’irritation ou la curiosité. Optimiser sa fréquence ne signifie donc pas améliorer directement le bien-être ou la qualité d’une discussion.
 
+Classer consiste à ordonner des éléments. Recommander consiste à en proposer une sélection. Modérer consiste à appliquer des règles de recevabilité ou de traitement des contenus. Une annonce se distingue par son caractère sponsorisé.
+
 :::warning
 **Précision.** Une recommandation non sponsorisée peut soutenir indirectement le financement sans être une annonce achetée. Le schéma distingue la boucle de sélection et les occasions publicitaires.
 :::
@@ -739,7 +1044,7 @@ Prévoir six minutes. Le chapitre sur les gatekeepers détaillera les mécanisme
 
 Les objectifs prennent également forme dans les interfaces.
 
-**Sources.** [Federal Trade Commission, 2024.](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services) ; [Meta, 2021.](https://about.fb.com/news/2021/01/how-does-news-feed-predict-what-you-want-to-see/).
+**Sources.** [Federal Trade Commission, 2024](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services) ; [Meta, 2021](https://about.fb.com/news/2021/01/how-does-news-feed-predict-what-you-want-to-see/).
 
 ---
 
@@ -750,7 +1055,22 @@ Les objectifs prennent également forme dans les interfaces.
 </script>
 
 <Page>
-<h2>Rendre une action probable</h2><dl class="rows"><div><dt>Motivation</dt><dd>Attendre un message</dd></div><div><dt>Facilité</dt><dd>Ouvrir en un geste</dd></div><div><dt>Sollicitation</dt><dd>Recevoir une notification</dd></div></dl><p class="meta">B. J. Fogg</p>
+  <h2>Rendre une action probable</h2>
+  <dl class="rows">
+    <div>
+      <dt>Motivation</dt>
+      <dd>Attendre un message</dd>
+    </div>
+    <div>
+      <dt>Facilité</dt>
+      <dd>Ouvrir en un geste</dd>
+    </div>
+    <div>
+      <dt>Sollicitation</dt>
+      <dd>Recevoir une notification</dd>
+    </div>
+  </dl>
+  <p class="meta">B. J. Fogg</p>
 </Page>
 
 --- notes
@@ -769,7 +1089,7 @@ Prévoir trois minutes, puis deux pour la récompense intermittente.
 
 Le retour attendu peut toutefois être incertain.
 
-**Sources.** [B. J. Fogg.](https://www.behaviormodel.org/home).
+**Sources.** [B. J. Fogg](https://www.behaviormodel.org/home).
 
 ---
 
@@ -780,7 +1100,19 @@ Le retour attendu peut toutefois être incertain.
 </script>
 
 <Page>
-<h2>Un retour incertain</h2><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="Ouvrir peut donner accès à un contenu intéressant, sans garantie, et inciter à revenir."><text x="40" y="105">Ouvrir</text><text x="385" y="105">Découvrir</text><text x="775" y="105">Revenir</text><path class="line" d="M190 95H345m0 0-12-6m12 6-12 6M585 95H735m0 0-12-6m12 6-12 6M840 135V240H100V135m0 0-6 12m6-12 6 12"/><text class="small" x="350" y="210">un contenu parfois intéressant</text></svg>
+  <h2>Un retour incertain</h2>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="Ouvrir peut donner accès à un contenu intéressant, sans garantie, et inciter à revenir."
+    ><text x="40" y="105">Ouvrir</text><text x="385" y="105">Découvrir</text
+    ><text x="775" y="105">Revenir</text><path
+      class="line"
+      d="M190 95H345m0 0-12-6m12 6-12 6M585 95H735m0 0-12-6m12 6-12 6M840 135V240H100V135m0 0-6 12m6-12 6 12"
+    /><text class="small" x="350" y="210">un contenu parfois intéressant</text
+    ></svg
+  >
 </Page>
 
 --- notes
@@ -801,7 +1133,7 @@ Prévoir deux minutes. Le schéma décrit une possibilité de répétition, pas 
 
 Influencer une action et entraver un choix sont deux questions à distinguer.
 
-**Sources.** [Charles B. Ferster et B. F. Skinner, 1957.](https://www.bfskinner.org/wp-content/uploads/2015/05/Schedules_of_Reinforcement_PDF.pdf) ; [Vikram R. Bhargava et Manuel Velasquez, 2021.](https://doi.org/10.1017/beq.2020.32).
+**Sources.** [Charles B. Ferster et B. F. Skinner, 1957](https://www.bfskinner.org/wp-content/uploads/2015/05/Schedules_of_Reinforcement_PDF.pdf) ; [Vikram R. Bhargava et Manuel Velasquez, 2021](https://doi.org/10.1017/beq.2020.32).
 
 ---
 
@@ -812,7 +1144,25 @@ Influencer une action et entraver un choix sont deux questions à distinguer.
 </script>
 
 <Page>
-<h2>Des choix orientés</h2><dl class="rows"><div><dt>Dissimulation</dt><dd>Un renouvellement peu visible</dd></div><div><dt>Obstruction</dt><dd>Une sortie difficile</dd></div><div><dt>Pression</dt><dd>Un refus culpabilisant</dd></div><div><dt>Tromperie</dt><dd>Une urgence fabriquée</dd></div></dl>
+  <h2>Des choix orientés</h2>
+  <dl class="rows">
+    <div>
+      <dt>Dissimulation</dt>
+      <dd>Un renouvellement peu visible</dd>
+    </div>
+    <div>
+      <dt>Obstruction</dt>
+      <dd>Une sortie difficile</dd>
+    </div>
+    <div>
+      <dt>Pression</dt>
+      <dd>Un refus culpabilisant</dd>
+    </div>
+    <div>
+      <dt>Tromperie</dt>
+      <dd>Une urgence fabriquée</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -833,7 +1183,7 @@ Prévoir huit minutes. Faire donner un exemple fictif pour chaque mécanisme, pu
 
 Nous pouvons maintenant analyser une interface et proposer une modification.
 
-**Sources.** [Federal Trade Commission, 2022.](https://www.ftc.gov/reports/bringing-dark-patterns-light).
+**Sources.** [Federal Trade Commission, 2022](https://www.ftc.gov/reports/bringing-dark-patterns-light).
 
 ---
 
@@ -844,7 +1194,22 @@ Nous pouvons maintenant analyser une interface et proposer une modification.
 </script>
 
 <Page>
-<p class="meta">Atelier · maquettes fictives</p><div class="columns"><div class="mock"><p>Recevoir les nouveautés ?</p><span class="accept">Activer les notifications</span><span class="refuse">Non, je préfère tout manquer</span></div><div class="mock"><p>Votre abonnement</p><span class="accept">Passer à l’offre supérieure</span><span class="refuse">Pour résilier, contactez le support</span></div></div><p>Quel objectif ? Quel obstacle ? Quelle modification ?</p>
+  <p class="meta">Atelier · maquettes fictives</p>
+  <div class="columns">
+    <div class="mock">
+      <p>Recevoir les nouveautés ?</p>
+      <span class="accept">Activer les notifications</span><span class="refuse"
+        >Non, je préfère tout manquer</span
+      >
+    </div>
+    <div class="mock">
+      <p>Votre abonnement</p>
+      <span class="accept">Passer à l’offre supérieure</span><span
+        class="refuse">Pour résilier, contactez le support</span
+      >
+    </div>
+  </div>
+  <p>Quel objectif ? Quel obstacle ? Quelle modification ?</p>
 </Page>
 
 --- notes
@@ -867,7 +1232,7 @@ Une modification visuelle ne supprime pas toute incitation financière. Il faut 
 
 Les capacités de mesure et d’intervention posent une question plus générale de pouvoir.
 
-**Sources.** [Federal Trade Commission, 2022.](https://www.ftc.gov/reports/bringing-dark-patterns-light).
+**Sources.** [Federal Trade Commission, 2022](https://www.ftc.gov/reports/bringing-dark-patterns-light).
 
 ---
 
@@ -878,7 +1243,23 @@ Les capacités de mesure et d’intervention posent une question plus générale
 </script>
 
 <Page>
-<h2>Le surplus comportemental</h2><p class="meta">Shoshana Zuboff · 2019</p><svg class="chart" viewBox="0 0 1000 310" role="img" aria-label="Dans le cadre critique de Zuboff, des traces d’expérience alimentent des prévisions et des capacités d’intervention."><text x="30" y="100">Expérience</text><text x="390" y="100">Prévision</text><text x="755" y="100">Intervention</text><path class="line" d="M220 90H345m0 0-12-6m12 6-12 6M560 90H705m0 0-12-6m12 6-12 6"/><text class="small" x="30" y="200">traces appropriées</text><text class="small" x="390" y="200">modèles</text><text class="small" x="755" y="200">capacités d’action</text></svg>
+  <h2>Le surplus comportemental</h2>
+  <p class="meta">Shoshana Zuboff · 2019</p>
+  <svg
+    class="chart"
+    viewBox="0 0 1000 310"
+    role="img"
+    aria-label="Dans le cadre critique de Zuboff, des traces d’expérience alimentent des prévisions et des capacités d’intervention."
+    ><text x="30" y="100">Expérience</text><text x="390" y="100">Prévision</text
+    ><text x="755" y="100">Intervention</text><path
+      class="line"
+      d="M220 90H345m0 0-12-6m12 6-12 6M560 90H705m0 0-12-6m12 6-12 6"
+    /><text class="small" x="30" y="200">traces appropriées</text><text
+      class="small"
+      x="390"
+      y="200">modèles</text
+    ><text class="small" x="755" y="200">capacités d’action</text></svg
+  >
 </Page>
 
 --- notes
@@ -901,7 +1282,7 @@ Prévoir huit minutes. Présenter le schéma comme une lecture attribuée à Zub
 
 Les cas suivants permettent de comparer des usages au-delà de la publicité.
 
-**Sources.** [Shoshana Zuboff, 2015, 2019 / 2020.](https://www.sfu.ca/~palys/Zuboff-2015-BigOther-SurveillanceCapitalism.pdf).
+**Sources.** [Shoshana Zuboff, 2015, 2019 / 2020](https://www.sfu.ca/~palys/Zuboff-2015-BigOther-SurveillanceCapitalism.pdf).
 
 ---
 
@@ -912,7 +1293,22 @@ Les cas suivants permettent de comparer des usages au-delà de la publicité.
 </script>
 
 <Page>
-<h2>Conduire et être évalué</h2><dl class="rows"><div><dt>Activité</dt><dd>Un trajet en voiture</dd></div><div><dt>Données</dt><dd>Localisation et conduite</dd></div><div><dt>Usage</dt><dd>Évaluation assurantielle</dd></div></dl><p class="meta">GM / OnStar · dossier FTC · 2025–2026</p>
+  <h2>Conduire et être évalué</h2>
+  <dl class="rows">
+    <div>
+      <dt>Activité</dt>
+      <dd>Un trajet en voiture</dd>
+    </div>
+    <div>
+      <dt>Données</dt>
+      <dd>Localisation et conduite</dd>
+    </div>
+    <div>
+      <dt>Usage</dt>
+      <dd>Évaluation assurantielle</dd>
+    </div>
+  </dl>
+  <p class="meta">GM / OnStar · dossier FTC · 2025–2026</p>
 </Page>
 
 --- notes
@@ -929,7 +1325,7 @@ Une trace issue de l’usage d’un véhicule peut donc participer à l’évalu
 Prévoir quatre minutes, puis quatre sur le cas de santé. Demander ce qui change quand les données servent à évaluer une personne plutôt qu’à lui montrer une annonce.
 :::
 
-**Sources.** [FTC, GM et OnStar, 2025–2026.](https://www.ftc.gov/legal-library/browse/cases-proceedings/2423052-general-motors-llc-et-al-matter).
+**Sources.** [FTC, GM et OnStar, 2025–2026](https://www.ftc.gov/legal-library/browse/cases-proceedings/2423052-general-motors-llc-et-al-matter).
 
 ---
 
@@ -940,7 +1336,12 @@ Prévoir quatre minutes, puis quatre sur le cas de santé. Demander ce qui chang
 </script>
 
 <Page>
-<h2>Changer la destination des données</h2><div class="columns"><p>Une demande d’aide</p><p class="accent">Un réemploi publicitaire</p></div><p class="meta">BetterHelp · FTC · 2023</p>
+  <h2>Changer la destination des données</h2>
+  <div class="columns">
+    <p>Une demande d’aide</p>
+    <p class="accent">Un réemploi publicitaire</p>
+  </div>
+  <p class="meta">BetterHelp · FTC · 2023</p>
 </Page>
 
 --- notes
@@ -959,7 +1360,7 @@ Prévoir quatre minutes. Comparer avec l’assurance : quelles données, quels d
 
 La mesure peut aussi servir à contrôler le travail sans transaction publicitaire.
 
-**Sources.** [FTC, BetterHelp, 2023.](https://www.ftc.gov/system/files/ftc_gov/pdf/commissioner_wilson_concur_betterhelp_3.2.23.pdf).
+**Sources.** [FTC, BetterHelp, 2023](https://www.ftc.gov/system/files/ftc_gov/pdf/commissioner_wilson_concur_betterhelp_3.2.23.pdf).
 
 ---
 
@@ -970,7 +1371,8 @@ La mesure peut aussi servir à contrôler le travail sans transaction publicitai
 </script>
 
 <Page>
-<h1>Une souris immobile. Un travail interrompu ?</h1><p class="meta">Surveillance au travail · CNIL · 2025</p>
+  <h1>Une souris immobile. Un travail interrompu ?</h1>
+  <p class="meta">Surveillance au travail · CNIL · 2025</p>
 </Page>
 
 --- notes
@@ -989,7 +1391,7 @@ Le problème tient donc au rapport entre une mesure et la décision qui s’appu
 Prévoir trois minutes, puis quatre sur les espaces connectés.
 :::
 
-**Sources.** [CNIL, décision du 19 décembre 2024, publication du 4 février 2025.](https://www.cnil.fr/fr/surveillance-excessive-des-salaries-sanction-de-40-000-euros-entreprise-secteur-immobilier).
+**Sources.** [CNIL, décision du 19 décembre 2024, publication du 4 février 2025](https://www.cnil.fr/fr/surveillance-excessive-des-salaries-sanction-de-40-000-euros-entreprise-secteur-immobilier).
 
 ---
 
@@ -1000,7 +1402,20 @@ Prévoir trois minutes, puis quatre sur les espaces connectés.
 </script>
 
 <Page>
-<dl class="rows"><div><dt>Maison</dt><dd>Qui accède aux images ?</dd></div><div><dt>Ville</dt><dd>Qui décide de la finalité ?</dd></div><div><dt>Sécurité</dt><dd>Qui acquiert quelles données ?</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>Maison</dt>
+      <dd>Qui accède aux images ?</dd>
+    </div>
+    <div>
+      <dt>Ville</dt>
+      <dd>Qui décide de la finalité ?</dd>
+    </div>
+    <div>
+      <dt>Sécurité</dt>
+      <dd>Qui acquiert quelles données ?</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -1021,7 +1436,7 @@ Prévoir quatre minutes. Faire distinguer publicité, contrôle organisationnel 
 
 Les réponses doivent donc agir à plusieurs échelles.
 
-**Sources.** [FTC, Ring, 2023.](https://www.ftc.gov/legal-library/browse/cases-proceedings/ring-llc-timeline-item-2023-05-31) ; [ODNI, rapport déclassifié en 2023 sur les informations commercialement disponibles.](https://archive.dni.gov/index.php/newsroom/press-releases/press-releases-2023/3701-dni-haines-statement-on-declassified-report-on-commercially-available-information).
+**Sources.** [FTC, Ring, 2023](https://www.ftc.gov/legal-library/browse/cases-proceedings/ring-llc-timeline-item-2023-05-31) ; [ODNI, rapport déclassifié en 2023 sur les informations commercialement disponibles](https://archive.dni.gov/index.php/newsroom/press-releases/press-releases-2023/3701-dni-haines-statement-on-declassified-report-on-commercially-available-information).
 
 ---
 
@@ -1032,7 +1447,21 @@ Les réponses doivent donc agir à plusieurs échelles.
 </script>
 
 <Page>
-<h2>Organiser d’autres conditions</h2><dl class="rows"><div><dt>Usage</dt><dd>Régler les sollicitations</dd></div><div><dt>Service</dt><dd>Changer la collecte et les objectifs</dd></div><div><dt>Collectif</dt><dd>Financer, encadrer, contrôler</dd></div></dl>
+  <h2>Organiser d’autres conditions</h2>
+  <dl class="rows">
+    <div>
+      <dt>Usage</dt>
+      <dd>Régler les sollicitations</dd>
+    </div>
+    <div>
+      <dt>Service</dt>
+      <dd>Changer la collecte et les objectifs</dd>
+    </div>
+    <div>
+      <dt>Collectif</dt>
+      <dd>Financer, encadrer, contrôler</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -1053,7 +1482,7 @@ Revenir à Citton : il s’agit aussi de soutenir des situations où apprendre, 
 Prévoir sept minutes. Demander quelle décision collective soutiendrait une attention choisie.
 :::
 
-**Sources.** [Yves Citton, 2014.](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [CNIL, règles relatives aux cookies et autres traceurs.](https://www.cnil.fr/fr/cookies-et-autres-traceurs/que-dit-la-loi) ; [Union européenne, DSA, règlement (UE) 2022/2065.](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng).
+**Sources.** [Yves Citton, 2014](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [CNIL, règles relatives aux cookies et autres traceurs](https://www.cnil.fr/fr/cookies-et-autres-traceurs/que-dit-la-loi) ; [Union européenne, DSA, règlement (UE) 2022/2065](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng).
 
 ---
 
@@ -1064,7 +1493,24 @@ Prévoir sept minutes. Demander quelle décision collective soutiendrait une att
 </script>
 
 <Page>
-<dl class="rows"><div><dt>Smythe</dt><dd>Constituer une audience</dd></div><div><dt>Simon</dt><dd>Allouer une attention limitée</dd></div><div><dt>Citton</dt><dd>Organiser des milieux</dd></div><div><dt>Zuboff</dt><dd>Distribuer des capacités d’action</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>Smythe</dt>
+      <dd>Constituer une audience</dd>
+    </div>
+    <div>
+      <dt>Simon</dt>
+      <dd>Allouer une attention limitée</dd>
+    </div>
+    <div>
+      <dt>Citton</dt>
+      <dd>Organiser des milieux</dd>
+    </div>
+    <div>
+      <dt>Zuboff</dt>
+      <dd>Distribuer des capacités d’action</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -1081,7 +1527,7 @@ Prévoir deux minutes, puis trois sur les arbitrages organisationnels. Faire ass
 
 Ces questions se rencontrent dans les décisions des entreprises.
 
-**Sources.** [Herbert A. Simon, 1971.](https://atelierdesfuturs.org/wp-content/uploads/2025/07/1971-simon.pdf) ; [Dallas W. Smythe, 1977.](https://journals.uvic.ca/index.php/ctheory/article/view/13715/4463) ; [Yves Citton, 2014.](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [Shoshana Zuboff, 2015, 2019 / 2020.](https://www.sfu.ca/~palys/Zuboff-2015-BigOther-SurveillanceCapitalism.pdf).
+**Sources.** [Herbert A. Simon, 1971](https://atelierdesfuturs.org/wp-content/uploads/2025/07/1971-simon.pdf) ; [Dallas W. Smythe, 1977](https://journals.uvic.ca/index.php/ctheory/article/view/13715/4463) ; [Yves Citton, 2014](https://shs.cairn.info/pour-une-ecologie-de-l-attention--9782021181425) ; [Shoshana Zuboff, 2015, 2019 / 2020](https://www.sfu.ca/~palys/Zuboff-2015-BigOther-SurveillanceCapitalism.pdf).
 
 ---
 
@@ -1092,7 +1538,13 @@ Ces questions se rencontrent dans les décisions des entreprises.
 </script>
 
 <Page>
-<h2>Des arbitrages organisationnels</h2><div class="columns three"><p>Revenus</p><p>Satisfaction</p><p>Sécurité</p></div><p class="meta">Frances Haugen · témoignage au Sénat américain · 2021</p>
+  <h2>Des arbitrages organisationnels</h2>
+  <div class="columns three">
+    <p>Revenus</p>
+    <p>Satisfaction</p>
+    <p>Sécurité</p>
+  </div>
+  <p class="meta">Frances Haugen · témoignage au Sénat américain · 2021</p>
 </Page>
 
 --- notes
@@ -1111,7 +1563,7 @@ Prévoir trois minutes. Dans le parcours court, c’est un point de relais vers 
 
 Les entreprises de données ont aussi construit des infrastructures employées pour d’autres tâches.
 
-**Sources.** [Sénat américain, 5 octobre 2021.](https://www.commerce.senate.gov/meetings/subcommittee-protecting-kids-online-testimony-from-a-facebook-whistleblower/).
+**Sources.** [Sénat américain, 5 octobre 2021](https://www.commerce.senate.gov/meetings/subcommittee-protecting-kids-online-testimony-from-a-facebook-whistleblower/).
 
 ---
 
@@ -1122,7 +1574,15 @@ Les entreprises de données ont aussi construit des infrastructures employées p
 </script>
 
 <Page>
-<h2>Les conditions de l’IA</h2><div class="columns three"><p>Recherche</p><p>Données</p><p>Calcul</p><p>Travail</p><p>Capitaux</p><p>Usages</p></div>
+  <h2>Les conditions de l’IA</h2>
+  <div class="columns three">
+    <p>Recherche</p>
+    <p>Données</p>
+    <p>Calcul</p>
+    <p>Travail</p>
+    <p>Capitaux</p>
+    <p>Usages</p>
+  </div>
 </Page>
 
 --- notes
@@ -1141,7 +1601,7 @@ L’histoire scientifique compte également. Les architectures neuronales, les m
 Prévoir quatre minutes, puis trois sur les jalons suivants.
 :::
 
-**Sources.** [Meta, Form 10-K, exercice clos le 31 décembre 2025.](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm) ; [Alphabet, Form 10-K, exercice clos le 31 décembre 2025.](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm) ; [Alex Krizhevsky, Ilya Sutskever et Geoffrey E. Hinton, 2012.](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ; [Yann LeCun, Yoshua Bengio et Geoffrey Hinton, 2015.](https://www.nature.com/articles/nature14539).
+**Sources.** [Meta, Form 10-K, exercice clos le 31 décembre 2025](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm) ; [Alphabet, Form 10-K, exercice clos le 31 décembre 2025](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm) ; [Alex Krizhevsky, Ilya Sutskever et Geoffrey E. Hinton, 2012](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ; [Yann LeCun, Yoshua Bengio et Geoffrey Hinton, 2015](https://www.nature.com/articles/nature14539).
 
 ---
 
@@ -1152,7 +1612,24 @@ Prévoir quatre minutes, puis trois sur les jalons suivants.
 </script>
 
 <Page>
-<dl class="rows"><div><dt>2012</dt><dd>AlexNet : classer des images</dd></div><div><dt>2016</dt><dd>YouTube : recommander des vidéos</dd></div><div><dt>2017</dt><dd>Transformer : une architecture</dd></div><div><dt>2020</dt><dd>GPT-3 : un modèle de langage</dd></div></dl>
+  <dl class="rows">
+    <div>
+      <dt>2012</dt>
+      <dd>AlexNet : classer des images</dd>
+    </div>
+    <div>
+      <dt>2016</dt>
+      <dd>YouTube : recommander des vidéos</dd>
+    </div>
+    <div>
+      <dt>2017</dt>
+      <dd>Transformer : une architecture</dd>
+    </div>
+    <div>
+      <dt>2020</dt>
+      <dd>GPT-3 : un modèle de langage</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -1173,7 +1650,7 @@ Prévoir trois minutes. Faire nommer la tâche à chaque ligne avant de parler d
 
 Que signifie exactement apprendre à partir de données ?
 
-**Sources.** [Alex Krizhevsky, Ilya Sutskever et Geoffrey E. Hinton, 2012.](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ; [Paul Covington, Jay Adams et Emre Sargin, 2016.](https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/) ; [Ashish Vaswani et al., 2017.](https://arxiv.org/abs/1706.03762) ; [Tom B. Brown et al., 2020.](https://arxiv.org/abs/2005.14165).
+**Sources.** [Alex Krizhevsky, Ilya Sutskever et Geoffrey E. Hinton, 2012](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ; [Paul Covington, Jay Adams et Emre Sargin, 2016](https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/) ; [Ashish Vaswani et al., 2017](https://arxiv.org/abs/1706.03762) ; [Tom B. Brown et al., 2020](https://arxiv.org/abs/2005.14165).
 
 ---
 
@@ -1184,7 +1661,16 @@ Que signifie exactement apprendre à partir de données ?
 </script>
 
 <Page>
-<div class="columns"><div><h2>Entraînement</h2><p>Ajuster les paramètres</p></div><div><h2>Inférence</h2><p>Produire une sortie</p></div></div>
+  <div class="columns">
+    <div>
+      <h2>Entraînement</h2>
+      <p>Ajuster les paramètres</p>
+    </div>
+    <div>
+      <h2>Inférence</h2>
+      <p>Produire une sortie</p>
+    </div>
+  </div>
 </Page>
 
 --- notes
@@ -1205,7 +1691,7 @@ Prévoir sept minutes. Comparer une estimation de clic et une réponse textuelle
 
 La génération de langage partage certaines méthodes, mais elle change la tâche et le produit.
 
-**Sources.** [Yann LeCun, Yoshua Bengio et Geoffrey Hinton, 2015.](https://www.nature.com/articles/nature14539) ; [Tom B. Brown et al., 2020.](https://arxiv.org/abs/2005.14165).
+**Sources.** [Yann LeCun, Yoshua Bengio et Geoffrey Hinton, 2015](https://www.nature.com/articles/nature14539) ; [Tom B. Brown et al., 2020](https://arxiv.org/abs/2005.14165).
 
 ---
 
@@ -1216,7 +1702,16 @@ La génération de langage partage certaines méthodes, mais elle change la tâc
 </script>
 
 <Page>
-<div class="columns"><div><p class="meta">Ciblage</p><h2>Une probabilité de clic</h2></div><div><p class="meta">Modèle de langage</p><h2>Une continuation textuelle</h2></div></div>
+  <div class="columns">
+    <div>
+      <p class="meta">Ciblage</p>
+      <h2>Une probabilité de clic</h2>
+    </div>
+    <div>
+      <p class="meta">Modèle de langage</p>
+      <h2>Une continuation textuelle</h2>
+    </div>
+  </div>
 </Page>
 
 --- notes
@@ -1237,7 +1732,7 @@ Prévoir sept minutes. Conserver cette distinction entre tâche, technique et mo
 
 Un service d’IA peut maintenant être examiné avec la même méthode d’enquête.
 
-**Sources.** [Ashish Vaswani et al., 2017.](https://arxiv.org/abs/1706.03762) ; [Tom B. Brown et al., 2020.](https://arxiv.org/abs/2005.14165).
+**Sources.** [Ashish Vaswani et al., 2017](https://arxiv.org/abs/1706.03762) ; [Tom B. Brown et al., 2020](https://arxiv.org/abs/2005.14165).
 
 ---
 
@@ -1248,7 +1743,13 @@ Un service d’IA peut maintenant être examiné avec la même méthode d’enqu
 </script>
 
 <Page>
-<p class="meta">Atelier · scénario fictif</p><h2>Un service d’aide à la rédaction</h2><div class="columns"><p>Un modèle existant<br/>Un abonnement</p><p>Des requêtes<br/>Des journaux conservés</p></div><p class="accent">Qu’est-ce qui entraîne le modèle ?</p>
+  <p class="meta">Atelier · scénario fictif</p>
+  <h2>Un service d’aide à la rédaction</h2>
+  <div class="columns">
+    <p>Un modèle existant<br />Un abonnement</p>
+    <p>Des requêtes<br />Des journaux conservés</p>
+  </div>
+  <p class="accent">Qu’est-ce qui entraîne le modèle ?</p>
 </Page>
 
 --- notes
@@ -1280,7 +1781,25 @@ La même grille s’applique à une publicité ou à une fonctionnalité ordinai
 </script>
 
 <Page>
-<h2>Anatomie d’un service</h2><dl class="rows"><div><dt>Signal</dt><dd>Quelle activité est mesurée ?</dd></div><div><dt>Boucle</dt><dd>Quelle décision en dépend ?</dd></div><div><dt>Transaction</dt><dd>Qui gagne quoi ?</dd></div><div><dt>Expérience</dt><dd>Que devient-il possible de faire ?</dd></div></dl>
+  <h2>Anatomie d’un service</h2>
+  <dl class="rows">
+    <div>
+      <dt>Signal</dt>
+      <dd>Quelle activité est mesurée ?</dd>
+    </div>
+    <div>
+      <dt>Boucle</dt>
+      <dd>Quelle décision en dépend ?</dd>
+    </div>
+    <div>
+      <dt>Transaction</dt>
+      <dd>Qui gagne quoi ?</dd>
+    </div>
+    <div>
+      <dt>Expérience</dt>
+      <dd>Que devient-il possible de faire ?</dd>
+    </div>
+  </dl>
 </Page>
 
 --- notes
@@ -1308,7 +1827,12 @@ Les quatre questions permettent de reconstruire un dispositif sans supposer qu�
 </script>
 
 <Page>
-<h1>Qui organise les rencontres ?</h1><div class="columns three"><p>Relations</p><p>Objectifs</p><p class="accent">Sélections</p></div>
+  <h1>Qui organise les rencontres ?</h1>
+  <div class="columns three">
+    <p>Relations</p>
+    <p>Objectifs</p>
+    <p class="accent">Sélections</p>
+  </div>
 </Page>
 
 --- notes

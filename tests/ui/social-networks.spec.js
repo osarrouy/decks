@@ -51,7 +51,7 @@ for (const width of [1280, 390]) {
       await frame.waitForLoadState("networkidle");
       await expect(
         reader.getByRole("heading", {
-          name: "Distribution de la visibilité",
+          name: "Distribuer la visibilité",
           exact: true,
         }),
       ).toBeVisible();
@@ -107,22 +107,130 @@ for (const width of [1280, 390]) {
       await expect(
         reader.getByRole("button", { name: "Slide ou étape suivante" }),
       ).toBeDisabled();
-      const powerLawIndex = slides.findIndex(
-        (slide) => slide.id === "power-law",
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
+      expect(
+        await frame.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
+      await page.locator("iframe").scrollIntoViewIfNeeded();
+      await page.screenshot({
+        path: `/tmp/social-networks-reorganization/visibility-${width}-${dark ? "dark" : "light"}.png`,
+      });
+      await page.getByRole("link", { name: "Chapitre suivant →" }).click();
+      await expect(page.locator("iframe")).toHaveAttribute(
+        "src",
+        "/slides/social-networks-virality/index.html",
       );
-      await select.selectOption(String(powerLawIndex));
+      await page.getByRole("link", { name: "Chapitre suivant →" }).click();
+      await expect(page.locator("iframe")).toHaveAttribute(
+        "src",
+        "/slides/social-networks-polarization/index.html",
+      );
+      expect(overflow).toEqual([]);
+      expect(errors).toEqual([]);
+      expect(missing).toEqual([]);
+    });
+  }
+}
+
+for (const width of [1280, 390]) {
+  for (const dark of [false, true]) {
+    test(`publication sequence renders in the introduction at ${width}px in ${dark ? "dark" : "light"} mode`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.emulateMedia({
+        colorScheme: dark ? "dark" : "light",
+        reducedMotion: "reduce",
+      });
+      const errors = [];
+      page.on("pageerror", (error) => errors.push(error.message));
+      await page.goto(
+        course.replace(
+          "distribution-de-la-visibilite",
+          "reseaux-sociaux-numeriques",
+        ),
+      );
+      const reader = page.frameLocator(
+        'iframe[src="/slides/social-networks/index.html"]',
+      );
+      const select = reader.getByLabel("Choisir une slide");
+      await expect(select.locator("option")).toHaveCount(
+        introductionSlides.length,
+      );
+      const frame = page
+        .frames()
+        .find((frame) => frame.url().includes("/slides/social-networks/"));
+      await frame.waitForLoadState("networkidle");
+      const toggle = reader.getByRole("switch", { name: "Dark mode" });
+      if ((await toggle.getAttribute("aria-checked")) !== String(dark))
+        await toggle.click();
+      await expect(toggle).toHaveAttribute("aria-checked", String(dark));
       const next = reader.getByRole("button", {
         name: "Slide ou étape suivante",
       });
+      const start =
+        introductionSlides.findIndex((slide) => slide.id === "clay-shirky") - 1;
+      for (let index = start; index < introductionSlides.length; index++) {
+        await select.selectOption(String(index));
+        await expect(select).toHaveValue(String(index));
+        await expect
+          .poll(() =>
+            reader
+              .locator("img")
+              .evaluateAll((images) =>
+                images.every(
+                  (image) => image.complete && image.naturalWidth > 0,
+                ),
+              ),
+          )
+          .toBe(true);
+        await reader.locator(".slide").screenshot({
+          path: `/tmp/publication-sequence/${width}-${dark ? "dark" : "light"}-${index}.png`,
+        });
+      }
+      const powerLawIndex = introductionSlides.findIndex(
+        (slide) => slide.id === "power-law",
+      );
+      expect(powerLawIndex).toBeGreaterThan(-1);
+      await select.selectOption(String(powerLawIndex));
+      const chart = reader.locator(".power-law");
+      const pareto = chart.locator(".pareto-layer");
+      await expect(pareto).toHaveAttribute("data-visible", "false");
       await next.focus();
       await expect(next).toBeFocused();
       await next.press("Space");
       await expect(select).toHaveValue(String(powerLawIndex));
-      await expect(reader.locator(".step")).toContainText("Étape 1/");
+      await expect(pareto).toHaveAttribute("data-visible", "true");
+      await expect(pareto).toHaveCSS("transition-duration", "0s");
+      await expect(chart).toContainText("≈ 80 %");
+      await chart.screenshot({
+        path: `/tmp/publication-sequence/power-law-${width}-${dark}-step1.png`,
+      });
       await next.press("Space");
       await expect(select).toHaveValue(String(powerLawIndex));
       await expect(reader.locator(".step")).toContainText("Étape 2/");
-      const publicationIndex = slides.findIndex(
+      await expect(chart).toContainText("≈ 92 %");
+      await chart.screenshot({
+        path: `/tmp/publication-sequence/power-law-${width}-${dark}-step2.png`,
+      });
+      const chartFits = await chart.evaluate((element) => {
+        const bounds = element.getBoundingClientRect();
+        const slide = element.closest(".slide").getBoundingClientRect();
+        return (
+          bounds.left >= slide.left - 1 &&
+          bounds.right <= slide.right + 1 &&
+          bounds.top >= slide.top - 1 &&
+          bounds.bottom <= slide.bottom + 1
+        );
+      });
+      expect(chartFits).toBe(true);
+      const publicationIndex = introductionSlides.findIndex(
         (slide) => slide.id === "publication-filter",
       );
       await select.selectOption(String(publicationIndex));
@@ -174,33 +282,7 @@ for (const width of [1280, 390]) {
         );
       });
       expect(fits).toBe(true);
-      expect(
-        await page.evaluate(
-          () => document.documentElement.scrollWidth <= innerWidth,
-        ),
-      ).toBe(true);
-      expect(
-        await frame.evaluate(
-          () => document.documentElement.scrollWidth <= innerWidth,
-        ),
-      ).toBe(true);
-      await page.locator("iframe").scrollIntoViewIfNeeded();
-      await page.screenshot({
-        path: `/tmp/social-networks-reorganization/visibility-${width}-${dark ? "dark" : "light"}.png`,
-      });
-      await page.getByRole("link", { name: "Chapitre suivant →" }).click();
-      await expect(page.locator("iframe")).toHaveAttribute(
-        "src",
-        "/slides/social-networks-virality/index.html",
-      );
-      await page.getByRole("link", { name: "Chapitre suivant →" }).click();
-      await expect(page.locator("iframe")).toHaveAttribute(
-        "src",
-        "/slides/social-networks-polarization/index.html",
-      );
-      expect(overflow).toEqual([]);
       expect(errors).toEqual([]);
-      expect(missing).toEqual([]);
     });
   }
 }
@@ -220,7 +302,12 @@ test("the introduction renders its final authored slide and opens the merged cha
   const select = reader.getByLabel("Choisir une slide");
   const options = select.locator("option");
   await expect(options).toHaveCount(introductionSlides.length);
+  const frame = page
+    .frames()
+    .find((frame) => frame.url().includes("/slides/social-networks/"));
+  await frame.waitForLoadState("networkidle");
   await select.selectOption({ index: (await options.count()) - 1 });
+  await expect(select).toHaveValue(String(introductionSlides.length - 1));
   const finalHeading = introductionSlides
     .at(-1)
     .content.match(/^#+\s+(.+)$/m)[1];
@@ -241,8 +328,10 @@ test("publication filtering animates forward and restores the requested state af
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  const index = slides.findIndex((slide) => slide.id === "publication-filter");
-  const url = `/slides/${deckId}/index.html#${index + 1}.0`;
+  const index = introductionSlides.findIndex(
+    (slide) => slide.id === "publication-filter",
+  );
+  const url = `/slides/social-networks/index.html#${index + 1}.0`;
   await page.goto(url);
   const diagram = page.locator("figure[data-mode]");
   const filter = diagram.locator(".filter");

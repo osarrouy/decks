@@ -468,23 +468,208 @@ La conversation participait donc déjà à la formation des opinions avant les R
 
 --- notes
 
-Avec les RSN, des échanges auparavant limités au face-à-face peuvent devenir accessibles au-delà de leurs participants. La nouveauté concerne notamment les conditions de visibilité et de circulation de ces conversations.
+Avec les RSN, les conversations ordinaires laissent des traces qui peuvent être partagées au-delà de leurs participants.
 
-La conversation ordinaire, qui s’évanouissait autrefois dans le bavardage du café ou dans l’échange familial, laisse désormais des traces : elle peut être enregistrée, commentée, partagée et circuler au-delà du cercle dans lequel elle a pris naissance.
+Sur les mêmes plateformes circulent désormais les articles des journaux, les déclarations des institutions, mais aussi nos blagues entre amis et nos photos de vacances.
 
-Nous avons toujours discuté des décisions des politiques, des idées des philosophes et de l’autorité des experts. Nous avons toujours réinscrit les préoccupations politiques dans la conversation et dans la vie ordinaire. Mais ces échanges restaient généralement invisibles pour les personnes et les institutions qui détenaient le pouvoir de définir les sujets légitimes de discussion.
+Ce rapprochement change les rapports entre les voix publiques. Nous avons toujours discuté et contesté les discours des responsables politiques, des médias ou des experts. Mais ces conversations peuvent désormais leur parvenir, leur répondre publiquement et parfois couvrir leur voix. Les disqualifier comme du « bavardage », c’est donc aussi contester qui peut prendre la parole et sous quelle forme.
 
-Ce n’est plus nécessairement le cas : la clameur des conversations ordinaires peut désormais parvenir directement aux responsables politiques, aux experts et aux médias. Elle peut même recouvrir les voix autorisées qui parlaient jusque-là depuis une tribune relativement inaccessible.
+Cette circulation expose également les échanges à des regards extérieurs. Une plaisanterie peut sembler insignifiante ou outrancière lorsqu’on ignore les références et les intentions partagées par ses destinataires. Nous jugeons ainsi parfois plus sévèrement les conversations des autres que les nôtres, dont nous connaissons le contexte.
 
-L’espace de diffusion de l’information et les dynamiques conversationnelles se recoupent désormais sur les mêmes plateformes. On peut y recevoir une actualité, la commenter, la transformer et la rendre visible à d’autres publics.
+Il faut donc distinguer l’accès public à un contenu de l’intérêt qu’il présente pour différents publics. Un échange accessible à tous peut ne concerner que quelques proches. À l’inverse, une expérience personnelle peut toucher des inconnus, les faire rire ou contribuer à faire reconnaître un problème commun.
 
-Cette ouverture rend plus manifeste la distinction entre visibilité et intérêt collectif. Un propos peut être accessible à beaucoup de monde tout en ayant principalement du sens pour quelques personnes. Inversement, le partage d’expériences personnelles peut contribuer à faire reconnaître un problème commun.
+Ces contenus ne reçoivent pas pour autant la même attention : nous verrons que la visibilité reste très inégalement distribuée. Pouvoir publier ne garantit pas de rencontrer un public.
 
-Ces prises de parole peuvent aussi contester l’autorité de ceux qui définissaient les sujets et les formes légitimes du débat. Leur disqualification comme « bavardage » engage donc également un conflit sur les personnes autorisées à parler et les manières recevables de le faire.
+Ce qui change, c’est la manière dont cette audience se construit : un contenu peut être publié sans sélection éditoriale préalable, puis gagner en visibilité au fil des partages et des recommandations. C’est ce déplacement que résume la formule « publier, puis filtrer ».
 
-Les commentaires, anecdotes, insultes et plaisanteries existaient déjà dans les échanges ordinaires. Ils peuvent maintenant être observés hors de la situation qui leur donnait leur sens.
+---
+## Publish, then filter
+Une économie de la visibilité {.kicker}
 
-Or ce basculement de la visibilité produit aussi une rupture de contexte. Nous jugeons souvent plus sévèrement les conversations des autres, que nous découvrons de l’extérieur, que les nôtres, dont nous comprenons les références, les intentions et le contexte. Ce qui nous paraît insignifiant ou outrancier chez autrui peut ainsi prendre un sens évident pour ceux qui participent à l’échange.
+--- notes
+
+Nous avons vu comment le Web élargit l’accès à la parole publique et rend accessibles des conversations ordinaires. Cette ouverture repose sur un renversement de l’ordre des opérations : une parole peut être publiée avant que des intermédiaires ne décident de la mettre en avant.
+
+La formule **« publish, then filter »** résume ce déplacement : publier d’abord, filtrer ensuite.
+
+---
+<!-- slide: id="clay-shirky" title="Clay Shirky" -->
+
+<Persona name="Clay Shirky" dates="1964 - " picture="/assets/clay-shirky.jpg" />
+
+--- notes
+
+Cette expression a été introduite par **Clay Shirky**.
+
+Clay Shirky est un auteur et enseignant à l’université de New York qui étudie les effets sociaux d’Internet, notamment la coopération et l’organisation collective.
+
+Il montre, dans *Here Comes Everybody* (2008), comment les réseaux numériques réduisent les coûts de publication et de coordination : des individus peuvent ainsi partager des informations et agir ensemble sans dépendre systématiquement d’une organisation traditionnelle.
+
+Que signifie sa formule du _publish, then filter_ ? Que la visibilité des contenus se distribue aujourd’hui davantage après leur publication, au fil de leur circulation, alors qu’elle était auparavant largement déterminée en amont.
+
+---
+<!-- slide: id="publication-filter" title="Le déplacement de la rareté" steps=1 layout="center" -->
+
+<script>
+  import PublicationFilter from '$components/PublicationFilter.svelte'
+</script>
+
+<PublicationFilter />
+
+--- notes
+
+Les médias traditionnels fonctionnaient selon le principe « filter, then publish » : une rédaction sélectionnait, éditait et validait les contenus avant leur publication.
+
+Passer ce filtre donnait accès à l’audience du média. La rareté se situait donc dans l’accès à la publication.
+
+:::comment
+Faire avancer le slide.
+:::
+
+Sur le Web, un très grand nombre d’acteurs peuvent publier sans cette validation préalable.
+
+Mais la possibilité de publier ne garantit pas une audience : la rareté se déplace de l’accès à la publication vers l’accès à la visibilité.
+
+Le filtrage intervient alors davantage après la publication, au fil de la circulation et du classement des contenus. Les utilisateurs les font circuler par leurs liens, leurs partages et leurs commentaires ; les moteurs de recherche et les plateformes organisent leur mise en avant par leurs recommandations et leurs classements.
+
+:::example
+Grumpy Cat ou *Charlie Bit My Finger* permettent d’évoquer des contenus ordinaires ayant atteint une audience très large. Une publication peut ainsi circuler au-delà du public auquel elle était initialement destinée.
+:::
+
+Les intermédiaires continuent donc d’intervenir, mais une partie de leur sélection porte désormais sur des contenus déjà publiés. Voyons comment une scène familiale, une photo d’animal et un témoignage d’actualité peuvent ainsi rencontrer un public imprévu.
+
+---
+<YouTube url="https://www.youtube.com/watch?v=0EqSXDwTq6U" />
+
+--- notes
+
+En 2007, Howard Davies-Carr filme ses deux jeunes fils : Charlie mord le doigt de son frère Harry, qui proteste puis rit. Il met la vidéo sur YouTube pour la partager avec leur parrain, installé aux États-Unis : le fichier était trop volumineux pour être envoyé par courriel.
+
+Rendue accessible publiquement, cette scène familiale circule bien au-delà du cercle prévu et finit par cumuler des centaines de millions de vues. Les partages et les reprises transforment un souvenir domestique en référence culturelle commune. La publication précède donc la constitution d’une audience massive : personne n’avait sélectionné cette scène pour en faire un divertissement mondial.
+
+Cette notoriété acquiert même une valeur marchande : en 2021, un NFT associé à la vidéo est vendu 760 999 dollars. Cette vente n’impose finalement pas son retrait de YouTube.
+
+---
+<FramedImage
+  src="/assets/grumpy_cat.png"
+  alt="Grumpy Cat"
+/>
+
+--- notes
+
+En septembre 2012, Bryan Bundesen publie sur Reddit une photo de Tardar Sauce, la chatte de sa sœur Tabatha. Son visage semble exprimer un mécontentement permanent, ce qui lui vaut le surnom de « Grumpy Cat ».
+
+Les internautes reprennent la photo et lui ajoutent des légendes ironiques : son expression sert à commenter toutes sortes de situations. À force de détournements et de partages, la photo d’un animal domestique devient un mème, puis une célébrité et une marque commerciale.
+
+L’intérêt culturel de l’image se construit donc après sa publication, par les usages qu’en font les internautes. Ce sont ces reprises qui lui donnent une portée que la simple photo d’un chat ne permettait pas de prévoir.
+
+:::comment
+Sources : [Grumpy Cat — site officiel](https://www.grumpycats.com/about) ; [Know Your Meme — origine et circulation des images](https://knowyourmeme.com/memes/grumpy-cat).
+:::
+
+---
+<FramedImage
+  src="/assets/adam_stacey_london.png"
+  alt="Attentas de Londres. Adam Stacey."
+/>
+
+--- notes
+
+Le 7 juillet 2005, lors des attentats de Londres, Adam Stacey est photographié par son ami Eliot Ward dans le métro enfumé. Il se couvre la bouche pour éviter d’inhaler la fumée. La photo est prise avec un téléphone, au milieu de l’évacuation, et non dans le cadre d’un reportage commandé par une rédaction.
+
+Stacey transmet l’image à son ami Alfie Dennen, qui la publie sur Moblog. Des internautes la relaient, puis des médias comme Sky News et la BBC la reprennent. Une image prise par un témoin devient ainsi un document d’actualité largement diffusé, après sa mise en ligne.
+
+La diffusion publique est ici volontaire. Mais l’audience se construit par une succession de relais entre proches, internautes et journalistes, plutôt que par une sélection éditoriale préalable à la publication.
+
+Ces trois exemples montrent qu’un contenu peut acquérir après sa publication une importance publique ou culturelle qui dépasse son contexte initial. Les rencontres, les partages et les reprises peuvent lui donner une visibilité imprévue.
+
+
+:::warning
+Cela ne signifie ni que tous les contenus deviennent visibles, ni qu’ils sont tous produits pour un cercle privé : certains visent d’emblée un large public.
+:::
+
+:::comment
+A rajouter pour l'année prochaine : lecture de _La culture du partage ou la revanche des foules_
+:::
+
+Ces exemples montrent ce que l’ouverture de la publication rend possible. Ils ne disent pas ce qu’il advient de la multitude des autres contenus : publier ne garantit toujours pas de rencontrer un public.
+
+---
+## Loi de puissance
+Concentration · visibilité · longue traîne {.kicker}
+
+
+--- notes
+
+Une **loi de puissance** permet d’illustrer une forme de distribution très inégale de la visibilité : quelques contenus sont très vus, tandis qu’un grand nombre le sont peu.
+
+Une grandeur soumise à une loi de puissance varie comme une puissance négative d’une autre : **y = C × x⁻ᵅ**, avec C et α positifs.
+
+Illustrons ce que cela signifie en observant la manière dont se distribue la popularité des contenus sur un réseau social numérique.
+
+---
+<!-- slide: id="power-law" title="Loi de puissance" steps=2 layout="center" -->
+
+<script>
+  import PowerLaw from '$components/PowerLaw.svelte'
+</script>
+
+<PowerLaw concentration="low" revealAt={1} concentrateAtStep={2} animateConcentration={true} />
+
+--- notes
+
+Classons les publications Instagram des plus vues (à gauche) au moins vues (à droite). En ordonnées est mesuré le nombre de vues de chaque contenu.
+
+:::warning
+Ce graphique est une illustration pédagogique, pas un relevé des audiences d’Instagram.
+:::
+
+Que nous montre cette courbe ? Qu'une toute petite fraction des contenus aggrège l'essentiel de la visibilité. Et que l'essentiel des contenus restant est maintenant dans une invisibilité presque totale. On appelle cela la longue traine.
+
+On dit parfois que ces contenus sont soumis à la loi des **80/20** ou loi de **Pareto**.
+
+:::comment
+Faire avancer le slide.
+:::
+
+Cela signifie que les 20 % des contenus les plus visibles concentrent 80 % des vues. Et que les 80% de contenus restants n'aggrégent que 20% de la visibilité totale.
+
+Cette loi n'est pas propre aux réseaux sociaux numériques. Vilfredo Pareto, qui a donné son nom à cette loi, l'a identifié dès 1896 en analysant la répartition des richesses et des terres en Italie (où 20 % de la population détenait 80 % des terres).
+
+On retrouve ainsi cette loi dans de nombreux phénomènes sociaux non-contraints.
+
+:::example
+La concentration des patrimoines, la fréquence des mots, les connexions dans certains réseaux, les citations scientifiques ou la taille des villes.
+:::
+
+Gardez en tête que la visibilité sur les réseaux sociaux est très concentrée : une petite minorité de publications capte l’essentiel de l’attention, tandis que la grande majorité reste peu vue.
+
+Le paradoxe est que l’élargissement du réseau peut accentuer ce déséquilibre : toujours plus de contenus entrent dans l’espace public, mais une fraction encore plus réduite accapare l’attention. L’espace de publication s’ouvre, tandis que le cercle des contenus visibles se resserre.
+
+:::comment
+Faire avancer le slide.
+:::
+
+:::warning
+Une distribution très inégalitaire ne suffit pas à établir qu’elle suit une loi de puissance. La multiplication des publications ne suffit pas non plus à expliquer la forme de cette distribution. Il faut distinguer le constat de la concentration et les mécanismes qui la produisent.
+:::
+
+La courbe décrit une inégalité ; elle n’en explique pas les causes. Comment certains contenus rencontrent-ils un large public, tandis que d’autres restent peu vus ?
+
+Nous allons examiner deux ensembles de mécanismes. D’abord, la structure de nos réseaux relationnels et les ressources que nous pouvons y mobiliser : notre capital social. Nous n’avons pas tous les mêmes relations ni les mêmes possibilités de relais.
+
+Ensuite, les algorithmes de classement et de recommandation sélectionnent les contenus présentés à chaque utilisateur et leur ordre d’apparition. Leurs critères répondent notamment aux objectifs économiques des plateformes, mais aussi à des exigences de pertinence, de satisfaction et de modération.
+
+Ces mécanismes seront étudiés dans la partie suivante, en commençant par les relations entre les personnes.
 
 ---
 ## Conclusion
+Publier n’est pas être vu {.kicker}
+
+--- notes
+
+Le Web et les réseaux sociaux élargissent l’accès à la publication. Des paroles politiques, des expériences personnelles et des conversations ordinaires peuvent devenir publiques sans passer au préalable par une rédaction.
+
+L’abaissement de ce seuil favorise la multiplication des contenus disponibles. Mais notre capacité à les consulter n’augmente pas dans les mêmes proportions : chacun ne peut accorder son attention qu’à une petite partie de ce qui est publié.
+
+La possibilité de publier s’est donc élargie, mais l’attention reste concentrée sur une minorité de contenus. La partie suivante étudiera les mécanismes de cette répartition : la structure de nos réseaux relationnels, puis les algorithmes de classement et de recommandation.

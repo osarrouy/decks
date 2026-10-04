@@ -8,7 +8,7 @@
     "@svx-deck/core": "workspace:*"
   },
   "scripts": {
-    "dev": "pnpm --filter site dev",
+    "dev": "node tooling/dev.mjs",
     "dev:blockchain": "svx-deck dev decks/blockchain",
     "dev:blockchain-bitcoin": "svx-deck dev decks/blockchain-bitcoin",
     "dev:blockchain-consensus": "svx-deck dev decks/blockchain-consensus",
