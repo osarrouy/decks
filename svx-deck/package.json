@@ -42,7 +42,8 @@
     "./cli": "./src/cli/index.mjs",
     "./runtime/config": "./src/runtime/config.mjs",
     "./runtime/theme": "./src/runtime/theme.mjs",
-    "./components/Persona.svelte": "./src/lib/components/Persona.svelte"
+    "./components/Persona.svelte": "./src/lib/components/Persona.svelte",
+    "./components/YouTube.svelte": "./src/lib/components/YouTube.svelte"
   },
   "peerDependencies": {
     "svelte": "^5.57.0"

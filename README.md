@@ -42,8 +42,7 @@ pnpm dev:history-3
 pnpm dev:interpassivity
 pnpm dev:introduction
 pnpm dev:social-networks
-pnpm dev:social-networks-structure
-pnpm dev:social-networks-gatekeepers
+pnpm dev:social-networks-visibility-gatekeeping
 pnpm dev:social-networks-virality
 pnpm dev:social-networks-polarization
 ```

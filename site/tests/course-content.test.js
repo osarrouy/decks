@@ -33,7 +33,7 @@ test("the actual course preserves its shortened history outline and separate bib
   );
   const course = parseYamlCourse(raw, "introduction-aux-cultures-numeriques");
   assert.equal(course.level, "L1");
-  assert.equal(course.sections.length, 9);
+  assert.equal(course.sections.length, 8);
   assert.equal(course.sections[0].id, "histoire-du-numerique");
   assert.deepEqual(course.sections[0].items, [
     "Mécaniser le calcul, programmer les opérations",
@@ -77,51 +77,45 @@ test("the actual course preserves its shortened history outline and separate bib
     internetAndPersonalComputing.slides[0].integration,
     "iframe",
   );
-  const socialNetworks = course.sections.slice(-6, -1);
+  const socialNetworks = course.sections.slice(-5, -1);
   assert.deepEqual(
     socialNetworks.map(({ id, part, title }) => ({ id, part, title })),
     [
       {
         id: "reseaux-sociaux-numeriques",
-        part: "1/5",
+        part: "1/4",
         title: "Réseaux sociaux numériques",
       },
       {
-        id: "structure-des-reseaux-sociaux",
-        part: "2/5",
-        title: "Réseaux sociaux numériques",
-      },
-      {
-        id: "gatekeeping-algorithmique",
-        part: "3/5",
+        id: "distribution-de-la-visibilite",
+        part: "2/4",
         title: "Réseaux sociaux numériques",
       },
       {
         id: "viralite-cascades-amplification",
-        part: "4/5",
+        part: "3/4",
         title: "Réseaux sociaux numériques",
       },
       {
         id: "bulles-chambres-echo-polarisation",
-        part: "5/5",
+        part: "4/4",
         title: "Réseaux sociaux numériques",
       },
     ],
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.items.length),
-    [4, 4, 4, 6, 5],
+    [4, 9, 6, 5],
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.bibliography.length),
-    [5, 6, 4, 14, 14],
+    [4, 11, 14, 14],
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.slides[0].url),
     [
       "/slides/social-networks/index.html",
-      "/slides/social-networks-structure/index.html",
-      "/slides/social-networks-gatekeepers/index.html",
+      "/slides/social-networks-visibility-gatekeeping/index.html",
       "/slides/social-networks-virality/index.html",
       "/slides/social-networks-polarization/index.html",
     ],

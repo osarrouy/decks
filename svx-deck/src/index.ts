@@ -7,6 +7,7 @@ export { default as PresenterView } from "./lib/components/PresenterView.svelte"
 export { default as StudentView } from "./lib/components/StudentView.svelte";
 export { default as SlideSurface } from "./lib/components/SlideSurface.svelte";
 export { default as TwoColumns } from "./lib/components/TwoColumns.svelte";
+export { default as YouTube } from "./lib/components/YouTube.svelte";
 
 export { createDeckController } from "./lib/deck/controller";
 export { enhanceImageGlow } from "./lib/deck/imageGlow";

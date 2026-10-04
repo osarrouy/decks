@@ -356,6 +356,11 @@ On peut donner une première image de cette idée avec une recette de cuisine, q
 
 Turing imagine alors une machine — purement théorique — capable d’exécuter automatiquement un calcul décrit par une suite de règles.
 
+:::comment
+https://go.genk.app/microlearning?proposalId=mathematics_246
+Très bonne explication de Turing
+:::
+
 ---
 <!-- slide: id="history-017-turing-machine" title="Machine de Turing" steps=3 -->
 <script>

@@ -91,7 +91,8 @@ export async function loadDeckConfig(deckRoot) {
 
 export async function ensureRuntimeApp(deckRoot, options = {}) {
   const { view = "deck", base = "", dev = false } = options;
-  const mode = view === "embed" && dev ? "embed-dev" : view;
+  // Builds must not replace routes or configuration used by a running dev server.
+  const mode = dev ? `${view}-dev` : view;
   const appRoot = resolve(deckRoot, RUNTIME_DIRECTORY, mode);
   const src = resolve(appRoot, "src");
   const routes = resolve(src, "routes");

@@ -146,14 +146,14 @@
             <text class="tail-label" x={chart.right - 8} y={chart.bottom - 20} text-anchor="end">longue traîne</text>
         </g>
 
-        <text class="axis-label axis-label-y" x={chart.left - 28} y={chart.top - 10} text-anchor="end">VISIBILITÉ</text>
+        <text class="axis-label axis-label-y" x={chart.left} y={chart.top - 10}>VISIBILITÉ</text>
         <text class="axis-label axis-label-x" x={chart.right} y={chart.bottom + 42} text-anchor="end">OBJETS / COMPTES · RANG DE VISIBILITÉ DÉCROISSANT</text>
     </svg>
 </figure>
 
 <style>
     .power-law {
-        width: min(100%, 78rem);
+        width: min(100%, 78rem, calc(100cqh * 1060 / 610));
         margin: 1rem auto 0;
         color: var(--text-prominent);
     }

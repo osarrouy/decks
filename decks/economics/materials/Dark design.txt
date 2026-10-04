@@ -1,0 +1,42 @@
+# Dark design
+
+I wanna say something about dark design.
+
+
+Certainly. Here are a few examples of dark design techniques that can be used to manipulate user behavior:
+
+1. Forced Continuity: This technique involves making it difficult for users to cancel or unsubscribe from a service or subscription. For example, intentionally hiding the cancellation option or making the process confusing and time-consuming, leading users to continue paying for a service they no longer want.
+
+2. Misdirection: This technique involves redirecting users' attention away from certain actions or consequences. For example, using misleading visual cues or language to trick users into clicking on ads, signing up for unwanted services, or agreeing to terms and conditions without fully understanding them.
+
+3. Confirmshaming: This technique involves using guilt or shame to manipulate users into taking specific actions. For example, presenting a dialogue box with buttons that shame users for choosing the "cancel" or "no" option, pushing them to opt for the desired action.
+
+4. Dark Patterns: Dark patterns refer to intentionally deceptive or misleading design elements that nudge users towards unintended actions. For example, using pre-selected checkboxes during checkout to sneakily add extra products or services to the user's cart without their explicit consent.
+
+5. Infinite Scroll: Infinite scroll, although commonly used for its convenience, can also be a way to keep users engaged on a website or app for extended periods. Continuously loading new content prevents users from reaching a natural stopping point and can lead to excessive use or dependence.
+
+It's important to note that the use of these dark design techniques is generally seen as unethical and can harm user trust and engagement in the long term. Responsible and ethical design practices prioritize users' well-being and strive for transparency, honesty, and respect for their choices.
+
+Certainly! Notification strategies can be an integral part of brain hacking through UX design. Notifications are designed to grab users' attention and prompt them to take action. However, when used manipulatively, they can exploit cognitive biases and lead to addictive behaviors. Here are a few examples of how notification strategies can be employed for brain hacking:
+
+1. Excessive and intrusive notifications: Constantly bombarding users with notifications, often irrelevant or unnecessary, can create a sense of FOMO (fear of missing out) or the urge to constantly check the app. By leveraging the fear of being left out or the need for constant updates, users can be drawn into addictive behaviors.
+
+2. Personalization and psychological targeting: By utilizing data about users' preferences, demographics, and behaviors, notifications can be tailored to appeal to their individual desires, fears, or insecurities. This type of psychological targeting aims to provoke specific emotions or trigger impulsive actions.
+
+3. Variable reward schedules: Drawing inspiration from behavioral psychology, notifications can be strategically timed and structured to offer unpredictable rewards. By employing variable reward schedules, these notifications can trigger the brain's dopamine response, making users crave and seek further engagement with the app or platform.
+
+4. Social validation and social pressure: Notifications can exploit the human need for social validation by employing techniques like showing notifications about others' activities, achievements, or popularity within a social network. This creates a sense of missing out or a desire to conform to social norms, driving users to engage more with the platform.
+
+5. Fear of loss or urgency: Notifications can play on the fear of missing out or the fear of losing an opportunity. By creating a sense of urgency or scarcity, users may be compelled to take immediate action. Urgent or time-sensitive notifications aim to trigger impulsive responses and discourage users from considering their actions more critically.
+
+It is crucial to recognize the ethical implications of these notification strategies. While notifications can be valuable for enhancing user experience and delivering important information, they should prioritize users' well-being, respect their preferences, and provide them with control to opt out or customize their notification settings.
+
+Voir aussi : https://www.theatlantic.com/health/archive/2012/07/exploiting-the-neuroscience-of-internet-addiction/259820/
+
+Et : Ethics of the attention economy: The problem of social media addiction
+
+---
+Annotations: 0,4562 SHA-256 2068cbcd410ea08edf20a977ff544870  
+&IA: 58,1883  
+@Olivier Sarrouy <me@osarrouy.bzh>: 14,43 1941,2 4362,15 4485,7  
+...

@@ -79,6 +79,8 @@ Configuration is resolved in this order: framework defaults, the shared parent Y
 
 Defaults need not be repeated. A configuration file is useful for custom separators or a different source file. Generated files live in `.svx-deck.nosync/` and are never edited by hand. The `.nosync` suffix prevents cloud synchronization from duplicating volatile runtime files.
 
+Development apps use separate `<view>-dev` directories inside `.svx-deck.nosync/`, so exporting a deck does not change the routes or configuration of its running development server.
+
 ## Slide syntax
 
 `---` starts a slide; `--- notes` starts its notes. A slide's title is inferred from its first heading and its ID from the title; source order controls navigation. Optional `<!-- slide: ... -->` metadata sets `id`, `title`, `steps`, `layout`, `align` or `tone`.
@@ -114,6 +116,22 @@ Local components import through `$components`. Progressive content uses `Fragmen
 ```
 
 Images with `data-glow`, `data-glow="soft"` or `data-glow="strong"` receive a color-derived halo. If browser pixel access is unavailable, the accent supplies a fallback.
+
+### YouTube videos
+
+`YouTube` is available without an import in every deck. Use it alone on a slide: the player is centered and fills as much of the area inside the corner crosses as possible, keeping a 16:9 ratio. Playback starts on click, with native YouTube controls and fullscreen support.
+
+```svelte
+<YouTube url="https://www.youtube.com/watch?v=M7lc1UVf-VE" />
+<YouTube
+  url="https://youtu.be/M7lc1UVf-VE?t=1m30s"
+  title="YouTube player demo"
+/>
+```
+
+Watch, shortened, embed and Shorts URLs are supported, including `m.youtube.com`. The player preserves `start` (in seconds) or `t` (seconds or `1h2m3s`); `start` takes precedence. Other URL parameters are ignored. Invalid video URLs display a message instead of a player. Changing slides removes the player and stops playback; returning loads it again at the URL's start time. Videos require internet access and permission from YouTube to be embedded.
+
+The component is also exported as `YouTube` from `@svx-deck/core` and at `@svx-deck/core/components/YouTube.svelte` for use in local Svelte components.
 
 ## Embedded exports and assets
 

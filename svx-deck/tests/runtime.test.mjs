@@ -92,6 +92,28 @@ test("shared component imports replace matching manual imports", () => {
   );
 });
 
+test("YouTube is available without imports and matching explicit imports are deduplicated", () => {
+  for (const script of [
+    "",
+    `<script>\nimport YouTube from '@svx-deck/core/components/YouTube.svelte'\n</script>`,
+  ]) {
+    const rendered = renderGeneratedSlide({
+      metadata: {},
+      content: `${script}\n<YouTube url="https://youtu.be/M7lc1UVf-VE" />`,
+    });
+    assert.equal(
+      rendered.match(
+        /import YouTube from '@svx-deck\/core\/components\/YouTube\.svelte'/g,
+      )?.length,
+      1,
+    );
+    assert.match(
+      rendered,
+      /<YouTube url="https:\/\/youtu.be\/M7lc1UVf-VE" \/>/,
+    );
+  }
+});
+
 test("generation filters student notes and removes stale output without editing sources", async () =>
   fixture(async (root) => {
     const plugin = svxDeckSingleFileDeck({
@@ -210,4 +232,40 @@ test("runtime generation replaces stale routes and controls the presenter route"
     await assert.rejects(
       access(resolve(presenter.appRoot, "src/routes/presenter/+page.svelte")),
     );
+  }));
+
+test("build generation leaves every development runtime unchanged", async () =>
+  fixture(async (root) => {
+    for (const view of ["deck", "students", "embed"]) {
+      const development = await ensureRuntimeApp(root, { view, dev: true });
+      const paths = [
+        "src/routes/+page.svelte",
+        "src/routes/+layout.svelte",
+        "src/lib/deck.ts",
+        "vite.config.mjs",
+        "svelte.config.js",
+        ...(view === "deck" ? ["src/routes/presenter/+page.svelte"] : []),
+      ];
+      const readDevelopment = () =>
+        Promise.all(
+          paths.map((path) =>
+            readFile(resolve(development.appRoot, path), "utf8"),
+          ),
+        );
+      const before = await readDevelopment();
+
+      const production = await ensureRuntimeApp(root, { view });
+      assert.notEqual(production.appRoot, development.appRoot);
+      assert.deepEqual(await readDevelopment(), before);
+      await assert.rejects(
+        access(
+          resolve(production.appRoot, "src/routes/presenter/+page.svelte"),
+        ),
+      );
+
+      if (view === "deck") {
+        await ensureRuntimeApp(root, { view, presenter: true });
+        assert.deepEqual(await readDevelopment(), before);
+      }
+    }
   }));
