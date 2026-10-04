@@ -1,0 +1,377 @@
+---
+title: Réseaux sociaux numériques 2/4
+theme: gallery
+---
+
+# La structure de nos réseaux sociaux
+De la mauvaise répartition du capital social {.kicker}
+
+--- notes
+
+La distribution de la visibilité sur les réseaux sociaux numérique est fortement déterminée par la structure de nos réseaux relationnels : nous ne sommes pas tous identiquement reliés les uns aux autres. En ligne comme hors ligne, certains sont très connectés, et d’autres non.
+
+Comment ces écarts s’organisent-ils ? Pour répondre à cette question il faut analyser les manières dont sont structurés, dans la vie ordinaire, nos réseaux relationnels - parce que la structure relationnelle des réseaux sociaux numériques ne constitue qu'une version radicalisée de nos structures relationnelles traditionnelles.
+
+---
+<Persona name="Paul Erdös" dates="1913 - 1996" picture="/assets/erdos.jpeg" />
+
+--- notes
+
+L’un des tout premier à s’être interrogé sur la structure de nos réseaux relationnels est le mathématicien hongrois Paul Erdös.
+
+Erdös mène une forme de vie assez particulière puisqu’il vit comme un nomade, squattant de canapé en canapé, au gré de ses visites à des collègues chercheurs.
+
+En 1959, Erdös propose, avec le mathématicien Alfréd Rényi, l’un des tout premiers modèles mathématiques de réseau.
+
+Il va le faire à partir d’une hypothèse simple : faisons comme si nous nous rencontrions les uns les autres de manière aléatoire et examinons les propriétés qui découlent de ce réseaux de connaissances.
+
+---
+<!-- slide: id="social-network-structure-random" title="Réseau aléatoire" steps=3 layout="center" -->
+
+<script>
+  import RelationalNetwork from '$components/RelationalNetwork.svelte'
+</script>
+
+<RelationalNetwork type="random" />
+
+--- notes
+
+:::warning
+Ce modèle est évidemment très simple et ne correspond pas tout à fait à la manière dont se nouent, en réalité, nos réseaux relationnels. Nous ne nous rencontrons pas, dans la vraie vie, « par hasard », mais par l’effet de profonds déterminismes sociaux.
+:::
+
+Erdös va tout de même identifier deux propriétés intéressantes à ce type de réseau relationnel « théorique ».
+
+:::comment
+Faire avancer le slide : deux personnes, parmi les plus éloignées du réseau, s’allument.
+:::
+
+1. Il remarque d’abord qu’il existe toujours une chaine d’intermédiaires relativement courte qui connecte n’importe quelle personne de ce réseau à n’importe quelle autre.
+
+:::comment
+Faire avancer le slide : le plus court chemin entre elles apparaît.
+:::
+
+Même entre ces deux personnes, parmi les plus éloignées du réseau, il suffit de 6 intermédiaires.
+
+2. Il remarque ensuite - ce qui est encore plus étrange - que la longueur de cette chaine est presqu’indépendante de la taille du réseau.
+
+:::comment
+Faire avancer le slide : le réseau passe de 90 à 400 personnes.
+:::
+
+Le réseau compte maintenant plus de quatre fois plus de personnes. Pourtant, les deux personnes les plus éloignées ne sont séparées que par 7 intermédiaires : un seul de plus.
+
+Ce modèle, quoique présentant des propriétés intéressantes, reste toutefois purement théorique.
+
+Il faudra attendre dix ans pour qu’un autre chercheur aborde cette question de manière plus expérimentale.
+
+---
+<Persona name="Stanley Milgram" dates="1933 - 1984" picture="/assets/milgram.png" />
+
+--- notes
+Stanley Milgram est un psychologue social américain, principalement connu pour l’expérience de Milgram et l’expérience du petit monde.
+
+En 1967, Milgram va chercher à vérifier s’il existe effectivement, dans nos réseaux relationnels réels, des chemins courts reliant entre n’importe quelle paire d’individus pris au hasard dans une population.
+
+Il va pour cela mettre en oeuvre une expérience connue sous le nom de *small world experience* - *i.e.* l’expérience du petit monde.
+
+Il expédie une mystérieuse lettre à 296 personnes, habitant pour la plupart le Nebraska. Cette lettre contient le nom et la photo d’un agent de change travaillant à Boston - à plus de 2000 km de là - accompagnés de la consigne suivante :
+
+> « Si vous connaissez cet homme, envoyez-lui la présente lettre. Sinon, faites parvenir ces instructions à un de vos amis susceptible de le connaitre. »
+
+Sur les 296 chaines initiées 64 atteignirent l’individu ciblé - les autres chaines étant interrompues.
+
+La surprise vint du nombre d’intermédiaires étonnamment faible qui composa l’essentiel de ces chaines : entre 5 et 6 personnes en moyenne.
+
+C’est ainsi qu’apparut l’idée, aujourd’hui populaire, selon laquelle chacun de nous n’est qu’à « six poignées de main » de n’importe quel individu sur cette planète
+
+Nos réseaux relationnels sont donc simultanément très larges et très courts - d’autant plus larges, d’ailleurs, qu’ils sont courts.
+
+On pourrait croire que ce résultat contre-intuitif ne se vérifie pas pour tout le monde.
+
+:::example
+Comment pourrais-je atteindre un sans-abri dans la banlieue de Chicago ?
+
+Cet homme se rend probablement dans un foyer, dont il rencontre sans doute le directeur à l’occasion.
+
+Ce directeur lui-même a sans doute déjà rencontré le maire de Chicago, qui lui-même s’est déjà probablement entretenu avec Barack Obama - qui a longtemps été sénateur de l’Illinois.
+
+Or Barack Obama a déjà rencontré, pour financer la campagne des démocrates, certains investisseurs du secteur des cryptomonnaies, comme Joe Lubin, que j’ai moi-même rencontré à quelques reprises dans des séminaires.
+
+Vous remarquerez à travers cet exemple que le circuit relationnel emprunté ici à quelque chose de particulier - qui dit beaucoup de la structure de nos réseaux sociaux : son principe consiste à remonter chaque fois vers une personne centrale en contact avec un très grand nombre d’individus - ici Barack Obama - puis de redescendre de cette personne vers l’individu ciblé.
+:::
+
+Milgram vérifia ainsi empiriquement la propriété identifiée par Erdös dans ses réseaux entièrement théoriques.
+
+Est-ce que cela signifie pour autant que nos réseaux relationnels se construisent effectivement de manière totalement aléatoire comme Erdös en fit l’hypothèse pour construire son modèle ?
+
+Ou, pour le dire autrement, est-ce qu’un modèle de réseaux relationnels construit sur la base de liens aléatoires constitue une bonne approximation de la structure effective de nos réseaux sociaux ?
+
+Pas vraiment. Mais il faudra attendre la fin des années 1990 pour que cette question soit tranchée.
+
+---
+<Persona name="Duncan Watts" dates="1971 - " picture="/assets/watts.webp" />
+
+--- notes
+En 1998, Duncan Watts, jeune doctorant australien, est embauché par l'université Cornell dans le cadre d’une thèse portant sur la stridulation collective des criquets et leur influence réciproque dans un essaim.
+
+Ces recherches le conduisent - étrangement - à s’intéresser à l’expérience des six poignées de main de Milgram, et à l’analyse des réseaux sociaux / relationnels.
+
+Cette question, toutefois, est souvent complexe à aborder par manque de données. Or Watts tombe par hasard sur une émission de télé qui va offrir une solution inattendue à son problème.
+
+---
+<!-- slide: id="social-network-structure-howard-stern" title="Howard Stern Show" steps=0 layout="center" -->
+<video src="/assets/howard_stern_show.mp4" controls autoplay muted loop style="max-width:100%;max-height:68vh;"></video>
+
+--- notes
+Nous sommes en 1994 et le *Howard Stern Show* invite trois étudiants qui, au détour de leurs soirées, ont réalisé - ou cru réaliser - que l’acteur Kevin Bacon était au centre de l’univers du cinéma.
+
+Ils sont en effet sont capables de relier Kevin Bacon à n’importe quel autre acteur par une chaine de comédiens ayant joué ensemble.
+
+Duncan Watts, qui tombe sur cette émission, voit immédiatement le lien avec les six degrés de séparation de Milgram.
+
+Il réalise alors que ce réseaux d’acteurs pourrait constituer un bon point de départ pour étudier la structure d’un réseau social réel.
+
+Il contacte les étudiants dont il s’avère qu’ils ont, sur leur temps libre, constitué une base de données de 225.000 acteurs indiquant ceux qui ont joué ensemble et, donc, se connaissent.
+
+Watts va ainsi pouvoir, pour la première fois, analyser un réseau social concret dont tous les liens entre individus sont documentés et connus.
+
+Watts remarque d’abord que ce réseau respecte bien la loi des chemins courts. Il faut en moyenne 3.6 personnes pour relier n’importe quel acteur à n’importe quel autre.
+
+Cette propriété, que nos trois étudiants avaient remarquée pour Kevin Bacon, est évidemment vraie pour n'importe quel autre acteur.
+
+---
+<!-- slide: id="social-network-structure-bacon" title="Oracle of Bacon" steps=0 layout="center" -->
+
+## http://oracleofbacon.org
+
+--- notes
+Vous pouvez d’ailleurs le vérifier en ligne à cette adresse : ce site donne accès à la base de données qu’a utilisé Watts.
+
+Watts identifie surtout une seconde propriété, plus intéressante, à partir de cette base de données.
+
+Il remarque que ce réseau social n’est pas structuré n’importe comment ; et certainement pas de manière aléatoire comme l’avait postulé Erdös.
+
+---
+<!-- slide: id="social-network-structure-small-world" title="Petits mondes" steps=8 layout="center" -->
+
+<script>
+  import RelationalNetwork from '$components/RelationalNetwork.svelte'
+</script>
+
+<RelationalNetwork stage="communities" />
+
+--- notes
+
+Ce réseau social ressemble plutôt à ça : de petits groupes très soudés, peu reliés entre eux.
+
+:::comment
+Faire avancer le slide six fois : chaque communauté s’allume à son tour.
+:::
+
+Les acteurs qui tournent des films d’action se connaissent tous, les acteurs qui tournent des comédies aussi. Mais il y a peu de liens entre ceux qui tournent des films d’action et ceux qui tournent des comédies.
+
+Cette propriété n’est pas propre au monde du cinéma. Les réseaux sociaux fonctionnent comme de petits mondes : très densément connectés à l’intérieur, faiblement connectés vers l’extérieur.
+
+Comment est-il alors possible d’être en quelque sorte « enfermé » dans de toutes petites communautés et simultanément connecté à tout le monde par un chemin court ?
+
+:::comment
+Faire avancer le slide : deux personnes aux deux bouts du réseau, et le plus court chemin entre elles.
+:::
+
+Si chaque communauté n’est reliée qu’à ses voisines, le chemin est long. Il faut ici 14 intermédiaires, parce qu’on doit traverser chaque groupe de proche en proche.
+
+:::comment
+Faire avancer le slide : trois raccourcis apparaissent.
+:::
+
+La réponse de Watts est simple : il suffit de quelques liens entre des communautés éloignées, qu’il appelle des **raccourcis**. Avec seulement trois raccourcis, le chemin tombe à 7 intermédiaires.
+
+:::example
+Dans le cinéma, un raccourci, c’est par exemple un acteur qui a tourné à la fois dans une comédie et dans un film d’action.
+:::
+
+Un an plus tard, en 1999, un physicien hongrois né en Roumanie, Albert-László Barabási, montre qu’un autre mécanisme, plus puissant encore, est en réalité à l’œuvre.
+
+---
+<Persona name="Albert-László Barabási" dates="1967 - " picture="/assets/eba3356a1432d21355ca2b77a19b876bf0f33daa.jpg" />
+
+--- notes
+
+Barabási est aujourd’hui considéré comme l’un des plus grands experts de l’étude des réseaux.
+
+La principale découverte de Barabási, à l’époque, est que les places que les uns et les autres occupent dans le grand réseau social que constitue l’humanité sont réparties de façon assez inégalitaires.
+
+Il n’est pas vrai que, comme le postulait le modèle d’Erdös, nous serions identiquement ou égalitairement connectés les uns aux autres de manière aléatoire.
+
+Certains d’entre nous sont socialement peu connectés, quand d’autres le sont énormément.
+
+Rappelez-vous l’exemple donné plus haut avec Barack Obama. Vous comprendrez aisément que Barack Obama est plus connecté socialement que vous et moi : plus de gens le connaissent, plus de gens lui sont redevables, etc.
+
+Un sociologue comme Pierre Bourdieu dirait que Barack Obama possède un important **capital social**.
+
+Or ce capital social est inégalement réparti.
+
+---
+<!-- slide: id="social-network-structure-power-law" title="Loi de puissance" steps=1 layout="center" -->
+
+<script>
+  import DegreeDistribution from '$components/DegreeDistribution.svelte'
+</script>
+
+<DegreeDistribution />
+
+--- notes
+
+Si nous nous mettions en tête de compter, dans le modèle aléatoire d’Erdos, à combien de personne chaque individu est relié, nous tomberions sur une **courbe de Gauss** ou **courbe normale**.
+
+:::example
+La courbe de répartition des tailles ou des poids d'une population.
+:::
+
+Or Barabási va découvrir que ce n’est pas du tout ce que l’on observe dans un vrai réseau social - ce que, à vrai dire, les sociologues savaient déjà.
+
+:::comment
+Faire avancer le slide.
+:::
+
+Dans un réseaux relationnel « réel » la répartition des liens entre individus s’apparente plutôt à une **loi de puissance**.
+
+La loi de puissance dit, dans ce contexte, que la très grande majorité des individus ont un nombre de relations sociales relativement faible mais qu’un tout petit groupe de gens possède un nombre de relations sociales très important.
+
+Ces gens disposant d’un fort capital social, on les appelle, dans la science des réseaux, des **hubs** et on qualifie les réseaux relationnels structurés autour de ces hubs de réseaux **scale-free**.
+
+---
+<!-- slide: id="social-network-structure-preferential-attachment" title="Attachement préférentiel" steps=2 layout="center" -->
+
+<script>
+  import RelationalNetwork from '$components/RelationalNetwork.svelte'
+</script>
+
+<RelationalNetwork stage="hubs" />
+
+--- notes
+Revenons à notre réseau de petits mondes. Avec trois raccourcis, il fallait encore 7 intermédiaires pour relier nos deux personnes.
+
+:::comment
+Faire avancer le slide : les hubs apparaissent.
+:::
+
+Ajoutons maintenant trois hubs. Ce sont eux qui permettent de relier entre elles des communautés par ailleurs éloignées.
+
+Les hubs, en effet, appartiennent généralement, de par leur capital social élevé, à plusieurs sous-communautés. Ils sont aussi, le plus souvent, connectés les uns aux autres.
+
+:::example
+Obama est connecté à Trump, qui est connecté à Poutine, qui est connecté à Xi Jinping - eux-mêmes étant tous connectés à de très nombreuses communautés.
+:::
+
+:::comment
+Faire avancer le slide : le nouveau plus court chemin.
+:::
+
+Il ne faut plus qu’un seul intermédiaire : le hub. Le chemin monte vers lui, puis redescend vers la personne visée. C’est exactement le trajet de l’exemple d’Obama vu avec Milgram.
+
+Ces hubs servent ainsi de « raccourcis » pour passer d’une région du réseau social à une autre.
+
+Il est intéressant de constater que cette architecture ne décrit pas seulement les réseaux relationnels humains.
+
+On la retrouve dès qu’on observe l’interconnexion des sites web, l’interconnexion des réseaux neuronaux dans notre cerveau, l’interconnexion du réseau électrique, etc.
+
+Comment est-ce possible ?
+
+Cette architecture découle en réalité d’un principe assez simple : les noeuds d’un réseau se connectent préférentiellement aux noeuds qui, depuis leur position dans ce réseau, sont le plus visibles :
+
+1. Les noeuds les plus proches : on devient ami avec les amis de nos amis, ce qui finit par former de petites communautés densément interconnectées.
+
+2. Les noeuds déjà très visibles : on se fascine pour Kim Kardashian parce que tout le monde est déjà fasciné par elle, ce qui crée des *hubs*.
+
+Ce simple procédé explique pourquoi les réseaux relationnels humains adoptent une structure analogue à l’interconnexion des sites web ou au réseau neuronal de notre cerveau.
+
+Nous avons, jusqu’ici, adopté une approche structurelle des réseaux relationnels. Quelque chose, toutefois, nous y a échappé de par l’approche retenue.
+
+Les liens d’un réseau social n’ont pas tous la même nature, la même intensité, la même profondeur.
+
+La relation qui me lie à mes amis n’est pas là même que celle qui me lie à Kim Kardashian.
+
+Il est délicat de soumettre la nature de nos relations à une typologie exacte. Les relations humaines - comme les relations entre vivants en général - sont chaque fois uniques et se prêtent mal aux catégorisations génériques.
+
+Il peut toutefois être intéressant, pour la suite de ce cours, de distinguer deux grandes famille de relations.
+
+---
+<Persona name="Robert Putnam" dates="1941 - " picture="/assets/putnam.png" />
+
+--- notes
+
+Le politologue américain Robert Putnam a ainsi proposé, à la fin des années 1990, une distinction, souvent reprise dans les études portant sur les réseaux sociaux numériques, entre deux stratégies relationnelles : le ***bonding*** - de *bond*, le lien - et le ***bridging*** - de *bridge*, le pont.
+
+Le *bonding* correspond au capital social qui se forme au sein de groupes homogènes, c’est-à-dire entre des personnes partageant des caractéristiques similaires : origine, religion, statut social, etc.
+
+Il renforce la solidarité interne et l’identité collective, en produisant des liens forts basés sur l’entraide et la loyauté.
+
+Mais il a aussi un effet d’exclusion, car il trace des frontières nettes entre « nous » et « les autres ».
+
+Le *bridging*, à l’inverse, désigne les connexions établies entre des groupes différents.
+
+Il agit comme un pont qui relie des individus hétérogènes et facilite la circulation d’informations, l’ouverture et l’intégration sociale.
+
+Plus inclusif, il favorise la coopération entre milieux éloignés et joue un rôle crucial dans la cohésion des réseaux relationnels élargis.
+
+---
+<!-- slide: id="social-network-structure-bonding-bridging" title="Bonding et bridging" steps=2 layout="center" -->
+
+<script>
+  import RelationalNetwork from '$components/RelationalNetwork.svelte'
+</script>
+
+<RelationalNetwork stage="bridging" />
+
+--- notes
+Rapportons cette distinction à l’approche structurelle suivie jusqu’ici, sur le même réseau.
+
+:::comment
+Faire avancer le slide : les liens internes aux communautés s’allument.
+:::
+
+On peut associer le *bonding* aux petites communautés très interconnectées, mais faiblement reliées au reste du réseau.
+
+:::comment
+Faire avancer le slide : les ponts entre communautés s’allument.
+:::
+
+On peut associer le *bridging* aux liens qui connectent des sous-communautés hétérogènes : les raccourcis, et surtout les liens qui passent par les *hubs*.
+
+---
+## Conclusion
+
+--- notes
+
+Revenons à la question laissée ouverte dans la partie précédente. La visibilité sur les réseaux sociaux est très concentrée : une petite minorité de contenus capte l’essentiel de l’attention. Mais la courbe ne disait pas pourquoi.
+
+La structure de nos réseaux relationnels fournit une première réponse. Publier, c’est d’abord rendre un contenu accessible à ses propres relations. Notre réseau constitue donc notre audience de départ.
+
+Or nous avons vu que les liens ne sont pas distribués comme dans le modèle d’Erdös. Ils suivent une loi de puissance : la plupart des gens ont peu de relations, quelques hubs en ont énormément. Les audiences de départ sont donc elles-mêmes distribuées selon une loi de puissance.
+
+:::example
+Une personne publie une photo pour ses 150 abonnés. Un compte célèbre publie la même photo pour 10 millions d’abonnés. Avant tout partage et toute recommandation, la seconde publication peut atteindre environ 65 000 fois plus de personnes.
+:::
+
+Cela signifie que la concentration de la visibilité reproduit en partie la concentration du capital social : l’inégalité des contenus prolonge l’inégalité des liens.
+
+Mais le nombre de liens ne suffit pas. Leur position compte aussi.
+
+Dans un petit groupe dense, le *bonding*, un contenu circule vite, parce que tout le monde se connaît. Mais il circule entre les mêmes personnes : chacun le reçoit plusieurs fois, et il s’épuise sans sortir du groupe.
+
+Un pont, le *bridging*, fait passer le contenu dans un autre milieu, auprès de personnes qui ne l’auraient jamais rencontré. Les hubs combinent les deux avantages : ils ont beaucoup de liens, et ces liens traversent plusieurs communautés.
+
+Cela éclaire les exemples de la partie précédente. *Charlie Bit My Finger* ou la photo d’Adam Stacey partent d’un cercle de proches. Ils deviennent massivement visibles lorsqu’ils atteignent des ponts et des hubs : des comptes très suivis, puis Sky News ou la BBC. La visibilité venue de la périphérie reste possible, mais elle passe par le centre du réseau.
+
+L’attachement préférentiel ajoute un effet cumulatif. Les comptes déjà visibles attirent de nouveaux abonnés parce qu’ils sont visibles. Chaque publication élargit donc l’audience de la suivante. Les avantages de départ ne s’effacent pas avec le temps : ils se creusent.
+
+Les réseaux sociaux numériques radicalisent cette structure. Dans la vie ordinaire, une relation suppose en général une réciprocité : on ne peut pas entretenir des liens avec des millions de personnes. Sur une plateforme, il suffit d’être suivi. Le lien devient asymétrique, et rien ne limite plus la taille des hubs.
+
+:::warning
+La structure ne détermine pas mécaniquement ce qui sera vu. Elle distribue des probabilités de circulation : un contenu bien placé peut rester ignoré, un contenu marginal peut trouver ses relais.
+:::
+
+Elle n’explique pas non plus seule la concentration observée. Sur les plateformes, nous ne voyons pas simplement ce que publient nos relations : un classement choisit et ordonne les contenus présentés. Ce sont donc des algorithmes qui déterminent, en grande partie, ce que nous voyons et ce que nous ne voyons pas.

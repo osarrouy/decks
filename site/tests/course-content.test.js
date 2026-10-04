@@ -54,7 +54,10 @@ test("the actual course preserves its shortened history outline and separate bib
   assert.equal(cybernetics.slides[0].url, "/slides/cybernetics/index.html");
   assert.equal(cybernetics.slides[0].integration, "iframe");
   const internetAndPersonalComputing = course.sections[2];
-  assert.equal(internetAndPersonalComputing.id, "internet-et-ordinateur-personnel");
+  assert.equal(
+    internetAndPersonalComputing.id,
+    "internet-et-ordinateur-personnel",
+  );
   assert.equal(internetAndPersonalComputing.part, "3/3");
   assert.equal(
     internetAndPersonalComputing.subtitle,
@@ -73,10 +76,7 @@ test("the actual course preserves its shortened history outline and separate bib
     internetAndPersonalComputing.slides[0].url,
     "/slides/history-3/index.html",
   );
-  assert.equal(
-    internetAndPersonalComputing.slides[0].integration,
-    "iframe",
-  );
+  assert.equal(internetAndPersonalComputing.slides[0].integration, "iframe");
   const socialNetworks = course.sections.slice(-5, -1);
   assert.deepEqual(
     socialNetworks.map(({ id, part, title }) => ({ id, part, title })),
@@ -105,17 +105,17 @@ test("the actual course preserves its shortened history outline and separate bib
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.items.length),
-    [4, 9, 6, 5],
+    [6, 9, 6, 5],
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.bibliography.length),
-    [4, 11, 14, 14],
+    [6, 12, 14, 14],
   );
   assert.deepEqual(
     socialNetworks.map((section) => section.slides[0].url),
     [
       "/slides/social-networks/index.html",
-      "/slides/social-networks-visibility-gatekeeping/index.html",
+      "/slides/social-networks-structure/index.html",
       "/slides/social-networks-virality/index.html",
       "/slides/social-networks-polarization/index.html",
     ],
@@ -123,6 +123,32 @@ test("the actual course preserves its shortened history outline and separate bib
   assert(
     socialNetworks.every(
       (section) => section.slides[0].integration === "iframe",
+    ),
+  );
+  assert(socialNetworks[0].description.includes("Publier, puis filtrer"));
+  assert(
+    socialNetworks[0].description.includes(
+      "Concentration de la visibilité et loi de puissance",
+    ),
+  );
+  assert(
+    socialNetworks[0].bibliography.some(({ reference }) =>
+      reference.startsWith("Shirky,"),
+    ),
+  );
+  assert(
+    socialNetworks[0].bibliography.some(({ reference }) =>
+      reference.startsWith("Clauset,"),
+    ),
+  );
+  assert(
+    !socialNetworks[1].description.includes(
+      "## Concentration de l’attention et filtrage",
+    ),
+  );
+  assert(
+    !socialNetworks[1].bibliography.some(({ reference }) =>
+      reference.startsWith("Shirky,"),
     ),
   );
   const interpassivity = course.sections.at(-1);

@@ -43,7 +43,9 @@
     "./runtime/config": "./src/runtime/config.mjs",
     "./runtime/theme": "./src/runtime/theme.mjs",
     "./components/Persona.svelte": "./src/lib/components/Persona.svelte",
-    "./components/YouTube.svelte": "./src/lib/components/YouTube.svelte"
+    "./components/YouTube.svelte": "./src/lib/components/YouTube.svelte",
+    "./components/Gaussian.svelte": "./src/lib/components/Gaussian.svelte",
+    "./components/PowerLaw.svelte": "./src/lib/components/PowerLaw.svelte"
   },
   "peerDependencies": {
     "svelte": "^5.57.0"

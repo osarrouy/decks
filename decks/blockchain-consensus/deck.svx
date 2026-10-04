@@ -349,7 +349,6 @@ On parle d’**attaque des 51 %** lorsqu’un acteur ou un groupe contrôle la m
 
 La sécurité dépend donc à la fois du coût du calcul et de la probabilité de rattraper les autres mineurs. Elle se renforce au fil des blocs, sans devenir une impossibilité absolue de réécriture.
 
-
 Lorsque le paiement d’Alice à Bob entre dans un bloc de la chaîne retenue, il reçoit **une confirmation**. Chaque bloc ajouté après lui apporte une confirmation supplémentaire.
 
 Un bloc suivant donne donc deux confirmations. Cinq blocs suivants donnent six confirmations.

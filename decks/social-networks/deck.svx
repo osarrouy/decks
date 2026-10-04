@@ -20,7 +20,7 @@ Les premiers réseaux sociaux numériques apparaissent à la fin des années 199
 - **2011 : Snapchat**, qui popularise les contenus éphémères ;
 - **2016-2017 : Douyin puis TikTok**, qui généralisent le fil de vidéos courtes piloté par la recommandation.
 
-Ces plateformes ne fonctionnent pas toutes de la même façon : organisation des profils et des relations, type de contenus, fonctions de publication, personnalisation des fils de contenus personnalisés, etc. diffèrent.
+Ces plateformes ne fonctionnent pas toutes de la même façon : l’organisation des profils et des relations, le type de contenus, les fonctions de publication ou la personnalisation des fils diffèrent de l’une à l’autre.
 
 Pourtant, on les classe toutes dans la catégorie des réseaux sociaux. Comment, alors, définir plus précisément ce qu'est un réseau social numérique ?
 
@@ -39,21 +39,17 @@ Nous pouvons partir de leur architecture. [danah boyd et Nicole Ellison (2007)](
 Cette architecture place les personnes et leurs relations au centre de l’exploration des contenus. 
 
 :::example
-Un journal organise ses articles par rubriques et par actualité ; Wikipédia, par sujets. Sur un RSN, on découvre les contenus à partir des personnes auxquelles on est relié.
+Un journal organise ses articles par rubriques et par actualité ; Wikipédia, par sujets. Sur un réseau social numérique, on découvre les contenus à partir des personnes auxquelles on est relié.
 :::
 
-Cette architecture modifie profondément l'économie discursive à laquelle nous étions habituée.
+Cette architecture modifie profondément l'économie discursive à laquelle nous étions habitués.
 
-Quand on parle d'économie, on a tendance à penser à l'économie au sens restreint : l'échange de marchandises contre de l'argent. En réalité le terme d'économie est beaucoup plus large que ça.
-
-Le mot « économie » vient du grec _oikonomia_, qui désigne l’administration de la maison. Il ne renvoie donc pas seulement à l’argent : il peut aussi désigner la manière dont un ensemble est organisé, dont ses ressources sont réparties et dont ses différentes parties fonctionnent ensemble.
+Le mot « économie » vient du grec _oikonomia_, l’administration de la maison. Il ne renvoie donc pas seulement à l’argent : il désigne la manière dont un ensemble est organisé et dont ses ressources sont réparties.
 
 :::example
-Dans l’*Économique*, au IVe siècle avant notre ère, Xénophon décrit l’administration d’une maison et de son domaine agricole : organiser le travail, ranger les outils, conserver les récoltes et répartir les provisions.
+Dans la Grèce antique, la « maison » est une unité de production qui comprend des terres, des biens et des personnes, dont des esclaves. L’administrer, c’est organiser le travail, ranger les outils, conserver les récoltes et répartir les provisions : par exemple, séparer les réserves du mois de celles qui doivent durer toute l’année.
 
-Il recommande notamment de séparer les réserves destinées au mois de celles qui doivent durer toute l’année, pour ne pas consommer trop vite les ressources disponibles. La « maison » est ici une unité de production qui comprend des terres, des biens et des personnes, dont des esclaves.
-
-L’économie désigne donc une organisation : qui fait quoi, avec quelles ressources, et comment répartir ce qui est produit.
+L’économie pose donc des questions d’organisation : qui fait quoi, avec quelles ressources, et comment répartir ce qui est produit ?
 :::
 
 Parler d’économie discursive, c’est appliquer cette idée à la production, à la circulation et à la réception des discours. Qui peut prendre la parole ? Pour s’adresser à qui ? Par quels moyens un discours est-il diffusé, rendu visible et reconnu comme important ou légitime ? Il ne s’agit pas seulement d’étudier ce qui se dit, mais les conditions dans lesquelles certaines paroles peuvent être produites, circuler et être entendues.
@@ -78,15 +74,13 @@ Une photographie prise à la sortie du lycée peut sembler banale à un inconnu.
 
 Il n’est donc pas nécessaire que chaque publication intéresse des inconnus ou traite d’un sujet d’actualité. Elle peut avoir du sens pour les personnes qui connaissent son auteur et partagent une partie de son quotidien.
 
-Publier peut alors servir à donner des nouvelles, à susciter une réaction ou à entretenir une relation. La valeur de la publication tient alors autant au lien entre les personnes qu’à l’information qu’elle contient.
-
-On parle alors de **contenus conversationnels** : partager permet de donner des nouvelles, de susciter une réaction ou d’entretenir une relation.
+Publier peut alors servir à donner des nouvelles, à susciter une réaction ou à entretenir une relation. La valeur de la publication tient autant au lien entre les personnes qu’à l’information qu’elle contient. On parle alors de **contenus conversationnels**.
 
 
 :::example
 **Snapchat.** Dans le dispositif initial de Snapchat, la photographie est conçue pour disparaître rapidement : elle n’a pas vocation à devenir une œuvre durable ou à laisser une trace autonome, mais à entretenir une relation et à participer à une interaction sociale.
 
-**Facebook et Instagram.** Le partage d’une photographie ou d’une vidéo vise souvent moins à produire un contenu autonome qu’à susciter des réactions — commentaires, mentions « j’aime » ou partages. C'est la continuation de la conversation qu'on a eu au lycée, ou la blague qui revient sur une soirée trop arrosée.
+**Facebook et Instagram.** Le partage d’une photographie ou d’une vidéo vise souvent moins à produire un contenu autonome qu’à susciter des réactions — commentaires, mentions « j’aime » ou partages. C'est la continuation de la conversation qu'on a eue au lycée, ou la blague qui revient sur une soirée trop arrosée.
 :::
 
 :::warning
@@ -109,8 +103,6 @@ Ces deux éléments se renforcent : l’entourage donne une raison de publier ; 
 
 :::example
 Un tweet de 140 caractères, au lancement de Twitter, demande moins de rédaction qu’un article de blog de trois pages. Une photo prise au smartphone permet de publier sans rédiger. Un like permet même de réagir sans produire de contenu original.
-
-Une photo sur Insta.
 :::
 
 En facilitant la participation, ces formats contribuent à élargir les publics qui prennent la parole en ligne. Avec eux, des façons de s’exprimer jusque-là davantage cantonnées aux échanges entre proches trouvent une place dans la publication : récits du quotidien, plaisanteries, allusions et références partagées. Ce ne sont donc pas seulement les personnes qui publient qui se diversifient, mais aussi les formes de discours qui deviennent visibles.
@@ -146,9 +138,7 @@ Dans un fil commun, ces paroles peuvent apparaître côte à côte. Les fonction
 
 --- notes
 
-En avril 2025, Joe Bernstein reprend une publication du compte officiel de la Maison-Blanche sur les droits de douane et l’applique, sur le ton de la plaisanterie, à une dispute entre ses deux enfants. Une parole institutionnelle entre ainsi dans une scène familiale, sous le même format de publication.
-
-La capture montre une publication citée, pas deux messages indépendants qui se suivent dans un fil. Elle illustre la rencontre de registres d’expression différents.
+En avril 2025, le journaliste Joe Bernstein reprend une publication du compte officiel de la Maison-Blanche sur les droits de douane et l’applique, sur le ton de la plaisanterie, à une dispute entre ses deux enfants. Une parole institutionnelle entre ainsi dans une scène familiale elle-même partagée sur le compte d'un journaliste.
 
 [Sources]
 
@@ -163,96 +153,208 @@ La capture montre une publication citée, pas deux messages indépendants qui se
   src="/social-networks-entangling.png"
   alt="L'entremêlement des régimes de discours sur les réseaux sociaux"
 />
----
-## Sphère publique et sphère privée
 
 --- notes
 
-Les exemples précédents montrent que des paroles issues de situations différentes peuvent circuler dans un même espace. Une anecdote familiale peut côtoyer une déclaration politique, voire la reprendre pour plaisanter.
+On se retrouve ici avec une photo officielle d'Emmanuel Macron qui essaye lui-même d'avoir l'air cool en reprenant les codes des réseaux sociaux, avec en parallèle, du contenu d'une école de surf de DZ, un.e rappeur.euse du 29 qui se trouve aussi être une connaissance personnelle mais qui ne fait que sa communication commerciale sur les réseaux, et ma surfeuse préférée du monde que je ne connais pas personnellement.
 
-Mais cette proximité ne donne pas automatiquement le même statut à ces paroles. Pour comprendre ce qui se transforme, il faut préciser ce que nous entendons par « public » et « privé ».
+Les exemples précédents montrent que des paroles issues de situations différentes circulent dans un même espace. Une anecdote familiale peut côtoyer une déclaration politique, voire la reprendre pour plaisanter.
 
-Une première distinction concerne la visibilité : qui peut accéder au propos ? Un message peut rester dans un groupe fermé ou être accessible à tous. Ses lecteurs effectifs peuvent aussi dépasser le cercle auquel son auteur pensait s’adresser.
+Mais cette proximité ne donne pas le même statut à ces paroles. Pour comprendre ce qui change, il faut préciser ce que veut dire « public ».
 
-:::example
-Une personne publie une photographie de vacances pour donner des nouvelles à ses proches. Si son compte est ouvert, des inconnus peuvent également la consulter. Le contenu est accessible publiquement, même si l’auteur s’adresse d’abord à son entourage.
-:::
-
-Une autre distinction concerne la portée du propos : présente-t-il une expérience comme une affaire personnelle ou comme une question qui concerne une collectivité ?
-
-La photographie de vacances ne devient pas un problème d’intérêt collectif du seul fait que tout le monde peut la voir. Inversement, une discussion dans un groupe fermé peut porter sur une question collective, comme la fermeture d’un hôpital.
-
-Nous distinguerons donc l’accès public à un contenu et sa participation à la discussion des affaires communes. C’est à cette seconde dimension que renvoie ici la notion de sphère publique.
-
-La sphère publique désigne l’espace social dans lequel des personnes et des groupes mettent en discussion des questions présentées comme communes, confrontent leurs positions et cherchent à peser sur les décisions collectives.
-
-:::example
-La réforme des retraites, la fermeture d’un hôpital de campagne ou la pollution d’une rivière constituent des problèmes d’intérêt public.
-:::
-
-La sphère privée renvoie, quant à elle, aux domaines de la vie personnelle et des relations intimes dont les individus peuvent légitimement vouloir réserver l’accès.
-
-:::example
-Un dîner familial, une conversation entre amis ou une décision médicale personnelle relèvent de la sphère privée tant qu’ils n'ont pas été présentés comme des problèmes concernant un ensemble plus large de personnes.
-:::
-
-Mais une expérience vécue dans ce cadre peut aussi soulever une question collective.
-
-:::example
-Selon que votre maladie est due aux hasards de la vie ou à une pollution systémique de l’environnement, la question ne sera pas la même.
-:::
-
-La frontière entre affaire personnelle et problème collectif fait donc elle-même l’objet de discussions et de conflits. Des personnes peuvent rapprocher leurs expériences, identifier des causes communes et demander une réponse collective. Il ne s’agit pas seulement, alors, de rendre une expérience personnelle visible, mais de transformer la manière dont elle est comprise.
-
-:::example
-Les violences faites aux femmes ont longtemps été considérées comme une question privée ne concernant que les couples impliqués. On pense aujourd'hui qu'elles ne constituent pas une succession de faits divers individuels mais relèvent d'une violence systémique dont la mise en discussion publique résulte de mobilisations sociales et politiques.
-:::
-
-La publicité d’un fait ou d’une question ne se réduit donc pas à sa visibilité.
-
-Une question reste alors ouverte : dans quels lieux et par quels moyens ces expériences et ces prises de parole deviennent-elles une discussion collective susceptible de peser sur le pouvoir ? C’est cette organisation de la sphère publique que nous allons examiner avec Habermas.
+De quoi parle-t-on lorsqu'on qualifie une parole de publique ? Le mot a deux sens qu’il faut séparer.
 
 ---
-# Jürgen Habermas
-Habermas, J. (1993). *L’Espace public*. Payot. {.kicker}
+|                    | Concerne soi et ses proches | Concerne tout le monde        |
+| :----------------- | :-------------------------- | :---------------------------- |
+| **Visible par tous** | Photo de vacances, compte ouvert | Article sur la réforme des retraites |
+| **Cercle fermé**   | Dîner de famille            | Groupe WhatsApp sur la fermeture de l’hôpital |
 
 --- notes
 
-Jürgen Habermas est un philosophe et sociologue allemand, membre de la deuxième génération de l’École de Francfort, connu notamment pour ses travaux sur la communication, la démocratie et la formation de l’opinion publique.
+Premier sens : ce qui est visible. Qui peut voir ce message ? Un message peut rester dans un cercle fermé ou être accessible à tous. Dans la suite du cours, nous dirons simplement qu’il est **visible**.
 
-Dans *L’Espace public*, il a étudié la naissance historique de la sphère publique moderne : la manière dont, à partir du XVIIIe siècle, se développent en Europe des lieux, des pratiques et des médias — salons, cafés, sociétés de lecture et titres de presse — à partir desquels une opinion publique peut progressivement se former et exercer une pression ou un contrepoids sur les décisions de l’État.
+Second sens : ce qui concerne tout le monde. Ce message parle-t-il d’une affaire commune ou d’une affaire personnelle ?
+
+:::comment
+Parcourir le tableau case par case.
+:::
+
+Les deux sens ne vont pas toujours ensemble. La photo de vacances est visible par tous si le compte est ouvert, mais elle ne devient pas une affaire commune pour autant. À l’inverse, un groupe WhatsApp fermé peut discuter de la fermeture d’un hôpital, qui concerne toute une ville.
+
+La **sphère publique** renvoie au second sens. C’est l’espace où des personnes discutent des affaires communes, confrontent leurs positions et cherchent à peser sur les décisions collectives.
+
+:::example
+La réforme des retraites, la fermeture d’un hôpital de campagne ou la pollution d’une rivière sont des affaires communes.
+:::
+
+La **sphère privée** renvoie à la vie personnelle : la famille, les amis, la santé, les relations intimes.
+
+:::example
+Un dîner familial, une conversation entre amis ou une décision médicale personnelle relèvent de la sphère privée.
+:::
+
+Mais la frontière entre les deux bouge. Une expérience personnelle peut devenir une affaire commune.
+
+:::example
+Une maladie due aux hasards de la vie reste une affaire personnelle. Si elle est due à la pollution d’une rivière, elle concerne tous les riverains.
+:::
+
+Ce passage ne se fait pas tout seul. Des personnes doivent rapprocher leurs expériences, identifier des causes communes et demander une réponse collective. Il ne s’agit pas seulement de rendre une expérience visible, mais de changer la manière dont elle est comprise.
+
+:::example
+Les violences faites aux femmes ont longtemps été considérées comme une affaire privée, propre à chaque couple. Des mobilisations féministes ont montré qu’il ne s’agit pas d’une suite de faits divers, mais d’une violence systémique. Elles en ont fait une affaire publique.
+:::
+
+Rendre un fait visible ne suffit donc pas à en faire une affaire publique.
+
+Une question reste ouverte : où et comment des expériences dispersées deviennent-elles une discussion commune capable de peser sur le pouvoir ? C’est ce qu’a étudié Habermas.
+
+---
+<!-- slide: id="habermas" title="Jürgen Habermas" -->
+
+<Persona name="Jürgen Habermas" dates="1929 - 2026" picture="/assets/habermas.jpg" />
+
+--- notes
+
+Jürgen Habermas était un philosophe et sociologue allemand, membre de la deuxième génération de l’École de Francfort. Il est connu notamment pour ses travaux sur la communication, la démocratie et la formation de l’opinion publique.
+
+Dans *L’Espace public* (1962), il raconte comment naît en Europe ce que nous appelons aujourd’hui l’opinion publique.
+
+Dans les monarchies du XVIIe siècle, les affaires de l’État sont celles du roi et de sa cour. Le pouvoir se montre au peuple, lors des cérémonies, des entrées royales ou des fêtes. Mais il ne se discute pas : les sujets n’ont pas à juger les décisions du souverain.
+
+Or, à la fin du XVIIe siècle, quelque chose change. Le basculement apparait d'abord en Angleterre. À Londres, les cafés se multiplient. On y vient boire une boisson nouvelle, mais aussi lire les journaux et commenter les nouvelles du jour avec des inconnus.
+
+Ce qui se joue là est politique. Les nouvelles qu’on y commente portent sur la guerre, les impôts ou la politique du gouvernement : exactement ce qui, jusque-là, ne regardait que le roi et son entourage. Des particuliers, qui n’exercent aucune charge, se mettent à en parler entre eux et à donner leur avis.
+
+Les sujets ne sont donc plus seulement spectateurs du pouvoir : ils commencent à le juger. Et ils le font hors des lieux du pouvoir, entre gens qui ne se connaissent pas, sans y avoir été invités.
+
+La presse accompagne ce mouvement. Les journaux fournissent aux cafés leurs sujets de conversation, et les cafés font circuler les journaux. En 1695, la censure préalable disparaît en Angleterre : les journaux se multiplient, et avec eux la matière de ces discussions.
+
+Très tôt, cette parole nouvelle inquiète le pouvoir royal.
+
+:::example
+En 1675, le roi Charles II ordonne la fermeture des cafés de Londres. Il les accuse de répandre de fausses nouvelles et de diffamer son gouvernement. Devant les protestations, il retire sa proclamation au bout de quelques jours.
+:::
+
+Au XVIIIe siècle, le mouvement gagne la France et le reste de l’Europe. À Paris, on discute dans les cafés, comme le Procope, et dans les salons tenus par des femmes de la haute société, où se retrouvent écrivains, savants et philosophes. Dans les sociétés de lecture, on partage livres et journaux. Des livres imprimés à l’étranger, pour échapper à la censure, circulent sous le manteau.
+
+Qui participe ? Surtout des bourgeois : marchands, avocats, médecins, hommes de lettres. Ils ne sont ni nobles ni membres du clergé, mais ils sont instruits, ils lisent, et ils veulent avoir leur mot à dire sur les affaires communes.
+
+Peu à peu, ces discussions dérangent le pouvoir. Les décisions du roi sont commentées, critiquées, comparées. Une force nouvelle apparaît, que l’on commence à appeler « l’opinion publique ». Le pouvoir ne peut plus seulement décider : il doit aussi se justifier.
+
+:::example
+En 1781, Necker, chargé des finances de Louis XVI, publie un *Compte rendu au roi* qui expose l’état des finances du royaume. Les comptes de l’État sont ainsi présentés au public, et le livre connaît un immense succès.
+:::
+
+C’est cet ensemble de lieux, de journaux et de discussions que Habermas appelle l’espace public bourgeois. Voyons maintenant ce qui le caractérise.
 
 :::warning
 Habermas utilise la notion allemande d’*Öffentlichkeit*, souvent traduite en français par _espace public_. Dans ce cours, nous utiliserons indistinctement les termes d’espace public et de sphère publique.
 :::
 
-L'espace public bourgeois crée un monde commun de discussion. La presse, les cafés, les salons et les sociétés de lecture donnent à des individus qui ne se connaissent pas directement des objets d’attention partagés — décisions politiques, événements économiques, questions morales ou faits sociaux. En discutant publiquement de ces sujets, ils peuvent transformer des expériences et des intérêts particuliers en problèmes présentés comme concernant la collectivité.
+---
+<!-- slide: id="espace-public-bourgeois" title="L’espace public bourgeois" steps=3 -->
 
-L’espace public joue également un rôle de médiation et de contrôle du pouvoir. Il constitue un espace intermédiaire entre la société civile et l’État, dans lequel les décisions et l’action des autorités peuvent être rendues visibles, discutées et critiquées. L’opinion publique peut ainsi fonctionner comme une forme de contre-pouvoir et comme une source de légitimation des décisions politiques : gouverner ne consiste plus seulement à exercer une autorité, mais aussi à pouvoir justifier son action devant un public.
+<script>
+  import Fragment from "@svx-deck/core/components/Fragment.svelte";
+</script>
+
+## L’espace public bourgeois
+
+<Fragment at={1}>
+
+Un monde commun {.kicker}
+
+</Fragment>
+
+<Fragment at={2}>
+
+Une manière de parler {.kicker}
+
+</Fragment>
+
+<Fragment at={3}>
+
+Un contrôle du pouvoir {.kicker}
+
+</Fragment>
+
+--- notes
+
+Habermas dégage trois éléments qui caractérisent l’espace public bourgeois.
+
+:::comment
+Faire avancer le slide.
+:::
+
+### Un monde commun
+
+L'espace public bourgeois crée d'abord un monde commun de discussion. La presse, les cafés, les salons et les sociétés de lecture donnent à des individus qui ne se connaissent pas directement des objets d’attention partagés — décisions politiques, événements économiques, questions morales ou faits sociaux. En discutant publiquement de ces sujets, ils peuvent transformer des expériences et des intérêts particuliers en problèmes présentés comme concernant la collectivité.
 
 :::example
-« Que répondez-vous aux Français qui pensent que… ? »
+Le jour où une réforme des retraites est annoncée, elle fait la une de tous les journaux. Le soir, on en parle à table, le lendemain à la machine à café ou entre deux cours. Un maçon, une infirmière et un étudiant qui ne se connaissent pas discutent du même sujet au même moment. Chacun le rapporte à sa propre situation, et compare son point de vue à celui des autres.
+:::
 
-« Les sondages montrent que les Français veulent que… »
+:::comment
+Faire avancer le slide.
+:::
+
+### Une manière de parler
+
+L'espace public suppose ensuite une manière de parler. Pour Habermas, les participants y sont en principe égaux dans la parole : on ne tient pas compte de leur rang, seule compte la force de l’argument. Et on s’adresse à n’importe qui, pas seulement à ses proches. L’espace public pose donc deux exigences : être admis à parler, et parler d’une certaine manière pour être écouté.
+
+:::example
+Lors du débat télévisé de l’entre-deux-tours de l’élection présidentielle, les deux candidats disposent du même temps de parole. Ils s’adressent à des millions de téléspectateurs qu’ils ne connaissent pas. Pour convaincre, ils doivent répondre aux arguments de l’adversaire : leur titre ou leur parcours ne suffit pas. Un candidat qui insulte l’autre ou esquive les questions est d’ailleurs jugé sévèrement.
 :::
 
 :::warning
 Cette conception est cependant normative et historiquement située. L’accès à ces espaces de discussion reste longtemps réservé à certains groupes sociaux, notamment aux hommes instruits et appartenant aux classes privilégiées. La sphère publique n’est donc jamais parfaitement ouverte, égalitaire ou démocratique.
 :::
 
-Habermas étudie les conditions dans lesquelles les discussions collectives s’organisent durablement dans des lieux, des pratiques et des médias spécifiques. Elles acquièrent ainsi une fonction politique structurelle. Cela ne signifie pas que les sociétés antérieures ne discutaient pas de leurs affaires communes.
+:::comment
+Faire avancer le slide.
+:::
 
-La question devient alors celle des conditions qui permettent à des individus dispersés de se constituer en public, de partager des objets d’attention et de former une opinion collective.
+### Un contrôle du pouvoir
 
-L’espace public bourgeois s’est appuyé sur la presse, les salons et les cafés. La radio puis la télévision transformeront plus tard les conditions de la discussion publique. À chaque période, des dispositifs matériels déterminent ce qui peut circuler et auprès de qui.
+Enfin, l’espace public joue un rôle de médiation et de contrôle du pouvoir. Il constitue un espace intermédiaire entre la société civile et l’État, dans lequel les décisions et l’action des autorités peuvent être rendues visibles, discutées et critiquées.
 
-Jusqu’à une période récente, une séparation matérielle et technique relativement nette existait entre les échanges privés — le domicile, les lettres, le téléphone — et les espaces publics médiatiques — la presse, la radio et la télévision.
+:::example
+En décembre 2012, le site d’information Mediapart révèle que Jérôme Cahuzac, ministre chargé du Budget et donc de la lutte contre la fraude fiscale, possède un compte bancaire caché en Suisse. Il nie, y compris devant les députés. Mais Mediapart continue de publier des éléments, la justice ouvre une enquête, et il doit démissionner en mars 2013 avant de reconnaître les faits.
+:::
 
-Cette séparation n’était jamais absolue : les lettres pouvaient être publiées, les conversations rapportées et la presse révéler des informations privées. Mais les moyens techniques de diffusion limitaient fortement la circulation immédiate d’une conversation ou d’une expérience personnelle. Ce qui se passait dans la sphère privée y restait donc plus facilement contenu.
+L’opinion publique peut ainsi fonctionner comme une forme de contre-pouvoir et comme une source de légitimation des décisions politiques : gouverner ne consiste plus seulement à exercer une autorité, mais aussi à pouvoir justifier son action devant un public.
 
-Le Web et les réseaux sociaux ont profondément transformé cette frontière. Ils permettent à chacun de publier, de commenter et de partager des contenus potentiellement visibles par un très grand nombre de personnes. Une conversation privée peut être capturée et diffusée ; une expérience intime peut devenir un témoignage public ; un événement local peut acquérir une visibilité nationale ou mondiale.
+:::example
+« Que répondez-vous aux Français qui pensent que… ? », « Les sondages montrent que les Français veulent que… »
 
-Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé, mais ils l’ont rendue plus poreuse, instable et négociable. Ils multiplient les situations dans lesquelles un contenu destiné à un cercle restreint devient visible au-delà de son public initial.
+Ces formules reviennent sans cesse dans les interviews politiques. Elles font parler « les Français » comme une seule personne, dotée d’un avis. Cet avis est pourtant fabriqué : par un sondage qui pose une question et compte les réponses, par un micro-trottoir qui retient trois passants, par un éditorialiste qui affirme ce que « les gens » pensent.
+:::
+
+L’opinion publique n’est donc pas une chose qu’on pourrait observer directement. C’est une construction : elle n’existe qu’à travers les instruments et les discours qui la font parler. Le sociologue Pierre Bourdieu a même pu écrire, en 1973, que « l’opinion publique n’existe pas ».
+
+Pourtant, elle agit. Les responsables politiques suivent leur cote de popularité, adaptent leurs discours aux sondages et doivent répondre quand on leur oppose « ce que pensent les Français ». Un projet jugé impopulaire peut être amendé, reporté ou retiré. Même fabriquée, l’opinion publique fonctionne donc comme une force sociale : on ne peut pas l’ignorer.
+
+### Des pratiques concrètes
+
+Un monde commun, une manière de parler, un contrôle du pouvoir : ces trois éléments ne tiennent pas tout seuls. L’espace public n’est pas seulement une idée ou un idéal. Il repose sur des pratiques concrètes.
+
+On lit le journal, puis on en discute au café avec des inconnus. Dans les salons et les sociétés de lecture, on apprend à défendre une position et à répondre à une objection. La presse rend compte des décisions du pouvoir et publie leurs critiques.
+
+:::example
+Dans les cafés de Londres, au début du XVIIIe siècle, on trouve les journaux du jour. Les clients les lisent et les commentent ensemble, sans que leur rang décide en principe de qui a le droit de répondre.
+:::
+
+Ce sont ces pratiques qui font tenir les trois éléments ensemble. Le journal fournit les objets d’attention communs. La discussion au café ou au salon impose une manière de parler. La presse rend l’action du pouvoir visible et discutable.
+
+### Des pratiques qui changent
+
+Ces pratiques dépendent de dispositifs matériels : l’imprimerie, la poste, les lieux de réunion. Quand ces dispositifs changent, les pratiques changent aussi. La radio puis la télévision ont déjà transformé la discussion publique : un petit nombre de voix s’adresse à un très grand nombre d’auditeurs, qui ne peuvent guère répondre.
+
+Ces pratiques sont aujourd’hui en train de changer à nouveau. On ne lit plus seulement le journal avant d’en parler au café : on le partage, on le commente et on y répond publiquement, au même endroit.
+
+Ce changement touche les deux exigences de l’espace public : qui peut parler, et comment il faut parler pour être écouté. D’un côté, les réseaux sociaux numériques font entrer dans l’espace public des personnes qui n’y avaient pas accès. De l’autre, ces personnes y parlent souvent autrement : par l’anecdote, l’humour ou le témoignage. Les régimes de discours s’y télescopent.
 
 ---
 
@@ -264,20 +366,21 @@ Les réseaux sociaux n’ont pas supprimé la distinction entre public et privé
 
 --- notes
 
+Pour comprendre ce que les réseaux sociaux numériques transforment, posons deux questions. Qui parle ? Et de quoi parle-t-on ?
 
-Pour préciser ce que le Web transforme, distinguons les personnes qui prennent la parole et les sujets qu’elles abordent.
+L’axe horizontal répond à la première question. À gauche, des professionnels de la parole publique, comme les journalistes ou les responsables politiques. À droite, des amateurs, qui prennent la parole hors de tout cadre professionnel.
 
-L’axe horizontal concerne le « qui parle » : à gauche, des professionnels de la parole publique, comme les journalistes ou les responsables politiques ; à droite, des amateurs qui interviennent hors de ce cadre professionnel.
+L’axe vertical répond à la seconde. En haut, des questions présentées comme collectives : une réforme ou une politique économique. En bas, des expériences ordinaires : une journée au lycée, le marché de Douarnenez ou une peine de cœur.
 
-L’axe vertical concerne le « de quoi parle-t-on » : en haut, des questions formulées comme collectives, comme une réforme ou une politique économique ; en bas, des expériences ordinaires, comme une journée au lycée, le marché de Douarnenez ou une peine de cœur.
+Cet axe reprend le second sens de « public » vu dans le tableau : ce qui concerne tout le monde, ou seulement soi et ses proches.
 
 :::warning
-Cet axe ne mesure ni la valeur des propos ni leur accessibilité. Une expérience intime peut être visible par tous ; elle peut aussi être reformulée comme une question collective. L’exemple des violences faites aux femmes montre ce déplacement.
+Cet axe ne mesure ni la valeur des propos ni leur visibilité. Une expérience intime peut être visible par tous. Elle peut aussi devenir une question collective, comme le montre l’exemple des violences faites aux femmes.
 
-Ces quadrants sont des repères pour comparer des situations de parole. Ils ne classent pas définitivement les personnes, les sujets ou les plateformes.
+Les quadrants sont des repères pour comparer des situations de parole. Ils ne classent pas définitivement les personnes, les sujets ou les plateformes.
 :::
 
-Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes distincts de prise de parole, de circulation de l’information et de visibilité.
+Les deux axes dessinent quatre quadrants. Chacun correspond à une manière de prendre la parole, de faire circuler l’information et d’être visible.
 
 ---
 <script>
@@ -290,15 +393,19 @@ Ces axes nous permettent d’isoler quatre quadrants, correspondant à des modes
 
 ### La sphère publique restreinte
 
-En haut à gauche, nous trouvons la **sphère publique restreinte** : des professionnels — journalistes, éditorialistes, intellectuels ou responsables politiques — y discutent de sujets explicitement considérés comme relevant de l’intérêt public.
+En haut à gauche, des professionnels parlent de questions collectives. Ce sont des journalistes, des éditorialistes, des intellectuels ou des responsables politiques. Ils discutent de sujets reconnus comme relevant de l’intérêt public.
 
 :::example
-Les propositions de loi, la géopolitique, la politique économique, etc.
+Les propositions de loi, la géopolitique, la politique économique.
 :::
 
-Ce quadrant renvoie aux formes de publicité politique et médiatique qui se développent progressivement entre le XVIIe et le XVIIIe siècle, avec la naissance de la presse d’opinion et la multiplication des lieux de discussion politique.
+C’est le quadrant de la parole publiée. Il se développe à partir de la fin du XVIIe siècle, avec la presse d’opinion.
 
-Cette sphère est dite « restreinte » parce que l’accès à la parole et à la visibilité y est limité à un petit nombre d’acteurs autorisés et parce que les sujets traités se concentrent principalement sur les lieux officiels du pouvoir.
+Au XVIIIe siècle, beaucoup de gens discutent dans les cafés et les salons décrits par Habermas. Mais très peu publient. Ces conversations restent orales : elles ne sont pas visibles au-delà de ceux qui y participent. Seuls les journaux, les livres et les discours sont accessibles à tous.
+
+C’est précisément ce que les réseaux sociaux numériques vont changer : la conversation du café devient elle-même visible.
+
+On parle de sphère publique « restreinte » pour deux raisons. D’abord, parce que peu de personnes y ont accès. Ensuite, parce qu'on discute surtout des lieux et des thèmes officiels du pouvoir.
 
 ---
 <script>
@@ -311,55 +418,53 @@ Cette sphère est dite « restreinte » parce que l’accès à la parole et à 
 
 ### La vie ordinaire médiatisée
 
-En bas à gauche, nous trouvons encore des professionnels de la parole publique, qui traitent cette fois des situations et des expériences de la vie quotidienne. La presse parle aussi des hommes et des femmes ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
+En bas à gauche, on trouve encore des professionnels. Mais ils parlent cette fois de la vie quotidienne : des gens ordinaires, des faits divers, des événements locaux ou de la vie des campagnes.
 
 :::example
-Un reportage du journal de 13 heures sur un marché, un micro-trottoir sur les vacances ou le marronnier de la neige à Noël.
+Un reportage du journal de 13 heures sur un marché, un micro-trottoir sur les vacances ou le marronnier de la neige à Noël. Un marronnier est un sujet qui revient chaque année à la même période.
 :::
 
-Cet élargissement se produit surtout au XIXe siècle avec l’essor de la presse de masse et les progrès de l’alphabétisation. Pour conquérir un lectorat plus large, les journaux diversifient leurs sujets et cherchent à intéresser des lecteurs dont les vies sont parfois très éloignées les unes des autres.
+Cet élargissement date surtout du XIXe siècle. La presse devient une presse de masse, et de plus en plus de gens savent lire. Pour gagner ces nouveaux lecteurs, les journaux diversifient leurs sujets. Ils cherchent à intéresser des personnes dont les vies sont très différentes.
 
-La photographie puis le reportage audiovisuel rendent également les événements plus immédiatement visibles. Les médias permettent ainsi à des individus qui ne se rencontrent pas directement de partager des informations, des expériences et des préoccupations, et de se représenter comme appartenant à un même monde commun.
+La photographie, puis le reportage audiovisuel, rendent les événements plus immédiatement visibles. Des personnes qui ne se rencontrent jamais partagent ainsi des informations et des préoccupations. Elles peuvent se représenter comme appartenant à un même monde commun.
 
-:::example
-La manière dont les médias construisent un « problème de l’immigration », y compris dans des territoires où les habitants ont peu de contacts directs avec les personnes immigrées.
-:::
+Mais la presse illustrée et la publicité exposent aussi davantage la vie privée. Les controverses qui en résultent conduisent peu à peu à la protéger par le droit.
 
-L’essor de la presse illustrée et de la publicité commerciale contribue aussi à exposer davantage la vie privée.
+On retrouve ici un schéma familier avec les réseaux sociaux numériques : un nouveau média transforme vite les pratiques, et le droit s’adapte plus lentement.
 
-Les controverses que cette exposition suscite participent à la construction progressive de protections juridiques de la vie privée. Comme avec les réseaux sociaux aujourd’hui, l’apparition de nouveaux médias transforme rapidement les pratiques, tandis que le droit s’adapte plus lentement.
-
-Ces deux premiers quadrants correspondent aux espaces publics médiatiques traditionnels : la presse, la radio et la télévision.
+Ces deux premiers quadrants correspondent aux médias traditionnels : la presse, la radio et la télévision.
 
 ---
-### Gatekeepers
-> Ceux qui (croient) savoir ce qui est d'intérêt {.kicker}
+## Gatekeepers
+Ceux qui (croient) savoir ce qui est d'intérêt public {.kicker}
 
 --- notes
 
-Leur fonctionnement repose en grande partie sur des **gatekeepers**, ou « portiers ». Les journalistes, les rédacteurs en chef et les éditorialistes sélectionnent, hiérarchisent et mettent en forme les informations : ils décident, selon des critères professionnels, politiques et économiques, de ce qui mérite d’être vu, entendu ou lu.
+Ces médias traditionnels reposent en grande partie sur des **gatekeepers**, ou « portiers ». Ce sont les journalistes, les rédacteurs en chef et les éditorialistes. Ils sélectionnent les informations, les hiérarchisent et les mettent en forme. Ils décident ainsi de ce qui mérite d’être vu, entendu ou lu.
 
-Ils contribuent ainsi à façonner l’**agenda public**, c’est-à-dire l’ensemble des sujets dont une société parle à un moment donné.
-
-### Sélectionner ce qui mérite l’attention collective
-
-Ces gatekeepers articulent deux acceptions différentes de la notion de publicité.
-
-Dans un premier sens, rendre une information publique signifie la rendre visible et accessible au plus grand nombre ; dans un second sens, cela signifie la présenter comme une question qui concerne la collectivité et qui mérite, à ce titre, d’être discutée publiquement.
-
-Ces deux dimensions peuvent coïncider, mais elles ne se confondent pas nécessairement. La médiatisation de la vie privée d’une personnalité peut rendre une information très visible sans que sa publication présente pour autant un véritable intérêt public. Inversement, la mise en discussion collective peut faire reconnaître comme problème social une réalité auparavant traitée comme une affaire individuelle.
-
-Dans les médias traditionnels, les gatekeepers disposent d’un pouvoir important pour rapprocher ces deux dimensions : ils sélectionnent les informations qu’ils jugent dignes d’être publiées. Cette sélection propose une définition de ce qui mérite l’attention collective.
-
-Il s’agit d’une fonction revendiquée et disputée, sans garantie d’équivalence entre visibilité et intérêt public. Les choix éditoriaux dépendent aussi des positions sociales, des orientations politiques et des contraintes commerciales. La frontière entre ce qui doit être montré et ce qui doit rester privé peut elle-même faire débat.
+Ce faisant, ils façonnent l’**agenda public** : l’ensemble des sujets dont une société parle à un moment donné.
 
 :::example
-Le cas de Mazarine Pingeot pose une question délicate : fallait-il rendre publique l’existence de la fille cachée du président François Mitterrand ? Cette information relevait de sa vie privée, mais elle pouvait aussi être considérée comme un enjeu public dans la mesure où ce secret était susceptible d’être utilisé politiquement contre le président ou d’interroger les intérêts de l’État.
+Les médias peuvent installer un « problème de l’immigration » à l’agenda, y compris dans des territoires où les habitants ont peu de contacts directs avec des personnes immigrées.
 :::
 
-Le Web et les RSN ébranlent ce contrôle de l’accès à la publication. Des personnes peuvent désormais publier sans obtenir au préalable la sélection d’une rédaction. La définition de ce qui mérite d’être rendu visible devient elle aussi plus ouvertement contestable.
+Les gatekeepers relient les deux sens de « public » vus plus haut. Quand ils rendent une information visible, ils la présentent aussi comme digne de l’attention collective.
 
-Ils transforment l’espace public selon au moins deux dimensions : ils multiplient le nombre de personnes capables de prendre la parole publiquement et ils transforment la matière, les formats et les régimes de visibilité de cette parole.
+Mais les deux sens ne coïncident pas toujours. La vie privée d’une personnalité peut être très visible sans présenter d’intérêt public. Et la frontière entre ce qui doit être montré et ce qui doit rester privé fait elle-même débat.
+
+:::example
+En novembre 1994, *Paris Match* publie des photos de Mazarine Pingeot, la fille cachée du président François Mitterrand. Fallait-il le faire ? L’existence d’un enfant relève de la vie privée.
+
+Mais ce secret a été protégé avec des moyens publics : un logement et une protection assurés par l’État, et des écoutes téléphoniques illégales menées par une cellule de l’Élysée, notamment contre l’écrivain Jean-Edern Hallier qui menaçait de le révéler. Cet usage des moyens de l’État en fait aussi une affaire publique.
+:::
+
+Cette sélection n’est jamais neutre. Elle dépend de critères professionnels, mais aussi d’orientations politiques, de contraintes commerciales et de rapports de pouvoir. Décider de ce qui mérite l’attention collective est donc une opération politique.
+
+De plus, l’accès aux métiers de journaliste, d’éditorialiste ou d’expert est socialement sélectif. Ceux qui les exercent viennent souvent de milieux proches. Ils partagent des préoccupations et des codes communs, et certaines expériences restent ainsi à l’écart.
+
+Le Web, puis les réseaux sociaux numériques, ébranlent ce contrôle. On peut désormais publier sans passer par la sélection d’une rédaction. Ce qui mérite d’être rendu visible devient donc plus ouvertement contestable.
+
+Voyons ce qui se passe quand des amateurs prennent la parole : d’abord sur des questions communes, puis sur leur vie ordinaire.
 
 ---
 <script>
@@ -370,42 +475,39 @@ Ils transforment l’espace public selon au moins deux dimensions : ils multipli
 
 --- notes
 
-### Le web participatif
+### Le Web participatif
 
-Le quadrant situé en haut à droite rassemble des individus intervenant hors du cadre professionnel des médias sur des thèmes explicitement présentés comme relevant de l’intérêt commun : politique, économie, écologie, etc.
+En haut à droite, des amateurs parlent de questions collectives : politique, économie, écologie. Ils interviennent hors du cadre professionnel des médias.
 
-Cette forme d’expression s’est démocratisée à partir du début des années 2000, principalement avec la naissance des plateformes de blogging, puis de vlogging, mais aussi avec l’émergence - somme toute très relative - du journalisme participatif.
-
-:::example
-Rue89, Huffington Post, Indymedia, Glupatate, Le canard réfractaire, etc.
-:::
-
-Ce sont, aujourd'hui, certains influenceurs politiques sur les réseaux sociaux.
+Cette forme d’expression se développe à partir de la fin des années 1990, d’abord avec des sites militants et des blogs, puis avec la vidéo en ligne. Le journalisme participatif apparaît aussi, mais il reste très marginal.
 
 :::example
-Greta Thunberg
+Indymedia, un réseau de sites où chacun peut publier ses propres reportages, né en 1999 lors des manifestations contre l’Organisation mondiale du commerce à Seattle.
 :::
 
-La baisse des coûts de publication et de diffusion sur le Web permet à ces acteurs de contourner le filtre politique et éditorial des gatekeepers.
-
-La sélection de ce qui devient visible et la définition de ce qui mérite l’attention collective sont donc des opérations politiques. Elles dépendent des rapports de pouvoir, des mobilisations sociales et des conceptions dominantes de ce qui doit être considéré comme important.
-
-L’accès aux positions de journaliste, d’éditorialiste ou d’expert est socialement sélectif. Des parcours et des milieux proches peuvent favoriser des préoccupations et des codes communs, tout en laissant certaines expériences à l’écart.
-
-Le Web, en abaissant les coûts de publication et de diffusion de la parole, a permis à de nombreuses personnes de faire irruption sur la scène publique sans passer par le filtre des gatekeepers. Cette ouverture ne garantit pas une orientation émancipatrice : Soral ou la sphère masculiniste en bénéficient également.
-
-Cette ouverture peut aussi soutenir ce qu’Oskar Negt appelle des espaces publics oppositionnels : des espaces où les groupes sociaux marginalisés ou dominés expriment leurs expériences et leurs intérêts, souvent négligés ou réprimés dans l’espace public bourgeois traditionnel.
+Aujourd’hui, ce quadrant est notamment occupé par des chaînes politiques indépendantes, sur YouTube, TikTok ou Instagram.
 
 :::example
-Indymedia
-
-Le soulèvement zapatiste au Chiapas. Dès 1994, l’EZLN, l’Armée zapatiste de libération nationale, bénéficie d’une circulation internationale de ses communiqués grâce aux réseaux numériques. Des sympathisants et des associations relaient et traduisent ses textes, notamment par courrier électronique et sur des listes de diffusion. Il ne s’agit donc pas simplement de guérilleros connectés depuis la forêt : des relais articulent les communications du mouvement, le travail de journalistes et la diffusion sur Internet.
-Ces réseaux permettent de faire circuler les revendications des communautés autochtones au-delà du cadrage des grands médias, de documenter la répression et d’organiser des solidarités internationales. On peut y voir la construction d’un espace public oppositionnel : des groupes marginalisés trouvent des moyens de présenter leurs expériences et leurs revendications comme des questions politiques communes. Internet ne supprime pas les intermédiaires, mais permet de s’appuyer sur d’autres relais que les seules rédactions des médias dominants
+Glupatate, Le Canard réfractaire.
 :::
 
-Cette perspective déplace l’attention vers les conflits et les expériences exclues de l’espace public dominant. Elle met en discussion la capacité de celui-ci à représenter un intérêt véritablement commun.
+Ces acteurs contournent le filtre politique et éditorial des gatekeepers, parce que publier et diffuser sur le Web coûte peu. Mais les plateformes deviennent elles-mêmes de nouveaux filtres, par leurs algorithmes de recommandation. Nous y reviendrons.
 
-L’ouverture ne concerne cependant pas seulement les interventions explicitement politiques. Elle donne aussi une visibilité nouvelle aux échanges de la vie ordinaire.
+:::warning
+Cette ouverture ne garantit pas une orientation émancipatrice. L’essayiste d’extrême droite Alain Soral, condamné à plusieurs reprises pour provocation à la haine, ou la sphère masculiniste en profitent également.
+:::
+
+Elle peut aussi soutenir ce qu’Oskar Negt et Alexander Kluge appellent des **espaces publics oppositionnels**. Ce sont des espaces où des groupes marginalisés ou dominés expriment leurs expériences et leurs intérêts. L’espace public bourgeois négligeait souvent ces expériences, quand il ne les réprimait pas.
+
+:::example
+Le soulèvement zapatiste au Chiapas, au Mexique. Dès 1994, les communiqués de l’EZLN, l’Armée zapatiste de libération nationale, circulent dans le monde entier. Ce ne sont pas des guérilleros connectés depuis la forêt : des sympathisants et des associations relaient et traduisent leurs textes, par courrier électronique et sur des listes de diffusion.
+
+Ces relais font circuler les revendications des communautés autochtones au-delà du cadrage des grands médias. Ils documentent la répression et organisent des solidarités internationales. Des groupes marginalisés présentent ainsi leurs expériences comme des questions politiques communes. Internet ne supprime donc pas les intermédiaires : il permet de s’appuyer sur d’autres relais que les grandes rédactions.
+:::
+
+Cette perspective déplace l’attention vers les conflits et les expériences que l’espace public dominant laisse de côté. Elle conteste sa prétention à représenter un intérêt vraiment commun.
+
+Mais l’ouverture ne concerne pas seulement les prises de parole politiques. Elle rend aussi visibles les échanges de la vie ordinaire.
 
 ---
 <script>
@@ -418,33 +520,57 @@ L’ouverture ne concerne cependant pas seulement les interventions explicitemen
 
 ### Web en clair-obscur
 
-Ce dernier quadrant permet de comprendre comment les RSN brouillent les frontières entre sphère publique et sphère privée.
+En bas à droite, des amateurs parlent de choses ordinaires, parfois très intimes. Ils s’adressent à leurs proches, mais dans des espaces dont la visibilité peut dépasser ce cercle. Ce quadrant montre comment les réseaux sociaux numériques brouillent la frontière entre sphère publique et sphère privée.
 
-Il s’agit de personnes qui parlent de choses ordinaires, parfois très intimes, à d’autres personnes, dans des espaces dont la visibilité peut dépasser le cercle auquel elles pensent s’adresser.
+Avant eux, les échanges privés et les médias étaient assez nettement séparés. D’un côté, le domicile, les lettres, le téléphone. De l’autre, la presse, la radio, la télévision. Cette séparation n’était pas absolue : une lettre pouvait être publiée, une conversation rapportée. Mais les moyens de diffusion limitaient fortement la circulation d’une conversation privée.
 
-Les RSN ont donné une extension nouvelle à cette prise de parole. Les conversations, les relations sociales, les goûts et les choix individuels deviennent plus facilement consultables et partageables. Leur accessibilité varie toutefois selon les services et les réglages.
+Les réseaux sociaux numériques rendent ces échanges beaucoup plus facilement visibles. Une conversation peut être capturée et diffusée. Un événement local peut être vu dans le monde entier. 
 
-Ces publications font l’objet de critiques récurrentes : pourquoi exposer sa vie, donner son avis sans compétence reconnue ou mêler l’intime à des questions politiques ? Parler de ses règles pour critiquer le patriarcat ou se filmer dans sa cuisine pour discuter la malbouffe peut ainsi être disqualifié comme un mélange des genres.
+Ils ne suppriment donc pas la distinction entre public et privé. Ils multiplient plutôt les situations où un contenu destiné à un cercle restreint devient visible au-delà.
 
-Mais pour apprécier la portée de ces échanges, il faut comprendre leur fonction. Quel rôle les conversations ordinaires jouent-elles dans la formation des opinions ?
+La plupart de ces échanges ne cherchent pas à convaincre. On donne des nouvelles, on plaisante, on commente sa journée. Leur fonction est d’abord relationnelle : ce sont les contenus conversationnels vus au début du cours.
+
+Mais une fois visibles, ils sont souvent jugés avec les attentes de l’espace public. On leur reproche d’exposer sa vie ou de donner son avis sans compétence reconnue. Ce reproche juge une parole relationnelle avec les règles d’un autre régime de discours.
+
+Cette visibilité expose aussi les échanges à des regards extérieurs. Une plaisanterie peut sembler insignifiante ou outrancière à qui ignore les références partagées par ses destinataires. Nous jugeons ainsi souvent plus sévèrement les conversations des autres que les nôtres, dont nous connaissons le contexte.
+
+Parfois, pourtant, une expérience ordinaire devient une affaire commune. Parler de ses règles pour critiquer le patriarcat, se filmer dans sa cuisine pour discuter la malbouffe, raconter une agression avec #MeToo en 2017 : le bas de la matrice rejoint alors le haut.
+
+Ces prises de parole sont souvent disqualifiées comme un mélange des genres. Elles font pourtant ce que nous avons décrit plus haut : transformer une expérience personnelle en affaire publique.
+
+Ce passage n’est pas nouveau. Bien avant les réseaux sociaux numériques, l’actualité entrait déjà dans la vie ordinaire par la conversation.
 
 ---
-<!-- slide: id="conversations-et-opinion" title="Conversations et formation de l’opinion" steps=0 -->
 ## Conversations et formation de l’opinion
+Du journal à la conversation {.kicker}
 
 --- notes
 
-Les conversations ordinaires jouent depuis longtemps un rôle dans la manière dont les individus interprètent, discutent et adoptent ou rejettent les informations qui circulent publiquement. La réception des médias ne suffit donc pas à expliquer la formation des opinions.
+Toutes nos conversations ne portent pas sur l’actualité. Mais quand l’actualité nous atteint, c’est souvent en en parlant : à table, au travail, entre amis. C’est là qu’elle prend un sens pour nous. La réception des médias ne suffit donc pas à expliquer la formation des opinions.
+
+:::warning
+Cela ne signifie pas que toute conversation sert à former une opinion. La plupart restent relationnelles. Mais quand l’actualité entre dans la vie ordinaire, elle passe par elles.
+:::
 
 ### L’opinion et la foule
 
-Dans *L’Opinion et la foule* (1901), Gabriel Tarde permet de penser cette formation de l’opinion à partir de deux mouvements complémentaires.
+Dans *L’Opinion et la foule* (1901), Gabriel Tarde répond à Gustave Le Bon, pour qui son époque est celle des foules. Pour Tarde, notre âge est plutôt « l’ère du public ou des publics ».
 
-Le premier est **vertical** : la presse fait circuler des informations, des récits et des thèmes vers un public dispersé. En lisant un journal, chacun prend connaissance d’événements et de problèmes qui deviennent susceptibles d’être discutés avec d’autres. On peut prolonger aujourd’hui cette analyse à la télévision ou aux podcasts.
+La différence est simple. Une foule est rassemblée physiquement, comme dans une manifestation ou un stade. Un public est dispersé : ses membres ne se voient pas. Ce qui les relie, c’est de lire le même journal au même moment, et de savoir que d’autres le lisent aussi.
+
+:::example
+Le matin, des milliers de lecteurs découvrent la même nouvelle dans leur journal. Ils ne se connaissent pas, mais ils savent que d’autres s’intéressent à la même chose qu’eux. Ils forment un public.
+:::
+
+On retrouve la question posée avec Habermas : comment des individus dispersés forment-ils un public et une opinion ? Pour Tarde, la réponse passe par deux mouvements complémentaires.
+
+Le premier est **vertical** : la presse fait circuler des informations, des récits et des thèmes vers un public dispersé. En lisant un journal, chacun prend connaissance d’événements et de problèmes qui deviennent susceptibles d’être discutés avec d’autres. On peut étendre aujourd’hui cette analyse à la télévision ou aux podcasts.
 
 Le second est **horizontal** : ces informations sont reprises, discutées et réinterprétées dans les échanges ordinaires — en famille, entre amis, avec des collègues ou dans les conversations de café. Une actualité générale y est rapportée à des expériences concrètes : une crise économique devient la perte d’un emploi, une hausse du prix du pétrole devient une difficulté pour un agriculteur, et une controverse médiatique est confrontée aux opinions de l’entourage.
 
 Ces conversations donnent un sens situé à l’actualité. Elles permettent de l’adopter, de la transformer ou de la contester en la confrontant aux expériences et aux opinions de l’entourage.
+
+Tarde résume ce mouvement par une chaîne : la presse nourrit la conversation, la conversation forme l’opinion, et l’opinion peut conduire à l’action. La conversation est donc le maillon qui transforme des lecteurs dispersés en une opinion commune.
 
 ### Le two-step flow of communication
 
@@ -460,27 +586,27 @@ Les leaders d’opinion ne jouent donc pas le rôle de simples relais : ils sél
 Le two-step flow est un modèle de l’influence interpersonnelle. Il ne signifie pas que chaque message traverse toujours exactement deux étapes, ni que les individus n’accèdent jamais directement aux médias.
 :::
 
-La conversation participait donc déjà à la formation des opinions avant les RSN. Il reste à comprendre ce que change sa mise en visibilité sur les plateformes.
+La conversation participait donc déjà à la formation des opinions avant les réseaux sociaux numériques. Ceux-ci rendent visible cette étape : les échanges qui reprennent, commentent ou contestent l’actualité laissent désormais des traces publiques.
+
+:::example
+Les influenceurs jouent en partie le rôle des leaders d’opinion. Mais leur influence est désormais visible et mesurable : abonnés, partages, commentaires.
+:::
 
 ---
-<!-- slide: id="conversations-visibles" title="Des conversations rendues visibles" steps=0 -->
 ## Des conversations rendues visibles
+Quand le café répond au journal {.kicker}
 
 --- notes
 
-Avec les RSN, les conversations ordinaires laissent des traces qui peuvent être partagées au-delà de leurs participants.
-
 Sur les mêmes plateformes circulent désormais les articles des journaux, les déclarations des institutions, mais aussi nos blagues entre amis et nos photos de vacances.
 
-Ce rapprochement change les rapports entre les voix publiques. Nous avons toujours discuté et contesté les discours des responsables politiques, des médias ou des experts. Mais ces conversations peuvent désormais leur parvenir, leur répondre publiquement et parfois couvrir leur voix. Les disqualifier comme du « bavardage », c’est donc aussi contester qui peut prendre la parole et sous quelle forme.
+Ce rapprochement change les rapports entre les voix publiques. Nous avons toujours discuté et contesté les discours des responsables politiques, des médias ou des experts. Mais ces conversations peuvent désormais leur parvenir, leur répondre publiquement et parfois couvrir leur voix.
 
-Cette circulation expose également les échanges à des regards extérieurs. Une plaisanterie peut sembler insignifiante ou outrancière lorsqu’on ignore les références et les intentions partagées par ses destinataires. Nous jugeons ainsi parfois plus sévèrement les conversations des autres que les nôtres, dont nous connaissons le contexte.
+Les disqualifier comme du « bavardage », c’est donc aussi contester qui peut prendre la parole et sous quelle forme. On retrouve les deux exigences de l’espace public vues avec Habermas.
 
-Il faut donc distinguer l’accès public à un contenu de l’intérêt qu’il présente pour différents publics. Un échange accessible à tous peut ne concerner que quelques proches. À l’inverse, une expérience personnelle peut toucher des inconnus, les faire rire ou contribuer à faire reconnaître un problème commun.
+Ces contenus ne reçoivent pas pour autant la même attention : nous verrons que la visibilité reste très inégalement distribuée.
 
-Ces contenus ne reçoivent pas pour autant la même attention : nous verrons que la visibilité reste très inégalement distribuée. Pouvoir publier ne garantit pas de rencontrer un public.
-
-Ce qui change, c’est la manière dont cette audience se construit : un contenu peut être publié sans sélection éditoriale préalable, puis gagner en visibilité au fil des partages et des recommandations. C’est ce déplacement que résume la formule « publier, puis filtrer ».
+Ce qui change, c’est la manière dont cette audience se construit : un contenu peut être publié sans sélection éditoriale préalable, puis gagner en visibilité au fil des partages et des recommandations.
 
 ---
 ## Publish, then filter
@@ -488,7 +614,7 @@ Une économie de la visibilité {.kicker}
 
 --- notes
 
-Nous avons vu comment le Web élargit l’accès à la parole publique et rend accessibles des conversations ordinaires. Cette ouverture repose sur un renversement de l’ordre des opérations : une parole peut être publiée avant que des intermédiaires ne décident de la mettre en avant.
+Nous avons vu comment les réseaux sociaux numériques élargissent l’accès à la parole publique et rendent visibles des conversations ordinaires. Cette ouverture repose sur un renversement de l’ordre des opérations : une parole peut être publiée avant que des intermédiaires ne décident de la mettre en avant.
 
 La formule **« publish, then filter »** résume ce déplacement : publier d’abord, filtrer ensuite.
 
@@ -499,7 +625,7 @@ La formule **« publish, then filter »** résume ce déplacement : publier d’
 
 --- notes
 
-Cette expression a été introduite par **Clay Shirky**.
+Cette expression a été popularisée par **Clay Shirky**.
 
 Clay Shirky est un auteur et enseignant à l’université de New York qui étudie les effets sociaux d’Internet, notamment la coopération et l’organisation collective.
 
@@ -528,7 +654,7 @@ Faire avancer le slide.
 
 Sur le Web, un très grand nombre d’acteurs peuvent publier sans cette validation préalable.
 
-Mais la possibilité de publier ne garantit pas une audience : la rareté se déplace de l’accès à la publication vers l’accès à la visibilité.
+Mais l’attention, elle, reste limitée : la rareté se déplace de l’accès à la publication vers l’accès à la visibilité.
 
 Le filtrage intervient alors davantage après la publication, au fil de la circulation et du classement des contenus. Les utilisateurs les font circuler par leurs liens, leurs partages et leurs commentaires ; les moteurs de recherche et les plateformes organisent leur mise en avant par leurs recommandations et leurs classements.
 
@@ -570,7 +696,7 @@ Sources : [Grumpy Cat — site officiel](https://www.grumpycats.com/about) ; [Kn
 ---
 <FramedImage
   src="/assets/adam_stacey_london.png"
-  alt="Attentas de Londres. Adam Stacey."
+  alt="Attentats de Londres. Adam Stacey."
 />
 
 --- notes
@@ -589,10 +715,10 @@ Cela ne signifie ni que tous les contenus deviennent visibles, ni qu’ils sont 
 :::
 
 :::comment
-A rajouter pour l'année prochaine : lecture de _La culture du partage ou la revanche des foules_
+À rajouter pour l'année prochaine : lecture de _La culture du partage ou la revanche des foules_
 :::
 
-Ces exemples montrent ce que l’ouverture de la publication rend possible. Ils ne disent pas ce qu’il advient de la multitude des autres contenus : publier ne garantit toujours pas de rencontrer un public.
+Ces exemples montrent ce que l’ouverture de la publication rend possible. Ils ne disent pas ce qu’il advient de la multitude des autres contenus : publier ne garantit pas de rencontrer un public.
 
 ---
 ## Loi de puissance
@@ -610,10 +736,6 @@ Illustrons ce que cela signifie en observant la manière dont se distribue la po
 ---
 <!-- slide: id="power-law" title="Loi de puissance" steps=2 layout="center" -->
 
-<script>
-  import PowerLaw from '$components/PowerLaw.svelte'
-</script>
-
 <PowerLaw concentration="low" revealAt={1} concentrateAtStep={2} animateConcentration={true} />
 
 --- notes
@@ -624,19 +746,23 @@ Classons les publications Instagram des plus vues (à gauche) au moins vues (à 
 Ce graphique est une illustration pédagogique, pas un relevé des audiences d’Instagram.
 :::
 
-Que nous montre cette courbe ? Qu'une toute petite fraction des contenus aggrège l'essentiel de la visibilité. Et que l'essentiel des contenus restant est maintenant dans une invisibilité presque totale. On appelle cela la longue traine.
+Que nous montre cette courbe ? Qu'une toute petite fraction des contenus agrège l'essentiel de la visibilité, tandis que la grande majorité reste presque invisible. Cette longue série de contenus peu vus s'appelle la **longue traîne**.
 
-On dit parfois que ces contenus sont soumis à la loi des **80/20** ou loi de **Pareto**.
+:::warning
+Chris Anderson, qui a popularisé l'expression, insistait au contraire sur le poids cumulé de ces contenus de niche : pris ensemble, ils peuvent représenter une audience importante.
+:::
+
+On résume souvent cette concentration par une règle empirique, dite des **80/20** ou de **Pareto**.
 
 :::comment
 Faire avancer le slide.
 :::
 
-Cela signifie que les 20 % des contenus les plus visibles concentrent 80 % des vues. Et que les 80% de contenus restants n'aggrégent que 20% de la visibilité totale.
+Cela signifie que les 20 % des contenus les plus vus concentrent 80 % des vues, et que les 80 % restants n'en agrègent que 20 %.
 
-Cette loi n'est pas propre aux réseaux sociaux numériques. Vilfredo Pareto, qui a donné son nom à cette loi, l'a identifié dès 1896 en analysant la répartition des richesses et des terres en Italie (où 20 % de la population détenait 80 % des terres).
+Cette concentration n'est pas propre aux réseaux sociaux numériques. Dès 1896, l'économiste Vilfredo Pareto observe que les revenus sont très inégalement répartis en Italie : une petite partie de la population en détient l'essentiel. La règle des 80/20 a été tirée plus tard de ses travaux ; elle donne un ordre de grandeur, pas une loi exacte.
 
-On retrouve ainsi cette loi dans de nombreux phénomènes sociaux non-contraints.
+On retrouve des distributions aussi concentrées dans de nombreux phénomènes sociaux.
 
 :::example
 La concentration des patrimoines, la fréquence des mots, les connexions dans certains réseaux, les citations scientifiques ou la taille des villes.
@@ -644,7 +770,7 @@ La concentration des patrimoines, la fréquence des mots, les connexions dans ce
 
 Gardez en tête que la visibilité sur les réseaux sociaux est très concentrée : une petite minorité de publications capte l’essentiel de l’attention, tandis que la grande majorité reste peu vue.
 
-Le paradoxe est que l’élargissement du réseau peut accentuer ce déséquilibre : toujours plus de contenus entrent dans l’espace public, mais une fraction encore plus réduite accapare l’attention. L’espace de publication s’ouvre, tandis que le cercle des contenus visibles se resserre.
+Le paradoxe est que l’élargissement de la publication peut aller de pair avec une concentration accrue : toujours plus de contenus sont publiés, mais l’attention reste captée par une petite fraction d’entre eux. L’espace de publication s’ouvre, tandis que le cercle des contenus visibles se resserre.
 
 :::comment
 Faire avancer le slide.
@@ -668,8 +794,12 @@ Publier n’est pas être vu {.kicker}
 
 --- notes
 
-Le Web et les réseaux sociaux élargissent l’accès à la publication. Des paroles politiques, des expériences personnelles et des conversations ordinaires peuvent devenir publiques sans passer au préalable par une rédaction.
+Revenons aux questions du début : qui peut prendre la parole, pour s’adresser à qui, et comment un discours devient-il visible ?
 
-L’abaissement de ce seuil favorise la multiplication des contenus disponibles. Mais notre capacité à les consulter n’augmente pas dans les mêmes proportions : chacun ne peut accorder son attention qu’à une petite partie de ce qui est publié.
+Qui parle ? Le Web, puis les réseaux sociaux numériques, font entrer dans l’espace public des personnes qui n’y avaient pas accès, sans passer au préalable par une rédaction.
 
-La possibilité de publier s’est donc élargie, mais l’attention reste concentrée sur une minorité de contenus. La partie suivante étudiera les mécanismes de cette répartition : la structure de nos réseaux relationnels, puis les algorithmes de classement et de recommandation.
+À qui parle-t-on ? Souvent à ses proches, dans un régime conversationnel : nouvelles, anecdotes, plaisanteries. Mais ces paroles sont exposées au regard possible d’inconnus. La plupart restent des conversations ; certaines deviennent des affaires communes : parfois sérieuses, parfois moins.
+
+Comment un discours devient-il visible ? Il n’est plus sélectionné avant sa publication, mais après, au fil des partages et des recommandations. Et notre attention n’augmente pas au rythme des publications : elle reste concentrée sur une minorité de contenus.
+
+Publier ne garantit donc pas d’être vu, et plus de voix ne signifie pas automatiquement plus de discussion commune. La partie suivante étudiera les mécanismes de cette répartition : la structure de nos réseaux relationnels, puis les algorithmes de classement et de recommandation.

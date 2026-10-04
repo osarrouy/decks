@@ -3,6 +3,8 @@ export { default as EmbeddedView } from "./lib/components/EmbeddedView.svelte";
 export { default as DeckView } from "./lib/components/DeckView.svelte";
 export { default as Fragment } from "./lib/components/Fragment.svelte";
 export { default as FramedImage } from "./lib/components/FramedImage.svelte";
+export { default as Gaussian } from "./lib/components/Gaussian.svelte";
+export { default as PowerLaw } from "./lib/components/PowerLaw.svelte";
 export { default as PresenterView } from "./lib/components/PresenterView.svelte";
 export { default as StudentView } from "./lib/components/StudentView.svelte";
 export { default as SlideSurface } from "./lib/components/SlideSurface.svelte";

@@ -176,7 +176,13 @@ function serializeFrontmatter(metadata) {
     .join("\n")}\n---\n\n`;
 }
 
-const sharedComponents = ["Persona", "FramedImage", "YouTube"];
+const sharedComponents = [
+  "Persona",
+  "FramedImage",
+  "YouTube",
+  "Gaussian",
+  "PowerLaw",
+];
 const sharedComponentImports = sharedComponents
   .map(
     (component) =>

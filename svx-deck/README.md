@@ -115,6 +115,17 @@ Local components import through `$components`. Progressive content uses `Fragmen
 <Persona name="Ada Lovelace" picture="/lovelace.jpg" glow={true} />
 ```
 
+### Distribution charts
+
+`Gaussian` and `PowerLaw` are also available without imports. They share the same chart geometry, so they can be overlaid to show one distribution turning into the other. Both accept `title` and `description` for assistive technologies, and `xLabel` and `yLabel` for the axes.
+
+`PowerLaw` reveals a 20/80 Pareto overlay at step `revealAt` (`null` hides it). `concentration` is `"low"` or `"high"`; `concentrateAtStep` switches to `"high"` at that step, with an animation when `animateConcentration` is set.
+
+```svelte
+<Gaussian xLabel="Nombre de relations" yLabel="Nombre de personnes" />
+<PowerLaw concentration="low" revealAt={1} concentrateAtStep={2} animateConcentration={true} />
+```
+
 Images with `data-glow`, `data-glow="soft"` or `data-glow="strong"` receive a color-derived halo. If browser pixel access is unavailable, the accent supplies a fallback.
 
 ### YouTube videos

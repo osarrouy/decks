@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import { parseSingleFileDeck } from "@svx-deck/core/deck/singleFile";
 
-const deckId = "social-networks-visibility-gatekeeping";
+const deckId = "social-networks-structure";
 const { slides } = parseSingleFileDeck(
   readFileSync(
     new URL(`../../decks/${deckId}/deck.svx`, import.meta.url),
@@ -51,7 +51,7 @@ for (const width of [1280, 390]) {
       await frame.waitForLoadState("networkidle");
       await expect(
         reader.getByRole("heading", {
-          name: "Distribuer la visibilité",
+          name: "La structure de nos réseaux sociaux",
           exact: true,
         }),
       ).toBeVisible();
@@ -350,3 +350,94 @@ test("publication filtering animates forward and restores the requested state af
   await page.getByRole("button", { name: "Slide ou étape précédente" }).click();
   await expect(diagram).toHaveAttribute("data-mode", "filter-first");
 });
+
+for (const width of [1280, 390]) {
+  for (const theme of ["light", "dark"]) {
+    test(`course summaries and readings follow the deck split at ${width}px in ${theme}`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.addInitScript(
+        (value) => localStorage.setItem("dg-theme", value),
+        theme,
+      );
+      await page.goto(
+        course
+          .replace(
+            "distribution-de-la-visibilite",
+            "reseaux-sociaux-numeriques",
+          )
+          .replace("onglet=slides", "onglet=resume"),
+      );
+      await page.waitForLoadState("networkidle");
+      await expect(
+        page.getByRole("heading", {
+          name: "Publier, puis filtrer",
+          exact: true,
+        }),
+      ).toBeVisible();
+      await expect(
+        page.getByRole("heading", {
+          name: "Concentration de la visibilité et loi de puissance",
+          exact: true,
+        }),
+      ).toBeVisible();
+      await page.screenshot({
+        path: `/tmp/social-networks-architecture/summary-${width}-${theme}.png`,
+        fullPage: true,
+      });
+      await page
+        .getByRole("navigation", { name: "Ressources du cours" })
+        .getByRole("link", { name: "Bibliographie", exact: true })
+        .click();
+      const readings = page.getByRole("region", {
+        name: "Bibliographie",
+        exact: true,
+      });
+      await expect(readings).toContainText("Shirky");
+      await expect(readings).toContainText("Clauset");
+      await expect(readings.locator(".reading-list > li")).toHaveCount(6);
+      await page.screenshot({
+        path: `/tmp/social-networks-architecture/bibliography-${width}-${theme}.png`,
+        fullPage: true,
+      });
+      if (width === 390) await page.locator(".mobile-chapters summary").click();
+      const chapters = page.getByRole("navigation", {
+        name:
+          width === 390
+            ? "Choisir un chapitre sur mobile"
+            : "Choisir un chapitre",
+        exact: true,
+      });
+      await chapters
+        .getByRole("link", {
+          name: /Structure des réseaux et classement algorithmique/,
+        })
+        .click();
+      await expect(page).toHaveURL(/section=distribution-de-la-visibilite/);
+      await expect(readings.locator(".reading-list > li")).toHaveCount(12);
+      await expect(readings).toContainText("Barabási");
+      await expect(readings).toContainText("Bucher");
+      await expect(readings).not.toContainText("Shirky");
+      await page
+        .getByRole("navigation", { name: "Ressources du cours" })
+        .getByRole("link", { name: "Résumé", exact: true })
+        .click();
+      await expect(
+        page.getByRole("heading", {
+          name: "Représenter un réseau",
+          exact: true,
+        }),
+      ).toBeVisible();
+      await expect(
+        page.getByRole("heading", {
+          name: "Modération et recommandation",
+          exact: true,
+        }),
+      ).toBeVisible();
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth),
+      ).toBeLessThanOrEqual(width);
+    });
+  }
+}

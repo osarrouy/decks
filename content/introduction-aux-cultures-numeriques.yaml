@@ -602,9 +602,9 @@ chapitres:
   - id: "reseaux-sociaux-numeriques"
     titre: "Réseaux sociaux numériques"
     partie: "1/4"
-    sous-titre: "Espace public, sphère privée et publication"
+    sous-titre: "Parole publique, publication et visibilité"
     slides:
-      - titre: "Réseaux sociaux numériques — Espace public, sphère privée et publication"
+      - titre: "Réseaux sociaux numériques — Parole publique, publication et visibilité"
         url: "/slides/social-networks/index.html"
         integration: "iframe"
 
@@ -614,6 +614,8 @@ chapitres:
       visibles et des contenus organisés autour de ceux qui les publient. Cette
       organisation transforme les conditions de la prise de parole et les
       frontières entre conversation personnelle et discussion collective.
+      Le chapitre examine ensuite le déplacement du filtrage après la
+      publication et la concentration de l’attention sur une minorité de contenus.
 
       ## Définir un réseau social numérique
 
@@ -645,22 +647,48 @@ chapitres:
       rendent ces échanges accessibles au-delà de leurs participants et de leur
       contexte initial, ce qui transforme aussi la manière dont ils sont jugés.
 
+      ## Publier, puis filtrer
+
+      Dans les médias traditionnels, une rédaction sélectionne les contenus
+      avant de les publier. Sur le Web, les partages, les reprises et les
+      recommandations peuvent construire une audience après la publication.
+      La formule de Clay Shirky, « publish, then filter », décrit ce déplacement.
+      Les exemples de Charlie Bit My Finger, de Grumpy Cat et de la photo
+      d’Adam Stacey montrent comment un contenu peut dépasser son cercle initial.
+
+      ## Concentration de la visibilité et loi de puissance
+
+      L’ouverture de la publication n’égalise pas l’attention reçue. Une petite
+      minorité de contenus peut concentrer une grande part des vues, tandis
+      qu’un grand nombre reste peu visible. La loi de puissance et la longue
+      traîne permettent de décrire cette concentration. Le rapport 80/20 en
+      fournit une illustration, sans constituer une règle universelle ni une
+      mesure des audiences d’Instagram. Décrire cette inégalité ne suffit pas
+      à expliquer les mécanismes qui la produisent.
+
       ### À retenir
 
       - Un réseau social numérique rend visibles des profils, des liens et des circulations.
       - Publicité comme visibilité et publicité comme intérêt commun ne se confondent pas.
       - Le Web participatif mêle parole publique, conversation et exposition de la vie privée.
       - Les conversations participent à la formation de l’opinion ; leur mise en visibilité peut rompre leur contexte.
+      - Une audience peut se construire après la publication, par les partages et les recommandations.
+      - Publier ne garantit pas d’être vu ; la concentration de l’attention doit être distinguée de ses causes.
 
     bibliographie:
       - reference: "boyd, d. m., & Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. *Journal of Computer-Mediated Communication, 13*(1), 210–230. [https://doi.org/10.1111/j.1083-6101.2007.00393.x](https://doi.org/10.1111/j.1083-6101.2007.00393.x)"
         url: "https://doi.org/10.1111/j.1083-6101.2007.00393.x"
         note: "Lecture centrale pour définir les sites de réseaux sociaux à partir des profils et des connexions visibles."
+      - reference: "Clauset, A., Shalizi, C. R., & Newman, M. E. J. (2009). Power-law distributions in empirical data. *SIAM Review, 51*(4), 661–703. [https://doi.org/10.1137/070710111](https://doi.org/10.1137/070710111)"
+        url: "https://doi.org/10.1137/070710111"
+        note: "Approfondissement : l’introduction aide à distinguer une distribution très inégale de la démonstration statistique d’une loi de puissance."
       - reference: "Habermas, J. (1993). *L’espace public : Archéologie de la publicité comme dimension constitutive de la société bourgeoise* (M. B. de Launay, trad.). Payot."
         url: "https://catalogue.bnf.fr/ark:/12148/cb37428283f"
         note: "Repère théorique pour distinguer visibilité, discussion publique et médiations."
       - reference: "Katz, E., & Lazarsfeld, P. F. (1955). *Personal influence: The part played by people in the flow of mass communications*. Free Press."
         note: "Texte classique sur les leaders d’opinion et la circulation interpersonnelle de l’influence."
+      - reference: "Shirky, C. (2008). *Here comes everybody: The power of organizing without organizations*. Penguin Press."
+        note: "Pour le déplacement du filtrage avant publication vers le principe « publish, then filter »."
       - reference: "Tarde, G. (1901). *L’opinion et la foule*. Félix Alcan."
         url: "https://catalogue.bnf.fr/ark:/12148/cb181229642"
         note: "Texte classique sur la conversation, le public et la formation de l’opinion."
@@ -668,98 +696,154 @@ chapitres:
   - id: "distribution-de-la-visibilite"
     titre: "Réseaux sociaux numériques"
     partie: "2/4"
-    sous-titre: "Distribution de la visibilité"
+    sous-titre: "Structure des réseaux et classement algorithmique"
     slides:
-      - titre: "Réseaux sociaux numériques — Distribution de la visibilité"
-        url: "/slides/social-networks-visibility-gatekeeping/index.html"
+      - titre: "Réseaux sociaux numériques — Structure des réseaux et classement algorithmique"
+        url: "/slides/social-networks-structure/index.html"
         integration: "iframe"
 
     resume: |
-      Pouvoir publier ne garantit pas d’être entendu. Ce chapitre part de la
-      concentration de l’attention, puis examine deux conditions de la
-      distribution de la visibilité : la structure des relations et les
-      dispositifs de sélection algorithmique.
-
-      ## Concentration de l’attention et filtrage
-
-      Une minorité de contenus peut concentrer une grande part de l’attention.
-      La loi de puissance illustre une forme possible de cette inégalité, sans
-      suffire à en établir les causes. « Publish, then filter » décrit le
-      déplacement d’une partie de la sélection après la publication : liens,
-      partages, moteurs de recherche et recommandations organisent la visibilité.
+      Le chapitre précédent a montré que l’accès à la publication ne garantit
+      pas une audience. Ce chapitre examine les mécanismes de cette visibilité
+      inégale : d’abord la structure des relations, qui distribue inégalement le
+      capital social, puis la sélection et le classement des contenus par les
+      plateformes. Les réseaux sociaux numériques ne créent pas cette structure
+      relationnelle : ils en prolongent et en accentuent les inégalités.
 
       ## Représenter un réseau
 
       Un graphe représente des acteurs par des nœuds et leurs relations par des
-      liens. Le modèle aléatoire d’Erdős et Rényi sert de point de comparaison :
-      il fait apparaître des propriétés générales, mais ne reproduit pas les
-      déterminismes sociaux qui orientent les rencontres réelles.
+      liens. Le modèle aléatoire d’Erdős et Rényi suppose que les liens se forment
+      au hasard. Il fait apparaître deux propriétés : deux nœuds quelconques sont
+      reliés par une chaîne d’intermédiaires courte, et cette longueur augmente
+      très peu avec la taille du réseau. Ce modèle sert de point de comparaison ;
+      il ne reproduit pas les déterminismes sociaux qui orientent les rencontres
+      réelles.
 
       ## Petits mondes et chemins courts
 
-      Les expériences de Stanley Milgram et le modèle de Watts et Strogatz
-      montrent que des réseaux fortement regroupés peuvent néanmoins être reliés
-      par des chemins très courts. Quelques ponts suffisent à rapprocher des
-      groupes qui resteraient autrement éloignés.
+      L’expérience du petit monde de Stanley Milgram fait circuler des lettres de
+      proche en proche jusqu’à une personne cible : les chaînes qui aboutissent
+      comptent en moyenne cinq à six intermédiaires. Duncan Watts et Steven
+      Strogatz retrouvent ces chemins courts dans le réseau des acteurs de cinéma
+      ayant joué ensemble, popularisé par le jeu de Kevin Bacon. Ce réseau n’est
+      pourtant pas aléatoire : il se compose de groupes très denses, faiblement
+      reliés entre eux. Quelques raccourcis suffisent à rapprocher des groupes qui
+      resteraient autrement éloignés.
 
       ## Hubs et attachement préférentiel
 
-      Barabási et Albert attirent l’attention sur des réseaux dans lesquels le
-      nombre de liens est très inégalement distribué. L’attachement préférentiel
-      explique comment un avantage initial peut se renforcer : les nœuds déjà
-      très connectés ont davantage de chances d’attirer de nouveaux liens.
+      Dans un réseau aléatoire, le nombre de liens par nœud se répartit autour
+      d’une moyenne, comme une courbe normale. Dans les réseaux observés par
+      Barabási et Albert, cette répartition est beaucoup plus inégale et
+      s’apparente à une loi de puissance : la plupart des nœuds ont peu de liens,
+      quelques *hubs* en concentrent énormément. Pierre Bourdieu appelle
+      **capital social** les ressources qu’une personne peut mobiliser grâce à
+      son réseau de relations ; ce capital est inégalement réparti. Les hubs
+      appartiennent souvent à plusieurs groupes et servent de raccourcis entre
+      eux.
+
+      Deux tendances expliquent cette architecture. On se lie aux proches de ses
+      proches, ce qui forme des groupes denses. On se lie aussi à ceux qui sont
+      déjà très connectés ou très visibles : c’est l’**attachement
+      préférentiel**, par lequel un avantage initial se renforce. Cette
+      architecture se retrouve dans d’autres réseaux, comme les liens entre pages
+      du Web.
 
       ## Bonding et bridging
 
-      Robert Putnam distingue les liens qui renforcent la cohésion d’un groupe
-      homogène (*bonding*) de ceux qui relient des groupes différents
-      (*bridging*). Le nombre de connexions ne suffit donc pas : leur position,
-      leur intensité et leur fonction déterminent aussi ce qu’un réseau permet.
+      Les liens n’ont pas tous la même intensité ni la même fonction. Robert
+      Putnam distingue les liens qui renforcent la cohésion d’un groupe homogène
+      (*bonding*) de ceux qui relient des groupes différents (*bridging*). Le
+      *bonding* produit solidarité et loyauté, mais trace aussi une frontière
+      entre « nous » et « les autres ». Le *bridging* fait circuler informations
+      et ressources entre des milieux éloignés. Mark Granovetter avait déjà
+      montré la force des liens faibles : moins intimes que les liens forts, ils
+      relient souvent des milieux différents et donnent accès à des informations
+      nouvelles. Le nombre de connexions ne suffit donc pas : leur position, leur
+      intensité et leur fonction déterminent aussi ce qu’un réseau permet.
 
-      ## Publier, être distribué, être consulté
+      ## Des liens inégaux, une visibilité inégale
 
-      Une publication doit être distribuée, rencontrée puis consultée avant de
-      pouvoir produire un effet. Ces étapes empêchent de confondre liberté de
+      Publier, c’est d’abord rendre un contenu accessible à ses propres
+      relations : notre réseau constitue notre audience de départ. Comme les
+      liens sont très inégalement distribués, ces audiences de départ le sont
+      aussi. La concentration de la visibilité prolonge donc en partie la
+      concentration du capital social. La position des liens compte également :
+      dans un groupe dense, un contenu circule vite mais entre les mêmes
+      personnes ; un pont le fait passer dans un autre milieu ; un hub combine
+      beaucoup de liens et l’accès à plusieurs communautés. L’attachement
+      préférentiel ajoute un effet cumulatif, puisque chaque gain de visibilité
+      élargit l’audience des publications suivantes.
+
+      Les réseaux sociaux numériques radicalisent cette structure. Hors ligne,
+      une relation suppose en général une réciprocité qui limite le nombre de
+      liens entretenus. Sur une plateforme, il suffit d’être suivi : le lien
+      devient asymétrique et rien ne limite plus la taille des hubs. La
+      structure ne détermine pas pour autant ce qui sera vu ; elle distribue des
+      probabilités de circulation.
+
+      ## Publier n’est pas être vu
+
+      La structure n’explique pas seule ce qui sera effectivement montré : sur
+      les plateformes, un classement choisit et ordonne les contenus présentés.
+      Dans les médias, le *gatekeeper* désigne l’acteur qui sélectionne les
+      informations rendues publiques et décide de leur place. Les plateformes
+      déplacent une partie de ce pouvoir :
+      beaucoup de contenus peuvent être publiés, mais leur probabilité d’être
+      rencontrés dépend d’un classement personnalisé et continuellement
+      recalculé. Une publication doit être distribuée, rencontrée puis consultée
+      avant de produire un effet. Ces étapes empêchent de confondre liberté de
       publication, visibilité, attention et adhésion.
 
       ## Modération et recommandation
 
       La modération décide principalement de ce qui peut rester accessible. La
       recommandation hiérarchise les contenus disponibles et décide lesquels
-      apparaissent en premier, plus tard ou jamais. Ces deux seuils exercent des
-      pouvoirs distincts sur l’espace public.
+      apparaissent en premier, plus tard ou jamais. Une publication autorisée
+      n’est pas nécessairement recommandée : le pouvoir des plateformes ne se
+      réduit donc pas à la censure.
 
-      ## Un score ne mesure pas la qualité
+      ## Un algorithme ne mesure pas la qualité
 
-      Un modèle de classement prédit un résultat à partir d’indicateurs : clic,
-      durée de consultation, commentaire ou partage. Ces signaux ne mesurent pas
-      directement la vérité, l’utilité ou la satisfaction. Leur choix traduit
-      des objectifs humains et organisationnels.
+      Un système de recommandation prédit une réaction à partir d’indicateurs :
+      comptes suivis, clics, durée de consultation, partages ou nouveauté. Ces
+      signaux ne mesurent pas directement la vérité, l’utilité ou la
+      satisfaction. Regarder jusqu’au bout une vidéo qui scandalise peut compter
+      comme un signal favorable sans exprimer d’adhésion. Le choix des objectifs
+      et des indicateurs traduit des décisions humaines et organisationnelles.
 
       ## Un ensemble d’acteurs
 
-      Le gatekeeping algorithmique résulte des relations entre plateforme,
-      modèles, données, producteurs et utilisateurs. Les producteurs anticipent
-      les critères de visibilité et adaptent leurs pratiques ; les réactions du
-      public alimentent ensuite de nouveaux classements.
+      La visibilité résulte des relations entre plateforme, modèles, données,
+      producteurs et utilisateurs. Taina Bucher décrit une menace d’invisibilité :
+      pour rester visibles, les producteurs anticipent les critères du
+      classement et adaptent leurs pratiques. Le pouvoir du classement agit donc
+      aussi avant la publication, et les réactions du public alimentent ensuite
+      de nouveaux classements.
 
       ### À retenir
 
       - L’ouverture de la publication n’égalise pas la visibilité.
-      - Chemins courts, groupes, ponts et hubs distribuent des possibilités de circulation.
+      - Groupes denses, ponts et hubs distribuent inégalement les possibilités de circulation et le capital social.
+      - Notre réseau forme notre audience de départ : l’inégalité des liens se prolonge dans l’inégalité de la visibilité.
       - L’attachement préférentiel peut renforcer un avantage initial.
+      - Le nombre de liens ne dit pas leur fonction : *bonding* et *bridging* produisent des effets différents.
       - Publication, distribution, rencontre, consultation et adhésion sont des étapes distinctes.
       - La modération fixe des limites ; la recommandation organise la visibilité.
-      - Les critères du classement relèvent de choix humains et organisationnels.
+      - Un classement prédit des réactions ; ses critères relèvent de choix humains et organisationnels.
 
     bibliographie:
       - reference: "Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. *Science, 286*(5439), 509–512. [https://doi.org/10.1126/science.286.5439.509](https://doi.org/10.1126/science.286.5439.509)"
         url: "https://doi.org/10.1126/science.286.5439.509"
         note: "Texte fondateur sur les réseaux sans échelle, les hubs et l’attachement préférentiel."
+      - reference: "Bourdieu, P. (1980). Le capital social : Notes provisoires. *Actes de la recherche en sciences sociales, 31*, 2–3. [https://www.persee.fr/doc/arss_0335-5322_1980_num_31_1_2069](https://www.persee.fr/doc/arss_0335-5322_1980_num_31_1_2069)"
+        url: "https://www.persee.fr/doc/arss_0335-5322_1980_num_31_1_2069"
+        note: "Texte bref qui définit le capital social comme l’ensemble des ressources liées à un réseau durable de relations."
       - reference: "Bucher, T. (2012). Want to be on the top? Algorithmic power and the threat of invisibility on Facebook. *New Media & Society, 14*(7), 1164–1180. [https://doi.org/10.1177/1461444812440159](https://doi.org/10.1177/1461444812440159)"
         url: "https://doi.org/10.1177/1461444812440159"
         note: "Analyse du pouvoir algorithmique à partir de la visibilité et du risque de disparaître des fils."
-      - reference: "Erdős, P., & Rényi, A. (1959). On random graphs I. *Publicationes Mathematicae, 6*, 290–297. [https://doi.org/10.5486/PMD.1959.6.3-4.12](https://doi.org/10.5486/PMD.1959.6.3-4.12)"
+      - reference: "Erdős, P., & Rényi, A. (1959). On random graphs I. *Publicationes Mathematicae Debrecen, 6*(3–4), 290–297. [https://doi.org/10.5486/PMD.1959.6.3-4.12](https://doi.org/10.5486/PMD.1959.6.3-4.12)"
         url: "https://doi.org/10.5486/PMD.1959.6.3-4.12"
         note: "Modèle de référence pour comprendre ce que produit une distribution aléatoire des liens."
       - reference: "Gillespie, T. (2014). The relevance of algorithms. Dans T. Gillespie, P. J. Boczkowski, & K. A. Foot (dir.), *Media technologies: Essays on communication, materiality, and society* (p. 167–194). MIT Press. [https://doi.org/10.7551/mitpress/9780262525374.003.0009](https://doi.org/10.7551/mitpress/9780262525374.003.0009)"
@@ -777,14 +861,15 @@ chapitres:
       - reference: "Putnam, R. D. (2000). *Bowling alone: The collapse and revival of American community*. Simon & Schuster."
         url: "https://www.simonandschuster.com/books/Bowling-Alone-Revised-and-Updated/Robert-D-Putnam/9780743219037"
         note: "Pour distinguer les liens d’attachement des liens qui relient des groupes différents."
-      - reference: "Shirky, C. (2008). *Here comes everybody: The power of organizing without organizations*. Penguin Press."
-        note: "Pour le déplacement du filtrage avant publication vers le principe « publish, then filter »."
       - reference: "Travers, J., & Milgram, S. (1969). An experimental study of the small world problem. *Sociometry, 32*(4), 425–443. [https://doi.org/10.2307/2786545](https://doi.org/10.2307/2786545)"
         url: "https://doi.org/10.2307/2786545"
         note: "Expérience classique sur les chaînes de connaissances et le phénomène des petits mondes."
-      - reference: "Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks. *Nature, 393*, 440–442. [https://doi.org/10.1038/30918](https://doi.org/10.1038/30918)"
+      - reference: "Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks. *Nature, 393*(6684), 440–442. [https://doi.org/10.1038/30918](https://doi.org/10.1038/30918)"
         url: "https://doi.org/10.1038/30918"
         note: "Article fondateur sur les réseaux combinant fort regroupement local et chemins courts."
+      - reference: "White, D. M. (1950). The “gate keeper”: A case study in the selection of news. *Journalism Quarterly, 27*(4), 383–390. [https://doi.org/10.1177/107769905002700403](https://doi.org/10.1177/107769905002700403)"
+        url: "https://doi.org/10.1177/107769905002700403"
+        note: "Étude fondatrice de la notion de gatekeeper : un rédacteur de journal sélectionne les dépêches qui seront publiées."
 
   - id: "viralite-cascades-amplification"
     titre: "Réseaux sociaux numériques"
