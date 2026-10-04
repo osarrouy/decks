@@ -8,9 +8,8 @@ Espace public, sphère privée et publication · 1/5 {.kicker}
 
 --- notes
 
-Les premiers réseaux sociaux numériques apparaissent à la fin des années 1990. Leur usage se généralise ensuite au cours des années 2000 et 2010.
+Les premiers réseaux sociaux numériques apparaissent à la fin des années 1990. Leur usage se généralise au cours des années 2000 et 2010.
 
-:::comment
 - **1997 : SixDegrees**, premier site à réunir des profils, des listes d’amis et la possibilité de parcourir ces relations ;
 - **2002 : Friendster**, qui popularise les réseaux de connaissances ;
 - **2003 : LinkedIn et MySpace**, orientés respectivement vers les relations professionnelles et l’expression personnelle ;
@@ -21,12 +20,9 @@ Les premiers réseaux sociaux numériques apparaissent à la fin des années 199
 - **2011 : Snapchat**, qui popularise les contenus éphémères ;
 - **2016-2017 : Douyin puis TikTok**, qui généralisent le fil de vidéos courtes piloté par la recommandation.
 
-
-:::
-
 Ces plateformes ne fonctionnent pas toutes de la même façon : organisation des profils et des relations, type de contenus, fonctions de publication, personnalisation des fils de contenus personnalisés, etc. diffèrent.
 
-Et pourtant, on les classe toutes dans la catégorie des réseaux sociaux. Comment, alors, définir plus précisément ce qu'est un réseau social numérique ?
+Pourtant, on les classe toutes dans la catégorie des réseaux sociaux. Comment, alors, définir plus précisément ce qu'est un réseau social numérique ?
 
 ---
 ## Profils et relations
@@ -34,7 +30,7 @@ Une nouvelle économie discursive {.kicker}
 
 --- notes
 
-Pour définir les réseaux sociaux numériques (RSN), partons de leur architecture. [danah boyd et Nicole Ellison (2007)](https://doi.org/10.1111/j.1083-6101.2007.00393.x) retiennent trois caractéristiques :
+Nous pouvons partir de leur architecture. [danah boyd et Nicole Ellison (2007)](https://doi.org/10.1111/j.1083-6101.2007.00393.x) retiennent trois caractéristiques :
 
 1. L’utilisateur dispose d’un profil public ou semi-public au sein du service.
 2. Il affiche une liste de connexions avec d’autres utilisateurs.
@@ -43,10 +39,10 @@ Pour définir les réseaux sociaux numériques (RSN), partons de leur architectu
 Cette architecture place les personnes et leurs relations au centre de l’exploration des contenus. 
 
 :::example
-Un journal organise ses articles par rubriques et par actualité ; Wikipédia, par sujets. Sur un RSN, on découvre aussi des contenus à partir des personnes auxquelles on est relié.
+Un journal organise ses articles par rubriques et par actualité ; Wikipédia, par sujets. Sur un RSN, on découvre les contenus à partir des personnes auxquelles on est relié.
 :::
 
-Or cette architecture modifie profondément l'économie discursive à laquelle nous étions habituée.
+Cette architecture modifie profondément l'économie discursive à laquelle nous étions habituée.
 
 Quand on parle d'économie, on a tendance à penser à l'économie au sens restreint : l'échange de marchandises contre de l'argent. En réalité le terme d'économie est beaucoup plus large que ça.
 
@@ -490,6 +486,9 @@ Les commentaires, anecdotes, insultes et plaisanteries existaient déjà dans le
 
 Or ce basculement de la visibilité produit aussi une rupture de contexte. Nous jugeons souvent plus sévèrement les conversations des autres, que nous découvrons de l’extérieur, que les nôtres, dont nous comprenons les références, les intentions et le contexte. Ce qui nous paraît insignifiant ou outrancier chez autrui peut ainsi prendre un sens évident pour ceux qui participent à l’échange.
 
+
+
+
 Pouvoir publier et pouvoir être entendu restent toutefois deux choses différentes. Comment l’attention se répartit-elle entre toutes ces publications ?
 
 ---
@@ -553,10 +552,6 @@ Le Web permet à un très grand nombre d’acteurs de mettre en ligne des textes
 La sélection éditoriale en amont donnait accès à l’audience d’un média. Sur le Web, la mise en ligne peut précéder les opérations qui feront émerger une publication parmi beaucoup d’autres.
 
 Le filtrage de l’attention intervient alors _a posteriori_ au moyen des liens, des partages, des recommandations, des commentaires, des moteurs de recherche et des classements algorithmiques. Les utilisateurs contribuent à la circulation ; les plateformes organisent les occasions de voir les contenus.
-
-:::warning
-La formule décrit un déplacement de la sélection de l’attention. Elle ne signifie pas que toute publication est autorisée : les règles des services, la modération et les restrictions d’accès continuent d’intervenir, parfois avant la mise en ligne.
-:::
 
 :::example
 Grumpy Cat ou *Charlie Bit My Finger* permettent d’évoquer des contenus ordinaires ayant atteint une audience très large. Une publication peut ainsi circuler au-delà du public auquel elle était initialement destinée.
