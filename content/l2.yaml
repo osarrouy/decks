@@ -232,39 +232,95 @@ chapitres:
         integration: "iframe"
 
     resume: |
-      Pourquoi Bitcoin possède-t-il une valeur ? La question oblige à revenir
-      aux monnaies ordinaires. Une monnaie sert d’unité de compte,
-      d’instrument d’échange et de réserve de valeur. Ces fonctions facilitent
-      les échanges, mais elles rendent aussi les biens, les activités et les
-      rapports sociaux comparables à partir d’une même mesure.
+      D’où le bitcoin tire-t-il sa valeur ? La question oblige à revenir aux
+      monnaies ordinaires. Une monnaie sert d’unité de compte, d’instrument
+      d’échange et de réserve de valeur. En tant qu’unité de compte, elle rend
+      comparables des choses sans rapport : Marx y voit un **équivalent
+      général**, qui masque sous un prix les rapports sociaux de production.
+      Avec Simmel et Supiot, on voit le calcul gagner des domaines qui ne sont
+      pas des marchés.
 
-      Le chapitre critique le récit selon lequel la monnaie aurait simplement
-      remplacé le troc. Les systèmes de crédit et de dette précèdent souvent la
-      monnaie frappée. Sa généralisation accompagne aussi la fiscalité, les
-      armées et la formation des États, qui imposent une unité dans laquelle
-      les populations doivent payer l’impôt.
+      Le chapitre déconstruit ensuite le mythe du troc, avec David Graeber.
+      Entre voisins, les échanges reposent sur un crédit informel, qui
+      entretient les relations ; le troc est réservé aux étrangers. Les
+      **monnaies sociales** servent à régler des relations, non à acheter des
+      choses. La mesure monétaire des personnes passe par leur arrachement à
+      leurs relations, dont l’esclavage est la forme la plus brutale.
 
-      Une monnaie tient finalement à une confiance distribuée : chacun
-      l’accepte parce qu’il pense que les autres l’accepteront. Bitcoin tente
-      de produire cette croyance commune sans l’adosser directement à un État.
+      Dans les cités de Mésopotamie, la monnaie naît comme **unité de compte
+      de la dette**. Temples et palais avancent terres, semences et
+      marchandises, et tiennent les comptes de ce qu’on leur doit. En
+      s’interposant comme tiers, l’État transforme la dette : elle cesse
+      d’être une relation floue entre personnes pour devenir une obligation
+      chiffrée et inscrite. Les rois annulent périodiquement les dettes de
+      consommation.
+
+      Les pièces apparaissent bien plus tard, avec les guerres et les armées.
+      L’État paie ses soldats en pièces et exige l’impôt dans ces mêmes
+      pièces : l’impôt crée le marché. L’histoire alterne ensuite entre
+      périodes de crédit et périodes de métal. Lettres de change médiévales,
+      *juros* espagnols, billets de la Banque d’Angleterre ou système de Law :
+      le papier-monnaie européen naît des dettes de guerre des États. La
+      convertibilité en or sert de garde-fou jusqu’en 1971.
+
+      Une monnaie qui n’est plus convertible tient alors à l’impôt et à une
+      croyance partagée. Bitcoin parie sur la seule croyance, sans État ni
+      métal. Il se présente comme un **or numérique**, rare et déflationniste.
+      Mais il s’est institutionnalisé : ETF, gestionnaires d’actifs et
+      rapprochement d’une partie de l’industrie avec l’administration Trump.
+      Les **stablecoins** prolongent ce retournement. Adossés aux bons du
+      Trésor, ils financent la dette américaine et étendent l’usage du dollar,
+      notamment dans les pays en crise monétaire. Les monnaies numériques de
+      banque centrale posent enfin la question de la disparition du cash et
+      de la traçabilité des paiements.
+
+      Le chapitre se conclut sur deux réponses à la crise de 2008. Nakamoto
+      veut soustraire la monnaie à la dette, dans un registre qui n’oublie
+      rien. Graeber rappelle que la monnaie est une dette, et que la liberté
+      a souvent commencé par l’effacement des dettes.
 
       ### À retenir
 
-      - Les fonctions de la monnaie ne suffisent pas à expliquer son histoire.
-      - Monnaie, dette, impôt et pouvoir politique se développent ensemble.
-      - La valeur dépend d’institutions et d’anticipations partagées.
+      - L’unité de compte rend tout comparable, au prix d’une occultation des rapports sociaux.
+      - La monnaie ne naît pas du troc : crédit et dette précèdent la monnaie frappée.
+      - Monnaie, dette, impôt, guerre et pouvoir politique se développent ensemble.
+      - Le papier-monnaie moderne est une dette de l’État ; l’étalon-or en limitait l’émission jusqu’en 1971.
+      - Bitcoin rejoue l’étalon-or, mais il s’est largement intégré à la finance traditionnelle.
+      - Les stablecoins étendent la puissance du dollar et financent la dette américaine.
 
     bibliographie:
-      - reference: "Graeber, D. (2011). *Debt: The first 5,000 years*. Melville House."
+      - reference: "Aglietta, M., & Orléan, A. (2002). *La monnaie entre violence et confiance*. Odile Jacob."
+        note: "Pour la valeur de la monnaie comme croyance partagée et autoréférentielle."
+
+      - reference: "Chainalysis. (2025). *The 2025 global adoption index*. [https://www.chainalysis.com/blog/2025-global-crypto-adoption-index/](https://www.chainalysis.com/blog/2025-global-crypto-adoption-index/)"
+        url: "https://www.chainalysis.com/blog/2025-global-crypto-adoption-index/"
+        note: "Données sur l’usage des crypto-monnaies et des stablecoins selon les pays."
+
+      - reference: "Graeber, D. (2013). *Dette : 5000 ans d’histoire* (F. Chemla & P. Chemla, trad.). Les Liens qui libèrent. (Œuvre originale publiée en 2011)"
         note: "Lire en priorité les chapitres consacrés au mythe du troc et aux premières économies de crédit."
+
+      - reference: "Humphrey, C. (1985). Barter and economic disintegration. *Man, 20*(1), 48–72."
+        note: "Le bilan anthropologique qui montre qu’aucune économie de troc n’a été décrite."
 
       - reference: "La vie manifeste. (2018, 20 décembre). *Dette, 5000 ans d’histoire, David Graeber* [Podcast]. Apple Podcasts. [https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135](https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135)"
         url: "https://podcasts.apple.com/fr/podcast/dette-5000-ans-dhistoire-david-graeber/id1448207766?i=1000426832135"
         note: "Entretien introductif sur la dette, le crédit et le mythe du troc."
 
+      - reference: "Marx, K. (1867). *Das Kapital: Kritik der politischen Ökonomie* (Vol. 1). Otto Meissner."
+        note: "Livre I, chapitre 1, section 4 : le caractère fétiche de la marchandise."
+
       - reference: "McLeay, M., Radia, A., & Thomas, R. (2014). Money creation in the modern economy. *Bank of England Quarterly Bulletin, 54*(1), 14–27. [https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy)"
         url: "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
         note: "La page comprend aussi une courte vidéo sur la création monétaire par le crédit bancaire."
+
+      - reference: "Orléan, A. (2011). *L’empire de la valeur : refonder l’économie*. Seuil."
+
+      - reference: "Scott, J. C. (2019). *Homo domesticus : une histoire profonde des premiers États*. La Découverte. (Œuvre originale publiée en 2017)"
+        note: "Pour le lien entre céréales, impôt et formation des premiers États."
+
+      - reference: "Simmel, G. (1987). *Philosophie de l’argent* (S. Cornille & P. Ivernel, trad.). Presses universitaires de France. (Œuvre originale publiée en 1900)"
+
+      - reference: "Supiot, A. (2015). *La gouvernance par les nombres : cours au Collège de France (2012-2014)*. Fayard."
 
   - id: "ethereum"
     titre: "Ethereum"
