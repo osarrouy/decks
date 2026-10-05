@@ -68,6 +68,12 @@
   .notes :global(.presenter-note-warning::before) {
     content: "Attention";
   }
+  .notes :global(.presenter-note-important) {
+    background: var(--accent-subtle);
+  }
+  .notes :global(.presenter-note-important::before) {
+    content: "À retenir";
+  }
   .notes :global(code) {
     padding: 0.1em 0.25em;
     background: var(--accent-subtle);

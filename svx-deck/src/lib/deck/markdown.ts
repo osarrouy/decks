@@ -41,6 +41,12 @@ const noteDirectiveHtml = directiveHtml({
     );
     return true;
   },
+  important(directive) {
+    this.raw(
+      `<blockquote class="presenter-note-important">${directive.content || ""}</blockquote>`,
+    );
+    return true;
+  },
 });
 
 function decorateNoteCallouts(html: string) {

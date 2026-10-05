@@ -239,7 +239,7 @@ Avec la preuve de travail, multiplier les identités ne suffit pas. Les chances 
 
 La difficulté du puzzle est réajustée tous les 2 016 blocs. Le protocole vise ainsi **un bloc toutes les dix minutes en moyenne pour l’ensemble du réseau**. Un bloc particulier peut arriver beaucoup plus vite ou beaucoup plus lentement.
 
-On peut maintenant préciser la règle de la diapositive précédente : les nœuds ne retiennent pas vraiment la chaine la plus longue, mais la chaîne valide qui cumule le plus de travail. À difficulté égale, c’est effectivement la plus longue. Mais la longueur ne suffit donc si les difficultés diffèrent.
+On peut maintenant préciser la règle de la diapositive précédente : les nœuds ne retiennent pas vraiment la chaîne la plus longue, mais la chaîne valide qui cumule le plus de travail. À difficulté égale, c’est effectivement la plus longue. Mais la longueur ne suffit donc pas si les difficultés diffèrent.
 
 Quel intérêt ont alors les mineurs à mobiliser de la puissance de calcul, et donc à dépenser de l’énergie et de l’argent, pour sécuriser le réseau ?
 
@@ -327,9 +327,9 @@ Faire défiler les trois blocs et montrer les valeurs de hash identiques d’un 
 
 Ici, le bloc 43 porte la référence au bloc 42, qui porte lui-même celle de son prédécesseur. De proche en proche, chaque nouveau bloc se rattache ainsi à un historique précis, jusqu’au premier bloc, appelé **bloc de genèse**.
 
-On peut ainsi dire que chaque bloc porte une empreinte complete de son passé. Il ne recopie pas toutes les anciennes transactions : il contient une donnée qui permet de lier les nouvelles transactions à un historique précis.
+On peut ainsi dire que chaque bloc porte une empreinte complète de son passé. Il ne recopie pas toutes les anciennes transactions : il contient une donnée qui permet de lier les nouvelles transactions à un historique précis.
 
-C'est ce mécanisme qui permet de sécuriser l'historique complet de la chaine de bloc.
+C'est ce mécanisme qui permet de sécuriser l'historique complet de la chaîne de blocs.
 
 Que se passe-t-il en effet si l’on modifie une transaction dans un ancien bloc ?
 
@@ -357,7 +357,7 @@ Un bloc suivant donne donc deux confirmations. Cinq blocs suivants donnent six c
 La validité du paiement et sa stabilité dans l’historique sont deux questions différentes. Les nœuds vérifient d’abord qu’il respecte les règles. Les confirmations réduisent ensuite le risque qu’un historique concurrent le remplace.
 :::
 
-Le nombre de confirmations attendu dépend de l’enjeu du paiement et du risque accepté. Mais on considère souvent que dix confirmations qui rendrent toute réécriture hautement improbable.
+Le nombre de confirmations attendu dépend de l’enjeu du paiement et du risque accepté. Mais on considère souvent que six confirmations rendent toute réécriture hautement improbable.
 
 Cette protection repose sur une dépense réelle de ressources. Il reste à en examiner les conséquences et à comprendre ce qui incite les mineurs à l’assumer.
 
@@ -367,17 +367,21 @@ Notre maison brûle et nous regardons ailleurs {.kicker}
 
 --- notes
 
-La recherche des preuves de travail réclame du matériel et de l’électricité. Le minage de Bitcoin utilise des machines spécialisées, appelées **ASIC**, conçues pour effectuer ces calculs très rapidement.
+La recherche des preuves de travail réclame du matériel et de l’électricité. Le minage de Bitcoin utilise des machines spécialisées, appelées **ASIC** (*Application-Specific Integrated Circuit*), conçues pour effectuer ces calculs très rapidement.
 
-Cette consommation électrique constitue l’une des principales critiques adressées à Bitcoin. Dans un rapport publié en avril 2025, Cambridge estime qu’au rythme observé à la mi-2024, le minage représente environ **138 TWh d’électricité par an**, soit de l’ordre de **0,5 % de la consommation mondiale d’électricité**.
+Cette consommation électrique constitue l’une des principales critiques adressées à Bitcoin. Dans un rapport publié en avril 2025, le Cambridge Centre for Alternative Finance estime qu’au rythme observé à la mi-2024, le minage représente environ **138 TWh d’électricité par an**, soit de l’ordre de **0,5 % de la consommation mondiale d’électricité**.
 
 :::warning
-Il s’agit d’une estimation annualisée : elle indique ce que représenterait une année de consommation au rythme estimé à la mi-2024. Elle ne constitue donc pas un bilan de l’année 2025. La part indiquée concerne l’électricité, pas l’ensemble de l’énergie consommée dans le monde. Les émissions de carbone dépendent aussi des sources d’électricité utilisées.
+Il s’agit d’une estimation annualisée : elle indique ce que représenterait une année de consommation au rythme estimé à la mi-2024. Elle ne constitue donc pas un bilan de l’année 2025.
+
+La part indiquée concerne l’électricité, pas l’ensemble de l’énergie consommée dans le monde. Les émissions de carbone dépendent aussi des sources d’électricité utilisées. Selon les mineurs interrogés, 52,4 % de leur électricité provient de sources durables (renouvelables et nucléaire), mais le gaz naturel reste la première source (38,2 %). Les émissions sont estimées à environ 39,8 MtCO₂e par an.
 :::
 
-Le coût du matériel et l’accès à une électricité bon marché favorisent de grandes installations. De nombreux mineurs mettent aussi leur puissance en commun dans des groupements, les *pools*, pour partager les revenus. Ces concentrations posent une question politique : qui dispose effectivement des moyens de participer à la production des blocs ?
+Le coût du matériel et l’accès à une électricité bon marché favorisent de grandes installations. Un mineur isolé peut attendre des mois avant de trouver un bloc. De nombreux mineurs mettent donc leur puissance en commun dans des groupements, les *pools*, pour lisser leurs revenus : le pool répartit les récompenses selon le travail fourni par chacun.
 
-Nous verrons qu’il existe d’autres mécanismes de consensus moins énergivores. Pour Bitcoin, la question immédiate est économique : pourquoi engager autant de ressources ?
+Mais c’est alors l’opérateur du pool, et non chaque mineur, qui choisit le contenu des blocs. Ces concentrations posent une question politique : qui dispose effectivement des moyens de produire les blocs et d’en décider le contenu ?
+
+Nous verrons qu’il existe d’autres mécanismes de consensus moins énergivores. Pour Bitcoin, une question se pose d’abord : pourquoi les mineurs engagent-ils autant de ressources ?
 
 [Sources]
 
@@ -392,28 +396,34 @@ Dance for me puppets {.kicker}
 
 --- notes
 
-Les mineurs ne soint pas altruistes. Ils engagent des ressources pour être en retour récompensés en bitcoins grâce au minage des blocs.
+Les mineurs ne sont pas altruistes. Nous l’avons vu : ils engagent des ressources parce que chaque bloc retenu dans l’historique leur rapporte une récompense en bitcoins.
 
-C’est ici que se situe le coup de génie de Bitcoin : faire des intérêts économiques des participants une composante de la sécurité du réseau.
+Bitcoin fait de cet intérêt une composante de la sécurité du réseau.
 
-La chaîne reste techniquement attaquable. Un acteur disposant de moyens suffisants peut tenter d’imposer un autre historique. Bitcoin organise donc une protection dans laquelle réécrire le passé exige des ressources considérables, avec un résultat incertain.
-
-Cette sécurité repose sur deux dimensions complémentaires :
+La diapositive précédente l’a montré : la chaîne reste attaquable. Bitcoin ne rend donc pas la réécriture impossible : il la rend coûteuse et incertaine. Cette sécurité repose sur deux dimensions :
 
 - **Une dimension statistique.** Tant que les mineurs qui suivent le protocole disposent de la majorité de la puissance de calcul et que les blocs circulent normalement, les chances d’un attaquant minoritaire de rattraper la chaîne diminuent à mesure que les confirmations s’accumulent.
-- **Une dimension économique.** L’attaquant doit payer le matériel et l’électricité nécessaires, au risque de perdre sa mise. La même puissance de calcul pourrait lui rapporter des récompenses en participant au fonctionnement du réseau. Le protocole cherche ainsi à rendre cette participation plus profitable qu’une attaque.
+- **Une dimension économique.** L’attaquant doit payer le matériel et l’électricité nécessaires. S’il échoue, les blocs minés sur sa branche sont abandonnés : il perd les récompenses et ses dépenses. La même puissance de calcul pourrait lui rapporter des récompenses en participant au fonctionnement du réseau. Le protocole cherche ainsi à rendre cette participation plus profitable qu’une attaque.
 
-Le problème du consensus prend alors une dimension économique : comment organiser les coûts et les gains pour que les participants aient intérêt à entretenir un historique commun ? Le déplacement consiste à viser une sécurité pratique : une réécriture reste possible, mais le protocole cherche à en rendre le coût dissuasif et les chances de réussite très faibles.
+Ces deux dimensions ne sont pas parallèles. La dimension statistique suppose une majorité honnête. La dimension économique explique pourquoi cette majorité a intérêt à le rester.
 
-C'est ce qu'on appelle le **mechanism design**, ou conception de mécanismes : définir des règles pour que des acteurs poursuivant leurs propres intérêts contribuent à un résultat collectif. Nakamoto n’invente pas ce domaine ; il en intègre la logique au fonctionnement d’une monnaie distribuée.
+Nakamoto va plus loin : même un attaquant majoritaire devrait trouver plus profitable de suivre les règles que de saper le système, et avec lui la valeur de sa propre richesse.
 
-La relation entre la valeur du bitcoin et sa sécurisation devient ainsi circulaire.
+Les ASIC renforcent cet argument. Ils ne servent qu’à miner du bitcoin : leur valeur dépend de la confiance dans le réseau. En l’attaquant, un mineur dévaloriserait son propre matériel.
 
-Une hausse du prix du bitcoin augmente la valeur des récompenses et peut attirer davantage de puissance de calcul. Concurrencer le réseau exige alors plus de ressources. Cette résistance aux attaques peut soutenir la confiance dans Bitcoin et ainsi augmenter sa valeur.
+Le consensus devient alors un problème d’incitations : comment organiser les coûts et les gains pour que les participants aient intérêt à entretenir un historique commun ?
 
-À l’inverse, une baisse durable des revenus du minage peut conduire certains mineurs à arrêter leurs machines. La valeur du bitcoin et les ressources mobilisées pour le sécuriser s’influencent donc mutuellement.
+C’est l’objet du **mechanism design**, ou conception de mécanismes : définir des règles pour que des acteurs poursuivant leurs propres intérêts contribuent à un résultat collectif. Nakamoto n’invente pas ce domaine ; il en intègre la logique au fonctionnement d’une monnaie distribuée.
 
-L’intuition décisive consiste ainsi à faire de l’appétit des mineurs une ressource pour sécuriser le registre. **La confiance dans l’historique repose sur l’articulation du calcul, des probabilités et des intérêts économiques.**
+Les récompenses sont versées en bitcoins. Leur valeur dépend donc du prix du bitcoin. La relation entre la valeur du bitcoin et sa sécurisation devient ainsi circulaire.
+
+Une hausse du prix du bitcoin augmente la valeur des récompenses et peut attirer davantage de puissance de calcul. Concurrencer le réseau exige alors plus de ressources. Cette résistance aux attaques peut soutenir la confiance dans Bitcoin, et donc la valeur du bitcoin.
+
+À l’inverse, une baisse durable des revenus du minage peut conduire certains mineurs à arrêter leurs machines. L’ajustement de la difficulté maintient le rythme d’un bloc toutes les dix minutes. Mais la puissance de calcul totale diminue : une attaque coûte donc moins cher.
+
+La valeur du bitcoin et les ressources mobilisées pour le sécuriser s’influencent donc mutuellement.
+
+L’intuition décisive de Bitcoin consiste ainsi à faire de l’appétit des mineurs une ressource pour sécuriser le registre. **La confiance dans l’historique repose sur l’articulation du calcul, des probabilités et des intérêts économiques.**
 
 [Sources]
 

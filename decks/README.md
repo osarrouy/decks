@@ -12,7 +12,7 @@ See the [framework guide](../svx-deck/README.md) for syntax, the public API and 
 
 ## Indications dans les notes
 
-Dans une section `--- notes`, les directives conteneur `:::comment`, `:::example` et `:::warning` permettent d’annoter plusieurs paragraphes :
+Dans une section `--- notes`, les directives conteneur `:::comment`, `:::example`, `:::warning` et `:::important` permettent d’annoter plusieurs paragraphes :
 
 ```md
 :::comment
@@ -44,7 +44,16 @@ de monnaie disponible pour payer.
 :::
 ```
 
-Each container opens with three colons and its name on a separate line and closes with `:::`. These containers can contain several paragraphs, lists and other Markdown elements. They do not appear in the projected slide. Student exports preserve examples and warnings but omit `:::comment` presentation cues.
+The `:::important` container holds a key formula or an exact definition that the speaker says almost word for word. It is labelled **À retenir** in the rendered notes:
+
+```md
+:::important
+La liquidité est la capacité d’un bien à être transformé rapidement en moyen
+de paiement sans perte de valeur.
+:::
+```
+
+Each container opens with three colons and its name on a separate line and closes with `:::`. These containers can contain several paragraphs, lists and other Markdown elements. They do not appear in the projected slide. Student exports preserve examples, warnings and important blocks but omit `:::comment` presentation cues.
 
 L’ancien format en blockquote reste accepté :
 
@@ -58,4 +67,6 @@ L’ancien format en blockquote reste accepté :
 
 ## Editorial guidance
 
-See [AGENTS.md](AGENTS.md) for the distinction between minimal projected slides and concise speaker notes written in complete sentences, and for the workflow governing editorial changes.
+See [AGENTS.md](AGENTS.md) for the distinction between minimal projected slides and airy speaker notes written in short, complete sentences, and for the workflow governing editorial changes.
+
+To rewrite a passage of speaker notes according to these guidelines, run `/notes <location>` in Claude Code or OhMyPi, for example `/notes decks/blockchain-monnaie/deck.svx:242-262`. The command is defined in [`.claude/commands/notes.md`](../.claude/commands/notes.md).

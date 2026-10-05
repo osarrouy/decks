@@ -8,11 +8,13 @@ theme: gallery
 
 --- notes
 
-↦ Rappel. La blockchain constitue une réponse technique au problème du consensus distribué. Cette réponse technique a été imaginée pour le Bitcoin.
+Rappel. La blockchain est une réponse technique au problème du consensus distribué : comment des machines qui ne se font pas confiance peuvent-elles tenir ensemble un même registre ? Nakamoto l'a conçue pour une monnaie : le Bitcoin.
 
-↦ Mais il est possible de concevoir des blockchains pour d'autres applications que le Bitcoin.
+Mais rien n'oblige une chaîne de blocs à n'enregistrer que des paiements. Le même principe peut servir à d'autres usages, à condition de changer ce que contient le registre et les règles qui permettent de le valider.
 
-↦ La technologie blockchain a été, ces 15 dernières années, étendue et perfectionnée, pour gérer des données plus complexes.
+Depuis le lancement de Bitcoin en 2009, de nombreuses blockchains ont ainsi été conçues pour d'autres besoins : rendre les transactions confidentielles, ou enregistrer des données et des programmes plus complexes que de simples paiements.
+
+Voyons deux exemples : Monero, puis Ethereum.
 
 ---
 <!-- slide: id="blockchain-033-monero" title="Monero" layout="center" -->
@@ -21,9 +23,32 @@ theme: gallery
 
 --- notes
 
-↦ Crypto-monnaie centrée sur la privacy.
+Monero est une crypto-monnaie lancée en 2014. Son objectif principal est la confidentialité des transactions, la *privacy*.
 
-↦ Comment rendre privée et / ou anonymes des données enregistrées sur une base de données publiques ?
+Bitcoin est souvent présenté comme anonyme. Il est en réalité pseudonyme. Les adresses ne portent pas de nom, mais toutes les transactions sont publiques : n'importe qui peut suivre les montants d'une adresse à l'autre.
+
+:::warning
+Il suffit de relier une adresse à une personne, par exemple lors d'un achat sur une plateforme qui vérifie l'identité de ses clients, pour remonter une partie de son historique. Des entreprises d'analyse de blockchain se sont spécialisées dans ce travail.
+:::
+
+Monero pose donc une question difficile : comment rendre confidentielles des données inscrites dans un registre public, que chacun doit pouvoir vérifier ?
+
+Sa réponse combine plusieurs techniques cryptographiques. Sans entrer dans le détail :
+
+- **Les signatures de cercle** (*ring signatures*) cachent l'émetteur. La transaction est signée au nom d'un groupe : l'émetteur réel et des leurres tirés de l'historique. Les nœuds vérifient qu'un membre du groupe a bien signé, sans savoir lequel.
+- **Les adresses furtives** (*stealth addresses*) cachent le destinataire. Chaque paiement est envoyé à une adresse à usage unique, que seul le destinataire peut relier à son wallet.
+- **RingCT** cache les montants, tout en permettant de vérifier qu'aucune monnaie n'est créée à partir de rien.
+
+Un mécanisme supplémentaire empêche tout de même de dépenser deux fois la même somme. Le registre reste donc vérifiable sans être lisible : chaque nœud peut contrôler l'absence de double dépense et de création monétaire, sans savoir qui a payé qui, ni combien.
+
+Cette confidentialité a un coût politique. Les régulateurs y voient un outil de blanchiment, et plusieurs grandes plateformes d'échange, dont Binance en 2024, ont retiré Monero de leur offre. On retrouve la tension, déjà présente chez les cypherpunks, entre protection de la vie privée et contrôle des flux financiers.
+
+[Sources]
+
+- [Monero — What is Monero?](https://www.getmonero.org/get-started/what-is-monero/)
+- [Moneropedia — Ring signatures](https://www.getmonero.org/resources/moneropedia/ringsignatures.html)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-034-ethereum" title="Ethereum" layout="center" -->
@@ -32,20 +57,26 @@ Vitalik Buterin {.kicker}
 
 --- notes
 
-↦ Blockchain d'un nouveau type proposée en 2013 par Vitalik Buterin (19 ans à l'époque).
+Ethereum est une blockchain d'un nouveau type, proposée fin 2013 par Vitalik Buterin. Il a alors 19 ans.
 
-↦ Vitalik Buterin est un russe ayant émigré très jeune au Canada avec ses parents.
+Né en Russie en 1994, Buterin émigre au Canada avec ses parents à l'âge de six ans.
 
-↦ Très tôt, alors qu'il n'est encore qu'adolescent, Buterin s'intéresse au Bitcoin. Il devient notamment un contributeur régulier du Bitcoin Magazine.
+Adolescent, il découvre le Bitcoin. En 2011, il cofonde *Bitcoin Magazine*, dont il devient l'un des principaux rédacteurs.
 
-↦ En 2013, Vitalik Buterin rédige le whitepaper d'une blockchain nouvelle et novatrice appelée Ethereum.
+Fin 2013, il rédige le *whitepaper* d'Ethereum. Un whitepaper est un document qui présente un projet technique, comme celui que Nakamoto a publié pour Bitcoin en 2008.
 
-↦ En quoi cette blockchain est-elle nouvelle ?
+Qu'est-ce qui distingue Ethereum ? Bitcoin est conçu pour enregistrer et valider des paiements. Ethereum est conçu pour héberger des programmes de toutes sortes, c'est-à-dire des applications décentralisées.
 
-↦ Parce qu'elle est conçue non pas uniquement pour enregistrer et valider des transactions financières, mais pour héberger des applications décentralisés de tout type.
+Buterin est rapidement rejoint par d'autres développeurs, dont Gavin Wood, qui rédige la spécification technique du protocole. En 2014, le projet est financé par une prévente d'**ether**, la future monnaie native du réseau : elle rapporte l'équivalent d'environ 18 millions de dollars en bitcoins. Le réseau est lancé le 30 juillet 2015.
+
+[Sources]
+
+- [Vitalik Buterin — Ethereum Whitepaper](https://ethereum.org/whitepaper/)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-035-transactions-ethereum" title="Transactions Ethereum" -->
+<!-- slide: id="blockchain-035-transactions-ethereum" title="Le registre de Bitcoin" -->
 | Emetteur | Destinataire | Valeur |
 | :------- | :----------- | :----- |
 | Alice    | Bob          | 2 ₿    |
@@ -54,31 +85,84 @@ Vitalik Buterin {.kicker}
 
 --- notes
 
-↦ Rappel. La « base de données » enregistrée sur la blockchain du Bitcoin. Rappelons que cette base de données est en réalité structurée en blocs.
+Rappel. Voici, sous une forme simplifiée, ce que contient le registre de Bitcoin : des transferts d'unités monétaires. Qui envoie combien à qui ? Chaque nœud vérifie que l'émetteur dispose bien des fonds qu'il dépense.
+
+:::warning
+Le tableau simplifie : les transactions sont en réalité regroupées en blocs.
+:::
+
+Bitcoin permet d'exprimer quelques conditions de dépense, par exemple exiger plusieurs signatures pour débloquer des fonds. Mais son langage de script est volontairement limité : il ne permet pas d'écrire des programmes quelconques. Le registre ne contient donc que des paiements.
 
 ---
 <!-- slide: id="blockchain-036-donnees-et-instructions" title="Données et instructions" layout="center" -->
-| Donnée    | Type        |
-| :-------- | :---------- |
-| 0x24..f6  | data        |
-| 0xd7..80  | data        |
-| 0x7a...9a | instruction |
+| Donnée   | Type        |
+| :------- | :---------- |
+| 0x24..f6 | data        |
+| 0xd7..80 | data        |
+| 0x7a..9a | instruction |
 
 --- notes
 
-↦ Au lieu de stocker des données formatées pour décrire des transactions financières, la base de données d'Ethereum est conçue pour pouvoir stocker des données de nature arbitraire et des instructions décrivant comment manipuler ces données - c'est-à-dire des applications.
+Ethereum change la nature de ce registre. Il peut stocker des données quelconques, mais aussi des instructions qui décrivent comment manipuler ces données. Autrement dit : des programmes.
 
-↦ Cette base de données simule ainsi la mémoire d’une ordinateur - mais de manière publique et décentralisée.
+:::comment
+Les deux sont stockés sous la même forme, des suites d'octets notées en hexadécimal. Le préfixe « 0x » signale cette notation.
+:::
 
-↦ Rappel sur la machine de Turing. Un ordinateur est une machine à états.
+On peut comparer ce registre à la mémoire d'un ordinateur, partagée par tous les nœuds du réseau. Cette mémoire est publique, et aucun acteur ne la contrôle seul.
 
-↦ Ethereum a ainsi vocation a devenir un ordinateur mondial offrant à chacun la possibilité de déployer des programmes publics, décentralisés et infalsifiables appelés des **smart-contacts**.
+Rappel sur la machine de Turing. Un ordinateur peut être décrit comme une machine à états. À chaque instant, sa mémoire se trouve dans un certain état ; chaque instruction la fait passer à un nouvel état.
 
-↦  Buterin va rapidement être rejoint par divers développeurs et investisseurs.
+Ethereum fonctionne de la même manière. Chaque transaction peut modifier l'état du registre : déplacer des ethers, mais aussi enregistrer une donnée ou exécuter un programme. Tous les nœuds exécutent les mêmes instructions dans le même ordre. Ils doivent donc aboutir au même nouvel état : c'est ce qui permet le consensus.
 
-↦ La première version d'Ethereum est finalisée en 2015.
+:::example
+Prenons un vote. L'état du registre contient le décompte des voix. La transaction « Alice vote pour A » appelle le programme de vote. Celui-ci vérifie qu'Alice n'a pas déjà voté, puis ajoute une voix à A. Chaque nœud exécute le programme et obtient le même nouveau décompte.
+:::
 
-↦ Une autre ambition de la blockchain Ethereum, qui interviendra plus tardivement, a été de remplacer l'algorithme de Proof-of-Work par un autre algorithme de consensus, moins énergivore, appelé la **Proof-of-Stake**.
+Ethereum se présente ainsi comme un « ordinateur mondial » : chacun peut y déployer des programmes publics, que personne ne peut modifier ou arrêter seul. Ces programmes s'appellent des **smart contracts**.
+
+:::warning
+Le tableau simplifie. Ethereum organise son état en comptes : chaque compte possède un solde en ether, et certains comptes contiennent aussi du code et des données.
+:::
+
+[Sources]
+
+- [Ethereum — Accounts](https://ethereum.org/en/developers/docs/accounts/)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-smart-contracts" title="Smart contracts" layout="center" -->
+## Smart contracts
+contrats intelligents {.kicker}
+
+--- notes
+
+L'expression vient de Nick Szabo, que nous avons croisé avec bitgold. Dans les années 1990, il imagine des contrats dont les clauses seraient exécutées automatiquement par un programme.
+
+:::example
+Son exemple est le distributeur automatique. On insère une pièce, on choisit un produit, la machine le délivre. Personne n'a besoin de faire confiance à un vendeur : les règles de l'échange sont inscrites dans la machine.
+:::
+
+Un smart contract est un programme déployé sur la blockchain. Son code et ses données sont publics. Il s'exécute lorsqu'une transaction l'appelle, et chaque nœud vérifie le résultat.
+
+Une fois déployé, son code ne peut plus être modifié. Personne ne peut donc changer les règles en cours de route, pas même son auteur. Les développeurs peuvent prévoir des mécanismes de mise à jour, mais ceux-ci doivent être inscrits dans le code dès le départ.
+
+Les développeurs écrivent généralement ces programmes dans un langage appelé **Solidity**. Chaque nœud les exécute ensuite dans l'**EVM** (*Ethereum Virtual Machine*), une sorte de processeur commun à tout le réseau.
+
+:::warning
+Ce ne sont ni des contrats au sens juridique, ni des programmes « intelligents ». Un smart contract exécute exactement ce que dit son code, y compris ses erreurs. Comme ce code est public, n'importe qui peut chercher et exploiter une faille.
+
+En 2016, une faille de The DAO, un fonds d'investissement géré par smart contract, permet de détourner environ 3,6 millions d'ethers. Pour annuler ce détournement, une majorité de la communauté modifie l'historique d'Ethereum. Une minorité refuse et poursuit l'ancienne chaîne, devenue Ethereum Classic.
+:::
+
+Exécuter un programme sur des milliers de machines a un coût. Chaque opération a donc un prix, payé en ether : c'est le **gas**. Nous y reviendrons au moment de faire nos premières transactions.
+
+[Sources]
+
+- [Ethereum — Introduction to smart contracts](https://ethereum.org/en/smart-contracts/)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-037-proof-of-stake" title="Proof-of-Stake" layout="center" -->
@@ -87,13 +171,35 @@ PoS {.kicker}
 
 --- notes
 
-↦ La PoS consiste à remplacer l'investissement énergétique propre à la Proof-of-Work en un investissement purement financier.
+À son lancement, Ethereum utilise lui aussi la preuve de travail. Mais dès l'origine, ses concepteurs veulent la remplacer par un mécanisme de consensus moins énergivore : la **preuve d'enjeu**, ou *proof-of-stake*.
 
-↦ De la même manière que la blockchain du Bitcoin dispose d'une monnaie native - le bitcoin - la blockchain Ethereum dispose d'une monnaie native appelée l'**Ether**.
+Rappel. La preuve de travail protège le réseau contre les attaques Sybil. Pour peser sur le choix des blocs, il faut mobiliser de la puissance de calcul, donc du matériel et de l'électricité. Multiplier les identités ne sert à rien.
 
-↦ La PoS consiste à réclamer des validateurs une mise en gage d'une certaine quantité d'Ethers pour valider les blocs de transactions - en lieu et place d'un investissement énergétique.
+La preuve d'enjeu conserve ce principe, mais remplace la dépense d'énergie par un engagement financier. Pour participer à la validation, il faut immobiliser des ethers. Ces ethers mis en gage constituent l'enjeu : le *stake*.
 
-↦ Le passage à la PoS a été réalisée avec succès sur la blockchain Ethereum en septembre 2022.
+Concrètement, un **validateur** dépose 32 ETH dans un smart contract dédié. Toutes les 12 secondes, le protocole tire au sort un validateur chargé de proposer le prochain bloc. D'autres validateurs vérifient ce bloc et votent pour l'approuver.
+
+Un acteur qui engage dix fois plus d'ethers peut faire fonctionner dix fois plus de validateurs. Son poids dépend donc de sa mise, et non du nombre d'identités qu'il crée.
+
+Les validateurs qui suivent les règles reçoivent des récompenses en ether. Ceux qui trichent, par exemple en approuvant deux blocs concurrents, perdent une partie de leur mise : c'est le **slashing**. La sanction est d'autant plus lourde que les tricheurs agissent nombreux au même moment ; elle peut aller jusqu'à la perte de toute la mise.
+
+On retrouve la logique du mechanism design. Avec la preuve de travail, un attaquant perd l'électricité qu'il a dépensée. Avec la preuve d'enjeu, il perd directement les ethers qu'il a engagés.
+
+Ce passage à la preuve d'enjeu, appelé **The Merge**, a eu lieu le 15 septembre 2022, sans interrompre le réseau. Selon ethereum.org, il a réduit la consommation électrique d'Ethereum de plus de 99,9 %. Le réseau consommerait aujourd'hui environ 0,0026 TWh par an, contre environ 138 TWh pour le minage de Bitcoin selon l'estimation de Cambridge vue précédemment.
+
+:::warning
+La preuve d'enjeu ne supprime pas la question de la concentration. Le pouvoir de validation est proportionnel aux ethers engagés : ceux qui en possèdent le plus pèsent le plus et touchent le plus de récompenses.
+
+De nombreux détenteurs confient en outre leurs ethers à de grands services de *staking*, comme Lido ou les plateformes d'échange, qui concentrent ainsi une part importante de la validation. On retrouve la question posée par les pools de minage : qui produit effectivement les blocs ?
+:::
+
+[Sources]
+
+- [Ethereum — Proof-of-stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/)
+- [Ethereum — The Merge](https://ethereum.org/en/roadmap/merge/)
+- [Ethereum — Energy consumption](https://ethereum.org/en/energy-consumption/)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-038-dapps" title="dApps" layout="center" -->
@@ -102,23 +208,65 @@ Decentralized Applications {.kicker}
 
 --- notes
 
-↦ L'intention des dApps est de supprimer les tiers de confiance dans l'économie de plateforme - comme on a supprimé la banque de la monnaie.
+Les smart contracts permettent de construire des **applications décentralisées**, ou dApps. Leur logique s'exécute sur la blockchain plutôt que sur les serveurs d'une entreprise.
 
-↦ Exemple. Mécanismes financiers. Expliquer la différence entre un DEX et un CEX.
+Leur intention est de supprimer les tiers de confiance de l'économie de plateforme, comme Bitcoin a cherché à se passer des banques pour la monnaie. Uber ou Deliveroo mettent en relation, fixent les règles et prélèvent une commission. Une dApp voudrait remplacer cet intermédiaire par un programme public.
 
--stablecoin
+:::example
+**Échanger des crypto-monnaies : CEX et DEX.** Sur une plateforme d'échange centralisée (*CEX*, pour *centralized exchange*), comme Coinbase ou Binance, on dépose ses fonds auprès d'une entreprise. Celle-ci tient les comptes et organise les échanges.
 
--farcaster (twitter décentralisé)
+Sur une plateforme d'échange décentralisée (*DEX*), comme Uniswap, on échange directement depuis son wallet avec un smart contract. Ce contrat détient des réserves de deux jetons et calcule automatiquement le prix en fonction de leurs quantités.
+:::
 
-↦  Ex. Uber, Deliveroo, etc.
+La différence apparaît en cas de faillite. En novembre 2022, la plateforme centralisée FTX s'effondre : ses clients découvrent que l'entreprise a utilisé leurs dépôts et ne peuvent plus les retirer. Sur un DEX, les fonds restent dans le wallet de l'utilisateur jusqu'à l'échange. Le risque se déplace alors vers une faille possible du smart contract.
 
--> ENS
+:::example
+**Stablecoins.** Le cours des crypto-monnaies varie fortement, ce qui les rend peu pratiques pour payer. Un stablecoin est un jeton conçu pour garder une valeur stable, généralement un dollar.
 
--> Polymarket
+Les plus utilisés, USDT (Tether) et USDC (Circle), sont émis par des entreprises qui déclarent détenir des réserves équivalentes en dollars et en titres de dette publique américaine.
+:::
 
--> NFT
+Mais ces stablecoins réintroduisent un tiers de confiance : il faut croire l'émetteur sur ses réserves, et il peut geler les jetons d'une adresse. D'autres stablecoins, comme l'USDS, sont garantis par des crypto-monnaies déposées dans des smart contracts. Nous étudierons ce mécanisme dans la séance sur le mechanism design.
 
-↦ Exemple. Gouvernance.
+:::example
+**ENS** (*Ethereum Name Service*). Une adresse Ethereum est une suite illisible de 40 caractères hexadécimaux précédée de « 0x ». ENS associe à une adresse un nom lisible, comme `vitalik.eth`, de la même manière que le DNS associe un nom de domaine à l'adresse d'un serveur. Le registre des noms est lui-même un smart contract.
+:::
+
+:::example
+**Polymarket.** C'est un marché de prédiction : on y achète des parts sur l'issue d'un événement, comme une élection. Une part rapporte un dollar si l'événement se produit, rien sinon. Son prix, entre 0 et 1 dollar, peut donc se lire comme la probabilité que le marché attribue à cet événement. Polymarket fonctionne en stablecoins, sur une blockchain compatible avec Ethereum (historiquement Polygon).
+:::
+
+Nous retrouverons cette idée de marché comme outil de décision avec la *futarchy*, dans la séance sur la gouvernance.
+
+:::warning
+Polymarket est exploité par une entreprise et reste soumis aux régulateurs. En France, l'Autorité nationale des jeux le considère comme un site de jeux d'argent non autorisé : elle a ordonné son blocage aux fournisseurs d'accès en juillet 2026, et Polymarket a annoncé contester cette décision.
+:::
+
+:::example
+**Farcaster.** C'est un réseau social décentralisé, proche de Twitter. L'identité des comptes est enregistrée sur une blockchain construite au-dessus d'Ethereum, et les messages circulent sur un réseau de serveurs ouvert. Plusieurs applications peuvent donc afficher le même réseau, et un utilisateur peut changer d'application sans perdre ses abonnés.
+:::
+
+:::warning
+Décentralisé ne veut pas dire indépendant. Farcaster a été développé par une start-up financée par du capital-risque. En janvier 2026, ses fondateurs se retirent et l'entreprise Neynar reprend le protocole ; en août 2026, Neynar annonce chercher une nouvelle équipe pour le gérer. Le protocole peut survivre à une entreprise, mais l'essentiel de l'activité dépend encore de quelques acteurs.
+:::
+
+La promesse va plus loin : remplacer Uber ou Deliveroo par des protocoles où chauffeurs et clients se rencontrent sans intermédiaire. Ces projets restent à ce jour marginaux.
+
+Une difficulté explique en partie cet échec : la blockchain ne connaît que ce qui y est inscrit. Elle ne peut pas vérifier par elle-même qu'une course a eu lieu ou qu'un repas a été livré. Il faut alors une source externe, appelée **oracle**, ou un arbitrage humain, ce qui réintroduit un tiers de confiance. C'est le **problème de l'oracle**. Polymarket le rencontre aussi : il faut bien que quelqu'un déclare le résultat de l'élection.
+
+Deux autres usages feront l'objet de séances dédiées. Les **DAO** sont des organisations dont les règles de décision sont inscrites dans des smart contracts ; nous les étudierons avec la gouvernance. Les **NFT** sont des jetons uniques qui servent notamment de certificats de propriété numérique.
+
+[Sources]
+
+- [Uniswap — Protocol overview](https://docs.uniswap.org/concepts/overview)
+- [Ethereum — Stablecoins](https://ethereum.org/en/stablecoins/)
+- [ENS — Documentation](https://docs.ens.domains/)
+- [Polymarket — Documentation](https://docs.polymarket.com/)
+- [The Paypers — France blocks Polymarket over gambling law breaches](https://thepaypers.com/crypto-web3-and-cbdc/news/france-blocks-polymarket-over-gambling-law-breaches)
+- [The Block — Neynar acquires Farcaster](https://www.theblock.co/post/386549/haun-backed-neynar-acquires-farcaster-after-founders-pivot-to-wallet-app)
+- [The Defiant — Neynar seeks new owner for Farcaster](https://thedefiant.io/news/nfts-and-web3/neynar-seeks-new-owner-farcaster-clanker)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-039-wallets" title="Wallets" layout="center" -->
@@ -127,29 +275,29 @@ WTF {.kicker}
 
 --- notes
 
-↦ Entrons dans des considérations pratiques. Comment recevoir et dépenser de l'argent sur une blockchain, comment interagir avec une blockchain, etc. ?
+Passons à la pratique. Comment recevoir et dépenser de l'argent sur une blockchain ? Comment utiliser une dApp ?
 
-↦ Focus sur la blockchain Ethereum :
-- Seconde blockchain la plus importante - après le Bitcoin - en terme de capitalisation.
-- Blockchain qui offre le plus d'applications.
-- Riche d'un important écosystème.
+Nous travaillerons sur Ethereum. C'est la deuxième crypto-monnaie par capitalisation, après Bitcoin, et son écosystème d'applications est l'un des plus développés. Ce que nous allons voir vaut pour la plupart des autres blockchains.
 
-↦ Ce qui vaut pour la blockchain Ethereum vaut pour la plupart des autres blockchains.
+Le point de départ est un **wallet**, c'est-à-dire un portefeuille. Il remplit deux fonctions.
 
-↦ Le point de départ pour interagir avec un blockchain est de contrôler un wallet - i.e. un portefeuille.
+**Identification.** Le wallet vous donne une adresse sur la blockchain. C'est elle que vous communiquez pour recevoir des fonds, comme vous communiquez votre RIB pour recevoir un virement.
 
-↦ Un wallet a plusieurs fonctions
+**Authentification.** Le wallet vous permet de prouver que vous contrôlez cette adresse, et donc de dépenser les fonds qui y sont associés.
 
-1. Identification
-↦ Le wallet constitue votre identité sur la blockchain.
-↦ Ex. : recevoir de l'argent.
-↦ RIB vs addresse de votre wallet.
+Le wallet joue donc à la fois le rôle de votre identifiant et celui du mot de passe qui le protège.
 
-2. Authentification
-↦ Le wallet permet de vous authentifier sur la blockchain.
-↦ Ex. : contrôle vos fonds (votre argent).
+:::warning
+Le wallet ne contient pas l'argent. Les fonds sont inscrits dans le registre de la blockchain, associés à une adresse. Le wallet conserve les clés qui permettent d'en disposer. Perdre son téléphone n'est pas grave si l'on peut restaurer ses clés ; perdre ses clés, en revanche, c'est perdre l'accès aux fonds.
+:::
 
-↦ Autrement dit votre wallet constitue à la fois votre identité et le mode de passe protégeant cette identité sur la blockchain.
+Comment un wallet peut-il remplir ces deux fonctions sans serveur central pour vérifier les mots de passe ? Grâce à la cryptographie asymétrique.
+
+[Sources]
+
+- [Ethereum — Wallets](https://ethereum.org/en/wallets/)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-040-cryptographie-asymetrique" title="Cryptographie asymétrique" layout="center" -->
@@ -157,150 +305,343 @@ WTF {.kicker}
 
 --- notes
 
-↦ Le fonctionnement d'un wallet repose sur un ensemble de fonctions mathématiques disposant de certaines propriétés cryptographiques.
+Nous n'allons pas entrer dans les mathématiques, seulement dégager les principes.
 
-↦ Nous n'allons pas entrer dans le détail de ces propriétés et de leur soubassement mathématique mais simplement essayer d'expliciter les grands principes sur lesquels reposent ces fonctions cryptographiques.
+Une **clé cryptographique** est un très grand nombre, souvent noté sous la forme d'une suite de chiffres et de lettres. Un algorithme s'en sert pour chiffrer, déchiffrer ou signer des données.
 
-↦ Le fonctionnement d'un wallet repose sur la cryptographie asymétrique.
+Dans la cryptographie symétrique, la même clé sert à chiffrer et à déchiffrer. Mais il faut alors transmettre cette clé à son correspondant sans qu'elle soit interceptée.
 
-↦ Pourquoi asymétrique ?
+La cryptographie asymétrique résout ce problème avec deux clés distinctes : une **clé privée** et une **clé publique**. Elles sont liées mathématiquement : la clé publique est calculée à partir de la clé privée. Mais le calcul inverse est impossible en pratique. Retrouver la clé privée à partir de la clé publique prendrait bien plus que l'âge de l'univers.
 
-↦ Parce qu'elle s'appuie sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+La clé publique peut être partagée avec tout le monde. Elle sert d'identifiant cryptographique, un peu comme un IBAN. Les cypherpunks publiaient ainsi leurs clés publiques sur des serveurs de clés.
 
-↦ Qu'est-ce qu'une clé cryptographique (ou clé de chiffrement) ?
+La clé privée, elle, doit rester secrète. Sur un téléphone, elle est généralement conservée chiffrée sur l'appareil et protégée par un code ou par la biométrie.
 
-↦ Une suite de chiffre et de lettres qu'un algorithme peut utiliser pour chiffrer ou déchiffrer des données.
+Ces deux clés permettent deux usages.
 
-↦ Or la cryptographie asymétrique repose sur deux clés de chiffrement distinctes : la clé publique et la clé privée.
+**Chiffrer.** Pour envoyer un message confidentiel à Bob, Alice le chiffre avec la clé publique de Bob. Seule la clé privée de Bob permet de le déchiffrer. N'importe qui peut donc écrire à Bob en secret, mais lui seul peut lire.
 
-↦ Ces clés sont très différentes l'une de l'autre et il est impossible de déduire l'une de la connaissance de l'autre.
+**Signer.** À l'inverse, Alice peut produire avec sa clé privée une **signature** pour un message, par exemple : « Nous sommes le … et je certifie être Alice. » Toute personne qui connaît la clé publique d'Alice peut vérifier que cette signature a bien été produite avec sa clé privée, sans pouvoir en fabriquer une elle-même.
 
-↦ En revanche ces deux clés ne sont pas totalement indépendantes : l'une permet de déchiffrer ce que l'autre a chiffré.
+La signature prouve aussi que le message n'a pas été modifié : si l'on change un seul caractère, la vérification échoue. Dater le message empêche de réutiliser une ancienne signature.
 
-↦ Autrement dit il possible de déchiffrer avec la clé privée les messages codés avec la clé publique et vice-versa.
+:::warning
+On présente souvent la signature comme un « chiffrement avec la clé privée ». Cette image vaut à peu près pour RSA, l'algorithme historiquement utilisé par PGP, mais pas pour Ethereum : son algorithme de signature ne chiffre rien.
+:::
 
-↦ Comment on se sert de ces clés ?
+:::comment
+Vérifier que la différence entre chiffrer et signer est comprise.
 
-↦ La clé publique, comme son nom l'indique, est publique. Elle peut-être partagée avec tout un chacun et constitue en quelque sorte votre identifiant cryptographique - un peu comme votre IBAN.
+Démonstration avec GPG Suite : générer une paire de clés, chiffrer un message pour un destinataire, puis signer un message et vérifier la signature.
+:::
 
-↦ On trouve ainsi, chez les cypherpunk, des annuaires de clé publique.
+---
+<!-- slide: id="blockchain-adresse" title="Adresse" layout="center" -->
+## Adresse
+clé privée → clé publique → adresse {.kicker}
 
-↦ La clé privée, en revanche, doit être soigneusement protégée - celle-ci est souvent stockée dans une enclave sécurisée de votre téléphone, et protégée par un code PIN et / ou un dispositif biométrique.
+--- notes
 
-↦ Quiconque veut vous adresser un message confidentiel peut ainsi le chiffrer avec votre clé publique. En revanche, vous seul qui détenez votre clé privée pourra en déchiffrer le contenu.
+Un compte Ethereum repose sur une paire de clés.
 
-↦ Vous comprendrez donc l'intérêt de conserver votre clé privée ... privée.
+La **clé privée** est un nombre tiré au hasard dans un ensemble si grand que deux personnes n'obtiendront en pratique jamais la même.
 
-↦ Mais on peut aussi faire un usage différent de la cryptographie asymétrique, non plus pour s'adresser des messages confidentiels, mais pour s'authentifier mutuellement.
+La **clé publique** est calculée à partir de la clé privée.
 
-↦ On peut, pour cela, demander à quelqu'un de chiffrer avec sa clé privée un message particulier - par exemple : nous sommes le 26 septembre et je certifie être Olivier.
+L'**adresse** est calculée à partir de la clé publique, avec une fonction de hachage comme celles du cours précédent. Elle s'écrit « 0x » suivi de 40 caractères hexadécimaux. C'est l'identifiant que l'on communique pour recevoir des fonds.
 
-↦ Si, en déchiffrant le message ainsi chiffré avec la clé publique, je retombe bien sur le message originel, alors, j'ai la certitude que la personne à qui je m'adresse est bien la personne qu'elle prétend être.
+:::example
+Alice veut envoyer 0,1 ETH à Bob. Bob lui communique son adresse.
 
-↦ On parle alors de **signature cryptographique**.
+Le wallet d'Alice rédige la transaction « 0,1 ETH de l'adresse d'Alice vers l'adresse de Bob », puis la signe avec la clé privée d'Alice. Il diffuse la transaction et sa signature au réseau.
 
-↦ Vérifier que tout le monde a bien compris.
+Chaque nœud vérifie que la signature a bien été produite par la clé privée liée à l'adresse d'Alice, et que le solde de cette adresse suffit. Aucune banque et aucun serveur central ne sont intervenus.
+:::
 
-↦ Faire une démonstration avec GPG Suite.
+Cela signifie que l'adresse assure l'identification, et la signature l'authentification. Il n'existe aucune base de mots de passe à pirater, mais aussi personne pour réinitialiser une clé perdue.
 
-↦ Expliquer de quelle manière un wallet repose sur de la cryptographie asymétrique.
+:::warning
+Qui détient la clé privée détient les fonds. Aucun service client ne peut annuler une transaction ou restaurer une clé perdue.
+:::
 
-↦ En pratique, il existe différent types de wallet :
-- Extension de navigateur
-- Applications mobiles
-- Multisig - utiles si vous souhaitez sécuriser de plus grosses sommes d’argent.
-- Vous allez utiliser un wallet mobile.
+Il existe plusieurs types de wallets :
 
-↦ Vérifier que tout le monde a un smartphone.
+- **les extensions de navigateur**, pour utiliser des dApps depuis un ordinateur ;
+- **les applications mobiles** ;
+- **les wallets matériels**, comme Ledger ou Trezor : un petit appareil dédié, dont la clé privée ne sort jamais ;
+- **les wallets multisig**, comme Safe, qui exigent plusieurs signatures pour chaque transaction. Ils servent à sécuriser des sommes importantes ou les fonds d'une organisation.
+
+Tous ces wallets sont dits **non dépositaires** : vous seul détenez vos clés. Un compte sur une plateforme d'échange comme Coinbase ou Binance est au contraire dépositaire : la plateforme détient les clés pour vous, comme chez FTX. D'où l'adage : *not your keys, not your coins*.
+
+Nous allons utiliser MetaMask, dans sa version mobile.
+
+:::comment
+Vérifier que tout le monde a un smartphone.
+:::
+
+[Sources]
+
+- [Ethereum — Accounts](https://ethereum.org/en/developers/docs/accounts/)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-041-installer-metamask" title="Installer MetaMask" layout="center" -->
 https://metamask.io/download/ {.kicker}
 
+--- notes
+
+Installez MetaMask depuis le site officiel ou depuis l'App Store ou le Play Store.
+
+:::warning
+De fausses applications et de faux sites MetaMask circulent pour voler les phrases de récupération. Passez par metamask.io, ou vérifiez dans le store que l'éditeur est bien Consensys.
+:::
+
 ---
-<!-- slide: id="blockchain-042-installer-metamask" title="Installer MetaMask" layout="center" -->
-<img src="/assets/7C81C687-253F-4863-BF88-9A47E12CD6F7_1_105_c.jpeg" alt="Installer MetaMask" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-042-installer-metamask" title="Créer un portefeuille" layout="center" -->
+![Écran d’accueil de MetaMask : créer un nouveau portefeuille](/assets/7C81C687-253F-4863-BF88-9A47E12CD6F7_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Plusieurs options : Google, Apple ou email
+Choisissez « Créer un nouveau portefeuille ».
+
+MetaMask propose ensuite de créer le portefeuille avec un compte Google ou Apple, ou directement avec une phrase secrète de récupération.
+
+Avec un compte Google ou Apple, MetaMask génère quand même les clés sur votre téléphone. Leur sauvegarde est chiffrée et répartie entre plusieurs serveurs : MetaMask ne peut pas la reconstituer seul. Le portefeuille reste donc non dépositaire.
+
+[Sources]
+
+- [The Block — MetaMask introduces social login](https://www.theblock.co/post/368400/metamask-social-login)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-043-creer-un-wallet" title="Créer un wallet" layout="center" -->
-<img src="/assets/35FA5FBD-F276-473E-B758-685B07782440_1_105_c.jpeg" alt="Créer un wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-043-creer-un-wallet" title="Sécuriser le portefeuille" layout="center" -->
+![Inscription terminée : sécuriser le portefeuille](/assets/35FA5FBD-F276-473E-B758-685B07782440_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Entrer votre mot de passe
+Appuyez sur « Secure your wallet » et choisissez un mot de passe.
+
+Ce mot de passe déverrouille l'application sur ce téléphone. Avec une connexion Google ou Apple, il sert aussi à restaurer le portefeuille sur un autre appareil.
+
+:::warning
+MetaMask ne connaît pas ce mot de passe et ne peut pas le réinitialiser. Si vous l'oubliez, seule la phrase secrète de récupération permet de retrouver le portefeuille.
+:::
 
 ---
-<!-- slide: id="blockchain-044-proteger-la-phrase-de-recuperation" title="Protéger la phrase de récupération" layout="center" -->
-<img src="/assets/E8E27682-9297-4E9A-997E-2418054D3327_1_105_c.jpeg" alt="Protéger la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-044-proteger-la-phrase-de-recuperation" title="Portefeuille prêt" layout="center" -->
+![Le portefeuille est prêt](/assets/E8E27682-9297-4E9A-997E-2418054D3327_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Terminer
+Appuyez sur « Terminé ».
 
 ---
-<!-- slide: id="blockchain-045-phrase-de-recuperation" title="Phrase de récupération" layout="center" -->
-<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-045-phrase-de-recuperation" title="Accueil du wallet" layout="center" -->
+![Accueil du wallet MetaMask, solde à zéro](/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Aller dans les parametres
+Voici l'accueil du wallet. Le solde est nul. L'icône de copie, en haut, permet de copier l'adresse du compte.
+
+Ouvrez les paramètres, en bas à droite.
 
 ---
-<!-- slide: id="blockchain-046-confirmer-la-phrase-de-recuperation" title="Confirmer la phrase de récupération" layout="center" -->
-<img src="/assets/CFAA85CC-B6B1-4AEC-BE8A-962FB9C1624D_1_105_c.jpeg" alt="Confirmer la phrase de récupération" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-046-confirmer-la-phrase-de-recuperation" title="Paramètres" layout="center" -->
+![Paramètres de MetaMask](/assets/CFAA85CC-B6B1-4AEC-BE8A-962FB9C1624D_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Sécurité et confidentialité
+Ouvrez « Sécurité et confidentialité ».
 
 ---
-<!-- slide: id="blockchain-047-wallet-cree" title="Wallet créé" layout="center" -->
-<img src="/assets/2D7197F1-B4C4-4CC6-8CA6-88B759D69DA1_1_105_c.jpeg" alt="Wallet créé" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-<!-- slide: id="blockchain-048-obtenir-des-eth-de-test" title="Obtenir des ETH de test" layout="center" -->
-<img src="/assets/ECCF666F-DC21-4D17-9BB0-D106538E682B_1_105_c.jpeg" alt="Obtenir des ETH de test" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-047-wallet-cree" title="Sécurité et confidentialité" layout="center" -->
+![Sécurité et confidentialité : gérer les méthodes de récupération](/assets/2D7197F1-B4C4-4CC6-8CA6-88B759D69DA1_1_105_c.jpeg){data-slide-image="fill"}
 
 --- notes
 
-Expliquer ce qu’est la phrase secrète de récupération - comment ça génère les clés.
+Appuyez sur « Gérer les méthodes de récupération ».
+
+Avant d'afficher la phrase secrète de récupération, voyons ce qu'elle est.
 
 ---
-<!-- slide: id="blockchain-049-sepolia-faucet" title="Sepolia Faucet" layout="center" -->
-<img src="/assets/1D5BE008-92A2-4B3B-9F55-56ADC35BAF90_1_105_c.jpeg" alt="Sepolia Faucet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-<!-- slide: id="blockchain-050-connecter-le-wallet" title="Connecter le wallet" layout="center" -->
-<img src="/assets/E4866D14-4026-4D49-8041-81F4CF080AE1_1_105_c.jpeg" alt="Connecter le wallet" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-<!-- slide: id="blockchain-051-autoriser-la-connexion" title="Autoriser la connexion" layout="center" -->
-<img src="/assets/12E110AA-64EB-40CC-8BA2-80408F8FC5D4_1_105_c.jpeg" alt="Autoriser la connexion" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-<!-- slide: id="blockchain-052-wallet-connecte" title="Wallet connecté" layout="center" -->
-<img src="/assets/BB237F9E-411B-479D-9417-980EF4E47690_1_105_c.jpeg" alt="Wallet connecté" style="max-width:100%;max-height:68vh;object-fit:contain;" />
-
----
-<!-- slide: id="blockchain-053-envoyer-une-transaction" title="Envoyer une transaction" layout="center" -->
-<img src="/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg" alt="Envoyer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-phrase-secrete" title="Phrase secrète de récupération" layout="center" -->
+## Phrase secrète de récupération
+Secret Recovery Phrase {.kicker}
 
 --- notes
 
-↦ Expliquer ce qu'est l'ETH : cryptomonnaie native d' Ethereum servant, notamment, à payer les frais de gas.
+La phrase secrète de récupération est une suite de 12 mots tirés d'une liste standard de 2 048 mots anglais.
 
-↦ Expliciter que chaque transaction dépend de son coût computationnel [pour éviter le spam] et le prix du gas [pour inciter les validateurs à inclure votre transaction dans un bloc].
+Ces 12 mots codent un nombre aléatoire. À partir de ce nombre, le wallet calcule autant de clés privées que nécessaire, une par compte. Le calcul est déterministe : la même phrase redonne toujours les mêmes clés, dans le même ordre.
 
-↦ Expliquer ce qu'est un testnet [un réseau pour faire des tests sans dépenser du vrai argent en frais de gaz]
+Cela signifie que la phrase sauvegarde tous les comptes du wallet. Si vous perdez votre téléphone, il suffit d'installer MetaMask, ou un autre wallet compatible, et de saisir les 12 mots pour retrouver tous vos comptes.
+
+:::example
+Sur la capture suivante, MetaMask indique deux comptes sous « Phrase secrète de récupération 1 » : leurs deux clés privées sont calculées à partir de la même phrase.
+:::
+
+Pourquoi des mots plutôt qu'un nombre ? Parce qu'ils sont plus faciles à recopier sans erreur. Le dernier mot contient en outre une vérification qui détecte la plupart des fautes de frappe. Le nombre de combinaisons possibles reste si grand qu'il est impossible en pratique de deviner une phrase.
+
+:::warning
+La phrase donne un accès complet à tous les comptes. Ne la photographiez pas, ne la stockez pas dans un cloud et ne la saisissez jamais sur un site. Aucun service d'assistance n'a besoin de la connaître : quiconque la demande cherche à voler vos fonds.
+:::
+
+[Sources]
+
+- [MetaMask — What is a Secret Recovery Phrase?](https://support.metamask.io/start/learn/what-is-a-secret-recovery-phrase-and-how-to-keep-your-crypto-wallet-secure/)
+
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-054-confirmer-une-transaction" title="Confirmer une transaction" layout="center" -->
-<img src="/assets/D9111E75-2D40-4E0D-9402-EA390F77F6D7_1_105_c.jpeg" alt="Confirmer une transaction" style="max-width:100%;max-height:68vh;object-fit:contain;" />
+<!-- slide: id="blockchain-048-obtenir-des-eth-de-test" title="Méthodes de récupération" layout="center" -->
+![Gérer les méthodes de récupération : révéler la phrase secrète](/assets/ECCF666F-DC21-4D17-9BB0-D106538E682B_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+Ici, la récupération par compte Apple est activée.
+
+Appuyez sur « Révéler », à côté de « Phrase secrète de récupération 1 ».
+
+---
+<!-- slide: id="blockchain-049-sepolia-faucet" title="Quiz de sécurité" layout="center" -->
+![Quiz de sécurité avant de révéler la phrase](/assets/1D5BE008-92A2-4B3B-9F55-56ADC35BAF90_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+MetaMask pose deux questions avant d'afficher la phrase. Appuyez sur « Commencer ».
+
+---
+<!-- slide: id="blockchain-050-connecter-le-wallet" title="Quiz : question 1" layout="center" -->
+![Quiz de sécurité, question 1 sur 2](/assets/E4866D14-4026-4D49-8041-81F4CF080AE1_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+La bonne réponse est « Ne pourra pas vous aider ». MetaMask ne conserve pas votre phrase et ne peut donc pas vous la redonner.
+
+---
+<!-- slide: id="blockchain-051-autoriser-la-connexion" title="Quiz : question 2" layout="center" -->
+![Quiz de sécurité, question 2 sur 2](/assets/12E110AA-64EB-40CC-8BA2-80408F8FC5D4_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+La bonne réponse est « Ne la lui fournissez pas ». Une personne qui demande votre phrase cherche à vous arnaquer.
+
+---
+<!-- slide: id="blockchain-052-wallet-connecte" title="Révéler la phrase" layout="center" -->
+![Révéler la phrase secrète de récupération](/assets/BB237F9E-411B-479D-9417-980EF4E47690_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+Saisissez votre mot de passe : la phrase s'affiche.
+
+L'écran rappelle que MetaMask est un portefeuille non dépositaire. C'est vous qui détenez les clés, et donc la responsabilité de les conserver.
+
+:::comment
+Demander de recopier la phrase sur papier. Sur un wallet de test, l'enjeu est faible ; il deviendra réel dès que le wallet contiendra de vrais fonds.
+:::
+
+---
+<!-- slide: id="blockchain-053-envoyer-une-transaction" title="Choisir un réseau" layout="center" -->
+![Accueil du wallet : sélecteur de réseaux](/assets/C4426936-5B2C-445F-A87C-DD87A9D1868A_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+Revenez à l'accueil et ouvrez le menu « Tous les réseaux ».
+
+Nous n'allons pas utiliser le réseau principal d'Ethereum, mais un réseau de test.
+
+---
+<!-- slide: id="blockchain-testnet" title="Testnet" layout="center" -->
+## Testnet
+Sepolia {.kicker}
+
+--- notes
+
+Le réseau principal d'Ethereum, le *mainnet*, utilise de vrais ethers, qui ont un prix. Chaque transaction y coûte donc de l'argent.
+
+Un **testnet** est un réseau de test. Il fonctionne avec le même logiciel, mais ses ethers n'ont aucune valeur. Les développeurs y testent leurs smart contracts avant de les déployer sur le mainnet. Nous allons y faire nos premières transactions sans risque.
+
+**Sepolia** est aujourd'hui le principal testnet recommandé pour tester des applications.
+
+On obtient des ethers de test gratuitement auprès d'un **faucet**, littéralement un « robinet » : un service qui en distribue à qui le demande. Pour ce cours, c'est la dApp qui vous en enverra.
+
+:::warning
+Une même adresse existe sur tous les réseaux compatibles avec Ethereum, mais chaque réseau tient ses propres soldes. Des ETH de Sepolia ne sont pas des ETH du mainnet et n'ont aucune valeur.
+:::
+
+[Sources]
+
+- [Ethereum — Networks](https://ethereum.org/en/developers/docs/networks/)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-054-confirmer-une-transaction" title="Réseau Sepolia" layout="center" -->
+![Liste des réseaux personnalisés : Sepolia](/assets/D9111E75-2D40-4E0D-9402-EA390F77F6D7_1_105_c.jpeg){data-slide-image="fill"}
+
+--- notes
+
+Dans l'onglet « Personnalisé », sélectionnez Sepolia. Le wallet affiche désormais votre solde sur ce réseau.
+
+---
+<!-- slide: id="blockchain-gas" title="Gas" layout="center" -->
+## Gas
+frais de transaction {.kicker}
+
+--- notes
+
+Pour utiliser la dApp, vous allez envoyer des transactions. Chacune a un coût, payé en ether : les frais de **gas**.
+
+Rappel. L'ether (ETH) est la monnaie native d'Ethereum. Il sert à payer ces frais et à rémunérer les validateurs.
+
+Pourquoi payer ? Parce que chaque transaction fait exécuter des opérations à tous les nœuds du réseau. Le gas mesure cette quantité de calcul : chaque opération coûte un nombre fixe d'unités de gas. Un simple transfert d'ether coûte 21 000 gas ; l'appel d'un smart contract complexe coûte bien davantage.
+
+Ce coût a deux fonctions.
+
+**Éviter le spam.** Si les transactions étaient gratuites, n'importe qui pourrait saturer le réseau. Le gas empêche aussi un programme de tourner sans fin : quand le gas prévu est épuisé, l'exécution s'arrête.
+
+**Rémunérer les validateurs.** Le prix payé les incite à inclure votre transaction dans un bloc.
+
+Les frais valent la quantité de gas consommée multipliée par le prix du gas. Ce prix comprend deux parts : des frais de base, fixés par le protocole selon l'encombrement du réseau, et un pourboire pour le validateur. Les frais de base sont détruits ; seul le pourboire revient au validateur.
+
+:::example
+Quand le réseau est encombré, les frais de base augmentent. Le même transfert d'ether coûte alors plus cher, comme une course Uber aux heures de pointe.
+:::
+
+Sur Sepolia, les frais sont payés en ETH de test : ils ne vous coûtent rien.
+
+:::comment
+Montrer dans MetaMask l'estimation des frais au moment de confirmer une transaction.
+:::
+
+[Sources]
+
+- [Ethereum — Gas and fees](https://ethereum.org/en/developers/docs/gas/)
+
+[/Sources]
 
 ---
 <!-- slide: id="blockchain-055-application-decentralisee-du-cours" title="Application décentralisée du cours" layout="center" -->
 https://infocom-dapp.vercel.app/ {.kicker}
+
+--- notes
+
+Ouvrez la dApp du cours depuis l'onglet « Navigateur » de MetaMask, pour que la page puisse détecter votre wallet.
+
+Connectez votre wallet. La dApp demande seulement l'autorisation de lire votre adresse et de vous proposer des transactions : cette connexion ne lui donne pas accès à vos fonds.
+
+La dApp vous envoie ensuite des ETH de test.
+
+Chaque action qui modifie la blockchain passe par une transaction que MetaMask vous demande de confirmer. Avant de valider, vérifiez le réseau (Sepolia), le montant et les frais de gas.
+
+Une fois signée, la transaction est diffusée au réseau, puis incluse dans un bloc par un validateur. Elle devient alors visible par tous, par exemple sur l'explorateur sepolia.etherscan.io.
+
+:::warning
+Lisez toujours ce que vous signez. Certaines signatures autorisent un smart contract à dépenser vos jetons. C'est le procédé le plus courant des arnaques en crypto-monnaies.
+:::
+
+:::comment
+Vérifier que chacun a reçu ses ETH de test et voit sa transaction confirmée.
+:::

@@ -363,6 +363,12 @@ Ex. Les traders qui parient sur l’augmentation du prix de l’ETH se moquent d
 
 En revanche, le système est conçu de telle sorte que la poursuite de leurs intérêts personnels concoure malgré eux à la stabilisation de l’USDS.
 
+:::comment
+À développer : introduire Foucault ici. Dans *Naissance de la biopolitique* (cours au Collège de France, 1978-1979), il analyse le néolibéralisme américain comme une manière de gouverner qui ne commande plus aux individus, mais agit sur leur environnement. L’*homo œconomicus*, qui répond aux incitations, devient alors l’individu gouvernable par excellence.
+
+C’est le concept de la séquence : le mechanism design, et déjà la sécurité de Bitcoin, gouvernent en agençant des coûts et des gains plutôt qu’en imposant des règles de conduite. Faire le lien avec la « gouvernance par les nombres » évoquée dans le chapitre sur la monnaie.
+:::
+
 Revenons à Hayek.
 
 Le mécanisme de formation des prix y opère en effet comme un dispositif de coordination ou d’agrégation des connaissances que chaque acteur peut s’approprier pour s’orienter individuellement dans un ordre global autrement trop complexe pour être saisi.

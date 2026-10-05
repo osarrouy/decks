@@ -3,190 +3,1276 @@ title: Blockchain et crypto-monnaies — Monnaie
 theme: gallery
 ---
 
-<!-- slide: id="blockchain-028-money-money-money" title="money, money, money" layout="center" -->
-## money, money, money
+# Crypto-_currency_
+Money, money, money {.kicker}
 
 --- notes
 
-Reste néanmoins une question : d’où le bitcoin tire-t-il sa valeur ? Qu’est-ce qui en fait une monnaie ou du moins un actif financier ?
+Nous avons vu comment Bitcoin parvient à tenir un registre décentralisé : des nœuds qui ne se font pas confiance s’accordent sur un même historique des transactions grâce au mécanisme de consensus distribué.
 
+Reste une question : d’où le bitcoin tire-t-il sa valeur ? Qu’est-ce qui en fait une monnaie, ou du moins un actif financier ?
 
+La question, à vrai dire, se pose pour toutes les monnaies. En particulier pour les monnaies fiduciaires : les billets et les pièces que nous avons distingués de la monnaie scripturale au premier chapitre.
 
-↦ À vrai dire on est en droit de se poser la question pour toutes les autres monnaies et notamment pour les monnaies dites « fiduciaires » - les billets de banque.
+Rappelons que le terme « fiduciaire » vient du latin *fiducia*, la confiance, lui-même dérivé de *fides*, la foi. Une monnaie fiduciaire vaut parce qu’on lui fait confiance, pas parce que son support aurait une valeur propre : la fabrication d’un billet de 50 € coûte quelques centimes.
 
-↦ Expliciter le terme de monnaie fiduciaire : du latin *fidus*, la confiance.
+Pour comprendre ce que vaut le bitcoin, il faut donc d’abord comprendre ce que vaut une monnaie. Nous partirons de ses fonctions, puis de l'histoire de la monnaie et de ses évolutions, avant de revenir au bitcoin.
 
-↦ Il peut être utile, pour situer la reste du cours, de revenir brièvement sur les fonctions et l’histoire de la monnaie.
-
-↦ On identifie usuellement trois fonctions fondamentales de la monnaie.
+Les manuels d’économie attribuent usuellement trois fonctions à la monnaie : unité de compte, instrument d’échange et réserve de valeur. 
 
 ---
-<!-- slide: id="blockchain-029-unite-de-compte" title="Unité de compte" layout="center" -->
 ## Unité de compte
+Compter {.kicker}
+
+--- notes
+
+La monnaie sert d’abord à compter. Elle fournit une mesure commune qui permet d’exprimer, dans une même unité, la valeur des biens, des services et des dettes.
+
+:::example
+Prenons une économie de 100 biens. Sans unité commune, il faudrait connaître le rapport entre chaque bien et chacun des autres : combien de sacs de blé vaut une paire de chaussures, combien de paires de chaussures vaut une table, etc. Cela fait 4 950 rapports.
+
+Avec une unité de compte, 100 prix suffisent. Chaque bien n’est plus comparé aux autres, mais à la même unité : la monnaie.
+:::
+
+Attention : ce calcul ne suppose pas un monde de troc. Le problème qu’il décrit n’est pas celui de l’échange — trouver quelqu’un qui possède des chaussures et veut justement mon blé. C’est celui de la comptabilité : comment additionner, dans un même registre, de l’orge, de la laine et des journées de travail ? Une unité de compte résout ce problème sans qu’aucune pièce ne circule. Nous verrons que c’est dans les temples mésopotamiens que naît la première unité de compte.
+
+Cette simplification est décisive : aucune économie complexe ne peut fonctionner sans unité de compte. Mais elle repose sur une opération étrange, que l’habitude nous empêche de voir.
+
+Il n’y a a priori aucun rapport entre une pomme, un litre d’eau, un massage et un téléphone. Ils ne se ressemblent ni par leur matière, ni par leur usage, ni par le besoin qu’ils satisfont. Pourtant, ils ont tous un prix. Exprimés dans la même unité, ils deviennent comparables : un téléphone « vaut » tant de pommes ou tant d’heures de massage.
+
+Marx appelle **équivalent général** cette marchandise particulière, la monnaie, dans laquelle toutes les autres expriment leur valeur.
+
+Cette mise en équivalence ne s’arrête pas aux marchandises. Elle peut atteindre la vie humaine elle-même.
+
+:::example
+Après les attentats du 11 septembre 2001, le Congrès américain crée un fonds d’indemnisation des familles des victimes, notamment pour éviter des procès contre les compagnies aériennes. Son administrateur, l’avocat Kenneth Feinberg, doit fixer la somme versée pour chaque mort.
+
+Il applique la méthode des tribunaux américains : estimer ce que la victime aurait gagné jusqu’à la fin de sa vie. Les indemnités vont alors d’environ 250 000 dollars à plus de 7 millions. La vie d’un trader ne « vaut » pas celle d’un serveur.
+
+Feinberg a lui-même tenté de resserrer l’écart, puis a estimé qu’à l’avenir, il vaudrait mieux verser la même somme à toutes les familles. Il en a tiré un livre au titre explicite, *What Is Life Worth?*
+:::
+
+L’exemple montre ce que l’équivalence efface. Le chiffre semble mesurer la valeur d’une vie. Il reproduit en fait l’inégalité des salaires : une hiérarchie sociale se présente comme un simple calcul.
+
+Si même une vie peut recevoir un prix, que reste-t-il qui échappe à l’équivalence ? L’amour, la sexualité, le beau ? Nous y reviendrons avec Graeber.
+
+Comment des choses aussi différentes peuvent-elles devenir commensurables ? Pour Marx, ce n’est pas en vertu d’une propriété physique qu’elles partageraient. Ce qu’une pomme et un téléphone ont en commun, c’est d’être produits par du travail humain et échangés sur un marché. Leur valeur exprime la part du travail de la société qu’ils ont coûté.
+
+Mais ce rapport n’apparaît jamais comme tel. Dans une économie marchande, les producteurs ne se rencontrent pas. L’ouvrière qui assemble mon téléphone à l’autre bout du monde et moi ne sommes liés que par l’achat de ce téléphone. Notre relation — qui travaille pour qui, combien de temps, dans quelles conditions — ne se manifeste qu’à travers son prix.
+
+C’est ce que Marx nomme le **fétichisme de la marchandise**. Des rapports sociaux entre des personnes prennent la forme de rapports entre des choses : un téléphone vaut quatre cents pommes. La valeur semble appartenir à l’objet lui-même, comme son poids ou sa couleur.
+
+Marx le résume ainsi :
+
+> « C’est seulement un rapport social déterminé des hommes entre eux qui revêt ici pour eux la forme fantastique d’un rapport des choses entre elles. »
+
+Les mots fétiche ou fétichisme viennent de l’ethnographie. On appelait « fétiches » des objets auxquels on prêtait des pouvoirs propres, alors qu’ils les tenaient des hommes qui les avaient fabriqués et qui les vénéraient. Marx retourne ce mot contre une société qui se croit la plus rationnelle de toutes : nous aussi prêtons aux choses un pouvoir, leur valeur, qui vient en réalité de nos rapports.
+
+:::example
+Deux tables identiques sont vendues 200 € chacune. Sur l’étiquette, rien ne les distingue. Pourtant, presque tout les sépare.
+
+Le travail d’abord. La première sort d’un atelier où les ouvriers sont bien payés ; la seconde, d’une usine où ils travaillent quatorze heures par jour.
+
+La matière ensuite. Le bois de la première vient d’une forêt locale gérée durablement. Celui de la seconde vient d’une forêt tropicale abattue illégalement à l’autre bout du monde, puis transporté sur des milliers de kilomètres.
+
+Le partage de la valeur enfin. Prenons des chiffres fictifs. Pour la première table, 120 € rémunèrent le travail de l’atelier ; les 80 € restants couvrent le bois, le transport et la marge du vendeur. Pour la seconde, les ouvriers reçoivent 10 € ; l’essentiel du prix revient à la marque et au distributeur, sous forme de marge.
+
+Le prix efface toutes ces différences. Il semble dire quelque chose de la table, alors qu’il résulte de rapports de travail, de rapports à la nature et d’un partage de la valeur que l’on ne voit plus.
+:::
+
+:::warning
+Le prix n’efface pas seulement des rapports sociaux ; il laisse aussi de côté des coûts que personne ne paie, comme la destruction d’une forêt. Les économistes parlent d’**externalités**.
+:::
+
+Le fétichisme n’est pas une simple erreur que l’on corrigerait en étant mieux informé. Marx souligne que savoir que la valeur vient du travail ne dissipe pas l’apparence. Je peux connaître les conditions de fabrication de mon téléphone ; à la caisse, je paie pourtant un prix, et ce prix règle seul notre rapport.
+
+Le philosophe Slavoj Žižek pousse cette idée plus loin. Marx décrivait des gens qui ne savent pas ce qu'ils font mais le font quand même. Sloterdijk décrit au contraire une raison cynique : nous savons très bien ce que nous faisons, et nous le faisons quand même. Žižek reprend cette formule pour la retourner.
+
+Pour Žižek, cela ne signifie pas que l’idéologie a disparu. Cela signifie qu’elle n’a jamais été du côté du savoir, mais du côté du faire. L’illusion n’est pas dans nos têtes : elle est dans nos pratiques. Je sais qu’un billet n’est qu’un morceau de papier qui exprime des rapports sociaux. Mais quand je paie, je me comporte comme si la valeur était contenue dans le billet. Mes gestes croient à ma place.
+
+Pourquoi continuons-nous, même lorsque nous sommes lucides ? Parce que la croyance est toujours celle des autres. Je n’ai pas besoin de croire moi-même : il suffit que je suppose que d’autres croient. Žižek parle d’un **sujet supposé croire**. L’idéologie, c’est toujours l’idéologie des autres, et c’est précisément pour cela qu’elle tient, même chez les plus réflexifs.
+
+:::example
+Je sais qu’un billet de 50 € est un morceau de papier qui coûte quelques centimes à fabriquer. Je l’accepte pourtant, parce que le boulanger l’acceptera. Le boulanger, lui, l’accepte parce qu’il pense que son fournisseur l’acceptera. Personne n’a besoin de croire que ce papier vaut 50 € : il suffit que chacun suppose que les autres le croient.
+
+Les parents savent que le Père Noël n’existe pas. Ils entretiennent pourtant le rituel, parce que les enfants sont supposés y croire. Et les enfants, souvent, font semblant d’y croire encore pour ne pas décevoir leurs parents. Personne n’y croit, et le rituel fonctionne.
+
+Je sais qu’un t-shirt de marque est fait du même coton qu’un autre. Je le paie pourtant trois fois plus cher, parce que les autres, eux, verront la marque.
+
+Je sais très bien qu’un aller-retour Paris–New York en avion émet de l’ordre d’une à deux tonnes de CO₂ par passager, soit à peu près ce que chacun devrait émettre en une année entière pour tenir les objectifs climatiques. Je le prends quand même : tout le monde le fait, et mon renoncement isolé ne changerait rien. Mon savoir est intact. C’est ma pratique, alignée sur celle des autres, qui continue de croire que tout peut durer comme avant.
+:::
+
+Le fétichisme n’est donc pas une illusion que la critique suffirait à dissiper. C’est une pratique collective, qui fonctionne d’autant mieux que chacun s’en croit personnellement dégagé.
+
+Mais l’unité de compte n’est pas seulement une simplification et une illusion. C’est aussi une incitation. En ramenant toute réalité à un chiffre, elle invite à comparer, à arbitrer et à calculer.
+
+Elle rend possibles les bilans comptables, les prix de revient, les calculs de marge et la maximisation du profit. Elle ne se contente pas d’offrir une mesure : elle façonne une rationalité économique fondée sur la mise en équivalence et l’optimisation.
+
+Cette rationalité ne reste pas cantonnée au marché. Marx montre ce que l’équivalence cache. Le sociologue Georg Simmel, dans sa *Philosophie de l’argent* (1900), décrit plutôt ce qu’elle fait à notre rapport au monde.
+
+Là où tout peut recevoir un prix, les différences de qualité se ramènent à des différences de quantité, et la question « combien ? » finit par précéder toutes les autres. Pour Simmel, l’esprit moderne devient calculateur : peser, chiffrer et comparer deviennent des réflexes, jusque dans des domaines où personne n’achète ni ne vend.
+
+Le calcul gagne ainsi des domaines qui ne sont pas des marchés. L’État évalue ses politiques par des analyses coûts-bénéfices, les hôpitaux sont financés selon le nombre et le type d’actes qu’ils réalisent, les chercheurs sont évalués par des indicateurs de publication. Le juriste Alain Supiot parle de **gouvernance par les nombres** : on ne gouverne plus seulement par la loi, qui dit ce qui est juste, mais par des objectifs chiffrés que chacun doit atteindre.
+
+:::example
+Votre licence elle-même se compte : elle « vaut » 180 crédits ECTS, et chaque cours en rapporte un nombre fixé à l’avance.
+
+Nous avons vu la justice américaine chiffrer la vie d’une victime. L’État, lui, chiffre des vies statistiques. Pour décider s’il faut aménager un carrefour dangereux, l’administration française compare le coût des travaux à la valeur des vies qu’ils permettraient d’épargner. Le rapport Quinet, en 2013, fixe cette « valeur statistique de la vie » à environ 3 millions d’euros.
+:::
+
+Le chiffre ne se contente pas alors de mesurer : il oriente les conduites. Un hôpital payé à l’acte a intérêt à multiplier les actes les mieux rémunérés ; un chercheur évalué au nombre de ses articles publie davantage, pas forcément mieux.
+
+C’est ce qu’on appelle la loi de Goodhart dans la formulation qu'en a proposée l’anthropologue Marilyn Strathern : lorsqu’une mesure devient un objectif, elle cesse généralement d’être une bonne mesure.
+
+:::comment
+Annoncer la suite : Bitcoin pousse cette logique jusqu’au bout. Nous l’avons vu au chapitre précédent : la sécurité de son registre repose entièrement sur un calcul de coûts et de gains.
+:::
+
+Récapitulons. L’unité de compte accomplit trois opérations, qui s’enchaînent.
+
+**Elle rend commensurable.** Des choses sans rapport — une pomme, un massage, un téléphone, et jusqu’à une vie humaine — deviennent comparables dans une même mesure. C’est la condition de toute comptabilité, et de toute économie complexe.
+
+**Elle occulte.** Dans le chiffre disparaissent les rapports de travail, les rapports à la nature et le partage de la valeur qui ont fait la chose. Cette occultation ne se dissipe pas quand on sait : elle tient dans nos pratiques, soutenue par la croyance que nous supposons aux autres.
+
+**Elle oriente.** Une fois ramené à des chiffres, le monde devient un espace d’équivalence généralisée, offert au calcul et à l’optimisation bien au-delà du marché. Le chiffre ne se contente plus de décrire les conduites : il les façonne.
+
+L’unité de compte est donc à la fois condition de possibilité, instrument d’occultation et instrument de gouvernement.
+
+Retenons surtout ceci pour la suite. Ce qui fait tenir une mesure commune, ce n’est pas ce que chacun sait, mais ce que chacun suppose que les autres font. C’est sur ce ressort que parie Bitcoin.
+
+:::comment
+Garder en tête pour la suite : le bitcoin n’est presque jamais utilisé comme unité de compte. Personne n’affiche ses prix en bitcoins.
+:::
+
+[Sources]
+
+- Karl Marx, *Le Capital*, livre I, chap. 1, section 4, « Le caractère fétiche de la marchandise et son secret », 1867.
+- Kenneth R. Feinberg, *What Is Life Worth? The Unprecedented Effort to Compensate the Victims of 9/11*, PublicAffairs, 2005.
+- Slavoj Žižek, *The Sublime Object of Ideology*, Verso, 1989.
+- Peter Sloterdijk, *Critique de la raison cynique*, Christian Bourgois, 1987 (*Kritik der zynischen Vernunft*, 1983).
+- Octave Mannoni, « Je sais bien, mais quand même… », dans *Clefs pour l’Imaginaire ou l’Autre Scène*, Seuil, 1969.
+- Robert Pfaller, *Die Illusionen der anderen. Über das Lustprinzip in der Kultur*, Suhrkamp, 2002.
+- Georg Simmel, *Philosophie de l’argent*, trad. Sabine Cornille et Philippe Ivernel, PUF, 1987 (*Philosophie des Geldes*, 1900).
+- Alain Supiot, *La Gouvernance par les nombres. Cours au Collège de France (2012-2014)*, Fayard, 2015.
+- Commissariat général à la stratégie et à la prospective, *L’Évaluation socioéconomique des investissements publics*, rapport de la mission présidée par Émile Quinet, 2013.
+- Marilyn Strathern, « “Improving ratings”: audit in the British University system », *European Review*, vol. 5, n° 3, 1997.
+
+[/Sources]
+
+---
 ## Instrument d’échange
+Échanger {.kicker}
+
+--- notes
+
+La monnaie sert ensuite d’intermédiaire des échanges.
+
+:::example
+Je dispose de pain et je voudrais des œufs. Sans monnaie, je dois trouver une personne qui possède des œufs et qui désire précisément mon pain. Je donne et je reçois en un seul geste, avec la même personne.
+
+Avec la monnaie, je vends d’abord mon pain à qui le veut. Plus tard, j’achète des œufs à quelqu’un d’autre avec l’argent obtenu.
+
+Le vendeur d’œufs fera ce qu’il veut de la monnaie reçue : acheter du bois ou une vache, ou ne rien acheter et l’épargner.
+:::
+
+La monnaie sépare ainsi l’échange en deux opérations indépendantes : une vente, puis un achat. Elles peuvent se faire avec deux partenaires différents, à deux moments différents. Personne n’a plus besoin de vouloir exactement ce que l’autre propose.
+
+Les économistes ont fait de cette fonction l’origine de la monnaie. Avant elle, raconte leur récit, les échanges se faisaient par **troc**.
+
+Ce récit a un auteur canonique : Adam Smith, dans *La Richesse des nations* (1776). Pour Smith, la division du travail découle d’un penchant naturel à tous les hommes, « the propensity to truck, barter, and exchange one thing for another » : le penchant à trafiquer, à troquer et à échanger une chose contre une autre.
+
+Smith imagine ensuite un village de chasseurs et d’artisans. Le boucher a plus de viande qu’il ne peut en consommer ; le brasseur et le boulanger en voudraient bien une part. Mais ils n’ont à lui offrir que leur bière et leur pain, dont il n’a pas besoin. L’échange échoue.
+
+Pour éviter cette impasse, chacun aurait pris l’habitude de garder par-devers soi une marchandise que les autres accepteront volontiers : du bétail, du sel, des coquillages, puis des métaux. C’est la monnaie-marchandise.
+
+Au XIXe siècle, William Stanley Jevons nomme ce problème la **double coïncidence des besoins** : chacun doit vouloir exactement ce que l’autre propose. Depuis, le récit structure les manuels : d’abord le troc, puis la monnaie, enfin le crédit.
+
+Ce récit a une fonction précise. Il présente l’échange marchand comme un trait de la nature humaine, et la monnaie comme une solution technique, sans politique ni histoire. Il naturalise ainsi ce qui est une contingence historique : l’installation de la monnaie comme équivalent général, comme mesure commune de ce qui vaut.
+
+Nous allons voir que ce récit est un mythe : aucune société connue n’a jamais fonctionné sur le troc. Le problème de la coïncidence des besoins est moins un problème pratique qu’un argument.
+
+[Sources]
+
+- Adam Smith, *Recherches sur la nature et les causes de la richesse des nations*, livre I, chap. 2 et 4, 1776.
+- William Stanley Jevons, *Money and the Mechanism of Exchange*, 1875.
+
+[/Sources]
+
+---
 ## Réserve de valeur
+Conserver {.kicker}
 
 --- notes
 
-La monnaie sert d’abord à compter. Elle fournit l’étalon commun qui permet de mesurer, comparer et exprimer la valeur des biens, des services et des dettes.
+La monnaie constitue enfin un moyen de suspension du temps et d'accumulation.
 
-Sans elle, chaque échange exigerait une évaluation directe : combien de poulets pour une vache ? combien de sacs de blé pour une paire de chaussures ? La monnaie met fin à ce désordre en imposant un langage unique de la valeur.
+L’argent que je reçois aujourd’hui n’a pas à être dépensé tout de suite. Je peux le mettre de côté et m’en servir dans un mois ou dans dix ans. La monnaie transporte ainsi un pouvoir d’achat du présent vers l’avenir. Or ce qui peut être conservé peut aussi être accumulé.
 
-Cette simplification est décisive. Sans unité de compte, aucune économie complexe ne peut fonctionner. Mais elle n’est pas neutre. Elle opère un effacement : derrière le chiffre monétaire disparaissent les conditions de production, les rapports sociaux et les inégalités qui déterminent réellement la valeur.
+Cette capacité paraît évidente. Pourtant, la plupart des biens en sont dépourvus : la nourriture pourrit, les vêtements s’usent, un téléphone devient obsolète en quelques années. Conserver de la richesse dans le temps n’a rien de naturel.
 
-C’est ce que Marx nomme le fétichisme de la marchandise. La monnaie fait croire que la valeur est contenue dans les choses elles-mêmes, comme une propriété naturelle, alors qu’elle n’est que le produit de rapports sociaux organisés par le marché et l’industrie.
+:::example
+Un chasseur abat un grand animal. Il obtient bien plus de viande qu’il ne peut en manger avant qu’elle ne pourrisse. La garder pour lui n’a aucun sens : dans une semaine, elle sera perdue. Il a donc intérêt à la partager.
 
-Quand je dis qu’une table « vaut 200 euros », je ne vois plus le travail des ouvriers, les flux logistiques, les rapports de force entre capital et travail. Tout se réduit à un chiffre, apparemment objectif, qui semble sortir de l’objet lui-même.
+En la partageant, il crée aussi des obligations. La prochaine fois, ce sont les autres qui partageront leur gibier avec lui.
+:::
 
-Cette illusion est d’autant plus puissante qu’elle paraît aller de soi. La monnaie transforme des rapports de pouvoir en rapports de choses. Elle naturalise le prix. Elle fait oublier que la valeur n’a rien à voir avec l’utilité. L’air et l’eau sont plus essentiels que des voitures de luxe, mais l’air est gratuit – pour l’instant –, tandis qu’une Lamborghini coûte plusieurs décennies de salaire moyen.
+Cet exemple montre qu’ici, comme souvent, l’organisation politique d’une société dépend moins des valeurs morales que chacun porte dans sa tête que de conditions très concrètes : ce que l’on peut produire, conserver, transporter, compter.
 
-Mais l’unité de compte n’est pas seulement une simplification et une illusion : elle est aussi une incitation. En réduisant toute réalité à un chiffre, elle invite à comparer, arbitrer, calculer. Elle rend possibles les bilans comptables, les prix de revient, les calculs de marge, la maximisation du profit. Elle ne se contente pas d’offrir une mesure : elle façonne un type de rationalité économique, fondée sur la mise en équivalence et l’optimisation.
+Tant que la richesse prend la forme de denrées périssables, personne ne peut l’accumuler. Cette contrainte limite l’épargne, mais elle produit aussi de l’égalité. Et cette égalité ne doit rien à la générosité : le chasseur ne partage pas par bonté, mais parce que la viande ne se garde pas.
 
-// C’est précisément cette rationalité qu’analyse Foucault : la monnaie comme unité de compte ouvre la voie à une forme de gouvernementalité « par les nombres ». Elle rend possible la comptabilité d’entreprise, les statistiques d’État, la gestion budgétaire des ménages. Elle équipe les institutions pour gouverner les populations en chiffrant leurs besoins, leurs ressources, leurs comportements. En donnant à l’économie un langage numérique, elle transforme aussi la politique : gouverner, c’est alors gérer des équilibres comptables, arbitrer des budgets, administrer des flux mesurés dans une unité commune.
+En matière de politique, les nécessités du monde sont souvent plus fiables que la vertu des Hommes. On peut toujours espérer que les riches partagent par vertu ; il est plus sûr que les choses les y obligent.
 
-L’unité de compte accomplit ainsi une double opération : elle rend le monde des échanges intelligible en le ramenant à une mesure commune, mais elle efface en même temps la réalité sociale de cette mesure. Elle est à la fois condition de possibilité et instrument d’occultation.
+Or c’est précisément cette nécessité que la monnaie supprime. Une richesse qui ne se périme pas peut s’accumuler sans limite. Le partage ne dépend plus alors de la matière, mais de la seule vertu des Hommes — autant dire de pas grand-chose.
 
+:::warning
+Il existe des exemples historiques de peuples sans monnaie mais avec des formes d'accumulation et de hiérarchie sociale.
 
+Les peuples de la côte Nord-Ouest de l’Amérique, comme les Kwakwaka’wakw ou les Tlingit, vivaient sans agriculture ni monnaie frappée. Ils tiraient leur subsistance de la chasse, de la pêche et de la cueillette.
 
-**Instrument d’échange** (ou intermédiaire des échanges)
+Mais ils fumaient et stockaient d’énormes quantités de saumon. Ils accumulaient aussi des biens de prestige, comme des couvertures ou des plaques de cuivre ornées. Cette richesse conservée permettait à certaines familles de nourrir des dépendants, d’organiser de grandes fêtes et d’affirmer leur rang.
 
-Il existe, chez les économistes, une fable. Cette fable raconte l’histoire d’une économie pré-monétaire dont les échanges étaient réglés par le troc. Le troc, nous raconte cette fable, y présentait un inconvénient majeur : réclamer une certaine coïncidence des besoins.
+Ces sociétés connaissaient ainsi des chefs, des nobles, des gens du commun et des esclaves. L’accumulation, et avec elle la hiérarchie, n’a donc pas besoin de la monnaie : il suffit d’une richesse qui se conserve.
+:::
 
-Imaginons que je dispose de pain et que je cherche à en échanger tout ou partie contre des oeufs. Il me faut alors trouver, dans le petit entre-soi de mon village, une personne possédant des oeufs qui soit simultanément disposée à les échanger contre du pain. Or cette coïncidence est rare - presqu’impossible.
-
-C’est en réponse ce délicat problème, nous racontent les économistes, que serait née la monnaie. Qu’importe, dès lors, que celui qui dispose des oeufs que je convoite, désire en retour le pain que je possède. L’échange se soldera en monnaie, et de cette monnaie, il fera bien ce qu’il souhaite : acheter du pain ou une vache ou du bois ; ou ne rien acheter et épargner cet argent pour, peut-être un jour, n’avoir plus à se soucier de ses poules.
-
-Cette fable est évidemment un mythe. Nous verrons plus loin que le troc n’a jamais constitué un instrument économique déterminant. Nous verrons aussi que, si la diffusion à grande-échelle de la monnaie répond bien à un problème pratique, ce n’est pas à celui de la coïncidence des besoins, mais à la défiance des populations soumises aux premiers grands empires et à la volonté de ces empires de s’approprier, malgré tout, leurs ressources.
-
-Le problème de la coïncidence des besoin constitue donc moins un problème pratique qu’un argument politique. Il permet de naturaliser ou d’universaliser ce qui constitue avant tout une contingence historique : le déploiement de la monnaie comme équivalent général, comme mesure commune, comme secret universel de ce qui vaut.
-
-L’énigme de l’économie, comme mode d’organisation sociale, ne tient pas toute entière, en effet, dans l’existence d’un instrument d’échange universel. L’existence d’un équivalent général ne constitue que l’origine analytique d’un monde dont l’ensemble des rapports sociaux est soumis à l’ordre économique.
-
-Comment séparer, par exemple, ce qui s’échange et ce qui ne s’échange pas, ce qui vaut et ce qui ne vaut pas, ce qui compte et ce qui ne compte pas. Ou encore, comment dissocier ce qui relève de l’économie et ce qui doit s’y soustraire : l’amour, la sexualité, le beau, etc. Comment, enfin, hiérarchiser les Hommes et les choses dès lors qu’existe un équivalent général dont l’hégémonie réclame, pour s’en préserver, que certains domaines du réel y échappent ?
-
-Il serait hors de notre propos que développer ici ces questions. Gardez en tête, toutefois, que les premiers Hommes qui, il y a presque 5000 ans, ont eu l’étrange idée, en Chine, d’utiliser des coquillages comme instrument d’échange d’économique, n’avaient pas la moindre idée du cauchemar dans lequel ils précipitaient l’humanité.
-
-**Réserve de valeur**
-La monnaie constitue, en quelque sorte, un procédé de suspension du temps - et par là, un procédé d’accumulation de la richesse.
-
-Le pouvoir économique de la monnaie, en effet, ne s’évanouit pas dans le présent. L’argent n’a pas à être dépensé immédiatement. Il peut être stocké - et donc accumulé - pour un usage futur.
-
-Il importe, pour y parvenir, que la valeur d’une monnaie soit relativement stable dans le temps - et que l’inflation en soit donc controlée. Il importe également que la confiance dans cette monnaie soit elle aussi stable dans le temps - ce qui réclame, au passage, une forme de stabilité politique minimale.
-
-Ex. L’effondrement de l’Empire romain d’Occident a conduit, pendant plusieurs siècles, à une fragmentation des espaces politiques et monétaires européens, affectant durablement leur économie. En l’absence d’une autorité centralisée, il n’existait plus en Occident de monnaie universellement reconnue et adossée à une structure politique stable, contrairement à l’époque impériale où le *denier* puis le *solidus* avaient servi de référence commune. Ce hiatus historique a favorisé le développement d’instruments de crédit et de créances de dette, souvent garantis par le réseau transnational de l’Église et des grandes foires marchandes, prélude lointain à l’invention du papier-monnaie moderne.
+:::warning
+Le stockage rend l’accumulation possible ; il ne la rend pas inévitable. Graeber et Wengrow rappellent que des sociétés capables de stocker ont aussi inventé des mécanismes pour empêcher l’accumulation et redistribuer les richesses.
+:::
 
 
-Cette capacité de la monnaie à fonctionner comme une réserve valeur peut paraitre évidente, mais elle ne se vérifie en fait que pour peu de biens.
+Encore faut-il que la monnaie elle-même ne se périme pas. Car une monnaie peut, elle aussi, « pourrir ». Elle perd sa fonction de réserve de valeur dans deux situations : lorsque l’inflation s’emballe, et lorsque l’autorité qui la garantit s’effondre.
 
-Lorsque la richesse étaient « stockée » sous la forme de biens de consommation - et notamment de denrées alimentaires, etc. - celle-ci ne pouvait être conservée trop longtemps sans risque de se détériorer. Une telle situation présentait évidemment des écueils : l’incapacité de la richesse à être « stockée » interdisait à quiconque de se reposer sur son épargne. Mais elle constituait aussi une garantie d’égalité : à quoi bon conserver par devant soi 1000 tonnes de viandes qui seront perdues dans une semaine - autant les partager. En matière de politique, les nécessités du monde sont souvent plus fiables que la vertu des Hommes.
+:::example
+Au IIIe siècle, les empereurs romains, pressés de payer leurs armées, réduisent la part d’argent contenue dans leurs pièces jusqu’à quelques pour cent. Les prix s’envolent, et ceux qui avaient épargné en deniers sont ruinés. Puis, avec l’effondrement de l’Empire d’Occident, aucune monnaie n’est plus reconnue partout. Nous retrouverons ce moment avec Graeber.
 
-Il n’est pas un hasard, de ce point de vue, que la naissance des premiers États s’articule étroitement à l’extension de l’agriculture céréalière. Les céréales, contrairement à la viande ou aux fruits, se conservent sur une longue durée, se stockent facilement et se divisent aisément en unités mesurables. Le grain ne pourrit pas en quelques jours, il ne s’enfuit pas comme le bétail, il ne se mange pas d’un coup comme un fruit mûr. Il peut être conservé dans des silos, transporté en sacs, comptabilisé en rations.
+En Argentine, les prix augmentent de plus de 200 % en 2023. Un ménage qui avait épargné en pesos voit une grande partie de son épargne fondre en un an. Beaucoup d’Argentins épargnent donc en dollars, et certains en stablecoins ou en bitcoins.
+:::
 
-Cette stabilité matérielle a rendu possible une stabilité politique. Car les céréales sont non seulement stockables, mais aussi taxables. On peut prélever une part du grain produit, l’entasser dans les greniers de l’État, l’utiliser pour nourrir une armée ou financer des travaux collectifs. Mais surtout, les céréales génèrent un surplus. Une fois les besoins immédiats de subsistance couverts, il reste une part excédentaire de production qui peut être captée par une élite.
+Une monnaie ne conserve donc la valeur que tant que durent la stabilité des prix et la confiance dans l’institution qui l’émet.
 
-C’est ce surplus qui change tout. Dans une économie de chasse ou de cueillette, l’absence de stockage limitait l’accumulation : chacun devait consommer ou partager rapidement. Mais le grain permet qu’une partie de la population cesse de produire directement pour sa subsistance. Certains peuvent « ne rien faire » au sens productif immédiat : administrer, surveiller, lever l’impôt, tenir des registres, organiser le travail des autres. Le surplus agricole rend possible l’apparition d’une classe administrative et militaire qui vit du prélèvement sur le travail paysan.
+Il faut enfin distinguer la réserve de valeur de la **liquidité**. La liquidité désigne la capacité d’un bien à être transformé rapidement en moyen de paiement, sans perte significative de valeur.
 
-L’agriculture céréalière n’a donc pas seulement nourri les populations, elle a donné à l’État la matière même de son pouvoir : une ressource durable, accumulable et mesurable, qui peut être saisie et centralisée. Le blé ou l’orge, transformés en unités comptables, deviennent le socle sur lequel reposent à la fois l’impôt, la dette et, bientôt, la monnaie. Là où la chasse, la cueillette ou l’élevage dispersaient la richesse, le grain la concentre, la rend visible, mesurable et donc gouvernable.
+:::example
+Un tableau de maître conserve sa valeur sur de longues périodes : c’est une bonne réserve de valeur. Mais pour le transformer en monnaie, il faut trouver un acheteur prêt à payer son prix, ce qui peut prendre des mois. Le tableau est donc peu liquide. La monnaie, elle, est par définition l’actif le plus liquide.
+:::
 
-De ce point de vue, la monnaie n’est qu’une abstraction supplémentaire : elle détache la valeur de la matière et la fait circuler au-delà des greniers. Mais le principe reste le même : organiser la richesse en surplus, la rendre mesurable, l’extraire et la redistribuer. C’est cette logique qui fonde la possibilité d’une hiérarchie durable, d’un appareil administratif, et d’un pouvoir étatique appuyé sur la dette et l’impôt.
+:::comment
+Garder cette distinction en tête : elle servira à évaluer le bitcoin, très liquide mais très volatil.
+:::
 
-⸻
+Ces trois fonctions décrivent ce que fait la monnaie. Elles ne disent pas d’où elle vient. Pour le comprendre, revenons sur son histoire.
 
+[Sources]
 
-Un met un point sur la liquidité ?
+- Alain Testart, *Les Chasseurs-cueilleurs ou l’origine des inégalités*, Société d’ethnographie, 1982.
 
-liquidité désigne la capacité d’un bien à être transformé rapidement en moyen de paiement / instrument d’échange (généralement en monnaie) sans perte significative de valeur.
-
-Exemple d’un tableau qui vaut de la valeur : oui mais il faut trouver quelqu’un prêt à l’acheter. Bonne réserve de valeur, mais illiquide.
-
-Revenons maintenant, pour le comprends, sur l’histoire de la monnaie.
-
-
-L’histoire de la monnaie est souvent présentée par les économistes comme un fable. Un récit mythique assez éloigné de la réalité et ayant pour fonction principale de rationaliser *a posteriori* la nécessité historique de la monnaie.
-
-↦ La plupart des échanges économiques ont historiquement reposés sur la pratique d’une sorte de crédit informel.
-
-↦ Il ne s'agissait pas exactement de troc - comme on l'imagine souvent - car ces échanges ne reposait pas exactement sur une certaine coïncidence des besoins.
-
-↦ Ex. Aujourd'hui Alice a besoin d'une poule et Bob la dépanne. Plus tard Bob dépannera Alice de ce dont elle aura besoin : du pain, un poisson, etc.
-
-↦ Les seuls échanges impliquant quelque chose comme une « monnaie » avaient en fait lieu avec des entre des peuples se considérant comme ennemis - et ne se faisant donc pas confiance.
-
-↦ Notez, toute fois, que cette « monnaie » pouvait prendre, selon les zones culturelles, des formes tout à fait diverses : métaux rares, coquillages, sel, etc.
-
-↦ Seul importait que cette « monnaie » se conserve dans le temps et que sa quantité soit aisément mesurable.
-
-↦ La monnaie se généralisa à diverses époques et en différents lieux sous un principe toutefois commun : la naissance des empires.
-
-↦ La généralisation de la monnaie est souvent motivée, en effet, par la nécessité de fluidifier la logistique militaire.
-
-↦ Comment nourrir une armée de dizaine de milliers d'hommes en campagne ? Impossible de tout transporter, impossible d'avoir recourt au crédit informel pour acquérir le nécessaire, etc.
-
-↦ Impossible aussi de simplement voler les populations sans risquer une révolte.
-
-↦ Il devient urgent de pouvoir simplement « acheter » les ressources nécessaires aux peuples locaux.
-
-↦ Les peuples conquis sont donc « encouragés » à accepter une monnaie. Et pour les y forcer on les contraint à payer l’impôt avec cette monnaie.
-
-↦ Les premières monnaies impériales sont constituées de métaux précieux supposés garantir leur valeur.
-
-↦ Plus tard se développera le papier monnaie : d’abord en Chine à partir du 11ème siècle, puis en Europe - de manière indépendante - au 17ème et 18ème siècle.
-
-↦ Le papier monnaie s'avère plus pratique et offre aux états la capacité d’émettre de la monnaie sans forcément la consolider sur un stock de métal réel - le plus souvent pour financer des campagnes militaires.
-
-Il généralise les créances de dettes, reposant sur la confiance interpersonnelle, puis sur les églises lorsque l’état était fragmenté.
-
-↦ Aujourd’hui les principales monnaies - le Yen, le dollar, l’euro, etc. - ne sont plus indexées sur rien.
-
-↦ Elles ne tirent leur valeur que de la croyance que chacun porte en la croyance des autres dans cette valeur.
-
-↦ Je crois que les autres croiront que mon billet de 5 euros vaut .... 5 euros.
-
-↦ C'est ce qu'on appelle le **point de Schelling** ou **point focal**.
-
-↦ Ces autres n'ont, certes, pas tous le même poids. Lorsque l'« autre » est un État levant l'impôt dans une monnaie, cela lui confère un certain poids.
-
-↦ Mais on peut aussi bien se passer de ce grand autre.
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-030-it-might-make-sense-just-to-get-some-in-case-it-catche" title="It might make sense just to get some in case it catches on" layout="center" -->
-> It might make sense just to get some in case it catches on. If enough people think the same way, that becomes a self fulfilling prophecy. (Nakamoto, 2009)
+<!-- slide: id="blockchain-030-dette" title="David Graeber" -->
+<Persona name="David Graeber" dates="1961 - 2020" picture="/assets/graeber.jpg" />
 
 --- notes
 
-↦ Premier cas d’usage réel : achat d’une pizza pour 10.000 bitcoins en 2010.
+Revenons au récit du troc, celui de Smith et de Jevons : c’est lui que nous allons maintenant déconstruire. Nous nous appuierons pour cela sur un livre : *Dette. 5000 ans d’histoire*, de David Graeber, paru en anglais en 2011.
 
-↦  Plus tard, les usages du bitcoin - et des autres crypto-monnaies - seront popularisés par des dark markets comme the Silk Road.
+David Graeber (1961-2020) est un anthropologue américain, qui a enseigné à Yale, puis à Londres, notamment à la London School of Economics. Il est aussi militant anarchiste et l’une des figures du mouvement Occupy Wall Street, en 2011.
 
-↦  Faire un point sur le cote traçable de la chose - c’est pas du tout anonyme
+[Sources]
 
-↦ Aujourd’hui, principalement utilisé comme une réserve de valeur. Mais les choses changent : stablecoin, Visa, etc.
+- David Graeber, *Dette. 5000 ans d’histoire*, trad. Françoise et Paul Chemla, Les Liens qui libèrent, 2013 (*Debt: The First 5,000 Years*, Melville House, 2011).
+- [Photographie : Guido van Nispen, Amsterdam, 7 mars 2015, CC BY 2.0, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:David_Graeber_2015-03-07_(16741093492)_(cropped).jpg)
 
-Faire un point sur la stratégie de Donald Trump : 300 milliards de dette de Stablecoin.
-
-Rapport à la chine, principal créancier de l’Amérique.
+[/Sources]
 
 ---
-<!-- slide: id="blockchain-031-conclusion" title="Conclusion" layout="center" -->
-## Conclusion
-temporaire ... {.kicker}
+<!-- slide: id="blockchain-030-occupy" title="Occupy Wall Street" -->
+<FramedImage
+  src="/assets/occupy-wall-street.jpg"
+  alt="Militants d’Occupy Wall Street défilant à New York derrière une banderole « Foreclose on banks, not people », mars 2012."
+/>
 
 --- notes
 
-↦ Revenir sur la nature du geste politique de Satoshi Nakamoto : la politique sans politique.
+Le livre de Graeber ne naît pas dans le vide. Il paraît en juillet 2011, dans les suites de la crise financière de 2008, la même crise à laquelle répond Bitcoin.
 
-↦ Revenir sur le coup de force de Satoshi Nakamoto : remplacer un problème formel - le problème du consensus distribué - en un problème économique.
+Rappelons l’enchaînement vu au premier chapitre. Des banques ont accordé massivement des crédits immobiliers à des ménages peu solvables : les *subprimes*. Quand les prix de l’immobilier chutent, en 2007, ces ménages ne peuvent plus rembourser. Les banques saisissent leurs maisons, et des millions de familles américaines perdent leur logement.
 
-↦ La manière de faire de Satoshi Nakamoto est typiquement libertarienne : elle consiste à contrôler - ou à façonner - des comportement par des inventives - des incitations - économiques.
+Mais les banques elles-mêmes vacillent. En octobre 2008, le gouvernement américain débloque 700 milliards de dollars pour les sauver, avec le programme TARP. Les ménages endettés perdent leur maison ; les banques endettées sont secourues. La dette ne pèse pas de la même manière sur tout le monde.
 
-↦ Vous pouvez bien essayer de corrompre la blockchain du Bitcoin mais cela vous coutera une fortune - à ce point que ce sera en pratique impossible.
+C’est contre cette asymétrie que naît **Occupy Wall Street**. Le 17 septembre 2011, quelques centaines de personnes s’installent à Zuccotti Park, un petit square privé ouvert au public, à deux pas de Wall Street. Elles y campent pendant deux mois et organisent des assemblées générales sans chef ni porte-parole. Le mouvement essaime dans des centaines de villes, avant que la police n’évacue le campement new-yorkais le 15 novembre 2011.
 
-↦ On peut ainsi parler d'ingénierie sociale.
+Occupy s’inscrit dans une vague plus large d’occupations de places, qui traverse l’année 2011. Elle commence place Tahrir, au Caire, pendant les printemps arabes. Le 15 mai 2011, des milliers d’Espagnols occupent la Puerta del Sol, à Madrid : ce sont les *Indignados*, qui empruntent leur nom au petit livre du Français Stéphane Hessel, *Indignez-vous !*. En Grèce, la place Syntagma est occupée quelques semaines plus tard, contre les plans d’austérité. Occupy Wall Street s’en inspire explicitement, et le 15 octobre 2011, des manifestations ont lieu dans des centaines de villes du monde.
 
-↦ Ce type de rationalité est omniprésent dans l'écosystème crypto.
+Ces mouvements laissent des traces politiques durables. En Espagne, le parti Podemos naît en 2014 dans le prolongement des Indignados. En France, où le mouvement des Indignés reste modeste en 2011, la forme de l’occupation de place ressurgit en 2016 avec Nuit debout, place de la République.
 
-↦ Les libertariens ne renoncent pas à toute velléité de gouvernement.
+:::warning
+L’ordre chronologique compte : les occupations européennes précèdent Occupy Wall Street, qui s’en inspire. Mais toutes répondent aux suites de la même crise de 2008, et en particulier aux politiques d’austérité qui font payer aux populations le sauvetage des banques.
+:::
 
-↦ Mais ils déléguent l'exercice du gouvernement à des mécanismes de marché et convertissent l'art de gouverner en un art de concevoir des marchés.
+Le slogan d'_Occupy Wall Street_ résume sa critique : « We are the 99 % ». Il oppose la grande majorité de la population au 1 % le plus riche, qui a capté l’essentiel des gains de la croissance et profité du sauvetage des banques.
 
-↦ Comment organiser les marchés de telle sorte que chacun, en poursuivant son intérêt économique, assure, sans nécessairement le vouloir, le bon fonctionnement des mécanismes de gouvernement.
+:::warning
+Le « 1 % » est une image militante. Des économistes Thomas Piketty et Emmanuel Saez ont toutefois documenté la forte hausse de la part des revenus captée par les 1 % les plus riches aux États-Unis depuis les années 1980.
+:::
+
+:::example
+Aux États-Unis, les 1 % les plus riches recevaient environ 10 % de l’ensemble des revenus à la fin des années 1970. En 2007, à la veille de la crise, ils en reçoivent près de 23,5 %, un niveau inédit depuis 1928, à la veille de la crise de 1929.
+
+La reprise qui suit la crise est encore plus inégale. Entre 2009 et 2012, les revenus des 1 % les plus riches augmentent de 31 %, ceux des 99 % restants de 0,4 %. Les 1 % captent ainsi 95 % des gains de revenus de la reprise. C’est précisément le constat qui nourrit le slogan d’Occupy.
+:::
+
+Graeber est au cœur de ce mouvement. Il participe dès août 2011 aux premières assemblées qui préparent l’occupation, et il est souvent crédité d’avoir contribué à forger le slogan des 99 %. Son livre, paru quelques semaines plus tôt, devient l’une des références du mouvement.
+
+:::example
+Sur la photo, prise en mars 2012, des militants d’Occupy défilent à New York derrière une banderole : « Foreclose on banks, not people », « Saisissez les banques, pas les gens ». Le slogan retourne contre les banques le vocabulaire des saisies immobilières.
+:::
+
+Le lien avec Bitcoin est donc direct. Le 3 janvier 2009, Nakamoto inscrit dans le bloc Genesis le titre du *Times* sur le second sauvetage des banques britanniques. Bitcoin et Occupy répondent à la même crise, et au même scandale : le sauvetage des banques avec de l’argent public.
+
+Mais leurs réponses divergent. Nakamoto propose de sortir du système : une monnaie sans banque ni banque centrale, réglée par un protocole. Occupy et Graeber posent la question politique de la dette : qui doit à qui, et qui décide d’effacer quelles dettes ? Nous reviendrons sur cette opposition en conclusion.
+
+[Sources]
+
+- David Graeber, *The Democracy Project. A History, a Crisis, a Movement*, Spiegel & Grau, 2013.
+- Thomas Piketty et Emmanuel Saez, « Income Inequality in the United States, 1913-1998 », *The Quarterly Journal of Economics*, vol. 118, n° 1, 2003.
+- Emmanuel Saez, « Striking it Richer: The Evolution of Top Incomes in the United States », mise à jour de septembre 2013.
+- [Slate — présentation des chiffres de Saez sur la reprise de 2009-2012, septembre 2013](https://www.slate.com/blogs/moneybox/2013/09/10/one_percent_recovery_95_percent_of_gains_have_gone_to_the_top_one_percent.html)
+- [Photographie : Mike Fleshman, New York, 15 mars 2012, CC BY-SA 2.0, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Occupy_Wall_Street_March_2012_foreclosure_banner.jpg)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-030-dette-livre" title="Dette. 5000 ans d’histoire" -->
+<FramedImage
+  src="/assets/dette-graeber.jpg"
+  alt="Couverture de l’édition française de Dette. 5000 ans d’histoire, de David Graeber, aux éditions Les Liens qui libèrent."
+/>
+
+--- notes
+
+Le livre de Graeber défend une thèse simple à énoncer : la monnaie ne naît pas du troc, mais de la dette. Avant d’être une chose que l’on échange, elle est une manière de mesurer ce que les gens se doivent.
+
+Le titre donne la date de ce point de départ : la monnaie a environ 5000 ans, et elle naît comme une écriture de la dette. Vers 3000 avant notre ère, en Mésopotamie, les administrations des temples sumériens tiennent déjà des comptes de dettes dans une unité monétaire.
+
+Or les premières pièces n’apparaissent que vers 600 avant notre ère. Pendant plus de deux millénaires, la monnaie existe donc sans pièces : elle sert à compter ce que les gens doivent, bien avant de circuler de main en main. C’est l’ordre inverse de celui que raconte la fable du troc.
+
+:::warning
+Le livre est discuté par certains historiens et économistes qui lui reprochent des simplifications et quelques erreurs de détail. Sa critique du mythe du troc reprend en revanche un constat largement partagé par les anthropologues.
+:::
+
+:::comment
+Rappeler que le chapitre 2 (le mythe du troc) et le chapitre 3 (les dettes primordiales) sont conseillés sur la page du cours, avec l’entretien de *La vie manifeste*.
+:::
+
+[Sources]
+
+- David Graeber, *Dette. 5000 ans d’histoire*, trad. Françoise et Paul Chemla, Les Liens qui libèrent, 2013 (*Debt: The First 5,000 Years*, Melville House, 2011).
+- Couverture : Les Liens qui libèrent, 2013, via Open Library.
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-030-humphrey" title="Caroline Humphrey, 1985" -->
+> « No example of a barter economy, pure and simple, has ever been described, let alone the emergence from it of money. »
+
+Caroline Humphrey, 1985 {.kicker}
+
+--- notes
+
+Pour démonter la fable du troc, Graeber ne part pas de rien. Il s’appuie sur un constat que les anthropologues ont établi bien avant lui, et que résume cette citation.
+
+Caroline Humphrey est anthropologue à Cambridge. En 1985, elle fait le bilan de la littérature ethnographique : on n’a jamais décrit une économie fondée sur le troc, et encore moins l’émergence de la monnaie à partir d’une telle économie.
+
+Elle ajoute que toute l’ethnographie disponible suggère qu’une telle économie n’a jamais existé.
+
+Graeber s’appuie sur ce constat. Le village de Smith n’est pas une description historique, c’est une expérience de pensée. Les économistes l’ont ensuite traitée comme si elle décrivait le passé.
+
+Le troc existe pourtant. Mais il n’apparaît guère que dans deux cas.
+
+Le premier cas concerne des gens habitués à la monnaie, qui en sont soudain privés.
+
+:::example
+Pendant la Seconde Guerre mondiale, dans les camps allemands de prisonniers alliés, les cigarettes des colis de la Croix-Rouge deviennent une monnaie : on exprime le prix du chocolat ou du savon en cigarettes.
+
+Dans la Russie des années 1990, faute de roubles, de nombreuses entreprises se paient entre elles en marchandises.
+
+Dans les deux cas, ce sont des gens habitués à la monnaie qui en reproduisent les usages lorsqu’elle vient à manquer.
+:::
+
+Ce troc-là ne précède donc pas la monnaie : il la suppose. Graeber résume ainsi l’ordre réel : le crédit vient d’abord, la monnaie frappée ensuite, et le troc apparaît surtout après coup, comme un effet secondaire de la monnaie.
+
+:::warning
+La critique ne dit pas que le troc n’a jamais existé. Elle dit qu’aucune économie n’a reposé principalement sur lui, et que la monnaie n’en est pas issue.
+:::
+
+Le second cas, c’est l’échange entre étrangers. Mais pour comprendre pourquoi le troc est réservé aux étrangers, il faut d’abord comprendre comment on échangeait normalement, entre voisins.
+
+[Sources]
+
+- Caroline Humphrey, « Barter and Economic Disintegration », *Man*, vol. 20, n° 1, 1985.
+- David Graeber, *Dette*, chap. 2.
+- R. A. Radford, « The Economic Organisation of a P.O.W. Camp », *Economica*, vol. 12, n° 48, 1945.
+
+[/Sources]
+
+---
+## Le crédit d’abord
+Je t’en dois une {.kicker}
+
+--- notes
+
+Que se passe-t-il dans un village où l’on ne pratique pas le troc ? Les échanges reposent sur une forme de **crédit informel**.
+
+:::example
+Graeber prend l’exemple de deux voisins. L’un admire les chaussures de l’autre, qui les lui donne. Personne ne règle l’échange sur-le-champ : celui qui reçoit dit simplement « je t’en dois une ».
+
+Plus tard, le premier aura besoin de pain ou d’un service, et son voisin le dépannera à son tour. La dette circule et s’apure dans le temps, sans qu’aucune coïncidence des besoins soit nécessaire.
+:::
+
+Cette dette n’a pas besoin d’être chiffrée avec précision. Elle entretient surtout une relation entre voisins. Et elle entretient d'ailleurs d'autant plus cette relation qu'elle n'est pas chiffrée.
+
+:::example
+Imaginez que vous prenez un verre avec un ami. Ce soir, vous payez la tournée ; la prochaine fois, ce sera lui. Personne ne note dans un tableur qui a payé quoi : vous supposez que les comptes finiront par s’équilibrer d’eux-mêmes.
+
+Imaginez maintenant que votre ami sorte son téléphone pour calculer au centime près ce que vous lui devez. Le geste serait vexant.
+
+Solder exactement une dette revient en effet à dire qu’on ne se doit plus rien. Et qu'il n'y a donc aucune raison de se revoir. Le flou des comptes, lui, entretient la relation.
+:::
+
+Le problème qui préoccupe Smith n’existe donc pas dans une communauté. Les gens n’y échangent pas des objets entre inconnus : ils entretiennent des relations faites de dons, de services et de dettes.
+
+Nous pouvons maintenant comprendre pourquoi le troc apparaît surtout entre étrangers. Le crédit suppose de se revoir et de se faire confiance.
+
+Avec un étranger, voire un ennemi, que l’on ne reverra peut-être jamais, impossible de dire « je t’en dois une ». L’échange doit donc se régler sur-le-champ, objet contre objet.
+
+:::example
+Lévi-Strauss décrit la rencontre de deux bandes nambikwara, au Brésil. Ces deux groupes sont étrangers l’un à l’autre. La rencontre est donc tendue. On échange des objets sur place, on danse, puis on se sépare. Aucune relation durable ne lie les deux bandes : personne ne fait crédit à l’autre. Faute de confiance, l’échange peut même tourner à la querelle.
+
+Graeber en tire une leçon : le troc n’est pas la forme primitive de l’échange entre voisins. C’est la manière de commercer avec ceux à qui l’on ne fait pas crédit.
+:::
+
+---
+<!-- slide: id="blockchain-030-monnaies-sociales" title="Des monnaies sans marché" -->
+## Des monnaies sans marché
+Payer l’impayable {.kicker}
+
+--- notes
+
+Les sociétés sans troc ne sont pas pour autant des sociétés sans monnaie. La plupart des dettes ne sont ni chiffrées ni précisément comptées. Mais certaines obligations sont trop graves pour rester dans le flou : celles qui naissent d’un mariage ou d’un meurtre, par exemple.
+
+Pour s’en acquitter, ces sociétés utilisent des objets aux formes variées : bétail, coquillages, étoffes de raphia, perles. Graeber les appelle des **monnaies sociales**. Il nomme **économies humaines** les sociétés où elles dominent.
+
+
+:::example
+Dans de nombreuses sociétés, la famille du marié remet du bétail ou des objets précieux à celle de la mariée. Ce paiement ne « paie » pas la femme. Il reconnaît une dette que rien ne peut solder.
+
+Les anciennes lois germaniques fixent de même le *wergeld* : le prix du sang. Celui qui a tué verse une compensation à la famille de la victime pour arrêter la vengeance. Personne ne pense pour autant qu’une vie a été achetée.
+
+Nous connaissons encore ce geste. Invité à dîner, vous apportez une bouteille de vin ou des fleurs. Vous ne payez pas le repas : vous honorez l’invitation. Tendez plutôt un billet de 30 € à votre hôte et vous l’offenserez : vous feriez de lui un restaurateur.
+:::
+
+Cela signifie que ces monnaies ne mesurent pas des choses. Elles reconnaissent l’existence d’une dette qui ne peut pas être payée, celle d’une vie, et organisent la relation qui en découle.
+
+:::important
+Une monnaie sociale ne sert presque jamais à acheter des biens ordinaires. Elle sert à régler des relations entre personnes.
+:::
+
+C'est exactement l'inverse de ce à quoi sert la monnaie aujourd'hui.
+
+Simmel le formule dans *Philosophie de l’argent* (1900) :
+
+:::important
+Avec l’argent, on en a toujours déjà fini avec tout.
+:::
+
+Payer en argent solde l’échange. Une fois le prix versé, l’acheteur et le vendeur ne se doivent plus rien : ils peuvent se quitter sans jamais se revoir. L’argent ne crée donc pas de lien. Il permet au contraire d’en sortir.
+
+:::example
+La sociologue Elizabeth Bernstein a enquêté auprès de clients de la prostitution, aux États-Unis et en Europe. Beaucoup ne cherchent pas seulement du sexe : ils veulent une intimité qui paraisse sincère. Mais ils la veulent limitée dans le temps et sans suite. Bernstein parle d’**authenticité bornée**.
+
+Une rencontre amoureuse engage : il faut séduire, se revoir, répondre aux attentes de l’autre. Le paiement supprime ces obligations. Une fois la prostituée payée, tout le monde est quitte.
+:::
+
+Une monnaie sociale fait l’inverse. Elle ne solde jamais la dette : elle l’entretient.
+
+Revenons alors au fonds d’indemnisation du 11 septembre. Il affronte la même situation que le *wergeld* : compenser des morts pour éviter un conflit. Mais il le fait avec de l’argent, donc avec un paiement qui doit solder les comptes. Une fois l’indemnité versée, les familles renoncent à poursuivre les compagnies aériennes : tout le monde est quitte.
+
+Pour solder ainsi une mort, il faut la chiffrer. Feinberg ne retient pour cela qu’une chose : ce que la victime aurait gagné. Ses proches, ses amitiés, la place qu’elle occupait dans la vie des autres n’entrent pas dans le calcul.
+
+Pour donner un prix à une vie, il faut donc d’abord la réduire à un revenu. Autrement dit, il faut considérer la personne indépendamment de toutes ses relations.
+
+C’est précisément ce que refusent les économies humaines. Une personne y est unique, parce qu’elle est prise dans un réseau de relations — parents, alliés, obligations — que rien ne peut remplacer. Le prix de la fiancée ou le *wergeld* ne paient donc pas une vie : ils reconnaissent au contraire qu’elle ne peut pas être payée.
+
+Or, pour Graeber, le passage des économies humaines aux économies marchandes commence précisément lorsque des êtres humains deviennent malgré tout échangeables : lorsqu’une personne peut être achetée ou vendue.
+
+Ce qui change alors, c’est le sens du paiement. Le prix de la fiancée s’adresse à une famille : il reconnaît une dette envers tout un réseau de relations, sans prétendre la solder. Le prix d’un esclave, lui, ne renvoie plus qu’à la personne elle-même. Il mesure ce qu’elle vaut, comme on mesure ce que vaut une marchandise.
+
+:::important
+Payer pour une personne, c’est reconnaître une dette envers ses proches. Payer une personne, c’est en faire une marchandise.
+:::
+
+Pour que ce prix soit possible, il faut extraire la personne de ses relations. Tant qu’elle a des parents, des alliés et des obligations, quelqu’un peut la réclamer, la venger ou exiger une compensation : elle ne peut pas être vendue comme une chose. La dimension relationnelle du paiement doit disparaître pour que la personne devienne une marchandise.
+
+C’est ce que fait l’esclavage. L’esclave est une personne coupée de sa famille, de sa communauté et de son histoire. Le sociologue Orlando Patterson parle de « mort sociale » : l’esclave n’existe plus pour personne, sinon pour son maître. Il devient donc réductible à une valeur.
+
+Ce basculement passe par la violence. La guerre et le rapt fournissent les esclaves : seule la violence peut arracher une personne à son monde.
+
+:::example
+Dans l’Irlande médiévale, les textes juridiques compilés vers l’an 700 utilisent une unité de compte : le *cumal*. Il désigne la valeur d’une jeune esclave. Un cumal vaut plusieurs têtes de bétail ; on évalue même des terres en cumals.
+
+Le cumal fonctionne donc déjà comme une monnaie au sens où nous l’entendons : une mesure commune qui permet d’évaluer des biens différents. Or cet étalon est un être humain transformé en marchandise. Ce n’est pas une image : c’est la vente de personnes qui a fourni l’unité permettant de comparer tout le reste.
+
+Avec le temps, le cumal devient une simple unité de compte, détachée de toute esclave réelle. Mais l’unité de mesure de la valeur a d’abord été une personne réduite à l’état de chose.
+:::
+
+Pour Graeber, l’Irlande n’est pas un cas isolé. Dans de nombreuses sociétés, la monnaie devient une mesure générale de la valeur au moment où les personnes elles-mêmes deviennent achetables. Le commerce des êtres humains n’accompagne pas seulement l’histoire de la monnaie : il contribue à la produire. Nous retrouverons ce lien avec l’invention des pièces, où guerre, esclavage et monnaie avancent ensemble.
+
+:::comment
+Insister : il s’agit d’un lien historique, pas d’une métaphore.
+:::
+
+L’esclavage montre ainsi, sous sa forme la plus brutale, l’effacement des rapports sociaux dont parlait Marx. Le fonds du 11 septembre accomplit la même opération par le calcul, sans violence et à une tout autre échelle : il isole la victime de ses relations pour ne retenir que son revenu.
+
+Il faut en tirer une conclusion. La mesure monétaire n’est pas un simple outil neutre, apparu pour faciliter les échanges. Elle suppose de détacher les choses, et parfois les personnes, de ce qui les rendait singulières. Pour Graeber, cette opération a d’abord été imposée par la force.
+
+Reste une question. Les monnaies sociales restent prises dans des relations entre personnes. Comment la monnaie devient-elle alors une mesure abstraite, capable de tout compter ? Pour le comprendre, il faut quitter les villages et regarder les premiers États.
+
+[Sources]
+
+- David Graeber, *Dette*, chap. 6 et 7.
+- Georg Simmel, *Philosophie de l’argent*, trad. Sabine Cornille et Philippe Ivernel, PUF, 1987 (*Philosophie des Geldes*, 1900).
+- Elizabeth Bernstein, *Temporarily Yours. Intimacy, Authenticity, and the Commerce of Sex*, University of Chicago Press, 2007.
+- Orlando Patterson, *Slavery and Social Death. A Comparative Study*, Harvard University Press, 1982.
+
+[/Sources]
+
+---
+## Du grain au sicle
+Mésopotamie, vers 3000 av. J.-C. {.kicker}
+
+--- notes
+
+Ces premiers États naissent en Mésopotamie, dans l’actuel Irak. C’est dans leurs cités qu’apparaît la première unité de compte. Pour comprendre pourquoi, il faut d’abord parler de céréales.
+
+Le politiste et anthropologue américain James C. Scott a consacré un livre à cette question : *Homo domesticus* (*Against the Grain*, 2017). Il part d’un constat : tous les premiers États reposent sur des céréales — blé, orge, riz ou maïs. Aucun ne repose sur le manioc, la pomme de terre ou les lentilles.
+
+Pour Scott, ce n’est pas un hasard. Le grain est une culture politique, parce qu’il possède trois propriétés qui le rendent saisissable par un pouvoir.
+
+D’abord, il se conserve. Nous l’avons vu avec la réserve de valeur : ce qui se conserve peut s’accumuler. Or le grain ne pourrit pas en quelques jours, ne s’enfuit pas comme le bétail et ne se mange pas d’un coup comme un fruit mûr. On peut le garder des années dans des silos.
+
+Ensuite, il se voit. Un champ de blé pousse au-dessus du sol et mûrit partout en même temps. Le collecteur sait donc où et quand venir : à la récolte, il ne peut rien lui échapper. Un tubercule, au contraire, reste caché sous terre et se récolte au fil des besoins.
+
+Enfin, il se mesure. On le compte en sacs et en rations ; on peut fixer une part due et vérifier qu’elle a été versée.
+
+Le grain est donc **taxable**. Un pouvoir peut prélever une part de la récolte, l’entasser dans ses greniers et s’en servir pour nourrir une armée ou financer des travaux.
+
+Surtout, les céréales dégagent un **surplus**. Une fois la subsistance assurée, il reste une part de la production qu’une élite peut capter. Une partie de la population cesse alors de produire sa propre nourriture : elle administre, surveille, lève l’impôt, tient des registres. Une classe administrative et militaire apparaît, qui vit du prélèvement sur le travail paysan.
+
+Scott ajoute que ces premiers États ont besoin de bras autant que de grain. Ils capturent des populations par la guerre et font travailler des captifs et des esclaves. Nous retrouvons ici le lien entre pouvoir, prélèvement et réduction des personnes à des choses.
+
+:::warning
+Il s’agit de la thèse de Scott, non d’une loi de l’histoire. Scott souligne lui-même que près de quatre millénaires séparent les premières domestications des premiers États. Graeber et Wengrow vont plus loin : des agriculteurs ont vécu longtemps sans État, et des sociétés sans agriculture ont connu des hiérarchies durables. Le grain rend l’État possible ; il ne le produit pas automatiquement.
+:::
+
+Concrètement, dans les cités sumériennes comme Uruk, Ur ou Lagash, deux grandes institutions concentrent ce grain : le temple et le palais.
+
+Le temple n’est pas seulement un lieu de culte. C’est la maison du dieu de la cité, considéré comme le propriétaire d’une grande partie des terres. Ses administrateurs gèrent des domaines immenses, des troupeaux et des ateliers de tissage qui emploient des milliers de personnes.
+
+Le palais est la résidence du roi, dont le pouvoir grandit au cours du IIIe millénaire. Il gère à son tour des terres, des ateliers et une armée. Temple et palais forment ainsi deux grandes « maisonnées », qui coexistent et parfois rivalisent.
+
+Leur grain vient de deux sources. Une partie des terres est cultivée directement par des travailleurs qui dépendent de l’institution. Le reste est confié à des paysans qui versent en échange une part de la récolte. Ce prélèvement ressemble déjà à un impôt.
+
+Ce grain n’est pas seulement stocké : il est redistribué. C’est là que se joue la puissance du temple et du palais. Le surplus leur permet de nourrir des gens qui ne cultivent pas : tisserandes, ouvriers des canaux, bergers, scribes, soldats. Plus une institution prélève de grain, plus elle entretient de travailleurs ; et plus elle en entretient, plus elle est puissante.
+
+Ces travailleurs creusent et entretiennent les canaux d’irrigation, dont dépendent les récoltes suivantes. Ils bâtissent les temples et les murailles, assurent le culte et font la guerre. Les tisserandes produisent des tissus que l’on échange au loin contre ce que la plaine ne fournit pas : métaux, bois, pierre.
+
+En retour, chacun reçoit chaque mois une ration d’orge, avec un peu de laine ou d’huile. La ration fonctionne comme un salaire en nature. Mais ce salaire ne s’échange pas sur un marché pour acheter de quoi vivre : il est déjà ce qui permet de vivre. Des marchands existent, mais ils commercent surtout au loin, avec des marchandises avancées par le temple et le palais.
+
+Ces travailleurs dépendent donc entièrement de la redistribution. Les tisserandes, souvent des veuves ou des captives de guerre, n’ont ni terre ni revenu propre : sans ration, elles n’ont rien à manger. Seuls les mieux placés reçoivent un lopin de terre à cultiver pour leur propre compte.
+
+Toute cette économie repose sur la dette. Le temple et le palais fonctionnent par avances : ils fournissent d’abord — terres, semences, marchandises, grain — et se font payer ensuite. Chaque avance crée une dette envers l’institution.
+
+Les paysans qui exploitent ses terres lui doivent une part de la récolte à venir : de l’ensemencement à la moisson, leur redevance est une dette. Les marchands reçoivent de la laine et des tissus à échanger au loin : ils doivent en rapporter la contrepartie en métaux, en bois ou en pierre. Enfin, les paysans qui manquent de grain avant la récolte empruntent aux administrateurs du temple ou à de riches marchands, souvent à titre privé. Ils remboursent à la moisson, avec un intérêt.
+
+L’économie sumérienne forme ainsi un immense enchevêtrement de dettes. Le temple et le palais en occupent le centre.
+
+Ces dettes ne ressemblent plus à celles des villages. Entre voisins, la dette restait floue parce qu’elle entretenait une relation : personne ne tenait les comptes de la tournée. Ici, le paysan ne doit pas à quelqu’un qu’il aidera à son tour. Il doit au temple.
+
+L’État s’interpose ainsi comme un tiers entre les personnes. Avec lui, il n’y a pas de relation à entretenir : il n’y a qu’un compte à solder. La dette ne peut donc plus rester floue. Elle doit être fixée, chiffrée et inscrite.
+
+:::important
+Avec l’État, la dette cesse d’être une relation entre personnes. Elle devient une obligation envers un tiers impersonnel : elle doit être chiffrée et inscrite.
+:::
+
+Ces dettes produisent une masse d’enregistrements. C’est d’ailleurs pour tenir ces comptes que l’écriture apparaît, à Uruk, vers 3300 avant notre ère. Les premières tablettes sont presque toutes des inventaires et des listes de rations.
+
+Les administrateurs doivent donc comptabiliser des biens hétérogènes : orge, laine, huile, bétail, journées de travail. C’est le problème des 4 950 rapports évoqué au début. Il ne se pose pas à des marchands qui chercheraient un partenaire d’échange, mais à des comptables qui tiennent les registres d’une grande institution.
+
+Selon Graeber, les administrateurs du temple fixent alors une équivalence : un **sicle** d’argent, un poids d’environ 8 grammes, vaut un *gur* d’orge, soit une ration mensuelle. Toutes les ressources et toutes les dettes du temple peuvent dès lors être exprimées dans une même unité.
+
+Mais l’argent ne circule presque pas. Il reste pour l’essentiel dans les trésors des temples. Les dettes sont libellées en argent et réglées en orge, au moment de la récolte. La monnaie est donc d’abord une **unité de compte de la dette**, pas un objet qui passe de main en main.
+
+Le crédit ne reste pourtant pas l’affaire du temple. Selon Graeber, l’intérêt naît sans doute des avances faites aux marchands. Le temple leur confie de la laine ou des tissus ; ils les vendent au loin et doivent rapporter davantage que la valeur reçue. L’intérêt est la part du temple dans leurs profits.
+
+Les marchands sont donc d’abord débiteurs du temple. Mais ils deviennent aussi créanciers. Entre eux, ils passent des contrats de crédit sur des tablettes d’argile, scellées dans une enveloppe marquée du sceau de l’emprunteur. Le créancier garde l’enveloppe ; on la brise au remboursement. Certaines de ces tablettes sont payables au porteur : elles circulent alors comme une monnaie, entre marchands qui se connaissent.
+
+Le prêt à intérêt gagne ensuite les campagnes. Vers 2400 avant notre ère, des administrateurs et de riches marchands prêtent aux paysans en difficulté, contre un gage. C’est l’usure au sens classique : on n’emprunte plus pour commercer, mais pour survivre jusqu’à la récolte.
+
+La dette forme ainsi une chaîne. Le temple fixe l’unité de compte et avance aux marchands. Marchands et administrateurs prêtent à leur tour aux paysans, dans la même unité et sur les mêmes tablettes. Même entre particuliers, la dette devient un compte chiffré, avec un intérêt qui court.
+
+:::example
+Au printemps, un paysan emprunte du grain à un riche marchand. Sa dette est inscrite sur une tablette d’argile, en sicles d’argent, avec un intérêt. À la récolte, il la rembourse en orge, au taux d’un *gur* par sicle.
+
+Si la récolte est mauvaise, il ne peut pas payer. Il peut alors perdre ses terres, ou devoir livrer un membre de sa famille comme serviteur du créancier.
+:::
+
+Cette mécanique produit des crises sociales. Les rois mésopotamiens y répondent par des **annulations générales des dettes** de consommation — les dettes commerciales ne sont pas concernées : les tablettes sont détruites, les serviteurs pour dettes rentrent chez eux. Le roi intervient alors en tiers au-dessus des créanciers : il n’impose pas de dettes, il annule des dettes privées.
+
+Graeber relève que le mot sumérien *amargi*, l’un des premiers mots connus pour dire « liberté », signifie littéralement « retour à la mère ». Il désigne précisément cette libération.
+
+:::comment
+Insister sur cette image de tablettes de dettes effacées : elle reviendra en conclusion, face à un registre conçu pour ne jamais rien effacer.
+:::
+
+Retenons l’essentiel. En Mésopotamie, la monnaie ne naît ni comme une pièce ni comme un moyen d’échange entre particuliers. Elle naît dans les registres du temple et du palais, pour chiffrer les dettes envers ce tiers impersonnel. Le sicle d’argent sert à compter ; il ne passe presque pas de main en main.
+
+:::important
+La monnaie naît comme un équivalent général : une unité qui permet de mesurer des dettes.
+:::
+
+Il faut attendre plus de deux mille ans pour que la monnaie prenne la forme de pièces. Et ce ne sont pas des marchands qui les inventent, mais des États en guerre.
+
+[Sources]
+
+- James C. Scott, *Homo domesticus. Une histoire profonde des premiers États*, La Découverte, 2019 (*Against the Grain*, 2017).
+- David Graeber et David Wengrow, *Au commencement était… Une nouvelle histoire de l’humanité*, Les Liens qui libèrent, 2021.
+- David Graeber, *Dette*, chap. 3 et 8.
+
+[/Sources]
+
+---
+## Payer les soldats
+L’invention des pièces {.kicker}
+
+--- notes
+
+Les premières pièces apparaissent vers le VIe siècle avant notre ère. Elles naissent presque simultanément, et indépendamment, dans trois régions : en Lydie, dans l’ouest de l’actuelle Turquie ; dans la plaine du fleuve Jaune, en Chine du Nord ; et dans la vallée du Gange, en Inde.
+
+Ces trois régions ont un point commun : elles sont traversées par des guerres incessantes entre royaumes rivaux, puis par la formation de grands empires. Graeber y voit l’origine de la monnaie frappée.
+
+Le problème est d’abord logistique. Une armée de plusieurs dizaines de milliers d’hommes doit manger chaque jour, où qu’elle se trouve. Or elle ne produit rien : elle ne fait que consommer.
+
+:::example
+D’après les estimations classiques de Donald Engels, un soldat consomme environ 1,4 kg de grain par jour. Une armée de 50 000 hommes a donc besoin de 70 tonnes de grain chaque jour. Une bête de somme porte environ 100 kg : il en faut 700 pour une seule journée de vivres, 7 000 pour dix jours.
+
+Mais ces bêtes doivent manger elles aussi, comme les chevaux de la cavalerie. Au-delà de quelques jours de marche, le convoi dévore donc une bonne partie de ce qu’il transporte. En outre, il ralentit aussi l’armée et devient une cible.
+:::
+
+L’armée ne peut donc pas emporter ses vivres : elle doit se ravitailler sur place. Mais les populations locales ne font pas crédit à une armée étrangère. Un soldat de passage, lourdement armé, est pour Graeber « l’incarnation même du mauvais risque de crédit ». Il peut repartir demain ou mourir au combat. Aucun paysan ne lui dira « je t’en dois une » : nous retrouvons la situation de l’étranger.
+
+Le soldat doit donc payer sur-le-champ, avec un objet qui vaut par lui-même : un morceau d’or ou d’argent. Le paysan l’accepte sans avoir à faire confiance au soldat, parce qu’il sait que d’autres le lui reprendront. Graeber compare ce métal à la valise de billets non marqués d’un trafiquant : un objet sans histoire, accepté par tous.
+
+Le métal rend possible l’échange avec le soldat. Mais il ne suffit pas à nourrir une armée entière : encore faut-il que les paysans aient intérêt à vendre. L’État pourrait réquisitionner les vivres. Mais il lui faudrait presque autant d’hommes et de bêtes pour les trouver, les collecter et les transporter.
+
+Graeber décrit alors une solution plus simple, en trois temps. L’État paie ses soldats en pièces. Il exige ensuite que chaque famille paie l’impôt avec ces mêmes pièces. Pour se les procurer, chacune doit vendre aux soldats des vivres ou des services.
+
+Tout le royaume devient ainsi, selon Graeber, « une immense machine à approvisionner les troupes ». L’impôt crée donc le marché.
+
+Deux raisons font ainsi accepter les pièces, et elles se complètent. Le métal permet l’échange entre inconnus : il dispense de faire confiance. L’impôt crée une demande générale : chaque famille a besoin de ces pièces précises, frappées par l’État, pour payer ce qu’elle doit.
+
+La pièce réunit donc deux choses. C’est un morceau de métal, qui vaut par lui-même ; c’est aussi un signe de l’État, qui l’accepte en paiement. Pour Graeber, elle se tient à mi-chemin entre la marchandise et la reconnaissance de dette.
+
+:::warning
+La valeur des pièces ne se réduit pas à leur poids de métal. Une pièce frappée par un État vaut souvent davantage que le métal qu’elle contient, parce que cet État l’accepte en paiement de l’impôt. Même la monnaie métallique comporte une part fiduciaire.
+:::
+
+En Lydie et en Inde, ces premières pièces sont en métal précieux. En Chine, elles sont coulées en bronze, un métal bien moins précieux : leur valeur repose davantage sur l’État.
+
+:::example
+Graeber rapporte un exemple colonial, à Madagascar. En 1901, à la fin de la conquête de l’île, le général Gallieni impose un lourd impôt par tête, payable uniquement en francs malgaches, une monnaie qui vient d’être émise. L’impôt finance la conquête et les infrastructures coloniales. Mais il sert aussi à forcer l’entrée dans l’économie monétaire : Gallieni l’appelle lui-même l’« impôt moralisateur ».
+
+L’impôt tombe juste après la récolte, quand le riz est le moins cher. Pour le payer, les paysans vendent une partie de leur riz aux marchands installés dans les bourgs. Quelques mois plus tard, ils doivent le racheter à crédit, beaucoup plus cher, à ces mêmes marchands. Ils s’endettent alors au point de devoir se lancer dans des cultures commerciales ou travailler pour les colons.
+:::
+
+Graeber reprend à l’économiste Geoffrey Ingham l’idée d’un « complexe militaro-monétaire », qu’il préfère appeler **complexe armée-pièces de monnaie-esclavage** : la guerre fournit des esclaves et des métaux, les métaux paient les soldats, et les soldats font circuler la monnaie.
+
+[Sources]
+
+- David Graeber, *Dette*, chap. 3 et 9.
+- Donald W. Engels, *Alexander the Great and the Logistics of the Macedonian Army*, University of California Press, 1978.
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-030-credit-lingot" title="Crédit et lingot" -->
+Crédit et lingot {.kicker}
+
+| Régime         | Période              |
+| :------------- | :------------------- |
+| Crédit         | 3500 – 800 av. J.-C. |
+| Métal précieux | 800 av. J.-C. – 600  |
+| Crédit         | 600 – 1450           |
+| Métal précieux | 1450 – 1971          |
+| Crédit         | Depuis 1971          |
+
+--- notes
+
+Graeber propose une lecture d’ensemble. L’histoire de la monnaie alterne entre deux régimes : des périodes dominées par le **crédit**, où la monnaie est d’abord une écriture de dette, et des périodes dominées par le **lingot**, où elle s’incarne dans des métaux précieux.
+
+Selon lui, les périodes de métal coïncident avec des époques de guerres généralisées et de pillage. Les périodes de crédit correspondent à des époques de relative stabilité, où des institutions peuvent garantir la confiance.
+
+:::warning
+Ce tableau est une périodisation proposée par Graeber, non un découpage admis par tous les historiens. Il sert à faire apparaître une tendance de longue durée, pas à classer chaque monnaie de chaque époque.
+:::
+
+La première période de crédit est celle de la Mésopotamie, que nous venons de voir. La première période de métal est celle des pièces et des armées impériales.
+
+Le Moyen Âge, entre 600 et 1450, ramène le crédit. Dans le monde islamique, les marchands règlent leurs affaires avec des reconnaissances de dette comme le *sakk*, dont dériverait notre mot « chèque ». Ils utilisent aussi des lettres de change, la *suftaja*, pour transférer des fonds à distance sans transporter de pièces.
+
+En Europe, l’Empire romain d’Occident s’est fragmenté. Les royaumes sont nombreux et instables, et les pièces qui circulent varient énormément en poids et en pureté. Aucun État ne peut garantir une dette d’un bout à l’autre du continent.
+
+Une institution échappe pourtant à la fragmentation politique : l’Église. Elle est présente partout, avec une même langue, le latin, un même droit et une même autorité, celle du pape. Un serment prêté devant elle engage partout, et un débiteur qui le trahit peut être excommunié. L’Église fournit ainsi un cadre de confiance commun, au-dessus des royaumes.
+
+:::example
+Un ordre religieux tire parti de ce cadre pour transférer des fonds d’un royaume à l’autre : les Templiers, des moines-soldats établis de la France à Jérusalem. Ils empruntent pour cela la technique des marchands musulmans, la *suftaja*. Par leur intermédiaire, un seigneur du midi de la France peut hypothéquer l’une de ses terres. Il reçoit une lettre de change, payable en espèces au Temple de Jérusalem. Il part en croisade sans transporter son argent.
+
+La fin des Templiers est brutale : en 1307, le roi de France Philippe le Bel, lourdement endetté envers l’ordre, les fait arrêter et confisque leur fortune.
+:::
+
+Des maisons de banque italiennes prennent le relais des Templiers : les Bardi, les Peruzzi, puis les Médicis. Graeber note qu’elles réussissent mieux, parce qu’elles s’appuient sur de puissantes cités marchandes. Elles généralisent la **lettre de change**.
+
+:::example
+Un marchand florentin veut acheter des draps aux foires de Champagne. Transporter de l’or à travers les Alpes est risqué : brigands, guerres, péages. Et les pièces de Florence n’ont pas cours en Champagne.
+
+Il verse donc ses florins à un banquier de Florence. En échange, il reçoit une lettre : un ordre écrit, adressé au correspondant du banquier en Champagne, de payer telle somme à son agent, à une date fixée, par exemple trois mois plus tard. La somme est exprimée dans l’unité de compte commune, héritée des deniers carolingiens.
+
+Aux foires, l’agent présente la lettre. Le correspondant le paie en monnaie locale. Aucune pièce n’a traversé les Alpes.
+:::
+
+La lettre de change est une innovation monétaire pour trois raisons.
+
+D’abord, l’argent voyage sous forme d’écriture, et non plus de métal. Ce qui se déplace, c’est une reconnaissance de dette du banquier.
+
+Ensuite, le banquier devient un tiers de confiance. Le marchand florentin n’a pas besoin que le vendeur de Champagne lui fasse crédit : il suffit que tous deux fassent confiance au réseau du banquier.
+
+Enfin, les dettes se compensent. Les foires de Champagne servent de chambre de compensation : les marchands y confrontent leurs lettres, les dettes croisées s’annulent, et seuls les soldes sont réglés en pièces. Avec très peu de métal, on règle un volume d’échanges considérable.
+
+Les lettres de change ne circulent pas encore de main en main : la plupart restent nominatives. Mais elles permettent de payer à distance et de solder des dettes sans qu’aucune pièce ne voyage. Pour le grand commerce, la monnaie devient donc une écriture de dette, garantie par un réseau de confiance qui dépasse les États. Plus tard, l’endossement permettra de les transmettre à un tiers ; elles annoncent ainsi le papier-monnaie.
+
+:::warning
+Les banquiers ne rendent pas ce service gratuitement. Or l’Église condamne le prêt à intérêt, l’**usure**. La lettre de change permet en partie de contourner cet interdit : l’opération se présente comme un change entre deux monnaies, et non comme un prêt. Le gain du banquier se cache dans le taux de change appliqué.
+:::
+
+Ce pas vers le papier-monnaie, la Chine l’a franchi bien plus tôt. Au Sichuan, au début du XIe siècle, la monnaie courante est faite de lourdes pièces de fer. Des marchands les gardent en dépôt et remettent en échange des reçus, les *jiaozi*.
+
+Ces reçus ne désignent pas un bénéficiaire, à la différence des lettres de change. Ils passent donc de main en main, comme des pièces. L’État Song en reprend l’émission à son compte en 1024. Le papier-monnaie naît ainsi d’une reconnaissance de dette qui circule.
+
+En Europe, le papier-monnaie n’apparaît qu’aux XVIIe et XVIIIe siècles. Et il apparaît paradoxalement au moment où le métal abonde.
+
+La conquête de l’Amérique ouvre en effet une nouvelle période de métal. L’or et l’argent des mines américaines, comme celle de Potosí, affluent en Europe, même si une grande partie de cet argent finit en Chine.
+
+Mais les guerres coûtent plus encore. Les États européens se disputent le continent, les mers et les colonies. Leurs armées et leurs flottes dépassent ce que leurs trésors peuvent payer. Les rois doivent donc emprunter. Le métal sert alors moins à payer qu’à garantir des dettes.
+
+ En Espagne, des flottes chargées d’argent américain accostent à Séville. La couronne n’en reçoit qu’une part, environ un cinquième ; le reste appartient aux marchands et aux propriétaires des mines. Et cette part est déjà dépensée avant d’arriver.
+
+Les guerres de l’Espagne se mènent loin, en Flandre ou en Italie. Il faut y payer les soldats tout de suite, en monnaie locale. La couronne emprunte donc à des banquiers génois, qui disposent de correspondants et de lettres de change dans toute l’Europe. Ils avancent l’argent sur place ; elle les rembourse avec l’argent des flottes suivantes.
+
+Quand elle ne peut pas rembourser, elle transforme ces dettes en titres de rente à long terme, les *juros*. Ces titres circulent eux-mêmes comme une monnaie. Selon Graeber, les banquiers multiplient ainsi « presque à l’infini » la valeur du métal qu’ils détiennent.
+
+:::example
+Un banquier génois garde à Séville 100 lingots, en attente d’être expédiés vers l’Asie. Il en prête la valeur à la couronne et reçoit en échange des *juros*. Il paie un fournisseur avec ces titres. Le fournisseur s’en sert à son tour pour régler ses propres dettes, ou les met en gage pour emprunter.
+
+Pendant ce temps, les lingots n’ont pas bougé de l’entrepôt. Le banquier peut encore s’en servir comme garantie pour un autre prêt. Les mêmes 100 lingots soutiennent donc plusieurs dettes à la fois. Le métal reste immobile ; ce sont les titres qui circulent, et ils sont bien plus nombreux que le métal.
+:::
+
+Tout repose pourtant sur une promesse : celle de la couronne de payer ses rentes. Personne n’en est tout à fait sûr. Les *juros* circulent donc avec une décote, et leur multiplication alimente, selon Graeber, une inflation permanente.
+
+Les premiers billets européens apparaissent ainsi à Stockholm en 1661. Mais c’est à Londres que le papier-monnaie prend sa forme moderne, adossée à une dette de guerre.
+
+En 1694, un groupe de banquiers londoniens prête 1,2 million de livres au roi Guillaume III pour financer sa guerre contre la France. En échange, leur nouvelle institution, la Banque d’Angleterre, obtient le droit d’émettre des billets adossés à cette créance.
+
+Cette dette royale, évidemment, n’a jamais été remboursée. Elle ne doit pas l’être : si elle l’était, la base des billets disparaîtrait. La monnaie moderne naît ainsi d’une dette de guerre de l’État.
+
+Notez le renversement : à Sumer, la monnaie mesurait ce que l’on devait au temple ; Le billet de la Banque d’Angleterre est au contraire une dette due par le roi.
+
+La France tente l’expérience peu après, sous la Régence qui suit la mort de Louis XIV. Les guerres du règne ont laissé une dette écrasante. Le financier écossais John Law convainc le Régent de créer une banque qui émet des billets : elle devient la Banque royale en 1718.
+
+Law y adosse une compagnie coloniale, la Compagnie du Mississippi, censée exploiter la Louisiane. Il propose aux créanciers de l’État un échange : leurs titres de dette, qui valent mal, contre des actions de la Compagnie, qui promettent les profits des colonies. La Compagnie devient ainsi le créancier de l’État à leur place.
+
+Pour acheter ces actions, il faut aussi de l’argent frais. La Banque royale en fournit : elle prête des billets, qu’elle imprime, à ceux qui veulent acheter. Les billets financent les achats d’actions, et la hausse des actions attire de nouveaux acheteurs, qui empruntent de nouveaux billets. Le cours de l’action est multiplié par près de vingt en quelques mois.
+
+La chaîne est donc la suivante : les billets reposent sur les actions, les actions sur la dette de l’État et sur la promesse des colonies. En 1720, des actionnaires commencent à vendre et à réclamer de l’or contre leurs billets. La banque n’en a pas assez. Le cours s’effondre, les billets perdent leur valeur, et Law doit s’enfuir.
+
+L’échec laisse en France une méfiance durable envers le papier-monnaie et les banques.
+
+Résumons. En Europe, le papier-monnaie ne naît pas d’un besoin des marchands, mais des dettes de guerre des États : les *juros* espagnols, les billets de la Banque d’Angleterre, ceux de Law. Il se diffuse ensuite au XVIIIe et au XIXe siècle. Chaque État finit par confier l’émission des billets à une banque centrale : la Banque de France est créée en 1800, la Réserve fédérale américaine en 1913.
+
+Le papier-monnaie permet ainsi aux États de vivre à crédit. Ils n’ont plus besoin de lever l’impôt avant de dépenser : ils dépensent d’abord, et leur dette devient la monnaie qui circule.
+
+C’est aussi ce qui le rend dangereux. Un État endetté est toujours tenté d’émettre davantage de billets pour payer ce qu’il doit. Law l’a montré en 1720 ; les assignats de la Révolution le montrent à nouveau. Trop de billets, et le papier perd sa valeur.
+
+La référence à l’or sert précisément de garde-fou. Un billet est **convertible** : son porteur peut l’échanger contre une quantité fixe d’or auprès de la banque qui l’émet. La banque ne peut donc pas émettre beaucoup plus de billets qu’elle ne détient d’or. Au XIXe siècle, la plupart des grandes économies adoptent ainsi l’**étalon-or**.
+
+:::comment
+Nous retrouvons ici la méfiance originelle des adeptes du bitcoin envers les politiques monétaires des états et sa prétention à constituer un «or numérique ».
+:::
+
+:::warning
+Le garde-fou cède dès que la guerre revient. Le Royaume-Uni suspend la convertibilité de la livre de 1797 à 1821, pendant les guerres contre la France. La France suspend celle du franc en 1914. Chaque fois, l’État a besoin d’émettre plus de monnaie que son or ne le permet.
+:::
+
+Mesurons le chemin parcouru depuis Sumer. Là-bas, la dette pesait sur les paysans et les travailleurs : ils devaient au temple, au palais ou aux prêteurs. Le roi pouvait seulement annuler ces dettes, de temps à autre. Avec le papier-monnaie, le premier débiteur devient l’État lui-même. Et il contrôle l’émission de la monnaie dans laquelle sa dette est libellée.
+
+:::important
+À Sumer, la monnaie mesure ce que les sujets doivent au pouvoir. Avec le papier-monnaie, elle devient une dette du pouvoir lui-même : qui contrôle l’émission de la monnaie contrôle aussi le poids de sa propre dette.
+:::
+
+C’est là que la question devient politique. Décider combien de monnaie créer, c’est décider qui paiera : les créanciers, si la monnaie perd sa valeur ; les contribuables, si l’État doit rembourser.
+
+Jusqu’en 1971, la référence à l’or demeure, au moins en principe. C’est cette dernière ancre que les États-Unis vont lever.
+
+[Sources]
+
+- David Graeber, *Dette*, chap. 8 à 11.
+- Satoshi Nakamoto, « Bitcoin open source implementation of P2P currency », forum de la P2P Foundation, 11 février 2009.
+
+[/Sources]
+
+---
+## La fin de l'étalon-or
+15 août 1971 {.kicker}
+
+--- notes
+
+Après la Seconde Guerre mondiale, les accords de Bretton Woods organisent le système monétaire international autour du dollar. Les autres monnaies sont rattachées au dollar, et le dollar est convertible en or pour les banques centrales étrangères, à 35 dollars l’once.
+
+Le 15 août 1971, le président Nixon suspend cette convertibilité. La guerre du Vietnam et les déficits américains ont multiplié les dollars en circulation, et les réserves d’or ne suffisent plus à les garantir.
+
+Depuis, les principales monnaies — le dollar, l’euro, le yen — ne sont plus convertibles en rien. Elles ne sont plus que des promesses, émises par des banques centrales et par les banques commerciales qui accordent des crédits, comme nous l’avons vu au premier chapitre.
+
+Pour Graeber, 1971 ouvre une nouvelle période de crédit. Mais ce crédit n’est pas désarmé. Le dollar reste aujourd'hui encore adossé à la puissance militaire des États-Unis.
+
+Les banques centrales étrangères accumulent des bons du Trésor américain. Pour Graeber, cette dette ne sera jamais vraiment remboursée et fonctionne comme une forme de tribut versé par les alliés et les partenaires des États-Unis.
+
+:::warning
+La thèse du tribut est celle de Graeber ; elle est discutée. Les détenteurs étrangers reçoivent des intérêts, et ils détiennent ces titres aussi parce qu’ils sont l’actif le plus liquide du monde. Il faut aussi rappeler que l’essentiel de la dette fédérale est détenu par des acteurs américains.
+:::
+
+---
+## Croire ou payer l’impôt
+Ce qui fait tenir une monnaie {.kicker}
+
+--- notes
+
+Une monnaie qui n’est plus convertible en rien doit donc tenir par autre chose. Trois réponses s’opposent.
+
+La première est **métalliste**. Une monnaie vaut par la valeur de la marchandise qui la constitue ou la garantit : l’or, l’argent. C’est la théorie de Smith et de l’économiste autrichien Carl Menger. Or les monnaies fonctionnent toujours sans être adossées à un métal précieux. La fin de l’étalon-or semble donc avoir réfuté cette théorie en pratique.
+
+La deuxième est **chartaliste**. Une monnaie vaut parce qu’un État l’accepte en paiement de l’impôt. L’économiste allemand Georg Friedrich Knapp la formule en 1905, et Graeber en est proche. Nous l’avons vue à l’œuvre avec les soldats et l’impôt malgache.
+
+La troisième insiste sur la **croyance partagée**. J’accepte un billet de 5 € parce que je crois que les autres l’accepteront. Et ils l’accepteront parce qu’ils croient que d’autres l’accepteront à leur tour.
+
+Keynes compare les marchés financiers à un concours de beauté organisé par un journal. Il ne s’agit pas de choisir le visage que l’on trouve le plus beau. Il faut choisir celui que les autres participants choisiront. Chacun anticipe donc les anticipations des autres.
+
+La monnaie fonctionne de la même manière : sa valeur repose sur ce que chacun croit de la croyance des autres. Les économistes André Orléan et Michel Aglietta parlent d’une valeur **autoréférentielle**.
+
+Mais ces autres n’ont pas tous le même poids. Un État qui lève l’impôt dans une monnaie lui garantit une demande minimale : tous les contribuables auront besoin de cette monnaie. Ce « grand autre » ancre la croyance.
+
+:::warning
+Ces trois réponses ne s’excluent pas. En pratique, l’État ancre la monnaie en l’acceptant pour l’impôt ; la croyance partagée la fait circuler au quotidien. Personne ne paie son café en pensant à l’impôt. Mais il le paie dans une monnaie que l’État garantit.
+:::
+
+C’est précisément ici que Bitcoin fait son pari : se passer de ce grand autre. Une monnaie peut-elle tenir par la seule croyance partagée, sans État pour l’accepter ni métal pour la garantir ?
+
+[Sources]
+
+- Georg Friedrich Knapp, *Staatliche Theorie des Geldes*, 1905.
+- John Maynard Keynes, *Théorie générale de l’emploi, de l’intérêt et de la monnaie*, chap. 12, 1936.
+- Michel Aglietta et André Orléan, *La Monnaie entre violence et confiance*, Odile Jacob, 2002.
+- André Orléan, *L’Empire de la valeur*, Seuil, 2011.
+
+[/Sources]
+
+---
+> « It might make sense just to get some in case it catches on. If enough people think the same way, that becomes a self fulfilling prophecy. »
+
+Satoshi Nakamoto, 2009 {.kicker}
+
+--- notes
+
+Nakamoto écrit ces lignes le 17 janvier 2009 sur la liste de diffusion cypherpunk quelques jours après le lancement de Bitcoin. Il répond à un interlocuteur qui s’interroge sur l’intérêt d’acquérir des bitcoins.
+
+Sa réponse est la théorie de la croyance partagée poussée à sa limite. Le bitcoin n’a d’autre valeur que celle que d’autres lui attribueront. Si assez de gens pensent qu’il prendra de la valeur, il en prendra : c’est une **prophétie autoréalisatrice**.
+
+Les premiers usages restent anecdotiques. Le 22 mai 2010, le programmeur Laszlo Hanyecz achète deux pizzas pour 10 000 bitcoins. C’est la première transaction commerciale connue pour un bien physique.
+
+:::comment
+Calculer en direct la valeur actuelle des 10 000 bitcoins de la pizza : 8,500,000,000. Elle montre la prophétie autoréalisatrice à l’œuvre.
+:::
+
+:::warning
+Ce n’est pas tout à fait le premier usage. Des échanges de bitcoins contre des dollars ont lieu dès octobre 2009.
+:::
+
+Le premier grand usage du bitcoin est pourtant illégal. En février 2011, Ross Ulbricht, un jeune Américain de 26 ans, ouvre **Silk Road**, un marché en ligne accessible seulement par le réseau d’anonymisation Tor. On y vend surtout de la drogue. Ulbricht signe sous le pseudonyme de « Dread Pirate Roberts ».
+
+Silk Road n’accepte qu’un moyen de paiement : le bitcoin. Le site ne peut passer ni par une banque ni par une carte bancaire, qui identifieraient immédiatement vendeurs et acheteurs et bloquerait évidemment les transactions. Le bitcoin permet de payer en ligne sans intermédiaire. Le site garde aussi les fonds de l’acheteur jusqu’à la livraison : il sert de tiers de confiance entre des inconnus.
+
+Pour Ulbricht, le site n’est pas seulement un commerce. Il le présente comme une expérience libertarienne : un marché libre, soustrait à la contrainte de l’État. Nous retrouvons ici l’imaginaire cypherpunk vu au premier chapitre.
+
+:::example
+En juin 2011, un article du site Gawker fait connaître Silk Road au grand public. La demande de bitcoins augmente, et son cours avec elle. Selon le FBI, le site aurait réalisé en un peu plus de deux ans des ventes de plus de 9 millions de bitcoins, soit environ 1,2 milliard de dollars au cours de 2013.
+:::
+
+Le 1er octobre 2013, le FBI arrête Ulbricht dans une bibliothèque publique de San Francisco, son ordinateur ouvert. Les enquêteurs ne l’ont pas identifié par la blockchain, mais par une imprudence ancienne. En 2011, il avait fait la promotion du site sur des forums sous un pseudonyme. Sous ce même pseudonyme, il avait ensuite publié son adresse électronique personnelle. Le FBI saisit le site et environ 170 000 bitcoins.
+
+En 2015, Ulbricht est reconnu coupable notamment de trafic de stupéfiants, de piratage informatique et de blanchiment. Il est condamné à deux peines de prison à perpétuité, sans possibilité de libération conditionnelle. Le juge veut une peine exemplaire.
+
+Sa défense soutient qu’il a créé le site mais l’a ensuite cédé, et que d’autres ont pris le pseudonyme de « Dread Pirate Roberts ». Elle dénonce aussi les méthodes de l’enquête : deux agents fédéraux qui y participaient ont eux-mêmes détourné des bitcoins, et ont été condamnés.
+
+:::warning
+Le procès a aussi évoqué des commandes d’assassinat que Dread Pirate Roberts aurait passées pour protéger le site. Aucun meurtre n’a eu lieu, et Ulbricht n’a jamais été condamné pour ces faits. Mais le juge en a tenu compte dans la sévérité de la peine.
+:::
+
+Pour une partie du monde crypto, Ulbricht devient alors un martyr : celui d’un État qui punit un marché libre plus durement que bien des crimes violents. Pendant sa campagne de 2024, Donald Trump promet de le libérer. Le 21 janvier 2025, au lendemain de son investiture, il lui accorde une grâce complète.
+
+:::comment
+Souligner ce que montre l’affaire : un usage monétaire réel, mais illégal, et une technologie devenue un enjeu politique.
+:::
+
+Le bitcoin n’est pourtant pas anonyme : il est **pseudonyme**. Les adresses ne portent pas de nom. Mais toutes les transactions sont publiques et inscrites à jamais dans la blockchain.
+
+Il suffit donc de rattacher une adresse à une personne pour que tout son historique devienne traçable. Ce lien se fait par exemple lors d’un passage par une plateforme d’échange.
+
+D’autres crypto-monnaies chercheront plus tard à résoudre ce problème, en rendant les transactions confidentielles. Nous y reviendrons dans le prochain chapitre.
+
+Silk Road montre donc un usage réel du bitcoin comme instrument d’échange, mais un usage marginal et illégal. Reste à savoir quelle fonction de la monnaie le bitcoin remplit aujourd’hui.
+
+[Sources]
+
+- [Satoshi Nakamoto — message à la liste de diffusion Cryptography, 17 janvier 2009](https://diswww.mit.edu/bloom-picayune/crypto/142579)
+
+[/Sources]
+
+---
+## Or numérique
+Rare, donc précieux {.kicker}
+
+--- notes
+
+Reprenons les trois fonctions. Le bitcoin est très peu utilisé comme instrument d’échange. Il ne sert presque jamais d’unité de compte : on n’affiche pas de prix en bitcoins. Sa volatilité l’en empêche, car un prix exprimé en bitcoins pourrait varier de 10 % en une semaine.
+
+:::example
+En 2021, le Salvador fait du bitcoin une monnaie légale : les commerçants doivent l’accepter. Son usage reste pourtant marginal. En 2025, dans le cadre d’un accord avec le FMI, son acceptation devient facultative.
+
+La reconnaissance par l’État ne suffit donc pas, à elle seule, à faire d’un actif une monnaie d’usage courant.
+:::
+
+Le bitcoin sert donc surtout de **réserve de valeur**, ou plutôt d’actif spéculatif. Ses défenseurs le présentent comme un **or numérique**.
+
+Cette image n’est pas un hasard. Nous l’avons vu au chapitre précédent : Bit Gold, le projet de Nick Szabo, cherchait déjà à reproduire la rareté de l’or. Bitcoin en reprend la logique : sa quantité est plafonnée à 21 millions d’unités, que l’on obtient en « minant ».
+
+Relu avec Graeber, le bitcoin apparaît comme une réaction **métalliste** en pleine période de crédit. Il conçoit la monnaie comme une chose rare, qui vaut par sa quantité limitée. Il ne la conçoit pas comme une relation de dette.
+
+Il reconduit ainsi le mythe que Graeber démonte : celui d’une monnaie-marchandise sortie du troc, antérieure à l’État et au crédit. En 2018, le livre *The Bitcoin Standard*, de Saifedean Ammous, défend d’ailleurs explicitement un retour à une monnaie « dure », sur le modèle de l’étalon-or.
+
+Mais il y a une ironie. L’or a au moins des usages matériels, en bijouterie ou en électronique. Le bitcoin, lui, n’a d’autre valeur que la croyance partagée de ses détenteurs.
+
+:::important
+L’actif qui se réclame de l’or est en fait la monnaie la plus purement fiduciaire qui soit.
+:::
+
+:::warning
+Un bitcoin n’est la dette de personne : aucun émetteur ne s’engage à le rembourser. Sur ce point, il ressemble effectivement davantage à un lingot qu’à un billet. Mais sa valeur dépend entièrement de la confiance, et c’est ce qui le rapproche du billet.
+:::
+
+Ce modèle pose un autre problème, bien connu des économistes : celui d’une monnaie **déflationniste**. Si l’on s’attend à ce qu’une monnaie prenne de la valeur, on a intérêt à la garder plutôt qu’à la dépenser.
+
+:::example
+Les 10 000 bitcoins de la pizza de 2010 sont devenus une fortune. Après coup, celui qui les a dépensés a fait la pire affaire de sa vie. Chaque détenteur fait donc le même calcul : pourquoi payer aujourd’hui avec un actif qui vaudra peut-être le double demain ?
+:::
+
+Le bitcoin est ainsi tiraillé entre deux fonctions : plus il réussit comme réserve de valeur, plus il échoue comme instrument d’échange. On présente les trois fonctions de la monnaie comme complémentaires. Ici, elles entrent en conflit.
+
+:::warning
+Ses défenseurs répondent que la volatilité diminuera à mesure que le marché grandira. Mais le problème de fond demeure : un actif dont l’offre est fixe incite à thésauriser plutôt qu’à dépenser.
+:::
+
+Cet or numérique a pourtant trouvé ses plus gros acheteurs là où on ne les attendait pas : dans la finance traditionnelle.
+
+[Sources]
+
+- [Nick Szabo — Bit Gold, 2005](https://unenumerated.blogspot.com/2005/12/bit-gold.html)
+- Saifedean Ammous, *The Bitcoin Standard. The Decentralized Alternative to Central Banking*, Wiley, 2018.
+
+[/Sources]
+
+---
+## Wall Street
+Le bitcoin institutionnalisé {.kicker}
+
+--- notes
+
+Quinze ans après la pizza, le bitcoin a changé de nature : il s’est institutionnalisé.
+
+:::example
+En 2010, le bitcoin s’échange entre quelques passionnés, pour des montants dérisoires : les 10 000 bitcoins de la pizza valent alors une quarantaine de dollars. En 2025, les plateformes centralisées échangent environ 18 600 milliards de dollars de crypto-actifs au comptant, dont une large part en bitcoins.
+:::
+
+Le tournant est symbolique. En janvier 2024, l’autorité américaine des marchés financiers, la SEC, autorise les **ETF** bitcoin au comptant. Un ETF est un fonds coté en Bourse : on en achète des parts comme des actions, et le fonds détient les bitcoins correspondants. Vous pouvez donc détenir du bitcoin sans clé privée ni portefeuille, depuis un simple compte-titres.
+
+Les géants de la gestion d’actifs s’y engouffrent, à commencer par BlackRock. En 2026, les ETF américains détiennent environ 1,3 million de bitcoins, soit plus de 6 % de l’offre. Des entreprises cotées en accumulent aussi : la société Strategy en détient à elle seule plus de 800 000.
+
+Une grande partie du bitcoin est ainsi détenue ou véhiculée par les institutions financières que Nakamoto voulait contourner. Le bitcoin y devient un produit financier parmi d’autres, que l’on achète pour diversifier un portefeuille ou pour spéculer.
+
+Il faut donc parler d’une double histoire. C’est une réussite : un protocole lancé par un inconnu, sans entreprise ni État, est devenu un actif reconnu de la finance mondiale. Et le protocole reste ouvert : chacun peut encore détenir ses bitcoins soi-même, sans banque, et faire vivre le rêve libertarien.
+
+Mais c’est aussi une trahison du projet initial. Le bitcoin devait permettre d’échapper aux banques ; il est aujourd’hui largement intermédié par elles. Il devait échapper à l’État ; une partie de l’industrie crypto cherche désormais ses faveurs.
+
+:::example
+En 2024, le super PAC Fairshake, financé par des entreprises de la crypto, dépasse 200 millions de dollars de collecte et devient le premier comité de campagne des élections américaines. En juillet 2024, Donald Trump, longtemps critique du bitcoin, prononce le discours principal de la conférence Bitcoin 2024, à Nashville. Une fois élu, il signe en mars 2025 un décret créant une réserve stratégique de bitcoins. Sa famille lance ses propres entreprises crypto.
+:::
+
+:::warning
+Fairshake soutient des candidats des deux partis, à condition qu’ils soient favorables à la crypto. Le soutien à Trump ne vient que d’une partie de l’industrie.
+:::
+
+Ce rapprochement entre la crypto, la finance et l’État américain va plus loin encore avec les stablecoins.
+
+[Sources]
+
+- [CoinGecko — 2025 Annual Crypto Industry Report](https://www.coingecko.com/research/publications/2025-annual-crypto-report)
+- [TradingView / Crypto Briefing — Bitcoin ETFs now hold 6% of total Bitcoin market cap](https://www.tradingview.com/news/cryptobriefing:d51c983dd094b:0-bitcoin-etfs-now-hold-6-of-total-bitcoin-market-cap/)
+- [DefiLlama — Strategy, Inc. (Digital Asset Treasury)](https://defillama.com/digital-asset-treasury/mstr)
+- [Cointelegraph — Fairshake, premier super PAC de 2024](https://cointelegraph.com/magazine/crypto-super-pac-fairshake-top-funding-spot-beats-maga-open-secrets)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-030-stablecoins" title="Stablecoins" -->
+## Stablecoins
+Le retour du grand autre {.kicker}
+
+--- notes
+
+La volatilité du bitcoin a fait naître une autre famille de crypto-monnaies : les **stablecoins**. Un stablecoin est un jeton émis sur une blockchain, dont la valeur est fixée par rapport à une monnaie officielle.
+
+Il existe des stablecoins indexés sur l’euro ou sur d’autres monnaies. Mais le dollar écrase tout. Les stablecoins indexés sur le dollar représentent environ 99 % de l’offre totale.
+
+:::example
+En septembre 2026, la capitalisation des stablecoins dépasse 300 milliards de dollars. Deux émetteurs dominent. L’USDT, émis par Tether, représente environ 183 milliards, soit 60 % du marché. L’USDC, émis par la société américaine Circle, environ 74 milliards.
+
+Tous les stablecoins en euros réunis dépassent à peine 900 millions de dollars, soit environ 0,3 % du marché. Le premier d’entre eux, l’EURC, est d’ailleurs émis par Circle.
+:::
+
+Les crypto-monnaies s'alignent ainsi sur la hiérarchie géo-politique du vieux monde. Le dollar reste la monnaie internationale de référence : on l’utilise pour commercer, pour épargner et pour constituer des réserves, bien au-delà des États-Unis. La crypto n'échappe pas à la règle.
+
+D'après Graeber, les bons du Trésor accumulés à l’étranger fonctionnent comme un tribut versé à la puissance américaine. Les stablecoins offrent aujourd’hui une nouvelle manière de lever ce tribut.
+
+L’État américain a en effet de plus en plus de mal à se financer. Sa dette ne cesse de croître, et en mai 2025 l’agence Moody’s lui retire sa dernière note maximale. Les intérêts absorbaient environ 9 % de ses recettes en 2021 ; en 2024 ils en absorbaient 18 % ; en 2035, ils pourraient en absorber 30 %. Or certains grands acheteurs étrangers se détournent de sa dette.
+
+:::example
+En juillet 2026, les étrangers détiennent environ 9 250 milliards de dollars de bons du Trésor américain. Le Japon arrive en tête, avec environ 1 100 milliards. Suivent le Royaume-Uni, avec près de 1 000 milliards, puis la Chine, avec environ 620 milliards. Viennent ensuite des places financières comme la Belgique, les îles Caïmans, le Luxembourg ou l’Irlande, et le Canada.
+
+La Chine, longtemps premier détenteur, réduit ses avoirs depuis plusieurs années. Les places financières, elles, gardent surtout des titres pour le compte d’investisseurs du monde entier.
+:::
+
+Or, les stablecoins apportent de nouveaux acheteurs. Pour tenir la parité, l’émetteur conserve des réserves : principalement des liquidités et des bons du Trésor américain à court terme. Chaque jeton en circulation est censé être couvert par un dollar de réserve.
+
+:::example
+Tether ne traite pas directement avec les particuliers. Ses clients sont de gros acteurs : plateformes d’échange, sociétés de trading, fonds. Une plateforme vire par exemple 10 millions de dollars à Tether. Tether crée, ou « frappe », 10 millions d’USDT sur la blockchain et les lui envoie. En retour, ll place, pour l’essentiel, ces 10 millions de dollars en bons du Trésor.
+
+La plateforme revend ensuite ces USDT à ses clients. Un épargnant vénézuélien en achète 1 000 avec ses bolivars, sans jamais avoir affaire à Tether. Il détient des jetons qui circulent comme des crypto-monnaies. Tether, lui, détient une créance sur l’État américain, dont il perçoit les intérêts.
+
+Le chemin inverse fonctionne de la même manière. La plateforme rend des USDT à Tether, qui les détruit et lui reverse des dollars, en vendant au besoin des bons du Trésor.
+:::
+
+Chaque dollar de stablecoin acheté quelque part dans le monde devient donc un dollar prêté à l’État américain.
+
+
+:::example
+Tether déclare en 2026 environ 141 milliards de dollars d’exposition aux bons du Trésor. Il serait ainsi le dix-septième détenteur mondial de dette américaine, devant des États comme Taïwan ou Israël.
+
+Les réserves de Circle couvrent ses quelque 74 milliards d’USDC. Elles sont composées d’environ 80 % de bons du Trésor, soit près de 60 milliards de dollars, et de 20 % de liquidités, soit environ 15 milliards. Elles sont placées pour l’essentiel dans un fonds géré par BlackRock.
+:::
+
+Les stablecoins font donc bien l’affaire des États-Unis. L’administration Trump encourage fortement leur essor, parce qu’elle y trouve un double intérêt.
+
+D’abord, ils financent la dette américaine, au moment où certains détenteurs étrangers s’en détournent. L’État américain peut ainsi continuer à vivre à crédit.
+
+Ensuite, ils ancrent le dollar comme monnaie internationale. Or cette position est aujourd’hui contestée : la puissance américaine est concurrencée par l’émergence d’autres puissances, à commencer par la Chine. Chaque stablecoin étend l’usage du dollar dans le monde, jusque chez des usagers qui n’ont aucun accès aux banques américaines.
+
+En juillet 2025, les États-Unis adoptent ainsi le *GENIUS Act*. La loi encadre les stablecoins en dollars et impose qu’ils soient couverts par des actifs sûrs : liquidités, dépôts et bons du Trésor.
+
+:::warning
+Mais un stablecoin ne vaut que ce que valent ses réserves, et la confiance dans ceux qui les gardent.
+:::
+
+:::example
+En mars 2023, l’USDC de Circle, pourtant adossé à des réserves réelles, perd brièvement sa parité. Environ 3,3 milliards de dollars de ses réserves sont déposés à la Silicon Valley Bank, qui vient de faire faillite. La parité revient lorsque les autorités américaines garantissent l’ensemble des dépôts de la banque.
+:::
+
+Le grand autre se manifeste précisément quand il fait défaut. Le stablecoin le plus sûr est celui dont l’État garantit, directement ou indirectement, les réserves.
+
+Le retournement est complet. La crypto voulait une monnaie sans grand autre. Avec les stablecoins, une grande partie de son usage monétaire repose sur des dollars tokenisés, c’est-à-dire sur la dette de l’État américain.
+
+Même dans l’univers crypto, la monnaie qui circule réellement est une dette d’État, adossée à la puissance qui la garantit.
+
+Reste à voir qui utilise réellement ces dollars numériques.
+
+[Sources]
+
+- [U.S. Congress — GENIUS Act, S.1582, 119e Congrès](https://www.congress.gov/bill/119th-congress/senate-bill/1582)
+- [U.S. Treasury — Major Foreign Holders of Treasury Securities](https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.html)
+- [Congressional Research Service — Foreign Holdings of Federal Debt, avril 2026](https://www.congress.gov/crs_external_products/RS/PDF/RS22331/RS22331.52.pdf)
+- [Stablecoin Beat — Stablecoin Market Cap Tracker](https://stablecoinbeat.com/tracker/)
+- [CoinGecko — Top EUR Stablecoins by Market Cap](https://www.coingecko.com/en/categories/eur-stablecoin)
+- [Coinpedia — Tether Q1 2026 Profit Hits $1.04B, Treasury Holdings Surge](https://coinpedia.org/crypto-live-news/tether-q1-2026-profit-hits-1-04b-treasury-holdings-surge/)
+- [Circle — USDC](https://www.circle.com/usdc)
+- [CNN — The United States just lost its last perfect credit rating, 16 mai 2025](https://www.cnn.com/2025/05/16/business/moody-us-credit)
+- [Allianz Global Investors — US rating downgrade highlights debt sustainability concerns](https://www.allianzgi.com/en/insights/outlook-and-commentary/us-rating-downgrade-highlights-debt-sustainability-concerns)
+
+[/Sources]
+
+---
+Crypto-monnaies reçues, mi-2024 – mi-2025 {.kicker}
+
+| Pays      | Crypto reçues | PIB 2024   | Part du PIB |
+| :-------- | ------------: | ---------: | ----------: |
+| Venezuela |        45 Md$ |   ~100 Md$ |       ~45 % |
+| Nigeria   |        92 Md$ |   ~245 Md$ |       ~38 % |
+| Argentine |        94 Md$ |   ~630 Md$ |       ~15 % |
+| Turquie   |       200 Md$ | ~1 320 Md$ |       ~15 % |
+| Iran      |       7,5 Md$ |   ~435 Md$ |        ~2 % |
+
+
+
+--- notes
+
+Les grands usagers des stablecoins ne sont pas forcément ceux que l’on imagine. En volume, les grands marchés restent les pays riches. Mais rapportés à la taille de l’économie, les usagers les plus intensifs se trouvent ailleurs : dans des pays où la monnaie nationale s’effondre et où l’accès au dollar est difficile.
+
+:::example
+Le tableau rapporte les crypto-monnaies reçues en un an, de mi-2024 à mi-2025, à la taille de chaque économie. Les ratios sont des ordres de grandeur.
+
+Le chiffre iranien porte sur l’année 2025 et ne couvre que les plateformes iraniennes : il sous-estime l’activité réelle.
+
+Ces flux passent largement par des stablecoins : environ 62 % en Argentine et 43 % en Afrique subsaharienne, contre 45 % en moyenne mondiale. Au Venezuela, on fixe loyers et prix en USDT, que l’on appelle le « dollar Binance ». En Iran, où le rial perd la moitié de sa valeur en huit mois en 2025, la banque centrale elle-même achète au moins 507 millions de dollars d’USDT pour soutenir sa monnaie.
+:::
+
+Ces usagers ne choisissent pas le dollar par goût de la crypto. Ils y recourent par nécessité : pour protéger leur épargne, recevoir de l’argent de l’étranger ou commercer malgré les sanctions. Le stablecoin leur donne accès au dollar sans compte bancaire américain.
+
+Le paradoxe est profond. Leurs économies sont souvent fragilisées par leur position dans l’ordre international dominé par les États-Unis : sanctions contre l’Iran et le Venezuela, dettes libellées en dollars, dépendance aux décisions de la Réserve fédérale. Pour s’en protéger, ils achètent des dollars numériques. Et ces dollars sont placés en bons du Trésor : ils financent l’État américain, et donc la politique de l’administration Trump.
+
+:::important
+Les victimes de la puissance du dollar s’y réfugient, et en s’y réfugiant, elles la financent. C’est la forme contemporaine du tribut dont parlait Graeber.
+:::
+
+Le refuge reste d’ailleurs sous contrôle américain. En juillet 2025, Tether gèle 42 portefeuilles liés à l’Iran, dont beaucoup sont rattachés à la plateforme iranienne Nobitex. Un émetteur privé peut ainsi appliquer les sanctions des États-Unis jusque dans les portefeuilles des particuliers.
+
+Face à cette extension numérique du dollar, d’autres États cherchent leur propre réponse.
+
+[Sources]
+
+- [Chainalysis — The 2025 Global Adoption Index](https://www.chainalysis.com/blog/2025-global-crypto-adoption-index/)
+- [Chainalysis — Latin America Cryptocurrency Adoption](https://www.chainalysis.com/blog/latin-america-cryptocurrency-adoption/)
+- [Chainalysis — Sub-Saharan Africa Shows Strong Crypto Retail Activity](https://www.chainalysis.com/blog/subsaharan-africa-crypto-adoption-2025/)
+- [Chainalysis — Crypto Adoption in MENA 2025](https://www.chainalysis.com/blog/middle-east-north-africa-crypto-adoption-2025/)
+- [Cointelegraph — Iran’s central bank bought USDT, Elliptic finds](https://cointelegraph.com/news/iran-central-bank-usdt-elliptic-rial)
+- [Cointelegraph via TradingView — Venezuela’s stablecoin use case grows amid sanctions](https://www.tradingview.com/news/cointelegraph:2c253a86d094b:0-venezuela-s-stablecoin-use-case-grows-amid-war-threats-ongoing-sanctions/)
+
+[/Sources]
+
+---
+## Monnaies numériques de banque centrale
+La réponse des États {.kicker}
+
+--- notes
+
+Les États ne se contentent pas d’encadrer les stablecoins. Certains développent leurs propres monnaies numériques, appelées **monnaies numériques de banque centrale**.
+
+Une monnaie numérique de banque centrale est de la monnaie centrale, comme les billets, mais sous forme numérique. Son détenteur possède une créance directe sur la banque centrale, et non sur une banque commerciale ou sur un émetteur privé comme Tether.
+
+:::example
+L’argent sur votre compte courant est une dette de votre banque envers vous, comme nous l’avons vu au premier chapitre. Entre les mains du public, seuls les billets sont de la monnaie de banque centrale. Un euro numérique serait l’équivalent d’un billet, mais utilisable en ligne.
+:::
+
+Les grandes puissances font des choix opposés.
+
+La Chine expérimente depuis 2020 l’e-CNY, un yuan numérique émis par sa banque centrale.
+
+La zone euro prépare un euro numérique. Le Conseil de l’Union européenne a arrêté sa position en décembre 2025, et le Parlement européen en juillet 2026. Si la législation est adoptée, la BCE vise une première émission possible en 2029.
+
+Les États-Unis font le choix inverse. Par un décret du 23 janvier 2025, Donald Trump interdit aux agences fédérales de créer ou de promouvoir une monnaie numérique de banque centrale. Les États-Unis misent sur des stablecoins privés, adossés à la dette publique.
+
+Le grand autre ne revient donc pas sous une seule forme. Aux États-Unis, il passe par des émetteurs privés adossés à la dette publique. En Chine, et peut-être en Europe, il prend la forme d’une monnaie publique directe.
+
+Les monnaies numériques publiques soulèvent des inquiétudes. Une banque centrale pourrait, en principe, observer les paiements de chacun ; c’est une critique fréquente de l’e-CNY. On retrouve la question de la vie privée qui animait les cypherpunks au premier chapitre.
+
+En Europe, cette inquiétude prend une forme particulière. L’euro numérique est souvent pensé comme une réponse au recul des espèces. En 2024, le cash ne sert plus que dans 52 % des paiements en magasin dans la zone euro, contre 59 % en 2022.
+
+Or le cash a une propriété unique : il ne laisse pas de trace. Un billet passe de main en main sans qu’aucune banque n’enregistre la transaction. Ses critiques craignent donc que l’euro numérique accompagne, voire accélère, la disparition du dernier moyen de paiement anonyme.
+
+:::warning
+La BCE s’en défend. Elle présente l’euro numérique comme un complément des espèces, et non comme leur remplaçant. Elle promet aussi une version hors ligne, dont la confidentialité serait proche de celle du cash : seuls le payeur et le bénéficiaire connaîtraient la transaction. Les paiements en ligne resteraient en revanche visibles des intermédiaires, au titre de la lutte contre le blanchiment.
+:::
+
+Mesurons pour finir le chemin parcouru depuis les cypherpunks. Dans les années 1990, ils rêvent d’une monnaie numérique anonyme, qui échapperait aux banques et aux États. Bitcoin réalise une partie de ce rêve en 2009 : une monnaie sans banque ni État. Mais son registre public rend chaque transaction traçable.
+
+Son premier grand usage, Silk Road, est libertarien et illégal ; il se termine par une arrestation. Le bitcoin entre ensuite à Wall Street, par les ETF, et une partie de l’industrie crypto cherche les faveurs du pouvoir américain. Avec les stablecoins, la crypto devient un véhicule du dollar et de la dette américaine, et un émetteur privé applique les sanctions des États-Unis. Enfin, les États reprennent la technologie à leur compte, avec des monnaies numériques peut-être plus traçables que le cash.
+
+:::important
+La technologie inventée pour échapper aux banques, aux États et à la surveillance sert aujourd’hui à étendre la puissance du dollar, et pourrait faciliter le contrôle des paiements.
+:::
+
+Il reste à confronter, pour conclure, les deux réponses que la crise de 2008 a suscitées.
+
+[Sources]
+
+- [BCE — Update on the digital euro project, décembre 2025](https://www.ecb.europa.eu/euro/digital_euro/timeline/profuse/shared/pdf/ecb.dep251202_18erpb_item2_updatedigitaleuroproject.en.pdf)
+- [Maison-Blanche — Executive Order 14178, Strengthening American Leadership in Digital Financial Technology, 23 janvier 2025](https://www.govinfo.gov/content/pkg/DCPD-202500169/html/DCPD-202500169.htm)
+- BCE, *Study on the payment attitudes of consumers in the euro area (SPACE)*, 2024.
+- [Law Society Gazette — « Cash-like » privacy for digital euro, juin 2024](https://www.lawsociety.ie/gazette/top-stories/2024/june/cash-like-privacy-for-digital-euro--ecb/)
+
+[/Sources]
+
+---
+<!-- slide: id="blockchain-031-conclusion" title="Nakamoto / Graeber" -->
+## Nakamoto / Graeber
+Deux réponses à 2008 {.kicker}
+
+--- notes
+
+Revenons au point de départ. Le bloc Genesis de Bitcoin porte le titre du *Times* du 3 janvier 2009 : « Chancellor on brink of second bailout for banks ». *Dette* paraît en 2011, l’année d’Occupy Wall Street. Nakamoto et Graeber répondent à la même crise. Leurs diagnostics sont opposés.
+
+Pour Nakamoto, la crise vient de la confiance que nous devons accorder aux banques centrales et aux banques commerciales, qui créent la monnaie par le crédit. Sa réponse consiste à soustraire la monnaie à la dette et à la décision humaine.
+
+Bitcoin remplace ainsi la confiance dans des institutions par des règles et des incitations. Son émission est fixée à l’avance, et son registre est conçu pour qu’aucune transaction validée ne puisse être effacée. La politique monétaire est inscrite dans le protocole : c’est la « politique sans politique » vue au premier chapitre.
+
+Pour Graeber, cette réponse repose sur une erreur. La monnaie n’a jamais été une chose : elle a toujours été une promesse, une manière de mesurer ce que les gens se doivent. On ne peut donc pas la soustraire à la dette.
+
+La question politique est alors ailleurs. Qui crée la monnaie ? Qui doit à qui ? Et surtout, qui peut annuler les dettes ? Graeber rappelle que les sociétés anciennes pratiquaient régulièrement l’effacement des dettes, comme l’*amargi* sumérien ou le jubilé biblique.
+
+Il observe aussi que, pendant des millénaires, les insurrections populaires ont souvent commencé par la destruction des registres de dettes : tablettes, papyrus, livres de comptes.
+
+C’est ici que l’opposition devient la plus nette. La blockchain est un registre conçu pour ne rien oublier. Aucun roi, aucune assemblée, aucune insurrection ne peut en effacer une ligne. Là où Graeber voit dans l’effacement des dettes une condition de la liberté, Bitcoin fait de l’impossibilité d’effacer une garantie.
+
+:::warning
+L’opposition doit rester précise. Le registre de Bitcoin n’enregistre pas des dettes, mais des transferts de bitcoins entre adresses. Ce qui s’oppose, ce sont deux conceptions de la monnaie : une chose rare dont la propriété doit être inviolable, ou une relation de dette que la collectivité peut renégocier.
+:::
+
+Nous pouvons maintenant répondre à la question posée au début. D’où le bitcoin tire-t-il sa valeur ? De la seule croyance partagée de ses détenteurs, sans État pour l’accepter en paiement de l’impôt et sans émetteur qui s’engage à le rembourser. C’est ce qui fait sa singularité ; c’est aussi ce qui explique sa volatilité.
+
+Les stablecoins montrent que le débat n’est pas tranché par la seule technique. La crypto qui sert effectivement de monnaie revient à la dette d’État. Le grand autre que Bitcoin voulait congédier réapparaît au cœur de l’écosystème.
+
+Reste une question, que nous retrouverons avec Ethereum et le *mechanism design*. Si l’on confie les règles monétaires à un protocole et à des incitations, qui garde le pouvoir de les modifier, et au nom de quoi ?
+
+:::comment
+Ouvrir la discussion avec les étudiants : une monnaie doit-elle être inviolable ou renégociable ? Laisser la question ouverte avant d’annoncer le chapitre sur Ethereum.
+:::
+
+[Sources]
+
+- David Graeber, *Dette*, en particulier chap. 1 et 12.
+- [Satoshi Nakamoto — Bitcoin: A Peer-to-Peer Electronic Cash System, 2008](https://bitcoin.org/bitcoin.pdf)
+
+[/Sources]
