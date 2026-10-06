@@ -8,6 +8,7 @@ const directiveLayoutNames = new Set([
   "center",
   "cover",
   "stack",
+  "row",
   "grid",
 ]);
 const directiveColumnNames = new Set(["column", "left", "right"]);

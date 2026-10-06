@@ -267,6 +267,20 @@
     gap: var(--_gap);
 }
 
+.slide[data-slide-surface][data-layout="row"],
+.slide[data-slide-surface] .layout.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--_gap);
+}
+
+/* Row items share the width instead of wrapping out of the fixed slide. */
+.slide[data-slide-surface][data-layout="row"]>*,
+.slide[data-slide-surface] .layout.row>* {
+    min-width: 0;
+}
+
 .slide[data-slide-surface][data-align="start"] {
     align-items: start;
     text-align: start;
@@ -282,7 +296,7 @@
     text-align: end;
 }
 
-.slide[data-slide-surface] :is(.layout.two-columns, .layout.columns, .layout.center, .layout.cover, .layout.stack) {
+.slide[data-slide-surface] :is(.layout.two-columns, .layout.columns, .layout.center, .layout.cover, .layout.stack, .layout.row) {
     height: 100%;
 }
 

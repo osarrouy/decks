@@ -54,7 +54,7 @@ En 2004, Patrick Le Lay, alors PDG de TF1 déclarait ainsi, dans un entretien à
 
 20 ans plus tard, Reed Hastings, le CEO de Netflix affirmera de son côté que son principal concurrent est le temps de sommeil des populations.
 
-Les choses, en effet, ne sont pas arrangées depuis les publications de Smythe.
+Car les choses ne sont pas arrangées depuis les publications de Smythe.
 
 L’offre marchande, mais aussi l’offre informationnelle, n’ont cessé, depuis 40 ans, de croitre jusqu’à atteindre un certain point de saturation.
 

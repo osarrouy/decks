@@ -85,7 +85,7 @@ Development apps use separate `<view>-dev` directories inside `.svx-deck.nosync/
 
 `---` starts a slide; `--- notes` starts its notes. A slide's title is inferred from its first heading and its ID from the title; source order controls navigation. Optional `<!-- slide: ... -->` metadata sets `id`, `title`, `steps`, `layout`, `align` or `tone`.
 
-Layouts: `cover`, `center`, `two-columns`, `columns`, `stack`. Alignment values: `start`, `center`, `end`. Internal Markdown containers such as `::: columns`, `::: column` and `::: center` provide equivalent layout blocks. Unknown container names become classes.
+Layouts: `cover`, `center`, `two-columns`, `columns`, `stack`, `row`. `row` places its children side by side, centered; they shrink rather than wrap on narrow surfaces. Alignment values: `start`, `center`, `end`. Internal Markdown containers such as `::: columns`, `::: column` and `::: center` provide equivalent layout blocks. Unknown container names become classes.
 
 Pandoc-style attributes can be appended to headings and images:
 

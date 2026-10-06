@@ -5,140 +5,243 @@ description: Attention, publicité, plateformes et ouverture vers l’IA. Cours 
 
 <!-- slide: id="ouverture" title="Économie des données" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h1>Économie des données</h1>
-  <p class="meta">Attention, publicité et plateformes</p>
-</Page>
+# Économie des données
+Publicité, attention, plateforme {.kicker}
 
 --- notes
 
-Nous avons vu que publier ne garantit pas d’être visible. Les relations entre les personnes distribuent des possibilités de rencontre. Des entreprises organisent aussi ces rencontres et en tirent des revenus.
+Nous avons tous vécu une scène où nous rentrons chez nous et nous nous sentons, par exemple, un peu tendus derrière les jambes.
 
-Ce cours suit une activité ordinaire : consulter un contenu, laisser une trace, recevoir une annonce. Nous chercherons qui mesure cette activité, ce qui est vendu et ce que cette organisation change dans l’expérience.
-
-:::comment
-Prévoir quatre heures, dont dix minutes de pause. L’ouverture et la scène suivante occupent quatre minutes au total.
-:::
+Déterminé à prendre soin de nous, nous cherchons alors sur Google : étirement ischio jambier.
 
 ---
 
-<!-- slide: id="camille" title="Une visite ordinaire" layout="stack" steps=0 -->
-
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Camille prépare un trajet.</h2>
-  <div class="columns three">
-    <div><p>Un article</p></div>
-    <div><p>Un casque</p></div>
-    <div><p>Une vidéo</p></div>
-  </div>
-</Page>
+<FramedImage
+  src="/recherche-ischio.png"
+  alt="Google Search"
+/>
 
 --- notes
 
-Camille consulte un article sur les trajets à vélo. Une annonce lui propose un casque, puis le service lui recommande une vidéo. Le même geste met plusieurs acteurs en relation.
+De là, nous ouvrons un ou deux liens et consultons quelques vidéos.
 
-Camille veut préparer son trajet. Le média veut être lu et financer son activité. Le commerçant veut vendre un casque. Un intermédiaire peut organiser le contact publicitaire.
+La soirée passe et comme chaque soir nous finissons par aller trainer sur Instagram.
+
+---
+<!-- slide: layout="row" -->
+
+<FramedImage
+  src="/instagram-etirement-1.png"
+  alt="Instagram Ads"
+/>
+
+<FramedImage
+  src="/instagram-etirement-2.png"
+  alt="Instagram Ads"
+/>
+
+
+--- notes
+
+Et là, suprise, notre feed est rempli d'annonces pour des applis ou des programmes d'étirement.
 
 :::comment
-Demander ce qui peut être vendu dans cette scène. Recueillir les réponses sans trancher : l’article, l’emplacement, la visite, le clic, l’achat ou le profil supposé de Camille.
+Notez la mention « Sponsorisée » : un annonceur a payé pour cet affichage.
 :::
+
+Content de nous et satisfait de notre effort en matière d'étirements, nous décidons de nous récompenser en cherchant des bijoux sur Google.
+
+---
+<FramedImage
+  src="/recherche-bracelet.png"
+  alt="Google Search"
+/>
+
+--- notes
+
+Même scénario. On se balade et on ouvre quelques lien avant de se rappeler qu'on est à découvert et qu'on ferait mieux de repousser notre achat.
+
+---
+<!-- slide: layout="row" -->
+
+<FramedImage
+  src="/instagram-bracelet.png"
+  alt="Instagram Ads"
+/>
+
+<FramedImage
+  src="/instagram-collier.png"
+  alt="Instagram Ads"
+/>
+
+--- notes
+
+Mais au réveil, le lendemain matin, notre feed n'a pas renoncé. Il nous assaille de publicités pour des bijoux assez proches de ceux que l'on porte déjà.
+
+Le système ne se contente donc pas de répéter ma recherche. Il estime un intérêt plus large et propose des produits voisins.
+
+Comment Instagram peut-il savoir ?
+
+---
+## Data
+Traces et profilage {.kicker}
+
+--- notes
+
+Instagram n’a pas directement eu accès à notre recherche Google. Google et Meta sont concurrents : Google ne vend pas nos requêtes à Meta.
+
+Mais les sites que nous avons ouverts intègrent souvent des outils de Google et de Meta qui signalent à chacune e ces entreprises les pages consultées ou les articles mis au panier.
+
+Ces traces circulent donc entre les sites, les applications et les plateformes. Or, une fois agrégées, elles disent beaucoup de nous.
+
+:::example
+Chez Google : la requête « étirement ischio jambier », son heure, la position approximative déduite de notre connexion ; puis les vidéos d’étirement regardées sur YouTube.
+
+Sur les sites ouverts : les pages consultées, la durée de la visite, le bracelet mis au panier puis abandonné. La balise de Google et le pixel de Meta signalent enregistrent de ces gestes.
+
+Dans nos applications : l’application de course installée sur notre téléphone signale à Meta ses ouvertures grâce au kit logiciel qu’elle intègre.
+
+Hors ligne : nous avons acheté un tapis de sol en magasin en donnant notre adresse e-mail. L’enseigne peut transmettre sa liste de clients, sous forme codée, à Google comme à Meta.
+
+Sur Instagram : les vidéos regardées jusqu’au bout, les comptes de surf suivis, les mentions « J’aime » et l’heure à laquelle nous ouvrons l’application chaque soir.
+
+Enfin, notre appareil lui-même : le modèle du téléphone, son identifiant publicitaire, son adresse IP et sa langue.
+:::
+
+Prise isolément, chacune de ces traces dit peu de chose. Rapprochées, elles dessinent une personne : sportive, soucieuse de son corps, attirée par les bijoux, qui consulte les prix sans acheter, et disponible sur Instagram le soir.
 
 :::warning
-**Précision.** L’exemple est fictif. La donnée ne possède pas une valeur naturelle : sa valeur dépend de l’usage qu’un acteur peut en faire.
+**Précision.** Ces traces ne sont pas toutes collectées ni rapprochées à chaque fois. Cela dépend des outils installés par chaque site, de nos réglages et de nos consentements, comme le refus des cookies ou du suivi entre applications sur iPhone.
 :::
 
-Avant de suivre l’argent, il faut distinguer ce qui se passe de ce que le dispositif enregistre.
+C’est à partir de ce rapprochement que se construit un profil.
+
+**Sources.** [Meta, Meta Pixel](https://developers.facebook.com/docs/meta-pixel/) ; [Meta, Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/) ; [Google Ads, Customer Match](https://support.google.com/google-ads/answer/6379332).
+
+---
+## Profiler et prédire
+Une nouvelle gouvernementalité {.kicker}
+
+--- notes
+
+Un profil rassemble ce qu’un système suppose de nous : nos centres d’intérêt, nos habitudes, nos achats probables.
+
+Le but n’est pas de nous connaître pour nous connaître. Il s’agit de rendre nos actions et nos désirs prévisibles : savoir qui cliquera, qui achètera, et à quel moment.
+
+C’est pourquoi la donnée est souvent présentée comme le nouvel or noir du capitalisme numérique. Elle constitue en effet la matière première de son modèle économique : la capacité à prédire nos comportements et à devancer nos désirs.
+
+Cette capacité de prédiction tire l’essentiel de ses revenus de la vente de publicité ciblée - mais, nous le verrons, pas uniquement : l’assurance, le travail ou la santé s’emparent aussi de ces prédictions.
+
+La publicité en ligne reste toutefois le principal marché de ces capacités prédictives. Et ce marché est colossal.
 
 ---
 
-<!-- slide: id="trace-signal" title="Ce que laisse une visite" layout="stack" steps=0 -->
+<!-- slide: id="marche" title="Un marché colossal" steps=3 -->
 
 <script>
-  import Page from "$components/EconomicsSlide.svelte";
+  import AdMarketDonut from "$components/AdMarketDonut.svelte";
 </script>
 
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>Donnée</dt>
-      <dd>18 h 12</dd>
-    </div>
-    <div>
-      <dt>Trace</dt>
-      <dd>Une page ouverte</dd>
-    </div>
-    <div>
-      <dt>Information</dt>
-      <dd>Un article sur le vélo</dd>
-    </div>
-    <div>
-      <dt>Signal</dt>
-      <dd>Un intérêt supposé</dd>
-    </div>
-    <div>
-      <dt>Connaissance</dt>
-      <dd>Une interprétation justifiée</dd>
-    </div>
-  </dl>
-</Page>
+<AdMarketDonut />
 
 --- notes
 
-Une donnée est une représentation enregistrée. Une trace est ce qui reste d’une activité dans un dispositif. Ici, le journal de consultation indique qu’une page a été ouverte à 18 h 12.
+En 2025, les investissements publicitaires mondiaux atteignent environ 1 140 milliards de dollars selon WPP Media. Ils progressent de près de 9 % en un an.
 
-Le contexte donne à cette donnée une signification : la page concerne le vélo. Elle devient un signal lorsqu’un système l’utilise pour décider, par exemple pour estimer un intérêt et choisir une annonce.
+La publicité numérique en représente près des trois quarts. Il s’agit des annonces vendues par les acteurs du web : moteurs de recherche, réseaux sociaux, sites, applications et places de marché comme Amazon.
 
-Mais Camille peut chercher pour un proche. Le signal ne révèle donc pas directement son intention. Pour parler de connaissance, il faut pouvoir justifier l’interprétation et en préciser les limites.
+En ajoutant les extensions numériques des médias traditionnels, la part dépasse 80 %. La télévision en streaming désigne les publicités diffusées sur les plateformes vidéo et les services de replay des chaînes, comme TF1+. L’**affichage numérique** désigne les écrans publicitaires installés dans l’espace public : gares, métro, abribus ou centres commerciaux. Les sites des journaux entrent aussi dans ce total.
 
 :::warning
-**Précision.** Ces mots constituent notre convention pédagogique. Ils ne décrivent pas les étapes automatiques d’une transformation des traces en vérité.
+**Précision.** L’affichage numérique ne désigne pas les bannières sur le web. Le mot « affichage » renvoie ici à l’affichage urbain, dont les panneaux deviennent des écrans. La frontière entre ces catégories est une convention de WPP Media : elle classe ces revenus selon le média traditionnel qui les vend — télévision, affichage, presse — et non selon la technique de diffusion.
 :::
+
+Dans cette part numérique, trois groupes dominent. Alphabet en capte environ un tiers, Meta un cinquième et Amazon 7 %. À eux trois, ils réunissent donc environ 60 % de la publicité numérique mondiale.
 
 :::comment
-Prévoir six minutes. Faire distinguer l’événement enregistré, l’intérêt supposé et la décision d’afficher une annonce.
+- Étape 0 : le marché total.
+- Étape 1 : la publicité numérique.
+- Étape 2 : avec le streaming et l’affichage numérique.
+- Étape 3 : les parts d’Alphabet, Meta et Amazon.
 :::
 
-Mesurer des publics et vendre un accès à eux précède les traces numériques.
+:::warning
+**Précision.** Ces chiffres sont des estimations d’agences. Leurs périmètres varient : publicité politique américaine incluse ou non, extensions numériques des médias traditionnels comptées ou non. Retenir l’ordre de grandeur. Les parts des trois groupes rapportent leurs revenus publicitaires déclarés à cette estimation du marché numérique : ce sont des ordres de grandeur, pas des parts de marché mesurées.
+:::
+
+**Sources.** [WPP Media, juin 2025](https://www.wppmedia.com/news/tyny-midyear-2025) ; [WPP Media, décembre 2025, présenté par The Media Leader](https://fr.themedialeader.com/this-year-next-year-la-publicite-mondiale-devrait-croitre-de-88-en-2025/).
+
+---
+
+<!-- slide: id="concentration" title="Un marché concentré" layout="stack" steps=0 -->
+
+|          | Publicité, 2025 | Part du chiffre d’affaires |
+| :------- | --------------: | -------------------------: |
+| Alphabet | 295 Md$         | 73 %                       |
+| Meta     | 196 Md$         | 98 %                       |
+| Amazon   | 69 Md$          | 10 %                       |
+
+--- notes
+
+Ce marché est concentré entre très peu de mains.
+
+Alphabet, maison-mère de Google et YouTube, tire 295 milliards de dollars de la publicité en 2025 : 73 % de ses revenus. Meta, maison-mère de Facebook, Instagram et WhatsApp, en tire 196 milliards. Pour Meta, la publicité n’est donc pas une activité parmi d’autres : elle constitue presque tout son chiffre d’affaires.
+
+Amazon vend aussi des emplacements publicitaires sur son site marchand : 69 milliards de dollars en 2025.
+
+Selon WARC, ces trois entreprises captent ensemble 55,8 % des dépenses publicitaires mondiales hors Chine. La Chine forme un marché distinct, dominé par d’autres acteurs comme ByteDance ou Alibaba.
+
+:::warning
+**Précision.** Les parts de marché varient selon les sources et les périmètres : marché total ou seulement numérique, Chine incluse ou non. Les revenus des entreprises viennent de leurs rapports annuels ; la part de 55,8 % est une estimation.
+:::
+
+**Sources.** [Alphabet, rapport annuel 2025](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm) ; [Meta, résultats 2025](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/) ; [Amazon, résultats 2025](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) ; [WARC, septembre 2025, présenté par Advanced Television](https://www.advanced-television.com/2025/09/25/forecast-alphabet-amazon-meta-take-55-8-of-2025-ad-market/).
+
+---
+
+<!-- slide: id="questions" title="Trois questions" layout="stack" steps=0 -->
+
+- Comment en sommes-nous arrivés là ?
+- Comment ce marché fonctionne-t-il ?
+- Quelles questions pose-t-il ?
+
+--- notes
+
+Ce cours suit trois fils. D’abord l’histoire : comment la publicité est devenue le principal financement du web. Ensuite le fonctionnement : les acteurs, les mesures et les enchères. Enfin les questions que cette organisation pose : vie privée, captation de l’attention, pouvoir des plateformes et lien avec l’IA.
+
+Nous rencontrerons souvent la formule « si c’est gratuit, c’est vous le produit ». Nous verrons ce qu’elle saisit et ce qu’elle simplifie.
+
+:::comment
+Prévoir deux minutes.
+:::
+
+Les plateformes du web n’ont pas inventé la publicité. Cet essor ne vient pas de nulle part et ne réinvente pas entièrement le modèle publicitaire. Pour le comprendre, il faut remonter avant le web : vendre l’accès à un public existait déjà dans la presse, à la radio et à la télévision.
 
 ---
 
 <!-- slide: id="smythe" title="L’audience marchandise" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>L’audience marchandise</h2>
-  <p class="meta">Dallas Smythe, 1977</p>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="Un média propose du contenu à un public et reçoit un paiement d’un annonceur."
-    ><text x="60" y="155">Public</text><text x="420" y="155">Média</text><text
-      x="785"
-      y="155">Annonceur</text
-    ><path
-      class="line"
-      d="M390 145H200m0 0 12-6m-12 6 12 6M750 145H560m0 0 12-6m-12 6 12 6"
-    /><text class="small" x="230" y="115">contenu</text><text
-      class="small"
-      x="600"
-      y="115">paiement</text
-    ><text class="highlight" x="310" y="255"
-      >Un accès au public se commercialise.</text
-    ></svg
-  >
-</Page>
+<h2>L’audience marchandise</h2>
+<p>Dallas Smythe, 1977</p>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="Un média propose du contenu à un public et reçoit un paiement d’un annonceur."
+  ><text x="60" y="155">Public</text><text x="420" y="155">Média</text><text
+    x="785"
+    y="155">Annonceur</text
+  ><path
+   
+    d="M390 145H200m0 0 12-6m-12 6 12 6M750 145H560m0 0 12-6m-12 6 12 6"
+  /><text x="230" y="115">contenu</text><text
+   
+    x="600"
+    y="115">paiement</text
+  ><text x="310" y="255"
+    >Un accès au public se commercialise.</text
+  ></svg
+>
 
 --- notes
 
@@ -164,17 +267,11 @@ Réunir un public ne suffit pas. Il faut obtenir une part de son attention.
 
 <!-- slide: id="rarete" title="L’attention disponible" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <div class="columns">
-    <div><h2>Des contenus abondants</h2></div>
-    <div><h2 class="accent">Une attention limitée</h2></div>
-  </div>
-  <p class="meta">Herbert Simon, 1971 · Michael Goldhaber, 1997</p>
-</Page>
+<div>
+  <div><h2>Des contenus abondants</h2></div>
+  <div><h2>Une attention limitée</h2></div>
+</div>
+<p>Herbert Simon, 1971 · Michael Goldhaber, 1997</p>
 
 --- notes
 
@@ -200,19 +297,13 @@ Compter des minutes suffit-il pour décrire une attention ?
 
 <!-- slide: id="citton" title="Une écologie de l’attention" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Une écologie de l’attention</h2>
-  <p class="meta">Yves Citton, 2014</p>
-  <div class="columns three">
-    <p>Des rythmes</p>
-    <p>Des relations</p>
-    <p>Des milieux</p>
-  </div>
-</Page>
+<h2>Une écologie de l’attention</h2>
+<p>Yves Citton, 2014</p>
+<div>
+  <p>Des rythmes</p>
+  <p>Des relations</p>
+  <p>Des milieux</p>
+</div>
 
 --- notes
 
@@ -240,28 +331,22 @@ Comment une attention située devient-elle une prestation commercialisable ?
 
 <!-- slide: id="biface" title="Qui paie quoi ?" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Qui paie quoi ?</h2>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="Le public reçoit un service. L’annonceur paie la plateforme pour accéder à une audience."
-    ><text x="70" y="120">Public</text><text x="395" y="120">Plateforme</text
-    ><text x="795" y="120">Annonceur</text><path
-      class="line"
-      d="M365 110H190m0 0 12-6m-12 6 12 6M765 110H610m155 0-12-6m12 6-12 6M765 210H610m0 0 12-6m-12 6 12 6"
-    /><text class="small" x="225" y="80">service</text><text
-      class="small"
-      x="617"
-      y="80">accès au public</text
-    ><text class="small" x="645" y="245">paiement</text></svg
-  >
-</Page>
+<h2>Qui paie quoi ?</h2>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="Le public reçoit un service. L’annonceur paie la plateforme pour accéder à une audience."
+  ><text x="70" y="120">Public</text><text x="395" y="120">Plateforme</text
+  ><text x="795" y="120">Annonceur</text><path
+   
+    d="M365 110H190m0 0 12-6m-12 6 12 6M765 110H610m155 0-12-6m12 6-12 6M765 210H610m0 0 12-6m-12 6 12 6"
+  /><text x="225" y="80">service</text><text
+   
+    x="617"
+    y="80">accès au public</text
+  ><text x="645" y="245">paiement</text></svg
+>
 
 --- notes
 
@@ -287,18 +372,12 @@ L’histoire du web publicitaire permet maintenant de suivre la construction des
 
 <!-- slide: id="hotwired" title="HotWired, 27 octobre 1994" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <p class="meta">HotWired · 27 octobre 1994</p>
-  <img
-    class="banner"
-    src="/first_add.png"
-    alt="Bannière AT&T : Have you ever clicked your mouse right HERE? YOU WILL."
-  />
-</Page>
+<p>HotWired · 27 octobre 1994</p>
+<img
+ 
+  src="/first_add.png"
+  alt="Bannière AT&T : Have you ever clicked your mouse right HERE? YOU WILL."
+/>
 
 --- notes
 
@@ -324,26 +403,20 @@ Quelle unité permet alors de facturer l’annonceur ?
 
 <!-- slide: id="metriques" title="Trois unités de mesure" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>CPM</dt>
-      <dd>Mille impressions</dd>
-    </div>
-    <div>
-      <dt>CPC</dt>
-      <dd>Un clic</dd>
-    </div>
-    <div>
-      <dt>CPA</dt>
-      <dd>Une action définie</dd>
-    </div>
-  </dl>
-</Page>
+<dl>
+  <div>
+    <dt>CPM</dt>
+    <dd>Mille impressions</dd>
+  </div>
+  <div>
+    <dt>CPC</dt>
+    <dd>Un clic</dd>
+  </div>
+  <div>
+    <dt>CPA</dt>
+    <dd>Une action définie</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -366,34 +439,31 @@ Prévoir trois minutes, puis cinq minutes pour le calcul suivant.
 <!-- slide: id="calculs" title="Une campagne fictive" layout="stack" steps=1 -->
 
 <script>
-  import Page from "$components/EconomicsSlide.svelte";
   import Fragment from "@svx-deck/core/components/Fragment.svelte";
 </script>
 
-<Page>
-  <p class="meta">Exemple fictif · budget : 100 €</p>
-  <div class="columns three">
-    <div>
-      <p class="large">10 000</p>
-      <p>impressions</p>
-    </div>
-    <div>
-      <p class="large">200</p>
-      <p>clics</p>
-    </div>
-    <div>
-      <p class="large">10</p>
-      <p>achats attribués</p>
-    </div>
+<p>Exemple fictif · budget : 100 €</p>
+<div>
+  <div>
+    <p>10 000</p>
+    <p>impressions</p>
   </div>
-  <Fragment at={1}
-    ><div class="columns three">
-      <p>CPM : 10 €</p>
-      <p>CPC : 0,50 €</p>
-      <p>CPA : 10 €</p>
-    </div></Fragment
-  >
-</Page>
+  <div>
+    <p>200</p>
+    <p>clics</p>
+  </div>
+  <div>
+    <p>10</p>
+    <p>achats attribués</p>
+  </div>
+</div>
+<Fragment at={1}
+  ><div>
+    <p>CPM : 10 €</p>
+    <p>CPC : 0,50 €</p>
+    <p>CPA : 10 €</p>
+  </div></Fragment
+>
 
 --- notes
 
@@ -419,29 +489,23 @@ L’unité définie, il reste à décider quel annonceur obtient quelle place.
 
 <!-- slide: id="goto" title="Des mots-clés aux enchères" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <p class="meta">GoTo · 1998</p>
-  <h2>« Casque vélo Rennes »</h2>
-  <div class="columns three">
-    <div>
-      <p>Annonceur A</p>
-      <p class="large">3 €</p>
-    </div>
-    <div>
-      <p>Annonceur B</p>
-      <p class="large">2 €</p>
-    </div>
-    <div>
-      <p>Annonceur C</p>
-      <p class="large">1 €</p>
-    </div>
+<p>GoTo · 1998</p>
+<h2>« Casque vélo Rennes »</h2>
+<div>
+  <div>
+    <p>Annonceur A</p>
+    <p>3 €</p>
   </div>
-  <p class="meta">Offres fictives par clic</p>
-</Page>
+  <div>
+    <p>Annonceur B</p>
+    <p>2 €</p>
+  </div>
+  <div>
+    <p>Annonceur C</p>
+    <p>1 €</p>
+  </div>
+</div>
+<p>Offres fictives par clic</p>
 
 --- notes
 
@@ -469,26 +533,20 @@ Google articulera ce marché à un service de recherche dont la confiance consti
 
 <!-- slide: id="adwords" title="Google et la publicité" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>1998</dt>
-      <dd>Un conflit d’intérêts identifié</dd>
-    </div>
-    <div>
-      <dt>2000</dt>
-      <dd>AdWords au CPM</dd>
-    </div>
-    <div>
-      <dt>2002</dt>
-      <dd>Select au CPC</dd>
-    </div>
-  </dl>
-</Page>
+<dl>
+  <div>
+    <dt>1998</dt>
+    <dd>Un conflit d’intérêts identifié</dd>
+  </div>
+  <div>
+    <dt>2000</dt>
+    <dd>AdWords au CPM</dd>
+  </div>
+  <div>
+    <dt>2002</dt>
+    <dd>Select au CPC</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -515,33 +573,30 @@ Le prix payé dépend aussi de la règle d’enchère.
 <!-- slide: id="encheres" title="Offrir et payer" layout="stack" steps=1 -->
 
 <script>
-  import Page from "$components/EconomicsSlide.svelte";
   import Fragment from "@svx-deck/core/components/Fragment.svelte";
 </script>
 
-<Page>
-  <h2>Offrir et payer</h2>
-  <table>
-    <thead
-      ><tr
-        ><th>Annonceur</th><th>Offre</th><th>Premier prix</th><th
-          >Second prix généralisé</th
-        ></tr
-      ></thead
-    ><tbody
-      ><tr
-        ><td>A</td><td>3 €</td><td>3 €</td><td
-          ><Fragment at={1}>2 €</Fragment></td
-        ></tr
-      ><tr
-        ><td>B</td><td>2 €</td><td>2 €</td><td
-          ><Fragment at={1}>1 €</Fragment></td
-        ></tr
-      ><tr><td>C</td><td>1 €</td><td colspan="2">Pas de place</td></tr></tbody
-    >
-  </table>
-  <p class="meta">Exemple fictif · deux places · qualité identique</p>
-</Page>
+<h2>Offrir et payer</h2>
+<table>
+  <thead
+    ><tr
+      ><th>Annonceur</th><th>Offre</th><th>Premier prix</th><th
+        >Second prix généralisé</th
+      ></tr
+    ></thead
+  ><tbody
+    ><tr
+      ><td>A</td><td>3 €</td><td>3 €</td><td
+        ><Fragment at={1}>2 €</Fragment></td
+      ></tr
+    ><tr
+      ><td>B</td><td>2 €</td><td>2 €</td><td
+        ><Fragment at={1}>1 €</Fragment></td
+      ></tr
+    ><tr><td>C</td><td>1 €</td><td colspan="2">Pas de place</td></tr></tbody
+  >
+</table>
+<p>Exemple fictif · deux places · qualité identique</p>
 
 --- notes
 
@@ -568,33 +623,30 @@ Une autre question apparaît : que rapporte une offre élevée si personne ne cl
 <!-- slide: id="qualite" title="La réaction attendue" layout="stack" steps=1 -->
 
 <script>
-  import Page from "$components/EconomicsSlide.svelte";
   import Fragment from "@svx-deck/core/components/Fragment.svelte";
 </script>
 
-<Page>
-  <h2>La réaction attendue</h2>
-  <table>
-    <thead
-      ><tr
-        ><th></th><th>Offre par clic</th><th>Probabilité de clic</th><th
-          >Recette attendue par impression</th
-        ></tr
-      ></thead
-    ><tbody
-      ><tr
-        ><td>A</td><td>2 €</td><td>1 %</td><td
-          ><Fragment at={1}>0,02 €</Fragment></td
-        ></tr
-      ><tr
-        ><td>B</td><td>1 €</td><td>3 %</td><td
-          ><Fragment at={1}><strong>0,03 €</strong></Fragment></td
-        ></tr
-      ></tbody
-    >
-  </table>
-  <p class="meta">Calcul pédagogique fictif</p>
-</Page>
+<h2>La réaction attendue</h2>
+<table>
+  <thead
+    ><tr
+      ><th></th><th>Offre par clic</th><th>Probabilité de clic</th><th
+        >Recette attendue par impression</th
+      ></tr
+    ></thead
+  ><tbody
+    ><tr
+      ><td>A</td><td>2 €</td><td>1 %</td><td
+        ><Fragment at={1}>0,02 €</Fragment></td
+      ></tr
+    ><tr
+      ><td>B</td><td>1 €</td><td>3 %</td><td
+        ><Fragment at={1}><strong>0,03 €</strong></Fragment></td
+      ></tr
+    ></tbody
+  >
+</table>
+<p>Calcul pédagogique fictif</p>
 
 --- notes
 
@@ -622,27 +674,21 @@ Le commerçant peut cependant vouloir des achats plutôt que des clics.
 
 <!-- slide: id="conversion" title="Une conversion" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Une conversion</h2>
-  <dl class="rows">
-    <div>
-      <dt>Objectif</dt>
-      <dd>Vendre un casque</dd>
-    </div>
-    <div>
-      <dt>Mesure</dt>
-      <dd>Coût par achat attribué</dd>
-    </div>
-    <div>
-      <dt>Facturation</dt>
-      <dd>Selon le contrat</dd>
-    </div>
-  </dl>
-</Page>
+<h2>Une conversion</h2>
+<dl>
+  <div>
+    <dt>Objectif</dt>
+    <dd>Vendre un casque</dd>
+  </div>
+  <div>
+    <dt>Mesure</dt>
+    <dd>Coût par achat attribué</dd>
+  </div>
+  <div>
+    <dt>Facturation</dt>
+    <dd>Selon le contrat</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -668,13 +714,7 @@ Rattacher une vente à une annonce prouve-t-il que l’annonce l’a provoquée 
 
 <!-- slide: id="attribution" title="Après le clic" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h1>L’achat aurait-il eu lieu sans l’annonce ?</h1>
-</Page>
+<h1>L’achat aurait-il eu lieu sans l’annonce ?</h1>
 
 --- notes
 
@@ -697,26 +737,23 @@ Prévoir trois minutes, puis quatre pour la comparaison suivante.
 <!-- slide: id="experience" title="Comparer deux groupes" layout="stack" steps=1 -->
 
 <script>
-  import Page from "$components/EconomicsSlide.svelte";
   import Fragment from "@svx-deck/core/components/Fragment.svelte";
 </script>
 
-<Page>
-  <p class="meta">Exemple fictif · répartition aléatoire</p>
-  <div class="columns">
-    <div>
-      <p>Avec publicité</p>
-      <p class="large">120 / 1 000</p>
-      <p>achats</p>
-    </div>
-    <div>
-      <p>Sans publicité</p>
-      <p class="large">100 / 1 000</p>
-      <p>achats</p>
-    </div>
+<p>Exemple fictif · répartition aléatoire</p>
+<div>
+  <div>
+    <p>Avec publicité</p>
+    <p>120 / 1 000</p>
+    <p>achats</p>
   </div>
-  <Fragment at={1}><p class="formula">Écart observé : +2 points</p></Fragment>
-</Page>
+  <div>
+    <p>Sans publicité</p>
+    <p>100 / 1 000</p>
+    <p>achats</p>
+  </div>
+</div>
+<Fragment at={1}><p class="formula">Écart observé : +2 points</p></Fragment>
 
 --- notes
 
@@ -740,22 +777,16 @@ Pour prévoir ou attribuer, les systèmes rapprochent des événements. Il faut 
 
 <!-- slide: id="ciblage" title="Deux contextes de ciblage" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <div class="columns">
-    <div>
-      <h2>Cette page parle de vélo.</h2>
-      <p class="meta">Ciblage contextuel</p>
-    </div>
-    <div>
-      <h2>Ce navigateur a consulté des vélos.</h2>
-      <p class="meta">Ciblage comportemental</p>
-    </div>
+<div>
+  <div>
+    <h2>Cette page parle de vélo.</h2>
+    <p>Ciblage contextuel</p>
   </div>
-</Page>
+  <div>
+    <h2>Ce navigateur a consulté des vélos.</h2>
+    <p>Ciblage comportemental</p>
+  </div>
+</div>
 
 --- notes
 
@@ -773,40 +804,110 @@ Un système peut personnaliser avec des règles simples. Il peut aussi prévoir 
 Prévoir six minutes. Faire distinguer page consultée, historique rapproché et probabilité estimée.
 :::
 
-Les événements ne se rapprochent pas tout seuls : une infrastructure doit les relier.
+Revenons aux annonces d’Instagram du début du cours. Quelles traces ont pu les orienter ?
 
 **Sources.** [CNIL, publicité ciblée](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls/publicite-ciblee-en-ligne-quels-enjeux-pour-la-protection-des-donnees-personnelles).
 
 ---
 
+<!-- slide: id="traces" title="Une trace parmi d’autres" layout="stack" steps=0 -->
+
+## Une trace parmi d’autres
+
+- Visiter une boutique en ligne
+- Ouvrir une application
+- Acheter avec son adresse e-mail
+- Regarder une vidéo jusqu’au bout
+
+--- notes
+
+Ma recherche Google n’explique pas à elle seule les annonces d’étirement et de bijoux. Google et Meta sont concurrents : Google ne vend pas mes requêtes à Meta. Les traces passent par d’autres chemins.
+
+Lorsque je clique sur un résultat, j’arrive sur le site d’une boutique. Ce site intègre souvent deux petits programmes : la balise de Google et le **pixel** de Meta. Chacun signale à son entreprise la page consultée, l’article mis au panier ou l’achat. Le même geste laisse donc une trace chez les deux entreprises.
+
+:::example
+D’autres traces circulent de la même manière. Les applications intègrent des kits logiciels de Google ou de Meta qui signalent leur installation et leur usage ; les commerçants transmettent leurs fichiers clients, avec des adresses e-mail codées, à Google comme à Meta ; leurs serveurs peuvent aussi envoyer directement leurs ventes à Meta.
+:::
+
+Instagram enregistre enfin ce que je fais dans l’application : le temps passé sur une vidéo, les comptes suivis, les mentions « J’aime ». Une vidéo d’étirement regardée jusqu’au bout compte peut-être davantage que ma recherche.
+
+:::comment
+Prévoir cinq minutes.
+:::
+
+Avant d’aller plus loin, précisons ce que nous appelons une trace.
+
+**Sources.** [Meta, Meta Pixel](https://developers.facebook.com/docs/meta-pixel/) ; [Meta, Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/) ; [Google Ads, Customer Match](https://support.google.com/google-ads/answer/6379332).
+
+---
+
+<!-- slide: id="trace-signal" title="Ce que laisse une recherche" layout="stack" steps=0 -->
+
+<dl>
+  <div>
+    <dt>Donnée</dt>
+    <dd>9 h 09</dd>
+  </div>
+  <div>
+    <dt>Trace</dt>
+    <dd>Une requête saisie</dd>
+  </div>
+  <div>
+    <dt>Information</dt>
+    <dd>Une recherche sur l’étirement</dd>
+  </div>
+  <div>
+    <dt>Signal</dt>
+    <dd>Un intérêt supposé</dd>
+  </div>
+  <div>
+    <dt>Connaissance</dt>
+    <dd>Une interprétation justifiée</dd>
+  </div>
+</dl>
+
+--- notes
+
+Une donnée est une représentation enregistrée. Une trace est ce qui reste d’une activité dans un dispositif. Ici, Google enregistre qu’une requête a été saisie à 9 h 09.
+
+Le contexte donne à cette donnée une signification : la requête concerne l’étirement. Elle devient un signal lorsqu’un système l’utilise pour décider, par exemple pour estimer un intérêt et choisir une annonce.
+
+Mais je peux chercher un bracelet pour un proche. Le signal ne révèle donc pas directement mon intention. Pour parler de connaissance, il faut pouvoir justifier l’interprétation et en préciser les limites.
+
+:::warning
+**Précision.** Ces mots constituent notre convention pédagogique. Ils ne décrivent pas les étapes automatiques d’une transformation des traces en vérité.
+:::
+
+:::comment
+Prévoir six minutes. Faire distinguer l’événement enregistré, l’intérêt supposé et la décision d’afficher une annonce.
+:::
+
+Une trace isolée dit peu de chose. Sa valeur vient de son rapprochement avec d’autres.
+
+---
+
 <!-- slide: id="suivi" title="Relier des événements" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Relier des événements</h2>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="Une visite et un achat peuvent être rapprochés par un compte, un cookie ou une empreinte du navigateur."
-    ><text x="40" y="70">Une visite</text><text x="780" y="70">Un achat</text
-    ><path class="line" d="M200 60H740m0 0-12-6m12 6-12 6" /><text
-      x="300"
-      y="50"
-      class="small">rapprochement</text
-    ><text x="55" y="200">Compte</text><text x="385" y="200">Cookie</text><text
-      x="695"
-      y="200">Empreinte</text
-    ><text class="small" x="55" y="245">identifiant</text><text
-      class="small"
-      x="385"
-      y="245">navigateur</text
-    ><text class="small" x="695" y="245">estimation</text></svg
-  >
-</Page>
+<h2>Relier des événements</h2>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="Une visite et un achat peuvent être rapprochés par un compte, un cookie ou une empreinte du navigateur."
+  ><text x="40" y="70">Une visite</text><text x="780" y="70">Un achat</text
+  ><path d="M200 60H740m0 0-12-6m12 6-12 6" /><text
+    x="300"
+    y="50"
+   >rapprochement</text
+  ><text x="55" y="200">Compte</text><text x="385" y="200">Cookie</text><text
+    x="695"
+    y="200">Empreinte</text
+  ><text x="55" y="245">identifiant</text><text
+   
+    x="385"
+    y="245">navigateur</text
+  ><text x="695" y="245">estimation</text></svg
+>
 
 --- notes
 
@@ -824,45 +925,74 @@ Le vendeur peut ainsi chercher à relier l’achat de Camille à une visite ant�
 Prévoir sept minutes. Le schéma présente plusieurs possibilités, pas une chaîne obligatoire.
 :::
 
-Ces informations peuvent entrer dans l’évaluation d’une occasion publicitaire.
+Une fois reliées, les traces peuvent être classées puis exploitées pour vendre un accès.
 
 **Sources.** [Documentation des mécanismes de suivi](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) ; [Federal Trade Commission, 2024](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services).
 
 ---
 
+<!-- slide: id="agregation" title="Des traces aux audiences" layout="stack" steps=0 -->
+
+## Des traces aux audiences
+
+1. Collecter
+2. Rapprocher
+3. Classer
+4. Vendre un accès
+
+--- notes
+
+Grâce aux identifiants que nous venons de voir, les plateformes rattachent des gestes dispersés sur plusieurs sites et applications à une même personne. L’adresse e-mail et l’identifiant publicitaire du téléphone jouent ici le même rôle qu’un compte ou un cookie.
+
+Elles les classent ensuite dans des **segments**. Un segment est un groupe de personnes supposées partager un intérêt ou une probabilité d’achat. Je peux ainsi entrer dans un segment « bijoux » sans l’avoir jamais déclaré.
+
+L’annonceur choisit alors une audience et paie pour l’atteindre. Il achète donc un accès à des personnes. En principe, il ne reçoit ni leur liste ni leurs traces.
+
+:::warning
+**Précision.** Dire que Google et Meta « revendent nos données » est le plus souvent inexact : ils vendent un accès ciblé et conservent les traces. D’autres acteurs, les courtiers en données, achètent et revendent bien des informations et des segments. Meta a cessé en 2018 de proposer sur Facebook le ciblage fourni par ces courtiers.
+:::
+
+:::warning
+**Précision.** Le ciblage reste un pari sur une probabilité. Il peut se tromper de personne ou de raison.
+:::
+
+:::comment
+Prévoir cinq minutes.
+:::
+
+Ces audiences peuvent entrer dans l’évaluation d’une occasion publicitaire.
+
+**Sources.** [Meta, 28 mars 2018](https://about.fb.com/news/h/shutting-down-partner-categories/) ; [Federal Trade Commission, mai 2014](https://www.ftc.gov/reports/data-brokers-call-transparency-accountability-report-federal-trade-commission-may-2014).
+
+---
+
 <!-- slide: id="rtb" title="Une occasion d’affichage aux enchères" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Une occasion d’affichage aux enchères</h2>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="L’éditeur propose une occasion via une SSP et une place d’échange. La DSP soumet une offre pour l’annonceur."
-    ><text x="20" y="80">Éditeur</text><text x="255" y="80">SSP</text><text
-      x="450"
-      y="80">Échange</text
-    ><text x="700" y="80">DSP</text><text x="850" y="80">Annonceur</text><path
-      class="line"
-      d="M20 130H980"
-    /><text class="small" x="210" y="185">proposer</text><text
-      class="small"
-      x="450"
-      y="185">confronter</text
-    ><text class="small" x="680" y="185">évaluer</text><path
-      class="line"
-      d="M120 245H570m0 0-12-6m12 6-12 6M890 245H630m0 0 12-6m-12 6 12 6"
-    /><text class="small" x="230" y="285">une occasion</text><text
-      class="small"
-      x="680"
-      y="285">une offre</text
-    ></svg
-  >
-</Page>
+<h2>Une occasion d’affichage aux enchères</h2>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="L’éditeur propose une occasion via une SSP et une place d’échange. La DSP soumet une offre pour l’annonceur."
+  ><text x="20" y="80">Éditeur</text><text x="255" y="80">SSP</text><text
+    x="450"
+    y="80">Échange</text
+  ><text x="700" y="80">DSP</text><text x="850" y="80">Annonceur</text><path
+   
+    d="M20 130H980"
+  /><text x="210" y="185">proposer</text><text
+   
+    x="450"
+    y="185">confronter</text
+  ><text x="680" y="185">évaluer</text><path
+   
+    d="M120 245H570m0 0-12-6m12 6-12 6M890 245H630m0 0 12-6m-12 6 12 6"
+  /><text x="230" y="285">une occasion</text><text
+   
+    x="680"
+    y="285">une offre</text
+  ></svg
+>
 
 --- notes
 
@@ -888,18 +1018,12 @@ L’automatisation garantit-elle la valeur promise ?
 
 <!-- slide: id="hwang" title="La valeur des promesses" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>La valeur des promesses</h2>
-  <div class="columns">
-    <p>Ce qui est compté</p>
-    <p class="accent">Ce qui est provoqué</p>
-  </div>
-  <p class="meta">Tim Hwang · 2020</p>
-</Page>
+<h2>La valeur des promesses</h2>
+<div>
+  <p>Ce qui est compté</p>
+  <p>Ce qui est provoqué</p>
+</div>
+<p>Tim Hwang · 2020</p>
 
 --- notes
 
@@ -925,14 +1049,8 @@ Nous avons suivi la vente des occasions de contact. Après la pause, nous verron
 
 <!-- slide: id="pause" title="Pause" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h1>Pause</h1>
-  <p class="large">10 min</p>
-</Page>
+<h1>Pause</h1>
+<p>10 min</p>
 
 --- notes
 
@@ -944,34 +1062,28 @@ La première partie dure 1 h 55. Reprendre après dix minutes. La suite porte su
 
 <!-- slide: id="revenus" title="La place de la publicité" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>La place de la publicité</h2>
-  <div class="stack">
-    <p class="bar-label"><span>Meta</span><strong>97,6 %</strong></p>
-    <div
-      class="bar"
-      role="img"
-      aria-label="Meta : 97,6 % des revenus viennent de la publicité"
-    >
-      <span style="width:97.6%"></span>
-    </div>
-    <p class="bar-label"><span>Alphabet</span><strong>73,2 %</strong></p>
-    <div
-      class="bar"
-      role="img"
-      aria-label="Alphabet : 73,2 % des revenus viennent de la publicité"
-    >
-      <span style="width:73.2%"></span>
-    </div>
+<h2>La place de la publicité</h2>
+<div>
+  <p><span>Meta</span><strong>97,6 %</strong></p>
+  <div
+   
+    role="img"
+    aria-label="Meta : 97,6 % des revenus viennent de la publicité"
+  >
+    <span style="width:97.6%"></span>
   </div>
-  <p class="meta">
-    Part du chiffre d’affaires · exercice 2025 · rapports annuels
-  </p>
-</Page>
+  <p><span>Alphabet</span><strong>73,2 %</strong></p>
+  <div
+   
+    role="img"
+    aria-label="Alphabet : 73,2 % des revenus viennent de la publicité"
+  >
+    <span style="width:73.2%"></span>
+  </div>
+</div>
+<p>
+  Part du chiffre d’affaires · exercice 2025 · rapports annuels
+</p>
 
 --- notes
 
@@ -997,30 +1109,24 @@ Comment cette dépendance financière rencontre-t-elle la conception du service 
 
 <!-- slide: id="boucle" title="Activité et financement" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 340"
-    role="img"
-    aria-label="L’activité produit des traces qui alimentent la sélection, puis de nouvelles activités. Elle produit aussi des occasions publicitaires."
-    ><text x="55" y="75">Activité</text><text x="415" y="75">Traces</text><text
-      x="750"
-      y="75">Sélection</text
-    ><path
-      class="line"
-      d="M200 65H375m0 0-12-6m12 6-12 6M540 65H705m0 0-12-6m12 6-12 6M820 105V170H120V105m0 0-6 12m6-12 6 12"
-    /><text class="small" x="305" y="155">nouvelles occasions d’activité</text
-    ><path class="line" d="M120 190V290H365m0 0-12-6m12 6-12 6" /><text
-      class="highlight"
-      x="410"
-      y="300">Occasions publicitaires</text
-    ><text class="small" x="145" y="270">affichages</text></svg
-  >
-</Page>
+<svg
+ 
+  viewBox="0 0 1000 340"
+  role="img"
+  aria-label="L’activité produit des traces qui alimentent la sélection, puis de nouvelles activités. Elle produit aussi des occasions publicitaires."
+  ><text x="55" y="75">Activité</text><text x="415" y="75">Traces</text><text
+    x="750"
+    y="75">Sélection</text
+  ><path
+   
+    d="M200 65H375m0 0-12-6m12 6-12 6M540 65H705m0 0-12-6m12 6-12 6M820 105V170H120V105m0 0-6 12m6-12 6 12"
+  /><text x="305" y="155">nouvelles occasions d’activité</text
+  ><path d="M120 190V290H365m0 0-12-6m12 6-12 6" /><text
+   
+    x="410"
+    y="300">Occasions publicitaires</text
+  ><text x="145" y="270">affichages</text></svg
+>
 
 --- notes
 
@@ -1050,28 +1156,22 @@ Les objectifs prennent également forme dans les interfaces.
 
 <!-- slide: id="captologie" title="Rendre une action probable" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Rendre une action probable</h2>
-  <dl class="rows">
-    <div>
-      <dt>Motivation</dt>
-      <dd>Attendre un message</dd>
-    </div>
-    <div>
-      <dt>Facilité</dt>
-      <dd>Ouvrir en un geste</dd>
-    </div>
-    <div>
-      <dt>Sollicitation</dt>
-      <dd>Recevoir une notification</dd>
-    </div>
-  </dl>
-  <p class="meta">B. J. Fogg</p>
-</Page>
+<h2>Rendre une action probable</h2>
+<dl>
+  <div>
+    <dt>Motivation</dt>
+    <dd>Attendre un message</dd>
+  </div>
+  <div>
+    <dt>Facilité</dt>
+    <dd>Ouvrir en un geste</dd>
+  </div>
+  <div>
+    <dt>Sollicitation</dt>
+    <dd>Recevoir une notification</dd>
+  </div>
+</dl>
+<p>B. J. Fogg</p>
 
 --- notes
 
@@ -1095,25 +1195,19 @@ Le retour attendu peut toutefois être incertain.
 
 <!-- slide: id="recompenses" title="Un retour incertain" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Un retour incertain</h2>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="Ouvrir peut donner accès à un contenu intéressant, sans garantie, et inciter à revenir."
-    ><text x="40" y="105">Ouvrir</text><text x="385" y="105">Découvrir</text
-    ><text x="775" y="105">Revenir</text><path
-      class="line"
-      d="M190 95H345m0 0-12-6m12 6-12 6M585 95H735m0 0-12-6m12 6-12 6M840 135V240H100V135m0 0-6 12m6-12 6 12"
-    /><text class="small" x="350" y="210">un contenu parfois intéressant</text
-    ></svg
-  >
-</Page>
+<h2>Un retour incertain</h2>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="Ouvrir peut donner accès à un contenu intéressant, sans garantie, et inciter à revenir."
+  ><text x="40" y="105">Ouvrir</text><text x="385" y="105">Découvrir</text
+  ><text x="775" y="105">Revenir</text><path
+   
+    d="M190 95H345m0 0-12-6m12 6-12 6M585 95H735m0 0-12-6m12 6-12 6M840 135V240H100V135m0 0-6 12m6-12 6 12"
+  /><text x="350" y="210">un contenu parfois intéressant</text
+  ></svg
+>
 
 --- notes
 
@@ -1139,31 +1233,25 @@ Influencer une action et entraver un choix sont deux questions à distinguer.
 
 <!-- slide: id="dark-patterns" title="Des choix orientés" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Des choix orientés</h2>
-  <dl class="rows">
-    <div>
-      <dt>Dissimulation</dt>
-      <dd>Un renouvellement peu visible</dd>
-    </div>
-    <div>
-      <dt>Obstruction</dt>
-      <dd>Une sortie difficile</dd>
-    </div>
-    <div>
-      <dt>Pression</dt>
-      <dd>Un refus culpabilisant</dd>
-    </div>
-    <div>
-      <dt>Tromperie</dt>
-      <dd>Une urgence fabriquée</dd>
-    </div>
-  </dl>
-</Page>
+<h2>Des choix orientés</h2>
+<dl>
+  <div>
+    <dt>Dissimulation</dt>
+    <dd>Un renouvellement peu visible</dd>
+  </div>
+  <div>
+    <dt>Obstruction</dt>
+    <dd>Une sortie difficile</dd>
+  </div>
+  <div>
+    <dt>Pression</dt>
+    <dd>Un refus culpabilisant</dd>
+  </div>
+  <div>
+    <dt>Tromperie</dt>
+    <dd>Une urgence fabriquée</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1189,28 +1277,22 @@ Nous pouvons maintenant analyser une interface et proposer une modification.
 
 <!-- slide: id="atelier-interface" title="Un autre choix possible" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <p class="meta">Atelier · maquettes fictives</p>
-  <div class="columns">
-    <div class="mock">
-      <p>Recevoir les nouveautés ?</p>
-      <span class="accept">Activer les notifications</span><span class="refuse"
-        >Non, je préfère tout manquer</span
-      >
-    </div>
-    <div class="mock">
-      <p>Votre abonnement</p>
-      <span class="accept">Passer à l’offre supérieure</span><span
-        class="refuse">Pour résilier, contactez le support</span
-      >
-    </div>
+<p>Atelier · maquettes fictives</p>
+<div>
+  <div>
+    <p>Recevoir les nouveautés ?</p>
+    <span>Activer les notifications</span><span
+      >Non, je préfère tout manquer</span
+    >
   </div>
-  <p>Quel objectif ? Quel obstacle ? Quelle modification ?</p>
-</Page>
+  <div>
+    <p>Votre abonnement</p>
+    <span>Passer à l’offre supérieure</span><span
+     >Pour résilier, contactez le support</span
+    >
+  </div>
+</div>
+<p>Quel objectif ? Quel obstacle ? Quelle modification ?</p>
 
 --- notes
 
@@ -1238,29 +1320,23 @@ Les capacités de mesure et d’intervention posent une question plus générale
 
 <!-- slide: id="zuboff" title="Le surplus comportemental" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Le surplus comportemental</h2>
-  <p class="meta">Shoshana Zuboff · 2019</p>
-  <svg
-    class="chart"
-    viewBox="0 0 1000 310"
-    role="img"
-    aria-label="Dans le cadre critique de Zuboff, des traces d’expérience alimentent des prévisions et des capacités d’intervention."
-    ><text x="30" y="100">Expérience</text><text x="390" y="100">Prévision</text
-    ><text x="755" y="100">Intervention</text><path
-      class="line"
-      d="M220 90H345m0 0-12-6m12 6-12 6M560 90H705m0 0-12-6m12 6-12 6"
-    /><text class="small" x="30" y="200">traces appropriées</text><text
-      class="small"
-      x="390"
-      y="200">modèles</text
-    ><text class="small" x="755" y="200">capacités d’action</text></svg
-  >
-</Page>
+<h2>Le surplus comportemental</h2>
+<p>Shoshana Zuboff · 2019</p>
+<svg
+ 
+  viewBox="0 0 1000 310"
+  role="img"
+  aria-label="Dans le cadre critique de Zuboff, des traces d’expérience alimentent des prévisions et des capacités d’intervention."
+  ><text x="30" y="100">Expérience</text><text x="390" y="100">Prévision</text
+  ><text x="755" y="100">Intervention</text><path
+   
+    d="M220 90H345m0 0-12-6m12 6-12 6M560 90H705m0 0-12-6m12 6-12 6"
+  /><text x="30" y="200">traces appropriées</text><text
+   
+    x="390"
+    y="200">modèles</text
+  ><text x="755" y="200">capacités d’action</text></svg
+>
 
 --- notes
 
@@ -1288,28 +1364,22 @@ Les cas suivants permettent de comparer des usages au-delà de la publicité.
 
 <!-- slide: id="assurance" title="Conduire et être évalué" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Conduire et être évalué</h2>
-  <dl class="rows">
-    <div>
-      <dt>Activité</dt>
-      <dd>Un trajet en voiture</dd>
-    </div>
-    <div>
-      <dt>Données</dt>
-      <dd>Localisation et conduite</dd>
-    </div>
-    <div>
-      <dt>Usage</dt>
-      <dd>Évaluation assurantielle</dd>
-    </div>
-  </dl>
-  <p class="meta">GM / OnStar · dossier FTC · 2025–2026</p>
-</Page>
+<h2>Conduire et être évalué</h2>
+<dl>
+  <div>
+    <dt>Activité</dt>
+    <dd>Un trajet en voiture</dd>
+  </div>
+  <div>
+    <dt>Données</dt>
+    <dd>Localisation et conduite</dd>
+  </div>
+  <div>
+    <dt>Usage</dt>
+    <dd>Évaluation assurantielle</dd>
+  </div>
+</dl>
+<p>GM / OnStar · dossier FTC · 2025–2026</p>
 
 --- notes
 
@@ -1331,18 +1401,12 @@ Prévoir quatre minutes, puis quatre sur le cas de santé. Demander ce qui chang
 
 <!-- slide: id="sante" title="Changer la destination des données" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Changer la destination des données</h2>
-  <div class="columns">
-    <p>Une demande d’aide</p>
-    <p class="accent">Un réemploi publicitaire</p>
-  </div>
-  <p class="meta">BetterHelp · FTC · 2023</p>
-</Page>
+<h2>Changer la destination des données</h2>
+<div>
+  <p>Une demande d’aide</p>
+  <p>Un réemploi publicitaire</p>
+</div>
+<p>BetterHelp · FTC · 2023</p>
 
 --- notes
 
@@ -1366,14 +1430,8 @@ La mesure peut aussi servir à contrôler le travail sans transaction publicitai
 
 <!-- slide: id="travail" title="Mesurer un travail" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h1>Une souris immobile. Un travail interrompu ?</h1>
-  <p class="meta">Surveillance au travail · CNIL · 2025</p>
-</Page>
+<h1>Une souris immobile. Un travail interrompu ?</h1>
+<p>Surveillance au travail · CNIL · 2025</p>
 
 --- notes
 
@@ -1397,26 +1455,20 @@ Prévoir trois minutes, puis quatre sur les espaces connectés.
 
 <!-- slide: id="espaces" title="Des finalités distinctes" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>Maison</dt>
-      <dd>Qui accède aux images ?</dd>
-    </div>
-    <div>
-      <dt>Ville</dt>
-      <dd>Qui décide de la finalité ?</dd>
-    </div>
-    <div>
-      <dt>Sécurité</dt>
-      <dd>Qui acquiert quelles données ?</dd>
-    </div>
-  </dl>
-</Page>
+<dl>
+  <div>
+    <dt>Maison</dt>
+    <dd>Qui accède aux images ?</dd>
+  </div>
+  <div>
+    <dt>Ville</dt>
+    <dd>Qui décide de la finalité ?</dd>
+  </div>
+  <div>
+    <dt>Sécurité</dt>
+    <dd>Qui acquiert quelles données ?</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1442,27 +1494,21 @@ Les réponses doivent donc agir à plusieurs échelles.
 
 <!-- slide: id="alternatives" title="Organiser d’autres conditions" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Organiser d’autres conditions</h2>
-  <dl class="rows">
-    <div>
-      <dt>Usage</dt>
-      <dd>Régler les sollicitations</dd>
-    </div>
-    <div>
-      <dt>Service</dt>
-      <dd>Changer la collecte et les objectifs</dd>
-    </div>
-    <div>
-      <dt>Collectif</dt>
-      <dd>Financer, encadrer, contrôler</dd>
-    </div>
-  </dl>
-</Page>
+<h2>Organiser d’autres conditions</h2>
+<dl>
+  <div>
+    <dt>Usage</dt>
+    <dd>Régler les sollicitations</dd>
+  </div>
+  <div>
+    <dt>Service</dt>
+    <dd>Changer la collecte et les objectifs</dd>
+  </div>
+  <div>
+    <dt>Collectif</dt>
+    <dd>Financer, encadrer, contrôler</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1488,30 +1534,24 @@ Prévoir sept minutes. Demander quelle décision collective soutiendrait une att
 
 <!-- slide: id="cadres" title="Quatre prises sur le problème" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>Smythe</dt>
-      <dd>Constituer une audience</dd>
-    </div>
-    <div>
-      <dt>Simon</dt>
-      <dd>Allouer une attention limitée</dd>
-    </div>
-    <div>
-      <dt>Citton</dt>
-      <dd>Organiser des milieux</dd>
-    </div>
-    <div>
-      <dt>Zuboff</dt>
-      <dd>Distribuer des capacités d’action</dd>
-    </div>
-  </dl>
-</Page>
+<dl>
+  <div>
+    <dt>Smythe</dt>
+    <dd>Constituer une audience</dd>
+  </div>
+  <div>
+    <dt>Simon</dt>
+    <dd>Allouer une attention limitée</dd>
+  </div>
+  <div>
+    <dt>Citton</dt>
+    <dd>Organiser des milieux</dd>
+  </div>
+  <div>
+    <dt>Zuboff</dt>
+    <dd>Distribuer des capacités d’action</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1533,19 +1573,13 @@ Ces questions se rencontrent dans les décisions des entreprises.
 
 <!-- slide: id="arbitrages" title="Des arbitrages organisationnels" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Des arbitrages organisationnels</h2>
-  <div class="columns three">
-    <p>Revenus</p>
-    <p>Satisfaction</p>
-    <p>Sécurité</p>
-  </div>
-  <p class="meta">Frances Haugen · témoignage au Sénat américain · 2021</p>
-</Page>
+<h2>Des arbitrages organisationnels</h2>
+<div>
+  <p>Revenus</p>
+  <p>Satisfaction</p>
+  <p>Sécurité</p>
+</div>
+<p>Frances Haugen · témoignage au Sénat américain · 2021</p>
 
 --- notes
 
@@ -1569,21 +1603,15 @@ Les entreprises de données ont aussi construit des infrastructures employées p
 
 <!-- slide: id="ecosysteme" title="Les conditions de l’IA" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Les conditions de l’IA</h2>
-  <div class="columns three">
-    <p>Recherche</p>
-    <p>Données</p>
-    <p>Calcul</p>
-    <p>Travail</p>
-    <p>Capitaux</p>
-    <p>Usages</p>
-  </div>
-</Page>
+<h2>Les conditions de l’IA</h2>
+<div>
+  <p>Recherche</p>
+  <p>Données</p>
+  <p>Calcul</p>
+  <p>Travail</p>
+  <p>Capitaux</p>
+  <p>Usages</p>
+</div>
 
 --- notes
 
@@ -1607,30 +1635,24 @@ Prévoir quatre minutes, puis trois sur les jalons suivants.
 
 <!-- slide: id="jalons-ia" title="Des tâches et des architectures" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <dl class="rows">
-    <div>
-      <dt>2012</dt>
-      <dd>AlexNet : classer des images</dd>
-    </div>
-    <div>
-      <dt>2016</dt>
-      <dd>YouTube : recommander des vidéos</dd>
-    </div>
-    <div>
-      <dt>2017</dt>
-      <dd>Transformer : une architecture</dd>
-    </div>
-    <div>
-      <dt>2020</dt>
-      <dd>GPT-3 : un modèle de langage</dd>
-    </div>
-  </dl>
-</Page>
+<dl>
+  <div>
+    <dt>2012</dt>
+    <dd>AlexNet : classer des images</dd>
+  </div>
+  <div>
+    <dt>2016</dt>
+    <dd>YouTube : recommander des vidéos</dd>
+  </div>
+  <div>
+    <dt>2017</dt>
+    <dd>Transformer : une architecture</dd>
+  </div>
+  <div>
+    <dt>2020</dt>
+    <dd>GPT-3 : un modèle de langage</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1656,22 +1678,16 @@ Que signifie exactement apprendre à partir de données ?
 
 <!-- slide: id="entrainement" title="Entraîner et utiliser" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <div class="columns">
-    <div>
-      <h2>Entraînement</h2>
-      <p>Ajuster les paramètres</p>
-    </div>
-    <div>
-      <h2>Inférence</h2>
-      <p>Produire une sortie</p>
-    </div>
+<div>
+  <div>
+    <h2>Entraînement</h2>
+    <p>Ajuster les paramètres</p>
   </div>
-</Page>
+  <div>
+    <h2>Inférence</h2>
+    <p>Produire une sortie</p>
+  </div>
+</div>
 
 --- notes
 
@@ -1697,22 +1713,16 @@ La génération de langage partage certaines méthodes, mais elle change la tâc
 
 <!-- slide: id="langage" title="Prévoir un clic, produire du texte" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <div class="columns">
-    <div>
-      <p class="meta">Ciblage</p>
-      <h2>Une probabilité de clic</h2>
-    </div>
-    <div>
-      <p class="meta">Modèle de langage</p>
-      <h2>Une continuation textuelle</h2>
-    </div>
+<div>
+  <div>
+    <p>Ciblage</p>
+    <h2>Une probabilité de clic</h2>
   </div>
-</Page>
+  <div>
+    <p>Modèle de langage</p>
+    <h2>Une continuation textuelle</h2>
+  </div>
+</div>
 
 --- notes
 
@@ -1738,19 +1748,13 @@ Un service d’IA peut maintenant être examiné avec la même méthode d’enqu
 
 <!-- slide: id="atelier-ia" title="Un service d’aide à la rédaction" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <p class="meta">Atelier · scénario fictif</p>
-  <h2>Un service d’aide à la rédaction</h2>
-  <div class="columns">
-    <p>Un modèle existant<br />Un abonnement</p>
-    <p>Des requêtes<br />Des journaux conservés</p>
-  </div>
-  <p class="accent">Qu’est-ce qui entraîne le modèle ?</p>
-</Page>
+<p>Atelier · scénario fictif</p>
+<h2>Un service d’aide à la rédaction</h2>
+<div>
+  <p>Un modèle existant<br />Un abonnement</p>
+  <p>Des requêtes<br />Des journaux conservés</p>
+</div>
+<p>Qu’est-ce qui entraîne le modèle ?</p>
 
 --- notes
 
@@ -1776,31 +1780,25 @@ La même grille s’applique à une publicité ou à une fonctionnalité ordinai
 
 <!-- slide: id="atelier-final" title="Anatomie d’un service" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h2>Anatomie d’un service</h2>
-  <dl class="rows">
-    <div>
-      <dt>Signal</dt>
-      <dd>Quelle activité est mesurée ?</dd>
-    </div>
-    <div>
-      <dt>Boucle</dt>
-      <dd>Quelle décision en dépend ?</dd>
-    </div>
-    <div>
-      <dt>Transaction</dt>
-      <dd>Qui gagne quoi ?</dd>
-    </div>
-    <div>
-      <dt>Expérience</dt>
-      <dd>Que devient-il possible de faire ?</dd>
-    </div>
-  </dl>
-</Page>
+<h2>Anatomie d’un service</h2>
+<dl>
+  <div>
+    <dt>Signal</dt>
+    <dd>Quelle activité est mesurée ?</dd>
+  </div>
+  <div>
+    <dt>Boucle</dt>
+    <dd>Quelle décision en dépend ?</dd>
+  </div>
+  <div>
+    <dt>Transaction</dt>
+    <dd>Qui gagne quoi ?</dd>
+  </div>
+  <div>
+    <dt>Expérience</dt>
+    <dd>Que devient-il possible de faire ?</dd>
+  </div>
+</dl>
 
 --- notes
 
@@ -1822,18 +1820,12 @@ Les quatre questions permettent de reconstruire un dispositif sans supposer qu�
 
 <!-- slide: id="relais" title="Qui organise les rencontres ?" layout="stack" steps=0 -->
 
-<script>
-  import Page from "$components/EconomicsSlide.svelte";
-</script>
-
-<Page>
-  <h1>Qui organise les rencontres ?</h1>
-  <div class="columns three">
-    <p>Relations</p>
-    <p>Objectifs</p>
-    <p class="accent">Sélections</p>
-  </div>
-</Page>
+<h1>Qui organise les rencontres ?</h1>
+<div>
+  <p>Relations</p>
+  <p>Objectifs</p>
+  <p>Sélections</p>
+</div>
 
 --- notes
 
