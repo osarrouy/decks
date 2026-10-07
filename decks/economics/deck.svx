@@ -1,18 +1,17 @@
 ---
 title: Économie des données
-description: Attention, publicité, plateformes et ouverture vers l’IA. Cours de quatre heures en L1 Information-Communication.
+description: Attention, publicité, plateformes. Cours de quatre heures en L1 Information-Communication.
 ---
 
-<!-- slide: id="ouverture" title="Économie des données" layout="stack" steps=0 -->
 
 # Économie des données
-Publicité, attention, plateforme {.kicker}
+Attention, publicité, plateforme {.kicker}
 
 --- notes
 
-Nous avons tous vécu une scène où nous rentrons chez nous et nous nous sentons, par exemple, un peu tendus derrière les jambes.
+Nous avons tous vécu une scène de ce genre. Nous rentrons par exemple chez nous avec les jambes un peu raides.
 
-Déterminé à prendre soin de nous, nous cherchons alors sur Google : étirement ischio jambier.
+Nous sommes déterminés à prendre soin de nous. Nous cherchons donc sur Google : « étirement ischio jambier ».
 
 ---
 
@@ -23,9 +22,9 @@ Déterminé à prendre soin de nous, nous cherchons alors sur Google : étiremen
 
 --- notes
 
-De là, nous ouvrons un ou deux liens et consultons quelques vidéos.
+Nous ouvrons alors un ou deux liens et consultons quelques vidéos.
 
-La soirée passe et comme chaque soir nous finissons par aller trainer sur Instagram.
+La soirée passe. Comme chaque soir, nous finissons par traîner sur Instagram.
 
 ---
 <!-- slide: layout="row" -->
@@ -43,13 +42,13 @@ La soirée passe et comme chaque soir nous finissons par aller trainer sur Insta
 
 --- notes
 
-Et là, suprise, notre feed est rempli d'annonces pour des applis ou des programmes d'étirement.
+Et là, surprise : notre feed est rempli d'annonces pour des applis ou des programmes d'étirement.
 
 :::comment
 Notez la mention « Sponsorisée » : un annonceur a payé pour cet affichage.
 :::
 
-Content de nous et satisfait de notre effort en matière d'étirements, nous décidons de nous récompenser en cherchant des bijoux sur Google.
+Nous sommes contents de nous et satisfaits de notre effort d'étirement. Nous décidons donc de nous récompenser : nous cherchons des bijoux sur Google.
 
 ---
 <FramedImage
@@ -59,7 +58,7 @@ Content de nous et satisfait de notre effort en matière d'étirements, nous dé
 
 --- notes
 
-Même scénario. On se balade et on ouvre quelques lien avant de se rappeler qu'on est à découvert et qu'on ferait mieux de repousser notre achat.
+Même scénario : nous nous baladons et ouvrons quelques liens. Mais nous nous rappelons que nous sommes à découvert. Nous ferions mieux de repousser notre achat.
 
 ---
 <!-- slide: layout="row" -->
@@ -76,9 +75,9 @@ Même scénario. On se balade et on ouvre quelques lien avant de se rappeler qu'
 
 --- notes
 
-Mais au réveil, le lendemain matin, notre feed n'a pas renoncé. Il nous assaille de publicités pour des bijoux assez proches de ceux que l'on porte déjà.
+Notre feed, lui, n'a pas renoncé. Dès notre réveil le lendemain matin, il nous assaille de publicités pour des bijoux assez proches de ceux que nous portons déjà.
 
-Le système ne se contente donc pas de répéter ma recherche. Il estime un intérêt plus large et propose des produits voisins.
+Le système ne se contente donc pas de répéter notre recherche. Il estime un intérêt plus large et propose des produits voisins.
 
 Comment Instagram peut-il savoir ?
 
@@ -88,16 +87,16 @@ Traces et profilage {.kicker}
 
 --- notes
 
-Instagram n’a pas directement eu accès à notre recherche Google. Google et Meta sont concurrents : Google ne vend pas nos requêtes à Meta.
+Instagram n’a pas eu directement accès à notre recherche Google. Google et Meta sont en effet concurrents : Google ne vend pas nos requêtes à Meta.
 
-Mais les sites que nous avons ouverts intègrent souvent des outils de Google et de Meta qui signalent à chacune e ces entreprises les pages consultées ou les articles mis au panier.
+Mais les sites que nous avons ouverts intègrent souvent des outils de Google et de Meta. Chacun de ces outils signale à son entreprise les pages consultées ou les articles mis au panier.
 
 Ces traces circulent donc entre les sites, les applications et les plateformes. Or, une fois agrégées, elles disent beaucoup de nous.
 
 :::example
 Chez Google : la requête « étirement ischio jambier », son heure, la position approximative déduite de notre connexion ; puis les vidéos d’étirement regardées sur YouTube.
 
-Sur les sites ouverts : les pages consultées, la durée de la visite, le bracelet mis au panier puis abandonné. La balise de Google et le pixel de Meta signalent enregistrent de ces gestes.
+Sur les sites ouverts : les pages consultées, la durée de la visite, le bracelet mis au panier puis abandonné. La balise de Google et le pixel de Meta enregistrent ces gestes.
 
 Dans nos applications : l’application de course installée sur notre téléphone signale à Meta ses ouvertures grâce au kit logiciel qu’elle intègre.
 
@@ -105,38 +104,70 @@ Hors ligne : nous avons acheté un tapis de sol en magasin en donnant notre adre
 
 Sur Instagram : les vidéos regardées jusqu’au bout, les comptes de surf suivis, les mentions « J’aime » et l’heure à laquelle nous ouvrons l’application chaque soir.
 
+Dans notre compte Google : l’itinéraire vers la salle de sport demandé à Google Maps trois soirs par semaine ; les sites visités dans Chrome lorsque l’historique est synchronisé ; dans Gmail, les reçus de nos achats en ligne, que Google range dans une page « Achats » de notre compte.
+
+Chez Meta : les achats et les jeux que d’autres entreprises lui signalent. Depuis juin 2026, Meta s’en sert aussi pour choisir les vidéos de notre fil, et pas seulement les publicités.
+
+Avec notre carte bancaire : aux États-Unis, Google a acheté des données de transactions Mastercard. Il pouvait ainsi vérifier si une publicité vue en ligne débouchait sur un achat en magasin.
+
+Devant notre télévision connectée : certains téléviseurs reconnaissent les programmes affichés à l’écran. En 2017, la FTC a sanctionné Vizio, qui vendait seconde par seconde ce que regardaient 11 millions de téléviseurs.
+
+Si nous portons des lunettes connectées : les lunettes Ray-Ban Meta enregistrent nos questions vocales à l’assistant et les conservent jusqu’à un an. Depuis avril 2025, ce stockage ne peut plus être refusé. Hors de l’Union européenne, Meta utilise en outre depuis décembre 2025 nos conversations avec son assistant, écrites ou orales, pour choisir nos publicités.
+
+Si nous portons une montre connectée : elle mesure notre rythme cardiaque, notre sommeil et nos séances de sport. Google, propriétaire de Fitbit, s’est toutefois engagé auprès de la Commission européenne à ne pas utiliser ces données de santé pour la publicité.
+
+Dans nos applications de santé : l’application de suivi des règles Flo transmettait aux outils d’analyse de Facebook et de Google des informations comme une grossesse, malgré ses promesses de confidentialité. La FTC l’a sanctionnée en 2021.
+
+Avec notre enceinte connectée : Amazon reconnaît que nos demandes à Alexa, comme une commande ou une chanson, peuvent orienter les publicités qu’il affiche.
+
+Au volant : General Motors a vendu les données de conduite de millions de véhicules — freinages brusques, excès de vitesse, trajets de nuit — à des agences qui les ont transmises à des assureurs. La FTC lui interdit désormais ces ventes pendant cinq ans.
+
 Enfin, notre appareil lui-même : le modèle du téléphone, son identifiant publicitaire, son adresse IP et sa langue.
 :::
 
-Prise isolément, chacune de ces traces dit peu de chose. Rapprochées, elles dessinent une personne : sportive, soucieuse de son corps, attirée par les bijoux, qui consulte les prix sans acheter, et disponible sur Instagram le soir.
+Prise isolément, chacune de ces traces dit peu de chose. Rapprochées, elles dessinent une personne.
+
+Ses goûts : la course et les étirements, le surf, les bijoux, la musique demandée à son enceinte, les séries regardées le soir.
+
+Ses habitudes : la salle de sport trois soirs par semaine, Instagram avant de dormir, des trajets en voiture parfois tard la nuit.
+
+Son corps : son rythme cardiaque, la qualité de son sommeil, son cycle ou une grossesse si elle utilise une application de suivi.
+
+Son portefeuille : ce qu’elle achète en ligne et en magasin, ce qu’elle met au panier sans acheter, les annonces qui la font finalement passer à l’achat.
 
 :::warning
-**Précision.** Ces traces ne sont pas toutes collectées ni rapprochées à chaque fois. Cela dépend des outils installés par chaque site, de nos réglages et de nos consentements, comme le refus des cookies ou du suivi entre applications sur iPhone.
+Ce portrait reste une construction. Chacun de ses traits est une supposition tirée de traces, et il peut être faux : nous pouvons évidemment chercher un bracelet pour un proche ou prêter notre voiture.
+
+Ces traces ne sont pas toutes collectées ni rapprochées à chaque fois. Cela dépend des outils installés par chaque site, de nos réglages et de nos consentements, comme le refus des cookies ou du suivi entre applications sur iPhone.
+
+Enregistrer une trace ne signifie pas toujours s’en servir pour cibler. Google affirme ne plus utiliser le contenu de Gmail pour la publicité depuis 2017. Depuis 2024, l’historique des positions de Google Maps est conservé sur le téléphone ; les recherches et les itinéraires restent en revanche liés au compte.
 :::
 
-C’est à partir de ce rapprochement que se construit un profil.
+Mais l’essentiel n’est pas dans ces détails. Quelles que soient les traces effectivement collectées, leur rapprochement permet quoi qu'il en soit de dessiner un profil. Et c’est ce profil qui intéresse les plateformes.
 
-**Sources.** [Meta, Meta Pixel](https://developers.facebook.com/docs/meta-pixel/) ; [Meta, Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/) ; [Google Ads, Customer Match](https://support.google.com/google-ads/answer/6379332).
+**Sources.** [Meta, Meta Pixel](https://developers.facebook.com/docs/meta-pixel/) ; [Meta, Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/) ; [Google Ads, Customer Match](https://support.google.com/google-ads/answer/6379332) ; [Google, activité sur le Web et les applications](https://support.google.com/accounts/answer/7021629) ; [Engadget, mai 2019, sur la page « Achats » de Gmail](https://www.engadget.com/2019-05-17-gmail-purchase-tracking-privacy.html) ; [Malwarebytes, juin 2024, sur l’historique des positions](https://www.malwarebytes.com/blog/news/2024/06/google-will-start-deleting-location-history) ; [Meta, juin 2026](https://about.fb.com/news/2026/06/better-personalization-and-changes-to-controls-for-your-activity-from-other-businesses/) ; [Engadget, août 2018, sur Google et Mastercard](https://www.engadget.com/2018-08-31-google-mastercard-track-offline-sales.html) ; [FTC, février 2017, sur Vizio](https://www.ftc.gov/news-events/news/press-releases/2017/02/vizio-pay-22-million-ftc-state-new-jersey-settle-charges-it-collected-viewing-histories-11-million) ; [TechCrunch, avril 2025, sur les lunettes Ray-Ban Meta](https://techcrunch.com/2025/04/30/if-you-own-ray-ban-meta-glasses-you-should-double-check-your-privacy-settings) ; [The Register, octobre 2025, sur Meta AI et la publicité](https://www.theregister.com/2025/10/01/meta_ai_use_informs_ads/) ; [Digital Health, décembre 2020, sur Google et Fitbit](https://www.digitalhealth.net/2020/12/european-commission-gives-green-light-to-googles-fitbit-takeover/) ; [FTC, janvier 2021, sur Flo](https://www.ftc.gov/news-events/news/press-releases/2021/01/developer-popular-womens-fertility-tracking-app-settles-ftc-allegations-it-misled-consumers-about) ; [The Register, avril 2022, sur Alexa](https://www.theregister.com/2022/04/27/amazon_audio_data/) ; [BleepingComputer, 2025, sur General Motors](https://bleepingcomputer.com/news/security/ftc-bans-general-motors-from-selling-drivers-location-data-for-five-years).
 
 ---
-## Profiler et prédire
+## Profiler pour prédire
 Une nouvelle gouvernementalité {.kicker}
 
 --- notes
 
-Un profil rassemble ce qu’un système suppose de nous : nos centres d’intérêt, nos habitudes, nos achats probables.
+:::important
+Un profil est une description de nous déduite de nos traces : nos centres d’intérêt, nos habitudes, nos achats probables, etc.
+:::
 
-Le but n’est pas de nous connaître pour nous connaître. Il s’agit de rendre nos actions et nos désirs prévisibles : savoir qui cliquera, qui achètera, et à quel moment.
+Le but n’est pas de nous connaître pour nous connaître. Il s’agit de rendre nos actions et nos désirs prévisibles : savoir qui cliquera, qui achètera et à quel moment.
 
-C’est pourquoi la donnée est souvent présentée comme le nouvel or noir du capitalisme numérique. Elle constitue en effet la matière première de son modèle économique : la capacité à prédire nos comportements et à devancer nos désirs.
+C’est pourquoi la donnée est souvent présentée comme le nouvel or noir du capitalisme numérique. Elle est en effet la matière première de son modèle économique. Ce modèle consiste à prédire nos comportements et à devancer nos désirs.
 
-Cette capacité de prédiction tire l’essentiel de ses revenus de la vente de publicité ciblée - mais, nous le verrons, pas uniquement : l’assurance, le travail ou la santé s’emparent aussi de ces prédictions.
+Cette capacité de prédiction tire l’essentiel de ses revenus de la vente de publicité ciblée. Ces prédictions intéressent pourtant d’autres secteurs : nous verrons que l’assurance, le travail ou la santé s’en emparent aussi.
 
 La publicité en ligne reste toutefois le principal marché de ces capacités prédictives. Et ce marché est colossal.
 
 ---
 
-<!-- slide: id="marche" title="Un marché colossal" steps=3 -->
+<!-- slide: id="marche" title="Un marché colossal" steps=2 -->
 
 <script>
   import AdMarketDonut from "$components/AdMarketDonut.svelte";
@@ -148,118 +179,90 @@ La publicité en ligne reste toutefois le principal marché de ces capacités pr
 
 En 2025, les investissements publicitaires mondiaux atteignent environ 1 140 milliards de dollars selon WPP Media. Ils progressent de près de 9 % en un an.
 
+:::comment
+Avancer le slide.
+:::
+
 La publicité numérique en représente près des trois quarts. Il s’agit des annonces vendues par les acteurs du web : moteurs de recherche, réseaux sociaux, sites, applications et places de marché comme Amazon.
 
-En ajoutant les extensions numériques des médias traditionnels, la part dépasse 80 %. La télévision en streaming désigne les publicités diffusées sur les plateformes vidéo et les services de replay des chaînes, comme TF1+. L’**affichage numérique** désigne les écrans publicitaires installés dans l’espace public : gares, métro, abribus ou centres commerciaux. Les sites des journaux entrent aussi dans ce total.
-
-:::warning
-**Précision.** L’affichage numérique ne désigne pas les bannières sur le web. Le mot « affichage » renvoie ici à l’affichage urbain, dont les panneaux deviennent des écrans. La frontière entre ces catégories est une convention de WPP Media : elle classe ces revenus selon le média traditionnel qui les vend — télévision, affichage, presse — et non selon la technique de diffusion.
-:::
-
-Dans cette part numérique, trois groupes dominent. Alphabet en capte environ un tiers, Meta un cinquième et Amazon 7 %. À eux trois, ils réunissent donc environ 60 % de la publicité numérique mondiale.
-
 :::comment
-- Étape 0 : le marché total.
-- Étape 1 : la publicité numérique.
-- Étape 2 : avec le streaming et l’affichage numérique.
-- Étape 3 : les parts d’Alphabet, Meta et Amazon.
+Avancer le slide.
 :::
+
+Dans cette part numérique, trois groupes dominent. Alphabet en capte environ un tiers, Meta près d’un quart et Amazon 8 %. À eux trois, ils réunissent donc environ deux tiers de la publicité numérique mondiale.
+
+En 2025, la publicité rapporte à Alphabet, maison-mère de Google et YouTube, 295 milliards de dollars, soit 73 % de son chiffre d’affaires ; à Meta, maison-mère de Facebook, Instagram et WhatsApp, 196 milliards, soit 98 % de son chiffre d'affaire ; à Amazon, 69 milliards, soit 10 % de son chiffre d'affaire.
 
 :::warning
-**Précision.** Ces chiffres sont des estimations d’agences. Leurs périmètres varient : publicité politique américaine incluse ou non, extensions numériques des médias traditionnels comptées ou non. Retenir l’ordre de grandeur. Les parts des trois groupes rapportent leurs revenus publicitaires déclarés à cette estimation du marché numérique : ce sont des ordres de grandeur, pas des parts de marché mesurées.
+Il faut retenir des ordres de grandeur. Les revenus des trois groupes viennent de leurs rapports annuels. Le marché total est en revanche une estimation d’agence, dont le périmètre varie selon les sources : la Chine, la publicité politique américaine ou la publicité en ligne des chaînes et des journaux y sont incluses ou non. Les parts du numérique rapportent donc des revenus déclarés à une estimation : ce ne sont pas des parts de marché mesurées.
 :::
 
-**Sources.** [WPP Media, juin 2025](https://www.wppmedia.com/news/tyny-midyear-2025) ; [WPP Media, décembre 2025, présenté par The Media Leader](https://fr.themedialeader.com/this-year-next-year-la-publicite-mondiale-devrait-croitre-de-88-en-2025/).
+Ces chiffres posent une énigme. Vous ne payez rien pour chercher sur Google ou faire défiler Instagram. D’où viennent alors ces centaines de milliards ?
+
+Pour le comprendre, nous allons suivre l’argent. Nous verrons d’abord comment la publicité est devenue la principale source de financement du web. Puis nous ouvrirons la machine : qui vend quoi à qui, comment on quantifie la valeur d'une annonce, comment un affichage se vend aux enchères.
+
+Ces rouages soulèvent alors des questions moins visibles, mais plus profondes. Que fait cette machine de notre vie privée ? Comment capte-t-elle notre attention ? Quel pouvoir donne-t-elle aux plateformes ? Et qu’a-t-elle à voir avec l’IA ?
+
+Vous connaissez sans doute la formule « si c’est gratuit, c’est vous le produit ». Elle sonne juste. Pourtant, elle se trompe : ce n’est pas vous qui êtes vendu.
+
+:::important
+Le produit n’est pas vous : c’est une idée de vous, ou plus exactement une projection de ce que vous ferez demain.
+:::
+
+C’est peut-être pire. Ce futur n’est pas seulement prévu : il est vendu à des annonceurs qui paient pour l’orienter : pour faire effectivement advenir ce qui a été prévu. Votre avenir est ainsi préempté avant même que vous l’ayez choisi.
+
+Cette marchandise semble toute neuve. Elle ne vient pourtant pas de nulle part : les plateformes du web n’ont pas inventé la publicité, ni entièrement réinventé son modèle.
+
+Pour le comprendre, il faut remonter avant le web. La presse, la radio et la télévision vendaient déjà quelque chose aux annonceurs : l’accès à leur public.
+
+
+**Sources.** [WPP Media, juin 2025](https://www.wppmedia.com/news/tyny-midyear-2025) ; [WPP Media, décembre 2025, présenté par The Media Leader](https://fr.themedialeader.com/this-year-next-year-la-publicite-mondiale-devrait-croitre-de-88-en-2025/) ; [Alphabet, rapport annuel 2025](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm) ; [Meta, résultats 2025](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/) ; [Amazon, résultats 2025](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/).
 
 ---
-
-<!-- slide: id="concentration" title="Un marché concentré" layout="stack" steps=0 -->
-
-|          | Publicité, 2025 | Part du chiffre d’affaires |
-| :------- | --------------: | -------------------------: |
-| Alphabet | 295 Md$         | 73 %                       |
-| Meta     | 196 Md$         | 98 %                       |
-| Amazon   | 69 Md$          | 10 %                       |
+## L’audience marchandise
+Dallas Smythe, 1977 {.kicker}
 
 --- notes
 
-Ce marché est concentré entre très peu de mains.
+En 1977, Dallas Smythe, un économiste et théoricien de la communication d’origine canadienne, introduit le concept d’*audience commodity* : de public comme marchandise.
 
-Alphabet, maison-mère de Google et YouTube, tire 295 milliards de dollars de la publicité en 2025 : 73 % de ses revenus. Meta, maison-mère de Facebook, Instagram et WhatsApp, en tire 196 milliards. Pour Meta, la publicité n’est donc pas une activité parmi d’autres : elle constitue presque tout son chiffre d’affaires.
+Nous croyons souvent que les médias vivent de leurs contenus : les articles des journaux, les émissions de radio ou de télévision. Pour Smythe, ce n’est pas — ou pas seulement — le cas.
 
-Amazon vend aussi des emplacements publicitaires sur son site marchand : 69 milliards de dollars en 2025.
+Un média publicitaire rassemble d’abord un public et capte son attention. Il en propose ensuite une mesure : l’audimat, les enquêtes d’audience. Il vend enfin aux annonceurs la possibilité de toucher ce public finement quantifié.
 
-Selon WARC, ces trois entreprises captent ensemble 55,8 % des dépenses publicitaires mondiales hors Chine. La Chine forme un marché distinct, dominé par d’autres acteurs comme ByteDance ou Alibaba.
-
-:::warning
-**Précision.** Les parts de marché varient selon les sources et les périmètres : marché total ou seulement numérique, Chine incluse ou non. Les revenus des entreprises viennent de leurs rapports annuels ; la part de 55,8 % est une estimation.
+:::important
+Pour Smythe, la marchandise des médias, c’est leur public : un public constitué, mesuré et vendu aux annonceurs.
 :::
 
-**Sources.** [Alphabet, rapport annuel 2025](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm) ; [Meta, résultats 2025](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/) ; [Amazon, résultats 2025](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) ; [WARC, septembre 2025, présenté par Advanced Television](https://www.advanced-television.com/2025/09/25/forecast-alphabet-amazon-meta-take-55-8-of-2025-ad-market/).
+Le contenu n’est donc qu’un appât. Il sert à attirer et à retenir cette marchandise.
+
+Cette intuition critique anticipe une notion que les économistes nommeront plus tard : les **marchés bifaces**. Un média ou une plateforme y met en relation deux faces : les utilisateurs d’un côté ; les annonceurs de l’autre. Son profit vient de l’attention qu’il fait circuler entre elles et de sa capacité à constituer cette attention en ressource économique.
+
+La notion de marché biface donne ainsi une forme savante à la maxime bien connue : « si c’est gratuit, c’est toi le produit ».
+
+Dallas Smythe était un économiste marxiste et on pourrait évidemment s’amuser du regard très critique qu’il portait sur l’économie des médias.
+
+La portée de son analyse ne cessera pourtant d’être confirmée par les acteurs des industries culturelles.
+
+En 2004, Patrick Le Lay, alors PDG de TF1 déclarait ainsi, dans un entretien à Télérama :
 
 ---
 
-<!-- slide: id="questions" title="Trois questions" layout="stack" steps=0 -->
+> « Pour qu'un message publicitaire soit perçu, il faut que le cerveau du téléspectateur soit disponible. Nos émissions ont pour vocation de le rendre disponible : c'est-à-dire de le divertir, de le détendre pour le préparer entre deux messages. Ce que nous vendons à Coca-Cola, c'est du temps de cerveau humain disponible. »
 
-- Comment en sommes-nous arrivés là ?
-- Comment ce marché fonctionne-t-il ?
-- Quelles questions pose-t-il ?
+Patrick Le Lay, 2004 {.kicker}
 
 --- notes
 
-Ce cours suit trois fils. D’abord l’histoire : comment la publicité est devenue le principal financement du web. Ensuite le fonctionnement : les acteurs, les mesures et les enchères. Enfin les questions que cette organisation pose : vie privée, captation de l’attention, pouvoir des plateformes et lien avec l’IA.
+Le Lay décrit ainsi la disponibilité des téléspectateurs de TF1 comme une ressource vendue aux annonceurs. Les émissions jouent bien le rôle d’appât décrit par Smythe : elles préparent le public entre deux messages.
 
-Nous rencontrerons souvent la formule « si c’est gratuit, c’est vous le produit ». Nous verrons ce qu’elle saisit et ce qu’elle simplifie.
+Plus tard, Reed Hastings, alors PDG de Netflix, affirmera que son principal concurrent est le sommeil de ses clients.
 
-:::comment
-Prévoir deux minutes.
-:::
+La remarque pourrait prêter à sourire. Elle pointe pourtant quelque chose de décisif. Le sommeil est effectivement un concurrent de Netflix parce que le temps d'attention de son public est limité.
 
-Les plateformes du web n’ont pas inventé la publicité. Cet essor ne vient pas de nulle part et ne réinvente pas entièrement le modèle publicitaire. Pour le comprendre, il faut remonter avant le web : vendre l’accès à un public existait déjà dans la presse, à la radio et à la télévision.
+Réunir un public ne suffit donc pas : il faut obtenir une part de son attention. Or cette attention est une ressource finie. Chaque heure passée sur Netflix est une heure de moins pour la télévision, les réseaux sociaux ou le sommeil.
 
----
-
-<!-- slide: id="smythe" title="L’audience marchandise" layout="stack" steps=0 -->
-
-<h2>L’audience marchandise</h2>
-<p>Dallas Smythe, 1977</p>
-<svg
- 
-  viewBox="0 0 1000 310"
-  role="img"
-  aria-label="Un média propose du contenu à un public et reçoit un paiement d’un annonceur."
-  ><text x="60" y="155">Public</text><text x="420" y="155">Média</text><text
-    x="785"
-    y="155">Annonceur</text
-  ><path
-   
-    d="M390 145H200m0 0 12-6m-12 6 12 6M750 145H560m0 0 12-6m-12 6 12 6"
-  /><text x="230" y="115">contenu</text><text
-   
-    x="600"
-    y="115">paiement</text
-  ><text x="310" y="255"
-    >Un accès au public se commercialise.</text
-  ></svg
->
-
---- notes
-
-Un média publicitaire rassemble un public. Il en décrit certaines caractéristiques et vend aux annonceurs la possibilité de le toucher. Smythe analyse cette production d’audience dans une perspective marxiste.
-
-L’annonceur achète une prestation d’exposition auprès d’un public attendu ou mesuré. Il n’acquiert pas la propriété des personnes. Un média peut aussi vendre des abonnements : plusieurs financements coexistent.
-
-En 2004, Patrick Le Lay décrit la disponibilité des téléspectateurs de TF1 comme une ressource vendue aux annonceurs. Ce propos d’industriel donne un exemple situé de cette logique.
-
-:::warning
-**Vigilance historique.** Le texte retenu de Smythe date de 1977 ; Dependency Road paraît en 1981. Le propos de Le Lay vient du livre Les dirigeants face au changement, pas d’un entretien initial à Télérama.
-:::
-
-:::comment
-Prévoir sept minutes. Suivre séparément le contenu et le paiement dans le schéma.
-:::
-
-Réunir un public ne suffit pas. Il faut obtenir une part de son attention.
+Les médias se livrent donc une lutte pour l’attention : ce que l’un capte, les autres le perdent.
 
 **Sources.** [Dallas W. Smythe, 1977](https://journals.uvic.ca/index.php/ctheory/article/view/13715/4463) ; [Patrick Le Lay, propos de 2004, source journalistique contemporaine](https://www.lemonde.fr/archives/article/2004/09/01/p-les-auteurs-contre-les-propos-de-m-le-lay-p_4292024_1819218.html).
 
@@ -356,6 +359,8 @@ Un prix monétaire nul pour les usagers peut favoriser leur participation. L’a
 
 La formule « l’utilisateur est le produit » signale une asymétrie, mais elle décrit mal la transaction. Ce qui est acheté peut être une impression, un clic ou un accès ciblé.
 
+L’intuition de Smythe annonçait en partie cette notion. Mais Smythe analysait la production d’audience dans une perspective marxiste. La notion de marché biface vient d’une autre tradition économique.
+
 :::warning
 **Précision.** L’économie des marchés bifaces étudie les relations entre groupes et la structure des prix. Elle ne constitue pas une simple reformulation de la critique de Smythe. Certains services vivent d’autres ressources.
 :::
@@ -401,26 +406,29 @@ Quelle unité permet alors de facturer l’annonceur ?
 
 ---
 
-<!-- slide: id="metriques" title="Trois unités de mesure" layout="stack" steps=0 -->
+<!-- slide: id="metriques" title="Trois unités de mesure" steps=2 -->
 
-<dl>
-  <div>
-    <dt>CPM</dt>
-    <dd>Mille impressions</dd>
-  </div>
-  <div>
-    <dt>CPC</dt>
-    <dd>Un clic</dd>
-  </div>
-  <div>
-    <dt>CPA</dt>
-    <dd>Une action définie</dd>
-  </div>
-</dl>
+<script>
+  import AdMetrics from "$components/AdMetrics.svelte";
+</script>
+
+<AdMetrics />
 
 --- notes
 
-Le CPM rapporte une dépense à mille impressions. Le CPC la rapporte aux clics. Le CPA la rapporte aux actions choisies comme conversions : un achat, une inscription ou une demande de devis.
+Le CPM rapporte une dépense à mille impressions.
+
+:::comment
+Avancer le slide.
+:::
+
+Le CPC la rapporte aux clics.
+
+:::comment
+Avancer le slide.
+:::
+
+Le CPA la rapporte aux actions choisies comme conversions : un achat, une inscription ou une demande de devis.
 
 Chaque dénominateur répond à une question différente. L’impression indique un affichage comptabilisé ; le clic indique une réaction ; la conversion indique un événement conforme à l’objectif retenu.
 
@@ -1315,6 +1323,198 @@ Une modification visuelle ne supprime pas toute incitation financière. Il faut 
 Les capacités de mesure et d’intervention posent une question plus générale de pouvoir.
 
 **Sources.** [Federal Trade Commission, 2022](https://www.ftc.gov/reports/bringing-dark-patterns-light).
+
+---
+
+<!-- slide: id="huneman" title="Les sociétés du profilage" -->
+
+## Les sociétés du profilage
+Philippe Huneman, 2023 {.kicker}
+
+--- notes
+
+Le philosophe des sciences Philippe Huneman donne un nom à la situation que nous décrivons depuis le début du cours : les **sociétés du profilage**. Son livre paraît en 2023. Son sous-titre résume trois opérations : évaluer, optimiser, prédire.
+
+Huneman situe ces sociétés dans une succession de régimes de pouvoir. Michel Foucault décrivait des sociétés de discipline : l’école, l’usine, l’armée ou la prison dressent les corps et imposent des normes. En 1990, Gilles Deleuze annonce des sociétés de contrôle : on ne dresse plus les individus, on suit en continu leur trajectoire. Huneman ajoute un troisième moment. Le contrôle suit nos comportements ici et maintenant ; le profilage, lui, prédit.
+
+:::important
+Le contrôle suit ce que nous faisons ; le profilage prédit nos préférences et nos conduites à venir.
+:::
+
+---
+
+<!-- slide: id="profils" title="Des traces aux profils" steps=6 -->
+
+<script>
+  import ProfileSpace from "$components/ProfileSpace.svelte";
+</script>
+
+<ProfileSpace />
+
+--- notes
+
+:::comment
+La slide compte cinq étapes. Laisser d’abord la fiche affichée le temps de la décrire.
+:::
+
+Partons d’une fiche d’élève. Elle porte un nom, une classe, une note de conduite et une appréciation. C’est ainsi que la discipline connaît les individus : elle les identifie, les classe et les juge par rapport à une norme.
+
+L’appréciation s’adresse à quelqu’un. « Doit prendre davantage la parole » suppose une personne capable de comprendre ce jugement et de se corriger. Le pouvoir disciplinaire passe donc par la signification : il dit à chacun ce qu’il est et ce qu’il devrait être.
+
+:::comment
+Avancer le slide : la fiche se défait en points.
+:::
+
+Un système de profilage ne lit pas cette fiche. Il ne retient ni un nom ni un jugement : il enregistre des **traces**. Une trace est un événement daté, enregistré par une machine : un clic, un achat, une vidéo regardée jusqu’au bout, une position, une heure de connexion.
+
+:::example
+Cette semaine, le compte de Camille a lancé quatre vidéos de cuisine. Mardi, une commande de repas part à 23 h 40. Le téléphone est un modèle d’entrée de gamme. Une publicité de chaussures reste neuf secondes à l’écran avant le défilement.
+:::
+
+Ces traces ne disent pas qui est Camille. Personne ne les a interprétées ; elles ont seulement été enregistrées. Elles viennent de la plateforme elle-même, des pixels installés sur d’autres sites ou des courtiers en données.
+
+:::comment
+Avancer le slide : les traces s’alignent sur une ligne.
+:::
+
+Pour comparer des personnes, il faut d’abord mettre ces traces en forme. Chaque personne devient une ligne de nombres : on appelle cette ligne un **vecteur**. Chaque colonne correspond à une mesure : le nombre de vidéos de cuisine vues dans la semaine, la part des achats faits après 23 h, le nombre de jours depuis la dernière visite.
+
+Les lignes de tous les utilisateurs forment un immense tableau : une ligne par personne, une colonne par mesure. Ce tableau est presque vide. Chaque personne ne laisse de traces que dans une infime partie des colonnes possibles.
+
+:::example
+Sur la ligne de Camille, les points pâles sont les colonnes où rien n’a été enregistré. Au-dessus et en dessous figurent les lignes d’autres personnes. Sur une plateforme réelle, le tableau compte des millions de lignes et souvent des milliers de colonnes.
+:::
+
+À ce stade, chaque colonne garde un sens lisible. C’est l’étape suivante qui le fait disparaître.
+
+:::comment
+Avancer le slide : la ligne devient un point parmi les autres.
+:::
+
+Une ligne de nombres peut se lire comme une position dans un espace. Deux lignes semblables donnent deux points proches. Chaque utilisateur devient donc un point, et l’ensemble des utilisateurs forme un nuage.
+
+Reste à choisir les axes de cet espace. Les axes affichés reprennent des catégories classiques du marketing et de la statistique : l’âge, le revenu, le diplôme. Ces catégories ont un sens. Selon ces axes, pourtant, le nuage reste indistinct : aucun groupe ne s’en détache.
+
+:::warning
+**Précision.** L’animation est un schéma. Les systèmes réels apprennent des dizaines ou des centaines de dimensions, pas trois. Les catégories socio-démographiques gardent une valeur prédictive : le schéma force le contraste. Les codes affichés sont fictifs.
+:::
+
+:::comment
+Avancer le slide : le nuage pivote vers d’autres dimensions.
+:::
+
+Le système ne fixe pas ses axes à l’avance : il les apprend à partir du tableau. Il cherche les colonnes qui varient ensemble chez beaucoup de personnes. Les comptes qui lancent des vidéos de cuisine commandent-ils aussi plus souvent tard le soir ? Chaque régularité de ce genre devient une **dimension latente** : un axe calculé qui résume des milliers de colonnes.
+
+C’est ici qu’apparaît la **corrélation**. Deux traces sont corrélées quand elles tendent à apparaître ensemble, sans que l’une explique l’autre. Le système retient ces co-occurrences ; il n’a pas besoin de savoir ce qui les relie.
+
+Ces dimensions n’ont pas de nom. On peut parfois les interpréter après coup : dans un système de recommandation de films, un axe peut séparer les comédies des drames. Souvent, aucune interprétation ne tient. D’où les codes affichés : DIM_2271 ne désigne ni un goût, ni une classe sociale, ni un trait de caractère.
+
+:::example
+En 2013, des chercheurs de Cambridge et de Microsoft Research prédisent des traits de personnalité et l’intelligence d’environ 58 000 volontaires à partir de leurs seuls « J’aime » sur Facebook. Parmi les meilleurs indices d’une intelligence élevée figurent les pages « Science », « Orages » et « Frites bouclées ». Le lien n’a rien d’évident ; la corrélation suffit pourtant au calcul.
+:::
+
+Selon ces nouveaux axes, le nuage se divise en groupes. Les personnes d’un même groupe ne se connaissent pas. Elles ne partagent ni une identité ni une appartenance revendiquée : seulement des façons semblables de laisser des traces. Nous retrouvons les segments : le marché publicitaire découpe ces groupes et les vend aux annonceurs comme des audiences.
+
+:::important
+Un profil ne décrit pas une personne : c’est une position dans un espace de comportements, définie par sa proximité avec d’autres.
+:::
+
+:::comment
+Avancer le slide : les voisins s’allument et le point reçoit une probabilité.
+:::
+
+Vient alors la prédiction. Le système sait ce que d’autres personnes ont déjà fait : cliquer sur une annonce, acheter un produit, s’abonner. Il regarde les dix plus proches voisins du point de Camille. Huit d’entre eux ont accompli l’action EVT_2291. Le système attribue donc à Camille une probabilité de 0,80 de l’accomplir à son tour.
+
+C’est la logique du **filtrage collaboratif** : « les clients qui ont acheté cet article ont aussi acheté… ». Amazon décrit sa méthode dès 2003. Les systèmes actuels apprennent des modèles plus complexes mais conservent ce principe : estimer une conduite à partir de la conduite de personnes semblables.
+
+Cette probabilité a une valeur marchande immédiate. Nous l’avons vu avec les enchères : le prix proposé par l’annonceur est pondéré par une probabilité estimée de clic. Plus la prédiction est forte, plus l’affichage vaut cher.
+
+:::comment
+Avancer le slide : les segments s’effacent et chaque point se colore selon sa proximité avec Camille.
+:::
+
+Les groupes restent pourtant une simplification. Beaucoup de systèmes de recommandation n’en découpent aucun. Ils mesurent directement la distance entre Camille et chacun des autres points : plus un point est proche, plus sa conduite pèse dans la prédiction.
+
+Il n’y a donc pas de frontière nette. Des personnes rangées dans d’autres groupes comptent aussi, simplement un peu moins. Le profil devient un dégradé de ressemblances, recalculé à mesure que les traces s’accumulent.
+
+Le segment sert surtout à vendre. Un annonceur achète plus facilement une audience nommée et dénombrée qu’un dégradé de distances. Le découpage en groupes répond donc d’abord aux besoins du marché publicitaire.
+
+Pour un agrégateur de données, chacun de nous est un nuage de points : des milliers de données sur nos achats, nos déplacements, nos goûts. Le système compare ce nuage à ceux de millions d’autres personnes et en tire des profils collectifs, c’est-à-dire des groupes de personnes qui se ressemblent. Notre profil n’est donc ni nous-mêmes, ni une simple statistique : il est fait de nos traces, mais il annonce aussi ce que nous ferons probablement.
+
+Ces prédictions reposent sur des corrélations, pas sur une compréhension des causes. Si des personnes qui nous ressemblent ont acheté un produit, le système prévoit que nous l’achèterons aussi ; il n’a pas besoin de savoir pourquoi. Huneman rattache ce geste à un tournant plus large des sciences : prédire à partir de masses de données, sans théorie.
+
+Ce tournant a eu son manifeste. En juin 2008, Chris Anderson, rédacteur en chef de *Wired*, publie « The End of Theory ». Son sous-titre est explicite : le déluge de données rendrait la méthode scientifique obsolète.
+
+Son exemple de départ est Google. Google ne sait pas pourquoi une page vaut mieux qu’une autre : si les liens qui pointent vers elle le disent, cela suffit. De la même façon, il associe des annonces à des contenus sans rien savoir ni des unes ni des autres.
+
+Anderson étend ensuite ce geste à toutes les sciences humaines. Qui sait pourquoi les gens font ce qu’ils font ? Peu importe : ils le font, et nous pouvons le mesurer. « Avec assez de données, les chiffres parlent d’eux-mêmes. » La corrélation suffit donc ; elle remplace la causalité.
+
+:::warning
+**Précision.** Le texte d’Anderson est un manifeste provocateur, pas un résultat scientifique. Il a été largement discuté et contesté. Il rend pourtant bien compte de l’état d’esprit qui accompagne l’essor des big data.
+:::
+
+Ce geste ne naît pourtant pas avec les big data. Nous l’avons rencontré dans le chapitre sur la cybernétique : c’est l’approche par **boîte noire**. Face à un système fermé, on agit sur ses entrées et on observe ses sorties, sans chercher à savoir ce qui se passe à l’intérieur. Chez Ashby, ce choix restait provisoire ; chez Anderson, il devient un programme.
+
+Dès 1943, Rosenblueth, Wiener et Bigelow proposaient d’étudier les machines comme les êtres vivants par leur comportement observable, plutôt que par leur fonctionnement interne. Anderson pousse ce regard jusqu’au bout. Nos motivations, nos désirs, notre histoire n’intéressent plus : seules comptent nos réactions à ce qui nous est présenté. L’approche devient presque comportementaliste.
+
+Ce regard rejoint aussi une certaine pensée libérale. Nous l’avons vu avec Hayek : le marché coordonne des millions de décisions sans qu’aucun centre n’en connaisse les raisons. Les prix suffisent à transmettre l’information utile, comme la corrélation suffit chez Anderson.
+
+C’est là que se joue une rupture avec les formes antérieures du pouvoir. La discipline décrite par Foucault visait l’intérieur des individus : elle voulait les corriger et leur faire intérioriser une norme. Le pouvoir passait donc par leur conscience et par leurs raisons d’agir.
+
+Le profilage, lui, se désintéresse de ces raisons. Il n’a besoin ni de nous convaincre ni de nous corriger : il lui suffit de prévoir ce que nous ferons. Antoinette Rouvroy et Thomas Berns parlent de **gouvernementalité algorithmique** : orienter les conduites à partir de corrélations statistiques, sans passer par la compréhension que les individus ont d’eux-mêmes.
+
+:::important
+Profiler, c’est prévoir ce qu’une personne va faire à partir de sa ressemblance avec d’autres, sans connaître les causes de sa conduite.
+:::
+
+:::warning
+**Précision.** Huneman ne dit pas que ces prédictions sont exactes. À propos de la police prédictive, il parle plutôt d’une « économie de la promesse » : les résultats annoncés ne sont pas au rendez-vous. La force du profilage tient ailleurs.
+:::
+
+Car le profilage ne se contente pas de prédire.
+
+**Sources.** [Philippe Huneman, Les sociétés du profilage. Évaluer, optimiser, prédire, Payot, 2023](https://www.payot-rivages.fr/payot/livre/les-sociétés-du-profilage-9782228932301), introduction et chapitres 2 à 4 ; [Chris Anderson, « The End of Theory », Wired, 23 juin 2008](https://www.wired.com/2008/06/pb-theory/) ; [Arturo Rosenblueth, Norbert Wiener et Julian Bigelow, « Behavior, Purpose and Teleology », 1943](https://doi.org/10.1086/286788) ; [W. Ross Ashby, An Introduction to Cybernetics, chap. 6, 1956](https://doi.org/10.5962/bhl.title.5851) ; [Antoinette Rouvroy et Thomas Berns, « Gouvernementalité algorithmique et perspectives d’émancipation », Réseaux, 2013](https://doi.org/10.3917/res.177.0163) ; [Greg Linden, Brent Smith et Jeremy York, « Amazon.com Recommendations: Item-to-Item Collaborative Filtering », IEEE Internet Computing, 2003](https://doi.org/10.1109/MIC.2003.1167344) ; [Yehuda Koren, Robert Bell et Chris Volinsky, « Matrix Factorization Techniques for Recommender Systems », IEEE Computer, 2009](https://doi.org/10.1109/MC.2009.263) ; [Michal Kosinski, David Stillwell et Thore Graepel, « Private Traits and Attributes Are Predictable from Digital Records of Human Behavior », PNAS, 2013](https://doi.org/10.1073/pnas.1218772110).
+
+---
+
+<!-- slide: id="huneman-faconner" title="Prédire et façonner" -->
+
+## Prédire et façonner
+Le double sens du profilage {.kicker}
+
+--- notes
+
+Huneman joue sur les deux sens du mot. Profiler, c’est d’abord ce que fait le profiler des séries policières : déduire d’un profil les prochains gestes d’une personne. Il note ce sens p-profilage. Mais profiler, c’est aussi donner sa forme à une pièce, comme on profile une pièce mécanique : façonner. Il note ce second sens n-profilage.
+
+Ce façonnage passe par les **nudges**. Un nudge est un « coup de pouce » : on organise la présentation d’un choix pour orienter la décision, sans l’imposer ni argumenter. L’économiste Richard Thaler et le juriste Cass Sunstein en ont fait un outil de politique publique. Or les environnements numériques s’y prêtent particulièrement : chaque choix y est présenté par une interface conçue d’avance.
+
+:::example
+Le bandeau de cookies : « Tout accepter » brille, tandis que le refus se cache derrière des réglages. Le réseau social : à chaque instant se pose le choix de rester ou de partir, et tout est fait pour que partir coûte. Google Maps : il fait apparaître sur notre carte des commerces liés à nos recherches. Personne ne nous traîne au café, mais sur des millions d’usagers, quelques-uns y entrent.
+:::
+
+Nous retrouvons la captologie et les dark patterns. La différence tient au profil : le coup de pouce peut être ajusté à chacun.
+
+L’évaluation complète le tableau. Un score résume un profil en un chiffre, et ce chiffre a des conséquences. Le score de crédit décide d’un prêt et de son taux ; certains logiciels de télétravail calculent un « score de productivité » qui module le salaire ; la CAF attribue à chaque allocataire un « score de risque » qui oriente ses contrôles.
+
+D’où la thèse la plus forte du livre. Le ciblage ne devine pas des besoins qui existeraient avant lui : il contribue à les faire naître. Notre profil oriente ce qu’on nous montre ; ce qu’on nous montre modifie nos conduites ; nos nouvelles conduites confirment et affinent le profil. Une prédiction prise dans cette boucle ne peut plus vraiment être dite vraie ou fausse, puisqu’elle tend à se réaliser.
+
+:::important
+Le profilage ne se contente pas de prédire nos conduites : il les façonne pour qu’elles ressemblent à la prédiction.
+:::
+
+Le philosophe Ian Hacking avait montré que classer des personnes transforme les personnes classées : un diagnostic change celui qui le reçoit. Mais ces personnes connaissent leur étiquette. Ici, nous ignorons dans quel groupe nous sommes rangés et pourquoi. Ces groupes n’ont d’ailleurs souvent pas de nom dans notre langue : seuls les algorithmes les distinguent. La boucle est opaque.
+
+:::warning
+**Précision.** Les « sociétés du profilage » sont la thèse d’un philosophe, pas un constat établi. Huneman décrit une logique d’ensemble ; il ne mesure pas l’efficacité de chaque dispositif. L’affaire Cambridge Analytica, qu’il prend pour exemple, reste discutée quant à ses effets réels sur les votes.
+:::
+
+:::comment
+Prévoir dix minutes pour les deux slides. Relier chaque opération à un exemple déjà vu : nos recherches d’étirements pour prédire, le fil Instagram pour façonner, un score de crédit pour évaluer.
+:::
+
+Huneman note que Shoshana Zuboff, venue d’une autre discipline, arrive au même moment à des thèses voisines. Elle les formule en termes économiques : d’où vient la valeur de ces prédictions, et qui se l’approprie ?
+
+**Sources.** [Philippe Huneman, Les sociétés du profilage. Évaluer, optimiser, prédire, Payot, 2023](https://www.payot-rivages.fr/payot/livre/les-sociétés-du-profilage-9782228932301), chapitres 2, 5 et 10 ; [entretien avec Philippe Huneman, Millénaire 3, 2025](https://millenaire3.grandlyon.com/Interview/2025/philippe-huneman-philosophe-des-sciences-la-surveillance-existe-bien-sur-mais-la-question-de-la-prediction-est-plus-importante-aujourd-hui).
 
 ---
 
