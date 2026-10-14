@@ -45,9 +45,8 @@
     content="Ressources pour les cours de cultures numériques d'Olivier Sarrouy à l'Université Rennes 2."
   />
 </svelte:head>
-<SkipLink />
-
-<Page>
+<Page lang="fr">
+  <SkipLink />
   <Header
     identity="olivier@sarrouy"
     identityUrl="/"
@@ -56,9 +55,9 @@
     path={navigationPath}
   />
   <Main>{@render children?.()}</Main>
-  <Footer identity="olivier·sarrouy" clock />
+  <Footer identity="olivier·sarrouy" />
+  <!-- After the footer, so the assistant receives the page language without entering a frame. -->
+  {#if course && chapter}
+    {#key course.slug}<FloatingAssistant {course} {chapter} />{/key}
+  {/if}
 </Page>
-
-{#if course && chapter}
-  {#key course.slug}<FloatingAssistant {course} {chapter} />{/key}
-{/if}

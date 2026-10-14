@@ -76,7 +76,7 @@ Nous sommes enfin libres. Pendant que «l’enseignement» a lieu sans nous, not
 
     .badge {
         display: inline-block;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-sm);
         border: 1px solid var(--border-prominent);
         padding: 6px 10px;
         line-height: 1.5;

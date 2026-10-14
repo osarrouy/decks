@@ -152,7 +152,7 @@
         display: block;
         margin-bottom: var(--space-2);
         color: var(--text-primary);
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-sm);
         text-transform: uppercase;
     }
     .field,

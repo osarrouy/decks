@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { FullscreenButton } from "@dg/ui";
+  import { IconButton } from "@dg/ui";
 
   let { title, url } = $props();
   let container = $state();
@@ -35,8 +35,9 @@
       >Ouvrir ↗</a
     >
     {#if canFullscreen}
-      <FullscreenButton
-        {fullscreen}
+      <IconButton
+        icon={fullscreen ? "collapse" : "expand"}
+        pressed={fullscreen}
         label={fullscreen
           ? "Quitter le plein écran"
           : "Afficher les slides en plein écran"}

@@ -54,7 +54,7 @@
     : "Chaînage des blocs par les hashes et recalcul des preuves de travail"}
 >
   <svg
-    class="typography"
+    class="typescale"
     viewBox={overview ? "0 50 1000 350" : "0 0 1000 500"}
     role="img"
     aria-hidden="true"

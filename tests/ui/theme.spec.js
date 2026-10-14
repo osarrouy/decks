@@ -24,10 +24,10 @@ test("Svelte pages hydrate cleanly and preserve the theme across navigation and 
   });
   for (const [origin, start, link] of [[baseURL, "/", "L1"]]) {
     await page.goto(origin + start);
-    const toggle = page.getByRole("switch", { name: "Dark mode" }).first();
+    const toggle = page.getByRole("switch", { name: "Mode sombre" }).first();
     await setToggle(toggle, true);
     await page
-      .getByRole("navigation", { name: "Main navigation" })
+      .getByRole("navigation", { name: "Navigation principale" })
       .getByRole("link", { name: link, exact: true })
       .click();
     await expect(toggle).toBeChecked();

@@ -25,20 +25,20 @@ for (const width of [1280, 390]) {
     );
     const surface = reader.locator(".slide");
     await expect(surface).toBeVisible();
-    await expect(surface).toHaveClass(/\bprose\b/);
+    await expect(surface).toHaveClass(/\bformatted\b/);
     await expect(
       reader.getByLabel("Choisir une slide").locator("option"),
     ).toHaveCount(slides.length);
     const toggle = page
-      .getByRole("switch", { name: "Dark mode", includeHidden: true })
+      .getByRole("switch", { name: "Mode sombre", includeHidden: true })
       .first();
     for (const dark of [false, true]) {
       if ((await toggle.getAttribute("aria-checked")) !== String(dark)) {
         if (width < 1100) {
           await page.getByRole("button", { name: "Menu", exact: true }).click();
           await page
-            .getByRole("dialog", { name: "Main navigation" })
-            .getByRole("switch", { name: "Dark mode" })
+            .getByRole("dialog", { name: "Navigation principale" })
+            .getByRole("switch", { name: "Mode sombre" })
             .click();
           await page.keyboard.press("Escape");
         } else await toggle.click();
@@ -89,7 +89,6 @@ for (const width of [1280, 390]) {
       const decoration = await corners.evaluate((element) => {
         const style = getComputedStyle(element);
         const strokes = getComputedStyle(element, "::after");
-        const frame = getComputedStyle(element, "::before");
         const cross = style.getPropertyValue("--cross").trim();
         const border = style.getPropertyValue("--border-width").trim();
         return {
@@ -99,7 +98,6 @@ for (const width of [1280, 390]) {
             .join(", "),
           oldCrosses: getComputedStyle(element.parentElement, "::before")
             .content,
-          frameVisible: frame.display !== "none",
           frameWidth: style.borderTopWidth,
           borderWidth: border,
           extensions: [...element.querySelectorAll(".extension")].map(
@@ -107,7 +105,7 @@ for (const width of [1280, 390]) {
               const line = getComputedStyle(extension);
               return (
                 line.display === "block" &&
-                line.backgroundColor === frame.borderTopColor
+                line.backgroundColor === style.borderTopColor
               );
             },
           ),
@@ -115,7 +113,6 @@ for (const width of [1280, 390]) {
       });
       expect(decoration.actual).toBe(decoration.expected);
       expect(decoration.oldCrosses).toBe("none");
-      expect(decoration.frameVisible).toBe(true);
       expect(decoration.frameWidth).toBe(decoration.borderWidth);
       expect(decoration.extensions).toEqual(Array(8).fill(true));
       expect(

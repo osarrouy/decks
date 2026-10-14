@@ -1,5 +1,13 @@
 /* Default deck theme. All selectors are contained by SlideSurface. */
 
+/* Resolve the container-relative slide base once on the surface, so the slide's own
+ * container and nested containers do not rescale it. */
+@property --font-size-base {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 16px;
+}
+
 .slide[data-slide-surface] {
     /* One local DG scale follows the slide viewport; the document root stays unchanged. */
     --font-size-base: clamp(0.75rem, 2cqw, 2rem);
@@ -27,7 +35,7 @@
     align-content: center;
 }
 
-/* Projection-specific heading geometry; DG owns typography and prose defaults. */
+/* Projection-specific heading geometry; DG owns typography and formatted-content defaults. */
 .slide[data-slide-surface] :is(h1, h2, h3) {
     margin-bottom: var(--content-gap-block);
 }
@@ -476,13 +484,14 @@
     pointer-events: none;
 }
 
-/* Continue the DG rails outside the frame, preserving its corner clearance. */
+/* Continue the DG rails to the slide edges. They sit below DG's cross erasers,
+ * which clear them around each cross like any neighboring frame line. */
 .slide[data-slide-surface]>.corners>.extension {
     position: absolute;
     display: block;
     background: var(--border);
     pointer-events: none;
-    z-index: 4;
+    z-index: 3;
 }
 
 .slide[data-slide-surface]>.corners> :is(.top-left, .top-right, .bottom-left, .bottom-right) {
@@ -495,8 +504,9 @@
     height: 100cqh;
 }
 
+/* Offsets place each extension on the frame's own one-pixel border. */
 .slide[data-slide-surface]>.corners> :is(.top-left, .top-right) {
-    top: 0;
+    top: calc(-1 * var(--border-width));
 }
 
 .slide[data-slide-surface]>.corners> :is(.bottom-left, .bottom-right) {
@@ -504,11 +514,11 @@
 }
 
 .slide[data-slide-surface]>.corners> :is(.top-left, .bottom-left) {
-    right: calc(100% + var(--_corner-gap));
+    right: 100%;
 }
 
 .slide[data-slide-surface]>.corners> :is(.top-right, .bottom-right) {
-    left: calc(100% + var(--_corner-gap));
+    left: 100%;
 }
 
 .slide[data-slide-surface]>.corners> :is(.left-top, .left-bottom) {
@@ -520,9 +530,9 @@
 }
 
 .slide[data-slide-surface]>.corners> :is(.left-top, .right-top) {
-    bottom: calc(100% + var(--_corner-gap));
+    bottom: 100%;
 }
 
 .slide[data-slide-surface]>.corners> :is(.left-bottom, .right-bottom) {
-    top: calc(100% + var(--_corner-gap));
+    top: 100%;
 }

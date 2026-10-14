@@ -1,5 +1,5 @@
 <script>
-  import { Heading, Tabs } from "@dg/ui";
+  import { Heading } from "@dg/ui";
   import CourseHeading from "$lib/CourseHeading.svelte";
   import { browser } from "$app/environment";
   import ChapterNavigation from "$lib/ChapterNavigation.svelte";
@@ -7,6 +7,7 @@
   import { selectChapter } from "$lib/course-content.js";
   import CourseOverview from "$lib/CourseOverview.svelte";
   import MarkdownContent from "$lib/MarkdownContent.svelte";
+  import ResourceTabs from "$lib/ResourceTabs.svelte";
   import Bibliography from "$lib/Bibliography.svelte";
   import SlideDeck from "$lib/SlideDeck.svelte";
 
@@ -67,7 +68,7 @@
 
   <div class="resources">
     {#if view !== "chapitres"}
-      <Tabs
+      <ResourceTabs
         label="Informations générales du cours"
         value={view}
         items={[
@@ -82,11 +83,10 @@
             href: bibliographyHref,
           },
         ]}
-        data-sveltekit-noscroll
       />
       <CourseOverview {course} {view} chapterHref={resourceHref} />
     {:else if selected}
-      <Tabs
+      <ResourceTabs
         label="Ressources du cours"
         value={tab}
         items={[
@@ -106,7 +106,6 @@
             href: resourceHref(selected, "bibliographie"),
           },
         ]}
-        data-sveltekit-noscroll
       />
 
       {#if tab !== "bibliographie"}
@@ -214,7 +213,7 @@
 
   .badge {
     display: inline-block;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     border: 1px solid var(--border-prominent);
     padding: 6px 10px;
     line-height: 1.5;
@@ -316,7 +315,7 @@
     position: absolute;
     bottom: 16px;
     left: 20px;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
   }
 
   .supports {
@@ -383,7 +382,7 @@
     }
 
     .pagination {
-      font-size: var(--font-size-xs);
+      font-size: var(--font-size-sm);
     }
   }
 </style>

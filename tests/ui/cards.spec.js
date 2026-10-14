@@ -33,8 +33,8 @@ for (const theme of ["light", "dark"]) {
       name: "Les enseignements",
       exact: true,
     });
-    const track = cards.getByRole("group", { name: "Card scrolling" });
-    const next = cards.getByRole("button", { name: "Next cards" });
+    const track = cards.getByRole("group", { name: "Défilement des cartes" });
+    const next = cards.getByRole("button", { name: "Cartes suivantes" });
     await expect(next).toBeVisible();
     await cards.scrollIntoViewIfNeeded();
     const cue = await track.evaluate((e) => {

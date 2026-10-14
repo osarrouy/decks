@@ -7,7 +7,8 @@ Read [README.md](README.md) for setup and supported workflows, and [content inst
 - Keep course navigation and content rendering in this app rather than `@dg/ui`.
 - Preserve the course overview before its chapters, the fixed chapter-selection line and the separation between presentation, bibliography, slides and assistant.
 - Keep course content available while interacting with the floating chat.
-- Use `SkipLink`, `Page`, `Header`, `Main` and `Footer` from `@dg/ui`. `Page` owns responsive margins; `Main` joins adjacent section frames. Keep floating assistants and dialogs outside `Page` so framed sections remain the first and last DOM children of `Main`.
+- Use `SkipLink`, `Page`, `Header`, `Main` and `Footer` from `@dg/ui`, with `Page lang="fr"` and `SkipLink` as its first child. `Page` owns responsive margins; `Main` joins adjacent section frames. Place floating assistants and dialogs inside `Page` after `Footer`, so they receive the page language while framed sections remain the first and last DOM children of `Main`.
+- Course resource views are separate URLs: navigate between them with links (`ResourceTabs`), not the panel-switching `Tabs` widget.
 
 ## Integration
 

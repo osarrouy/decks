@@ -29,8 +29,8 @@
   let surfaceClass = $derived(
     [
       "slide",
-      "typography",
-      "prose",
+      "typescale",
+      "formatted",
       layout && `slide-layout-${layout}`,
       align && `slide-align-${align}`,
       tone && `slide-tone-${tone}`,

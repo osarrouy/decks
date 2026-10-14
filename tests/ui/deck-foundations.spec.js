@@ -24,8 +24,8 @@ for (const mode of ["light", "dark"]) {
       <div class="ui" style="--ui-font-size: 19px; --ui-line-height: 1.75"><p>Interface text</p></div>
       <div style="font-size: 23px; line-height: 1.4"><p>Component-owned text</p></div>`;
     await page.setContent(`<style>${tokens}${base}${theme}</style>
-      <section id="reference" class="typography prose" style="--font-size-base: 1rem">${content}</section>
-      <section id="slide" class="slide typography prose" data-slide-surface style="--font-size-base: 1rem">${content}</section>`);
+      <section id="reference" class="typescale formatted" style="--font-size-base: 1rem">${content}</section>
+      <section id="slide" class="slide typescale formatted" data-slide-surface style="--font-size-base: 1rem">${content}</section>`);
     await page.evaluate(
       (value) => (document.documentElement.dataset.theme = value),
       mode,
@@ -56,3 +56,17 @@ for (const mode of ["light", "dark"]) {
     );
   });
 }
+
+test("the slide base follows its view, not the slide or nested containers", async ({
+  page,
+}) => {
+  await page.setContent(`<style>${tokens}${base}${theme}</style>
+    <div style="width: 1000px; height: 560px; container-type: inline-size">
+      <section class="slide typescale" data-slide-surface>
+        <p id="reading">Reading</p>
+        <div style="width: 100px; container-type: inline-size"><h2 id="nested">Heading</h2></div>
+      </section>
+    </div>`);
+  await expect(page.locator("#reading")).toHaveCSS("font-size", "20px");
+  await expect(page.locator("#nested")).toHaveCSS("font-size", "40px");
+});

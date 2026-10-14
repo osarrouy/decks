@@ -26,15 +26,15 @@ for (const width of [1280, 390]) {
           ];
           return elements.map((element) => {
             const bounds = element.getBoundingClientRect();
-            const frame = getComputedStyle(element, "::before");
+            const style = getComputedStyle(element);
             return {
               framed: element.classList.contains("framed"),
               x: bounds.x,
               right: bounds.right,
               top: bounds.top,
               bottom: bounds.bottom,
-              topBorder: frame.borderTopWidth,
-              crosses: getComputedStyle(element, "::after").backgroundImage,
+              borderTop: parseFloat(style.borderTopWidth),
+              borderBottom: parseFloat(style.borderBottomWidth),
             };
           });
         });
@@ -45,11 +45,8 @@ for (const width of [1280, 390]) {
           expect(frame.right).toBe(width - frame.x);
           if (index) {
             expect(frame.top).toBeCloseTo(frames[index - 1].bottom, 1);
-            expect(frame.topBorder).toBe("0px");
-            // The first gradient draws the following frame's top crosses.
-            expect(frame.crosses).toMatch(
-              /^linear-gradient\(rgba\(0, 0, 0, 0\)/,
-            );
+            // Each junction is drawn once, by one of the two frames.
+            expect(frames[index - 1].borderBottom + frame.borderTop).toBe(1);
           }
         }
         expect(
@@ -75,11 +72,11 @@ test("Mobile navigation preserves the active course, theme and keyboard focus", 
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   const trigger = page.getByRole("button", { name: "Menu", exact: true });
-  const dialog = page.getByRole("dialog", { name: "Main navigation" });
+  const dialog = page.getByRole("dialog", { name: "Navigation principale" });
   await trigger.focus();
   await trigger.press("Enter");
   await expect(dialog).toBeVisible();
-  await dialog.getByRole("switch", { name: "Dark mode" }).click();
+  await dialog.getByRole("switch", { name: "Mode sombre" }).click();
   await dialog.getByRole("link", { name: "L2", exact: true }).click();
   await expect(dialog).not.toBeVisible();
   await expect(page).toHaveURL(/\/l2\/$/);
@@ -87,12 +84,12 @@ test("Mobile navigation preserves the active course, theme and keyboard focus", 
   await expect(
     dialog.getByRole("link", { name: "L2", exact: true }),
   ).toHaveAttribute("aria-current", "page");
-  await expect(dialog.getByRole("switch", { name: "Dark mode" })).toBeChecked();
+  await expect(dialog.getByRole("switch", { name: "Mode sombre" })).toBeChecked();
   await page.keyboard.press("Escape");
   await expect(trigger).toBeFocused();
   await page.reload();
   await trigger.click();
-  await expect(dialog.getByRole("switch", { name: "Dark mode" })).toBeChecked();
+  await expect(dialog.getByRole("switch", { name: "Mode sombre" })).toBeChecked();
 });
 
 test("The assistant stays outside the frame and retains conversation across chapters", async ({

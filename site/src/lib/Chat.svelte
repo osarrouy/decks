@@ -3,10 +3,8 @@
   import { excerpt } from "./course-content.js";
   import {
     ChatPanel,
-    ChatContext,
     ChatThread,
     ChatMessage,
-    ChatWelcome,
     ChatSuggestions,
     ChatComposer,
   } from "@dg/ui";
@@ -48,18 +46,21 @@
 </script>
 
 <ChatPanel>
-  <ChatContext
-    label="Chapitre en cours"
-    title={chapter.label}
-    canClear={Boolean(messages.length)}
-    onclick={() => (messages = [])}
-  />
+  <div class="context ui">
+    <p>Chapitre en cours<strong>{chapter.label}</strong></p>
+    <button
+      type="button"
+      disabled={!messages.length}
+      onclick={() => (messages = [])}>Effacer</button
+    >
+  </div>
   <ChatThread bind:this={log} label="Discussion de démonstration">
-    {#if !messages.length}<ChatWelcome
-        title="Une question sur le cours ?"
-        description="Gardez vos supports sous les yeux et poursuivez la discussion ici."
-        ><ChatSuggestions suggestions={prompts} onselect={send} /></ChatWelcome
-      >{/if}
+    {#if !messages.length}<div class="welcome">
+        <span aria-hidden="true">✳</span>
+        <h3>Une question sur le cours ?</h3>
+        <p>Gardez vos supports sous les yeux et poursuivez la discussion ici.</p>
+        <ChatSuggestions suggestions={prompts} onselect={send} />
+      </div>{/if}
     {#each messages as message (message)}<ChatMessage
         role={message.role}
         text={message.text}
@@ -76,3 +77,77 @@
     onsend={send}
   />
 </ChatPanel>
+
+<style>
+  .context {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: space-between;
+    align-items: start;
+    padding: var(--content-padding-block) var(--content-padding-inline);
+    border-bottom: var(--border-width) solid var(--border-prominent);
+  }
+
+  strong {
+    display: block;
+    margin-top: var(--space-1);
+    font-weight: var(--ui-weight);
+    color: var(--text-prominent);
+  }
+
+  button {
+    min-width: var(--control-min-size);
+    min-height: var(--control-min-size);
+    padding: var(--space-1);
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: var(--disabled-opacity);
+    cursor: default;
+  }
+
+  button:focus-visible {
+    outline: var(--focus-width) solid var(--focus-color);
+    outline-offset: calc(-1 * var(--focus-width));
+  }
+
+  .welcome {
+    padding-block: var(--space-3);
+    text-align: center;
+  }
+
+  .welcome > span {
+    font-family: var(--font-mono);
+    font-size: var(--heading-3-size);
+    line-height: var(--ui-line-height);
+    color: var(--accent);
+  }
+
+  /* ChatWindow applies the UI role; the welcome restores heading and reading typography. */
+  h3 {
+    margin-block: var(--content-gap-block);
+    font-family: var(--font-serif);
+    font-size: var(--heading-3-size);
+    font-weight: var(--heading-weight);
+    line-height: var(--heading-line-height);
+    letter-spacing: var(--heading-letter-spacing);
+    text-transform: none;
+    color: var(--text-prominent);
+  }
+
+  .welcome > p {
+    font-family: var(--font-sans);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-weight);
+    line-height: var(--body-line-height);
+    letter-spacing: var(--body-letter-spacing);
+    text-transform: none;
+  }
+</style>

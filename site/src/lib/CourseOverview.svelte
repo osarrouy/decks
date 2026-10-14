@@ -105,7 +105,7 @@
     flex-wrap: wrap;
     gap: var(--space-3) var(--space-5);
     padding: 22px 0 30px;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
   }
 
   h3 {
@@ -150,7 +150,7 @@
     flex: none;
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--ui-weight);
     letter-spacing: 0.04em;
     line-height: 1;
@@ -162,7 +162,7 @@
     margin-top: var(--space-2);
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--ui-weight);
     letter-spacing: 0.05em;
     line-height: 1.45;

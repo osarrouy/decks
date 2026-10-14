@@ -151,7 +151,7 @@
         justify-content: space-between;
         gap: var(--space-3);
         padding: 0 var(--space-5) 22px;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-sm);
     }
 
     .sidebar-heading > span:last-child {
