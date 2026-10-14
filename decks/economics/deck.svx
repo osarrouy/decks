@@ -1161,27 +1161,12 @@ Les objectifs prennent également forme dans les interfaces.
 **Sources.** [Federal Trade Commission, 2024](https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services) ; [Meta, 2021](https://about.fb.com/news/2021/01/how-does-news-feed-predict-what-you-want-to-see/).
 
 ---
-
-<!-- slide: id="captologie" title="Rendre une action probable" layout="stack" steps=0 -->
-
-<h2>Rendre une action probable</h2>
-<dl>
-  <div>
-    <dt>Motivation</dt>
-    <dd>Attendre un message</dd>
-  </div>
-  <div>
-    <dt>Facilité</dt>
-    <dd>Ouvrir en un geste</dd>
-  </div>
-  <div>
-    <dt>Sollicitation</dt>
-    <dd>Recevoir une notification</dd>
-  </div>
-</dl>
-<p>B. J. Fogg</p>
+## Captologie
+Dance for me, puppets {.kicker}
 
 --- notes
+
+ICI IL FAUT ABSOLUMENT PARLER DU DEPARTEMENT DE COM' SPECIALISTE DE CA POUR OU SONT PASSES PAS MAL DE MECS DE LA SILICON VALLEY
 
 La captologie étudie les technologies conçues pour influencer les attitudes ou les comportements. Le modèle de Fogg rapproche motivation, facilité et sollicitation.
 
