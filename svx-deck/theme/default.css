@@ -63,7 +63,7 @@
 
 .slide[data-slide-surface] strong {
     color: var(--accent);
-    font-weight: var(--heading-weight);
+    font-weight: var(--heading-font-weight);
 }
 
 .slide[data-slide-surface] code {
@@ -143,7 +143,7 @@
     font-family: var(--font-mono);
     letter-spacing: var(--metadata-letter-spacing);
     text-transform: uppercase;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
 }
 
 .slide[data-slide-surface] .lead {
@@ -154,7 +154,7 @@
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-style: normal;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     text-transform: uppercase;
 }
 
@@ -165,7 +165,7 @@
 .slide[data-slide-surface] .formula {
     color: var(--text-prominent);
     font-family: var(--font-mono);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
 }
 
 .slide[data-slide-surface] .math-display {
@@ -184,7 +184,7 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--metadata-font-size);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     line-height: 1.1;
 }
 
@@ -197,7 +197,7 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: 0.52em;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     line-height: 0;
     vertical-align: super;
 }
@@ -224,7 +224,7 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--metadata-font-size);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     line-height: 1.25;
     text-align: left;
 }
@@ -374,7 +374,7 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--metadata-font-size);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     letter-spacing: var(--ui-letter-spacing);
     text-transform: uppercase;
 }
@@ -504,13 +504,13 @@
     height: 100cqh;
 }
 
-/* Offsets place each extension on the frame's own one-pixel border. */
+/* Offsets center each extension on the frame's stroke, which straddles the edge of its box. */
 .slide[data-slide-surface]>.corners> :is(.top-left, .top-right) {
-    top: calc(-1 * var(--border-width));
+    top: calc(var(--border-width) / -2);
 }
 
 .slide[data-slide-surface]>.corners> :is(.bottom-left, .bottom-right) {
-    bottom: calc(-1 * var(--border-width));
+    bottom: calc(var(--border-width) / -2);
 }
 
 .slide[data-slide-surface]>.corners> :is(.top-left, .bottom-left) {
@@ -522,11 +522,11 @@
 }
 
 .slide[data-slide-surface]>.corners> :is(.left-top, .left-bottom) {
-    left: calc(-1 * var(--border-width));
+    left: calc(var(--border-width) / -2);
 }
 
 .slide[data-slide-surface]>.corners> :is(.right-top, .right-bottom) {
-    right: calc(-1 * var(--border-width));
+    right: calc(var(--border-width) / -2);
 }
 
 .slide[data-slide-surface]>.corners> :is(.left-top, .right-top) {

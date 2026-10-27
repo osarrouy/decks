@@ -1,15 +1,15 @@
 <script>
   import { Heading } from "@dg/ui";
-  import CourseHeading from "$lib/CourseHeading.svelte";
-  import { browser } from "$app/environment";
-  import ChapterNavigation from "$lib/ChapterNavigation.svelte";
+  import CourseHeading from "#lib/CourseHeading.svelte";
+  import { browser } from "$app/env";
+  import ChapterNavigation from "#lib/ChapterNavigation.svelte";
   import { page } from "$app/state";
-  import { selectChapter } from "$lib/course-content.js";
-  import CourseOverview from "$lib/CourseOverview.svelte";
-  import MarkdownContent from "$lib/MarkdownContent.svelte";
-  import ResourceTabs from "$lib/ResourceTabs.svelte";
-  import Bibliography from "$lib/Bibliography.svelte";
-  import SlideDeck from "$lib/SlideDeck.svelte";
+  import { selectChapter } from "#lib/course-content.js";
+  import CourseOverview from "#lib/CourseOverview.svelte";
+  import MarkdownContent from "#lib/MarkdownContent.svelte";
+  import ResourceTabs from "#lib/ResourceTabs.svelte";
+  import Bibliography from "#lib/Bibliography.svelte";
+  import SlideDeck from "#lib/SlideDeck.svelte";
 
   let { data } = $props();
 
@@ -55,7 +55,7 @@
 
 <svelte:head><title>{course.title} — Olivier Sarrouy</title></svelte:head>
 
-<Heading title={course.title} metadata={course.level} crosses="both" />
+<Heading metadata={course.level}>{course.title}</Heading>
 
 <div class="workspace framed crossed">
   <ChapterNavigation
@@ -152,11 +152,11 @@
           <nav class="pagination" aria-label="Parcourir les chapitres">
             {#if chapterIndex > 0}<a
                 href={resourceHref(course.sections[chapterIndex - 1], tab)}
-                data-sveltekit-noscroll>← Chapitre précédent</a
+                data-sveltekit-reset="false">← Chapitre précédent</a
               >{:else}<span>Début du cours</span>{/if}
             {#if chapterIndex < course.sections.length - 1}<a
                 href={resourceHref(course.sections[chapterIndex + 1], tab)}
-                data-sveltekit-noscroll>Chapitre suivant →</a
+                data-sveltekit-reset="false">Chapitre suivant →</a
               >{:else}<span>Fin du cours</span>{/if}
           </nav>
         </section>
@@ -172,7 +172,7 @@
                 Les lectures spécifiques à ce chapitre seront précisées
                 prochainement.
               </p>
-              <a href={bibliographyHref} data-sveltekit-noscroll
+              <a href={bibliographyHref} data-sveltekit-reset="false"
                 >Consulter la bibliographie générale ↗</a
               >
             </div>
@@ -200,31 +200,31 @@
   .reading-empty a {
     font-family: var(--font-mono);
     letter-spacing: 0.48px;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     text-transform: uppercase;
   }
 
   .eyebrow {
     text-transform: uppercase;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     letter-spacing: 0.13em;
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   .badge {
     display: inline-block;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     border: 1px solid var(--border-prominent);
     padding: 6px 10px;
     line-height: 1.5;
-    color: var(--text-primary);
+    color: var(--text);
     background: var(--background);
   }
 
   .reading-intro {
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.02em;
     line-height: 1.7;
@@ -245,12 +245,12 @@
   }
 
   .reading-empty a {
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     color: var(--text-prominent);
   }
 
   .pagination > span {
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   .resources {
@@ -279,7 +279,7 @@
     position: absolute;
     top: 18px;
     left: 20px;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     color: var(--accent);
   }
 
@@ -302,8 +302,8 @@
 
   .slide p {
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.02em;
     line-height: 1.7;
@@ -315,7 +315,7 @@
     position: absolute;
     bottom: 16px;
     left: 20px;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
   }
 
   .supports {
@@ -334,7 +334,7 @@
     gap: var(--space-4);
     padding-top: 20px;
     border-top: 1px solid var(--border-prominent);
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
   }
 
   .reading-empty {
@@ -346,8 +346,8 @@
   .reading-empty p {
     margin: 14px 0 22px;
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     line-height: 1.7;
     letter-spacing: 0.48px;
@@ -382,7 +382,7 @@
     }
 
     .pagination {
-      font-size: var(--font-size-sm);
+      font-size: var(--metadata-font-size);
     }
   }
 </style>

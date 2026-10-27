@@ -1,5 +1,5 @@
 <script>
-  import CourseHeading from "$lib/CourseHeading.svelte";
+  import CourseHeading from "#lib/CourseHeading.svelte";
   import MarkdownContent from "./MarkdownContent.svelte";
   import Bibliography from "./Bibliography.svelte";
 
@@ -34,7 +34,7 @@
           <a
             class="chapter"
             href={chapterHref(section, "resume")}
-            data-sveltekit-noscroll
+            data-sveltekit-reset="false"
           >
             <span class="number">{String(index + 1).padStart(2, "0")}</span>
             <span
@@ -81,14 +81,14 @@
   .arrow {
     font-family: var(--font-mono);
     letter-spacing: 0.48px;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     text-transform: uppercase;
   }
 
   .reading-intro {
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.02em;
     line-height: 1.7;
@@ -105,12 +105,12 @@
     flex-wrap: wrap;
     gap: var(--space-3) var(--space-5);
     padding: 22px 0 30px;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
   }
 
   h3 {
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     font-weight: 400;
     line-height: inherit;
     color: inherit;
@@ -129,7 +129,7 @@
   .number,
   .arrow {
     color: var(--accent);
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     padding-top: var(--space-1);
   }
 
@@ -150,8 +150,8 @@
     flex: none;
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
-    font-weight: var(--ui-weight);
+    font-size: var(--metadata-font-size);
+    font-weight: var(--ui-font-weight);
     letter-spacing: 0.04em;
     line-height: 1;
     white-space: nowrap;
@@ -162,8 +162,8 @@
     margin-top: var(--space-2);
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
-    font-weight: var(--ui-weight);
+    font-size: var(--metadata-font-size);
+    font-weight: var(--ui-font-weight);
     letter-spacing: 0.05em;
     line-height: 1.45;
     text-transform: uppercase;
@@ -174,8 +174,8 @@
     margin-top: var(--space-2);
     max-width: 600px;
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.01em;
     line-height: 1.6;
@@ -186,7 +186,7 @@
   }
 
   .chapter:hover .subtitle {
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   @media (max-width: 700px) {

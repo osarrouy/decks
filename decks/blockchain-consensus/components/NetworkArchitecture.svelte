@@ -144,7 +144,7 @@
     fill: var(--text-prominent);
     font-family: var(--font-serif);
     font-size: 42px;
-    font-weight: var(--heading-weight);
+    font-weight: var(--heading-font-weight);
   }
 
   .link {

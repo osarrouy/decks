@@ -33,16 +33,9 @@ for (const width of [1280, 390]) {
       .getByRole("switch", { name: "Mode sombre", includeHidden: true })
       .first();
     for (const dark of [false, true]) {
-      if ((await toggle.getAttribute("aria-checked")) !== String(dark)) {
-        if (width < 1100) {
-          await page.getByRole("button", { name: "Menu", exact: true }).click();
-          await page
-            .getByRole("dialog", { name: "Navigation principale" })
-            .getByRole("switch", { name: "Mode sombre" })
-            .click();
-          await page.keyboard.press("Escape");
-        } else await toggle.click();
-      }
+      // The theme switch stays in the header bar at every width.
+      if ((await toggle.getAttribute("aria-checked")) !== String(dark))
+        await toggle.click();
       await expect(
         reader.getByRole("switch", { name: "Dark mode" }),
       ).toHaveAttribute("aria-checked", String(dark));
@@ -53,7 +46,7 @@ for (const width of [1280, 390]) {
       await expect(surface).toHaveCSS("font-family", /Helvetica|Arial/);
       await expect(surface.locator("h1").first()).toHaveCSS(
         "font-family",
-        /Instrument Serif/,
+        /Teodor/,
       );
       const scale = await surface.evaluate((element) => {
         const heading = element.querySelector("h1");
@@ -88,25 +81,42 @@ for (const width of [1280, 390]) {
       await expect(corners).toHaveCSS("pointer-events", "none");
       const decoration = await corners.evaluate((element) => {
         const style = getComputedStyle(element);
-        const strokes = getComputedStyle(element, "::after");
-        const cross = style.getPropertyValue("--cross").trim();
+        const stroke = getComputedStyle(element, "::before");
+        const crosses = getComputedStyle(element, "::after");
+        const cross = style.getPropertyValue("--cross-size").trim();
         const border = style.getPropertyValue("--border-width").trim();
+        // One pseudo-element paints the crosses, then the erasers that clear the rules around them.
+        const erased = `${2 * parseFloat(crosses.getPropertyValue("--_clearance"))}px`;
         return {
-          actual: strokes.backgroundSize,
-          expected: Array(4)
-            .fill(`${cross} ${border}, ${border} ${cross}`)
-            .join(", "),
+          actual: crosses.backgroundSize,
+          expected: [
+            ...Array(4).fill(`${cross} ${border}, ${border} ${cross}`),
+            ...Array(4).fill(`${erased} ${border}, ${border} ${erased}`),
+          ].join(", "),
           oldCrosses: getComputedStyle(element.parentElement, "::before")
             .content,
-          frameWidth: style.borderTopWidth,
+          frameWidth: stroke.borderTopWidth,
           borderWidth: border,
           extensions: [...element.querySelectorAll(".extension")].map(
             (extension) => {
               const line = getComputedStyle(extension);
               return (
                 line.display === "block" &&
-                line.backgroundColor === style.borderTopColor
+                line.backgroundColor === stroke.borderTopColor
               );
+            },
+          ),
+          // Each extension continues the stroke: centered on the edge of the frame it extends.
+          offsets: [...element.querySelectorAll(".extension")].map(
+            (extension) => {
+              const frame = element.getBoundingClientRect();
+              const line = extension.getBoundingClientRect();
+              const [side] = extension.classList[1].split("-");
+              const center =
+                side === "top" || side === "bottom"
+                  ? line.top + line.height / 2
+                  : line.left + line.width / 2;
+              return Math.abs(center - frame[side]);
             },
           ),
         };
@@ -115,6 +125,8 @@ for (const width of [1280, 390]) {
       expect(decoration.oldCrosses).toBe("none");
       expect(decoration.frameWidth).toBe(decoration.borderWidth);
       expect(decoration.extensions).toEqual(Array(8).fill(true));
+      for (const offset of decoration.offsets)
+        expect(offset).toBeLessThan(0.01);
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth,

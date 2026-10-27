@@ -110,17 +110,18 @@
   }
   .student-kicker {
     color: var(--accent);
-    font: var(--ui-weight) 12px/1.6 var(--font-mono);
+    font: var(--ui-font-weight) 12px/1.6 var(--font-mono);
     text-transform: uppercase;
   }
   h1 {
     max-width: 28ch;
-    font: var(--heading-weight) clamp(1.7rem, 4vw, 3rem)/1.1 var(--font-serif);
+    font: var(--heading-font-weight) clamp(1.7rem, 4vw, 3rem)/1.1
+      var(--font-serif);
   }
   .student-counter {
     flex: 0 0 auto;
     color: var(--text-muted);
-    font: var(--ui-weight) 12px/1.6 var(--font-mono);
+    font: var(--ui-font-weight) 12px/1.6 var(--font-mono);
   }
   .student-counter strong {
     color: var(--text-prominent);
@@ -144,7 +145,7 @@
     align-items: center;
     gap: var(--space-4);
     padding: var(--space-3) var(--space-4);
-    font: var(--ui-weight) 12px/1.6 var(--font-mono);
+    font: var(--ui-font-weight) 12px/1.6 var(--font-mono);
     color: var(--text-muted);
   }
   .student-slide-footer {

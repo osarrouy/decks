@@ -9,7 +9,7 @@ const key = process.env.DG_UI_DEPLOY_KEY;
 if (!key) throw new Error("Missing read-only DG_UI_DEPLOY_KEY.");
 delete process.env.DG_UI_DEPLOY_KEY;
 
-// Both GitHub Actions and Railway build this exact UI revision.
+// Both GitHub Actions and Railway build this exact revision of every @dg package.
 const ref = "ce6fa7d467f0719b840d2f0f6de1ff3ed691ebf1";
 const target = ".ci/interfaces";
 await mkdir(".ci", { recursive: true });
@@ -42,7 +42,7 @@ try {
     cwd: target,
     encoding: "utf8",
   }).trim();
-  if (actual !== ref) throw new Error("Unexpected @dg/ui revision.");
+  if (actual !== ref) throw new Error("Unexpected @dg revision.");
 } finally {
   // This directory was created above and contains only this build's credentials.
   await rm(credentials, { recursive: true, force: true });

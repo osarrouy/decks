@@ -1,6 +1,6 @@
 <script>
-    import { Cards, Card, Section, SectionHead, Quote } from "@dg/ui";
-    import { courses } from "$lib/courses";
+    import { Cards, Card, Heading, Quote } from "@dg/ui";
+    import { courses } from "#lib/courses.js";
 
     const quotation = `On nous dit que l'intelligence artificielle sera la mort de l’enseignement.
 
@@ -14,48 +14,44 @@ Nous sommes enfin libres. Pendant que «l’enseignement» a lieu sans nous, not
 </script>
 
 <svelte:head><title>Ressources de cours — Olivier Sarrouy</title></svelte:head>
-<Section crosses="both" padding="none" gap="0">
-    <section class="hero grid-bg">
-        <Quote content={quotation} author="Slavoj Žižek" />
-    </section>
-</Section>
-<Section crosses="both" padding="no-bottom">
-    <SectionHead
-        num="01"
-        title="Les enseignements"
-        count={"/ " + String(courses.length).padStart(2, "0")}
-    />
-    <div class="courses">
-        <Cards label="Les enseignements" minWidth={300}>
-            {#each courses as course (course)}
-                <Card href={"/" + course.slug + "/"} title={course.title}>
-                    {#snippet header()}
-                        <span>{course.cycle}</span>
-                    {/snippet}
-                    {#snippet media()}
-                        <span class="level">{course.level}</span>
-                    {/snippet}
-                    <p>{course.summary}</p>
-                    {#snippet footer()}
-                        <span>Plan · Bibliographie · Slides · IA</span>
-                        <span class="arrow" aria-hidden="true">→</span>
-                    {/snippet}
-                </Card>
-            {/each}
-        </Cards>
-    </div>
-</Section>
-<Section crosses="both" padding="none" gap="0">
-    <div class="welcome">
-        <span class="eyebrow">Pour commencer</span>
-        <p>
-            Choisissez votre enseignement. Le plan vous guide vers les supports
-            de chaque section ; l’assistant propose un espace de discussion
-            autour du cours.
-        </p>
-        <span class="badge">Version de démonstration</span>
-    </div>
-</Section>
+<!-- Each block owns its insets and draws its own frame; their strokes and crosses meet on the same pixels. -->
+<section class="hero framed crossed">
+    <Quote content={quotation} author="Slavoj Žižek" />
+</section>
+<Heading
+    level={2}
+    num="01"
+    metadata={"/ " + String(courses.length).padStart(2, "0")}
+    >Les enseignements</Heading
+>
+<section class="framed crossed">
+    <Cards label="Les enseignements" minWidth="18.75rem">
+        {#each courses as course (course)}
+            <Card href={"/" + course.slug + "/"} title={course.title}>
+                {#snippet header()}
+                    <span>{course.cycle}</span>
+                {/snippet}
+                {#snippet media()}
+                    <span class="level">{course.level}</span>
+                {/snippet}
+                <p>{course.summary}</p>
+                {#snippet footer()}
+                    <span>Plan · Bibliographie · Slides · IA</span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                {/snippet}
+            </Card>
+        {/each}
+    </Cards>
+</section>
+<div class="welcome framed crossed">
+    <span class="eyebrow">Pour commencer</span>
+    <p>
+        Choisissez votre enseignement. Le plan vous guide vers les supports
+        de chaque section ; l’assistant propose un espace de discussion
+        autour du cours.
+    </p>
+    <span class="badge">Version de démonstration</span>
+</div>
 
 <style>
     .level,
@@ -63,37 +59,35 @@ Nous sommes enfin libres. Pendant que «l’enseignement» a lieu sans nous, not
     .badge {
         font-family: var(--font-mono);
         letter-spacing: 0.48px;
-        font-weight: var(--ui-weight);
+        font-weight: var(--ui-font-weight);
         text-transform: uppercase;
     }
 
     .eyebrow {
         text-transform: uppercase;
-        font-size: var(--font-size-sm);
+        font-size: var(--metadata-font-size);
         letter-spacing: 0.13em;
-        color: var(--text-primary);
+        color: var(--text);
     }
 
     .badge {
         display: inline-block;
-        font-size: var(--font-size-sm);
+        font-size: var(--metadata-font-size);
         border: 1px solid var(--border-prominent);
         padding: 6px 10px;
         line-height: 1.5;
-        color: var(--text-primary);
+        color: var(--text);
         background: var(--background);
     }
 
+    /* A decorative grid behind the quotation. */
     .hero {
+        --_grid-pitch: 52px;
         padding: 46px 40px 38px;
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-    }
-
-    .courses {
-        margin-inline: calc(-1 * var(--layout-padding-inline));
-        min-width: 0;
+        background-image:
+            linear-gradient(180deg, transparent calc(var(--_grid-pitch) - var(--border-width)), var(--border-subtle) calc(var(--_grid-pitch) - var(--border-width))),
+            linear-gradient(90deg, transparent calc(var(--_grid-pitch) - var(--border-width)), var(--border-subtle) calc(var(--_grid-pitch) - var(--border-width)));
+        background-size: var(--_grid-pitch) var(--_grid-pitch);
     }
 
     .level {
@@ -121,7 +115,7 @@ Nous sommes enfin libres. Pendant que «l’enseignement» a lieu sans nous, not
         max-width: 660px;
         font-family: var(--font-sans);
         text-transform: none;
-        font-weight: var(--body-weight);
+        font-weight: var(--body-font-weight);
         font-size: 15px;
         letter-spacing: 0;
     }

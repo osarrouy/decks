@@ -36,19 +36,19 @@
 
   .label {
     text-transform: uppercase;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     letter-spacing: 0.13em;
-    color: var(--text-primary);
+    color: var(--text);
     font-family: var(--font-mono);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
   }
 
   .part {
     flex: none;
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
-    font-weight: var(--ui-weight);
+    font-size: var(--metadata-font-size);
+    font-weight: var(--ui-font-weight);
     letter-spacing: 0.04em;
     line-height: 1;
     white-space: nowrap;
@@ -56,11 +56,11 @@
 
   .subtitle {
     margin-top: 10px;
-    max-width: 760px;
-    color: var(--text-primary);
+    max-width: 47.5rem;
+    color: var(--text);
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     letter-spacing: 0.01em;
     line-height: 1.5;
     text-transform: none;

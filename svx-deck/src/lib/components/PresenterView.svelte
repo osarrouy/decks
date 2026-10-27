@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { base } from "$app/paths";
   import { Button, ThemeToggle } from "@dg/ui";
   import { onMount, untrack } from "svelte";
   import SlidePreview from "./SlidePreview.svelte";
@@ -40,7 +39,11 @@
   );
 
   function openProjection() {
-    const projectionUrl = new URL(`${base}/`, window.location.origin);
+    // The projection is the parent route of the presenter view.
+    const projectionUrl = new URL(
+      window.location.pathname.replace(/presenter\/?$/, ""),
+      window.location.origin,
+    );
     projectionUrl.hash = window.location.hash;
     window.open(projectionUrl.toString(), `${deck.id}-projection`);
   }
@@ -138,7 +141,7 @@
     padding: var(--space-3) var(--space-4);
     border-bottom: 1px solid var(--border-prominent);
     color: var(--text-muted);
-    font: var(--ui-weight) 11px/1.6 var(--font-mono);
+    font: var(--ui-font-weight) 11px/1.6 var(--font-mono);
     text-transform: uppercase;
   }
   .presenter-preview-stack {
@@ -183,7 +186,7 @@
   .presenter-meta {
     margin-left: auto;
     color: var(--text-muted);
-    font: var(--ui-weight) 12px/1.6 var(--font-mono);
+    font: var(--ui-font-weight) 12px/1.6 var(--font-mono);
   }
   @media (max-width: 980px) {
     .presenter-grid {

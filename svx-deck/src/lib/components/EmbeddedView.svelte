@@ -81,7 +81,7 @@
     gap: 8px;
     padding: 6px 10px;
     border-top: 1px solid var(--border-prominent);
-    font: var(--ui-weight) 12px/1.4 var(--font-mono);
+    font: var(--ui-font-weight) 12px/1.4 var(--font-mono);
   }
   label {
     flex: 1;

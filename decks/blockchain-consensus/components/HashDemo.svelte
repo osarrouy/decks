@@ -128,7 +128,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    color: var(--text-primary);
+    color: var(--text);
     font-family: var(--font-sans);
     font-size: clamp(11px, 1.08cqw, 17px);
     font-style: normal;
@@ -211,7 +211,7 @@
     left: 50%;
     color: var(--accent);
     font-size: 1.25em;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     opacity: 0;
   }
 
@@ -255,7 +255,7 @@
     color: var(--accent);
     font-family: var(--font-mono);
     font-size: clamp(16px, 1.7cqw, 26px);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     line-height: 1.35;
     letter-spacing: 0.015em;
     white-space: normal;

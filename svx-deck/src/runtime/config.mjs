@@ -19,27 +19,12 @@ const uiRoot = resolve(
   "..",
 );
 
-export function svelteConfig({ staticDir, outputDir, base }) {
-  return {
-    extensions: [".svelte", ".svx"],
-    preprocess: [
-      vitePreprocess(),
-      svxDeckMarkdownPreprocess(),
-      mdsvex(svxDeckMdsvexOptions({ extensions: [".svx"] })),
-    ],
-    kit: {
-      paths: { base },
-      files: { assets: staticDir },
-      adapter: adapter({ pages: outputDir, assets: outputDir, strict: true }),
-    },
-  };
-}
-
 export function viteConfig({
   deckRoot,
   appRoot,
   configPath,
   staticDir,
+  outputDir,
   base,
   template,
   view,
@@ -59,7 +44,17 @@ export function viteConfig({
         notesAudience: view === "students" ? "student" : "presenter",
       }),
       svxDeckStaticAssets(staticDir, base),
-      sveltekit(),
+      sveltekit({
+        extensions: [".svelte", ".svx"],
+        preprocess: [
+          vitePreprocess(),
+          svxDeckMarkdownPreprocess(),
+          mdsvex(svxDeckMdsvexOptions({ extensions: [".svx"] })),
+        ],
+        paths: { base },
+        files: { assets: staticDir },
+        adapter: adapter({ pages: outputDir, assets: outputDir, strict: true }),
+      }),
     ],
     resolve: {
       dedupe: ["svelte"],

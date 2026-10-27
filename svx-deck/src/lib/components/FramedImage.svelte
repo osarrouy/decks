@@ -92,43 +92,48 @@
     height: var(--_deck-height);
   }
 
+  /* Each extension is centered on the frame's stroke, which straddles the edge of the figure. */
+  .extension {
+    --_rail: calc(var(--border-width) / -2);
+  }
+
   .top-left {
-    top: 0;
+    top: var(--_rail);
     right: 100%;
   }
 
   .top-right {
-    top: 0;
+    top: var(--_rail);
     left: 100%;
   }
 
   .right-top {
-    right: 0;
+    right: var(--_rail);
     bottom: 100%;
   }
 
   .right-bottom {
     top: 100%;
-    right: 0;
+    right: var(--_rail);
   }
 
   .bottom-right {
-    bottom: 0;
+    bottom: var(--_rail);
     left: 100%;
   }
 
   .bottom-left {
     right: 100%;
-    bottom: 0;
+    bottom: var(--_rail);
   }
 
   .left-bottom {
     top: 100%;
-    left: 0;
+    left: var(--_rail);
   }
 
   .left-top {
     bottom: 100%;
-    left: 0;
+    left: var(--_rail);
   }
 </style>

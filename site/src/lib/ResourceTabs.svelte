@@ -11,7 +11,7 @@
 </script>
 
 <!-- Each resource view has its own URL, so these are navigation links rather than WAI-ARIA tabs. -->
-<nav class="ui" aria-label={label} data-sveltekit-noscroll>
+<nav class="ui" aria-label={label} data-sveltekit-reset="false">
     {#each items as item (item.value)}
         <a
             href={item.href}
@@ -43,7 +43,7 @@
         min-height: var(--control-min-size);
         padding: var(--control-padding-block) 0;
         border-bottom: calc(2 * var(--border-width)) solid transparent;
-        color: var(--text-primary);
+        color: var(--text);
         text-decoration: none;
         white-space: nowrap;
     }
@@ -58,7 +58,7 @@
     }
 
     a:focus-visible {
-        outline: var(--focus-width) solid var(--focus-color);
+        outline: var(--focus-width) solid var(--focus);
         outline-offset: -4px;
     }
 

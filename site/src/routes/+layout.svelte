@@ -2,12 +2,12 @@
   import "@dg/ui/styles.css";
 
   import { page } from "$app/state";
-  import { browser } from "$app/environment";
-  import { Header, Footer, Main, Page, SkipLink } from "@dg/ui";
-  import FloatingAssistant from "$lib/FloatingAssistant.svelte";
-  import { selectChapter } from "$lib/course-content.js";
+  import { browser } from "$app/env";
+  import { Analytics, Header, Footer, Main, Page, SkipLink } from "@dg/ui";
+  import FloatingAssistant from "#lib/FloatingAssistant.svelte";
+  import { selectChapter } from "#lib/course-content.js";
 
-  import { courses, courseAliases } from "$lib/courses";
+  import { courses, courseAliases } from "#lib/courses.js";
   /**
    * @typedef {Object} Props
    * @property {import('svelte').Snippet} [children]
@@ -29,6 +29,17 @@
       ? `/${courseAliases[activeSlug]}/`
       : page.url.pathname,
   );
+  // Only the assistant's fixed, content-free actions can reach the statistics.
+  const events = [
+    "suggestion_selected",
+    "question_sent",
+    "answer_completed",
+    "answer_failed",
+    "answer_stopped",
+    "references_opened",
+    "conversation_downloaded",
+    "conversation_reset",
+  ];
   let course = $derived(page.status < 400 ? page.data.course : undefined);
   let chapter = $derived(
     course &&
@@ -56,6 +67,14 @@
   />
   <Main>{@render children?.()}</Main>
   <Footer identity="olivier·sarrouy" />
+  <Analytics {page} {events}>
+    <p>
+      Le site mesure aussi l’usage de l’assistant : choix d’une suggestion,
+      envoi et résultat d’une question, ouverture des références, téléchargement
+      et nouvelle conversation. Le contenu des questions, des réponses et des
+      sources n’est jamais envoyé, et le mode démo n’envoie aucune action.
+    </p>
+  </Analytics>
   <!-- After the footer, so the assistant receives the page language without entering a frame. -->
   {#if course && chapter}
     {#key course.slug}<FloatingAssistant {course} {chapter} />{/key}

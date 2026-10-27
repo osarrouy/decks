@@ -65,7 +65,7 @@
     padding: var(--space-3) var(--space-4);
     font-family: var(--font-mono);
     text-transform: uppercase;
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
   }
   .toolbar span {
     flex: 1;

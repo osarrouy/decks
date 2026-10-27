@@ -1,32 +1,33 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { join, relative, resolve } from "node:path";
+import { basename, join, relative, resolve } from "node:path";
 
-// Only rewrite disposable CI checkouts; keep the developer's local link intact.
+// Only rewrite disposable CI checkouts; keep the developer's local links intact.
 if (process.env.CI !== "true")
   throw new Error("This command is for CI checkouts only.");
 const root = process.cwd();
-const target = resolve(root, ".ci/interfaces/packages/ui");
-const ui = JSON.parse(await readFile(resolve(target, "package.json"), "utf8"));
-if (ui.name !== "@dg/ui") throw new Error("Missing @dg/ui CI checkout.");
+const checkout = resolve(root, ".ci/interfaces/packages");
 const manifest = JSON.parse(await readFile("package.json", "utf8"));
-const previous = manifest.pnpm.overrides["@dg/ui"];
-if (!previous.startsWith("link:"))
-  throw new Error("Expected a local @dg/ui override.");
 let lock = await readFile("pnpm-lock.yaml", "utf8");
-const replacements = new Map(
-  [".", "site", "svx-deck"].map((directory) => {
+// Point every @dg package linked from the local checkout to the same package in the CI clone.
+for (const [name, previous] of Object.entries(manifest.pnpm.overrides)) {
+  if (!name.startsWith("@dg/")) continue;
+  if (!previous.startsWith("link:"))
+    throw new Error(`Expected a local ${name} override.`);
+  const target = resolve(checkout, basename(previous));
+  const linked = JSON.parse(
+    await readFile(resolve(target, "package.json"), "utf8"),
+  );
+  if (linked.name !== name) throw new Error(`Missing ${name} CI checkout.`);
+  let found = false;
+  for (const directory of [".", "site", "svx-deck"]) {
     const base = resolve(root, directory);
-    return [
-      `link:${join(relative(base, root), previous.slice(5))}`,
-      `link:${relative(base, target)}`,
-    ];
-  }),
-);
-for (const [before, after] of replacements) {
-  if (!lock.includes(before))
-    throw new Error(`UI link absent from lockfile: ${before}`);
-  lock = lock.replaceAll(before, after);
+    const before = `link:${join(relative(base, root), previous.slice(5))}`;
+    if (!lock.includes(before)) continue;
+    lock = lock.replaceAll(before, `link:${relative(base, target)}`);
+    found = true;
+  }
+  if (!found) throw new Error(`${name} link absent from lockfile.`);
+  manifest.pnpm.overrides[name] = `link:${relative(root, target)}`;
 }
-manifest.pnpm.overrides["@dg/ui"] = `link:${relative(root, target)}`;
 await writeFile("package.json", `${JSON.stringify(manifest, null, 2)}\n`);
 await writeFile("pnpm-lock.yaml", lock);

@@ -1274,7 +1274,7 @@ Plutôt que de chercher le secret de la foule dans des mécanismes de subjectiva
     .slide .background-slide__title strong {
       font-family: var(--font-serif);
       font-size: clamp(4rem, 11cqw, 9rem);
-      font-weight: var(--heading-weight);
+      font-weight: var(--heading-font-weight);
       line-height: 0.88;
     }
 

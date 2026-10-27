@@ -14,12 +14,13 @@
     padding: var(--space-5);
     overflow-wrap: anywhere;
     color: var(--text-prominent);
-    font: var(--body-weight) 1.1rem / var(--body-line-height) var(--font-sans);
+    font: var(--body-font-weight) 1.1rem / var(--body-line-height)
+      var(--font-sans);
   }
   .notes :global(:is(h1, h2, h3, h4, h5, h6)) {
     margin: 1.4em 0 0.5em;
     font-family: var(--font-serif);
-    font-weight: var(--heading-weight);
+    font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
   }
   .notes :global(h1) {
@@ -54,7 +55,7 @@
   }
   .notes :global(blockquote[class]::before) {
     color: var(--accent);
-    font: var(--ui-weight) var(--font-size-sm) / var(--ui-line-height)
+    font: var(--ui-font-weight) var(--ui-font-size) / var(--ui-line-height)
       var(--font-mono);
     text-transform: uppercase;
     letter-spacing: 0.12em;

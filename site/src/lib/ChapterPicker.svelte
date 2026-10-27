@@ -19,6 +19,10 @@
     let selected = $derived(items[selectedIndex]);
 
     function fitMenu(element) {
+        // Opened near the bottom of a small screen, the list would have no room: bring the picker to the top first.
+        const room = Math.min(320, window.innerHeight / 2);
+        if (window.innerHeight - element.getBoundingClientRect().top - 8 < room)
+            container.scrollIntoView({ block: "start" });
         const fit = () => {
             const available =
                 window.innerHeight - element.getBoundingClientRect().top - 8;
@@ -94,7 +98,7 @@
     </summary>
     <nav
         aria-label="Choisir un chapitre sur mobile"
-        data-sveltekit-noscroll
+        data-sveltekit-reset="false"
         {@attach open ? fitMenu : undefined}
     >
         {#each items as item, index (item.value)}
@@ -136,8 +140,8 @@
     details {
         position: relative;
         font-family: var(--font-mono);
-        font-size: var(--font-size-md);
-        font-weight: var(--ui-weight);
+        font-size: calc(var(--font-size-base) * 0.75);
+        font-weight: var(--ui-font-weight);
         line-height: var(--ui-line-height);
         letter-spacing: 0.48px;
     }
@@ -151,8 +155,8 @@
     .label {
         display: block;
         margin-bottom: var(--space-2);
-        color: var(--text-primary);
-        font-size: var(--font-size-sm);
+        color: var(--text);
+        font-size: var(--metadata-font-size);
         text-transform: uppercase;
     }
     .field,

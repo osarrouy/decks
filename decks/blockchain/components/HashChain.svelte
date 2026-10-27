@@ -280,14 +280,14 @@
 
   .title {
     fill: var(--text-prominent);
-    font-size: var(--heading-6-size);
-    font-weight: var(--ui-weight);
+    font-size: var(--heading-6-font-size);
+    font-weight: var(--ui-font-weight);
     letter-spacing: var(--ui-letter-spacing);
   }
 
   .label {
     fill: var(--text-muted);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     letter-spacing: var(--ui-letter-spacing);
   }
 
@@ -296,8 +296,8 @@
   }
 
   .value {
-    fill: var(--text-primary);
-    font-size: var(--heading-5-size);
+    fill: var(--text);
+    font-size: var(--heading-5-font-size);
     transition: fill 320ms ease;
   }
 
@@ -376,7 +376,7 @@
 
   .rework > text {
     fill: var(--accent);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     letter-spacing: var(--ui-letter-spacing);
   }
 
@@ -394,8 +394,8 @@
 
   .work-step text {
     fill: var(--background);
-    font-size: var(--font-size-lg);
-    font-weight: var(--ui-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--ui-font-weight);
   }
 
   .rework.visible .step-1 {
@@ -425,10 +425,14 @@
 
   figcaption {
     min-height: 2.8em;
-    color: var(--text-primary);
+    color: var(--text);
     font-family: var(--font-mono);
-    font-size: clamp(var(--font-size-lg), 1.35cqw, var(--heading-6-size));
-    font-weight: var(--ui-weight);
+    font-size: clamp(
+      var(--font-size-base),
+      1.35cqw,
+      var(--heading-6-font-size)
+    );
+    font-weight: var(--ui-font-weight);
     line-height: var(--ui-line-height);
     letter-spacing: var(--ui-letter-spacing);
     text-align: center;

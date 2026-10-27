@@ -20,7 +20,7 @@
             class="overview-link"
             href={overviewHref}
             aria-current={!value ? "page" : undefined}
-            data-sveltekit-noscroll
+            data-sveltekit-reset="false"
         >
             <span class="overview-symbol" aria-hidden="true">↗</span><span
                 >Vue d’ensemble<small
@@ -38,7 +38,7 @@
                 <a
                     href={chapterHref(section)}
                     aria-current={value === section.id ? "page" : undefined}
-                    data-sveltekit-noscroll
+                    data-sveltekit-reset="false"
                 >
                     <span class="number">
                         {String(index + 1).padStart(2, "0")}
@@ -78,7 +78,7 @@
     .indicator {
         font-family: var(--font-mono);
         letter-spacing: 0.48px;
-        font-weight: var(--ui-weight);
+        font-weight: var(--ui-font-weight);
         text-transform: uppercase;
     }
 
@@ -119,7 +119,7 @@
         margin: -24px 0 26px;
         border-bottom: 1px solid var(--border-prominent);
         border-left: 2px solid transparent;
-        font-size: var(--font-size-sm);
+        font-size: var(--metadata-font-size);
     }
 
     .overview-link[aria-current] {
@@ -139,7 +139,7 @@
         display: block;
         margin-top: 9px;
         font-family: var(--font-sans);
-        font-weight: var(--body-weight);
+        font-weight: var(--body-font-weight);
         font-size: 12px;
         line-height: 1.5;
         text-transform: none;
@@ -151,7 +151,7 @@
         justify-content: space-between;
         gap: var(--space-3);
         padding: 0 var(--space-5) 22px;
-        font-size: var(--font-size-sm);
+        font-size: var(--metadata-font-size);
     }
 
     .sidebar-heading > span:last-child {
@@ -181,8 +181,8 @@
     }
 
     .number {
-        font-size: var(--font-size-sm);
-        color: var(--text-primary);
+        font-size: var(--metadata-font-size);
+        color: var(--text);
         padding-top: 5px;
     }
 
@@ -202,7 +202,7 @@
         color: var(--accent);
         font-family: var(--font-mono);
         font-size: 0.48em;
-        font-weight: var(--ui-weight);
+        font-weight: var(--ui-font-weight);
         letter-spacing: 0.04em;
         white-space: nowrap;
     }
@@ -213,7 +213,7 @@
     }
 
     .indicator {
-        font-size: var(--font-size-sm);
+        font-size: var(--metadata-font-size);
         color: var(--accent);
         opacity: 0;
         padding-top: 5px;

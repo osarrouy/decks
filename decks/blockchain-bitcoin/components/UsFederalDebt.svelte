@@ -181,7 +181,7 @@
     height: 100%;
     margin: 0;
     background: var(--background);
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   svg {
@@ -190,7 +190,7 @@
     height: 100%;
     font-family: var(--font-mono);
     font-size: 14px;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     letter-spacing: var(--ui-letter-spacing);
   }
 
@@ -202,7 +202,7 @@
     fill: var(--text-prominent);
     font-family: var(--font-serif);
     font-size: 48px;
-    font-weight: var(--heading-weight);
+    font-weight: var(--heading-font-weight);
     letter-spacing: var(--heading-letter-spacing);
   }
 
@@ -242,7 +242,7 @@
   }
 
   .events text {
-    fill: var(--text-secondary);
+    fill: var(--text-subtle);
   }
 
   .events {
@@ -272,12 +272,12 @@
     fill: var(--accent);
     font-family: var(--font-serif);
     font-size: 36px;
-    font-weight: var(--heading-weight);
+    font-weight: var(--heading-font-weight);
     letter-spacing: var(--heading-letter-spacing);
   }
 
   .date {
-    fill: var(--text-primary);
+    fill: var(--text);
   }
 
   @keyframes draw {

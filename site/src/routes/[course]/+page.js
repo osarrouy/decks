@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import { courses, courseAliases } from "$lib/courses";
+import { courses, courseAliases } from "#lib/courses.js";
 export const entries = () => [
   ...courses.map((course) => ({ course: course.slug })),
   ...Object.entries(courseAliases)

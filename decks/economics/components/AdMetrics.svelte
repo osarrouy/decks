@@ -108,7 +108,7 @@
 
   dt {
     font-family: var(--font-serif);
-    font-size: var(--heading-3-size);
+    font-size: var(--heading-3-font-size);
     transition: color 400ms ease;
   }
 

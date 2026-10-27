@@ -119,11 +119,10 @@ export async function ensureRuntimeApp(deckRoot, options = {}) {
       type: "module",
       private: true,
       name: "svx-deck-runtime",
+      imports: { "#lib/*": "./src/lib/*" },
     }),
-    "svelte.config.js": `import { svelteConfig } from '@svx-deck/core/runtime/config'
-export default svelteConfig(${JSON.stringify({ staticDir, outputDir, base })})`,
     "vite.config.mjs": `import { viteConfig } from '@svx-deck/core/runtime/config'
-export default viteConfig(${JSON.stringify({ deckRoot, appRoot, configPath, staticDir, base, template: config.template, view })})`,
+export default viteConfig(${JSON.stringify({ deckRoot, appRoot, configPath, staticDir, outputDir, base, template: config.template, view })})`,
     "src/generated/deck-config.mjs": `export default ${JSON.stringify(config)}`,
     "src/app.html": `<!doctype html>
 <html lang="fr">
@@ -180,7 +179,7 @@ export default viteConfig(${JSON.stringify({ deckRoot, appRoot, configPath, stat
 function page(component) {
   return `<script lang="ts">
   import ${component} from '@svx-deck/core/components/${component}.svelte'
-  import { deck } from '$lib/deck'
+  import { deck } from '#lib/deck.ts'
 </script>
 <${component} {deck} />`;
 }

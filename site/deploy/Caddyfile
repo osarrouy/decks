@@ -6,15 +6,54 @@
 
 :{$PORT:8080} {
 	root * "{$SITE_ROOT:/srv}"
-	encode zstd gzip
+	# Streamed answers pass through unbuffered and keep the backend's own headers.
+	@site not path /api /api/*
+	encode @site zstd gzip
 
 	# Revalidate mutable course pages and media after a deployment.
-	@mutable not path /_app/immutable/* /slides/*/_app/immutable/*
+	@mutable not path /_app/immutable/* /slides/*/_app/immutable/* /api /api/*
 	header @mutable Cache-Control "public, max-age=0, must-revalidate"
 	@immutable path /_app/immutable/* /slides/*/_app/immutable/*
 	header @immutable Cache-Control "public, max-age=31536000, immutable"
 
-	file_server
+	# Public settings of the distributed·gallery statistics website. The variables override them;
+	# an empty UMAMI_WEBSITE_ID turns statistics off, for example for a local run.
+	handle /analytics-config.json {
+		header Content-Type application/json
+		header Cache-Control "no-store"
+		respond `{"endpoint":"{$UMAMI_ENDPOINT:https://umami-production-0b49.up.railway.app/api/send}","website":"{$UMAMI_WEBSITE_ID:4615c599-58d9-4022-839c-c8719897e0cb}"}`
+	}
+
+	# The assistant reaches the Bloom backend through these two routes only; the key never leaves the server.
+	@chat {
+		method POST
+		path /api/chat
+	}
+	@documents {
+		method GET
+		path /api/documents
+	}
+	handle @chat {
+		reverse_proxy {$BLOOM_API_ORIGIN} {
+			header_up Authorization "Bearer {$BLOOM_API_KEY}"
+			header_up -Cookie
+		}
+	}
+	handle @documents {
+		reverse_proxy {$BLOOM_API_ORIGIN} {
+			header_up Authorization "Bearer {$BLOOM_API_KEY}"
+			header_up -Cookie
+		}
+	}
+	handle /api/* {
+		respond 404
+	}
+	handle /api {
+		respond 404
+	}
+	handle {
+		file_server
+	}
 	handle_errors 404 {
 		header Cache-Control "public, max-age=0, must-revalidate"
 		rewrite * /404.html

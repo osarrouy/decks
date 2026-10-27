@@ -2,7 +2,7 @@
 import { existsSync } from "node:fs";
 import { readdir, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { build, createServer, preview } from "vite";
+import { createBuilder, createServer, preview } from "vite";
 
 import { ensureRuntimeApp, RUNTIME_DIRECTORY } from "../runtime/generate.mjs";
 
@@ -120,7 +120,8 @@ async function runBuild(deckRoot, flags) {
     flags.presenter || flags.students ? "true" : "false";
   await rm(outputDir, { recursive: true, force: true });
   process.chdir(appRoot);
-  await build({ root: appRoot, configFile });
+  const builder = await createBuilder({ root: appRoot, configFile });
+  await builder.buildApp();
   const slides = (await readdir(resolve(appRoot, "src/generated/deck"))).filter(
     (file) => file.endsWith(".svx"),
   );

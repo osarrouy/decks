@@ -20,7 +20,7 @@ pnpm dev
 
 The portal normally opens on `http://localhost:5175`. Vite reports another port if it is occupied.
 
-The root `package.json` selects the local `@dg/ui` checkout through `pnpm.overrides`. Its path is relative to this workspace and currently points to `~/Code/@dg/packages/ui`. Install that checkout's dependencies once, then install this workspace. No UI package build is required. Update the override if the checkout moves; replace it with a published version when available. Both consumers declare their own dependency and deduplicate Svelte. Their Vite configurations use `tooling/postcss.js` to expand the public `@dg/ui/breakpoints.css` definitions in every component stylesheet.
+The root `package.json` selects the local @dg checkout through `pnpm.overrides`: `@dg/ui`, `@dg/bloom` (the assistant) and `@dg/infrastructure` (imported by `@dg/ui`) point to `~/Code/@dg/packages/<name>`, relative to this workspace. Install that checkout's dependencies once, then install this workspace. No package build is required. Update the overrides if the checkout moves; replace them with published versions when available. Linked packages' own dependencies are not installed here, so the root declares those a build needs (`@dg/ui`, `@dg/infrastructure`, `marked`, `entities`, and the PostCSS plugins below). Both consumers declare their own dependencies and deduplicate Svelte. Their Vite configurations use `tooling/postcss.js` to expand the public `@dg/ui/breakpoints.css` definitions in every component stylesheet.
 
 ## Work with decks
 

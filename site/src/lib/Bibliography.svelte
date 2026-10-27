@@ -38,7 +38,7 @@
   p {
     font-family: var(--font-sans);
     font-size: 16px;
-    font-weight: var(--body-weight);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.02em;
     line-height: 1.7;
@@ -60,7 +60,7 @@
   }
   .note {
     margin-top: 10px;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     color: var(--text-muted);
   }
   .links {
@@ -70,11 +70,11 @@
     margin-top: 12px;
     font-family: var(--font-mono);
     letter-spacing: 0.48px;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     text-transform: uppercase;
   }
   a {
-    font-size: var(--font-size-sm);
+    font-size: var(--metadata-font-size);
     color: var(--text-prominent);
     text-decoration: underline;
     text-underline-offset: 3px;

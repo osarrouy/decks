@@ -26,28 +26,31 @@ for (const width of [1280, 390]) {
           ];
           return elements.map((element) => {
             const bounds = element.getBoundingClientRect();
-            const style = getComputedStyle(element);
+            const stroke = getComputedStyle(element, "::before");
             return {
               framed: element.classList.contains("framed"),
               x: bounds.x,
               right: bounds.right,
               top: bounds.top,
               bottom: bounds.bottom,
-              borderTop: parseFloat(style.borderTopWidth),
-              borderBottom: parseFloat(style.borderBottomWidth),
+              stroke: [
+                stroke.top,
+                stroke.borderTopWidth,
+                stroke.borderBottomWidth,
+              ],
             };
           });
         });
         for (let index = 0; index < frames.length; index++) {
           const frame = frames[index];
           expect(frame.framed).toBe(true);
-          expect(frame.x).toBe(width === 390 ? 16 : 44);
+          // Page margins follow --space-4 below --narrow and --space-7 above.
+          expect(frame.x).toBe(width === 390 ? 16 : 48);
           expect(frame.right).toBe(width - frame.x);
-          if (index) {
-            expect(frame.top).toBeCloseTo(frames[index - 1].bottom, 1);
-            // Each junction is drawn once, by one of the two frames.
-            expect(frames[index - 1].borderBottom + frame.borderTop).toBe(1);
-          }
+          // Every frame draws its stroke centered on the edge of its box, without taking space.
+          expect(frame.stroke).toEqual(["-0.5px", "1px", "1px"]);
+          // Each frame starts at the edge of the one before, so both strokes of a junction fall on the same pixels.
+          if (index) expect(frame.top).toBeCloseTo(frames[index - 1].bottom, 1);
         }
         expect(
           await page.evaluate(() => document.documentElement.scrollWidth),
@@ -73,10 +76,19 @@ test("Mobile navigation preserves the active course, theme and keyboard focus", 
   await page.goto("/");
   const trigger = page.getByRole("button", { name: "Menu", exact: true });
   const dialog = page.getByRole("dialog", { name: "Navigation principale" });
+  // The theme switch stays in the header bar; the menu holds the links.
+  const toggle = page
+    .getByRole("banner")
+    .getByRole("switch", { name: "Mode sombre" });
+  // Retry until hydration attaches the switch's handler.
+  await expect(async () => {
+    if ((await toggle.getAttribute("aria-checked")) !== "true")
+      await toggle.click();
+    await expect(toggle).toBeChecked({ timeout: 500 });
+  }).toPass({ timeout: 15_000 });
   await trigger.focus();
   await trigger.press("Enter");
   await expect(dialog).toBeVisible();
-  await dialog.getByRole("switch", { name: "Mode sombre" }).click();
   await dialog.getByRole("link", { name: "L2", exact: true }).click();
   await expect(dialog).not.toBeVisible();
   await expect(page).toHaveURL(/\/l2\/$/);
@@ -84,12 +96,11 @@ test("Mobile navigation preserves the active course, theme and keyboard focus", 
   await expect(
     dialog.getByRole("link", { name: "L2", exact: true }),
   ).toHaveAttribute("aria-current", "page");
-  await expect(dialog.getByRole("switch", { name: "Mode sombre" })).toBeChecked();
   await page.keyboard.press("Escape");
   await expect(trigger).toBeFocused();
+  await expect(toggle).toBeChecked();
   await page.reload();
-  await trigger.click();
-  await expect(dialog.getByRole("switch", { name: "Mode sombre" })).toBeChecked();
+  await expect(toggle).toBeChecked();
 });
 
 test("The assistant stays outside the frame and retains conversation across chapters", async ({
@@ -107,10 +118,18 @@ test("The assistant stays outside the frame and retains conversation across chap
   expect(
     await dialog.evaluate((element) => Boolean(element.closest("main"))),
   ).toBe(false);
-  await dialog
-    .getByRole("button", { name: "Résumer ce chapitre", exact: true })
-    .click();
-  await expect(dialog.getByRole("log")).toContainText("Résumer ce chapitre");
+  // A suggestion names the current chapter in the draft; the local demonstration answers without the backend.
+  const input = dialog.getByRole("textbox", { name: "Ta question" });
+  await dialog.getByRole("button", { name: /^Résume le chapitre/ }).click();
+  await expect(input).toHaveValue(/^Résume le chapitre « .+ »$/);
+  await expect(input).toBeFocused();
+  await input.fill("/demo");
+  await input.press("Enter");
+  await expect(dialog.getByRole("log")).toContainText(
+    "Démonstration · Sources fictives",
+    { timeout: 15_000 },
+  );
+  await expect(dialog.getByRole("heading", { level: 2 })).toContainText("Démo");
   await page
     .getByRole("navigation", { name: "Choisir un chapitre", exact: true })
     .getByRole("link")
@@ -118,7 +137,7 @@ test("The assistant stays outside the frame and retains conversation across chap
     .click();
   await expect(page).toHaveURL(/section=consensus-sans-tiers-de-confiance/);
   await expect(dialog).toBeVisible();
-  await expect(dialog.getByRole("log")).toContainText("Résumer ce chapitre");
+  await expect(dialog.getByRole("log")).toContainText("/demo");
   await page.keyboard.press("Escape");
   await expect(launcher).toBeFocused();
   await page.getByRole("link", { name: "university", exact: true }).click();

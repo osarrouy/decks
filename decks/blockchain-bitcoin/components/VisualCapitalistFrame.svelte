@@ -2,7 +2,8 @@
   let { src }: { src: string } = $props();
 </script>
 
-<figure class="visual framed crossed">
+<!-- The figure draws its own prominent border and clips the embedded page, so it takes no toolkit frame. -->
+<figure class="visual">
   <iframe
     {src}
     title="All of the World’s Money and Markets in One Visualization, édition 2020"
@@ -26,7 +27,7 @@
     left: 50%;
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
-    width: min(calc(100% - 2 * var(--_padding-horizontal)), 1100px);
+    width: min(calc(100% - 2 * var(--_padding-horizontal)), 68.75rem);
     height: auto;
     margin: 0;
     overflow: hidden;
@@ -58,7 +59,7 @@
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: clamp(9px, 0.8cqw, 12px);
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
     letter-spacing: var(--ui-letter-spacing);
     line-height: var(--ui-line-height);
     text-transform: uppercase;

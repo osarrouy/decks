@@ -447,7 +447,7 @@
         text-transform: none;
     }
 
-    @media (max-width: 760px) {
+    @media (--narrow) {
         .universal-layout {
             grid-template-columns: 1fr;
         }

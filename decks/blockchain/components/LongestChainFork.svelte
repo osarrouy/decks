@@ -189,8 +189,8 @@
 
   .branch-label {
     font-family: var(--font-mono);
-    font-size: var(--font-size-lg);
-    font-weight: var(--ui-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--ui-font-weight);
     letter-spacing: var(--ui-letter-spacing);
     text-transform: uppercase;
   }
@@ -205,10 +205,14 @@
 
   figcaption {
     min-height: 2.8em;
-    color: var(--text-primary);
+    color: var(--text);
     font-family: var(--font-mono);
-    font-size: clamp(var(--font-size-lg), 1.45cqw, var(--heading-6-size));
-    font-weight: var(--ui-weight);
+    font-size: clamp(
+      var(--font-size-base),
+      1.45cqw,
+      var(--heading-6-font-size)
+    );
+    font-weight: var(--ui-font-weight);
     line-height: var(--ui-line-height);
     letter-spacing: var(--ui-letter-spacing);
     text-align: center;

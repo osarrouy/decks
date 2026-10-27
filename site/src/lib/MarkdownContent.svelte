@@ -17,8 +17,8 @@
 <style>
   .markdown {
     font-family: var(--font-sans);
-    font-size: var(--font-size-lg);
-    font-weight: var(--body-weight);
+    font-size: var(--font-size-base);
+    font-weight: var(--body-font-weight);
     text-transform: none;
     letter-spacing: 0.01em;
     line-height: 1.75;

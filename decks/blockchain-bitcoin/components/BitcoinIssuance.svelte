@@ -148,7 +148,7 @@
     height: 100%;
     margin: 0;
     background: var(--background);
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   svg {
@@ -170,7 +170,7 @@
   .reward text,
   .halving-label text {
     font-size: 13px;
-    font-weight: var(--ui-weight);
+    font-weight: var(--ui-font-weight);
   }
 
   .grid line {
@@ -239,7 +239,7 @@
   }
 
   .reward text {
-    fill: var(--text-primary);
+    fill: var(--text);
   }
 
   .reward.active text {

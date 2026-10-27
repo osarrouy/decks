@@ -426,7 +426,7 @@
     padding-bottom: var(--space-3);
     border-bottom: 1px solid var(--border);
     font-family: var(--font-serif);
-    font-size: var(--heading-3-size);
+    font-size: var(--heading-3-font-size);
   }
 
   @media (prefers-reduced-motion: reduce) {

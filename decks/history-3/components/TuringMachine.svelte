@@ -403,7 +403,7 @@
         text-transform: none;
     }
 
-    @media (max-width: 760px) {
+    @media (--narrow) {
         .rule-layout {
             grid-template-columns: 1fr;
         }

@@ -14,10 +14,10 @@ for (const theme of ["light", "dark"]) {
       );
       const header = page.locator("header").first();
       const identity = header.getByRole("link", {
-        name: `${example.identity} >_`,
+        name: example.identity,
         exact: true,
       });
-      await expect(identity).toHaveText(`${example.identity} >_`);
+      await expect(identity).toHaveText(example.identity);
       await expect(identity).toHaveAttribute("href", example.href);
       const colors = await header.evaluate((element) => {
         const probe = document.createElement("span");

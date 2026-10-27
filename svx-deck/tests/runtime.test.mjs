@@ -243,7 +243,6 @@ test("build generation leaves every development runtime unchanged", async () =>
         "src/routes/+layout.svelte",
         "src/lib/deck.ts",
         "vite.config.mjs",
-        "svelte.config.js",
         ...(view === "deck" ? ["src/routes/presenter/+page.svelte"] : []),
       ];
       const readDevelopment = () =>
