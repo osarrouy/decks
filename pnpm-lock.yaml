@@ -5,20 +5,20 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@dg/bloom': link:../../../../Code/@dg/packages/bloom
-  '@dg/infrastructure': link:../../../../Code/@dg/packages/infrastructure
-  '@dg/ui': link:../../../../Code/@dg/packages/ui
+  '@dg/bloom': link:../@dg/packages/bloom
+  '@dg/infrastructure': link:../@dg/packages/infrastructure
+  '@dg/ui': link:../@dg/packages/ui
 
 importers:
 
   .:
     dependencies:
       '@dg/infrastructure':
-        specifier: link:../../../../Code/@dg/packages/infrastructure
-        version: link:../../../../Code/@dg/packages/infrastructure
+        specifier: link:../@dg/packages/infrastructure
+        version: link:../@dg/packages/infrastructure
       '@dg/ui':
-        specifier: link:../../../../Code/@dg/packages/ui
-        version: link:../../../../Code/@dg/packages/ui
+        specifier: link:../@dg/packages/ui
+        version: link:../@dg/packages/ui
       '@svx-deck/core':
         specifier: workspace:*
         version: link:svx-deck
@@ -54,11 +54,11 @@ importers:
   site:
     dependencies:
       '@dg/bloom':
-        specifier: link:../../../../../Code/@dg/packages/bloom
-        version: link:../../../../../Code/@dg/packages/bloom
+        specifier: link:../../@dg/packages/bloom
+        version: link:../../@dg/packages/bloom
       '@dg/ui':
-        specifier: link:../../../../../Code/@dg/packages/ui
-        version: link:../../../../../Code/@dg/packages/ui
+        specifier: link:../../@dg/packages/ui
+        version: link:../../@dg/packages/ui
       js-yaml:
         specifier: ^4.3.0
         version: 4.3.2
@@ -88,8 +88,8 @@ importers:
   svx-deck:
     dependencies:
       '@dg/ui':
-        specifier: link:../../../../../Code/@dg/packages/ui
-        version: link:../../../../../Code/@dg/packages/ui
+        specifier: link:../../@dg/packages/ui
+        version: link:../../@dg/packages/ui
       '@sveltejs/adapter-static':
         specifier: ^4.0.0
         version: 4.0.0(@sveltejs/kit@3.1.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.2)(vite@8.3.5(@types/node@22.20.1)))(svelte@5.57.2)(typescript@6.0.3)(vite@8.3.5(@types/node@22.20.1)))

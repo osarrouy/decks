@@ -10,7 +10,7 @@ if (!key) throw new Error("Missing read-only DG_UI_DEPLOY_KEY.");
 delete process.env.DG_UI_DEPLOY_KEY;
 
 // Both GitHub Actions and Railway build this exact revision of every @dg package.
-const ref = "ce6fa7d467f0719b840d2f0f6de1ff3ed691ebf1";
+const ref = "2c9656ed052cb6112d5064b04a10f4e69582caf6";
 const target = ".ci/interfaces";
 await mkdir(".ci", { recursive: true });
 await mkdir(target);

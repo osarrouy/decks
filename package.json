@@ -53,9 +53,9 @@
   },
   "pnpm": {
     "overrides": {
-      "@dg/bloom": "link:../../../../Code/@dg/packages/bloom",
-      "@dg/infrastructure": "link:../../../../Code/@dg/packages/infrastructure",
-      "@dg/ui": "link:../../../../Code/@dg/packages/ui"
+      "@dg/bloom": "link:../@dg/packages/bloom",
+      "@dg/infrastructure": "link:../@dg/packages/infrastructure",
+      "@dg/ui": "link:../@dg/packages/ui"
     }
   }
 }

@@ -13,7 +13,7 @@ Re-check every fact below against the current code before acting on it: these no
 
 ## How the packages are consumed
 
-- **Local development** links the live @dg checkout through `pnpm.overrides` in the root [`package.json`](package.json), for example `"@dg/ui": "link:../../../../Code/@dg/packages/ui"`. `site/` and `svx-deck/` declare `"@dg/ui": "*"`. Edits in `~/Code/@dg` appear immediately, without a build.
+- **Local development** links the live @dg checkout through `pnpm.overrides` in the root [`package.json`](package.json), for example `"@dg/ui": "link:../@dg/packages/ui"`. `site/` and `svx-deck/` declare `"@dg/ui": "*"`. Edits in `~/Code/@dg` appear immediately, without a build.
 - **CI and Railway** clone `distributedgallery/interfaces` at one pinned commit with a read-only deploy key ([`tooling/fetch-ci-ui.mjs`](tooling/fetch-ci-ui.mjs), constant `ref`), then [`tooling/ci-ui.mjs`](tooling/ci-ui.mjs) rewrites the override and the lockfile so that they point to `.ci/interfaces/packages/ui`. That commit pins every @dg package at once.
 - **Transitive dependencies of linked packages are not installed in CI.** The CI clone never runs `pnpm install`, so whatever a linked package imports must be resolvable from this workspace's own `node_modules`. This is why `@csstools/postcss-global-data` and `postcss-custom-media` (dependencies of `@dg/ui`) are listed in the root `devDependencies`. Locally the problem is invisible, because `~/Code/@dg` has its own `node_modules`.
 - **Local and deployed versions can therefore differ.** Local development runs against the @dg working tree, while deployment uses the pinned commit. To test what will deploy, the @dg checkout must sit exactly at the commit that is about to be pinned, with a clean working tree.
