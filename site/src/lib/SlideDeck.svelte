@@ -46,8 +46,8 @@
     {/if}
   </div>
   <div class="frame">
-    <iframe src={url} title="Slides : {title}" allow="fullscreen" loading="lazy"
-    ></iframe>
+    <!-- Not lazy: WebKit drops history.replaceState in lazy iframes, which stops the deck's SvelteKit client from starting. -->
+    <iframe src={url} title="Slides : {title}" allow="fullscreen"></iframe>
   </div>
   {#if error}<p role="status">{error}</p>{/if}
 </div>

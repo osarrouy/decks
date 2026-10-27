@@ -44,7 +44,7 @@ jobs:
 
       - run: pnpm check
       - run: pnpm build
-      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm exec playwright install --with-deps chromium webkit
 
       - name: Package and serve the public export
         run: |
