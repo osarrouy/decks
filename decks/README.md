@@ -69,4 +69,4 @@ L’ancien format en blockquote reste accepté :
 
 See [AGENTS.md](AGENTS.md) for the distinction between minimal projected slides and airy speaker notes written in short, complete sentences, and for the workflow governing editorial changes.
 
-To rewrite a passage of speaker notes according to these guidelines, run `/notes <location>` in Claude Code or OhMyPi, for example `/notes decks/blockchain-monnaie/deck.svx:242-262`. The command is defined in [`.claude/commands/notes.md`](../.claude/commands/notes.md).
+To rewrite a passage of speaker notes according to these guidelines, invoke the `notes` skill with a location in Claude Code, OhMyPi or Codex, for example `/notes decks/blockchain-monnaie/deck.svx:242-262`. The skill is defined in [`.agents/skills/notes/SKILL.md`](../.agents/skills/notes/SKILL.md); `.claude/skills/notes` links to it for Claude Code.

@@ -1,13 +1,12 @@
 ---
-description: Rewrite a passage of speaker notes according to the deck writing guidelines
+name: notes
+description: Rewrite a passage of speaker notes in decks/*/deck.svx according to the deck writing guidelines. Use when the user invokes /notes or asks to rewrite or reformulate speaker notes at a given location.
 argument-hint: <location> [instructions]
 ---
 
-Rewrite the speaker notes passage designated by this location, then save it in place:
+Rewrite the speaker notes passage at the location given by the user, then save it in place.
 
-$ARGUMENTS
-
-Invoking this command authorizes the rewrite of that passage only.
+Invoking this skill authorizes the rewrite of that passage only. If the user explicitly asks not to edit the source, give the rewrite in the reply instead of saving it.
 
 ## 1. Locate the passage
 
@@ -30,7 +29,7 @@ Read the file before deciding on the scope:
 
 Read these files before writing; they are the only source of the rules:
 
-- `decks/AGENTS.md`, especially *Editorial purpose* and *Speaker notes*;
+- `decks/AGENTS.md`, especially _Editorial purpose_ and _Speaker notes_;
 - `decks/README.md` for the note containers;
 - the deck's own `AGENTS.md` if it exists, for its audience, level and specific safeguards.
 
@@ -38,7 +37,7 @@ Read the whole slide and its neighbours too, so the passage keeps its transition
 
 ## 3. Rewrite
 
-- Apply the *Speaker notes* rules in full: layout, sentences, logic, emphasis and containers.
+- Apply the _Speaker notes_ rules in full: layout, sentences, logic, emphasis and containers.
 - Rewrite the sentences, not just the paragraph breaks. Splitting a long paragraph while keeping its long sentences does not meet the guidelines.
 - Keep every claim, example, figure, date, name, quotation, qualification and reference. Do not add facts, sources or examples absent from the passage. Restructuring is allowed: splitting, reordering, moving a formula or definition into `:::important`, turning an example into `:::example`.
 - Keep the meaning of the existing containers. Do not turn a `:::warning` into ordinary text, or a `:::comment` cue into content.

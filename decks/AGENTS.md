@@ -56,5 +56,6 @@ Write airy notes that can be read during a lecture: short sentences, short parag
 
 ## Editorial requests
 
-- A request for an opinion, review or proposed rewrite calls for an answer in the conversation. It does not authorize replacing the deck source.
+- A request to rewrite or reformulate a passage authorizes editing that passage in place. Answer in the conversation instead when the user explicitly asks not to edit the source.
+- A request for an opinion or a review calls for an answer in the conversation. It does not authorize replacing the deck source.
 - The writing rules above apply to new material and authorized revisions. Do not use them as a reason to restyle other decks or normalize existing content.
